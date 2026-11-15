@@ -1,6 +1,6 @@
 # Piloto automático: un video nuevo por corrida
 
-La tarea programada de Claude corre esto cada 2 días. Make (XR-00 → XR-01 → XR-02) toma lo que quede en `publish/` y lo programa en YouTube (privado con fecha, cadencia 2 días, 12:00 hora de Nueva York). Instagram está en pausa.
+La tarea programada de Claude corre esto **todos los días**. Make (XR-00 → XR-01 → XR-02) toma lo que quede en `publish/` y lo programa en YouTube (privado con fecha, **un video por día, cada uno a una hora distinta** que elige `tools/handoff.py`). Instagram está en pausa.
 
 ## 0. Preparar el entorno (cada corrida arranca de cero)
 ```bash
@@ -25,6 +25,25 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Muerte, heridas o violencia: no gráficas, simbólicas (siluetas, contadores, mapas). Nada de sangre ni cuerpos.
 - Guion en inglés de EE. UU., original (sin citar textos de prensa), 40–50 s, una idea por oración (así `voice.py` corta bien las pausas).
 - `meta.json`: `title` ≤ 100 caracteres y sin `<` ni `>`, `description`, `tags`, `series`, `caption_instagram`, `sources`, `platforms`, `made_for_kids: false`, `altered_or_synthetic_realistic: false`.
+
+## 3b. Público y monetización
+- Canal para todo el público de habla inglesa, **priorizando los países que más pagan por vista en Shorts: EE. UU. primero, después Australia, Canadá, Reino Unido, Nueva Zelanda e Irlanda.**
+- Inglés de EE. UU. Unidades estadounidenses primero (feet, miles, °F, dólares) y la métrica solo si suma. Referencias que un estadounidense entienda sin contexto.
+- Cuando el tema es de otro país, el gancho tiene que ser universal ("A lake killed 1,700 people overnight"), no local.
+- Títulos y tags pensados para búsquedas en inglés de EE. UU.
+
+## 3c. Variedad (originalidad, no plantilla)
+La política de YouTube sobre contenido "inauthentic" (producido en masa o repetitivo) es el riesgo real para la monetización, no el horario de subida. Cada video tiene que verse hecho a mano. Comparalo con los 3 anteriores (`videos/`, `publish/*/metadata.json`) y cambiá:
+- **Estructura del título**: pregunta, afirmación, número, "The day…", "Why…", "He…". Sin repetir la fórmula del anterior. Emojis: a veces uno, a veces ninguno.
+- **Tipo de gancho**: dato imposible, pregunta, objeto misterioso, cuenta regresiva, contradicción.
+- **Duración** entre 32 y 55 s (nunca la misma que el anterior ± 2 s).
+- **Paleta, escenario, ángulos de cámara y clima musical** (`sound.py`).
+- **Descripción**: alternar formatos (una línea + fuentes; mini lista de datos + fuentes; pregunta al público + fuentes). Siempre con fuentes, nunca el mismo texto fijo.
+- **Hashtags**: 3 a 5, distintos según el tema. `#shorts` no siempre.
+- **Serie**: rotar (American Oddities, Brands Exposed, Your Body, Survival, Unsolved, Extreme Science…).
+- Nada en título, descripción, tags ni comentario fijado que hable del proceso de producción interno.
+- `altered_or_synthetic_realistic` se completa con honestidad: `false` para la animación estilizada del motor; `true` si alguna vez se muestran personas o hechos realistas generados.
+- El horario de publicación lo elige `tools/handoff.py` (distinto cada día, en franjas de EE. UU./Reino Unido/Australia). No escribirlo a mano salvo pedido de la dueña.
 
 ## 4. Producir
 Seguir `NEW_VIDEO.md` y `QUALITY.md` completos: escenas, cuadros sueltos a tamaño real, `python tools/build.py <id>`, hojas `review.jpg` y `review_mid.jpg`, margen de voz ≥ 4 dB, −14 LUFS, nada cortado en los bordes. Corregir con `--only` hasta que todo cumpla.

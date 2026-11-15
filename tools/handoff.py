@@ -4,7 +4,7 @@ SHA-256, size, duration, resolution, codecs, fps, bitrate and the editorial fiel
 Owner rule (15/11/2026): no prior approval. It sets metadata status to `ready` unless it is `hold`,
 and to `hold` if any check fails, so a broken package is never published.
 Usage: python tools/handoff.py <video-id>"""
-import hashlib, json, os, subprocess, sys
+import glob, hashlib, json, os, random, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VID = sys.argv[1]; P = f"{ROOT}/publish/{VID}"; mp4 = f"{P}/video.mp4"
 meta = json.load(open(f"{P}/metadata.json"))
@@ -34,6 +34,29 @@ if meta.get("status") != "hold":
     meta["status"] = "hold" if errs else "ready"
     if errs: meta["hold_reason"] = "handoff checks failed: " + ", ".join(errs)
     json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
+# Publish time (America/New_York): a different time every day, inside the windows where the
+# highest-paying English-speaking audiences are on Shorts: US midday (= UK evening), US evening
+# (= Australia/NZ next morning) and US late evening (= US West Coast evening, Australia midday).
+WINDOWS = [((11, 40), (14, 20), 0.30), ((16, 10), (20, 50), 0.50), ((21, 0), (22, 40), 0.20)]
+def _mins(t): return int(t[:2]) * 60 + int(t[3:])
+def pick_time(avoid):
+    rng = random.SystemRandom()
+    for _ in range(200):
+        (a, b, _w), = rng.choices(WINDOWS, weights=[w[2] for w in WINDOWS])
+        m = rng.randint(a[0] * 60 + a[1], b[0] * 60 + b[1])
+        if m % 15 == 0 or any(abs(m - _mins(t)) < 75 for t in avoid):
+            continue
+        return f"{m // 60:02d}:{m % 60:02d}"
+    return "17:47"
+recent = []
+for f in sorted(glob.glob(f"{ROOT}/publish/*/xr_payload.json")):
+    if f"/{VID}/" in f: continue
+    t = json.load(open(f)).get("publish_time_local")
+    if t: recent.append(t)
+publish_time = meta.get("publish_time_local") if len(str(meta.get("publish_time_local", ""))) == 5 else pick_time(recent[-3:])
+if meta.get("publish_time_local") != publish_time:
+    meta["publish_time_local"] = publish_time
+    json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
 payload = {
     "content_id": f"xr-{num_id}", "repo_id": VID, "sha256": h.hexdigest(),
     "file_size_bytes": os.path.getsize(mp4), "duration_seconds": round(float(pr["format"]["duration"]), 3),
@@ -42,7 +65,7 @@ payload = {
     "title_youtube": meta["title"], "description_youtube": meta["description"], "caption_instagram": meta.get("caption_instagram", ""),
     "tags": meta.get("tags", []), "series": meta.get("series", ""), "sources": meta.get("sources", []),
     "made_for_kids": bool(meta.get("made_for_kids", False)), "contains_synthetic_media": bool(meta.get("altered_or_synthetic_realistic", False)),
-    "publishing_targets": meta.get("platforms", ["youtube", "instagram"]), "checks_failed": errs,
+    "publishing_targets": meta.get("platforms", ["youtube", "instagram"]), "publish_time_local": publish_time, "checks_failed": errs,
 }
 json.dump(payload, open(f"{P}/xr_payload.json", "w"), indent=2, ensure_ascii=False)
 print(("OK" if not errs else "PROBLEMS: " + ", ".join(errs)), f"{P}/xr_payload.json", payload["sha256"][:16])
