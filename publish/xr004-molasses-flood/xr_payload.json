@@ -1,0 +1,56 @@
+{
+  "content_id": "xr-004",
+  "repo_id": "xr004-molasses-flood",
+  "sha256": "28cbae12bca5958d91ec6763b5e5709325a8ab50fc02d7098fad79d482318c43",
+  "file_size_bytes": 26716199,
+  "duration_seconds": 47.233,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4320981,
+  "faststart": true,
+  "title_youtube": "The Day Molasses Flooded Boston 🌊",
+  "description_youtube": "January 15, 1919: a 50-foot tank burst and 2.3 million gallons of molasses swept through Boston's North End.\n\nSources:\n- Encyclopaedia Britannica: https://www.britannica.com/topic/Great-Molasses-Flood\n- Wikipedia (Great Molasses Flood): https://en.wikipedia.org/wiki/Great_Molasses_Flood\n- History.com: https://www.history.com/news/great-molasses-flood-science\n- NBC News: https://www.nbcnews.com/news/us-news/great-boston-molasses-flood-1919-killed-21-after-2-million-n958326\n\n#shorts #history #boston",
+  "caption_instagram": "The deadliest wave in Boston's history wasn't water. It was molasses. 🌊\n\nJanuary 15, 1919: a 50-foot tank burst and 2.3 million gallons surged through the North End at up to 35 mph.\n\nFull story on YouTube: @StoriesXray\n\n#history #boston #molassesflood #americanhistory #weirdhistory #xray",
+  "tags": [
+    "great molasses flood",
+    "boston molasses flood",
+    "molasses flood 1919",
+    "boston history",
+    "north end boston",
+    "american history",
+    "weird history",
+    "history facts",
+    "disaster",
+    "x-ray",
+    "animation"
+  ],
+  "series": "American Oddities",
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/topic/Great-Molasses-Flood"
+    },
+    {
+      "title": "Wikipedia: Great Molasses Flood",
+      "url": "https://en.wikipedia.org/wiki/Great_Molasses_Flood"
+    },
+    {
+      "title": "History.com",
+      "url": "https://www.history.com/news/great-molasses-flood-science"
+    },
+    {
+      "title": "NBC News",
+      "url": "https://www.nbcnews.com/news/us-news/great-boston-molasses-flood-1919-killed-21-after-2-million-n958326"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram"
+  ],
+  "checks_failed": []
+}

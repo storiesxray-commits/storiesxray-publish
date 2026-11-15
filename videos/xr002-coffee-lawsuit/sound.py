@@ -1,0 +1,25 @@
+# Sound cues for xr002-coffee-lawsuit: put(sound, time_s, gain, pan=-1..1). Times use wd(sentence, word) where possible.
+MUSIC.update(dip=40.75)  # near-silence right before 'Seven hundred warnings'
+put(rumble(4.2),0.0,0.2); put(trickle(2.6),1.6,0.05)
+put(whoosh(0.7),4.2,0.4); put(zap(0.35),4.25,0.12)
+for c in cuts: put(whoosh(0.34),c-0.17,0.15,pan=rng.uniform(-.4,.4))
+put(hum(4.0),6.1,0.03)
+TP=10.146+0.3; put(thud(),TP,0.6); put(splash(),TP+0.05,0.4); put(hiss(1.2),TP+0.1,0.12)
+tt=12.1; gap=0.28
+while tt<14.24: put(click(),tt,0.22); tt+=gap; gap=max(0.05,gap*0.88)
+put(boom(1.2),14.26,0.55)
+put(zap(),15.767,0.3)
+for i,p in enumerate([0.45,0.58,0.71]): put(thump(90+25*i,0.25),15.767+p*4.332,0.5)
+put(boom(1.3),15.767+0.84*4.332,0.65)
+put(thud(),20.15,0.35); put(lp(rng.standard_normal(int(SR*2.4)),500)*env(2.4,0.3,0.8),20.3,0.12)
+for tb in np.arange(23.4,26.0,0.82): put(beep(),tb,0.09)
+for i in range(7): put(paper(),26.1+i*0.2+0.3,0.3,pan=rng.uniform(-.5,.5))
+put(thud(),28.62,0.4)
+TB=30.393+1.05; put(whoosh(0.6),TB-0.1,0.35); put(thud(),TB,0.5)
+for tb in np.sort(rng.uniform(TB,TB+2.6,40)): put(paper(0.1),tb,0.16,pan=rng.uniform(-.7,.7))
+for tb in np.arange(TB+0.15,TB+1.65,0.06): put(click(2400,0.02),tb,0.08)
+put(boom(1.0),TB+1.65,0.4)
+put(bell(2093),35.8,0.14); put(bell(2637),35.92,0.14)
+TH=37.721+1.0; put(thud(),TH,0.9); put(click(900,0.08),TH,0.5); put(boom(1.2),TH,0.5)
+W7=[w for w in tm["sentences"][13]["words"] if w["w"].startswith("Seven")][0]["s"]
+put(boom(1.4),W7-0.05,0.55)

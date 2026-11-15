@@ -1,0 +1,47 @@
+{
+ "voice": "am_michael",
+ "speed": 1.04,
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Your fingers don't wrinkle because they soak up water.",
+   0.3
+  ],
+  [
+   "If they did, your whole body would wrinkle. It doesn't.",
+   0.35
+  ],
+  [
+   "The real cause is your nerves.",
+   0.3
+  ],
+  [
+   "After a few minutes underwater, they send a signal to the blood vessels in your fingertips.",
+   0.28
+  ],
+  [
+   "Those vessels squeeze tight. The fingertip shrinks, and the skin on top folds into ridges.",
+   0.35
+  ],
+  [
+   "Scientists noticed the proof back in the nineteen thirties: fingers with damaged nerves don't wrinkle, even after a long soak.",
+   0.4
+  ],
+  [
+   "So why does your body do it? Grip.",
+   0.32
+  ],
+  [
+   "In a twenty thirteen study, people moved wet marbles faster with wrinkled fingers.",
+   0.3
+  ],
+  [
+   "Scientists think the ridges work like tire treads, channeling water away.",
+   0.45
+  ],
+  [
+   "Your fingers don't soak. They switch to rain tires.",
+   0.3
+  ]
+ ]
+}

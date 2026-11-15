@@ -1,0 +1,1 @@
+{ "name": "stories-xray", "private": true, "description": "Stories X-Ray Shorts generator (three.js scenes)", "dependencies": { "three": "^0.187.0" } }

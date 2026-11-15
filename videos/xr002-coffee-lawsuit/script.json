@@ -1,0 +1,63 @@
+{
+ "voice": "am_michael",
+ "speed": 1.04,
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Everyone laughed at the woman who sued McDonald's over hot coffee.",
+   0.25
+  ],
+  [
+   "They got the story backwards.",
+   0.38
+  ],
+  [
+   "Albuquerque, nineteen ninety-two.",
+   0.25
+  ],
+  [
+   "Stella Liebeck, age seventy-nine, spilled a cup in her lap.",
+   0.32
+  ],
+  [
+   "McDonald's served its coffee at up to one hundred ninety degrees.",
+   0.28
+  ],
+  [
+   "At that heat, it can cause third-degree burns in under three seconds.",
+   0.32
+  ],
+  [
+   "Her sweatpants soaked it up and held it against her skin.",
+   0.3
+  ],
+  [
+   "Eight days in the hospital. Skin grafts.",
+   0.35
+  ],
+  [
+   "She only wanted her medical bills paid.",
+   0.22
+  ],
+  [
+   "It went to trial instead.",
+   0.35
+  ],
+  [
+   "Then a number came out: over seven hundred burn complaints, before hers.",
+   0.35
+  ],
+  [
+   "The jury awarded two point seven million.",
+   0.25
+  ],
+  [
+   "A judge cut it to four hundred eighty thousand.",
+   0.5
+  ],
+  [
+   "Not a frivolous lawsuit. Seven hundred warnings.",
+   0.3
+  ]
+ ]
+}

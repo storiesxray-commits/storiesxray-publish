@@ -1,0 +1,63 @@
+{
+ "voice": "am_michael",
+ "speed": 1.04,
+ "lang": "en-us",
+ "sentences": [
+  [
+   "You have about fifteen seconds.",
+   0.22
+  ],
+  [
+   "That's how long you stay awake in space without a suit.",
+   0.3
+  ],
+  [
+   "In nineteen sixty-six, a NASA test subject named Jim LeBlanc found out the hard way.",
+   0.28
+  ],
+  [
+   "His suit lost pressure inside a vacuum chamber.",
+   0.3
+  ],
+  [
+   "First, the air rushes out of your lungs.",
+   0.22
+  ],
+  [
+   "Then the saliva on your tongue starts to boil.",
+   0.22
+  ],
+  [
+   "LeBlanc said he could feel it bubbling.",
+   0.32
+  ],
+  [
+   "But your blood doesn't boil.",
+   0.22
+  ],
+  [
+   "Your blood vessels keep it under pressure.",
+   0.3
+  ],
+  [
+   "The real problem is oxygen.",
+   0.25
+  ],
+  [
+   "Blood with no oxygen reaches your brain, and the lights go out.",
+   0.55
+  ],
+  [
+   "LeBlanc passed out in fourteen seconds.",
+   0.28
+  ],
+  [
+   "They repressurized the chamber, and he woke up fine.",
+   0.35
+  ],
+  [
+   "Fourteen seconds. That's all you get.",
+   0.3
+  ]
+ ]
+}

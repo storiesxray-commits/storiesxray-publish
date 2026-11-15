@@ -1,0 +1,27 @@
+{
+ "voice": "am_michael",
+ "speed": 1.04,
+ "lang": "en-us",
+ "sentences": [
+  ["The deadliest wave in Boston's history wasn't water.", 0.22],
+  ["It was molasses.", 0.35],
+  ["January fifteenth nineteen nineteen.", 0.12],
+  ["Just after noon in the North End.", 0.3],
+  ["A fifty-foot steel tank holds two point three million gallons.", 0.3],
+  ["The day is unusually warm.", 0.25],
+  ["Then rivets pop like gunfire.", 0.1],
+  ["And the tank splits open.", 0.35],
+  ["Molasses is forty percent heavier than water.", 0.22],
+  ["So it doesn't ooze.", 0.08],
+  ["It surges.", 0.3],
+  ["A wave up to twenty-five feet high races at thirty-five miles an hour.", 0.3],
+  ["It flattens buildings and bends the elevated railway.", 0.35],
+  ["Twenty-one people die.", 0.2],
+  ["A hundred and fifty are hurt.", 0.45],
+  ["For decades locals said the streets still smelled sweet.", 0.3],
+  ["Then Boston changed its building rules.", 0.12],
+  ["Engineers had to show their math.", 0.4],
+  ["Slow as molasses?", 0.18],
+  ["Not that day.", 0.3]
+ ]
+}

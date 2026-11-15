@@ -1,0 +1,5 @@
+node_modules/
+models/
+out/
+__pycache__/
+*.tmp.mp4
