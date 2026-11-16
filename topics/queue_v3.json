@@ -1,0 +1,2274 @@
+{
+ "rule": "Produce the first item with status 'todo', IN LIST ORDER (best first, categories alternated). Every topic here scored >= 80/100 on the owner's EXTREME-virality scale (score = 5*viral + 5*hook_power, each 1-10). New topics only enter if they score >= 85 AND beat the lowest item still 'todo' (that one goes to 'dropped'); keep at most 100 'todo'. Next video id = highest xrNNN in videos/ + 1. Mark it done with video_id.",
+ "scoring": {
+  "viral": "1-10: universal curiosity for a US audience, share/comment potential, 'it's about YOU'",
+  "hook_power": "1-10: stop-scroll strength of the on-screen line in the first 1-2 s",
+  "score": "5*viral + 5*hook_power (0-100)",
+  "hard_exclusions": "copyrighted characters or trademark logos needed to tell it (we can't draw them); facts that can't be verified; tragedy/crime as the core"
+ },
+ "sources": "B = original 100-idea bank (topics/BANK_100.txt), A/C = owner lists 21-60 / 61-100 (topics/BANK_2.txt), R = owner reserves; N = owner list '100 ideas con potencial de viralidad extrema' (16/11/2026), H = owner list '50 hooks' (16/11/2026)",
+ "items": [
+  {
+   "id": "N01",
+   "title_es": "¿Existe alguien con tu misma cara?",
+   "hook": "8 billion people. How many have YOUR face?",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Estudios de 'dobles' sin parentesco: rostros casi idénticos y, a veces, ADN parecido (Joshi et al., Cell Reports 2022). Probabilidad real de tener un doble.",
+   "note": "Owner favorite #1 (+ idea #11). Generic faces only.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "mind",
+   "rank": 1
+  },
+  {
+   "id": "N17",
+   "title_es": "Nunca escuchaste tu voz como la escuchan los demás",
+   "hook": "You've never heard your real voice.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Oís tu voz por aire + conducción ósea (graves extra); la grabación es la que oyen los demás.",
+   "note": "Owner idea #17 = hook #03. Claude can't hear audio: keep the sound demo simple (low-pass vs. plain).",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "rank": 2
+  },
+  {
+   "id": "N18",
+   "title_es": "¿Qué pasaría si el Sol se apagara ahora?",
+   "hook": "If the Sun vanished, you wouldn't know for 8 minutes.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "La luz y la gravedad viajan a la velocidad de la luz: 8 min 20 s de 'normalidad'.",
+   "note": "Owner idea #18.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "space",
+   "rank": 3
+  },
+  {
+   "id": "N08",
+   "title_es": "Nunca viste tu cara como la ven los demás",
+   "hook": "You've never seen your own face the way other people do.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El espejo invierte izquierda/derecha; por el efecto de mera exposición preferimos nuestro reflejo y los demás, la foto.",
+   "note": "Owner idea #08 = hook #01.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "mind",
+   "rank": 4
+  },
+  {
+   "id": "N19",
+   "title_es": "¿Qué es más antiguo: los tiburones o los árboles?",
+   "hook": "Sharks are older than trees.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Tiburones ~450 millones de años; los primeros árboles ~385 millones.",
+   "note": "Owner idea #19.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "animal",
+   "rank": 5
+  },
+  {
+   "id": "N60",
+   "title_es": "¿Caben todos los planetas entre la Tierra y la Luna?",
+   "hook": "Every planet fits between Earth and the Moon. With room to spare.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Suma de diámetros de los otros 7 planetas (~380.000 km) < distancia media Tierra-Luna (~384.400 km).",
+   "note": "Owner idea #60. Use mean distance; it fails at perigee — say 'on average'.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "space",
+   "rank": 6
+  },
+  {
+   "id": "H05",
+   "title_es": "Estás viviendo en el pasado",
+   "hook": "Everything you see has already happened.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "La luz tarda en llegar y el cerebro ~80 ms en procesarla; el Sol que ves tiene 8 min 20 s de atraso.",
+   "note": "Owner hook #05 (+ #36).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "mind",
+   "rank": 7
+  },
+  {
+   "id": "A30",
+   "title_es": "El animal que hace caca en forma de cubos.",
+   "hook": "This animal literally poops cubes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-18",
+   "note": "Merged with owner idea #65.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "animal",
+   "rank": 8
+  },
+  {
+   "id": "R01",
+   "title_es": "Los animales microscópicos que viven en tu cara",
+   "hook": "Something is living on your face right now.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-30",
+   "note": "Merged with owner idea #61.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body",
+   "rank": 9
+  },
+  {
+   "id": "H06",
+   "title_es": "Estos dos cuadrados tienen exactamente el mismo color",
+   "hook": "These two squares are the SAME color. Your brain won't believe it.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Ilusión del tablero con sombra de Adelson (MIT): se quita el entorno y se ve el mismo gris.",
+   "note": "Owner hook #06. Recreate the illusion ourselves (no copied image).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "mind",
+   "rank": 10
+  },
+  {
+   "id": "R02",
+   "title_es": "El parásito que reemplaza la lengua de un pez",
+   "hook": "This parasite literally becomes a fish's tongue.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-23",
+   "note": "Merged with owner idea #67.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "animal",
+   "rank": 11
+  },
+  {
+   "id": "R04",
+   "title_es": "El hombre que se comió un avión entero",
+   "hook": "A real human ate an entire airplane. Piece by piece.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-21",
+   "note": "Michel Lotito; add 'do not try this' line.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "human",
+   "rank": 12
+  },
+  {
+   "id": "N12",
+   "title_es": "Tu cerebro esconde tu propia nariz",
+   "hook": "Your brain is hiding something right in front of your eyes.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "La nariz está siempre en tu campo visual; el cerebro la filtra (adaptación/supresión). Mirá con un ojo y aparece.",
+   "note": "Owner idea #12 = hook #04.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "mind",
+   "rank": 13
+  },
+  {
+   "id": "R05",
+   "title_es": "Los dientes ocultos dentro del cráneo de un niño",
+   "hook": "This is what's hiding inside a child's skull.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-13",
+   "note": "Stylized X-ray only; no real child photo; calm, educational framing. Merged with owner idea #79.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body",
+   "rank": 14
+  },
+  {
+   "id": "H35",
+   "title_es": "El Sol no es amarillo",
+   "hook": "The Sun isn't yellow. It never was.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Su luz visible combinada es blanca; lo vemos amarillo por la atmósfera (NASA).",
+   "note": "Owner hook #35.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "space",
+   "rank": 15
+  },
+  {
+   "id": "R12",
+   "title_es": "El agujero en tu visión que el cerebro rellena",
+   "hook": "Your brain is making up part of what you see. Right now.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-06",
+   "note": "Merged with owner hooks #02 and #11: include the live blind-spot test (look at the dot, close one eye, the X disappears).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "mind",
+   "rank": 16
+  },
+  {
+   "id": "N07",
+   "title_es": "¿Cuántas veces doblar un papel para llegar a la Luna?",
+   "hook": "Fold a paper 42 times and it reaches the Moon.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "0,1 mm × 2^42 ≈ 440.000 km. Teórico: en la práctica el récord es 12 dobleces (Britney Gallivan).",
+   "note": "Owner idea #07.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 17
+  },
+  {
+   "id": "N13",
+   "title_es": "¿Qué mata más humanos: un tiburón o un mosquito?",
+   "hook": "The deadliest animal on Earth is smaller than your fingernail.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Mosquito: cientos de miles de muertes/año (malaria y otras, OMS); tiburones: ~5-10 por año.",
+   "note": "Owner idea #13.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 18
+  },
+  {
+   "id": "H09",
+   "title_es": "Podés mirar algo de frente y no verlo",
+   "hook": "You can look right at something… and never see it.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Ceguera por falta de atención (Simons & Chabris, gorila invisible).",
+   "note": "Owner hook #09. Own re-creation (counting passes) — no copied footage.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "rank": 19
+  },
+  {
+   "id": "N15",
+   "title_es": "¿Y si todos los humanos saltaran a la vez?",
+   "hook": "What if all 8 billion people jumped at the same time?",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "La Tierra se movería menos que el ancho de un átomo; el problema real sería volver a casa.",
+   "note": "Owner idea #15.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 20
+  },
+  {
+   "id": "N20",
+   "title_es": "¿Un día puede durar más que un año?",
+   "hook": "On Venus, a day is longer than a year.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Venus rota en 243 días terrestres y orbita el Sol en 225 (NASA).",
+   "note": "Owner idea #20.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "space",
+   "rank": 21
+  },
+  {
+   "id": "H10",
+   "title_es": "La cámara frontal cambia tu cara",
+   "hook": "Your selfie camera is lying about your face.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "A 30 cm la perspectiva agranda la nariz ~30 % frente a 1,5 m (Ward et al., JAMA Facial Plast Surg 2018).",
+   "note": "Owner hook #10.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "rank": 22
+  },
+  {
+   "id": "N30",
+   "title_es": "¿Por qué la Coca de McDonald's sabe distinta?",
+   "hook": "McDonald's Coke really does taste different. Here's why.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Jarabe en tanques de acero inoxidable, agua filtrada y enfriada, proporción calibrada y sorbete más ancho (declaraciones de McDonald's).",
+   "note": "Owner idea #30. No logos: generic red cup.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "rank": 23
+  },
+  {
+   "id": "N40",
+   "title_es": "¿Un sorbete tiene uno o dos agujeros?",
+   "hook": "Does a straw have one hole or two? People are fighting about it.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Topología: un sorbete es un toro: tiene un solo agujero (como una dona).",
+   "note": "Owner idea #40. Comment-bait: end with 'One or two? Comment.'",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 24
+  },
+  {
+   "id": "H12",
+   "title_es": "Tus ojos pueden cambiar lo que escuchás",
+   "hook": "Your eyes can change what your ears hear.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Efecto McGurk: 'ba' con labios de 'ga' se oye 'da'.",
+   "note": "Owner hook #12. Claude can't hear: say so; animated lips, synthetic syllables.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "rank": 25
+  },
+  {
+   "id": "N52",
+   "title_es": "¿Cuánto pesa una nube?",
+   "hook": "This fluffy cloud weighs as much as 100 elephants.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Un cúmulo típico de ~1 km³ con ~0,5 g/m³ de agua ≈ 500 toneladas (USGS/NCAR).",
+   "note": "Owner idea #52.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "earth",
+   "rank": 26
+  },
+  {
+   "id": "N41",
+   "title_es": "23 personas, 50 % de probabilidad",
+   "hook": "23 people. 50% chance. Of what?",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Problema del cumpleaños: con 23 personas, P(al menos dos comparten cumpleaños) ≈ 50,7 %.",
+   "note": "Owner idea #41 = hook #47.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 27
+  },
+  {
+   "id": "H21",
+   "title_es": "No todos piensan con una voz interior",
+   "hook": "Not everyone has a voice in their head.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El monólogo interno varía mucho; algunas personas casi no lo tienen (Hurlburt; 'anendophasia').",
+   "note": "Owner hook #21. Comment-bait: 'Do you?'",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "rank": 28
+  },
+  {
+   "id": "N70",
+   "title_es": "¿Por qué no podés hacerte cosquillas?",
+   "hook": "Try to tickle yourself. You can't. Here's why.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El cerebelo predice tu propio movimiento y atenúa la sensación (Blakemore et al.).",
+   "note": "Owner idea #70 = hook #44.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body",
+   "rank": 29
+  },
+  {
+   "id": "N42",
+   "title_es": "Un millón de segundos vs. mil millones",
+   "hook": "A million seconds is 11 days. A billion seconds is…",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "1.000.000 s ≈ 11,6 días; 1.000.000.000 s ≈ 31,7 años.",
+   "note": "Owner idea #42 (+ #10 counting to a billion).",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 30
+  },
+  {
+   "id": "H46",
+   "title_es": "Algunas personas no pueden imaginar imágenes",
+   "hook": "Close your eyes. Picture an apple. Some people see nothing.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Afantasía (Zeman et al., 2015): ~1-4 % de la gente no tiene imágenes mentales voluntarias.",
+   "note": "Owner hook #46. Interactive: ask viewers to rate their apple 1-5.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "rank": 31
+  },
+  {
+   "id": "N75",
+   "title_es": "¿Un animal puede seguir vivo sin cabeza?",
+   "hook": "A cockroach can live for weeks without its head.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Respira por espiráculos y su sistema circulatorio es abierto; muere de sed, no por la cabeza.",
+   "note": "Owner idea #75. Not gory: stylized X-ray bug.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 32
+  },
+  {
+   "id": "N81",
+   "title_es": "¿Y si la Tierra dejara de girar un segundo?",
+   "hook": "If Earth stopped spinning for one second…",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "En el ecuador vas a ~1.670 km/h (~1.040 mph): todo lo suelto seguiría de largo.",
+   "note": "Owner idea #81. Clearly hypothetical; no casualties shown.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "earth",
+   "rank": 33
+  },
+  {
+   "id": "N95",
+   "title_es": "¿Y si un agujero negro tuviera el tamaño de una moneda?",
+   "hook": "A black hole the size of a coin would weigh as much as Earth.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Radio de Schwarzschild de la masa terrestre ≈ 9 mm: 'del tamaño de una canica/moneda'.",
+   "note": "Owner idea #95.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "space",
+   "rank": 34
+  },
+  {
+   "id": "A58",
+   "title_es": "El hombre que simuló un atasco en Google Maps con 99 teléfonos.",
+   "hook": "He created a traffic jam on Google Maps with zero cars.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-22",
+   "note": "Merged with owner idea #33.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "tech",
+   "rank": 35
+  },
+  {
+   "id": "B03",
+   "title_es": "El hombre que vivió bajo el mar dentro de un barco hundido",
+   "hook": "He was alive inside a sunken ship.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-29",
+   "source_hint": "Voice of America, testimonio del sobreviviente",
+   "reveal": "Harrison Okene sobrevivió más de 60 horas en una bolsa de aire de un remolcador hundido en 2013.",
+   "open_0_2s": "Una linterna de buzo ilumina una mano viva dentro del casco oscuro a 30 metros de profundidad.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "human",
+   "rank": 36
+  },
+  {
+   "id": "B06",
+   "title_es": "Pepsi anunció un avión de combate y un hombre quiso cobrarlo",
+   "hook": "Pepsi put a fighter jet in an ad. He tried to claim it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-19",
+   "source_hint": "Sentencia Leonard v. Pepsico",
+   "reveal": "John Leonard quiso obtener un Harrier de la promoción. Los tribunales interpretaron el anuncio como una broma, no una oferta contractual.",
+   "open_0_2s": "Un caza militar aterriza en un instituto; sobre la pista aparece el número de puntos Pepsi.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "rank": 37
+  },
+  {
+   "id": "C67",
+   "title_es": "Los tiburones que se comen a sus hermanos antes de nacer.",
+   "hook": "These sharks eat their siblings before they're even born.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-04",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 38
+  },
+  {
+   "id": "B05",
+   "title_es": "La saliva de un hombre empezó a hervir en una cámara de vacío",
+   "hook": "His saliva started boiling. He survived.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-06",
+   "source_hint": "Guinness World Records",
+   "reveal": "Jim LeBlanc sufrió una despresurización durante una prueba de traje espacial en 1966 y sobrevivió.",
+   "open_0_2s": "Un rostro dentro de un casco; la presión cae a cero en un indicador y aparece vapor en la boca.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "human",
+   "rank": 39
+  },
+  {
+   "id": "B21",
+   "title_es": "La primera Coca-Cola utilizó ingredientes derivados de coca",
+   "hook": "The original Coca-Cola had a shocking ingredient.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-27",
+   "source_hint": "McGill University, historia de Coca-Cola",
+   "reveal": "La fórmula histórica usó extractos de coca y cambió con el tiempo; no equiparar el refresco actual con la receta antigua.",
+   "open_0_2s": "Una botella de 1880 se transparenta; aparecen hojas de coca y un antiguo jarabe.",
+   "note": "Historical recipe; do not equate modern Coca-Cola with the old formula. No logo.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "rank": 40
+  },
+  {
+   "id": "C71",
+   "title_es": "El sapo cuyos bebés emergen de la piel de su espalda.",
+   "hook": "Baby frogs emerge from holes in their mother's back.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-01",
+   "note": "Stylized, non-realistic skin texture (trypophobia risk). Merged with owner idea #78.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 41
+  },
+  {
+   "id": "C96",
+   "title_es": "El hombre que sobrevivió a siete impactos de rayos.",
+   "hook": "Lightning struck this man seven different times.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-09",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "human",
+   "rank": 42
+  },
+  {
+   "id": "R03",
+   "title_es": "Una gota de vidrio que resiste golpes y después explota",
+   "hook": "This glass survives a hammer… then explodes from one tiny touch.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-25",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "science",
+   "rank": 43
+  },
+  {
+   "id": "C75",
+   "title_es": "La biología real detrás de Buscando a Nemo: el padre podría convertirse en hembra.",
+   "hook": "In real life, Nemo's dad could become his mom.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-05",
+   "note": "Do not draw the Pixar character; generic clownfish, name only in text if needed.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 44
+  },
+  {
+   "id": "H07",
+   "title_es": "Tu cerebro borra imágenes cada vez que movés los ojos",
+   "hook": "Your brain deletes what you see every time your eyes move.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Supresión sacádica: no percibimos el barrido de los movimientos oculares rápidos.",
+   "note": "Owner hook #07. Mirror test: you can't see your own eyes move.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 45
+  },
+  {
+   "id": "H16",
+   "title_es": "Tenés una cicatriz que no recordás",
+   "hook": "You have a scar from before you can remember.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El ombligo es la cicatriz del cordón umbilical.",
+   "note": "Owner hook #16.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "body",
+   "rank": 46
+  },
+  {
+   "id": "C79",
+   "title_es": "Las tortugas que absorben oxígeno por una abertura posterior.",
+   "hook": "Some turtles can breathe through their rear end.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-26",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 47
+  },
+  {
+   "id": "H08",
+   "title_es": "Tu recuerdo más claro podría estar mal",
+   "hook": "Your most vivid memory might be fake.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Los recuerdos se reconstruyen al recordarlos; falsos recuerdos (Loftus).",
+   "note": "Owner hook #08 + #45.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 48
+  },
+  {
+   "id": "H18",
+   "title_es": "Tu cuerpo es radiactivo",
+   "hook": "You are radioactive. So is your banana.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Potasio-40 y carbono-14: ~4.000-5.000 desintegraciones por segundo en un adulto.",
+   "note": "Owner hook #18.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "body",
+   "rank": 49
+  },
+  {
+   "id": "R11",
+   "title_es": "El pez macho que se fusiona permanentemente con la hembra",
+   "hook": "This male fish fuses into the female's body.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-25",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 50
+  },
+  {
+   "id": "H19",
+   "title_es": "Partículas del Sol te atraviesan ahora",
+   "hook": "Trillions of particles from the Sun are passing through you right now.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Neutrinos solares: ~65.000 millones por cm² por segundo.",
+   "note": "Owner hook #19.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "space",
+   "rank": 51
+  },
+  {
+   "id": "H20",
+   "title_es": "Tus ojos ven el mundo al revés",
+   "hook": "Your eyes see the world upside down.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El cristalino proyecta la imagen invertida en la retina; el cerebro la endereza.",
+   "note": "Owner hook #20.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 52
+  },
+  {
+   "id": "R16",
+   "title_es": "El hongo que convierte hormigas en zombis",
+   "hook": "This fungus controls an ant's final movements.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-20",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 53
+  },
+  {
+   "id": "H28",
+   "title_es": "Tu altura cambia durante el día",
+   "hook": "You're taller right now than you'll be tonight.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Los discos intervertebrales se comprimen: ~1-2 cm menos a la noche.",
+   "note": "Owner hook #28.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "body",
+   "rank": 54
+  },
+  {
+   "id": "H29",
+   "title_es": "Tu casa tiene un olor que vos no sentís",
+   "hook": "Your house has a smell. You're the only one who can't smell it.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Adaptación olfativa: el cerebro deja de registrar olores constantes.",
+   "note": "Owner hook #29.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 55
+  },
+  {
+   "id": "R20",
+   "title_es": "La avispa que transforma una cucaracha en su marioneta",
+   "hook": "This wasp turns a cockroach into a walking puppet.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-08",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "rank": 56
+  },
+  {
+   "id": "H50",
+   "title_es": "El tiempo pasa más rápido para tu cabeza",
+   "hook": "Your head is aging faster than your feet.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Dilatación gravitacional: medida con relojes atómicos a 33 cm de diferencia (NIST 2010).",
+   "note": "Owner hook #50.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "space",
+   "rank": 57
+  },
+  {
+   "id": "H31",
+   "title_es": "El reloj que parece detenerse",
+   "hook": "Look at a clock. The first second lasts longer. Here's why.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Cronostasis: el cerebro rellena el tiempo del movimiento ocular.",
+   "note": "Owner hook #31.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 58
+  },
+  {
+   "id": "N100",
+   "title_es": "¿Y si fueras la única persona en la Tierra?",
+   "hook": "You wake up. You're the last person on Earth.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Qué deja de funcionar y en cuánto: luz en horas, agua en días, ciudades en décadas.",
+   "note": "Owner idea #100. Speculative: say 'experts estimate'.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "earth",
+   "rank": 59
+  },
+  {
+   "id": "N43",
+   "title_es": "2.500.000 hormigas por persona",
+   "hook": "There are 2.5 million ants for every human on Earth.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Estimación de ~20 billones (20×10^15) de hormigas (Schultheiss et al., PNAS 2022) / 8.000 millones.",
+   "note": "Owner idea #43.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 60
+  },
+  {
+   "id": "H32",
+   "title_es": "Esta imagen está quieta. ¿Por qué se mueve?",
+   "hook": "This image isn't moving. So why is it?",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Ilusión de movimiento periférico (tipo 'serpientes rotatorias' de Kitaoka) — recrear un patrón propio.",
+   "note": "Owner hook #32. Build our own pattern, don't copy Kitaoka's image.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 61
+  },
+  {
+   "id": "N86",
+   "title_es": "¿Lluvia de diamantes?",
+   "hook": "On some planets, it might rain diamonds.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Experimentos de laboratorio sugieren lluvia de diamantes en Neptuno y Urano (SLAC 2017, 2022).",
+   "note": "Owner idea #86.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "space",
+   "rank": 62
+  },
+  {
+   "id": "A22",
+   "title_es": "El parásito que convierte los tentáculos de un caracol en señuelos palpitantes.",
+   "hook": "Something is pulsing inside this snail's head.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-27",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 63
+  },
+  {
+   "id": "H37",
+   "title_es": "Seguís viendo un color que ya desapareció",
+   "hook": "Stare at this for 20 seconds. Then look at the wall.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Imagen residual: fatiga de conos produce el color complementario.",
+   "note": "Owner hook #37. Interactive.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 64
+  },
+  {
+   "id": "A35",
+   "title_es": "Tu nariz cambia cuál fosa nasal domina la respiración.",
+   "hook": "Your nostrils are taking turns. Right now.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-28",
+   "note": "Merged with owner hook #17.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "body",
+   "rank": 65
+  },
+  {
+   "id": "A36",
+   "title_es": "El pez que tiene una cabeza transparente y los ojos dentro.",
+   "hook": "You can see right through this fish's head.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-07",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 66
+  },
+  {
+   "id": "H38",
+   "title_es": "Una sugerencia cambia lo que escuchás",
+   "hook": "Your brain can change what you hear. Just read this first.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Expectativa auditiva (palabras ambiguas que cambian según el texto en pantalla).",
+   "note": "Owner hook #38. Synthetic ambiguous audio only.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 67
+  },
+  {
+   "id": "B28",
+   "title_es": "El dedo humano encontrado en Wendy’s fue parte de un engaño",
+   "hook": "A human finger was found in Wendy’s chili.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-05",
+   "source_hint": "Prensa y expediente penal del caso de 2005",
+   "reveal": "El dedo existía, pero fue introducido deliberadamente; Wendy’s no lo había servido así.",
+   "open_0_2s": "Una cuchara saca un objeto de un recipiente; el plano cambia a una investigación policial.",
+   "note": "Clear that Wendy's did not serve it; it was a planted hoax.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "brand",
+   "rank": 68
+  },
+  {
+   "id": "B63",
+   "title_es": "Napoleón tuvo que escapar de una multitud de conejos",
+   "hook": "Napoleon was chased by rabbits.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-23",
+   "source_hint": "BBC History Revealed",
+   "reveal": "Un episodio anecdótico de 1807 describe una cacería fallida con conejos acostumbrados a humanos; presentarlo como relato histórico, no filmación comprobada.",
+   "open_0_2s": "Napoleón retrocede mientras decenas de conejos avanzan contra su carruaje.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "history",
+   "rank": 69
+  },
+  {
+   "id": "H39",
+   "title_es": "Una persona puede cambiar delante tuyo y no notarlo",
+   "hook": "A stranger swapped places mid-conversation. Half of people didn't notice.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Ceguera al cambio: experimento de la puerta (Simons & Levin, 1998).",
+   "note": "Owner hook #39.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 70
+  },
+  {
+   "id": "B34",
+   "title_es": "Bayer comercializó heroína como medicamento",
+   "hook": "Bayer once marketed heroin as cough medicine.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-20",
+   "source_hint": "McGill University, historia de Bayer",
+   "reveal": "A finales del siglo XIX se vendió diacetilmorfina como analgésico y antitusivo antes de reconocer sus riesgos.",
+   "open_0_2s": "Un envase de botica con el nombre Bayer se revela al girar la etiqueta.",
+   "note": "Historical; no dosing or drug glorification.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "brand",
+   "rank": 71
+  },
+  {
+   "id": "C72",
+   "title_es": "La rana que rompe sus propios huesos para sacar garras.",
+   "hook": "This frog breaks its own bones to make claws.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-12",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 72
+  },
+  {
+   "id": "N05",
+   "title_es": "¿Alguien está soñando con vos ahora?",
+   "hook": "What are the odds someone is dreaming about you right now?",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "No hay dato verificable: solo estimaciones especulativas.",
+   "note": "Owner idea #05. No verifiable answer — low priority.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 73
+  },
+  {
+   "id": "R17",
+   "title_es": "Tu cuerpo emite luz que no podés ver",
+   "hook": "Your body is glowing right now. You just can't see it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-09",
+   "note": "Merged with owner hook #14.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "body",
+   "rank": 74
+  },
+  {
+   "id": "R07",
+   "title_es": "El animal que se desprende de sus órganos para sobrevivir",
+   "hook": "This animal shoots out its organs… and grows them back.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-22",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 75
+  },
+  {
+   "id": "N16",
+   "title_es": "Hay un color que no existe en el arcoíris",
+   "hook": "There's a color your brain invents. It's not in the rainbow.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El magenta no corresponde a una sola longitud de onda: el cerebro lo crea con rojo + azul.",
+   "note": "Owner idea #16 + hook #13.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "mind",
+   "rank": 76
+  },
+  {
+   "id": "B02",
+   "title_es": "El Monopoly de McDonald’s estaba amañado desde adentro",
+   "hook": "Someone rigged McDonald’s million-dollar Monopoly prizes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-11",
+   "source_hint": "Departamento de Justicia de EE. UU.",
+   "reveal": "Un empleado de la firma de marketing que gestionaba las promociones desviaba las fichas de mayor valor. No fue una conspiración de todos los restaurantes.",
+   "open_0_2s": "Una etiqueta ganadora de US$1 millón es retirada de una pila de premios delante de cámara.",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "brand",
+   "rank": 77
+  },
+  {
+   "id": "R13",
+   "title_es": "La babosa marina que se desprende de la cabeza y regenera su cuerpo",
+   "hook": "This animal can lose its entire body… and grow another.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-11",
+   "note": "Merged with owner idea #80.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "animal",
+   "rank": 78
+  },
+  {
+   "id": "B38",
+   "title_es": "Hicieron explotar una ballena muerta para deshacerse de ella",
+   "hook": "They tried to blow up a dead whale.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-08",
+   "source_hint": "Oregon Historical Society, exploding whale",
+   "reveal": "En 1970 las autoridades intentaron eliminar una ballena con explosivos; el resultado fue un desastre absurdo.",
+   "open_0_2s": "Una playa de Oregón; se enciende una carga bajo una enorme ballena varada.",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "history",
+   "rank": 79
+  },
+  {
+   "id": "H24",
+   "title_es": "Casi todo tu campo visual es borroso",
+   "hook": "Most of what you're seeing right now is blurry.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Solo la fóvea (~2°) tiene máxima nitidez.",
+   "note": "Owner hook #24.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "rank": 80
+  },
+  {
+   "id": "B65",
+   "title_es": "Los hipopótamos de Pablo Escobar terminaron viviendo libres",
+   "hook": "Pablo Escobar left hippos behind in Colombia.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-26",
+   "source_hint": "Autoridades ambientales de Colombia / estudios ecológicos",
+   "reveal": "Los descendientes de animales introducidos por Escobar originaron una población invasora.",
+   "open_0_2s": "De una mansión abandonada sale un hipopótamo a un río tropical.",
+   "note": "No drug glorification; focus on the hippos and ecology.",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "animal",
+   "rank": 81
+  },
+  {
+   "id": "H27",
+   "title_es": "Estás perdiendo piel mientras mirás esto",
+   "hook": "You're shedding skin while you watch this.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "~30.000-40.000 células por minuto.",
+   "note": "Owner hook #27.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "body",
+   "rank": 82
+  },
+  {
+   "id": "H30",
+   "title_es": "El celular no vibró, fue tu cerebro",
+   "hook": "Your phone didn't vibrate. Your brain did.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Vibración fantasma: hasta ~90 % de usuarios la reportan (estudios).",
+   "note": "Owner hook #30.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "rank": 83
+  },
+  {
+   "id": "R15",
+   "title_es": "El tiburón que puede vivir casi cuatro siglos",
+   "hook": "This shark could outlive your great-great-grandchildren.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-28",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "animal",
+   "rank": 84
+  },
+  {
+   "id": "N14",
+   "title_es": "¿Cuánto de tu vida pasás con los ojos cerrados?",
+   "hook": "You'll spend years of your life with your eyes closed.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Sueño (~1/3 de la vida) + parpadeos (~10 % del tiempo despierto).",
+   "note": "Owner idea #14.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "body",
+   "rank": 85
+  },
+  {
+   "id": "H42",
+   "title_es": "¿Tu rojo es mi rojo?",
+   "hook": "Your red might not be my red.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Qualia: no hay forma directa de comparar experiencias subjetivas.",
+   "note": "Owner hook #42.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "rank": 86
+  },
+  {
+   "id": "N23",
+   "title_es": "¿Barbie se llama realmente Barbie?",
+   "hook": "Barbie has a full name. Almost nobody knows it.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Barbara Millicent Roberts, de Willows, Wisconsin (Mattel).",
+   "note": "Owner idea #23. Generic doll silhouette, name in text only — no Barbie likeness or logo.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "brand",
+   "rank": 87
+  },
+  {
+   "id": "N44",
+   "title_es": "¿Cuántos cumplen años el mismo día que vos?",
+   "hook": "About 21 million people share your birthday.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "8.000 millones / 365 ≈ 22 millones (la distribución no es uniforme).",
+   "note": "Owner idea #44.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "science",
+   "rank": 88
+  },
+  {
+   "id": "N50",
+   "title_es": "¿Cuántos años pasás mirando pantallas?",
+   "hook": "Your phone is eating years of your life.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Calcular con el promedio de uso diario (Data.ai / Pew) → años en una vida.",
+   "note": "Owner idea #50.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "human",
+   "rank": 89
+  },
+  {
+   "id": "N31",
+   "title_es": "¿Por qué las Pringles tienen esa forma?",
+   "hook": "Pringles are shaped by a math equation.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Paraboloide hiperbólico: apilables y resistentes.",
+   "note": "Owner idea #31. Generic chip, no can design.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "brand",
+   "rank": 90
+  },
+  {
+   "id": "N51",
+   "title_es": "¿Cuánto viajaste hoy sin moverte?",
+   "hook": "You're moving 67,000 mph right now. Sitting still.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Órbita terrestre ~107.000 km/h (~67.000 mph) + rotación.",
+   "note": "Owner idea #51 = hook #48.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "space",
+   "rank": 91
+  },
+  {
+   "id": "N53",
+   "title_es": "¿Cuántos antepasados tuvieron que existir para vos?",
+   "hook": "You needed thousands of ancestors to exist.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "2^n antepasados por generación con 'colapso de pedigrí'.",
+   "note": "Owner idea #53.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "human",
+   "rank": 92
+  },
+  {
+   "id": "N32",
+   "title_es": "¿Qué significa el 40 de WD-40?",
+   "hook": "WD-40 is named after 39 failures.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Water Displacement, 40.º intento (1953, WD-40 Company).",
+   "note": "Owner idea #32. No logo.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "brand",
+   "rank": 93
+  },
+  {
+   "id": "N62",
+   "title_es": "¿Cuántos corazones tiene un pulpo?",
+   "hook": "An octopus has three hearts. And blue blood.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Tres corazones (2 branquiales + 1 sistémico) y hemocianina azul.",
+   "note": "Owner idea #62 (+ #66). Great X-ray visual.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "animal",
+   "rank": 94
+  },
+  {
+   "id": "N69",
+   "title_es": "¿Tu cerebro siente dolor?",
+   "hook": "Your brain can't feel pain.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "El tejido cerebral no tiene nociceptores; por eso hay cirugías con el paciente despierto.",
+   "note": "Owner idea #69 = hook #23.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "body",
+   "rank": 95
+  },
+  {
+   "id": "N34",
+   "title_es": "¿Por qué las bolsas de papas tienen tanto aire?",
+   "hook": "Your chip bag isn't full of air. It's full of this.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Nitrógeno: evita la oxidación y protege las papas.",
+   "note": "Owner idea #34.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "brand",
+   "rank": 96
+  },
+  {
+   "id": "N63",
+   "title_es": "¿Las mariposas saborean con los pies?",
+   "hook": "Butterflies taste with their feet.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Quimiorreceptores en las patas.",
+   "note": "Owner idea #63.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "animal",
+   "rank": 97
+  },
+  {
+   "id": "N37",
+   "title_es": "¿El Coronel de KFC era coronel?",
+   "hook": "The KFC Colonel was a real colonel. Sort of.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Harland Sanders recibió el título honorario de 'Kentucky Colonel' (1935/1950).",
+   "note": "Owner idea #37. Generic figure, no logo.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "brand",
+   "rank": 98
+  },
+  {
+   "id": "N74",
+   "title_es": "¿Por qué los flamencos son rosados?",
+   "hook": "Flamingos are born gray.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Nacen grises; los carotenoides de su dieta los tiñen.",
+   "note": "Owner idea #74.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "animal",
+   "rank": 99
+  },
+  {
+   "id": "N76",
+   "title_es": "¿Una gallina pone huevos sin gallo?",
+   "hook": "Hens lay eggs without a rooster. Every day.",
+   "status": "todo",
+   "video_id": null,
+   "reveal": "Sí: los huevos de supermercado no están fecundados.",
+   "note": "Owner idea #76.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "animal",
+   "rank": 100
+  }
+ ],
+ "dropped_low_score": [
+  {
+   "id": "N87",
+   "hook": "What if you could see the bacteria on your hands?",
+   "score": 80
+  },
+  {
+   "id": "A24",
+   "hook": "This tiny punch creates an underwater shockwave.",
+   "score": 80
+  },
+  {
+   "id": "A25",
+   "hook": "These ants explode to defend their colony.",
+   "score": 80
+  },
+  {
+   "id": "A27",
+   "hook": "This worm makes its host jump into water.",
+   "score": 80
+  },
+  {
+   "id": "A29",
+   "hook": "Why is there a perfect-looking hexagon on Saturn?",
+   "score": 80
+  },
+  {
+   "id": "A31",
+   "hook": "This waterfall looks like it's bleeding.",
+   "score": 80
+  },
+  {
+   "id": "A39",
+   "hook": "The father gives birth to the babies.",
+   "score": 80
+  },
+  {
+   "id": "A40",
+   "hook": "This plant can count touches before digesting prey.",
+   "score": 80
+  },
+  {
+   "id": "A44",
+   "hook": "A black hole can stretch a star into a thin stream.",
+   "score": 80
+  },
+  {
+   "id": "A46",
+   "hook": "This frog can freeze… and come back to life.",
+   "score": 80
+  },
+  {
+   "id": "A59",
+   "hook": "This black Burger King burger had a bizarre side effect.",
+   "score": 80
+  },
+  {
+   "id": "B07",
+   "hook": "Someone stole Charlie Chaplin’s body.",
+   "score": 80
+  },
+  {
+   "id": "B18",
+   "hook": "Taylor Swift’s concert shook the ground.",
+   "score": 80
+  },
+  {
+   "id": "B23",
+   "hook": "Kate Winslet held her breath for over seven minutes.",
+   "score": 80
+  },
+  {
+   "id": "B29",
+   "hook": "He jumped from a plane with ransom money.",
+   "score": 80
+  },
+  {
+   "id": "B31",
+   "hook": "She fell from the sky and survived.",
+   "score": 80
+  },
+  {
+   "id": "B43",
+   "hook": "Bill Gates has a real 1977 mugshot.",
+   "score": 80
+  },
+  {
+   "id": "B47",
+   "hook": "A tsunami climbed higher than a skyscraper.",
+   "score": 80
+  },
+  {
+   "id": "B53",
+   "hook": "Your immune cells hold tattoo ink in place.",
+   "score": 80
+  },
+  {
+   "id": "B56",
+   "hook": "This jellyfish can reverse its life cycle.",
+   "score": 80
+  },
+  {
+   "id": "B59",
+   "hook": "A deadly wave of beer hit London.",
+   "score": 80
+  },
+  {
+   "id": "B68",
+   "hook": "People reportedly danced uncontrollably for days.",
+   "score": 80
+  },
+  {
+   "id": "B76",
+   "hook": "This lizard can shoot blood from its eyes.",
+   "score": 80
+  },
+  {
+   "id": "B80",
+   "hook": "An iron rod went through his head. He survived.",
+   "score": 80
+  },
+  {
+   "id": "B88",
+   "hook": "Einstein’s brain was removed after he died.",
+   "score": 80
+  },
+  {
+   "id": "C100",
+   "hook": "This animal's arms have minds of their own.",
+   "score": 80
+  },
+  {
+   "id": "C85",
+   "hook": "This blob has no brain… but it can solve a maze.",
+   "score": 80
+  },
+  {
+   "id": "C98",
+   "hook": "Some people are born without fingerprints.",
+   "score": 80
+  },
+  {
+   "id": "C99",
+   "hook": "A teaspoon of this star would weigh millions of tons.",
+   "score": 80
+  },
+  {
+   "id": "R06",
+   "hook": "This frog hides its blood to become nearly invisible.",
+   "score": 80
+  },
+  {
+   "id": "R08",
+   "hook": "On this planet, it may rain glass sideways.",
+   "score": 80
+  },
+  {
+   "id": "R09",
+   "hook": "This solid metal melts in your hand.",
+   "score": 80
+  },
+  {
+   "id": "R14",
+   "hook": "A man stayed underwater for 29 minutes on one breath.",
+   "score": 80
+  },
+  {
+   "id": "H22",
+   "hook": "You have a second brain. It's in your gut.",
+   "score": 75
+  },
+  {
+   "id": "H25",
+   "hook": "You have way more than 5 senses.",
+   "score": 75
+  },
+  {
+   "id": "H26",
+   "hook": "Your heart doesn't need your brain to beat.",
+   "score": 75
+  },
+  {
+   "id": "H34",
+   "hook": "Nobody has ever seen your rainbow.",
+   "score": 75
+  },
+  {
+   "id": "H40",
+   "hook": "Your two eyes see two different pictures.",
+   "score": 75
+  },
+  {
+   "id": "N35",
+   "hook": "White chocolate isn't really chocolate. Or is it?",
+   "score": 75
+  },
+  {
+   "id": "N46",
+   "hook": "Your heart will beat about 3 billion times.",
+   "score": 75
+  },
+  {
+   "id": "N47",
+   "hook": "You'll make enough spit in your life to fill a pool.",
+   "score": 75
+  },
+  {
+   "id": "N48",
+   "hook": "There are photos of you that you've never seen.",
+   "score": 75
+  },
+  {
+   "id": "N59",
+   "hook": "One drop of water has more atoms than…",
+   "score": 75
+  },
+  {
+   "id": "N85",
+   "hook": "What if the oceans were Coca-Cola?",
+   "score": 75
+  },
+  {
+   "id": "N90",
+   "hook": "Why ants can't be the size of dogs.",
+   "score": 75
+  },
+  {
+   "id": "N91",
+   "hook": "What if you touched the Sun?",
+   "score": 75
+  },
+  {
+   "id": "N92",
+   "hook": "What's actually inside a tornado?",
+   "score": 75
+  },
+  {
+   "id": "A55",
+   "hook": "This black coating makes a 3D object look flat.",
+   "score": 75
+  },
+  {
+   "id": "B10",
+   "hook": "This plane landed with its roof torn off.",
+   "score": 75
+  },
+  {
+   "id": "B75",
+   "hook": "Johnny Depp fired his friend’s ashes from a cannon.",
+   "score": 75
+  },
+  {
+   "id": "B97",
+   "hook": "Thousands of spiders can fall from the sky.",
+   "score": 75
+  },
+  {
+   "id": "B98",
+   "hook": "They detonated a nuclear bomb in space.",
+   "score": 75
+  },
+  {
+   "id": "C64",
+   "hook": "KFC actually made chicken-flavored nail polish.",
+   "score": 75
+  },
+  {
+   "id": "C80",
+   "hook": "Penguins can launch poop surprisingly far.",
+   "score": 75
+  },
+  {
+   "id": "C95",
+   "hook": "Why is the ocean forming a giant chessboard?",
+   "score": 75
+  },
+  {
+   "id": "R10",
+   "hook": "An underwater finger of ice can freeze creatures in its path.",
+   "score": 75
+  },
+  {
+   "id": "R18",
+   "hook": "There are lakes at the bottom of the ocean.",
+   "score": 75
+  },
+  {
+   "id": "R19",
+   "hook": "Scientists made a living frog float using magnets.",
+   "score": 75
+  },
+  {
+   "id": "H33",
+   "hook": "Your brain sees faces that aren't there.",
+   "score": 70
+  },
+  {
+   "id": "H36",
+   "hook": "Some stars you see tonight might already be gone.",
+   "score": 70
+  },
+  {
+   "id": "N38",
+   "hook": "Tennis balls weren't always yellow.",
+   "score": 70
+  },
+  {
+   "id": "N45",
+   "hook": "A 6-digit PIN isn't as safe as you think.",
+   "score": 70
+  },
+  {
+   "id": "N49",
+   "hook": "Right now, about a million people are in the air.",
+   "score": 70
+  },
+  {
+   "id": "N54",
+   "hook": "There are more stars than grains of sand… per person?",
+   "score": 70
+  },
+  {
+   "id": "N84",
+   "hook": "What if you were one centimeter tall?",
+   "score": 70
+  },
+  {
+   "id": "N89",
+   "hook": "What if Earth had the Moon's gravity?",
+   "score": 70
+  },
+  {
+   "id": "N94",
+   "hook": "Could you swim in a pool of honey?",
+   "score": 70
+  },
+  {
+   "id": "A26",
+   "hook": "These rocks move across the desert with nobody touching them.",
+   "score": 70
+  },
+  {
+   "id": "A28",
+   "hook": "Water can boil and freeze at the same time.",
+   "score": 70
+  },
+  {
+   "id": "A33",
+   "hook": "This fish can leap out of water to deliver an electric shock.",
+   "score": 70
+  },
+  {
+   "id": "A38",
+   "hook": "This beetle fires boiling-hot chemicals.",
+   "score": 70
+  },
+  {
+   "id": "A41",
+   "hook": "This fish sleeps inside its own mucus cocoon.",
+   "score": 70
+  },
+  {
+   "id": "A53",
+   "hook": "This creature's blue blood helps protect modern medicine.",
+   "score": 70
+  },
+  {
+   "id": "B11",
+   "hook": "There is a real Tesla orbiting the Sun.",
+   "score": 70
+  },
+  {
+   "id": "B19",
+   "hook": "Scientists recorded this terrifying ocean sound.",
+   "score": 70
+  },
+  {
+   "id": "B25",
+   "hook": "Elvis asked Nixon for a narcotics badge.",
+   "score": 70
+  },
+  {
+   "id": "B37",
+   "hook": "Einstein was offered a country’s presidency.",
+   "score": 70
+  },
+  {
+   "id": "B52",
+   "hook": "Nobody has convincingly decoded this book.",
+   "score": 70
+  },
+  {
+   "id": "B66",
+   "hook": "An explosion flattened a forest. No impact crater.",
+   "score": 70
+  },
+  {
+   "id": "B82",
+   "hook": "Nicolas Cage bought a dinosaur skull. Then returned it.",
+   "score": 70
+  },
+  {
+   "id": "B83",
+   "hook": "Scientists heard a signal that never repeated.",
+   "score": 70
+  },
+  {
+   "id": "B89",
+   "hook": "They built a computer 2,000 years ago.",
+   "score": 70
+  },
+  {
+   "id": "B94",
+   "hook": "A passenger jet became a giant glider.",
+   "score": 70
+  },
+  {
+   "id": "B95",
+   "hook": "Apple’s first logo looked nothing like an apple.",
+   "score": 70
+  },
+  {
+   "id": "B99",
+   "hook": "This Russian radio station broadcasts eerie buzzing.",
+   "score": 70
+  },
+  {
+   "id": "C62",
+   "hook": "This Nintendo Game Boy survived an explosion… and still worked.",
+   "score": 70
+  },
+  {
+   "id": "C63",
+   "hook": "This entire car is made of LEGO. And it actually drives.",
+   "score": 70
+  },
+  {
+   "id": "C66",
+   "hook": "This crab has claws powerful enough to crack coconuts.",
+   "score": 70
+  },
+  {
+   "id": "C68",
+   "hook": "This bird can sound exactly like a camera.",
+   "score": 70
+  },
+  {
+   "id": "C88",
+   "hook": "This snake can literally glide through the air.",
+   "score": 70
+  },
+  {
+   "id": "C89",
+   "hook": "This ocean creature can be longer than a blue whale.",
+   "score": 70
+  },
+  {
+   "id": "C90",
+   "hook": "This jellyfish has 24 eyes… and no brain.",
+   "score": 70
+  },
+  {
+   "id": "C91",
+   "hook": "Shine UV light on a scorpion… and watch what happens.",
+   "score": 70
+  },
+  {
+   "id": "C97",
+   "hook": "This looks solid… but one drop takes years to fall.",
+   "score": 70
+  },
+  {
+   "id": "H15",
+   "hook": "Your bones are alive right now.",
+   "score": 65
+  },
+  {
+   "id": "H41",
+   "hook": "You're surrounded by light you can't see.",
+   "score": 65
+  },
+  {
+   "id": "H43",
+   "hook": "Your ears never turn off. Even asleep.",
+   "score": 65
+  },
+  {
+   "id": "N72",
+   "hook": "One part of your body gets no blood at all.",
+   "score": 65
+  },
+  {
+   "id": "N82",
+   "hook": "What if the Moon were a giant mirror?",
+   "score": 65
+  },
+  {
+   "id": "N88",
+   "hook": "What if the air in your room turned liquid?",
+   "score": 65
+  },
+  {
+   "id": "N93",
+   "hook": "What if raindrops were one meter wide?",
+   "score": 65
+  },
+  {
+   "id": "N98",
+   "hook": "What if bees were human-sized?",
+   "score": 65
+  },
+  {
+   "id": "A21",
+   "hook": "This volcano burns electric blue.",
+   "score": 65
+  },
+  {
+   "id": "A56",
+   "hook": "This liquid grows spikes when a magnet gets close.",
+   "score": 65
+  },
+  {
+   "id": "B12",
+   "hook": "This car knew when it was being tested.",
+   "score": 65
+  },
+  {
+   "id": "C70",
+   "hook": "This spider builds a fake giant spider.",
+   "score": 65
+  },
+  {
+   "id": "C82",
+   "hook": "This tree launches its seeds like tiny bullets.",
+   "score": 65
+  },
+  {
+   "id": "C93",
+   "hook": "This waterfall is going the wrong way.",
+   "score": 65
+  },
+  {
+   "id": "H49",
+   "hook": "Moonlight is 1.3 seconds old.",
+   "score": 60
+  },
+  {
+   "id": "N36",
+   "hook": "Why is cola brown?",
+   "score": 60
+  },
+  {
+   "id": "N39",
+   "hook": "Why do bottle bottoms have bumps?",
+   "score": 60
+  },
+  {
+   "id": "N56",
+   "hook": "Billions of people are asleep while you watch this.",
+   "score": 60
+  },
+  {
+   "id": "N57",
+   "hook": "Pick a number from 1 to 10.",
+   "score": 60
+  },
+  {
+   "id": "N58",
+   "hook": "You blink about 100 times while sunlight reaches you.",
+   "score": 60
+  },
+  {
+   "id": "N71",
+   "hook": "Can you live without a stomach?",
+   "score": 60
+  },
+  {
+   "id": "N96",
+   "hook": "What if the ocean lost all its salt?",
+   "score": 60
+  },
+  {
+   "id": "A23",
+   "hook": "Fire becomes a floating blue ball in space.",
+   "score": 60
+  },
+  {
+   "id": "A32",
+   "hook": "This spider built itself an underwater home.",
+   "score": 60
+  },
+  {
+   "id": "A34",
+   "hook": "This caterpillar can look like a snake.",
+   "score": 60
+  },
+  {
+   "id": "A37",
+   "hook": "Why are there three suns in the sky?",
+   "score": 60
+  },
+  {
+   "id": "A47",
+   "hook": "These crystals are taller than humans.",
+   "score": 60
+  },
+  {
+   "id": "A48",
+   "hook": "This tree looks like it's bleeding.",
+   "score": 60
+  },
+  {
+   "id": "A51",
+   "hook": "This beautiful flower is actually a predator.",
+   "score": 60
+  },
+  {
+   "id": "A54",
+   "hook": "This water freezes almost instantly.",
+   "score": 60
+  },
+  {
+   "id": "B55",
+   "hook": "A movie stunt nearly killed Jackie Chan.",
+   "score": 60
+  },
+  {
+   "id": "B61",
+   "hook": "Houdini left a secret code for the afterlife.",
+   "score": 60
+  },
+  {
+   "id": "B69",
+   "hook": "Tesla controlled a boat remotely in 1898.",
+   "score": 60
+  },
+  {
+   "id": "B70",
+   "hook": "These ships are stranded where a sea once existed.",
+   "score": 60
+  },
+  {
+   "id": "B74",
+   "hook": "Nintendo sold playing cards before video games.",
+   "score": 60
+  },
+  {
+   "id": "B79",
+   "hook": "Microsoft’s chatbot went off the rails in one day.",
+   "score": 60
+  },
+  {
+   "id": "B81",
+   "hook": "Nike’s famous sole came from a waffle iron.",
+   "score": 60
+  },
+  {
+   "id": "B90",
+   "hook": "Coca-Cola changed its recipe. Fans revolted.",
+   "score": 60
+  },
+  {
+   "id": "B92",
+   "hook": "Why is the Statue of Liberty’s torch closed?",
+   "score": 60
+  },
+  {
+   "id": "C61",
+   "hook": "Pizza Hut actually delivered a pizza to space.",
+   "score": 60
+  },
+  {
+   "id": "C76",
+   "hook": "This octopus can impersonate other sea creatures.",
+   "score": 60
+  },
+  {
+   "id": "C78",
+   "hook": "This fish shoots insects out of the air.",
+   "score": 60
+  },
+  {
+   "id": "C83",
+   "hook": "This giant flower heats up and smells like rotting flesh.",
+   "score": 60
+  },
+  {
+   "id": "C84",
+   "hook": "This entire forest is technically one organism.",
+   "score": 60
+  },
+  {
+   "id": "C92",
+   "hook": "The ocean can glow like a galaxy of blue stars.",
+   "score": 60
+  },
+  {
+   "id": "N83",
+   "hook": "What if you heard every sound on Earth at once?",
+   "score": 55
+  },
+  {
+   "id": "N97",
+   "hook": "What if every cloud turned to stone?",
+   "score": 55
+  },
+  {
+   "id": "N99",
+   "hook": "What if you could see 360 degrees?",
+   "score": 55
+  },
+  {
+   "id": "A42",
+   "hook": "It looks like there's a second river underwater.",
+   "score": 55
+  },
+  {
+   "id": "C73",
+   "hook": "That leaf just started walking.",
+   "score": 55
+  },
+  {
+   "id": "C94",
+   "hook": "These giant beams of light aren't coming from space.",
+   "score": 55
+  },
+  {
+   "id": "A45",
+   "hook": "These perfect frozen bubbles contain trapped gas.",
+   "score": 50
+  },
+  {
+   "id": "A60",
+   "hook": "Coca-Cola bubbles behave very differently in space.",
+   "score": 50
+  },
+  {
+   "id": "C77",
+   "hook": "This creature turns itself into a spiky umbrella.",
+   "score": 50
+  },
+  {
+   "id": "C86",
+   "hook": "These mushrooms glow without electricity.",
+   "score": 50
+  },
+  {
+   "id": "C87",
+   "hook": "Thousands of fireflies flash in perfect synchronization.",
+   "score": 50
+  }
+ ],
+ "excluded_ip": [
+  {
+   "id": "N02",
+   "title_es": "¿Bob Esponja es hombre o mujer?",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N03",
+   "title_es": "Hello Kitty no es una gata",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N04",
+   "title_es": "¿El hombre del Monopoly tenía monóculo?",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N06",
+   "title_es": "¿Goofy es un perro o una vaca?",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N09",
+   "title_es": "¿Pikachu tiene la punta de la cola negra?",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N21",
+   "title_es": "Pluto y Goofy",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N22",
+   "title_es": "Mario y los ladrillos",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N24",
+   "title_es": "El Simpson con cinco dedos",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N25",
+   "title_es": "El idioma de los Minions",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N26",
+   "title_es": "La sonrisa del logo de Amazon",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N27",
+   "title_es": "La flecha del logo de FedEx",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N28",
+   "title_es": "Mickey vs. Bugs Bunny",
+   "reason": "needs a copyrighted character or trademark logo"
+  },
+  {
+   "id": "N29",
+   "title_es": "El logo de Fruit of the Loom",
+   "reason": "needs a copyrighted character or trademark logo"
+  }
+ ],
+ "merged_duplicates": {
+  "N11": "N01",
+  "N33": "A58",
+  "N61": "R01",
+  "N64": "A46",
+  "N65": "A30",
+  "N66": "N62",
+  "N67": "R02",
+  "N68": "R12",
+  "N73": "B56",
+  "N77": "A41",
+  "N78": "C71",
+  "N79": "R05",
+  "N80": "R13",
+  "H01": "N08",
+  "H02": "R12",
+  "H03": "N17",
+  "H04": "N12",
+  "H11": "R12",
+  "H13": "N16",
+  "H14": "R17",
+  "H17": "A35",
+  "H23": "N69",
+  "H44": "N70",
+  "H45": "H08",
+  "H47": "N41",
+  "H48": "N51",
+  "N55": "B05",
+  "N10": "N42"
+ },
+ "history": "queue_v2.json (done/assigned items and earlier drops)"
+}

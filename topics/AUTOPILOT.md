@@ -10,15 +10,19 @@ command -v ffmpeg && ls /usr/bin/google-chrome
 Si falta algo que no se puede instalar, no producir: dejar el motivo en el resumen final.
 
 ## 1. Elegir el tema
-- **`topics/queue_v2.json`** (cola curada por viralidad, desde el 16/11/2026): el primer ítem con `status: "todo"`, **en el orden de la lista** (ya está mezclada por tema para máxima viralidad). `topics/queue.json` quedó solo como historial.
-- Prefijos: `B` = banco original (`topics/BANK_100.txt`), `A`/`C` = listas del dueño y `R` = reservas (`topics/BANK_2.txt`). Si el ítem tiene `note`, cumplirla.
-- Línea editorial: **bizarro, real y muy compartible**. Nada de tragedias ni crímenes oscuros como tema central (anuncios limitados = menos plata por vista).
-- Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr005-pepsi-fire`).
+- **`topics/queue_v3.json`** (desde el 16/11/2026): las **100 mejores ideas** calificadas por viralidad extrema. Tomar el primer ítem con `status: "todo"`, **en el orden de la lista** (mejor primero, categorías alternadas). `queue.json` y `queue_v2.json` quedaron solo como historial.
+- **Puntaje (regla de la dueña):** `score = 5 × viral + 5 × hook_power` (cada uno de 1 a 10). `viral` = curiosidad universal para EE. UU., ganas de compartir/comentar, que hable del espectador; `hook_power` = cuánto frena el scroll la frase de los primeros 1–2 s. Todo lo que está en la cola tiene ≥ 80.
+- **Usar el `hook` del ítem como frase de apertura** (pantalla + voz en los primeros 1–2 s). Se puede afilar, nunca suavizar. Cumplir la `note` si tiene.
+- **Temas nuevos:** solo entran si tienen `score ≥ 85` **y** superan al peor `todo` de la cola (ese pasa a `dropped_low_score`). Máximo 100 `todo`. Nunca producir un tema sin puntaje.
+- **Fuera siempre:** ideas que necesitan personajes con copyright o logos de marca para entenderse (ver `excluded_ip`), datos que no se pueden verificar y tragedias o crímenes como tema central.
+- Prefijos: `N` = lista "100 ideas" de la dueña, `H` = lista "50 hooks", `B`/`A`/`C`/`R` = bancos anteriores (`topics/BANK_100.txt`, `topics/BANK_2.txt`).
+- Línea editorial: **bizarro o sorprendente, real y muy compartible**.
+- Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr007-wombat-cubes`).
 
 ## 2. Verificar los datos ANTES de escribir
 - Buscar en la web y abrir fuentes primarias u oficiales (la "FUENTE PARA INVESTIGAR" es una pista, no un fact-check).
 - Seguir el CRITERIO EDITORIAL del banco: el gancho puede ser dramático, el dato no. En muertes, crímenes, salud o empresas: precisar quién hizo qué, incluir el desenlace y no atribuir culpas no probadas.
-- Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` en `queue_v2.json` con `note` y pasar al siguiente.
+- Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` en `queue_v3.json` con `note` y pasar al siguiente.
 - Las fuentes (URLs https) van en `meta.json` → `sources` y también en la descripción.
 
 ## 3. Reglas visuales y de contenido
@@ -55,8 +59,8 @@ La política de YouTube sobre contenido "inauthentic" (producido en masa o repet
 python tools/handoff.py <id>     # pone status "ready", o "hold" si algún chequeo falla
 ```
 - Si quedó alguna duda de calidad o de datos sin resolver, poner `"status": "hold"` y `"hold_reason"` a mano.
-- Actualizar `topics/queue_v2.json` (`status: "done"`, `video_id`) y la tabla de `README.md`.
-- `git add videos/<id> publish/<id> topics/queue_v2.json README.md && git commit -m "<id>: <título>" && git pull --rebase && git push origin main`.
+- Actualizar `topics/queue_v3.json` (`status: "done"`, `video_id`) y la tabla de `README.md`.
+- `git add videos/<id> publish/<id> topics/queue_v3.json README.md && git commit -m "<id>: <título>" && git pull --rebase && git push origin main`.
 
 ## Nunca
 - Tocar otros `publish/<id>` ni cambiar su `status`.
