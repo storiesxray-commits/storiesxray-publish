@@ -1,0 +1,88 @@
+{
+  "language": "en-US",
+  "category": "Entertainment",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram"
+  ],
+  "title": "His Hair Caught Fire. He Kept Dancing.",
+  "description": "Take six of a 1984 commercial shoot went wrong in seconds.\n\n• Jan 27, 1984 — Shrine Auditorium, Los Angeles\n• Pyrotechnics fired early; sparks set Michael Jackson's hair alight\n• Second- and third-degree burns to his scalp\n• He gave his $1.5M Pepsi settlement to Brotman Medical Center, whose burn center was named for him\n\nSources:\n- UPI via The Michigan Daily (Jan 29, 1984): https://digital.bentley.umich.edu/midaily/mdp.39015071754738/213\n- CBS News: https://www.cbsnews.com/news/jackson-getting-burned-the-video-surfaces\n- Rolling Stone: https://www.rollingstone.com/music/music-news/michael-jackson-pepsi-ad-footage-raises-questions-about-directors-role-in-accident-252777/\n- TheWrap: https://www.thewrap.com/michael-jacksons-tragic-pepsi-commercial-accident-unearthed-4324\n- Wikipedia (Philanthropy of Michael Jackson): https://en.wikipedia.org/wiki/Philanthropy_of_Michael_Jackson\n\n#michaeljackson #80s #popculture #behindthescenes",
+  "tags": [
+    "michael jackson",
+    "michael jackson pepsi commercial",
+    "michael jackson hair fire",
+    "1984 pepsi commercial accident",
+    "shrine auditorium 1984",
+    "pop culture history",
+    "80s history",
+    "behind the scenes",
+    "celebrity accidents",
+    "x-ray",
+    "animation"
+  ],
+  "pinned_comment": "Accounts say he didn't realize at first and kept moving for a few seconds. Would you have noticed? 👇",
+  "series": "Pop Culture X-Ray",
+  "caption_instagram": "His hair was on fire. And he kept dancing. 🔥\n\nJanuary 27, 1984: on take six of a commercial shoot in Los Angeles, the pyrotechnics fired early. He gave his entire $1.5M settlement to the hospital that treated him.\n\nFull story on YouTube: @StoriesXray\n\n#michaeljackson #80s #popculture #behindthescenes",
+  "sources": [
+    {
+      "title": "UPI via The Michigan Daily, Jan 29, 1984",
+      "url": "https://digital.bentley.umich.edu/midaily/mdp.39015071754738/213"
+    },
+    {
+      "title": "CBS News",
+      "url": "https://www.cbsnews.com/news/jackson-getting-burned-the-video-surfaces"
+    },
+    {
+      "title": "Rolling Stone",
+      "url": "https://www.rollingstone.com/music/music-news/michael-jackson-pepsi-ad-footage-raises-questions-about-directors-role-in-accident-252777/"
+    },
+    {
+      "title": "TheWrap",
+      "url": "https://www.thewrap.com/michael-jacksons-tragic-pepsi-commercial-accident-unearthed-4324"
+    },
+    {
+      "title": "Wikipedia: Philanthropy of Michael Jackson",
+      "url": "https://en.wikipedia.org/wiki/Philanthropy_of_Michael_Jackson"
+    }
+  ],
+  "thumbnail": {
+    "time": 1.0,
+    "focus": [
+      0.5,
+      0.42
+    ],
+    "zoom": 1.25,
+    "lines": [
+      {
+        "text": "HAIR ON FIRE",
+        "box": "#FF3B30",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "KEPT DANCING",
+        "color": "#FFD60A"
+      }
+    ],
+    "text_y": 1180,
+    "tilt": -5,
+    "glow": "#FFD60A",
+    "badge": "1984",
+    "circle": [
+      540,
+      850,
+      290
+    ],
+    "rays": [
+      540,
+      780
+    ],
+    "badge_tilt": 6
+  },
+  "id": "xr005-pepsi-fire",
+  "duration_s": 41.09,
+  "status": "ready",
+  "publish_time_local": "19:03"
+}

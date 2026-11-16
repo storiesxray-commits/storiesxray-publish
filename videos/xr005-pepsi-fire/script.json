@@ -1,0 +1,26 @@
+{
+ "voice": "am_michael",
+ "speed": 1.0,
+ "lang": "en-us",
+ "sentences": [
+  ["Michael Jackson's hair was on fire.", 0.12],
+  ["And he kept dancing.", 0.4],
+  ["January twenty-seventh, nineteen eighty-four.", 0.15],
+  ["In Los Angeles, he's filming a Pepsi commercial.", 0.12],
+  ["Thousands of fans are watching.", 0.3],
+  ["It's take six.", 0.15],
+  ["He starts down a staircase.", 0.1],
+  ["The fireworks go off too early.", 0.1],
+  ["Sparks land in his slicked-back hair.", 0.08],
+  ["And it catches fire.", 0.3],
+  ["He doesn't notice.", 0.1],
+  ["He reaches the bottom and spins.", 0.15],
+  ["Then the crew tackles him and smothers the flames.", 0.35],
+  ["Second and third degree burns on his scalp.", 0.35],
+  ["Pepsi settled for one point five million dollars.", 0.2],
+  ["He gave all of it away.", 0.12],
+  ["To the hospital that treated his burns.", 0.15],
+  ["Its burn center was named after him.", 0.4],
+  ["Because on take six,", 0.05]
+ ]
+}

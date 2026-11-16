@@ -33,6 +33,7 @@ publish/<id>/         lo que Make publica
 | xr001-space-no-suit | El cuerpo en el espacio sin traje | publicado |
 | xr002-coffee-lawsuit | La demanda del café de McDonald's | producido antes del piloto automático, no se republica |
 | xr003-fingers-wrinkle | Por qué se arrugan los dedos en el agua | `hold`: estado de publicación desconocido |
+| xr005-pepsi-fire | El comercial de 1984 en que se le prendió fuego el pelo a Michael Jackson | `ready` (piloto automático, 16/11/2026) |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).
