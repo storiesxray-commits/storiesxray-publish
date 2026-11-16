@@ -72,18 +72,18 @@
     "tilt": -4,
     "glow": "#FFD60A",
     "rays": [
-      560,
-      500
+      600,
+      600
     ],
     "circle": [
-      560,
-      500,
-      300
+      600,
+      600,
+      250
     ],
     "badge": "BOSTON 1919",
     "badge_tilt": -5,
-    "badge_x": 40,
-    "badge_y": 110
+    "badge_x": 80,
+    "badge_y": 120
   },
   "publish_time_local": "12:00"
 }

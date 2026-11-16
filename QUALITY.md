@@ -54,7 +54,7 @@ La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el 
   - "THEY / HID THIS" solo si en el video realmente hay algo oculto que se revela.
 - Una palabra o caja en amarillo `#FFD60A` o rojo `#FF3B30`, el resto en blanco con borde negro grueso.
 - **Clickbait honesto, sin excepción**: todo lo que promete la miniatura pasa en el video y es verdad. Nada de sangre, cuerpos ni heridas; nada de logos; nada de parecidos con personas reales. Una miniatura que engaña hace que la gente se vaya a los 2 segundos y YouTube deja de mostrar el video.
-- Nada importante en el 22 % de abajo (el script lo controla) ni pegado a los bordes.
+- **Márgenes automáticos**: `thumbnail.py` encaja todo en la zona segura (80 px a los costados, 120 px arriba, nada debajo de 1490 px, donde YouTube pone el título), achica el texto si hace falta, mueve el sello para que no pise el texto ni el círculo y corta con error si algo no entra. En `thumb_preview.jpg` la zona segura se ve en celeste y la franja del título en violeta.
 - **Probar al menos 3 variantes** (cuadro, texto, posición) y quedarse con la que más se lee en la vista chica. Variar entre días: color del brillo, lado del sello, texto arriba o abajo, tachado / caja / pregunta.
 - `handoff.py` exige `thumb.jpg` de 1080×1920, < 2 MB y hecho con `thumbnail.py`.
 
