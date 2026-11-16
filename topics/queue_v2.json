@@ -1,0 +1,1375 @@
+{
+ "rule": "Produce the first item with status 'todo', in list order (it is ordered for maximum virality and topic mix). Next video id = highest xrNNN in videos/ + 1. Mark it done with video_id. planned_date is indicative; Make assigns the real slot.",
+ "sources": "B = original 100-idea bank (topics/BANK_100.txt), A/C = owner lists 21-60 / 61-100 (topics/BANK_2.txt), R = owner reserves",
+ "items": [
+  {
+   "id": "B01",
+   "title_es": "Michael Jackson siguió bailando mientras se incendiaba su cabello",
+   "hook": "Michael Jackson was on fire. He kept dancing.",
+   "status": "assigned",
+   "video_id": null,
+   "planned_date": "2026-11-16",
+   "source_hint": "The Washington Post, crónica de 1984",
+   "reveal": "Un efecto pirotécnico durante el rodaje de un comercial de Pepsi en 1984 le provocó quemaduras.",
+   "open_0_2s": "Primer plano del cantante sobre el escenario; llamas en el cabello antes de cortar a una claqueta de Pepsi.",
+   "note": "Real person: generic figure, no likeness; burns non-graphic. No Pepsi logo. Being produced by the 15/11 22:37 run (old queue #01) for Monday 16/11."
+  },
+  {
+   "id": "A30",
+   "title_es": "El animal que hace caca en forma de cubos.",
+   "hook": "This animal literally poops cubes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-18"
+  },
+  {
+   "id": "B06",
+   "title_es": "Pepsi anunció un avión de combate y un hombre quiso cobrarlo",
+   "hook": "Pepsi put a fighter jet in an ad. He tried to claim it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-19",
+   "source_hint": "Sentencia Leonard v. Pepsico",
+   "reveal": "John Leonard quiso obtener un Harrier de la promoción. Los tribunales interpretaron el anuncio como una broma, no una oferta contractual.",
+   "open_0_2s": "Un caza militar aterriza en un instituto; sobre la pista aparece el número de puntos Pepsi."
+  },
+  {
+   "id": "R16",
+   "title_es": "El hongo que convierte hormigas en zombis",
+   "hook": "This fungus controls an ant's final movements.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-20"
+  },
+  {
+   "id": "R04",
+   "title_es": "El hombre que se comió un avión entero",
+   "hook": "A real human ate an entire airplane. Piece by piece.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-21",
+   "note": "Michel Lotito; add 'do not try this' line."
+  },
+  {
+   "id": "A58",
+   "title_es": "El hombre que simuló un atasco en Google Maps con 99 teléfonos.",
+   "hook": "He created a traffic jam on Google Maps with zero cars.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-22"
+  },
+  {
+   "id": "R02",
+   "title_es": "El parásito que reemplaza la lengua de un pez",
+   "hook": "This parasite literally becomes a fish's tongue.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-23"
+  },
+  {
+   "id": "B07",
+   "title_es": "Robaron el cuerpo de Charlie Chaplin de su propia tumba",
+   "hook": "Someone stole Charlie Chaplin’s body.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-24",
+   "source_hint": "Archivo oficial de Charlie Chaplin",
+   "reveal": "El cadáver de Chaplin fue robado en Suiza en 1978 y se pidió un rescate.",
+   "open_0_2s": "Una lápida con su nombre se levanta; debajo queda un ataúd vacío.",
+   "note": "Respectful; body was recovered, culprits caught."
+  },
+  {
+   "id": "R03",
+   "title_es": "Una gota de vidrio que resiste golpes y después explota",
+   "hook": "This glass survives a hammer… then explodes from one tiny touch.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-25"
+  },
+  {
+   "id": "C79",
+   "title_es": "Las tortugas que absorben oxígeno por una abertura posterior.",
+   "hook": "Some turtles can breathe through their rear end.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-26"
+  },
+  {
+   "id": "B21",
+   "title_es": "La primera Coca-Cola utilizó ingredientes derivados de coca",
+   "hook": "The original Coca-Cola had a shocking ingredient.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-27",
+   "source_hint": "McGill University, historia de Coca-Cola",
+   "reveal": "La fórmula histórica usó extractos de coca y cambió con el tiempo; no equiparar el refresco actual con la receta antigua.",
+   "open_0_2s": "Una botella de 1880 se transparenta; aparecen hojas de coca y un antiguo jarabe.",
+   "note": "Historical recipe; do not equate modern Coca-Cola with the old formula. No logo."
+  },
+  {
+   "id": "R15",
+   "title_es": "El tiburón que puede vivir casi cuatro siglos",
+   "hook": "This shark could outlive your great-great-grandchildren.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-28"
+  },
+  {
+   "id": "B03",
+   "title_es": "El hombre que vivió bajo el mar dentro de un barco hundido",
+   "hook": "He was alive inside a sunken ship.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-29",
+   "source_hint": "Voice of America, testimonio del sobreviviente",
+   "reveal": "Harrison Okene sobrevivió más de 60 horas en una bolsa de aire de un remolcador hundido en 2013.",
+   "open_0_2s": "Una linterna de buzo ilumina una mano viva dentro del casco oscuro a 30 metros de profundidad."
+  },
+  {
+   "id": "R01",
+   "title_es": "Los animales microscópicos que viven en tu cara",
+   "hook": "Tiny creatures are crawling on your face right now.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-30"
+  },
+  {
+   "id": "C63",
+   "title_es": "LEGO construyó un Bugatti real que podía conducirse.",
+   "hook": "This entire car is made of LEGO. And it actually drives.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-01"
+  },
+  {
+   "id": "A31",
+   "title_es": "La cascada roja que parece sangrar en la Antártida.",
+   "hook": "This waterfall looks like it's bleeding.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-02"
+  },
+  {
+   "id": "B29",
+   "title_es": "Un pasajero saltó de un avión con dinero y desapareció",
+   "hook": "He jumped from a plane with ransom money.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-03",
+   "source_hint": "FBI, D. B. Cooper case",
+   "reveal": "El caso D. B. Cooper de 1971 sigue sin una identificación concluyente.",
+   "open_0_2s": "Un hombre con traje se acerca a la escalera trasera de un avión nocturno y salta.",
+   "note": "Unsolved; do not name suspects as the culprit."
+  },
+  {
+   "id": "R09",
+   "title_es": "El metal que se derrite en tu mano",
+   "hook": "This solid metal melts in your hand.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-04"
+  },
+  {
+   "id": "C75",
+   "title_es": "La biología real detrás de Buscando a Nemo: el padre podría convertirse en hembra.",
+   "hook": "In real life, Nemo's dad could become his mom.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-05",
+   "note": "Do not draw the Pixar character; generic clownfish, name only in text if needed."
+  },
+  {
+   "id": "B05",
+   "title_es": "La saliva de un hombre empezó a hervir en una cámara de vacío",
+   "hook": "His saliva started boiling. He survived.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-06",
+   "source_hint": "Guinness World Records",
+   "reveal": "Jim LeBlanc sufrió una despresurización durante una prueba de traje espacial en 1966 y sobrevivió.",
+   "open_0_2s": "Un rostro dentro de un casco; la presión cae a cero en un indicador y aparece vapor en la boca."
+  },
+  {
+   "id": "A59",
+   "title_es": "La hamburguesa negra de Burger King que provocó reportes de heces verdes.",
+   "hook": "This black Burger King burger had a bizarre side effect.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-07",
+   "note": "Brand fact with sources (2015 Halloween Whopper reports); no BK logo."
+  },
+  {
+   "id": "R20",
+   "title_es": "La avispa que transforma una cucaracha en su marioneta",
+   "hook": "This wasp turns a cockroach into a walking puppet.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-08"
+  },
+  {
+   "id": "C96",
+   "title_es": "El hombre que sobrevivió a siete impactos de rayos.",
+   "hook": "Lightning struck this man seven different times.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-09"
+  },
+  {
+   "id": "A29",
+   "title_es": "El gigantesco hexágono que gira sobre Saturno.",
+   "hook": "Why is there a perfect-looking hexagon on Saturn?",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-10"
+  },
+  {
+   "id": "B02",
+   "title_es": "El Monopoly de McDonald’s estaba amañado desde adentro",
+   "hook": "Someone rigged McDonald’s million-dollar Monopoly prizes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-11",
+   "source_hint": "Departamento de Justicia de EE. UU.",
+   "reveal": "Un empleado de la firma de marketing que gestionaba las promociones desviaba las fichas de mayor valor. No fue una conspiración de todos los restaurantes.",
+   "open_0_2s": "Una etiqueta ganadora de US$1 millón es retirada de una pila de premios delante de cámara."
+  },
+  {
+   "id": "C72",
+   "title_es": "La rana que rompe sus propios huesos para sacar garras.",
+   "hook": "This frog breaks its own bones to make claws.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-12"
+  },
+  {
+   "id": "R05",
+   "title_es": "Los dientes ocultos dentro del cráneo de un niño",
+   "hook": "This is what's hiding inside a child's skull.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-13",
+   "note": "Stylized X-ray only; no real child photo; calm, educational framing."
+  },
+  {
+   "id": "C62",
+   "title_es": "La Game Boy de Nintendo que sobrevivió a un bombardeo y siguió funcionando.",
+   "hook": "This Nintendo Game Boy survived an explosion… and still worked.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-14"
+  },
+  {
+   "id": "A25",
+   "title_es": "Las hormigas que revientan sus propios cuerpos para defender la colonia.",
+   "hook": "These ants explode to defend their colony.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-15"
+  },
+  {
+   "id": "B23",
+   "title_es": "Kate Winslet aguantó más de siete minutos sin respirar",
+   "hook": "Kate Winslet held her breath for over seven minutes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-16",
+   "source_hint": "Guinness World Records",
+   "reveal": "Durante Avatar: The Way of Water logró 7 minutos y 15 segundos en una apnea estática entrenada; no sugerir que pueda intentarse sin supervisión.",
+   "open_0_2s": "Kate bajo el agua con un cronómetro enorme que supera los siete minutos."
+  },
+  {
+   "id": "R08",
+   "title_es": "El planeta donde podría llover vidrio de costado",
+   "hook": "On this planet, it may rain glass sideways.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-17"
+  },
+  {
+   "id": "C85",
+   "title_es": "El organismo sin cerebro que puede resolver laberintos.",
+   "hook": "This blob has no brain… but it can solve a maze.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-18"
+  },
+  {
+   "id": "B11",
+   "title_es": "Elon Musk puso un Tesla Roadster en órbita alrededor del Sol",
+   "hook": "There is a real Tesla orbiting the Sun.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-19",
+   "source_hint": "NASA, primer vuelo Falcon Heavy",
+   "reveal": "SpaceX lanzó un Roadster como carga de prueba del Falcon Heavy en 2018; no aterrizó en Marte.",
+   "open_0_2s": "Un Tesla rojo flota frente a la Tierra con un maniquí en el asiento del conductor."
+  },
+  {
+   "id": "A27",
+   "title_es": "El gusano parásito que obliga a un insecto a entrar al agua.",
+   "hook": "This worm makes its host jump into water.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-20"
+  },
+  {
+   "id": "C64",
+   "title_es": "KFC desarrolló esmalte de uñas comestible con sabor a pollo.",
+   "hook": "KFC actually made chicken-flavored nail polish.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-21"
+  },
+  {
+   "id": "R07",
+   "title_es": "El animal que se desprende de sus órganos para sobrevivir",
+   "hook": "This animal shoots out its organs… and grows them back.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-22"
+  },
+  {
+   "id": "B12",
+   "title_es": "Volkswagen fabricó autos que detectaban los exámenes",
+   "hook": "This car knew when it was being tested.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-23",
+   "source_hint": "EPA de Estados Unidos",
+   "reveal": "El software ilegal modificaba el control de emisiones durante las pruebas.",
+   "open_0_2s": "Un auto pasa de la carretera al laboratorio; el chip cambia de modo automáticamente.",
+   "note": "Precise: defeat-device software; cite EPA. No VW logo."
+  },
+  {
+   "id": "A44",
+   "title_es": "El agujero negro que estira estrellas como si fueran espaguetis.",
+   "hook": "A black hole can stretch a star into a thin stream.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-24"
+  },
+  {
+   "id": "R11",
+   "title_es": "El pez macho que se fusiona permanentemente con la hembra",
+   "hook": "This male fish fuses into the female's body.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-25"
+  },
+  {
+   "id": "B65",
+   "title_es": "Los hipopótamos de Pablo Escobar terminaron viviendo libres",
+   "hook": "Pablo Escobar left hippos behind in Colombia.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-26",
+   "source_hint": "Autoridades ambientales de Colombia / estudios ecológicos",
+   "reveal": "Los descendientes de animales introducidos por Escobar originaron una población invasora.",
+   "open_0_2s": "De una mansión abandonada sale un hipopótamo a un río tropical.",
+   "note": "No drug glorification; focus on the hippos and ecology."
+  },
+  {
+   "id": "A22",
+   "title_es": "El parásito que convierte los tentáculos de un caracol en señuelos palpitantes.",
+   "hook": "Something is pulsing inside this snail's head.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-27"
+  },
+  {
+   "id": "C61",
+   "title_es": "Pizza Hut envió una pizza a la Estación Espacial Internacional.",
+   "hook": "Pizza Hut actually delivered a pizza to space.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-28"
+  },
+  {
+   "id": "R19",
+   "title_es": "La rana que científicos consiguieron hacer levitar con imanes",
+   "hook": "Scientists made a living frog float using magnets.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-29"
+  },
+  {
+   "id": "B25",
+   "title_es": "Elvis Presley pidió una credencial antinarcóticos a Nixon",
+   "hook": "Elvis asked Nixon for a narcotics badge.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-30",
+   "source_hint": "National Archives, Elvis meets Nixon",
+   "reveal": "La reunión con Nixon de 1970 quedó registrada en fotografías y documentos oficiales.",
+   "open_0_2s": "Elvis entrega una carta y, al abrirse la puerta, aparece la Oficina Oval."
+  },
+  {
+   "id": "A26",
+   "title_es": "Las piedras que se desplazan solas por el desierto.",
+   "hook": "These rocks move across the desert with nobody touching them.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-31"
+  },
+  {
+   "id": "C71",
+   "title_es": "El sapo cuyos bebés emergen de la piel de su espalda.",
+   "hook": "Baby frogs emerge from holes in their mother's back.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-01",
+   "note": "Stylized, non-realistic skin texture (trypophobia risk)."
+  },
+  {
+   "id": "B88",
+   "title_es": "El cerebro de Einstein fue extraído tras su muerte",
+   "hook": "Einstein’s brain was removed after he died.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-02",
+   "source_hint": "Smithsonian / National Museum of Health and Medicine",
+   "reveal": "Thomas Harvey extrajo el cerebro durante la autopsia; la historia de consentimiento y custodia debe narrarse con precisión.",
+   "open_0_2s": "Un cerebro en un frasco de laboratorio y un informe de autopsia de 1955.",
+   "note": "Precise about consent/custody of the brain; no gore."
+  },
+  {
+   "id": "A38",
+   "title_es": "El escarabajo que lanza sustancias químicas casi hirviendo.",
+   "hook": "This beetle fires boiling-hot chemicals.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-03"
+  },
+  {
+   "id": "C67",
+   "title_es": "Los tiburones que se comen a sus hermanos antes de nacer.",
+   "hook": "These sharks eat their siblings before they're even born.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-04"
+  },
+  {
+   "id": "B28",
+   "title_es": "El dedo humano encontrado en Wendy’s fue parte de un engaño",
+   "hook": "A human finger was found in Wendy’s chili.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-05",
+   "source_hint": "Prensa y expediente penal del caso de 2005",
+   "reveal": "El dedo existía, pero fue introducido deliberadamente; Wendy’s no lo había servido así.",
+   "open_0_2s": "Una cuchara saca un objeto de un recipiente; el plano cambia a una investigación policial.",
+   "note": "Clear that Wendy's did not serve it; it was a planted hoax."
+  },
+  {
+   "id": "R12",
+   "title_es": "El agujero en tu visión que el cerebro rellena",
+   "hook": "Your brain is inventing part of what you see.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-06"
+  },
+  {
+   "id": "A36",
+   "title_es": "El pez que tiene una cabeza transparente y los ojos dentro.",
+   "hook": "You can see right through this fish's head.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-07"
+  },
+  {
+   "id": "B38",
+   "title_es": "Hicieron explotar una ballena muerta para deshacerse de ella",
+   "hook": "They tried to blow up a dead whale.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-08",
+   "source_hint": "Oregon Historical Society, exploding whale",
+   "reveal": "En 1970 las autoridades intentaron eliminar una ballena con explosivos; el resultado fue un desastre absurdo.",
+   "open_0_2s": "Una playa de Oregón; se enciende una carga bajo una enorme ballena varada."
+  },
+  {
+   "id": "C91",
+   "title_es": "Los escorpiones que brillan bajo luz ultravioleta.",
+   "hook": "Shine UV light on a scorpion… and watch what happens.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-09"
+  },
+  {
+   "id": "B47",
+   "title_es": "Un tsunami trepó más de 500 metros en Alaska",
+   "hook": "A tsunami climbed higher than a skyscraper.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-10",
+   "source_hint": "USGS, Lituya Bay 1958",
+   "reveal": "El megatsunami de bahía Lituya de 1958 dejó una marca máxima de arranque de vegetación de 524 m.",
+   "open_0_2s": "Una ladera montañosa se ve desde el mar; una ola escala cientos de metros."
+  },
+  {
+   "id": "R13",
+   "title_es": "La babosa marina que se desprende de la cabeza y regenera su cuerpo",
+   "hook": "This animal can lose its entire body… and grow another.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-11"
+  },
+  {
+   "id": "B18",
+   "title_es": "Los fans de Taylor Swift hicieron vibrar instrumentos sísmicos",
+   "hook": "Taylor Swift’s concert shook the ground.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-12",
+   "source_hint": "Western Washington University",
+   "reveal": "Los conciertos de Seattle en 2023 produjeron señales sísmicas medibles, equivalentes en algunas comparaciones a magnitud 2,3.",
+   "open_0_2s": "Un estadio lleno se convierte en el trazo real de un sismómetro."
+  },
+  {
+   "id": "A56",
+   "title_es": "El líquido magnético que se transforma en cientos de picos.",
+   "hook": "This liquid grows spikes when a magnet gets close.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-13"
+  },
+  {
+   "id": "C80",
+   "title_es": "Los pingüinos que expulsan sus excrementos a gran distancia.",
+   "hook": "Penguins can launch poop surprisingly far.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-14"
+  },
+  {
+   "id": "B19",
+   "title_es": "El sonido submarino que parecía de un monstruo gigantesco",
+   "hook": "Scientists recorded this terrifying ocean sound.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-15",
+   "source_hint": "NOAA Ocean Service",
+   "reveal": "El Bloop, registrado en 1997, se relaciona con fracturas de hielo y no con una criatura desconocida.",
+   "open_0_2s": "Una onda sonora se propaga bajo el océano y atraviesa un mapa del Pacífico."
+  },
+  {
+   "id": "A39",
+   "title_es": "El caballito de mar macho que da a luz.",
+   "hook": "The father gives birth to the babies.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-16"
+  },
+  {
+   "id": "B80",
+   "title_es": "Una barra de hierro atravesó el cráneo de un hombre y vivió",
+   "hook": "An iron rod went through his head. He survived.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-17",
+   "source_hint": "Harvard Brain Museum / historia de Phineas Gage",
+   "reveal": "El accidente de 1848 cambió la historia de la neurociencia; evitar exagerar sus cambios de personalidad.",
+   "open_0_2s": "La cabeza de Phineas Gage aparece en corte médico y se muestra la trayectoria de la barra.",
+   "note": "No gore; stylized skull X-ray."
+  },
+  {
+   "id": "C89",
+   "title_es": "El animal colonial oceánico que puede superar la longitud de una ballena azul.",
+   "hook": "This ocean creature can be longer than a blue whale.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-18"
+  },
+  {
+   "id": "A55",
+   "title_es": "El material ultranegro que hace desaparecer visualmente las formas.",
+   "hook": "This black coating makes a 3D object look flat.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-19"
+  },
+  {
+   "id": "B34",
+   "title_es": "Bayer comercializó heroína como medicamento",
+   "hook": "Bayer once marketed heroin as cough medicine.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-20",
+   "source_hint": "McGill University, historia de Bayer",
+   "reveal": "A finales del siglo XIX se vendió diacetilmorfina como analgésico y antitusivo antes de reconocer sus riesgos.",
+   "open_0_2s": "Un envase de botica con el nombre Bayer se revela al girar la etiqueta.",
+   "note": "Historical; no dosing or drug glorification."
+  },
+  {
+   "id": "R06",
+   "title_es": "La rana transparente que esconde casi toda su sangre",
+   "hook": "This frog hides its blood to become nearly invisible.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-21"
+  },
+  {
+   "id": "C99",
+   "title_es": "Las estrellas de neutrones, donde una cucharadita de materia pesaría millones de toneladas.",
+   "hook": "A teaspoon of this star would weigh millions of tons.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-22"
+  },
+  {
+   "id": "B63",
+   "title_es": "Napoleón tuvo que escapar de una multitud de conejos",
+   "hook": "Napoleon was chased by rabbits.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-23",
+   "source_hint": "BBC History Revealed",
+   "reveal": "Un episodio anecdótico de 1807 describe una cacería fallida con conejos acostumbrados a humanos; presentarlo como relato histórico, no filmación comprobada.",
+   "open_0_2s": "Napoleón retrocede mientras decenas de conejos avanzan contra su carruaje."
+  },
+  {
+   "id": "A33",
+   "title_es": "La anguila que puede saltar del agua para descargar electricidad.",
+   "hook": "This fish can leap out of water to deliver an electric shock.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-24"
+  },
+  {
+   "id": "R10",
+   "title_es": "El carámbano submarino que congela lo que toca",
+   "hook": "An underwater finger of ice can freeze creatures in its path.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-25"
+  },
+  {
+   "id": "B37",
+   "title_es": "Le ofrecieron a Albert Einstein ser presidente de un país",
+   "hook": "Einstein was offered a country’s presidency.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-26",
+   "source_hint": "Nobel Prize, biografía de Einstein",
+   "reveal": "Israel le ofreció la presidencia en 1952; Einstein la rechazó.",
+   "open_0_2s": "Einstein observa una carta oficial y un sello presidencial aparece sobre ella."
+  },
+  {
+   "id": "C88",
+   "title_es": "La serpiente que puede planear entre árboles.",
+   "hook": "This snake can literally glide through the air.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-27"
+  },
+  {
+   "id": "A35",
+   "title_es": "Tu nariz cambia cuál fosa nasal domina la respiración.",
+   "hook": "Your nostrils take turns working harder.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-28"
+  },
+  {
+   "id": "B10",
+   "title_es": "Un avión aterrizó después de perder parte de su techo",
+   "hook": "This plane landed with its roof torn off.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-29",
+   "source_hint": "NTSB, informe oficial",
+   "reveal": "El vuelo Aloha Airlines 243 aterrizó en 1988 tras una falla estructural grave; una auxiliar murió.",
+   "open_0_2s": "Un Boeing en vuelo; se desprende la parte superior del fuselaje en una recreación no gráfica.",
+   "note": "One flight attendant died: mention respectfully, nothing graphic."
+  },
+  {
+   "id": "C78",
+   "title_es": "El pez que dispara chorros de agua para derribar insectos.",
+   "hook": "This fish shoots insects out of the air.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-30"
+  },
+  {
+   "id": "A47",
+   "title_es": "La cueva con cristales más grandes que una persona.",
+   "hook": "These crystals are taller than humans.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-01-31"
+  },
+  {
+   "id": "B74",
+   "title_es": "Nintendo nació vendiendo naipes, no videojuegos",
+   "hook": "Nintendo sold playing cards before video games.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-01",
+   "source_hint": "Historia oficial Nintendo",
+   "reveal": "La compañía comenzó fabricando cartas hanafuda a fines del siglo XIX.",
+   "open_0_2s": "Una Nintendo Switch se transforma en un juego de cartas japonés de 1889."
+  },
+  {
+   "id": "R18",
+   "title_es": "Los lagos que existen en el fondo del océano",
+   "hook": "There are lakes at the bottom of the ocean.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-02"
+  },
+  {
+   "id": "A40",
+   "title_es": "La planta carnívora capaz de responder a una secuencia de toques.",
+   "hook": "This plant can count touches before digesting prey.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-03"
+  },
+  {
+   "id": "B90",
+   "title_es": "Coca-Cola cambió su fórmula y tuvo que retroceder",
+   "hook": "Coca-Cola changed its recipe. Fans revolted.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-04",
+   "source_hint": "Coca-Cola, historia New Coke",
+   "reveal": "La decisión de New Coke en 1985 desencadenó una fuerte reacción y la vuelta de la fórmula anterior.",
+   "open_0_2s": "Dos botellas Coke chocan; la nueva etiqueta es arrancada por una mano."
+  },
+  {
+   "id": "C93",
+   "title_es": "La cascada cuyo agua parece subir por efecto del viento.",
+   "hook": "This waterfall is going the wrong way.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-05"
+  },
+  {
+   "id": "A28",
+   "title_es": "El agua que puede hervir y congelarse simultáneamente bajo condiciones especiales.",
+   "hook": "Water can boil and freeze at the same time.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-06"
+  },
+  {
+   "id": "B95",
+   "title_es": "El primer logo de Apple no era una manzana mordida",
+   "hook": "Apple’s first logo looked nothing like an apple.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-07",
+   "source_hint": "Historia de Apple / materiales de archivo de 1976",
+   "reveal": "El primer emblema de la empresa, diseñado por Ronald Wayne, ilustraba a Isaac Newton.",
+   "open_0_2s": "El logo de Apple se deshace y revela a Newton bajo un árbol."
+  },
+  {
+   "id": "C90",
+   "title_es": "La medusa con 24 ojos pero sin un cerebro centralizado.",
+   "hook": "This jellyfish has 24 eyes… and no brain.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-08"
+  },
+  {
+   "id": "R17",
+   "title_es": "Tu cuerpo emite luz que no podés ver",
+   "hook": "Your body is glowing right now. You just can't see it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-09"
+  },
+  {
+   "id": "B81",
+   "title_es": "La primera gran suela Nike nació de una waflera",
+   "hook": "Nike’s famous sole came from a waffle iron.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-10",
+   "source_hint": "Nike, archivo Moon Shoe",
+   "reveal": "Bill Bowerman usó la textura de una waflera como inspiración para una suela de running.",
+   "open_0_2s": "Se vierte material en una waflera; la textura se transforma en una zapatilla Nike."
+  },
+  {
+   "id": "A34",
+   "title_es": "La oruga que se transforma visualmente en una serpiente.",
+   "hook": "This caterpillar can look like a snake.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-11"
+  },
+  {
+   "id": "B82",
+   "title_es": "Nicolas Cage devolvió un cráneo de dinosaurio tras una investigación",
+   "hook": "Nicolas Cage bought a dinosaur skull. Then returned it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-12",
+   "source_hint": "Reuters / Department of Homeland Security, fósiles",
+   "reveal": "El actor devolvió un fósil asociado a una investigación por contrabando desde Mongolia.",
+   "open_0_2s": "Un cráneo fosilizado sobre un pedestal se convierte en una prueba de procedencia."
+  },
+  {
+   "id": "C97",
+   "title_es": "La sustancia que parece sólida, pero tarda años en producir una gota.",
+   "hook": "This looks solid… but one drop takes years to fall.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-13"
+  },
+  {
+   "id": "A51",
+   "title_es": "El insecto que parece una flor de orquídea.",
+   "hook": "This beautiful flower is actually a predator.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-14"
+  },
+  {
+   "id": "B43",
+   "title_es": "Existe una foto policial de Bill Gates de 1977",
+   "hook": "Bill Gates has a real 1977 mugshot.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-15",
+   "source_hint": "Archivo fotográfico y biografías documentales",
+   "reveal": "Antes de convertirse en uno de los empresarios más conocidos, Gates fue detenido por una infracción de tránsito.",
+   "open_0_2s": "Un joven aparece en una ficha policial que se transforma en el logo de Microsoft."
+  },
+  {
+   "id": "C84",
+   "title_es": "El bosque que en realidad es un único organismo conectado.",
+   "hook": "This entire forest is technically one organism.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-16"
+  },
+  {
+   "id": "B89",
+   "title_es": "Una “computadora” de engranajes existía hace 2.000 años",
+   "hook": "They built a computer 2,000 years ago.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-17",
+   "source_hint": "Smithsonian, mecanismo de Anticitera",
+   "reveal": "El mecanismo de Anticitera modelaba movimientos astronómicos con sofisticados engranajes.",
+   "open_0_2s": "Un objeto oxidado se transforma en una máquina de engranajes perfecta."
+  },
+  {
+   "id": "R14",
+   "title_es": "El récord de casi media hora sin respirar bajo el agua",
+   "hook": "A man stayed underwater for 29 minutes on one breath.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-18",
+   "note": "Verify current Guinness record and that it was done after breathing pure oxygen; say so."
+  },
+  {
+   "id": "B69",
+   "title_es": "Tesla manejó un barco a distancia en 1898",
+   "hook": "Tesla controlled a boat remotely in 1898.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-19",
+   "source_hint": "Museo Nikola Tesla",
+   "reveal": "Nikola Tesla demostró un bote radiocontrolado décadas antes de los drones actuales.",
+   "open_0_2s": "Una multitud de 1898 observa un barco pequeño moverse solo dentro de un tanque."
+  },
+  {
+   "id": "A41",
+   "title_es": "El pez que duerme dentro de una burbuja de mucosidad que él mismo produce.",
+   "hook": "This fish sleeps inside its own mucus cocoon.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-20"
+  },
+  {
+   "id": "B31",
+   "title_es": "Una adolescente sobrevivió a caer desde un avión sobre la selva",
+   "hook": "She fell from the sky and survived.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-21",
+   "source_hint": "Entrevistas y biografía de Juliane Koepcke",
+   "reveal": "Juliane Koepcke fue la única sobreviviente de un accidente aéreo en Perú en 1971.",
+   "open_0_2s": "La cámara cae desde nubes a un bosque amazónico junto a una fila de asientos."
+  },
+  {
+   "id": "C92",
+   "title_es": "El océano que parece iluminarse de azul eléctrico.",
+   "hook": "The ocean can glow like a galaxy of blue stars.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-22"
+  },
+  {
+   "id": "A54",
+   "title_es": "El agua sobreenfriada que se convierte en hielo con una perturbación.",
+   "hook": "This water freezes almost instantly.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-23"
+  },
+  {
+   "id": "B98",
+   "title_es": "Estados Unidos detonó una bomba nuclear en el espacio",
+   "hook": "They detonated a nuclear bomb in space.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-24",
+   "source_hint": "Guinness, Starfish Prime",
+   "reveal": "La prueba Starfish Prime de 1962 produjo efectos electromagnéticos y auroras artificiales.",
+   "open_0_2s": "La curvatura de la Tierra se ilumina con una explosión de alta altitud."
+  },
+  {
+   "id": "C68",
+   "title_es": "El pájaro capaz de imitar sonidos de cámaras y motosierras.",
+   "hook": "This bird can sound exactly like a camera.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-25"
+  },
+  {
+   "id": "B83",
+   "title_es": "Una señal espacial fue registrada una sola vez y nunca volvió",
+   "hook": "Scientists heard a signal that never repeated.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-26",
+   "source_hint": "SETI / Ohio State, Wow! signal",
+   "reveal": "La señal Wow! de 1977 no tiene una explicación universalmente confirmada; no probaría vida alienígena.",
+   "open_0_2s": "Una antena gigante imprime en papel la secuencia 6EQUJ5."
+  },
+  {
+   "id": "C98",
+   "title_es": "Las personas que nacen sin huellas dactilares.",
+   "hook": "Some people are born without fingerprints.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-27"
+  },
+  {
+   "id": "A21",
+   "title_es": "El volcán que parece expulsar fuego azul.",
+   "hook": "This volcano burns electric blue.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-02-28"
+  },
+  {
+   "id": "B59",
+   "title_es": "Londres fue arrasada por una inundación de cerveza",
+   "hook": "A deadly wave of beer hit London.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-01",
+   "source_hint": "HISTORY, London Beer Flood",
+   "reveal": "Una ruptura industrial en 1814 provocó una inundación mortal.",
+   "open_0_2s": "Una cuba gigante se rompe y una ola oscura entra en casas del siglo XIX."
+  },
+  {
+   "id": "C82",
+   "title_es": "El árbol cuyas semillas salen disparadas como proyectiles.",
+   "hook": "This tree launches its seeds like tiny bullets.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-02"
+  },
+  {
+   "id": "B56",
+   "title_es": "Esta medusa puede retroceder en su propio ciclo de vida",
+   "hook": "This jellyfish can reverse its life cycle.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-03",
+   "source_hint": "Smithsonian Invasions",
+   "reveal": "Turritopsis dohrnii puede revertir a una fase juvenil; no es invulnerable ni eternamente viva.",
+   "open_0_2s": "Una medusa envejecida se repliega y vuelve a una etapa de pólipo en reversa."
+  },
+  {
+   "id": "A53",
+   "title_es": "El animal de sangre azul usado en pruebas de seguridad de medicamentos.",
+   "hook": "This creature's blue blood helps protect modern medicine.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-04"
+  },
+  {
+   "id": "B52",
+   "title_es": "El libro de hace siglos que nadie ha descifrado convincentemente",
+   "hook": "Nobody has convincingly decoded this book.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-05",
+   "source_hint": "Biblioteca Beinecke de Yale, Voynich MS 408",
+   "reveal": "El manuscrito Voynich tiene una escritura no descifrada con consenso académico.",
+   "open_0_2s": "Un libro antiguo se abre: plantas extrañas y escritura ilegible llenan la pantalla."
+  },
+  {
+   "id": "C76",
+   "title_es": "El pulpo que imita a otros animales para sobrevivir.",
+   "hook": "This octopus can impersonate other sea creatures.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-06"
+  },
+  {
+   "id": "A48",
+   "title_es": "El árbol que libera una resina de color rojo sangre.",
+   "hook": "This tree looks like it's bleeding.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-07"
+  },
+  {
+   "id": "B97",
+   "title_es": "En ocasiones parece llover arañas desde el cielo",
+   "hook": "Thousands of spiders can fall from the sky.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-08",
+   "source_hint": "Investigaciones sobre ballooning de arañas",
+   "reveal": "El ballooning permite a arañas pequeñas dispersarse con el viento mediante hilos de seda.",
+   "open_0_2s": "Una calle amanece atravesada por hilos de seda suspendidos en el aire."
+  },
+  {
+   "id": "C95",
+   "title_es": "Las olas que forman enormes cuadrados sobre el océano.",
+   "hook": "Why is the ocean forming a giant chessboard?",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-09"
+  },
+  {
+   "id": "B94",
+   "title_es": "Un avión aterrizó sin combustible después de un error de unidades",
+   "hook": "A passenger jet became a giant glider.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-10",
+   "source_hint": "Transportation Safety Board of Canada, Air Canada 143",
+   "reveal": "El Gimli Glider de 1983 involucró problemas de cálculo de combustible y un planeo de emergencia.",
+   "open_0_2s": "Un Boeing 767 sin motores activos se desliza sobre una pista ocupada por personas."
+  },
+  {
+   "id": "A37",
+   "title_es": "El fenómeno atmosférico que hace aparecer tres soles en el cielo.",
+   "hook": "Why are there three suns in the sky?",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-11"
+  },
+  {
+   "id": "B70",
+   "title_es": "En un desierto descansan barcos que antes navegaban en un mar",
+   "hook": "These ships are stranded where a sea once existed.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-12",
+   "source_hint": "NASA Earth Observatory / Banco Mundial, mar de Aral",
+   "reveal": "La retracción del mar de Aral dejó antiguos puertos y cascos varados.",
+   "open_0_2s": "Cámara desde un barco oxidado; se aleja para mostrar desierto hasta el horizonte."
+  },
+  {
+   "id": "C83",
+   "title_es": "La flor gigante que se calienta y huele a cadáver.",
+   "hook": "This giant flower heats up and smells like rotting flesh.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-13"
+  },
+  {
+   "id": "A46",
+   "title_es": "La rana que puede congelarse y después recuperar su actividad.",
+   "hook": "This frog can freeze… and come back to life.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-14"
+  },
+  {
+   "id": "B99",
+   "title_es": "Una emisora rusa ha transmitido zumbidos durante décadas",
+   "hook": "This Russian radio station broadcasts eerie buzzing.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-15",
+   "source_hint": "Archivos de radioaficionados y monitoreo de ondas cortas",
+   "reveal": "UVB-76 es una estación de onda corta con zumbidos y mensajes ocasionales; su función pública sigue siendo incierta.",
+   "open_0_2s": "Un receptor de radio iluminado en la oscuridad emite sonido y coordenadas espectrales."
+  },
+  {
+   "id": "C66",
+   "title_es": "El cangrejo gigante capaz de romper cocos con sus pinzas.",
+   "hook": "This crab has claws powerful enough to crack coconuts.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-16"
+  },
+  {
+   "id": "A23",
+   "title_es": "En el espacio, las llamas pueden convertirse en esferas azules.",
+   "hook": "Fire becomes a floating blue ball in space.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-17"
+  },
+  {
+   "id": "B68",
+   "title_es": "Una ciudad registró una extraña epidemia de baile en 1518",
+   "hook": "People reportedly danced uncontrollably for days.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-18",
+   "source_hint": "Smithsonian / historiadores de Estrasburgo",
+   "reveal": "La epidemia de baile de Estrasburgo de 1518 se describe en registros históricos; las causas exactas se discuten.",
+   "open_0_2s": "Una plaza medieval muestra a una multitud bailando de forma inquietante."
+  },
+  {
+   "id": "C94",
+   "title_es": "Las columnas luminosas que parecen descender del cielo.",
+   "hook": "These giant beams of light aren't coming from space.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-19"
+  },
+  {
+   "id": "B55",
+   "title_es": "Jackie Chan estuvo cerca de morir en una acrobacia",
+   "hook": "A movie stunt nearly killed Jackie Chan.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-20",
+   "source_hint": "Entrevistas a Jackie Chan y material de rodaje",
+   "reveal": "Durante Armour of God en 1986 sufrió una grave lesión en la cabeza.",
+   "open_0_2s": "Una caída cinematográfica se congela y deja ver la zona de impacto del cráneo."
+  },
+  {
+   "id": "A24",
+   "title_es": "El diminuto animal cuyo golpe genera una onda de choque bajo el agua.",
+   "hook": "This tiny punch creates an underwater shockwave.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-21"
+  },
+  {
+   "id": "B66",
+   "title_es": "Una explosión arrasó un bosque y no dejó un cráter confirmado",
+   "hook": "An explosion flattened a forest. No impact crater.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-22",
+   "source_hint": "NASA / investigaciones sobre Tunguska",
+   "reveal": "El evento Tunguska de 1908 se asocia a un objeto cósmico que explotó en la atmósfera; explicar hipótesis principales.",
+   "open_0_2s": "Un bosque siberiano es aplastado radialmente desde el cielo."
+  },
+  {
+   "id": "C73",
+   "title_es": "El insecto que parece literalmente una hoja viva.",
+   "hook": "That leaf just started walking.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-23"
+  },
+  {
+   "id": "B76",
+   "title_es": "Un lagarto puede expulsar sangre desde sus ojos",
+   "hook": "This lizard can shoot blood from its eyes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-24",
+   "source_hint": "National Geographic / artículos de herpetología",
+   "reveal": "Es una defensa real de algunos lagartos cornudos; usar material no gráfico.",
+   "open_0_2s": "Macro de un lagarto cornudo; una línea roja sale desde el contorno ocular."
+  },
+  {
+   "id": "C100",
+   "title_es": "El cerebro de un pulpo y sus ocho brazos capaces de procesar información.",
+   "hook": "This animal's arms have minds of their own.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-25"
+  },
+  {
+   "id": "B75",
+   "title_es": "Johnny Depp hizo lanzar las cenizas de un escritor desde un cañón",
+   "hook": "Johnny Depp fired his friend’s ashes from a cannon.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-26",
+   "source_hint": "Associated Press / cobertura de funeral 2005",
+   "reveal": "Financió el funeral de Hunter S. Thompson en 2005, que incluyó dispersar cenizas con un cañón.",
+   "open_0_2s": "Un cañón sobre una torre dispara una nube al cielo nocturno."
+  },
+  {
+   "id": "C77",
+   "title_es": "El calamar vampiro que despliega su membrana como un paraguas defensivo.",
+   "hook": "This creature turns itself into a spiky umbrella.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-27"
+  },
+  {
+   "id": "A45",
+   "title_es": "Las burbujas de metano atrapadas como discos dentro de lagos congelados.",
+   "hook": "These perfect frozen bubbles contain trapped gas.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-28"
+  },
+  {
+   "id": "B61",
+   "title_es": "Houdini dejó un código para intentar comunicarse después de morir",
+   "hook": "Houdini left a secret code for the afterlife.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-29",
+   "source_hint": "Houdini Museum / biografías históricas",
+   "reveal": "Su esposa participó en intentos de comunicación posteriores usando un código acordado.",
+   "open_0_2s": "Un papel marcado SECRET CODE aparece entre humo y una mesa de espiritismo."
+  },
+  {
+   "id": "C86",
+   "title_es": "Los hongos que emiten luz en la oscuridad.",
+   "hook": "These mushrooms glow without electricity.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-30"
+  },
+  {
+   "id": "A42",
+   "title_es": "El cenote mexicano donde parece existir un río debajo del agua.",
+   "hook": "It looks like there's a second river underwater.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-03-31"
+  },
+  {
+   "id": "B53",
+   "title_es": "Tu sistema inmunitario ayuda a sostener los tatuajes",
+   "hook": "Your immune cells hold tattoo ink in place.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-01",
+   "source_hint": "Artículos revisados por pares sobre macrófagos y tatuajes",
+   "reveal": "Los macrófagos capturan y recapturan pigmentos, contribuyendo a su persistencia.",
+   "open_0_2s": "Un tatuaje se convierte en piel transparente con células capturando partículas de tinta."
+  },
+  {
+   "id": "C87",
+   "title_es": "Las luciérnagas que sincronizan miles de destellos.",
+   "hook": "Thousands of fireflies flash in perfect synchronization.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-02"
+  },
+  {
+   "id": "B92",
+   "title_es": "La antorcha de la Estatua de la Libertad está cerrada desde una explosión",
+   "hook": "Why is the Statue of Liberty’s torch closed?",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-03",
+   "source_hint": "National Park Service, Black Tom explosion",
+   "reveal": "El acceso público a la antorcha cerró en 1916, tras daños vinculados al sabotaje de Black Tom.",
+   "open_0_2s": "Zoom a la antorcha: una explosión histórica se proyecta sobre el puerto."
+  },
+  {
+   "id": "C70",
+   "title_es": "La araña que fabrica una versión gigante de sí misma para engañar enemigos.",
+   "hook": "This spider builds a fake giant spider.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-04"
+  },
+  {
+   "id": "B79",
+   "title_es": "Microsoft lanzó una IA que se volvió ofensiva en menos de un día",
+   "hook": "Microsoft’s chatbot went off the rails in one day.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-05",
+   "source_hint": "Microsoft Research / cobertura de Tay 2016",
+   "reveal": "Tay, 2016, mostró los riesgos de los sistemas expuestos a manipulación en redes sociales.",
+   "open_0_2s": "Una conversación aparentemente normal cambia súbitamente a mensajes censurados."
+  },
+  {
+   "id": "A60",
+   "title_es": "Lo extraño que sucede con las burbujas de Coca-Cola sin gravedad.",
+   "hook": "Coca-Cola bubbles behave very differently in space.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-06"
+  },
+  {
+   "id": "A32",
+   "title_es": "La araña que vive debajo del agua dentro de una burbuja de aire.",
+   "hook": "This spider built itself an underwater home.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2027-04-07"
+  }
+ ],
+ "dropped": {
+  "ids": [
+   "A43",
+   "A49",
+   "A50",
+   "A52",
+   "A57",
+   "B04",
+   "B08",
+   "B09",
+   "B100",
+   "B13",
+   "B14",
+   "B15",
+   "B16",
+   "B17",
+   "B20",
+   "B22",
+   "B24",
+   "B26",
+   "B27",
+   "B30",
+   "B32",
+   "B33",
+   "B35",
+   "B36",
+   "B39",
+   "B40",
+   "B41",
+   "B42",
+   "B44",
+   "B45",
+   "B46",
+   "B48",
+   "B49",
+   "B50",
+   "B51",
+   "B54",
+   "B57",
+   "B58",
+   "B60",
+   "B62",
+   "B64",
+   "B67",
+   "B71",
+   "B72",
+   "B73",
+   "B77",
+   "B78",
+   "B84",
+   "B85",
+   "B86",
+   "B87",
+   "B91",
+   "B93",
+   "B96",
+   "C65",
+   "C69",
+   "C74",
+   "C81"
+  ],
+  "why": "Dark tragedies/crimes (limited ads = lower RPM, bad fit for a bizarre-facts channel), too niche/obscure, low visual payoff, or duplicates of a kept topic."
+ }
+}

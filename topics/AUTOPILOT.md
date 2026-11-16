@@ -10,13 +10,15 @@ command -v ffmpeg && ls /usr/bin/google-chrome
 Si falta algo que no se puede instalar, no producir: dejar el motivo en el resumen final.
 
 ## 1. Elegir el tema
-- `topics/queue.json`: el primer ítem con `status: "todo"` (orden ascendente de `n`). El texto completo de cada idea está en `topics/BANK_100.txt`.
+- **`topics/queue_v2.json`** (cola curada por viralidad, desde el 16/11/2026): el primer ítem con `status: "todo"`, **en el orden de la lista** (ya está mezclada por tema para máxima viralidad). `topics/queue.json` quedó solo como historial.
+- Prefijos: `B` = banco original (`topics/BANK_100.txt`), `A`/`C` = listas del dueño y `R` = reservas (`topics/BANK_2.txt`). Si el ítem tiene `note`, cumplirla.
+- Línea editorial: **bizarro, real y muy compartible**. Nada de tragedias ni crímenes oscuros como tema central (anuncios limitados = menos plata por vista).
 - Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr005-pepsi-fire`).
 
 ## 2. Verificar los datos ANTES de escribir
 - Buscar en la web y abrir fuentes primarias u oficiales (la "FUENTE PARA INVESTIGAR" es una pista, no un fact-check).
 - Seguir el CRITERIO EDITORIAL del banco: el gancho puede ser dramático, el dato no. En muertes, crímenes, salud o empresas: precisar quién hizo qué, incluir el desenlace y no atribuir culpas no probadas.
-- Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` con `note` y pasar al siguiente.
+- Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` en `queue_v2.json` con `note` y pasar al siguiente.
 - Las fuentes (URLs https) van en `meta.json` → `sources` y también en la descripción.
 
 ## 3. Reglas visuales y de contenido
@@ -53,8 +55,8 @@ Seguir `NEW_VIDEO.md` y `QUALITY.md` completos (incluida la **miniatura, §5b**:
 python tools/handoff.py <id>     # pone status "ready", o "hold" si algún chequeo falla
 ```
 - Si quedó alguna duda de calidad o de datos sin resolver, poner `"status": "hold"` y `"hold_reason"` a mano.
-- Actualizar `topics/queue.json` (`status: "done"`, `video_id`) y la tabla de `README.md`.
-- `git add videos/<id> publish/<id> topics/queue.json README.md && git commit -m "<id>: <título>" && git pull --rebase && git push origin main`.
+- Actualizar `topics/queue_v2.json` (`status: "done"`, `video_id`) y la tabla de `README.md`.
+- `git add videos/<id> publish/<id> topics/queue_v2.json README.md && git commit -m "<id>: <título>" && git pull --rebase && git push origin main`.
 
 ## Nunca
 - Tocar otros `publish/<id>` ni cambiar su `status`.
