@@ -3,3 +3,4 @@ soundfile
 numpy
 scipy
 playwright
+pillow
