@@ -1,0 +1,126 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Want to Live to 100? She Made It to 122 🎂",
+  "description": "Do you want to live to 100? Jeanne Calment of Arles, France, reached 122 years and 164 days, the oldest age ever verified.\n\nShe smoked until 117, ate almost two pounds of chocolate a week, took up fencing at 85 and was still cycling at 100. At 90 she sold her apartment to a 47-year-old lawyer for 2,500 francs a month until she died. He paid for 30 years, died first, and his family kept paying: more than double the apartment's value.\n\nWould you take that deal? 👇\n\nSources:\n- Guinness World Records, Oldest person ever: https://www.guinnessworldrecords.com/world-records/oldest-person\n- Guinness World Records, Jeanne Calment's extraordinary life (2024): https://www.guinnessworldrecords.com/news/2024/2/oldest-person-ever-122-year-old-jeanne-calments-extraordinary-life-765016\n- Guinness World Records, 1988: Oldest living human being of all time: https://www.guinnessworldrecords.com/news/2015/8/60/1988-oldest-living-human-being-of-all-time-392901\n- Wikipedia, Jeanne Calment: https://en.wikipedia.org/wiki/Jeanne_Calment\n\n#longevity #history #france #oldestperson",
+  "tags": [
+    "jeanne calment",
+    "oldest person ever",
+    "oldest person in history",
+    "live to 100",
+    "longevity",
+    "122 years old",
+    "reverse mortgage",
+    "viager",
+    "supercentenarian",
+    "weird history",
+    "history facts",
+    "x-ray",
+    "animation"
+  ],
+  "pinned_comment": "A lawyer bet she wouldn't live long. He paid her for 30 years. Would YOU have taken that deal? 👇",
+  "notes": "Woman = generic elder engine figure (no likeness). Lawyer = generic suited figure. His death is symbolic (x-ray ghost fades). Facts: 122 y 164 d, born 21 Feb 1875 Arles, died 4 Aug 1997 (Guinness, Wikipedia). Smoked from 21 to 117 (Guinness 2024 + Wikipedia). Almost 1 kg (2 lb 3 oz) chocolate per week (Guinness) -> 'about two pounds'. Fencing at 85, cycling until 100 (Guinness, Wikipedia). 1965: she was 90, lawyer André-François Raffray 47, 2,500 francs per month until her death, then the apartment (Guinness). He died in 1995 aged 77 (30 years of payments) when she was 120; his family/widow kept paying; total more than double the apartment's value (Guinness). 120th birthday: asked about her future, answered 'A very short one' (Guinness 1988 article). A 2018 claim that she was really her daughter Yvonne was rejected by most researchers; not mentioned. On-screen banknotes are generic ('F 500'), not real designs. Smoking shown as a plain object; not endorsed.",
+  "series": "Extreme Lives",
+  "caption_instagram": "Want to live to 100? She made it to 122. 🎂\n\nShe smoked until 117 and ate two pounds of chocolate a week. At 90 she sold her apartment to a 47-year-old lawyer who paid her every month until she died... He paid for 30 years. Then he died first.\n\nFull story on YouTube: @StoriesXray\n\n#longevity #history #oldestperson #france",
+  "sources": [
+    {
+      "title": "Guinness World Records: Oldest person ever",
+      "url": "https://www.guinnessworldrecords.com/world-records/oldest-person"
+    },
+    {
+      "title": "Guinness World Records: Jeanne Calment's extraordinary life (2024)",
+      "url": "https://www.guinnessworldrecords.com/news/2024/2/oldest-person-ever-122-year-old-jeanne-calments-extraordinary-life-765016"
+    },
+    {
+      "title": "Guinness World Records: 1988 oldest living human being of all time",
+      "url": "https://www.guinnessworldrecords.com/news/2015/8/60/1988-oldest-living-human-being-of-all-time-392901"
+    },
+    {
+      "title": "Wikipedia: Jeanne Calment",
+      "url": "https://en.wikipedia.org/wiki/Jeanne_Calment"
+    }
+  ],
+  "thumbnail": {
+    "time": 38.7,
+    "zoom": 1.3,
+    "focus": [
+      0.5,
+      0.42
+    ],
+    "protect": [
+      360,
+      640,
+      720,
+      1060
+    ],
+    "circle": [
+      540,
+      848,
+      205
+    ],
+    "rays": [
+      540,
+      848
+    ],
+    "tilt": -5,
+    "badge": "AGE 122",
+    "badge_tilt": 6,
+    "text_y": 140,
+    "lines": [
+      {
+        "text": "SMOKED",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "TILL 117",
+        "color": "#FF3B30"
+      }
+    ],
+    "glow": "#FFD60A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "LIVED TO",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "122",
+            "box": "#FF3B30"
+          }
+        ],
+        "badge": "SMOKED 'TIL 117",
+        "glow": "#FF8A2E",
+        "badge_x": 560
+      },
+      {
+        "lines": [
+          {
+            "text": "PAID HER",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "30 YEARS",
+            "color": "#FFD60A"
+          }
+        ],
+        "badge": "AGE 122",
+        "glow": "#FF3B30",
+        "badge_x": 560
+      }
+    ],
+    "pick": 0,
+    "badge_x": 110,
+    "badge_y": 1170
+  },
+  "status": "needs_approval"
+}

@@ -1,0 +1,87 @@
+{
+ "voice": "am_michael",
+ "speed": 0.98,
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Do you want to live to a hundred?",
+   0.12
+  ],
+  [
+   "Or more?",
+   0.35
+  ],
+  [
+   "This woman lived to one hundred twenty-two.",
+   0.3
+  ],
+  [
+   "She was born in France in eighteen seventy-five.",
+   0.2
+  ],
+  [
+   "She smoked until she was one hundred seventeen.",
+   0.12
+  ],
+  [
+   "She ate about two pounds of chocolate a week.",
+   0.15
+  ],
+  [
+   "At eighty-five, she took up fencing.",
+   0.1
+  ],
+  [
+   "At one hundred, she was still riding her bike.",
+   0.35
+  ],
+  [
+   "But her best move was a deal.",
+   0.25
+  ],
+  [
+   "At ninety, she sold her apartment to a lawyer.",
+   0.08
+  ],
+  [
+   "He was forty-seven.",
+   0.15
+  ],
+  [
+   "He'd pay her every month until she died.",
+   0.08
+  ],
+  [
+   "Then the place was his.",
+   0.3
+  ],
+  [
+   "He paid for thirty years.",
+   0.2
+  ],
+  [
+   "Then he died first.",
+   0.35
+  ],
+  [
+   "His family kept paying.",
+   0.1
+  ],
+  [
+   "She collected more than double what it was worth.",
+   0.35
+  ],
+  [
+   "At one hundred twenty, someone asked about her future.",
+   0.15
+  ],
+  [
+   "Her answer?",
+   0.25
+  ],
+  [
+   "A very short one.",
+   0.45
+  ]
+ ]
+}
