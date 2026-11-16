@@ -36,6 +36,8 @@ SL, ST, SR, SB = 80, 120, 1000, 1490          # safe zone
 MIN_LINE_PX = 120                              # >= ~24 px tall in the 216x384 feed tile
 meta = json.load(open(f"{ROOT}/videos/{VID}/meta.json"))
 BASE = meta.get("thumbnail") or sys.exit("meta.json has no 'thumbnail' block")
+# optional safe-zone override (e.g. Instagram/Facebook cover: the profile grid crops 9:16 to 3:4, rows 240..1680)
+ST, SB = int(BASE.get("safe_top", ST)), int(BASE.get("safe_bottom", SB))
 def clamp(v, lo, hi): return max(lo, min(hi, v))
 def inter(a, b, m=0): return not (a[2] + m <= b[0] or b[2] + m <= a[0] or a[3] + m <= b[1] or b[3] + m <= a[1])
 class Fail(Exception): pass
