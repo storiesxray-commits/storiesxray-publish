@@ -25,6 +25,8 @@ canvas{position:absolute;left:0;top:0}
 <script type="module">
 import { THREE, W, H, clamp, ss, back } from './engine.js';
 const V_ID = new URLSearchParams(location.search).get('v');
+// ?clean=1 hides titles and captions (used for thumbnails)
+if (new URLSearchParams(location.search).get('clean')) for (const id of ['title', 'strike', 'cap']) document.getElementById(id).style.display = 'none';
 const SH = await import(`../videos/${V_ID}/shots.js`);
 const timing = await (await fetch(`../out/${V_ID}/timing.json`)).json();
 const sen = timing.sentences, st = i => sen[i - 1].start - 0.09, wd = (i, j) => sen[i - 1].words[j].s;

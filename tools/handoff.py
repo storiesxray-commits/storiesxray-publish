@@ -24,6 +24,14 @@ if (int(v["width"]), int(v["height"])) != (1080, 1920): errs.append("not_1080x19
 if vbr > 5_000_000: errs.append("video_bitrate_over_5mbps_instagram")
 if not faststart: errs.append("moov_not_at_start")
 if float(pr["format"]["duration"]) > 59: errs.append("duration_over_59s")
+thumb = f"{P}/thumb.jpg"
+if not os.path.exists(thumb): errs.append("thumbnail_missing")
+else:
+    from PIL import Image
+    tw, tht = Image.open(thumb).size
+    if (tw, tht) != (1080, 1920): errs.append("thumbnail_not_1080x1920")
+    if os.path.getsize(thumb) >= 2_000_000: errs.append("thumbnail_over_2mb")
+    if not meta.get("thumbnail"): errs.append("thumbnail_not_custom")
 for k in ("title", "description", "caption_instagram", "series", "sources"):
     if not meta.get(k): errs.append(f"{k}_missing")
 for s in meta.get("sources", []):

@@ -42,6 +42,16 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Volumen final: −14 LUFS integrado, pico −1 dBTP (lo hace `mix.py`).
 - Efectos sincronizados con lo que pasa (golpe, burbujas, tic del reloj), nunca tapando una palabra clave.
 
+## 5b. Miniatura (obligatoria, define el clic)
+La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el encabezado del script). Se revisa `out/<id>/thumb_preview.jpg`: la versión chica (tamaño del feed) tiene que leerse en un segundo.
+- **Un solo momento visual**, el más impactante del video (la ola, el tanque que revienta, el objeto imposible), grande y entendible sin contexto. Cuadro limpio, sin subtítulos (`render.py clean`).
+- **Texto de 2 a 5 palabras, en mayúsculas, en 1 a 3 líneas**, que abra una pregunta que el video responde: contradicción ("IT WASN'T WATER"), número extremo ("7 MINUTES. NO AIR."), consecuencia ("HE KEPT DANCING"), pregunta ("WHO STOLE IT?"). No repetir el título palabra por palabra.
+- Una palabra clave en amarillo `#FFD60A` o rojo `#FF3B30`, el resto en blanco. Como mucho un recurso extra: círculo rojo, flecha roja o etiqueta (fecha, lugar, cifra).
+- **Clickbait honesto**: todo lo que promete la miniatura pasa en el video y es verdad. Nada de sangre, cuerpos ni heridas; nada de logos; nada de parecidos con personas reales. YouTube castiga las miniaturas engañosas y el público también (retención).
+- Nada importante en el 22 % de abajo (ahí YouTube pone el título) ni pegado a los bordes.
+- Variar entre videos: posición del texto (arriba o abajo), color de acento, recurso extra y encuadre. No usar la misma plantilla dos días seguidos.
+- `handoff.py` exige `thumb.jpg` de 1080×1920, < 2 MB y hecho con `thumbnail.py`.
+
 ## 6. Revisión final (obligatoria)
 1. `review.jpg`: una imagen cada 1,1 s. Recorrerla entera buscando los errores de la sección 4.
 2. `review_mid.jpg`: el cuadro central de cada plano, grande.

@@ -2,6 +2,7 @@
 Usage:
   python tools/render.py <video-id> list                 -> prints shots, writes out/<id>/shots.json
   python tools/render.py <video-id> stills 1.2 5.0 ...   -> full-size JPEG frames in out/<id>/frames/
+  python tools/render.py <video-id> clean 1.2 5.0 ...    -> same, without titles/captions (out/<id>/frames/c_*.jpg, for thumbnails)
   python tools/render.py <video-id> shot s01 s02 ...     -> out/<id>/shots/<shot>.mp4
 Env: CHROME (browser path, default: playwright's Chromium), PORT (default 8765)."""
 import sys, subprocess, time, os, json, socket
@@ -23,17 +24,18 @@ try:
         pg = b.new_page(viewport={"width": 1080, "height": 1920}, device_scale_factor=1)
         errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
-        pg.goto(f"http://127.0.0.1:{PORT}/engine/player.html?v={VID}")
+        pg.goto(f"http://127.0.0.1:{PORT}/engine/player.html?v={VID}" + ("&clean=1" if MODE == "clean" else ""))
         try: pg.wait_for_function("window.READY===true", timeout=60000)
         except Exception: print("LOAD FAILED:", errs); raise
         shots = pg.evaluate("window.SHOTS")
         if MODE == "list":
             json.dump(shots, open(f"{OUT}/shots.json", "w"), indent=1)
             for s in shots: print(f'{s["id"]:6s} {s["start"]:7.3f} -> {s["end"]:7.3f}  ({s["end"]-s["start"]:.2f}s)')
-        elif MODE == "stills":
+        elif MODE in ("stills", "clean"):
+            pre = "c" if MODE == "clean" else "f"
             for T in ARGS:
                 sid = pg.evaluate(f"window.renderAt({float(T)})")
-                pg.screenshot(path=f"{OUT}/frames/f_{float(T):06.2f}.jpg", type="jpeg", quality=90); print(T, sid)
+                pg.screenshot(path=f"{OUT}/frames/{pre}_{float(T):06.2f}.jpg", type="jpeg", quality=95); print(T, sid)
         elif MODE == "shot":
             for sid in ARGS:
                 s = [x for x in shots if x["id"] == sid][0]; f0 = round(s["start"] * FPS); f1 = round(s["end"] * FPS)

@@ -1,6 +1,6 @@
 """Builds a finished Short from videos/<id>/ end to end.
   1 narration (voice.py)   2 shot list   3 render all shots in parallel   4 sound mix
-  5 join + mux             6 thumbnail   7 review sheet                    8 publish package for Make
+  5 join + mux             6 thumbnail (tools/thumbnail.py)   7 review sheet                    8 publish package for Make
 Usage: python tools/build.py <video-id> [--workers 2] [--only s03,s05] [--no-publish]
 Output: out/<id>/<id>.mp4, out/<id>/thumb.jpg, out/<id>/review.jpg, publish/<id>/ (video.mp4, thumb.jpg, metadata.json)"""
 import sys, os, json, subprocess, argparse, shutil, time
@@ -26,7 +26,10 @@ final = f"{OUT}/{VID}.mp4"
 run("ffmpeg", "-y", "-loglevel", "error", "-i", f"{OUT}/video.mp4", "-i", f"{OUT}/mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy",
     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", final)
 meta = json.load(open(f"{ROOT}/videos/{VID}/meta.json"))
-run("ffmpeg", "-y", "-loglevel", "error", "-ss", str(meta.get("thumb_time", 1.0)), "-i", final, "-frames:v", "1", "-q:v", "2", f"{OUT}/thumb.jpg")
+if meta.get("thumbnail"):   # custom clickable thumbnail (tools/thumbnail.py); plain frame only as a fallback
+    run(PY, "tools/thumbnail.py", VID)
+else:
+    run("ffmpeg", "-y", "-loglevel", "error", "-ss", str(meta.get("thumb_time", 1.0)), "-i", final, "-frames:v", "1", "-q:v", "2", f"{OUT}/thumb.jpg")
 run(PY, "tools/review.py", VID)
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", final]).decode())
 lufs = subprocess.run(["ffmpeg", "-hide_banner", "-i", final, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr

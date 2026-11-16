@@ -47,5 +47,26 @@
       "title": "NBC News",
       "url": "https://www.nbcnews.com/news/us-news/great-boston-molasses-flood-1919-killed-21-after-2-million-n958326"
     }
-  ]
+  ],
+  "thumbnail": {
+    "time": 26.5,
+    "lines": [
+      "IT WASN'T",
+      "WATER"
+    ],
+    "colors": [
+      "#FFFFFF",
+      "#FFD60A"
+    ],
+    "focus": [
+      0.38,
+      0.42
+    ],
+    "zoom": 1.2,
+    "text_y": 880,
+    "text_h": 560,
+    "band": 150,
+    "badge": "BOSTON 1919"
+  },
+  "publish_time_local": "12:00"
 }

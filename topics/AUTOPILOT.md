@@ -24,7 +24,7 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Nada de logos, marcas gráficas, tipografías de marca ni personajes con copyright (Mickey, etc.): usar objetos genéricos y el nombre en texto.
 - Muerte, heridas o violencia: no gráficas, simbólicas (siluetas, contadores, mapas). Nada de sangre ni cuerpos.
 - Guion en inglés de EE. UU., original (sin citar textos de prensa), 40–50 s, una idea por oración (así `voice.py` corta bien las pausas).
-- `meta.json`: `title` ≤ 100 caracteres y sin `<` ni `>`, `description`, `tags`, `series`, `caption_instagram`, `sources`, `platforms`, `made_for_kids: false`, `altered_or_synthetic_realistic: false`.
+- `meta.json`: bloque `thumbnail` (ver `tools/thumbnail.py`), `title` ≤ 100 caracteres y sin `<` ni `>`, `description`, `tags`, `series`, `caption_instagram`, `sources`, `platforms`, `made_for_kids: false`, `altered_or_synthetic_realistic: false`.
 
 ## 3b. Público y monetización
 - Canal para todo el público de habla inglesa, **priorizando los países que más pagan por vista en Shorts: EE. UU. primero, después Australia, Canadá, Reino Unido, Nueva Zelanda e Irlanda.**
@@ -46,7 +46,7 @@ La política de YouTube sobre contenido "inauthentic" (producido en masa o repet
 - El horario de publicación lo elige `tools/handoff.py` (distinto cada día, en franjas de EE. UU./Reino Unido/Australia). No escribirlo a mano salvo pedido de la dueña.
 
 ## 4. Producir
-Seguir `NEW_VIDEO.md` y `QUALITY.md` completos: escenas, cuadros sueltos a tamaño real, `python tools/build.py <id>`, hojas `review.jpg` y `review_mid.jpg`, margen de voz ≥ 4 dB, −14 LUFS, nada cortado en los bordes. Corregir con `--only` hasta que todo cumpla.
+Seguir `NEW_VIDEO.md` y `QUALITY.md` completos (incluida la **miniatura, §5b**: elegir el momento más fuerte, probar 2–3 variantes de texto/cuadro con `tools/thumbnail.py` y quedarse con la que mejor se lee en la versión chica de `thumb_preview.jpg`): escenas, cuadros sueltos a tamaño real, `python tools/build.py <id>`, hojas `review.jpg` y `review_mid.jpg`, margen de voz ≥ 4 dB, −14 LUFS, nada cortado en los bordes. Corregir con `--only` hasta que todo cumpla.
 
 ## 5. Entregar
 ```bash
