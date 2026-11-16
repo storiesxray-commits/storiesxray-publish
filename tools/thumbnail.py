@@ -173,7 +173,7 @@ def render(th):
             rect = (cand[0], cand[1], cand[0] + tw, cand[1] + tht)
             if not inter(rect, P, 12) and not any(inter(rect, b, 12) for _, b in boxes): placed = cand; break
         if placed: break
-    if not placed: raise Fail("badge collides everywhere; smaller circle/protect or shorter badge")
+    if not placed: raise Fail(f"badge collides everywhere; smaller circle/protect or shorter badge (text {box}, circle {(cx, cy, r)}, protect {P}, safe {ST}..{SB})")
     img.paste(tag, placed, tag); boxes.append(("badge", (placed[0], placed[1], placed[0] + tw, placed[1] + tht)))
     for name, (a, b_, c, d_) in boxes:
         if a < SL - 1 or b_ < ST - 1 or c > SR + 1 or d_ > SB + 1: raise Fail(f"{name} outside the safe zone: {(a, b_, c, d_)}")

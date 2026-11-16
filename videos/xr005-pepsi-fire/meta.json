@@ -116,5 +116,14 @@
     ],
     "pick": 0,
     "glow": "#FF8A2E"
+  },
+  "social_thumbnail": {
+    "circle": [
+      557,
+      760,
+      280
+    ],
+    "badge_x": 90,
+    "badge_y": 270
   }
 }

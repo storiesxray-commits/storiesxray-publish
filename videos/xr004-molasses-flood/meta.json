@@ -117,5 +117,14 @@
       }
     ],
     "pick": 2
+  },
+  "social_thumbnail": {
+    "circle": [
+      710,
+      725,
+      230
+    ],
+    "badge_x": 90,
+    "badge_y": 270
   }
 }
