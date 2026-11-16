@@ -24,7 +24,7 @@ with open(f"{OUT}/list.txt", "w") as f:
 run("ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{OUT}/list.txt", "-c", "copy", f"{OUT}/video.mp4")
 final = f"{OUT}/{VID}.mp4"
 run("ffmpeg", "-y", "-loglevel", "error", "-i", f"{OUT}/video.mp4", "-i", f"{OUT}/mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy",
-    "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart", final)
+    "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-shortest", "-movflags", "+faststart", "-use_editlist", "0", final)  # Instagram Reels spec: AAC 128k, <=48 kHz, moov first, no edit lists
 meta = json.load(open(f"{ROOT}/videos/{VID}/meta.json"))
 if meta.get("thumbnail"):   # custom clickable thumbnail (tools/thumbnail.py); plain frame only as a fallback
     run(PY, "tools/thumbnail.py", VID)
