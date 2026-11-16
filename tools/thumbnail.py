@@ -1,6 +1,6 @@
 """HYPER-VIRAL Shorts thumbnail (1080x1920 JPEG, < 2 MB) from a clean frame + big curiosity text. Every video gets one.
 
-Usage: python tools/thumbnail.py <video-id>
+Usage: python tools/thumbnail.py <video-id> [--social]   (--social -> out/<id>/cover_social*.jpg, 3:4-safe IG/FB cover)
 Reads videos/<id>/meta.json -> "thumbnail" (base settings) + "variants" (>= 3 overrides, MANDATORY) + "pick":
   {
     "time": 20.3,                        # second of the video (rendered WITHOUT titles/captions): the most extreme moment
@@ -36,7 +36,11 @@ SL, ST, SR, SB = 80, 120, 1000, 1490          # safe zone
 MIN_LINE_PX = 120                              # >= ~24 px tall in the 216x384 feed tile
 meta = json.load(open(f"{ROOT}/videos/{VID}/meta.json"))
 BASE = meta.get("thumbnail") or sys.exit("meta.json has no 'thumbnail' block")
-# optional safe-zone override (e.g. Instagram/Facebook cover: the profile grid crops 9:16 to 3:4, rows 240..1680)
+# --social: Instagram/Facebook cover (first frame of video_social.mp4). The IG profile grid crops 9:16 to 3:4
+# (rows 240..1680), so the safe zone is 270..1650; meta.json "social_thumbnail" overrides the base block.
+SOCIAL = "--social" in sys.argv
+if SOCIAL: BASE = {**BASE, "safe_top": 270, "safe_bottom": 1650, **(meta.get("social_thumbnail") or {})}
+NAME = "cover_social" if SOCIAL else "thumb"
 ST, SB = int(BASE.get("safe_top", ST)), int(BASE.get("safe_bottom", SB))
 def clamp(v, lo, hi): return max(lo, min(hi, v))
 def inter(a, b, m=0): return not (a[2] + m <= b[0] or b[2] + m <= a[0] or a[3] + m <= b[1] or b[3] + m <= a[1])
@@ -192,7 +196,7 @@ results = []
 for i, ov in enumerate(variants):
     th = {**base, **ov}
     try:
-        img, ck = render(th); save_jpg(img, f"{OUT}/thumb_v{i}.jpg"); results.append((i, img, ck, None)); print(f"variant {i}: OK {ck}")
+        img, ck = render(th); save_jpg(img, f"{OUT}/{NAME}_v{i}.jpg"); results.append((i, img, ck, None)); print(f"variant {i}: OK {ck}")
     except Fail as e:
         results.append((i, None, None, str(e))); print(f"variant {i}: FAILED {e}")
 # comparison sheet at feed size (what a viewer actually sees)
@@ -203,18 +207,18 @@ for i, img, ck, err in results:
         tile = img.resize((216, 384), Image.LANCZOS); m = Image.new("L", tile.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, 215, 383], 18, fill=255)
         sheet.paste(tile, (x, 20), m)
     sd.text((x, 410), f"v{i}" + (" PICK" if i == pick else "") + ("" if img else " FAILED"), fill=(255, 214, 10) if i == pick else (200, 200, 200))
-sheet.save(f"{OUT}/thumb_variants.jpg", quality=90)
+sheet.save(f"{OUT}/{NAME}_variants.jpg", quality=90)
 chosen = [r for r in results if r[0] == pick]
 if not chosen or chosen[0][1] is None: sys.exit(f"picked variant {pick} failed: {chosen[0][3] if chosen else 'no such variant'}")
 _, img, ck, _ = chosen[0]
-save_jpg(img, f"{OUT}/thumb.jpg")
+save_jpg(img, f"{OUT}/{NAME}.jpg")
 half = img.resize((W // 2, H // 2), Image.LANCZOS); hd = ImageDraw.Draw(half)
 hd.rectangle([SL // 2, ST // 2, SR // 2, SB // 2], outline=(0, 255, 255), width=2); hd.rectangle([0, SB // 2, W // 2, H // 2], outline=(255, 0, 255), width=2)
 P = ck["protect"]; hd.rectangle([P[0] // 2, P[1] // 2, P[2] // 2, P[3] // 2], outline=(0, 255, 0), width=2)
 tile = img.resize((216, 384), Image.LANCZOS); m = Image.new("L", tile.size, 0); ImageDraw.Draw(m).rounded_rectangle([0, 0, 215, 383], 18, fill=255)
 prev = Image.new("RGB", (W // 2 + 40 + 216, H // 2), (24, 24, 24)); prev.paste(half, (0, 0)); prev.paste(tile, (W // 2 + 20, 20), m)
-ImageDraw.Draw(prev).text((W // 2 + 20, 412), "feed size", fill=(200, 200, 200)); prev.save(f"{OUT}/thumb_preview.jpg", quality=88)
-sha = hashlib.sha256(open(f"{OUT}/thumb.jpg", "rb").read()).hexdigest()
+ImageDraw.Draw(prev).text((W // 2 + 20, 412), "feed size", fill=(200, 200, 200)); prev.save(f"{OUT}/{NAME}_preview.jpg", quality=88)
+sha = hashlib.sha256(open(f"{OUT}/{NAME}.jpg", "rb").read()).hexdigest()
 json.dump({"sha256": sha, "pick": pick, "variants_ok": [r[0] for r in results if r[1] is not None], "checks": ck},
-          open(f"{OUT}/thumb_report.json", "w"), indent=1)
-print("thumb", f"{OUT}/thumb.jpg", os.path.getsize(f"{OUT}/thumb.jpg"), "bytes  sha", sha[:12], " variants sheet", f"{OUT}/thumb_variants.jpg")
+          open(f"{OUT}/{NAME}_report.json", "w"), indent=1)
+print("thumb", f"{OUT}/{NAME}.jpg", os.path.getsize(f"{OUT}/{NAME}.jpg"), "bytes  sha", sha[:12], " variants sheet", f"{OUT}/{NAME}_variants.jpg")

@@ -8,6 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VID = sys.argv[1]; P = f"{ROOT}/publish/{VID}"
 subprocess.run([sys.executable, f"{ROOT}/tools/thumbnail.py", VID], check=True)
 shutil.copy(f"{ROOT}/out/{VID}/thumb.jpg", f"{P}/thumb.jpg")
+subprocess.run([sys.executable, f"{ROOT}/tools/social.py", VID], check=True)   # IG/FB cover + video_social.mp4
 meta = json.load(open(f"{ROOT}/videos/{VID}/meta.json")); pub = json.load(open(f"{P}/metadata.json"))
 pub["thumbnail"] = meta["thumbnail"]
 json.dump(pub, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)

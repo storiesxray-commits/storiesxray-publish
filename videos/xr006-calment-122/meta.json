@@ -122,5 +122,30 @@
     "badge_x": 110,
     "badge_y": 1170
   },
-  "status": "needs_approval"
+  "status": "needs_approval",
+  "social_thumbnail": {
+    "zoom": 1.2,
+    "focus": [
+      0.5,
+      0.4167
+    ],
+    "protect": [
+      385,
+      700,
+      695,
+      1060
+    ],
+    "circle": [
+      540,
+      866,
+      172
+    ],
+    "rays": [
+      540,
+      866
+    ],
+    "text_y": 280,
+    "badge_x": 110,
+    "badge_y": 1180
+  }
 }

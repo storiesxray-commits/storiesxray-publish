@@ -43,6 +43,10 @@ else:
     else:
         tsha = hashlib.sha256(open(thumb, "rb").read()).hexdigest()
         if json.load(open(rep)).get("sha256") != tsha: errs.append("thumbnail_not_the_checked_one")
+    # Instagram/Facebook: video_social.mp4 must exist (custom cover as frame 0) and be the file tools/social.py checked
+    vs, srep = f"{P}/video_social.mp4", f"{ROOT}/out/{VID}/social_report.json"
+    if not os.path.exists(vs) or not os.path.exists(f"{P}/cover_social.jpg"): errs.append("social_video_missing_run_social_py")
+    elif not os.path.exists(srep) or json.load(open(srep)).get("sha256") != hashlib.sha256(open(vs, "rb").read()).hexdigest(): errs.append("social_video_not_the_checked_one")
 for k in ("title", "description", "caption_instagram", "series", "sources"):
     if not meta.get(k): errs.append(f"{k}_missing")
 for s in meta.get("sources", []):

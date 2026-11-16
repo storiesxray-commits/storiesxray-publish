@@ -1,6 +1,6 @@
 # Piloto automático: un video nuevo por corrida
 
-La tarea programada de Claude corre esto **todos los días**. Make (XR-00 → XR-01 → XR-02) toma lo que quede en `publish/` y lo programa en YouTube (privado con fecha, **un video por día, cada uno a una hora distinta** que elige `tools/handoff.py`). Instagram está en pausa.
+La tarea programada de Claude corre esto **todos los días**. Make (XR-00 → XR-01 → XR-02) toma lo que quede en `publish/` y lo programa en YouTube (privado con fecha, **un video por día, cada uno a una hora distinta** que elige `tools/handoff.py`). A esa misma hora XR-03 lo publica como Reel en Facebook (página Stories Xray) e Instagram (@storiesxray) usando `publish/<id>/video_social.mp4` (la portada propia es el primer cuadro).
 
 ## 0. Preparar el entorno (cada corrida arranca de cero)
 ```bash
