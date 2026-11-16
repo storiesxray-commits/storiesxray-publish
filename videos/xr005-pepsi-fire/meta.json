@@ -50,36 +50,71 @@
     }
   ],
   "thumbnail": {
-    "time": 1.0,
+    "time": 20.3,
+    "zoom": 1.0,
     "focus": [
       0.5,
-      0.42
+      0.5
     ],
-    "zoom": 1.25,
+    "protect": [
+      400,
+      430,
+      715,
+      1025
+    ],
+    "circle": [
+      557,
+      735,
+      315
+    ],
+    "rays": [
+      557,
+      640
+    ],
+    "tilt": -5,
+    "badge": "1984",
+    "badge_tilt": 6,
+    "text_y": 1100,
     "lines": [
       {
-        "text": "HAIR ON FIRE",
-        "box": "#FF3B30",
-        "color": "#FFFFFF"
+        "text": "ON FIRE.",
+        "color": "#FF3B30"
       },
       {
         "text": "KEPT DANCING",
         "color": "#FFD60A"
       }
     ],
-    "text_y": 1180,
-    "tilt": -5,
-    "glow": "#FFD60A",
-    "badge": "1984",
-    "circle": [
-      540,
-      850,
-      290
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "ON FIRE.",
+            "color": "#FF3B30"
+          },
+          {
+            "text": "KEPT DANCING",
+            "color": "#FFFFFF"
+          }
+        ],
+        "glow": "#FFD60A"
+      },
+      {
+        "lines": [
+          {
+            "text": "HE DIDN'T",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "NOTICE",
+            "color": "#FFD60A"
+          }
+        ],
+        "glow": "#FF3B30"
+      }
     ],
-    "rays": [
-      540,
-      780
-    ],
-    "badge_tilt": 6
+    "pick": 0,
+    "glow": "#FF8A2E"
   }
 }

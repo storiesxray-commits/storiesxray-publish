@@ -31,7 +31,18 @@ else:
     tw, tht = Image.open(thumb).size
     if (tw, tht) != (1080, 1920): errs.append("thumbnail_not_1080x1920")
     if os.path.getsize(thumb) >= 2_000_000: errs.append("thumbnail_over_2mb")
-    if not meta.get("thumbnail"): errs.append("thumbnail_not_custom")
+    th = meta.get("thumbnail") or {}
+    if not th: errs.append("thumbnail_not_custom")
+    # hyper-viral thumbnail gate (QUALITY.md §5b): subject protected, 3 hooks, >= 3 variants compared,
+    # and the published file must be exactly the one tools/thumbnail.py checked (thumb_report.json).
+    if th and not th.get("protect"): errs.append("thumbnail_no_protect_box")
+    if th and not th.get("badge"): errs.append("thumbnail_no_badge")
+    if th and len(th.get("variants") or []) < 3: errs.append("thumbnail_fewer_than_3_variants")
+    rep = f"{ROOT}/out/{VID}/thumb_report.json"
+    if not os.path.exists(rep): errs.append("thumbnail_report_missing_run_thumbnail_py")
+    else:
+        tsha = hashlib.sha256(open(thumb, "rb").read()).hexdigest()
+        if json.load(open(rep)).get("sha256") != tsha: errs.append("thumbnail_not_the_checked_one")
 for k in ("title", "description", "caption_instagram", "series", "sources"):
     if not meta.get(k): errs.append(f"{k}_missing")
 for s in meta.get("sources", []):

@@ -43,6 +43,15 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Efectos sincronizados con lo que pasa (golpe, burbujas, tic del reloj), nunca tapando una palabra clave.
 
 ## 5b. Miniatura HYPER CLICKBAIT (obligatoria, define el clic)
+**Regla de la dueña (16/11/2026): TODOS los videos salen con miniatura perfecta e hiperviral, sin excepción.** `tools/thumbnail.py` corta con error y `handoff.py` pone `hold` si no se cumple lo siguiente:
+- **`protect` obligatorio:** caja (px finales) del sujeto clave: cara, fuego, ola. El texto y el sello nunca lo tapan (el script mueve el texto arriba o abajo). Los rayos y la franja oscura no lo ensucian, y el brillo del círculo queda solo por fuera del aro. La cara o el objeto tienen que verse nítidos y enteros.
+- **Los 3 ganchos siempre:** círculo, rayos y sello (`badge`). Si falta el círculo o los rayos, se centran en `protect`; el sello es obligatorio.
+- **De 2 a 4 palabras** y **cada línea de al menos 120 px de alto** (se lee en el feed). Si no entra, menos palabras u otro cuadro, nunca letra chica.
+- **Al menos 3 `variants`** en `meta.json`, con `pick` en la elegida. Se miran todas juntas en `out/<id>/thumb_variants.jpg` (tamaño feed) y gana la que se lee y da ganas de tocar en medio segundo. Hay que mirarla de verdad, no elegir a ciegas.
+- **Cuadro:** el momento más extremo, con el sujeto grande (≥ 25 % del alto). Si el sujeto no se reconoce en el feed, elegir otro cuadro. El tachado no puede tapar la palabra.
+- `handoff.py` exige `out/<id>/thumb_report.json` y que `thumb.jpg` sea exactamente el archivo chequeado (mismo SHA-256).
+- Para rehacer solo la miniatura de un video ya armado: `python tools/rethumb.py <id>`. Si el video ya está en YouTube, el archivo nuevo hay que subirlo ahí aparte.
+
 La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el encabezado del script). Objetivo: que nadie pueda pasarla sin tocar. Se revisa `out/<id>/thumb_preview.jpg`: la versión chica (tamaño del feed) tiene que leerse y dar ganas de tocar en medio segundo.
 - **El momento más extremo del video, enorme**: la ola, el tanque que revienta, el objeto imposible. Zoom 1.05–1.3 sobre la acción, cuadro limpio (`render.py clean`).
 - **Siempre los 3 ganchos visuales**: (1) círculo rojo `circle` sobre la cosa clave, (2) rayos de luz `rays` saliendo de ese mismo punto, (3) sello `badge` rojo inclinado con fecha, lugar o cifra ("BOSTON 1919", "7 MIN", "$1,000,000"). Flecha roja `arrow` solo si el círculo no alcanza.

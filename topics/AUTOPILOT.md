@@ -48,7 +48,7 @@ La política de YouTube sobre contenido "inauthentic" (producido en masa o repet
 - El horario de publicación lo elige `tools/handoff.py` (distinto cada día, en franjas de EE. UU./Reino Unido/Australia). No escribirlo a mano salvo pedido de la dueña.
 
 ## 4. Producir
-Seguir `NEW_VIDEO.md` y `QUALITY.md` completos (incluida la **miniatura, §5b**: elegir el momento más fuerte, probar 2–3 variantes de texto/cuadro con `tools/thumbnail.py` y quedarse con la que mejor se lee en la versión chica de `thumb_preview.jpg`): escenas, cuadros sueltos a tamaño real, `python tools/build.py <id>`, hojas `review.jpg` y `review_mid.jpg`, margen de voz ≥ 4 dB, −14 LUFS, nada cortado en los bordes. Corregir con `--only` hasta que todo cumpla.
+**Miniatura perfecta e hiperviral en todos los videos (regla de la dueña, 16/11/2026):** `protect` + 3 ganchos + al menos 3 `variants` comparadas en `thumb_variants.jpg`; sin eso, `handoff.py` pone `hold`. Seguir `NEW_VIDEO.md` y `QUALITY.md` completos (incluida la **miniatura, §5b**: elegir el momento más fuerte, probar 2–3 variantes de texto/cuadro con `tools/thumbnail.py` y quedarse con la que mejor se lee en la versión chica de `thumb_preview.jpg`): escenas, cuadros sueltos a tamaño real, `python tools/build.py <id>`, hojas `review.jpg` y `review_mid.jpg`, margen de voz ≥ 4 dB, −14 LUFS, nada cortado en los bordes. Corregir con `--only` hasta que todo cumpla.
 
 ## 5. Entregar
 ```bash

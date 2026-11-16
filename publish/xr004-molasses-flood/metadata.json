@@ -49,12 +49,32 @@
     }
   ],
   "thumbnail": {
-    "time": 24.0,
+    "time": 2.5,
+    "zoom": 1.0,
     "focus": [
       0.5,
-      0.38
+      0.5
     ],
-    "zoom": 1.08,
+    "protect": [
+      540,
+      130,
+      1000,
+      1040
+    ],
+    "circle": [
+      710,
+      640,
+      250
+    ],
+    "rays": [
+      760,
+      640
+    ],
+    "tilt": -4,
+    "badge": "BOSTON 1919",
+    "badge_tilt": -5,
+    "text_y": 1060,
+    "glow": "#FFD60A",
     "lines": [
       {
         "text": "IT WASN'T",
@@ -66,24 +86,37 @@
         "strike": true
       }
     ],
-    "text_y": 880,
-    "text_h": 560,
-    "band": 120,
-    "tilt": -4,
-    "glow": "#FFD60A",
-    "rays": [
-      600,
-      600
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "25-FOOT",
+            "box": "#FF3B30",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "MOLASSES",
+            "color": "#FFD60A"
+          }
+        ],
+        "glow": "#FF8A2E"
+      },
+      {
+        "lines": [
+          {
+            "text": "DEADLY",
+            "color": "#FF3B30"
+          },
+          {
+            "text": "MOLASSES",
+            "color": "#FFD60A"
+          }
+        ],
+        "glow": "#FFFFFF"
+      }
     ],
-    "circle": [
-      600,
-      600,
-      250
-    ],
-    "badge": "BOSTON 1919",
-    "badge_tilt": -5,
-    "badge_x": 80,
-    "badge_y": 120
+    "pick": 2
   },
   "publish_time_local": "12:00"
 }
