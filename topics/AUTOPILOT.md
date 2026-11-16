@@ -10,10 +10,10 @@ command -v ffmpeg && ls /usr/bin/google-chrome
 Si falta algo que no se puede instalar, no producir: dejar el motivo en el resumen final.
 
 ## 1. Elegir el tema
-- **`topics/queue_v3.json`** (desde el 16/11/2026): las **100 mejores ideas** calificadas por viralidad extrema. Tomar el primer ítem con `status: "todo"`, **en el orden de la lista** (mejor primero, categorías alternadas). `queue.json` y `queue_v2.json` quedaron solo como historial.
+- **`topics/queue_v3.json`** (desde el 16/11/2026): las **100 mejores ideas** calificadas por viralidad extrema. Tomar el ítem `todo` del **nivel de puntaje más alto** (95–100, después 90–94, 85–89, 80–84) y, dentro del nivel, el primero en el orden de la lista. La lista ya viene ordenada así, así que en la práctica es el primer `todo`. `queue.json` y `queue_v2.json` quedaron solo como historial.
 - **Puntaje (regla de la dueña):** `score = 5 × viral + 5 × hook_power` (cada uno de 1 a 10). `viral` = curiosidad universal para EE. UU., ganas de compartir/comentar, que hable del espectador; `hook_power` = cuánto frena el scroll la frase de los primeros 1–2 s. Todo lo que está en la cola tiene ≥ 80.
 - **Usar el `hook` del ítem como frase de apertura** (pantalla + voz en los primeros 1–2 s). Se puede afilar, nunca suavizar. Cumplir la `note` si tiene.
-- **Temas nuevos:** solo entran si tienen `score ≥ 85` **y** superan al peor `todo` de la cola (ese pasa a `dropped_low_score`). Máximo 100 `todo`. Nunca producir un tema sin puntaje.
+- **Temas nuevos:** los busca cada semana `topics/SCOUT.md` (100 ideas). Solo entran con `score ≥ 90` **y** `hook_power ≥ 9` (ultra virales con hook extremo), al final de su nivel; si pasan de 100 `todo`, los de menor puntaje salen a `dropped_low_score`. Nunca producir un tema sin puntaje.
 - **Fuera siempre:** ideas que necesitan personajes con copyright o logos de marca para entenderse (ver `excluded_ip`), datos que no se pueden verificar y tragedias o crímenes como tema central.
 - Prefijos: `N` = lista "100 ideas" de la dueña, `H` = lista "50 hooks", `B`/`A`/`C`/`R` = bancos anteriores (`topics/BANK_100.txt`, `topics/BANK_2.txt`).
 - Línea editorial: **bizarro o sorprendente, real y muy compartible**.
