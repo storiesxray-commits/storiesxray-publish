@@ -42,14 +42,20 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Volumen final: −14 LUFS integrado, pico −1 dBTP (lo hace `mix.py`).
 - Efectos sincronizados con lo que pasa (golpe, burbujas, tic del reloj), nunca tapando una palabra clave.
 
-## 5b. Miniatura (obligatoria, define el clic)
-La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el encabezado del script). Se revisa `out/<id>/thumb_preview.jpg`: la versión chica (tamaño del feed) tiene que leerse en un segundo.
-- **Un solo momento visual**, el más impactante del video (la ola, el tanque que revienta, el objeto imposible), grande y entendible sin contexto. Cuadro limpio, sin subtítulos (`render.py clean`).
-- **Texto de 2 a 5 palabras, en mayúsculas, en 1 a 3 líneas**, que abra una pregunta que el video responde: contradicción ("IT WASN'T WATER"), número extremo ("7 MINUTES. NO AIR."), consecuencia ("HE KEPT DANCING"), pregunta ("WHO STOLE IT?"). No repetir el título palabra por palabra.
-- Una palabra clave en amarillo `#FFD60A` o rojo `#FF3B30`, el resto en blanco. Como mucho un recurso extra: círculo rojo, flecha roja o etiqueta (fecha, lugar, cifra).
-- **Clickbait honesto**: todo lo que promete la miniatura pasa en el video y es verdad. Nada de sangre, cuerpos ni heridas; nada de logos; nada de parecidos con personas reales. YouTube castiga las miniaturas engañosas y el público también (retención).
-- Nada importante en el 22 % de abajo (ahí YouTube pone el título) ni pegado a los bordes.
-- Variar entre videos: posición del texto (arriba o abajo), color de acento, recurso extra y encuadre. No usar la misma plantilla dos días seguidos.
+## 5b. Miniatura HYPER CLICKBAIT (obligatoria, define el clic)
+La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el encabezado del script). Objetivo: que nadie pueda pasarla sin tocar. Se revisa `out/<id>/thumb_preview.jpg`: la versión chica (tamaño del feed) tiene que leerse y dar ganas de tocar en medio segundo.
+- **El momento más extremo del video, enorme**: la ola, el tanque que revienta, el objeto imposible. Zoom 1.05–1.3 sobre la acción, cuadro limpio (`render.py clean`).
+- **Siempre los 3 ganchos visuales**: (1) círculo rojo `circle` sobre la cosa clave, (2) rayos de luz `rays` saliendo de ese mismo punto, (3) sello `badge` rojo inclinado con fecha, lugar o cifra ("BOSTON 1919", "7 MIN", "$1,000,000"). Flecha roja `arrow` solo si el círculo no alcanza.
+- **Texto de 2 a 4 palabras, gigante, inclinado (`tilt` −3 a −6), con brillo**, que haga explotar la curiosidad. Fórmulas que funcionan, rotando:
+  - contradicción con tachado: "IT WASN'T / ~~WATER~~" (`strike: true`);
+  - número brutal en caja roja: `{"text": "7 MINUTES", "box": "#FF3B30"}` + "NO AIR";
+  - consecuencia increíble: "HE KEPT / DANCING";
+  - pregunta directa: "WHO STOLE / HIS BODY?";
+  - "THEY / HID THIS" solo si en el video realmente hay algo oculto que se revela.
+- Una palabra o caja en amarillo `#FFD60A` o rojo `#FF3B30`, el resto en blanco con borde negro grueso.
+- **Clickbait honesto, sin excepción**: todo lo que promete la miniatura pasa en el video y es verdad. Nada de sangre, cuerpos ni heridas; nada de logos; nada de parecidos con personas reales. Una miniatura que engaña hace que la gente se vaya a los 2 segundos y YouTube deja de mostrar el video.
+- Nada importante en el 22 % de abajo (el script lo controla) ni pegado a los bordes.
+- **Probar al menos 3 variantes** (cuadro, texto, posición) y quedarse con la que más se lee en la vista chica. Variar entre días: color del brillo, lado del sello, texto arriba o abajo, tachado / caja / pregunta.
 - `handoff.py` exige `thumb.jpg` de 1080×1920, < 2 MB y hecho con `thumbnail.py`.
 
 ## 6. Revisión final (obligatoria)

@@ -4,8 +4,11 @@ Usage: python tools/thumbnail.py <video-id>
 Reads videos/<id>/meta.json -> "thumbnail":
   {
     "time": 1.5,                         # second of the video to use (rendered WITHOUT titles/captions)
-    "lines": ["IT WASN'T", "WATER"],     # 1-3 short lines, 2-5 words total, ALL CAPS
-    "colors": ["#FFFFFF", "#FFD60A"],    # one per line (white / yellow / red #FF3B30 / green #4DFF88)
+    "lines": ["IT WASN'T", {"text": "WATER", "strike": true}],  # 1-3 short lines, 2-5 words, ALL CAPS.
+                                         # A line can be a dict: text, color, box (bg colour), strike (red slash)
+    "colors": ["#FFFFFF", "#FFD60A"],    # default colour per line (white / yellow / red #FF3B30 / green #4DFF88)
+    "tilt": -4,                          # degrees for the text block (hype look); 0 = straight
+    "rays": [760, 520],                  # optional burst of light rays from this point (final px)
     "focus": [0.5, 0.45],                # crop centre (0-1) when zooming
     "zoom": 1.12,                        # 1.0-1.5
     "text_y": 210,                       # top of the text block (px); keep it in the upper half
@@ -39,8 +42,18 @@ cw, ch = W / z, H / z
 x0 = min(max(fx * W - cw / 2, 0), W - cw); y0 = min(max(fy * H - ch / 2, 0), H - ch)
 img = img.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.LANCZOS)
 # punchier grade
-img = ImageEnhance.Contrast(img).enhance(1.18)
-img = ImageEnhance.Color(img).enhance(1.32)
+img = ImageEnhance.Contrast(img).enhance(float(th.get("contrast", 1.28)))
+img = ImageEnhance.Color(img).enhance(float(th.get("saturation", 1.5)))
+img = ImageEnhance.Brightness(img).enhance(1.04)
+if th.get("rays"):   # burst of light from the key object: the classic "look here" thumbnail energy
+    import math
+    rx, ry = th["rays"]; ray = Image.new("L", (W, H), 0); rd = ImageDraw.Draw(ray)
+    for k in range(24):
+        a0 = k * 2 * math.pi / 24; a1 = a0 + math.pi / 30
+        rd.polygon([(rx, ry), (rx + 2600 * math.cos(a0), ry + 2600 * math.sin(a0)), (rx + 2600 * math.cos(a1), ry + 2600 * math.sin(a1))], fill=70)
+    fade = Image.radial_gradient("L").resize((W * 2, W * 2)).crop((W - rx, W - ry, W - rx + W, W - ry + H))
+    ray = Image.composite(Image.new("L", (W, H), 0), ray, fade.point(lambda v: min(255, int(v * 1.6))))
+    img = Image.composite(Image.new("RGB", (W, H), (255, 236, 160)), img, ray.filter(ImageFilter.GaussianBlur(6)))
 img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=90, threshold=2))
 # vignette + dark band behind the text
 shade = Image.new("L", (W, H), 0); d = ImageDraw.Draw(shade)
@@ -58,7 +71,9 @@ draw = ImageDraw.Draw(img)
 RED = (255, 59, 48)
 if th.get("circle"):
     cx, cy, r = th["circle"]
-    for wdt, col in ((34, (10, 10, 12)), (20, RED)):
+    glow = Image.new("L", (W, H), 0); ImageDraw.Draw(glow).ellipse([cx - r, cy - r, cx + r, cy + r], outline=255, width=60)
+    img.paste((255, 70, 50), (0, 0), glow.filter(ImageFilter.GaussianBlur(22)).point(lambda v: int(v * 0.7))); draw = ImageDraw.Draw(img)
+    for wdt, col in ((40, (255, 255, 255)), (30, (10, 10, 12)), (20, RED)):
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=col, width=wdt)
 if th.get("arrow"):
     (ax, ay), (bx, by) = th["arrow"]
@@ -72,30 +87,46 @@ if th.get("arrow"):
     draw.polygon(inner, fill=RED)
 
 # text: each line fitted to the 960 px safe width, Anton, thick stroke + shadow
-lines = [s.upper() for s in th["lines"]][:3]
-colors = th.get("colors") or ["#FFFFFF"] * len(lines)
+specs = [l if isinstance(l, dict) else {"text": l} for l in th["lines"]][:3]
+colors = th.get("colors") or ["#FFFFFF"] * len(specs)
+layer = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ld = ImageDraw.Draw(layer)
 y = text_y
-for i, line in enumerate(lines):
-    size = 330 if len(lines) == 1 else 270
+for i, sp in enumerate(specs):
+    line = str(sp["text"]).upper(); col = sp.get("color", colors[i % len(colors)])
+    size = 360 if len(specs) == 1 else 290
     while True:
         f = ImageFont.truetype(FONT, size)
-        bb = draw.textbbox((0, 0), line, font=f, stroke_width=16)
-        if bb[2] - bb[0] <= 960 or size <= 90: break
+        bb = ld.textbbox((0, 0), line, font=f, stroke_width=18)
+        if bb[2] - bb[0] <= (900 if sp.get("box") else 980) or size <= 90: break
         size -= 6
     wpx, hpx = bb[2] - bb[0], bb[3] - bb[1]
     x = (W - wpx) // 2 - bb[0]
-    draw.text((x + 10, y + 12 - bb[1]), line, font=f, fill=(0, 0, 0), stroke_width=16, stroke_fill=(0, 0, 0))
-    draw.text((x, y - bb[1]), line, font=f, fill=colors[i % len(colors)], stroke_width=16, stroke_fill=(10, 10, 12))
-    y += hpx + 24
+    if sp.get("box"):
+        ld.rounded_rectangle([x + bb[0] - 34, y - 22, x + bb[2] + 34, y + hpx + 22], 28, fill=sp["box"], outline=(10, 10, 12, 255), width=12)
+    ld.text((x + 14, y + 16 - bb[1]), line, font=f, fill=(0, 0, 0, 255), stroke_width=18, stroke_fill=(0, 0, 0, 255))
+    ld.text((x, y - bb[1]), line, font=f, fill=col, stroke_width=18, stroke_fill=(10, 10, 12, 255))
+    if sp.get("strike"):
+        ld.line([(x + bb[0] - 20, y + hpx * 0.72), (x + bb[2] + 20, y + hpx * 0.30)], fill=(10, 10, 12, 255), width=58)
+        ld.line([(x + bb[0] - 14, y + hpx * 0.72), (x + bb[2] + 14, y + hpx * 0.30)], fill=RED + (255,), width=36)
+    y += hpx + (70 if sp.get("box") else 30)
 if y > H * 0.78:
     sys.exit(f"text block reaches {y}px: the bottom 22 % is covered by YouTube's title; move it up or shorten it")
+tilt = float(th.get("tilt", -4))
+if tilt:
+    layer = layer.rotate(-tilt, resample=Image.BICUBIC, center=(W // 2, text_y + (y - text_y) // 2))
+glowmask = layer.split()[3].filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(18)).point(lambda v: int(v * 0.55))
+img.paste(tuple(int(th.get("glow", "#FFD60A").lstrip("#")[k:k + 2], 16) for k in (0, 2, 4)), (0, 0), glowmask)
+img.paste(layer, (0, 0), layer); draw = ImageDraw.Draw(img)
 if th.get("badge"):
-    f = ImageFont.truetype(FONT, 110); t = str(th["badge"]).upper()
-    bb = draw.textbbox((0, 0), t, font=f); bw, bh = bb[2] - bb[0] + 70, bb[3] - bb[1] + 50
-    bx = 70; by = int(th.get("badge_y", 170 if text_y > 800 else int(H * 0.70) - bh))
-    draw.rounded_rectangle([bx + 8, by + 10, bx + bw + 8, by + bh + 10], 26, fill=(0, 0, 0))
-    draw.rounded_rectangle([bx, by, bx + bw, by + bh], 26, fill=(255, 214, 10), outline=(10, 10, 12), width=8)
-    draw.text((bx + 35 - bb[0], by + 25 - bb[1]), t, font=f, fill=(10, 10, 12))
+    f = ImageFont.truetype(FONT, 104); t = str(th["badge"]).upper()
+    bb = draw.textbbox((0, 0), t, font=f); bw, bh = bb[2] - bb[0] + 80, bb[3] - bb[1] + 56
+    tag = Image.new("RGBA", (bw + 30, bh + 30), (0, 0, 0, 0)); td = ImageDraw.Draw(tag)
+    td.rounded_rectangle([10, 14, bw + 10, bh + 14], 24, fill=(0, 0, 0, 255))
+    td.rounded_rectangle([0, 0, bw, bh], 24, fill=th.get("badge_color", "#FF3B30"), outline=(255, 255, 255, 255), width=9)
+    td.text((40 - bb[0], 28 - bb[1]), t, font=f, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(10, 10, 12, 255))
+    tag = tag.rotate(float(th.get("badge_tilt", 6)), resample=Image.BICUBIC, expand=True)
+    bx = int(th.get("badge_x", 60)); by = int(th.get("badge_y", 150 if text_y > 800 else int(H * 0.70) - bh))
+    img.paste(tag, (bx, by), tag); draw = ImageDraw.Draw(img)
 
 q = 92
 while True:

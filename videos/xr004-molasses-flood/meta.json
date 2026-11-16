@@ -49,23 +49,40 @@
     }
   ],
   "thumbnail": {
-    "time": 26.5,
-    "lines": [
-      "IT WASN'T",
-      "WATER"
-    ],
-    "colors": [
-      "#FFFFFF",
-      "#FFD60A"
-    ],
+    "time": 24.0,
     "focus": [
-      0.38,
-      0.42
+      0.5,
+      0.38
     ],
-    "zoom": 1.2,
+    "zoom": 1.08,
+    "lines": [
+      {
+        "text": "IT WASN'T",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "WATER",
+        "color": "#FFFFFF",
+        "strike": true
+      }
+    ],
     "text_y": 880,
     "text_h": 560,
-    "band": 150,
-    "badge": "BOSTON 1919"
+    "band": 120,
+    "tilt": -4,
+    "glow": "#FFD60A",
+    "rays": [
+      560,
+      500
+    ],
+    "circle": [
+      560,
+      500,
+      300
+    ],
+    "badge": "BOSTON 1919",
+    "badge_tilt": -5,
+    "badge_x": 40,
+    "badge_y": 110
   }
 }
