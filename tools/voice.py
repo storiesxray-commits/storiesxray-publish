@@ -8,12 +8,12 @@ VID = sys.argv[1]; cfg = json.load(open(f"{ROOT}/videos/{VID}/script.json"))
 OUT = f"{ROOT}/out/{VID}"; os.makedirs(OUT, exist_ok=True)
 k = Kokoro(f"{ROOT}/models/kokoro-v1.0.onnx", f"{ROOT}/models/voices-v1.0.bin")
 VOICE = cfg.get("voice", "am_michael"); S = [tuple(x) for x in cfg["sentences"]]
-sr=24000; out=[]; t=0.15; out.append(np.zeros(int(sr*t),dtype=np.float32)); meta=[]
+sr=24000; out=[]; t=0.03; out.append(np.zeros(int(sr*t),dtype=np.float32)); meta=[]  # voice starts almost at frame 0 (opening rule 16/11/2026)
 def trim(a,th=0.012):
     e=np.abs(a); idx=np.where(e>th)[0]
     return a[max(0,idx[0]-int(.02*sr)):min(len(a),idx[-1]+int(.06*sr))]
 for i,(txt,pause) in enumerate(S):
-    a,_=k.create(txt, voice=VOICE, speed=cfg.get("speed", 1.04), lang=cfg.get("lang", "en-us")); a=trim(a.astype(np.float32))
+    a,_=k.create(txt, voice=VOICE, speed=cfg.get("speed", 1.08), lang=cfg.get("lang", "en-us")); a=trim(a.astype(np.float32))
     d=len(a)/sr
     # word timing: anchor punctuation to real pauses in the audio, spread the rest by letters
     words=txt.split(); n=len(words)

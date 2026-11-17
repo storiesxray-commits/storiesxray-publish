@@ -9,8 +9,8 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Lesiones o temas fuertes: solo en esquema de rayos X o corte, nunca gráfico.
 
 ## 2. Guion
-- Gancho en los primeros 2 segundos, que contradiga lo que todos creen ("It's not the water").
-- 40 a 50 segundos. Nunca más de 59.
+- Gancho completo antes de 1,5 s, primera frase ≤ 7 palabras, con el dato más fuerte (ver `topics/AUTOPILOT.md` §2b, regla del 16/11/2026: el canal pierde ~40 % en el swipe).
+- 28 a 40 segundos. Nunca más de 59.
 - Una idea por frase. Frases cortas para que los subtítulos no se amontonen.
 - Final en bucle: la última imagen vuelve a la primera para que el video se repita sin corte.
 - Revisar cómo pronuncia la voz los nombres propios (`python -c` con `k.tokenizer.phonemize`). Si suena mal, escribirlo como se pronuncia.

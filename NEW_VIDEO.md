@@ -2,7 +2,7 @@
 
 1. **Tema.** El siguiente del banco del manual (o uno nuevo con gancho fuerte y pocos personajes). Verificar los datos con búsqueda web.
 2. **Carpeta.** Copiar la de un video parecido: `cp -r videos/xr003-fingers-wrinkle videos/xr004-<tema>`.
-3. **`script.json`.** Frases y pausa después de cada una (segundos). 40–50 s en total.
+3. **`script.json`.** Frases y pausa después de cada una (segundos). 28–40 s en total. Primera frase ≤ 7 palabras con el dato más fuerte (AUTOPILOT §2b).
 4. **Voz.** `python tools/voice.py xr004-<tema>`. Revisar la duración y que no aparezca el aviso "fell back".
 5. **`scenes.js`.** Una función por escena, que devuelve `{ scene, camera, update(t, d), ui?(t, d) }`. Reutilizar lo del motor (`engine/engine.js`: `Subject`, `M`, `fresnel`, `halo`, `lights`, `stars`, `earth`, `shake`…) y las escenas de los otros videos.
 6. **`shots.js`.** La lista de planos: `[id, inicio, () => S.escena(), { html | fn, t0, pop | popFrac }]`. Usar `st(frase)` y `wd(frase, palabra)` para que cada plano entre justo con la palabra. Lista `KEY` de palabras en amarillo.

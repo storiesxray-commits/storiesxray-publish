@@ -58,11 +58,13 @@ window.renderAt = (T) => {
   document.getElementById('dark').style.opacity = ui.vig || 0; document.getElementById('sep').style.opacity = ui.sepia || 0;
   document.getElementById('strike').style.transform = `rotate(-4deg) scaleX(${ui.strike || 0})`;
   if (sh.title && t >= sh.title.t0) { let t0 = sh.title.t0; for (const pt of (sh.title.pop || []).concat((sh.title.popFrac || []).map(p => p * d))) { if (t >= pt) t0 = pt; }
-    const k = (t - t0) / 0.28; const html = sh.title.fn ? sh.title.fn(t, d) : sh.title.html; titleEl.innerHTML = html; titleEl.style.opacity = html ? 1 : 0; for (const sp of titleEl.querySelectorAll('span')) fit(sp, 800);
+    // Opening rule (16/11/2026): at frame 0 the hook title is already full size, no pop-in from small.
+    const k = (sh.start === 0 && t0 === 0) ? 1 : (t - t0) / 0.28; const html = sh.title.fn ? sh.title.fn(t, d) : sh.title.html; titleEl.innerHTML = html; titleEl.style.opacity = html ? 1 : 0; for (const sp of titleEl.querySelectorAll('span')) fit(sp, 800);
     titleEl.style.transform = `scale(${0.55 + 0.45 * back(k)}) rotate(${-2 + 0.6 * Math.sin(t * 2)}deg)`; }
   else titleEl.style.opacity = 0;
-  const ch = chunks.find(c => T >= c.s - 0.03 && T < c.e - 0.03);
-  if (ch) { const k = (T - ch.s + 0.03) / 0.12;
+  // Opening rule (16/11/2026): the first caption is on screen from frame 0 (many people watch muted).
+  const ch = chunks.find(c => T >= c.s - 0.03 && T < c.e - 0.03) || (chunks.length && T < chunks[0].s ? chunks[0] : null);
+  if (ch) { const k = (T < ch.s) ? 1 : (T - ch.s + 0.03) / 0.12;
     capEl.innerHTML = ch.words.map(w => { const b = w.replace(/[.,:]/g, ''); return KEY.has(b.toLowerCase()) ? `<span class="y">${b}</span>` : b; }).join(' ');
     capEl.style.fontSize = ''; fit(capEl, 780); capEl.style.opacity = 1; capEl.style.transform = `scale(${0.82 + 0.18 * back(k)})`; }
   else capEl.style.opacity = 0;

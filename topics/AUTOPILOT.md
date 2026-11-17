@@ -25,11 +25,21 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` en `queue_v3.json` con `note` y pasar al siguiente.
 - Las fuentes (URLs https) van en `meta.json` → `sources` y también en la descripción.
 
+## 2b. Apertura anti-swipe (regla de la dueña, 16/11/2026 — OBLIGATORIA)
+Dato del canal (YouTube Studio, 16/11): **solo 58–62 % "Stayed to watch"** en todos los Shorts; la prueba inicial corta en ~1.200 vistas. Objetivo: **≥ 70 %**. Todo video nuevo cumple:
+- **Primera frase de 7 palabras o menos, y el dato más fuerte dicho completo antes de 1,5 s.** Nada de preparación ni preguntas genéricas ("Do you want to live to 100?" ✗ → "She smoked until she was 117." ✓). El giro va en la frase 1, no en la 2.
+- **Frame 0 = la imagen más extrema del video ya en movimiento** (el fuego, la ola, el objeto imposible), con el sujeto grande. Nunca un plano general tranquilo, una portada o un fundido.
+- **Título del gancho a tamaño completo y primer subtítulo visibles desde el frame 0** (lo hace `player.html` solo). La voz arranca a los 0,03 s (`voice.py`).
+- **El título de pantalla del plano 1 dice lo mismo que la voz**, en 2–5 palabras grandes; no un rótulo de tema ("THE HOT COFFEE LAWSUIT" ✗).
+- **Duración 28–40 s** (antes 40–50): más corto = más % reproducido. Cada 3–5 s un dato nuevo, un giro o un cambio de plano.
+- **Voz (prueba A/B):** ids impares `af_heart`, ids pares `am_michael`; `speed` 1.08–1.12. Anotar en `meta.json` → `"experiment": {"opening": "v2", "voice": "<voz>"}`.
+- Antes de renderizar, revisar `render.py stills` en 0.0, 0.5 y 1.0 s: en el frame 0 ya se entiende de qué va y por qué no hay que deslizar. Si no, rehacer el plano 1.
+
 ## 3. Reglas visuales y de contenido
 - Personas reales: figuras genéricas del motor (sin intentar parecido físico, sin fotos). Nombres en texto sí.
 - Nada de logos, marcas gráficas, tipografías de marca ni personajes con copyright (Mickey, etc.): usar objetos genéricos y el nombre en texto.
 - Muerte, heridas o violencia: no gráficas, simbólicas (siluetas, contadores, mapas). Nada de sangre ni cuerpos.
-- Guion en inglés de EE. UU., original (sin citar textos de prensa), 40–50 s, una idea por oración (así `voice.py` corta bien las pausas).
+- Guion en inglés de EE. UU., original (sin citar textos de prensa), 28–40 s (ver §2b), una idea por oración (así `voice.py` corta bien las pausas).
 - `meta.json`: bloque `thumbnail` (ver `tools/thumbnail.py`), `title` ≤ 100 caracteres y sin `<` ni `>`, `description`, `tags`, `series`, `caption_instagram`, `sources`, `platforms`, `made_for_kids: false`, `altered_or_synthetic_realistic: false`.
 
 ## 3b. Público y monetización
@@ -42,7 +52,7 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 La política de YouTube sobre contenido "inauthentic" (producido en masa o repetitivo) es el riesgo real para la monetización, no el horario de subida. Cada video tiene que verse hecho a mano. Comparalo con los 3 anteriores (`videos/`, `publish/*/metadata.json`) y cambiá:
 - **Estructura del título**: pregunta, afirmación, número, "The day…", "Why…", "He…". Sin repetir la fórmula del anterior. Emojis: a veces uno, a veces ninguno.
 - **Tipo de gancho**: dato imposible, pregunta, objeto misterioso, cuenta regresiva, contradicción.
-- **Duración** entre 32 y 55 s (nunca la misma que el anterior ± 2 s).
+- **Duración** entre 28 y 40 s (nunca la misma que el anterior ± 2 s).
 - **Paleta, escenario, ángulos de cámara y clima musical** (`sound.py`).
 - **Descripción**: alternar formatos (una línea + fuentes; mini lista de datos + fuentes; pregunta al público + fuentes). Siempre con fuentes, nunca el mismo texto fijo.
 - **Hashtags**: 3 a 5, distintos según el tema. `#shorts` no siempre.
