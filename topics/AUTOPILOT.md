@@ -25,6 +25,9 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Si un dato central no se puede confirmar con al menos dos fuentes serias, marcar el tema `status: "skipped"` en `queue_v3.json` con `note` y pasar al siguiente.
 - Las fuentes (URLs https) van en `meta.json` → `sources` y también en la descripción.
 
+## 2a. PLAYBOOK (obligatorio)
+Antes de escribir el guion, leer `topics/PLAYBOOK.md`: tiene las reglas ganadoras y el experimento activo que fija el optimizador diario (voz, duración, tipo de gancho, ritmo, etc.). Si contradice algo de este archivo, gana el PLAYBOOK. Anotar en `meta.json` → `experiment` qué brazo del experimento activo usa el video.
+
 ## 2b. Apertura anti-swipe (regla de la dueña, 16/11/2026 — OBLIGATORIA)
 Dato del canal (YouTube Studio, 16/11): **solo 58–62 % "Stayed to watch"** en todos los Shorts; la prueba inicial corta en ~1.200 vistas. Objetivo: **≥ 70 %**. Todo video nuevo cumple:
 - **Primera frase de 7 palabras o menos, y el dato más fuerte dicho completo antes de 1,5 s.** Nada de preparación ni preguntas genéricas ("Do you want to live to 100?" ✗ → "She smoked until she was 117." ✓). El giro va en la frase 1, no en la 2.
