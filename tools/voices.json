@@ -7,7 +7,8 @@
  "rotation": [
   "xr1",
   "xr2",
-  "xr3"
+  "xr3",
+  "xr4"
  ],
  "voices": {
   "xr1": {
@@ -27,6 +28,13 @@
    "voice_id": "H3R91oDmjJogG2a1GF6v",
    "style": "Deep South man, late 50s, gravelly porch storyteller: slow raspy whispers, booming laughs and shouts",
    "stability": 0.5
+  },
+  "xr4": {
+   "name": "XR Narrator 4 - Absolute Lunatic",
+   "voice_id": "q04OvHvMzr6ydLxp7H7g",
+   "style": "American man, early 40s, the most theatrical: booming gleeful roars to tiny trembling whispers, manic giggles, stretched words (designed 17/11 by XR-08)",
+   "stability": 0.0
   }
- }
+ },
+ "make_new_voice_scenario_id": 7068664
 }
