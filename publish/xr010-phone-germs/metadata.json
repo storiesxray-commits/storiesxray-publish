@@ -1,0 +1,137 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Your Phone Is Dirtier Than a Toilet Seat",
+  "description": "When did you last clean your phone? 🤢\n\n• University of Arizona microbiologist Charles Gerba found phones can carry about 10x more bacteria than most toilet seats.\n• Why: toilet seats get cleaned all the time; phones almost never.\n• A CU Boulder laser study showed a lidless public toilet flush sends an invisible aerosol plume up to about 5 feet high within 8 seconds.\n• Good news: most microbes on a phone are harmless. A wipe with a microfiber cloth helps.\n\nSources:\n- LiveScience (2012), Why your cellphone has more bacteria than a toilet seat: https://www.livescience.com/22822-cell-phones-germs.html\n- TIME (2017), Your phone is covered in germs: https://time.com/4908654/cell-phone-bacteria/\n- Colorado Sun (2022), CU Boulder toilet plume study: https://coloradosun.com/2022/12/09/public-toilets-bathrooms-flushing-bacteria-public-health/\n- Down To Earth (2022), the plume captured with lasers: https://www.downtoearth.org.in/health/toilets-spew-invisible-aerosol-plumes-with-every-flush-here-s-the-proof-captured-by-high-powered-lasers-86452\n\n#germs #phone #science #lifehacks",
+  "tags": [
+    "phone dirtier than toilet seat",
+    "phone bacteria",
+    "germs on phone",
+    "clean your phone",
+    "toilet flush plume",
+    "toilet aerosol",
+    "using phone in bathroom",
+    "gross facts",
+    "science facts",
+    "microbiology",
+    "hygiene",
+    "animation"
+  ],
+  "pinned_comment": "Be honest: when did you last clean your phone? 🤢📱",
+  "series": "Your Body",
+  "caption_instagram": "Your phone? Dirtier than a toilet seat. 🤢\n\nPhones can carry about 10x more bacteria than most toilet seats, because toilet seats get cleaned and phones almost never do. And one flush can spray an invisible plume up to 5 feet high in 8 seconds...\n\nWhen did YOU last clean yours?\n\nFull story on YouTube: @StoriesXray\n\n#germs #phone #science #lifehacks",
+  "sources": [
+    {
+      "title": "LiveScience (30 Aug 2012): Why your cellphone has more bacteria than a toilet seat (Charles Gerba, University of Arizona)",
+      "url": "https://www.livescience.com/22822-cell-phones-germs.html"
+    },
+    {
+      "title": "TIME (2017): Your phone is covered in germs (University of Arizona 10x finding; most microbes harmless)",
+      "url": "https://time.com/4908654/cell-phone-bacteria/"
+    },
+    {
+      "title": "Colorado Sun (9 Dec 2022): CU Boulder lasers show toilet flush plume",
+      "url": "https://coloradosun.com/2022/12/09/public-toilets-bathrooms-flushing-bacteria-public-health/"
+    },
+    {
+      "title": "Down To Earth (8 Dec 2022): Toilets spew invisible aerosol plumes with every flush (Crimaldi et al., Scientific Reports)",
+      "url": "https://www.downtoearth.org.in/health/toilets-spew-invisible-aerosol-plumes-with-every-flush-here-s-the-proof-captured-by-high-powered-lasers-86452"
+    }
+  ],
+  "queue": {
+    "file": "owner request 17/11/2026 (option 5 of 10)",
+    "score": 100
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr4"
+  },
+  "thumbnail": {
+    "time": 1.0,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      80,
+      610,
+      520,
+      1440
+    ],
+    "circle": [
+      300,
+      1060,
+      205
+    ],
+    "rays": [
+      300,
+      1060
+    ],
+    "tilt": -5,
+    "badge": "10X GERMS",
+    "badge_x": 640,
+    "badge_y": 640,
+    "text_y": 140,
+    "lines": [
+      {
+        "text": "DIRTIER THAN",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "A TOILET",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#9DFF3A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "10X MORE",
+            "color": "#FFD60A"
+          },
+          {
+            "text": "BACTERIA",
+            "color": "#FFFFFF"
+          }
+        ],
+        "badge": "YOUR PHONE",
+        "glow": "#FF4FA3"
+      },
+      {
+        "lines": [
+          {
+            "text": "CLEAN YOUR",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "PHONE!",
+            "box": "#FF3B30"
+          }
+        ],
+        "badge": "10X GERMS",
+        "glow": "#22D3EE"
+      }
+    ],
+    "pick": 1
+  },
+  "social_thumbnail": {
+    "zoom": 1.0,
+    "text_y": 280,
+    "badge_y": 700
+  },
+  "id": "xr010-phone-germs",
+  "duration_s": 30.13,
+  "status": "ready",
+  "publish_time_local": "12:41"
+}

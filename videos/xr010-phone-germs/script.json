@@ -1,0 +1,18 @@
+{
+ "lang": "en-us",
+ "voice": "xr4",
+ "sentences": [
+  ["Your phone?", 0.0],
+  ["Dirtier than a toilet seat!", 0.15],
+  ["[gasps] Scientists at the University of Arizona checked.", 0.05],
+  ["Ten times more bacteria than most toilet seats!", 0.25],
+  ["Why? [laughs] Toilet seats get cleaned.", 0.1],
+  ["Your phone? Almost never.", 0.25],
+  ["And you take it to the bathroom.", 0.15],
+  ["One flush can shoot an invisible spray almost five feet high.", 0.05],
+  ["In eight seconds!", 0.2],
+  ["Then your phone goes right back to your face.", 0.25],
+  ["Good news? Most of those germs are harmless.", 0.2],
+  ["Still... [whispers] when did you last clean yours?", 0.45]
+ ]
+}

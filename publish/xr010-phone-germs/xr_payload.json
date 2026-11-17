@@ -1,0 +1,59 @@
+{
+  "content_id": "xr-010",
+  "repo_id": "xr010-phone-germs",
+  "sha256": "8662a1049981450665096242064531e797176d98a348a36d1347ff81cf3b8f42",
+  "file_size_bytes": 17050211,
+  "duration_seconds": 30.133,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4403394,
+  "faststart": true,
+  "title_youtube": "Your Phone Is Dirtier Than a Toilet Seat",
+  "description_youtube": "When did you last clean your phone? 🤢\n\n• University of Arizona microbiologist Charles Gerba found phones can carry about 10x more bacteria than most toilet seats.\n• Why: toilet seats get cleaned all the time; phones almost never.\n• A CU Boulder laser study showed a lidless public toilet flush sends an invisible aerosol plume up to about 5 feet high within 8 seconds.\n• Good news: most microbes on a phone are harmless. A wipe with a microfiber cloth helps.\n\nSources:\n- LiveScience (2012), Why your cellphone has more bacteria than a toilet seat: https://www.livescience.com/22822-cell-phones-germs.html\n- TIME (2017), Your phone is covered in germs: https://time.com/4908654/cell-phone-bacteria/\n- Colorado Sun (2022), CU Boulder toilet plume study: https://coloradosun.com/2022/12/09/public-toilets-bathrooms-flushing-bacteria-public-health/\n- Down To Earth (2022), the plume captured with lasers: https://www.downtoearth.org.in/health/toilets-spew-invisible-aerosol-plumes-with-every-flush-here-s-the-proof-captured-by-high-powered-lasers-86452\n\n#germs #phone #science #lifehacks",
+  "caption_instagram": "Your phone? Dirtier than a toilet seat. 🤢\n\nPhones can carry about 10x more bacteria than most toilet seats, because toilet seats get cleaned and phones almost never do. And one flush can spray an invisible plume up to 5 feet high in 8 seconds...\n\nWhen did YOU last clean yours?\n\nFull story on YouTube: @StoriesXray\n\n#germs #phone #science #lifehacks",
+  "tags": [
+    "phone dirtier than toilet seat",
+    "phone bacteria",
+    "germs on phone",
+    "clean your phone",
+    "toilet flush plume",
+    "toilet aerosol",
+    "using phone in bathroom",
+    "gross facts",
+    "science facts",
+    "microbiology",
+    "hygiene",
+    "animation"
+  ],
+  "series": "Your Body",
+  "sources": [
+    {
+      "title": "LiveScience (30 Aug 2012): Why your cellphone has more bacteria than a toilet seat (Charles Gerba, University of Arizona)",
+      "url": "https://www.livescience.com/22822-cell-phones-germs.html"
+    },
+    {
+      "title": "TIME (2017): Your phone is covered in germs (University of Arizona 10x finding; most microbes harmless)",
+      "url": "https://time.com/4908654/cell-phone-bacteria/"
+    },
+    {
+      "title": "Colorado Sun (9 Dec 2022): CU Boulder lasers show toilet flush plume",
+      "url": "https://coloradosun.com/2022/12/09/public-toilets-bathrooms-flushing-bacteria-public-health/"
+    },
+    {
+      "title": "Down To Earth (8 Dec 2022): Toilets spew invisible aerosol plumes with every flush (Crimaldi et al., Scientific Reports)",
+      "url": "https://www.downtoearth.org.in/health/toilets-spew-invisible-aerosol-plumes-with-every-flush-here-s-the-proof-captured-by-high-powered-lasers-86452"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "12:41",
+  "checks_failed": []
+}
