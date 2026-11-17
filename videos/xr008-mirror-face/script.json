@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["You've never seen your real face.", 0.05],
+  ["Not the way everyone else sees it.", 0.3],
+  ["Every mirror flips you left to right.", 0.15],
+  ["And almost every face is a little lopsided.", 0.2],
+  ["So the face you know... [whispers] is backwards.", 0.35],
+  ["In 1977, scientists showed people their real face and a flipped one.", 0.15],
+  ["Most picked the flipped one.", 0.2],
+  ["Their friends? [laughs] Picked the real one.", 0.3],
+  ["We like the face we see most.", 0.3],
+  ["Another study? People picked a prettier, edited version as their real face.", 0.3],
+  ["So that photo you can't stand? [gasps] That's the face your friends prefer.", 0.45]
+ ]
+}

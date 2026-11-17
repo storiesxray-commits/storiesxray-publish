@@ -37,6 +37,7 @@ publish/<id>/         lo que Make publica
 | xr005-pepsi-fire | El comercial de 1984 en que se le prendió fuego el pelo a Michael Jackson | `ready` (piloto automático, 16/11/2026) |
 | xr006-calment-122 | Jeanne Calment: vivió 122 años y el abogado que le pagó 30 años murió primero (extra pedido por la dueña) | `ready` (publicación inmediata, 16/11/2026) |
 | xr007-your-face | Dobles: ¿cuántos de 8.000 millones tienen tu cara? (N01, puntaje 100; voz ElevenLabs xr4) | `ready` (piloto automático, 17/11/2026) |
+| xr008-mirror-face | Nunca viste tu cara real: el espejo te invierte (N08, puntaje 100; voz ElevenLabs xr1; extra pedido por la dueña) | `ready` (17/11/2026) |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).

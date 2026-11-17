@@ -1,0 +1,48 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": ["youtube", "instagram", "facebook"],
+  "title": "The Face in Your Mirror Is Backwards",
+  "description": "Do you like your mirror face better than your photos? There's a reason.\n\nA mirror flips you left to right, and almost every face is a little asymmetrical, so the face you know best is a reversed one. In a classic 1977 study, people preferred a mirror-reversed photo of themselves, while their friends preferred the true image: we like what we see most (the mere-exposure effect). In a 2008 study, people even picked an attractively edited version of their face as their own.\n\nWhich one do you trust: mirror or camera? 👇\n\nSources:\n- Mita, Dermer & Knight (1977), Reversed facial images and the mere-exposure hypothesis, Journal of Personality and Social Psychology 35(8):597-601: https://doi.org/10.1037/0022-3514.35.8.597\n- Amestoy, Bouvard & Cazalets (2010), Frontiers in Psychology (summary of the 1977 results): https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2010.00039/full\n- The Atlantic (2014), via University of Wisconsin course page: https://internet.psych.wisc.edu/wp-content/uploads/532-Master/532-UnitPages/Unit-12/Feeney_Atlantic_2014.pdf\n- Popular Science, The reason your face looks wrong in photos: https://www.popsci.com/science/why-look-different-in-mirror-photos/\n\n#mirror #psychology #selfie",
+  "tags": ["mirror vs camera", "why do i look different in photos", "mirror image", "flipped face", "mere exposure effect", "selfie", "psychology facts", "face asymmetry", "how others see you", "mind tricks", "science facts", "animation"],
+  "pinned_comment": "Be honest: do you look better in the mirror or in photos? 🪞📸",
+  "series": "Mind Tricks",
+  "caption_instagram": "You've never seen your real face. 🪞\n\nMirrors flip you left to right. In a 1977 study, people preferred their flipped face... their friends preferred the real one.\n\nFull story on YouTube: @StoriesXray\n\n#mirror #psychology #selfie",
+  "sources": [
+    {"title": "Mita, Dermer & Knight 1977, Reversed facial images and the mere-exposure hypothesis, JPSP 35(8):597-601", "url": "https://doi.org/10.1037/0022-3514.35.8.597"},
+    {"title": "Amestoy et al. 2010, Left-right facial orientation of familiar faces, Frontiers in Psychology 1:39", "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2010.00039/full"},
+    {"title": "The Atlantic 2014 (Feeney), course copy at University of Wisconsin", "url": "https://internet.psych.wisc.edu/wp-content/uploads/532-Master/532-UnitPages/Unit-12/Feeney_Atlantic_2014.pdf"},
+    {"title": "Popular Science: The reason your face looks wrong in photos", "url": "https://www.popsci.com/science/why-look-different-in-mirror-photos/"}
+  ],
+  "notes": "Hero face = generic engine bust with deliberate asymmetry (mole, one brow/eye higher, crooked smile) so the flip is visible; no likeness. Facts: mirror reverses left-right; nearly every face has subtle asymmetry (PopSci). Mita, Dermer & Knight 1977 (JPSP 35:597): participants significantly preferred the mirror image of their own face, friends preferred the true image (Frontiers 2010 summary; The Atlantic 2014). 'Most picked the flipped one' = significant group preference. Epley & Whitchurch 2008 (PSPB): faces morphed toward attractive/unattractive; people most often picked an attractively morphed version (about 20% toward attractive) as their own (The Atlantic 2014; PopSci). Lineup labels REAL/EDITED/EDITED++ are illustrative. Hook sharpened from the queue line 'You've never seen your own face the way other people do.' to 'You've never seen your real face. Not the way everyone else sees it.' (first sentence <= 7 words).",
+  "queue": {"file": "topics/queue_v3.json", "id": "N08", "score": 100, "hook": "You've never seen your own face the way other people do."},
+  "experiment": {"opening": "v2", "voice": "xr1"},
+  "thumbnail": {
+    "time": 0.5,
+    "zoom": 1.1,
+    "focus": [0.5, 0.45],
+    "protect": [300, 540, 760, 1060],
+    "circle": [530, 800, 270],
+    "rays": [530, 800],
+    "tilt": -5,
+    "badge": "1977 STUDY",
+    "badge_x": 560,
+    "text_y": 1100,
+    "lines": [{"text": "NOT YOUR", "color": "#FFFFFF"}, {"text": "REAL FACE", "color": "#FFD60A"}],
+    "glow": "#FF3B30",
+    "variants": [
+      {},
+      {"lines": [{"text": "IT'S", "color": "#FFFFFF"}, {"text": "FLIPPED", "box": "#FF3B30"}], "badge": "MIRROR", "glow": "#FFD60A", "badge_x": 110},
+      {"lines": [{"text": "FRIENDS", "color": "#FFFFFF"}, {"text": "SEE THIS", "color": "#4DFF88"}], "badge": "1977 STUDY", "glow": "#22D3EE", "text_y": 140, "badge_y": 1200}
+    ],
+    "pick": 0
+  },
+  "social_thumbnail": {
+    "zoom": 1.1,
+    "text_y": 1100,
+    "badge_y": 300
+  }
+}
