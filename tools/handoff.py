@@ -80,6 +80,13 @@ publish_time = meta.get("publish_time_local") if len(str(meta.get("publish_time_
 if meta.get("publish_time_local") != publish_time:
     meta["publish_time_local"] = publish_time
     json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
+# Owner rule (17/11/2026): every video goes out on YouTube, Instagram AND Facebook at the same time (or very close).
+# XR-03 posts the Reel at the YouTube publish time, so the three targets are always forced here.
+ALL = ["youtube", "instagram", "facebook"]
+targets = ALL + [x for x in meta.get("platforms", []) if x not in ALL]
+if meta.get("platforms") != targets:
+    meta["platforms"] = targets
+    json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
 payload = {
     "content_id": f"xr-{num_id}", "repo_id": VID, "sha256": h.hexdigest(),
     "file_size_bytes": os.path.getsize(mp4), "duration_seconds": round(float(pr["format"]["duration"]), 3),
@@ -88,7 +95,7 @@ payload = {
     "title_youtube": meta["title"], "description_youtube": meta["description"], "caption_instagram": meta.get("caption_instagram", ""),
     "tags": meta.get("tags", []), "series": meta.get("series", ""), "sources": meta.get("sources", []),
     "made_for_kids": bool(meta.get("made_for_kids", False)), "contains_synthetic_media": bool(meta.get("altered_or_synthetic_realistic", False)),
-    "publishing_targets": meta.get("platforms", ["youtube", "instagram"]), "publish_time_local": publish_time, "checks_failed": errs,
+    "publishing_targets": targets, "publish_time_local": publish_time, "checks_failed": errs,
 }
 json.dump(payload, open(f"{P}/xr_payload.json", "w"), indent=2, ensure_ascii=False)
 print(("OK" if not errs else "PROBLEMS: " + ", ".join(errs)), f"{P}/xr_payload.json", payload["sha256"][:16])
