@@ -1,6 +1,6 @@
 # Experimentos de retención — Stories X-Ray
 
-YouTube no expone "Stayed to watch" por API: la dueña pasa las capturas de YouTube Studio (Analytics → video → Engagement) y se cargan acá.
+Fuente automática (desde 16/11/2026): escenario de Make XR-06-YT-ANALYTICS-REPORT (7068368) → data store 202381, `global.bridge_last` (YouTube Analytics API, solo lectura, conexión 12381578). Retención inicial ≈ `engagedViews / views` (equivalente a "Stayed to watch"); también `averageViewPercentage`. La tarea semanal de los lunes la carga acá. YouTube Analytics tarda 1–3 días en tener datos.
 
 ## Línea base (antes del cambio, datos del 16/11/2026)
 | Video | Apertura | Voz | Stayed to watch | Vistas a 48 h |
