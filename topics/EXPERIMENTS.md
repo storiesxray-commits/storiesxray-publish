@@ -11,6 +11,7 @@ Fuente automática (desde 16/11/2026): escenario de Make XR-06-YT-ANALYTICS-REPO
 
 ## Apertura v2 (desde xr007, commit 9b2ad36)
 Gancho completo antes de 1,5 s, título + subtítulo desde el frame 0, voz a 0,03 s, 28–40 s. Voz A/B: impares `af_heart`, pares `am_michael`.
+Desde el primer video con ElevenLabs (16/11/2026) la voz pasa a 3 narradores en rotación (`xr1`/`xr2`/`xr3`); comparar retención por narrador y quedarse con el mejor (o los 2 mejores) cuando haya 3+ videos de cada uno.
 Objetivo: **≥ 70 % stayed to watch**. Si a las 4–6 v2 no sube de ~62 %, el problema está en el contenido visual del primer plano y hay que probar otra cosa.
 
 | Video | Voz | Duración | Stayed to watch | % promedio reproducido | Vistas a 48 h |

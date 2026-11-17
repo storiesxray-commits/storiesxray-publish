@@ -3,7 +3,7 @@
 Genera Shorts verticales (1080×1920, 30 fps, ~45 s) para YouTube @StoriesXray e Instagram @storiesxray, **100 % por código**: sin Kling, sin ElevenLabs, sin créditos.
 
 - **Imagen:** escenas 3D en three.js con estilo toon (color plano + contorno negro) y momentos de rayos X en cian.
-- **Voz:** kokoro-onnx local (voz `am_michael`), con subtítulos sincronizados a las pausas reales.
+- **Voz:** ElevenLabs eleven_v3 con 3 narradores propios en rotación (`tools/voices.json`, vía Make XR-07; ver NEW_VIDEO.md paso 4). Respaldo: kokoro-onnx local. Subtítulos sincronizados con la alineación por carácter.
 - **Sonido:** efectos y música sintetizados, mezclados a −14 LUFS.
 - **Salida:** MP4 + miniatura + `metadata.json` listos para que Make los publique.
 
@@ -18,7 +18,8 @@ Resultado en `out/xr003-fingers-wrinkle/` y paquete para Make en `publish/xr003-
 ```
 engine/engine.js      motor: materiales toon, contorno, rayos X, personaje Subject, luces, Tierra, estrellas
 engine/player.html    reproductor: arma planos, títulos y subtítulos con márgenes seguros
-tools/voice.py        guion -> voz + tiempos por palabra
+tools/tts.py          guion -> pedido para Make XR-07 (ElevenLabs)
+tools/voice.py        guion -> voz + tiempos por palabra (ElevenLabs o kokoro)
 tools/render.py       render cuadro a cuadro en Chrome headless -> un MP4 por plano
 tools/mix.py          efectos + música + voz -> mix.wav (-14 LUFS) e informe de niveles
 tools/build.py        todo junto + miniatura + hojas de revisión + paquete para Make

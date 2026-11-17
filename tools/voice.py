@@ -1,13 +1,79 @@
 """Narration: videos/<id>/script.json -> out/<id>/voice.wav + out/<id>/timing.json
-Per-word timings are anchored to the real pauses in the audio (punctuation), so captions stay in sync.
-Usage: python tools/voice.py <video-id>"""
-import json, numpy as np, soundfile as sf, re, sys, os
-from kokoro_onnx import Kokoro
+Engine 1 (default since 16/11/2026): ElevenLabs eleven_v3 voices from tools/voices.json, fetched through
+Make (tools/tts.py explains the flow). Word timings come from ElevenLabs character alignment.
+Engine 2 (fallback): local kokoro-onnx; per-word timings anchored to the real pauses in the audio.
+Usage: python tools/voice.py <video-id> [--kokoro]"""
+import json, numpy as np, soundfile as sf, re, sys, os, base64, subprocess, difflib
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, f"{ROOT}/tools")
+import tts as TTS
 VID = sys.argv[1]; cfg = json.load(open(f"{ROOT}/videos/{VID}/script.json"))
 OUT = f"{ROOT}/out/{VID}"; os.makedirs(OUT, exist_ok=True)
+S = [tuple(x) for x in cfg["sentences"]]
+TAG = re.compile(r"\[[^\]]*\]")
+clean = lambda x: re.sub(r"\s+", " ", TAG.sub(" ", x)).strip()
+
+def elevenlabs():
+    name, key = TTS.out_name(VID, cfg)
+    mp3, js = f"{ROOT}/tts/{name}.mp3", f"{ROOT}/tts/{name}.json"
+    if not (os.path.exists(mp3) and os.path.exists(js)):
+        print(f"WARNING: no ElevenLabs audio at tts/{name}.* -> run `python tools/tts.py request {VID}` + Make XR-07, then git pull")
+        return False
+    sr = 24000
+    pcm = subprocess.run(["ffmpeg", "-v", "error", "-i", mp3, "-ac", "1", "-ar", str(sr), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, dtype=np.float32).copy()
+    al = json.load(open(js)); chars = base64.b64decode(al["chars_b64"]).decode("utf-8"); cs, ce = al["s"], al["e"]
+    text = TTS.full_text(cfg)
+    if chars == text: amap = list(range(len(text)))
+    else:  # map text index -> alignment index
+        amap = [None] * len(text)
+        for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, text, chars, autojunk=False).get_opcodes():
+            if tag == "equal":
+                for k in range(i2 - i1): amap[i1 + k] = j1 + k
+        last = 0
+        for k in range(len(text)):
+            if amap[k] is None: amap[k] = last
+            last = amap[k]
+        print("NOTE: alignment text differs from script text; mapped by diff")
+    T = lambda k, arr: float(arr[min(amap[k], len(arr) - 1)])
+    sents = []; off = 0
+    for txt, pause in S:
+        txt = txt.strip(); blank = TAG.sub(lambda m: " " * len(m.group(0)), txt)
+        ws = [(m.group(0), off + m.start(), off + m.end() - 1) for m in re.finditer(r"\S+", blank)]
+        words = [dict(w=w, s=T(i0, cs), e=T(i1, ce)) for w, i0, i1 in ws]
+        sents.append(dict(text=clean(txt), pause=pause, words=words, first_char=T(off, cs)))
+        off += len(txt) + 1
+    # cut the take into sentences: pre-word sounds (laughs, gasps) stay with the sentence they introduce
+    L = len(a) / sr; cuts = [max(0.0, sents[0]["first_char"] - 0.01)]
+    for i in range(1, len(sents)):
+        e0, s1 = sents[i - 1]["words"][-1]["e"], sents[i]["words"][0]["s"]
+        cuts.append(min(e0 + 0.08, max(e0, sents[i]["first_char"] - 0.02), s1))
+    cuts.append(min(L, sents[-1]["words"][-1]["e"] + 0.25))
+    out = [np.zeros(int(sr * 0.03), dtype=np.float32)]; t = 0.03; meta = []
+    for i, se in enumerate(sents):
+        c0, c1 = cuts[i], cuts[i + 1]; seg = a[int(c0 * sr):int(c1 * sr)]; sh = t - c0
+        nat = (sents[i + 1]["words"][0]["s"] - se["words"][-1]["e"]) if i + 1 < len(sents) else 0
+        extra = max(0.0, se["pause"] - nat)
+        ws = [dict(w=w["w"], s=round(w["s"] + sh, 3), e=round(w["e"] + sh, 3)) for w in se["words"]]
+        meta.append(dict(i=i + 1, text=se["text"], start=ws[0]["s"], end=ws[-1]["e"], words=ws, gaps=1, punct=1))
+        out.append(seg); out.append(np.zeros(int(sr * extra), dtype=np.float32)); t += len(seg) / sr + extra
+    audio = np.concatenate(out); audio = audio / np.abs(audio).max() * 0.9
+    sf.write(f"{OUT}/voice.wav", audio, sr)
+    v = TTS.CFG["voices"][key]
+    json.dump(dict(total=round(meta[-1]["end"] + 0.25, 3), voice=key, voice_name=v["name"], engine="elevenlabs:" + TTS.CFG["model"],
+                   tts_file=f"tts/{name}.mp3", sentences=meta), open(f"{OUT}/timing.json", "w"), indent=1)
+    print("elevenlabs", key, v["name"], "total", round(meta[-1]["end"] + 0.25, 2))
+    [print(m["i"], m["start"], m["end"], m["text"][:40]) for m in meta]
+    return True
+
+if "--kokoro" not in sys.argv and elevenlabs():
+    sys.exit(0)
+
+from kokoro_onnx import Kokoro
 k = Kokoro(f"{ROOT}/models/kokoro-v1.0.onnx", f"{ROOT}/models/voices-v1.0.bin")
-VOICE = cfg.get("voice", "am_michael"); S = [tuple(x) for x in cfg["sentences"]]
+VOICE = cfg.get("voice", "am_michael")
+if VOICE in TTS.CFG["voices"]: VOICE = cfg.get("kokoro_voice", "am_michael")
+S = [(clean(x), p) for x, p in S]
 sr=24000; out=[]; t=0.03; out.append(np.zeros(int(sr*t),dtype=np.float32)); meta=[]  # voice starts almost at frame 0 (opening rule 16/11/2026)
 def trim(a,th=0.012):
     e=np.abs(a); idx=np.where(e>th)[0]
@@ -45,7 +111,7 @@ for i,(txt,pause) in enumerate(S):
     out.append(a); out.append(np.zeros(int(sr*pause),dtype=np.float32)); t+=d+pause
 audio=np.concatenate(out); audio=audio/np.abs(audio).max()*0.9
 sf.write(f"{OUT}/voice.wav",audio,sr)
-json.dump(dict(total=round(t,3),voice=VOICE,sentences=meta),open(f"{OUT}/timing.json","w"),indent=1)
+json.dump(dict(total=round(t,3),voice=VOICE,engine="kokoro",sentences=meta),open(f"{OUT}/timing.json","w"),indent=1)
 bad=[m["i"] for m in meta if m["punct"] and m["gaps"]<m["punct"]]
 if bad: print("WARNING: caption timing fell back to letter-count spread in sentences", bad)
 print(VOICE,"total",round(t,2)); [print(m['i'],m['start'],m['end'],m['text'][:40]) for m in meta]

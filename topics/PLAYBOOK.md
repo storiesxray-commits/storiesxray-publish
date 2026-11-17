@@ -9,8 +9,8 @@ Retención inicial = `engagedViews / views` (≈ "Stayed to watch"). Objetivo �
 - Apertura v2 (AUTOPILOT §2b): gancho completo < 1,5 s, título + subtítulo desde el frame 0, imagen más extrema en el frame 0.
 
 ## Experimento activo
-- **E1 — voz.** Ids impares: `af_heart`; ids pares: `am_michael`. `speed` 1.10.
-- Desde: xr007. Cierra con ≥ 3 videos por brazo, ≥ 300 vistas y ≥ 48 h cada uno.
+- **E1 — voz (cambiado por la dueña el 16/11/2026): narradores ElevenLabs histriónicos en rotación**, `xrNNN % 3` → `xr1` Campfire Maniac / `xr2` Unhinged Podcaster / `xr3` Porch Legend (`tools/voices.json`, flujo en NEW_VIDEO.md paso 4, Make XR-07). Kokoro (`af_heart`/`am_michael`) queda solo como respaldo si Make falla.
+- Desde: el primer video producido después del 16/11/2026 21:55 ART. Cierra con ≥ 3 videos por narrador, ≥ 300 vistas y ≥ 48 h cada uno. El optimizador puede sacar al peor narrador de `rotation` en `tools/voices.json`; agregar narradores nuevos lo decide la dueña (crearlos gasta créditos y cupos de voz).
 
 ## Próximos experimentos (en orden; uno a la vez)
 1. Duración: 28–32 s vs 36–40 s.
@@ -25,4 +25,5 @@ Retención inicial = `engagedViews / views` (≈ "Stayed to watch"). Objetivo �
 ## Historial de decisiones
 | Fecha | Cambio | Motivo / datos |
 |---|---|---|
+| 16/11/2026 | Voz: kokoro → 3 narradores ElevenLabs en rotación (E1 nuevo) | Pedido de la dueña: voz única, histriónica, que no suene a IA y retenga |
 | 16/11/2026 | Apertura v2 adoptada | Línea base 58–62 % stayed to watch, corte en ~1.200 vistas |

@@ -1,0 +1,32 @@
+{
+ "_doc": "ElevenLabs narrators for Stories X-Ray (designed 16/11/2026 in the owner's ElevenLabs account). voice.py rotates them by video number unless script.json sets \"voice\". Never put the API key here: it comes from the ELEVENLABS_API_KEY environment variable.",
+ "make_scenario_id": 7068521,
+ "make_scenario": "XR-07-ELEVENLABS-TTS (org 4863740, team 1249080, on-demand; inputs voice_id, out_name, payload_b64)",
+ "model": "eleven_v3",
+ "output_format": "pcm_24000",
+ "rotation": [
+  "xr1",
+  "xr2",
+  "xr3"
+ ],
+ "voices": {
+  "xr1": {
+   "name": "XR Narrator 1 - Campfire Maniac",
+   "voice_id": "nmjLhnUK0FzTLvmI088x",
+   "style": "American man, late 30s, warm raspy campfire storyteller: conspiratorial whispers, bursts of disbelief",
+   "stability": 0.5
+  },
+  "xr2": {
+   "name": "XR Narrator 2 - Unhinged Podcaster",
+   "voice_id": "dYILdChhZKESTed4YE1S",
+   "style": "American woman, late 20s, hyperactive weird-history podcaster: rapid-fire, shrieks, nervous laughs, dead-serious whispers (the craziest one)",
+   "stability": 0.0
+  },
+  "xr3": {
+   "name": "XR Narrator 3 - Porch Legend",
+   "voice_id": "H3R91oDmjJogG2a1GF6v",
+   "style": "Deep South man, late 50s, gravelly porch storyteller: slow raspy whispers, booming laughs and shouts",
+   "stability": 0.5
+  }
+ }
+}
