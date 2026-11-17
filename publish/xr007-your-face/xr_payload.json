@@ -1,0 +1,68 @@
+{
+  "content_id": "xr-007",
+  "repo_id": "xr007-your-face",
+  "sha256": "69cf461de006ec2ef0d6572069f45a5ce014e2592f85892191ff3b3a7d09b93f",
+  "file_size_bytes": 23384597,
+  "duration_seconds": 39.596,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4606111,
+  "faststart": true,
+  "title_youtube": "Your Doppelganger Might Share Your DNA 🧬",
+  "description_youtube": "8 billion people. How many have YOUR face?\n\n• An exact copy is almost impossible: a 2015 study of 8 facial measurements on nearly 4,000 faces put the odds below 1 in a trillion.\n• But look-alikes are real: in a 2022 study, 3 face-recognition programs matched 16 of 32 pairs of unrelated look-alikes.\n• 9 of those pairs shared many of the same gene variants, and look-alike pairs tended to be similar in height, weight and smoking habits.\n• The researchers say that with more people on Earth, look-alikes become more likely.\n\nSources:\n- Joshi et al., Cell Reports (2022): https://doi.org/10.1016/j.celrep.2022.111257\n- Cell Press / EurekAlert news release (2022): https://www.eurekalert.org/news-releases/962273\n- Sci.News, Look-alike humans have similar DNA: https://www.sci.news/genetics/look-alike-humans-11124.html\n- Lucas & Henneberg, Are human faces unique? Forensic Science International (2015): https://pubmed.ncbi.nlm.nih.gov/26441304/\n- ScienceAlert, the chances of you having a doppelgänger: https://www.sciencealert.com/here-s-the-chances-of-you-having-a-doppelgaenger\n- Christian Science Monitor, How likely are you to meet your exact doppelgänger? (2016): https://csmonitor.com/Science/2016/0717/How-likely-are-you-to-meet-your-exact-doppelgaenger\n\n#doppelganger #lookalike #dna #science",
+  "caption_instagram": "8 billion people. How many have YOUR face? 👀\n\nAn exact copy: under 1 in a trillion. But 9 pairs of total strangers who look like twins shared many of the same gene variants.\n\nFull story on YouTube: @StoriesXray\n\n#doppelganger #lookalike #dna #science",
+  "tags": [
+    "doppelganger",
+    "look alike",
+    "lookalike strangers",
+    "do i have a twin",
+    "someone has my face",
+    "doppelganger dna",
+    "look alikes share dna",
+    "facial recognition",
+    "genetics",
+    "science facts",
+    "weird science",
+    "face study",
+    "animation"
+  ],
+  "series": "Weird Science",
+  "sources": [
+    {
+      "title": "Joshi et al. 2022, Look-alike humans identified by facial recognition algorithms show genetic similarities, Cell Reports 40(8):111257",
+      "url": "https://doi.org/10.1016/j.celrep.2022.111257"
+    },
+    {
+      "title": "EurekAlert / Cell Press news release (23 Aug 2022)",
+      "url": "https://www.eurekalert.org/news-releases/962273"
+    },
+    {
+      "title": "Sci.News: Look-alike humans have similar DNA",
+      "url": "https://www.sci.news/genetics/look-alike-humans-11124.html"
+    },
+    {
+      "title": "Lucas & Henneberg 2015, Are human faces unique? Forensic Science International (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26441304/"
+    },
+    {
+      "title": "ScienceAlert: Here's the chances of you having a doppelgänger",
+      "url": "https://www.sciencealert.com/here-s-the-chances-of-you-having-a-doppelgaenger"
+    },
+    {
+      "title": "Christian Science Monitor: How likely are you to meet your exact doppelgänger?",
+      "url": "https://csmonitor.com/Science/2016/0717/How-likely-are-you-to-meet-your-exact-doppelgaenger"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "21:50",
+  "checks_failed": []
+}

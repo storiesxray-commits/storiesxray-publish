@@ -1,0 +1,168 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Your Doppelganger Might Share Your DNA 🧬",
+  "description": "8 billion people. How many have YOUR face?\n\n• An exact copy is almost impossible: a 2015 study of 8 facial measurements on nearly 4,000 faces put the odds below 1 in a trillion.\n• But look-alikes are real: in a 2022 study, 3 face-recognition programs matched 16 of 32 pairs of unrelated look-alikes.\n• 9 of those pairs shared many of the same gene variants, and look-alike pairs tended to be similar in height, weight and smoking habits.\n• The researchers say that with more people on Earth, look-alikes become more likely.\n\nSources:\n- Joshi et al., Cell Reports (2022): https://doi.org/10.1016/j.celrep.2022.111257\n- Cell Press / EurekAlert news release (2022): https://www.eurekalert.org/news-releases/962273\n- Sci.News, Look-alike humans have similar DNA: https://www.sci.news/genetics/look-alike-humans-11124.html\n- Lucas & Henneberg, Are human faces unique? Forensic Science International (2015): https://pubmed.ncbi.nlm.nih.gov/26441304/\n- ScienceAlert, the chances of you having a doppelgänger: https://www.sciencealert.com/here-s-the-chances-of-you-having-a-doppelgaenger\n- Christian Science Monitor, How likely are you to meet your exact doppelgänger? (2016): https://csmonitor.com/Science/2016/0717/How-likely-are-you-to-meet-your-exact-doppelgaenger\n\n#doppelganger #lookalike #dna #science",
+  "tags": [
+    "doppelganger",
+    "look alike",
+    "lookalike strangers",
+    "do i have a twin",
+    "someone has my face",
+    "doppelganger dna",
+    "look alikes share dna",
+    "facial recognition",
+    "genetics",
+    "science facts",
+    "weird science",
+    "face study",
+    "animation"
+  ],
+  "pinned_comment": "Have you ever been mistaken for a total stranger? 👀 Tell us where 👇",
+  "series": "Weird Science",
+  "caption_instagram": "8 billion people. How many have YOUR face? 👀\n\nAn exact copy: under 1 in a trillion. But 9 pairs of total strangers who look like twins shared many of the same gene variants.\n\nFull story on YouTube: @StoriesXray\n\n#doppelganger #lookalike #dna #science",
+  "sources": [
+    {
+      "title": "Joshi et al. 2022, Look-alike humans identified by facial recognition algorithms show genetic similarities, Cell Reports 40(8):111257",
+      "url": "https://doi.org/10.1016/j.celrep.2022.111257"
+    },
+    {
+      "title": "EurekAlert / Cell Press news release (23 Aug 2022)",
+      "url": "https://www.eurekalert.org/news-releases/962273"
+    },
+    {
+      "title": "Sci.News: Look-alike humans have similar DNA",
+      "url": "https://www.sci.news/genetics/look-alike-humans-11124.html"
+    },
+    {
+      "title": "Lucas & Henneberg 2015, Are human faces unique? Forensic Science International (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26441304/"
+    },
+    {
+      "title": "ScienceAlert: Here's the chances of you having a doppelgänger",
+      "url": "https://www.sciencealert.com/here-s-the-chances-of-you-having-a-doppelgaenger"
+    },
+    {
+      "title": "Christian Science Monitor: How likely are you to meet your exact doppelgänger?",
+      "url": "https://csmonitor.com/Science/2016/0717/How-likely-are-you-to-meet-your-exact-doppelgaenger"
+    }
+  ],
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "N01",
+    "score": 100,
+    "hook": "8 billion people. How many have YOUR face?"
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr4"
+  },
+  "thumbnail": {
+    "time": 1.0,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.45
+    ],
+    "protect": [
+      60,
+      500,
+      1020,
+      1050
+    ],
+    "circle": [
+      790,
+      790,
+      270
+    ],
+    "rays": [
+      790,
+      790
+    ],
+    "tilt": -5,
+    "badge": "1 IN A TRILLION",
+    "badge_x": 110,
+    "badge_y": 1180,
+    "text_y": 130,
+    "lines": [
+      {
+        "text": "WHO HAS",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "YOUR FACE?",
+        "color": "#FFD60A"
+      }
+    ],
+    "glow": "#FF3EA5",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "SAME FACE",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "STRANGERS",
+            "box": "#FF3B30"
+          }
+        ],
+        "badge": "32 PAIRS",
+        "glow": "#FFD60A",
+        "badge_x": 560
+      },
+      {
+        "lines": [
+          {
+            "text": "NOT",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "TWINS",
+            "strike": true
+          }
+        ],
+        "badge": "SAME GENES?",
+        "glow": "#22D3EE",
+        "text_y": 1090,
+        "badge_y": 160,
+        "badge_x": 560
+      }
+    ],
+    "pick": 0
+  },
+  "social_thumbnail": {
+    "zoom": 1.05,
+    "protect": [
+      60,
+      540,
+      1020,
+      1080
+    ],
+    "circle": [
+      790,
+      820,
+      250
+    ],
+    "rays": [
+      790,
+      820
+    ],
+    "text_y": 280,
+    "badge_x": 110,
+    "badge_y": 1200
+  },
+  "id": "xr007-your-face",
+  "duration_s": 39.6,
+  "status": "ready",
+  "publish_time_local": "21:50"
+}

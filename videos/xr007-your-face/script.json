@@ -1,0 +1,18 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Eight billion people.", 0.05],
+  ["How many have YOUR face?", 0.3],
+  ["A perfect copy? [whispers] Almost impossible.", 0.2],
+  ["Scientists measured eight features on nearly four thousand faces.", 0.12],
+  ["Odds of an exact match? Under one in a trillion!", 0.3],
+  ["But look-alikes? [laughs] Oh, they're real.", 0.25],
+  ["Thirty-two pairs of strangers who look like twins.", 0.15],
+  ["All three face scanners matched sixteen pairs.", 0.25],
+  ["[gasps] Then scientists tested their DNA.", 0.2],
+  ["Nine pairs shared many of the same gene variants.", 0.25],
+  ["They even tended to share height, weight... and smoking!", 0.3],
+  ["With eight billion of us, it's getting more likely.", 0.3],
+  ["Somewhere out there... [whispers] someone has YOUR face.", 0.45]
+ ]
+}
