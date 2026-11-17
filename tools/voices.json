@@ -5,10 +5,12 @@
  "model": "eleven_v3",
  "output_format": "pcm_24000",
  "rotation": [
-  "xr1",
+  "xr5",
+  "xr4",
   "xr2",
-  "xr3",
-  "xr4"
+  "xr1",
+  "xr4",
+  "xr6"
  ],
  "voices": {
   "xr1": {
@@ -34,7 +36,20 @@
    "voice_id": "q04OvHvMzr6ydLxp7H7g",
    "style": "American man, early 40s, the most theatrical: booming gleeful roars to tiny trembling whispers, manic giggles, stretched words (designed 17/11 by XR-08)",
    "stability": 0.0
+  },
+  "xr5": {
+   "name": "XR Narrator 5 - Breathless Hype Host",
+   "voice_id": "aTpH3EiGTCUxsRktSYkg",
+   "style": "American woman, mid 30s, breathless game-show/sports play-by-play energy: rapid-fire builds to shrieks, dead-silent pauses, gasps, cackles (designed 17/11 by XR-08)",
+   "stability": 0.0
+  },
+  "xr6": {
+   "name": "XR Narrator 6 - Total Meltdown",
+   "voice_id": "4i0jcZMazjFANHWT2k3t",
+   "style": "American man, early 40s, even wilder than xr4: roaring gleeful shouts to trembling whispers, manic giggles, stretched vowels, breathless rushes, wheezing excitement (designed 17/11 by XR-08)",
+   "stability": 0.0
   }
  },
- "make_new_voice_scenario_id": 7068664
+ "make_new_voice_scenario_id": 7068664,
+ "_rotation_note": "Owner preference 17/11/2026: xr4 'Absolute Lunatic' (used in xr007) is the favourite style (crazy, exalted) -> it appears twice in the rotation (weight). xr3 Porch Legend retired from rotation (voice kept). Duplicates in rotation are weights."
 }

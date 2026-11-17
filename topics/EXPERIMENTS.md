@@ -16,3 +16,12 @@ Objetivo: **≥ 70 % stayed to watch**. Si a las 4–6 v2 no sube de ~62 %, el p
 
 | Video | Voz | Duración | Stayed to watch | % promedio reproducido | Vistas a 48 h |
 |---|---|---|---|---|---|
+
+## Narradores (ElevenLabs) — por video
+| Video | Narrador | Estabilidad | Tema / categoría | Duración | Stayed to watch | % promedio reproducido | Vistas a 48 h | Subs / 1.000 vistas |
+|---|---|---|---|---|---|---|---|---|
+| xr007-your-face | xr4 Absolute Lunatic | 0.0 | dobles / mind | 39,6 s | | | | |
+| xr008-mirror-face | xr1 Campfire Maniac | 0.5 | espejo / mind | 34,3 s | | | | |
+| xr009-gta-flu | xr2 Unhinged Podcaster | 0.0 | GTA 6 / pop culture (tendencia) | 39,5 s | | | | |
+
+Nota de la dueña (17/11): xr4 es su favorita ("muy loca, exaltada"). El optimizador completa esta tabla y ajusta los pesos de `tools/voices.json` → `rotation`.
