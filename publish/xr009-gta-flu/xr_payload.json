@@ -1,0 +1,63 @@
+{
+  "content_id": "xr-009",
+  "repo_id": "xr009-gta-flu",
+  "sha256": "232f7c364b41f0c8f40289bcc9141dc6b0426c777c3841c7085c5854878f57fc",
+  "file_size_bytes": 16781650,
+  "duration_seconds": 39.491,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 3271643,
+  "faststart": true,
+  "title_youtube": "Soldiers Reenlisted to Play GTA 6 (The GTA Flu Is Real) 🎮",
+  "description_youtube": "One Army unit offered a 4-day pass for the GTA 6 launch to soldiers who reenlisted for at least two more years. Twenty said yes. Meanwhile, almost 1 in 5 full-time workers plan to take launch day off, and half of gamers taking time off for a release say they'll call in sick.\n\nSources:\n- CBS News: https://www.cbsnews.com/news/grand-theft-auto-army-reenlistment-bonus/\n- Fortune (Army unit, Aug 2026): https://fortune.com/2026/08/20/grand-theft-auto-six-days-off-from-work-anticipating-gen-z-millennial-hype-rockstar-games-take-two-interactive/\n- BambooHR, PTO requests for the GTA VI release: https://www.bamboohr.com/resources/data-at-work/data-stories/gta-pto\n- Fast Company, everyone's taking PTO and sick days: https://www.fastcompany.com/91626090/everyones-taking-pto-and-sick-days-to-play-grand-theft-auto-vi\n- Fortune (Logitech gaming day off, Nov 2026): https://fortune.com/2026/11/10/logitech-gaming-day-off-ahead-of-grand-theft-auto-six-release-ceo-hanneke-faber-boost-productivity/\n\n#gta6 #gaming #worklife",
+  "caption_instagram": "Soldiers reenlisted... to play GTA 6. 🎮\n\nOne Army unit offered a 4-day pass for the launch if you signed up for 2+ more years. 20 said yes. And almost 1 in 5 full-time workers plan to skip launch day.\n\nAre YOU catching the GTA flu? 🤒\n\nFull story on YouTube: @StoriesXray\n\n#gta6 #gaming #worklife",
+  "tags": [
+    "gta 6",
+    "gta vi",
+    "gta 6 release",
+    "gta 6 launch day",
+    "gta flu",
+    "calling in sick",
+    "army gta 6",
+    "soldiers gta 6",
+    "pto",
+    "day off to play games",
+    "gaming news",
+    "work life"
+  ],
+  "series": "Pop Culture X-Ray",
+  "sources": [
+    {
+      "title": "CBS News: Army unit offers 4-day pass to play Grand Theft Auto VI as reenlistment incentive",
+      "url": "https://www.cbsnews.com/news/grand-theft-auto-army-reenlistment-bonus/"
+    },
+    {
+      "title": "Fortune (20 Aug 2026): One U.S. Army unit is offering 4 days off to play Grand Theft Auto",
+      "url": "https://fortune.com/2026/08/20/grand-theft-auto-six-days-off-from-work-anticipating-gen-z-millennial-hype-rockstar-games-take-two-interactive/"
+    },
+    {
+      "title": "BambooHR: Gamer's Day Off, PTO requests spike for the GTA VI release",
+      "url": "https://www.bamboohr.com/resources/data-at-work/data-stories/gta-pto"
+    },
+    {
+      "title": "Fast Company: Everyone's taking PTO and sick days to play GTA VI",
+      "url": "https://www.fastcompany.com/91626090/everyones-taking-pto-and-sick-days-to-play-grand-theft-auto-vi"
+    },
+    {
+      "title": "Fortune (10 Nov 2026): Logitech is giving 7,000 employees the day off to play video games",
+      "url": "https://fortune.com/2026/11/10/logitech-gaming-day-off-ahead-of-grand-theft-auto-six-release-ceo-hanneke-faber-boost-productivity/"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "17:34",
+  "checks_failed": []
+}

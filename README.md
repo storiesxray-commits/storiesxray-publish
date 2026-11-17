@@ -38,6 +38,7 @@ publish/<id>/         lo que Make publica
 | xr006-calment-122 | Jeanne Calment: vivió 122 años y el abogado que le pagó 30 años murió primero (extra pedido por la dueña) | `ready` (publicación inmediata, 16/11/2026) |
 | xr007-your-face | Dobles: ¿cuántos de 8.000 millones tienen tu cara? (N01, puntaje 100; voz ElevenLabs xr4) | `ready` (piloto automático, 17/11/2026) |
 | xr008-mirror-face | Nunca viste tu cara real: el espejo te invierte (N08, puntaje 100; voz ElevenLabs xr1; extra pedido por la dueña) | `ready` (17/11/2026) |
+| xr009-gta-flu | GTA 6: soldados que se reengancharon para jugarlo y la "GTA flu" (pedido de la dueña, puntaje 100; voz ElevenLabs xr2) | `ready`, extra cargado a mano en el ledger para el miércoles 18/11 17:34 NY |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).

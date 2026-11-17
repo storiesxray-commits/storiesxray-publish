@@ -1,0 +1,139 @@
+{
+  "language": "en-US",
+  "category": "Entertainment",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Soldiers Reenlisted to Play GTA 6 (The GTA Flu Is Real) 🎮",
+  "description": "One Army unit offered a 4-day pass for the GTA 6 launch to soldiers who reenlisted for at least two more years. Twenty said yes. Meanwhile, almost 1 in 5 full-time workers plan to take launch day off, and half of gamers taking time off for a release say they'll call in sick.\n\nSources:\n- CBS News: https://www.cbsnews.com/news/grand-theft-auto-army-reenlistment-bonus/\n- Fortune (Army unit, Aug 2026): https://fortune.com/2026/08/20/grand-theft-auto-six-days-off-from-work-anticipating-gen-z-millennial-hype-rockstar-games-take-two-interactive/\n- BambooHR, PTO requests for the GTA VI release: https://www.bamboohr.com/resources/data-at-work/data-stories/gta-pto\n- Fast Company, everyone's taking PTO and sick days: https://www.fastcompany.com/91626090/everyones-taking-pto-and-sick-days-to-play-grand-theft-auto-vi\n- Fortune (Logitech gaming day off, Nov 2026): https://fortune.com/2026/11/10/logitech-gaming-day-off-ahead-of-grand-theft-auto-six-release-ceo-hanneke-faber-boost-productivity/\n\n#gta6 #gaming #worklife",
+  "tags": [
+    "gta 6",
+    "gta vi",
+    "gta 6 release",
+    "gta 6 launch day",
+    "gta flu",
+    "calling in sick",
+    "army gta 6",
+    "soldiers gta 6",
+    "pto",
+    "day off to play games",
+    "gaming news",
+    "work life"
+  ],
+  "pinned_comment": "Be honest: are you calling in sick for launch day? 🤒🎮",
+  "series": "Pop Culture X-Ray",
+  "caption_instagram": "Soldiers reenlisted... to play GTA 6. 🎮\n\nOne Army unit offered a 4-day pass for the launch if you signed up for 2+ more years. 20 said yes. And almost 1 in 5 full-time workers plan to skip launch day.\n\nAre YOU catching the GTA flu? 🤒\n\nFull story on YouTube: @StoriesXray\n\n#gta6 #gaming #worklife",
+  "sources": [
+    {
+      "title": "CBS News: Army unit offers 4-day pass to play Grand Theft Auto VI as reenlistment incentive",
+      "url": "https://www.cbsnews.com/news/grand-theft-auto-army-reenlistment-bonus/"
+    },
+    {
+      "title": "Fortune (20 Aug 2026): One U.S. Army unit is offering 4 days off to play Grand Theft Auto",
+      "url": "https://fortune.com/2026/08/20/grand-theft-auto-six-days-off-from-work-anticipating-gen-z-millennial-hype-rockstar-games-take-two-interactive/"
+    },
+    {
+      "title": "BambooHR: Gamer's Day Off, PTO requests spike for the GTA VI release",
+      "url": "https://www.bamboohr.com/resources/data-at-work/data-stories/gta-pto"
+    },
+    {
+      "title": "Fast Company: Everyone's taking PTO and sick days to play GTA VI",
+      "url": "https://www.fastcompany.com/91626090/everyones-taking-pto-and-sick-days-to-play-grand-theft-auto-vi"
+    },
+    {
+      "title": "Fortune (10 Nov 2026): Logitech is giving 7,000 employees the day off to play video games",
+      "url": "https://fortune.com/2026/11/10/logitech-gaming-day-off-ahead-of-grand-theft-auto-six-release-ceo-hanneke-faber-boost-productivity/"
+    }
+  ],
+  "notes": "No game logos, characters or screenshots; generic gamepad without console branding; no real insignia; paperwork is an illustration ('THE OFFER'), not a reproduction of the real memo. Facts: 9th Brigade Engineer Battalion, 3rd Infantry Division, Fort Stewart, Georgia: special four-day pass timed to the GTA VI release for soldiers who reenlist (min. 2 years, up to 6, signing window Aug 1 - Nov 14, 2026); 20 soldiers chose it; 3ID spokesperson Lt. Col. Angel Tomko confirmed (CBS, Fortune). BambooHR survey (n=1,530 full-time US employees, Oct 9-20, 2026): 18% plan to take the GTA VI release day off ('almost one in five full-time workers'); 50% of gamers taking time off for an upcoming release plan to call in sick ('half the gamers taking off'). 'GTA flu' nickname: Fast Company. Logitech: ~7,000 employees get a gaming day off ('Logi Game Day'), CEO plans to game on Nov 19 (Fortune). GTA VI release: Nov 19, 2026. Published as an owner-requested extra on Wed Nov 18 (eve of launch).",
+  "queue": {
+    "file": "owner request 17/11/2026 (GTA 6 trend, not from queue_v3)",
+    "score": 100
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr2"
+  },
+  "thumbnail": {
+    "time": 1.0,
+    "zoom": 1.15,
+    "focus": [
+      0.5,
+      0.56
+    ],
+    "protect": [
+      115,
+      506,
+      966,
+      943
+    ],
+    "circle": [
+      298,
+      678,
+      185
+    ],
+    "rays": [
+      298,
+      678
+    ],
+    "tilt": -5,
+    "badge": "4 DAYS OFF",
+    "badge_x": 560,
+    "text_y": 960,
+    "lines": [
+      {
+        "text": "REENLISTED",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "FOR GTA 6",
+        "color": "#FFD60A"
+      }
+    ],
+    "glow": "#FF3EA5",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "GTA FLU",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "IS REAL",
+            "box": "#FF3B30"
+          }
+        ],
+        "badge": "1 IN 5 WORKERS",
+        "glow": "#22D3EE",
+        "badge_x": 110
+      },
+      {
+        "lines": [
+          {
+            "text": "CALLING IN",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "SICK",
+            "box": "#FF3B30"
+          }
+        ],
+        "badge": "LAUNCH DAY",
+        "glow": "#FFD60A"
+      }
+    ],
+    "pick": 0,
+    "badge_y": 150
+  },
+  "social_thumbnail": {
+    "zoom": 1.08,
+    "text_y": 1150,
+    "badge_y": 330
+  }
+}
