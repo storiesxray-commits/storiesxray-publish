@@ -9,6 +9,9 @@
   "xr4",
   "xr2",
   "xr1",
+  "xr7",
+  "xr8",
+  "xr9",
   "xr4",
   "xr6"
  ],
@@ -48,8 +51,26 @@
    "voice_id": "4i0jcZMazjFANHWT2k3t",
    "style": "American man, early 40s, even wilder than xr4: roaring gleeful shouts to trembling whispers, manic giggles, stretched vowels, breathless rushes, wheezing excitement (designed 17/11 by XR-08)",
    "stability": 0.0
+  },
+  "xr7": {
+   "name": "XR Narrator 7 - Queens Firecracker",
+   "voice_id": "PBjCN7lUC6AFsFQft0J1",
+   "style": "American woman, mid 30s, thick fast Queens New York accent: shrieks, cackles, dramatic whispers then explodes (designed 18/11 by XR-08, owner asked for regional accents)",
+   "stability": 0.0
+  },
+  "xr8": {
+   "name": "XR Narrator 8 - Southie Hothead",
+   "voice_id": "smeZzcDwuKWCLRll83p3",
+   "style": "American man, early 40s, comedic Boston accent: roaring laughs, sudden shouts, trembling whispers, wheezing giggles (designed 18/11 by XR-08)",
+   "stability": 0.0
+  },
+  "xr9": {
+   "name": "XR Narrator 9 - Texas Tornado",
+   "voice_id": "7WCzVTQEpBHdMdxk3Yyr",
+   "style": "American woman, late 20s, big bright Texas drawl: squeals, honking laughs, slow suspense whispers snapping into fast shouting (designed 18/11 by XR-08)",
+   "stability": 0.0
   }
  },
  "make_new_voice_scenario_id": 7068664,
- "_rotation_note": "Owner preference 17/11/2026: xr4 'Absolute Lunatic' (used in xr007) is the favourite style (crazy, exalted) -> it appears twice in the rotation (weight). xr3 Porch Legend retired from rotation (voice kept). Duplicates in rotation are weights."
+ "_rotation_note": "Owner preference 17/11/2026: xr4 'Absolute Lunatic' (used in xr007) is the favourite style (crazy, exalted) -> it appears twice in the rotation (weight). xr3 Porch Legend retired from rotation (voice kept). Duplicates in rotation are weights. 18/11/2026: owner asked to test hyper-histrionic male AND female voices, some with funny US regional accents -> added xr7 (Queens NY woman), xr8 (Boston man), xr9 (Texas woman). Order set so xr013/xr014/xr015 (13,14,15 mod 9 = 4,5,6) use the three new voices first."
 }
