@@ -9,7 +9,7 @@ Bloque `seo` en `meta.json`:
 - Las palabras de la keyword van en los primeros 150 caracteres de la descripción (es lo que se ve en la búsqueda).
 - `tags`: 10 a 20; el primero es la keyword; al menos 2 de cola larga (4+ palabras); total < 500 caracteres.
 - 3 a 5 hashtags en la descripción.
-- `title_alts`: 2 títulos alternativos distintos. **XR-10** cambia al primero a las 48 h si el video tiene menos de 1.500 vistas (prueba A/B automática; una sola vez).
+- `title_alts`: 2 títulos alternativos distintos. **XR-11** cambia al primero a las 48 h si el video tiene menos de 1.500 vistas (prueba A/B automática; una sola vez).
 - `playlist`: nombre de lista con palabras de búsqueda (una por serie). XR-10 la crea si no existe y agrega el video.
 - `questions`: 3 preguntas reales que la gente escribe, cada una con su respuesta (`{"q": …, "a": …}`, 1–2 oraciones con datos de las fuentes). Van al sitio web como preguntas frecuentes con schema `FAQPage` (Google y las IAs citan eso).
 - `pinned_comment`: por ahora se publica a mano (la conexión de YouTube de Make no tiene el permiso de comentarios).
@@ -18,7 +18,9 @@ Bloque `seo` en `meta.json`:
 1. Video público → lo agrega a la playlist de su serie (crea la playlist pública si no existe).
 2. Fija idioma del video `en` / audio `en-US` (señal de público de EE. UU.).
 3. Escribe `publish/<id>/yt.json` en el repo con el id de YouTube → el sitio se reconstruye solo.
-4. A las 48 h: si tiene < 1.500 vistas, cambia el título por `title_alts[0]` (una vez) y lo anota en el ledger.
+4. **XR-11-YT-TITLE-AB** (cada 3 h): entre 48 h y 7 días, si el video tiene < 1.500 vistas cambia el título por `title_alts[0]` (una vez; conserva descripción y tags) y lo anota en `seo_title_ab` del ledger.
+
+Playlists: datastore `xr_playlists` (id 205149) guarda nombre → id. Ledger: campos `seo_status`, `seo_playlist_id`, `seo_log`, `seo_title_ab`.
 
 ## 3. Sitio web (Google + IAs)
-`tools/site.py` arma `site/` (GitHub Pages, workflow `.github/workflows/site.yml`): una página por video con el video embebido, transcripción, datos, preguntas frecuentes, fuentes, schema `VideoObject` + `FAQPage`, `sitemap.xml`, `robots.txt` y `llms.txt`. Idioma `en-US`. Se publica solo en cada push.
+`tools/site.py` arma `site/` (GitHub Pages, workflow `.github/workflows/site.yml`): una página por video con el video embebido, transcripción, datos, preguntas frecuentes, fuentes, schema `VideoObject` + `FAQPage`, `sitemap.xml`, `robots.txt` y `llms.txt`. Idioma `en-US`. Se publica solo en cada push. URL: https://storiesxray-commits.github.io/storiesxray-publish/ (sitemap: `/sitemap.xml`).
