@@ -193,6 +193,6 @@
   "id": "xr012-finger-muscles",
   "duration_s": 15.63,
   "status": "hold",
-  "hold_reason": "handoff checks failed: video_bitrate_over_5mbps_instagram",
+  "hold_reason": "cancelled by owner 18/11: not ultra-viral",
   "publish_time_local": "14:06"
 }

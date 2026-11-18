@@ -21,6 +21,7 @@ Una tarea programada corre esto **una vez por semana** (domingo a la tarde, hora
 - `hook_power` (1–10): cuánto frena el scroll la frase de los primeros 1–2 s.
 - `score = 5 × viral + 5 × hook_power`.
 - **Calibrar contra `calibration`** (ejemplos reales de 100, 95, 90, 85 y 80): una idea nueva solo es 90–100 si es tan fuerte como esos ejemplos. Ante la duda entre dos puntajes, el más bajo. Escribir en una línea por qué cada candidata merece ese puntaje (`why`).
+- **REGLA NUEVA (18/11/2026): leer `rule` y `calibration.rechazados_dueña` de queue_v3.json antes de calificar.** Datos curiosos tibios del cuerpo o la ciencia ("tus dedos no tienen músculos", "tus ojos ven al revés") NO entran aunque sean sobre el espectador: hace falta asco/horror, historia real increíble, escándalo o dinero de marca conocida, miedo/misterio, debate que llene comentarios o ilusión para probar ya. Ante la duda, no entra.
 - **Regla de la dueña: ultra viral y hook a nivel extremo.** Para entrar hace falta `score` ≥ 90 **y** `hook_power` ≥ 9. Un 90 con hook de 8 (por ejemplo 10 + 8) no entra.
 
 ## 4. Verificar las candidatas (90–100)
