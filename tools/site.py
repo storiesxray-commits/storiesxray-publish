@@ -12,6 +12,7 @@ BASE = "https://storiesxray-commits.github.io/storiesxray-publish"
 CHANNEL = "https://www.youtube.com/@StoriesXray"
 SUB = CHANNEL + "?sub_confirmation=1"
 NAME = "Stories X-Ray"
+INDEXNOW_KEY = "7e07299ef8cfa1d9164be2329c4b3e35"  # IndexNow (Bing, Yandex; Bing feeds ChatGPT search). Public by design.
 TAG = re.compile(r"\[[a-z ]+\]\s*")
 e = html.escape
 
@@ -152,6 +153,9 @@ def build():
         llms.append("")
     open(f"{OUT}/llms.txt", "w").write("\n".join(llms))
     open(f"{OUT}/.nojekyll", "w").write("")
+    open(f"{OUT}/{INDEXNOW_KEY}.txt", "w").write(INDEXNOW_KEY)
+    json.dump(dict(host="storiesxray-commits.github.io", key=INDEXNOW_KEY, keyLocation=f"{BASE}/{INDEXNOW_KEY}.txt", urlList=urls),
+              open(f"{ROOT}/indexnow.json", "w"))
     print(f"site: {len(vids)} video pages -> {OUT}")
 
 
