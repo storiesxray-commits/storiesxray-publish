@@ -1,0 +1,194 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Your Fingers Have No Muscles (So What Moves Them?)",
+  "description": "Do your fingers have muscles? Not a single one that moves them.\n\nYour fingers contain bones, tendons, ligaments, nerves and blood vessels, but no muscles that move them (the only muscle cells in there are tiny ones that raise the hairs). Every bend and wiggle is powered by muscles in your forearm and your palm, which pull on long tendons running through your wrist into your fingers, like strings on a puppet.\n\nTry it: put your arm on a table, wiggle your fingers and watch your forearm move. 👇 Did you see it?\n\nSources:\n- Wikipedia, Finger (anatomy: fingers do not contain muscles other than arrector pili; the muscles that move them are in the palm and forearm): https://en.wikipedia.org/wiki/Finger\n- Today I Found Out, Fingers Don't Contain Muscles: https://www.todayifoundout.com/?p=14585\n- OrthoTree, Normal Hand Anatomy: https://www.orthotree.com/normal-hand-anatomy.html\n\n#fingers #anatomy #humanbody #science",
+  "tags": [
+    "do fingers have muscles",
+    "fingers have no muscles",
+    "how do fingers move",
+    "what moves your fingers",
+    "finger tendons",
+    "forearm muscles",
+    "hand anatomy",
+    "human body facts",
+    "anatomy facts",
+    "science facts",
+    "x-ray",
+    "animation"
+  ],
+  "pinned_comment": "Did you just wiggle your fingers and watch your arm? Be honest 👀",
+  "series": "Body X-Ray",
+  "caption_instagram": "Your fingers have ZERO muscles. 🖐️\n\nEvery move your fingers make is powered by muscles in your forearm and palm, pulling long tendons like strings on a puppet.\n\nTry it: wiggle your fingers and watch your forearm move. Did you see it? 👀\n\nMore on YouTube: @StoriesXray\n\n#fingers #anatomy #humanbody #science",
+  "sources": [
+    {
+      "title": "Wikipedia: Finger — 'Fingers do not contain muscles (other than arrector pili). The muscles that move the finger joints are in the palm and forearm.' Long tendons visible moving at the wrist and back of the hand",
+      "url": "https://en.wikipedia.org/wiki/Finger"
+    },
+    {
+      "title": "Today I Found Out: Fingers Don't Contain Muscles — intrinsic (palm) and extrinsic (forearm) muscles, flexor digitorum superficialis and profundus",
+      "url": "https://www.todayifoundout.com/?p=14585"
+    },
+    {
+      "title": "OrthoTree: Normal Hand Anatomy — 'the fingers contain no muscles'; muscles connected to finger bones by tendons",
+      "url": "https://www.orthotree.com/normal-hand-anatomy.html"
+    }
+  ],
+  "notes": "Extra short test requested by the owner on 18/11/2026 (Analytics: every Short stalls at ~1,300 views, 0 shares, 58-70% viewed). Test arm: ULTRA-SHORT ~15.5 s with an explicit loop ending ('See? Because...' -> hook). Outside E2 (doesn't count for E2). Voice fixed to xr4 (owner favourite). Facts: no muscles that move the fingers inside the fingers (only arrector pili, mentioned in the description); movement from extrinsic forearm muscles (long flexors/extensors) and intrinsic palm muscles via tendons. Script says 'Muscles way up here pull long tendons' over the forearm and the title/description mention the palm too. The forearm visibly moves when you wiggle your fingers (Wikipedia: tendons observed moving under the skin at the wrist; forearm muscle bellies contract). Schematic x-ray hand, not graphic.",
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "N101",
+    "score": 100
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr4",
+    "duration": "ultra_short_loop"
+  },
+  "thumbnail": {
+    "time": 1.6,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      200,
+      430,
+      880,
+      1000
+    ],
+    "circle": [
+      540,
+      720,
+      330
+    ],
+    "rays": [
+      540,
+      720
+    ],
+    "tilt": -4,
+    "badge": "TRY IT",
+    "badge_x": 800,
+    "badge_y": 160,
+    "text_y": 1100,
+    "lines": [
+      {
+        "text": "ZERO",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "MUSCLES",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#22D3EE",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "NO MUSCLES",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "IN HERE?!",
+            "color": "#FFD60A"
+          }
+        ],
+        "badge": "X-RAY",
+        "glow": "#FF3EA5"
+      },
+      {
+        "time": 7.6,
+        "protect": [
+          340,
+          720,
+          740,
+          1300
+        ],
+        "circle": [
+          540,
+          1000,
+          250
+        ],
+        "rays": [
+          540,
+          1000
+        ],
+        "text_y": 150,
+        "badge_x": 850,
+        "badge_y": 1420,
+        "lines": [
+          {
+            "text": "IT'S YOUR",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "FOREARM",
+            "box": "#FF3B30"
+          }
+        ],
+        "glow": "#FFD60A",
+        "badge": "X-RAY"
+      }
+    ],
+    "pick": 0
+  },
+  "social_thumbnail": {
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      220,
+      520,
+      860,
+      1000
+    ],
+    "circle": [
+      540,
+      760,
+      240
+    ],
+    "rays": [
+      540,
+      760
+    ],
+    "badge": "TRY IT",
+    "badge_x": 800,
+    "badge_y": 340,
+    "text_y": 1060
+  },
+  "seo": {
+    "keyword": "do fingers have muscles",
+    "playlist": "Weird Body Facts You Never Knew",
+    "title_alts": [
+      "Your Fingers Have Zero Muscles",
+      "What Actually Moves Your Fingers?"
+    ],
+    "questions": [
+      {
+        "q": "Do fingers have muscles?",
+        "a": "No. Fingers have bones, tendons, ligaments, nerves and blood vessels, but no muscles that move them. The muscles that move your fingers are in your forearm and palm."
+      },
+      {
+        "q": "What moves your fingers?",
+        "a": "Muscles in your forearm and palm. They pull on long tendons that run through your wrist into your fingers, like strings on a puppet."
+      },
+      {
+        "q": "Why does my forearm move when I wiggle my fingers?",
+        "a": "Because the muscles that bend and straighten your fingers sit in your forearm, so you can see them contract and the tendons slide when your fingers move."
+      }
+    ]
+  }
+}

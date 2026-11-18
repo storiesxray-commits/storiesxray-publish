@@ -1,0 +1,14 @@
+{
+ "lang": "en-us",
+ "voice": "xr4",
+ "sentences": [
+  ["Your fingers have ZERO muscles.", 0.12],
+  ["[gasps] Not one!", 0.2],
+  ["So what moves them?", 0.12],
+  ["[shouting] Your forearm!", 0.15],
+  ["Muscles way up here pull long tendons...", 0.1],
+  ["like strings on a puppet!", 0.3],
+  ["[whispers] Wiggle your fingers. Watch your arm.", 0.45],
+  ["[laughs] See? Because...", 0.05]
+ ]
+}

@@ -1,0 +1,55 @@
+{
+  "content_id": "xr-012",
+  "repo_id": "xr012-finger-muscles",
+  "sha256": "5f2fc07b06ab72ae6a1cca12370ff174f0f286be01736fa0993ac5bfed047cca",
+  "file_size_bytes": 9056026,
+  "duration_seconds": 15.7,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4495751,
+  "faststart": true,
+  "title_youtube": "Your Fingers Have No Muscles (So What Moves Them?)",
+  "description_youtube": "Do your fingers have muscles? Not a single one that moves them.\n\nYour fingers contain bones, tendons, ligaments, nerves and blood vessels, but no muscles that move them (the only muscle cells in there are tiny ones that raise the hairs). Every bend and wiggle is powered by muscles in your forearm and your palm, which pull on long tendons running through your wrist into your fingers, like strings on a puppet.\n\nTry it: put your arm on a table, wiggle your fingers and watch your forearm move. 👇 Did you see it?\n\nSources:\n- Wikipedia, Finger (anatomy: fingers do not contain muscles other than arrector pili; the muscles that move them are in the palm and forearm): https://en.wikipedia.org/wiki/Finger\n- Today I Found Out, Fingers Don't Contain Muscles: https://www.todayifoundout.com/?p=14585\n- OrthoTree, Normal Hand Anatomy: https://www.orthotree.com/normal-hand-anatomy.html\n\n#fingers #anatomy #humanbody #science",
+  "caption_instagram": "Your fingers have ZERO muscles. 🖐️\n\nEvery move your fingers make is powered by muscles in your forearm and palm, pulling long tendons like strings on a puppet.\n\nTry it: wiggle your fingers and watch your forearm move. Did you see it? 👀\n\nMore on YouTube: @StoriesXray\n\n#fingers #anatomy #humanbody #science",
+  "tags": [
+    "do fingers have muscles",
+    "fingers have no muscles",
+    "how do fingers move",
+    "what moves your fingers",
+    "finger tendons",
+    "forearm muscles",
+    "hand anatomy",
+    "human body facts",
+    "anatomy facts",
+    "science facts",
+    "x-ray",
+    "animation"
+  ],
+  "series": "Body X-Ray",
+  "sources": [
+    {
+      "title": "Wikipedia: Finger — 'Fingers do not contain muscles (other than arrector pili). The muscles that move the finger joints are in the palm and forearm.' Long tendons visible moving at the wrist and back of the hand",
+      "url": "https://en.wikipedia.org/wiki/Finger"
+    },
+    {
+      "title": "Today I Found Out: Fingers Don't Contain Muscles — intrinsic (palm) and extrinsic (forearm) muscles, flexor digitorum superficialis and profundus",
+      "url": "https://www.todayifoundout.com/?p=14585"
+    },
+    {
+      "title": "OrthoTree: Normal Hand Anatomy — 'the fingers contain no muscles'; muscles connected to finger bones by tendons",
+      "url": "https://www.orthotree.com/normal-hand-anatomy.html"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "14:06",
+  "checks_failed": []
+}
