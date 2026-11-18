@@ -19,11 +19,15 @@ Retención inicial = `engagedViews / views` (≈ "Stayed to watch"). Objetivo �
 - **Exploración de voces:** el optimizador crea un narrador nuevo con `tools/new_voice.py` + Make **XR-08 (7068664)** **cada 3 días**, o antes si hay un ganador claro (≥ 3 puntos arriba con ≥ 3 videos cada uno): el nuevo es una versión TODAVÍA MÁS histriónica del ganador. Máximo 1 por día. Descripción siempre ORIGINAL: nunca imitar a una persona real o famosa, nunca clonar, nunca Voice Library. Si XR-08 falla por límite de voces (hay voces de otro proyecto, `gt1`), no borrar nada: retirar al peor de la rotación y avisar a la dueña.
 - Último narrador creado: 18/11/2026 (xr7, xr8, xr9, con tonadas regionales). Próxima alta: desde el 21/11/2026, salvo ganador claro antes.
 
-## Experimento activo
-- **E2 — Duración (abierto 17/11/2026 por el optimizador).** Brazo por id: **impar → LARGO 36–40 s**, **par → CORTO 28–32 s** (dentro del rango de AUTOPILOT §2b; alternar par/impar ya cumple la regla de variedad ±2 s de §3c). Anotar en `meta.json` → `experiment.duration` = `"long"` o `"short"` además de `opening` y `voice`.
-- Por qué: en los videos viejos de 41–47 s el % reproducido promedio es ~64 % y la retención inicial ~55 % (YouTube Analytics 17/11). La duración es la palanca más directa para el % reproducido.
-- Desde: el primer video producido después del 17/11/2026 20:47 ART. Los videos ya hechos (xr007–xr010) no cuentan.
-- Cierre: ≥ 3 videos por brazo con ≥ 300 vistas y ≥ 48 h. Gana un brazo si supera al otro por ≥ 3 puntos de retención inicial sin bajar el % reproducido más de 5 puntos; sin diferencia clara a los 6 por brazo → queda el corto (más simple).
+## Experimento activo — MEZCLA (pedido de la dueña, 18/11/2026; reemplaza a E2)
+La dueña quiere que se pruebe MUCHO a la vez y que el optimizador analice como una persona: nada de un solo experimento lento. Cada video lleva una combinación de variables asignada por id (así se mezclan sin repetirse en bloque) y el optimizador mide el efecto de cada variable por separado.
+- **Duración** (id mod 3): 0 → **CORTO 15–22 s** (final en bucle), 1 → **MEDIO 25–32 s**, 2 → **LARGO 36–42 s**. `experiment.duration` = "short" | "mid" | "long".
+- **Tipo de gancho** (id mod 2): 0 → dato imposible / cifra; 1 → pregunta o desafío directo al espectador. `experiment.hook_type`.
+- **Narrador:** rotación de `tools/voices.json` (aparte).
+- **Tipo de tema:** "news" (actualidad de horas o días, ver AUTOPILOT §1b) vs "evergreen". `experiment.topic_type`.
+- Nunca se usa un tema no viral para "probar" nada: todas las combinaciones van sobre temas que pasaron el filtro de AUTOPILOT §1a.
+- **Cómo decide el optimizador:** tabla por variable (duración, gancho, narrador, tema, categoría, horario) con n, retención inicial, % visto, vistas a 48 h, compartidos y subs/1.000. Una variable "gana" cuando tiene ≥ 3 videos por nivel con ≥ 300 vistas y ≥ 48 h y saca ≥ 3 puntos de ventaja sin perder más de 5 de % visto; entonces el ganador pasa a pesar doble (por ejemplo, 2 de cada 3 videos con esa duración) pero se sigue probando un 30 % de lo otro para no quedarse ciego. Si el tema explica la diferencia mejor que la variable, lo dice y no concluye.
+- Desde: el primer video producido después del 18/11/2026 20:47 ART.
 
 ## Próximos experimentos (en orden; uno a la vez)
 1. Tipo de gancho: dato imposible vs pregunta directa vs contradicción ("It's not X").
@@ -37,6 +41,7 @@ Retención inicial = `engagedViews / views` (≈ "Stayed to watch"). Objetivo �
 ## Historial de decisiones
 | Fecha | Cambio | Motivo / datos |
 |---|---|---|
+| 18/11/2026 (dueña) | E2 reemplazado por MEZCLA multivariable (duración corto/medio/largo, tipo de gancho, noticia vs evergreen, narrador) + 1 de cada 3 videos es noticia de horas/días | Pedido de la dueña: probar muchas cosas, analizar como una persona, y actualidad ultra buscada cada 2–3 videos, siempre ultra viral |
 | 17/11/2026 (optimizador) | Abre E2 duración (impar 36–40 s / par 28–32 s). Voz como rotación permanente aparte; reglas de narradores unificadas (4–6 activos, alta cada 3 días, retiro con ≥ 3 videos). Sin cambios de pesos ni narrador nuevo | Analytics 17/11: solo hay 3 videos viejos (kokoro, 41–47 s) con datos: retención inicial 49–65 % (prom. 55,4 %), % reproducido ~64 %. Ningún video ElevenLabs publicado todavía (el primero, xr009, sale el 18/11) → sin datos de narradores. Ya se crearon 2 voces hoy |
 | 17/11/2026 | Altas xr5 Breathless Hype Host y xr6 Total Meltdown; xr4 con peso doble; xr3 fuera de rotación; voz nueva cada 3 días | Pedido de la dueña: le encanta la voz loca y exaltada de xr4 (xr007) y quiere probar más voces así y medir cuál rinde |
 | 17/11/2026 | Alta xr4 Absolute Lunatic (XR-08, estabilidad 0.0) | Pedido de la dueña: probar una voz todavía más histriónica |

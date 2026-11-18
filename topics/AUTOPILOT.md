@@ -26,6 +26,15 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 3. **Ultra perfecto:** después de producir, cero errores de QUALITY.md, miniatura que se lee en chico, gancho dicho antes de 1,5 s, datos con 2 fuentes. Cualquier duda → `"status": "hold"` con `hold_reason`. Nunca publicar "casi bien".
 Ante la duda en cualquiera de las tres: NO se publica.
 
+## 1b. NOTICIA CALIENTE cada 3 videos (regla de la dueña, 18/11/2026 — OBLIGATORIA)
+"Que cada dos o tres videos uno sea muy muy actual, ultra buscado, que haya pasado hace horas o días."
+- **Cuándo:** si el número del id nuevo es múltiplo de 3 (xr015, xr018, xr021…) **o** si ninguno de los últimos 2 videos producidos fue `topic_type: "news"`. En ese caso NO se usa la cola: se busca una noticia.
+- **Cómo buscar (WebSearch, mode extended):** lo que está explotando en EE. UU. en las últimas 24–72 h: Google Trends "Trending now" (EE. UU.), lo más leído de AP/Reuters/CNN/NYT/BBC, tendencias de YouTube/X/Reddit. Elegir la que más se busca Y que se pueda contar con el estilo del canal (dato increíble, récord, ciencia, tecnología/IA, marcas, espacio, animales, rarezas, deportes con un dato loco).
+- **Fuera siempre:** política partidaria, elecciones con candidatos, guerras, crímenes, muertes o tragedias como tema central, salud con consejos médicos, rumores sin confirmar, y todo lo que necesite caras reales, logos o imágenes de terceros.
+- Tiene que pasar el filtro §1a igual que cualquier tema (ultra viral, ultra buscado, ultra perfecto) y verificarse con **2 fuentes serias de las últimas 72 h**. Si no hay ninguna noticia que pase, usar el tema de la cola y anotarlo en el resumen.
+- Agregarla a `queue_v3.json` con id `X` + fecha (ej. `X1119`), `status: "done"` y `topic_type: "news"`; en `meta.json` → `experiment.topic_type = "news"`.
+- **Publicación rápida (la noticia no puede esperar el turno de XR-01):** después de `handoff.py` y push, cargar el registro en el ledger de Make 202379 a mano como EXTRA (procedimiento "Publicación inmediata" de `claude/ESTADO_AUTOPUBLISHER.md`: clave `xr-NNN`, `yt_status: YT_NEW`, `global_status: QUEUED`, `ig_status: IG_READY`, `scheduled_at_utc` = `ig_scheduled_at_utc` = la próxima franja buena de EE. UU. (11:40–14:20 o 16:10–20:50 hora de Nueva York) que esté a ≥ 65 min, SIEMPRE con `.000Z`, `video_url`/`social_video_url`/`thumbnail_url` raw de GitHub y `sha256`), y correr **XR-02 (7050624)** con scenarios_run. Verificar en el ledger que quedó `YT_SCHEDULED`. Facebook e Instagram salen solos a la misma hora (XR-03).
+
 ## 2. Verificar los datos ANTES de escribir
 - Buscar en la web y abrir fuentes primarias u oficiales (la "FUENTE PARA INVESTIGAR" es una pista, no un fact-check).
 - Seguir el CRITERIO EDITORIAL del banco: el gancho puede ser dramático, el dato no. En muertes, crímenes, salud o empresas: precisar quién hizo qué, incluir el desenlace y no atribuir culpas no probadas.
