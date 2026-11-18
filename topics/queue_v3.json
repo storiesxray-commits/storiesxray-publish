@@ -9,6 +9,132 @@
  "sources": "B = original 100-idea bank (topics/BANK_100.txt), A/C = owner lists 21-60 / 61-100 (topics/BANK_2.txt), R = owner reserves; N = owner list '100 ideas con potencial de viralidad extrema' (16/11/2026), H = owner list '50 hooks' (16/11/2026)",
  "items": [
   {
+   "id": "J01",
+   "title_es": "Jensen Huang: de lavaplatos en Denny's a fundar Nvidia en un booth de Denny's",
+   "hook": "He washed dishes at Denny's. Then he built Nvidia in a Denny's booth.",
+   "reveal": "A los 15 lavaba platos en un Denny's de Portland; en 1993 fundó Nvidia con Malachowsky y Priem en un booth del Denny's de Berryessa Rd, San José (hoy con placa). Verificar el valor actual de Nvidia el día de producción.",
+   "note": "PEDIDO DE LA DUEÑA 18/11: publicar el 19 o 20/11 como EXTRA (ledger manual, procedimiento de ESTADO_AUTOPUBLISHER), no esperar el turno de XR-01. Persona real: solo hechos verificados, sin logos ni imitar su cara (silueta genérica con campera de cuero). Fuentes: blogs.nvidia.com/blog/nvidia-dennys-trillion, Benzinga, Fortune.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "business",
+   "status": "todo"
+  },
+  {
+   "id": "N102",
+   "title_es": "No podés tararear con la nariz tapada",
+   "hook": "Pinch your nose and hum. You can't.",
+   "reveal": "Con la boca cerrada el aire del zumbido sale por la nariz; tapada, el sonido se corta en un segundo.",
+   "note": "Interactivo: que el espectador lo pruebe.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N103",
+   "title_es": "No podés respirar y tragar al mismo tiempo",
+   "hook": "Try to swallow and breathe at the same time.",
+   "reveal": "La epiglotis cierra la vía aérea al tragar (apnea de deglución).",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N104",
+   "title_es": "Nunca vas a ver tus ojos moverse en un espejo",
+   "hook": "You will never see your own eyes move.",
+   "reveal": "Supresión sacádica: mirá un ojo y después el otro en el espejo; el cerebro corta la visión durante el movimiento.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "mind",
+   "status": "todo"
+  },
+  {
+   "id": "N105",
+   "title_es": "Tus ojos ven el mundo al revés",
+   "hook": "Your eyes see the world upside down.",
+   "reveal": "La imagen en la retina está invertida; el cerebro la da vuelta.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N106",
+   "title_es": "Tuviste cola antes de nacer",
+   "hook": "You had a tail. Before you were born.",
+   "reveal": "El embrión humano tiene cola alrededor de la semana 4-5; queda el coxis.",
+   "note": "Esquemático, nada gráfico.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N107",
+   "title_es": "Naciste con ~300 huesos y ahora tenés 206",
+   "hook": "You were born with 300 bones. Where did 94 go?",
+   "reveal": "Muchos huesos del bebé se fusionan (cráneo, sacro, etc.).",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N108",
+   "title_es": "Cada vez que recordás algo, lo cambiás",
+   "hook": "Every time you remember something, you change it.",
+   "reveal": "Reconsolidación de la memoria (Nader 2000) y falsos recuerdos (Loftus).",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "mind",
+   "status": "todo"
+  },
+  {
+   "id": "N109",
+   "title_es": "Tu ADN estirado llegaría a Plutón",
+   "hook": "Your DNA could reach Pluto. And back.",
+   "reveal": "~2 m de ADN por célula x billones de células; verificar cifras exactas.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body",
+   "status": "todo"
+  },
+  {
+   "id": "N110",
+   "title_es": "Cleopatra vivió más cerca del iPhone que de las pirámides",
+   "hook": "Cleopatra lived closer to the iPhone than to the pyramids.",
+   "reveal": "Gran Pirámide ~2560 a. C.; Cleopatra murió en el 30 a. C.; iPhone 2007.",
+   "note": "Sin logos de Apple: teléfono genérico.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "history",
+   "status": "todo"
+  },
+  {
+   "id": "N111",
+   "title_es": "Tu cerebro borra tu nariz de lo que ves",
+   "hook": "Your nose is in everything you see. Your brain hides it.",
+   "reveal": "La nariz siempre está en el campo visual y el cerebro la ignora.",
+   "note": "Revisar que no duplique N12 antes de producir.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "mind",
+   "status": "todo"
+  },
+  {
    "id": "N01",
    "title_es": "¿Existe alguien con tu misma cara?",
    "hook": "8 billion people. How many have YOUR face?",
@@ -1420,6 +1546,29 @@
    "score": 80,
    "cat": "animal",
    "rank": 100
+  },
+  {
+   "id": "N101",
+   "title_es": "Tus dedos no tienen músculos",
+   "hook": "Your fingers have ZERO muscles.",
+   "status": "done",
+   "video_id": "xr012-finger-muscles",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body"
+  },
+  {
+   "id": "S01",
+   "title_es": "Senado de EE. UU.: Wyoming y California tienen 2 senadores cada uno",
+   "hook": "Wyoming has 2 senators. So does California.",
+   "reveal": "Cada estado tiene 2 senadores sin importar su población (Constitución, Gran Compromiso de 1787). Verificar poblaciones del Censo.",
+   "note": "PEDIDO DE LA DUEÑA 18/11: publicar ~25/11 como EXTRA. Cero política partidaria: ni partidos, ni candidatos, ni opiniones; solo cómo funciona el sistema. Hashtags neutros (#ussenate #constitution #civics #history).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "history",
+   "status": "todo"
   }
  ],
  "dropped_low_score": [
@@ -2299,5 +2448,11 @@
   ],
   "how": "Score a new idea by comparing it to these anchors, not in the abstract. 95-100 = as strong as the anchors above: it is about the viewer or something everyone knows, the hook is one line under ~10 words that a US teenager would stop for, and the payoff is a real, checkable fact. If in doubt between two scores, take the lower."
  },
- "scout_log": []
+ "scout_log": [],
+ "chat_log": [
+  {
+   "date": "2026-11-18",
+   "change": "J01 al tope (extra 19-20/11), N102-N111 nuevos de 100, S01 Senado (~25/11, sin política partidaria), N101 hecho = xr012 (prueba ultra corta en bucle)."
+  }
+ ]
 }
