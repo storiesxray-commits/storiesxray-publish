@@ -137,5 +137,18 @@
   "id": "xr008-mirror-face",
   "duration_s": 34.29,
   "status": "ready",
-  "publish_time_local": "16:16"
+  "publish_time_local": "16:16",
+  "seo": {
+    "keyword": "why do i look different in the mirror",
+    "playlist": "Psychology Facts: Why Your Brain Does That",
+    "title_alts": [
+      "Why You Look Different in Photos Than in the Mirror",
+      "You've Never Seen Your Real Face"
+    ],
+    "questions": [
+      "Why do I look different in the mirror than in photos?",
+      "Is the mirror or the camera more accurate?",
+      "Why do I prefer my mirror image?"
+    ]
+  }
 }

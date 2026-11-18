@@ -53,6 +53,10 @@ for s in meta.get("sources", []):
     if not str(s.get("url", "")).startswith("https://"): errs.append("source_url_not_https")
     elif s["url"] not in meta.get("description", ""): errs.append("source_url_not_in_description")
 if "<" in meta.get("title", "") or ">" in meta.get("title", "") or len(meta.get("title", "")) > 100: errs.append("title_invalid")
+# Search positioning gate (owner request 18/11/2026, SEO.md): keyword, long-tail tags, alt titles, playlist, questions
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import seo as _seo
+errs += _seo.check(meta)
 if meta.get("status") != "hold":
     meta["status"] = "hold" if errs else "ready"
     if errs: meta["hold_reason"] = "handoff checks failed: " + ", ".join(errs)

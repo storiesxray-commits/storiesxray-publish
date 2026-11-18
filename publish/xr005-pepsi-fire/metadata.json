@@ -119,5 +119,18 @@
   "id": "xr005-pepsi-fire",
   "duration_s": 41.09,
   "status": "ready",
-  "publish_time_local": "19:03"
+  "publish_time_local": "19:03",
+  "seo": {
+    "keyword": "michael jackson pepsi commercial fire",
+    "playlist": "Crazy Pop Culture Stories You Never Heard",
+    "title_alts": [
+      "Michael Jackson's Hair Caught Fire on Set (1984)",
+      "What Really Happened at the 1984 Pepsi Commercial"
+    ],
+    "questions": [
+      "What happened to Michael Jackson in the Pepsi commercial?",
+      "How badly was Michael Jackson burned in 1984?",
+      "What did Michael Jackson do with the Pepsi settlement?"
+    ]
+  }
 }

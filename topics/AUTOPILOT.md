@@ -50,6 +50,7 @@ Dato del canal (YouTube Studio, 16/11): **solo 58–62 % "Stayed to watch"** en 
 - Inglés de EE. UU. Unidades estadounidenses primero (feet, miles, °F, dólares) y la métrica solo si suma. Referencias que un estadounidense entienda sin contexto.
 - Cuando el tema es de otro país, el gancho tiene que ser universal ("A lake killed 1,700 people overnight"), no local.
 - Títulos y tags pensados para búsquedas en inglés de EE. UU.
+- **Posicionamiento extremo (18/11/2026): seguir `SEO.md`.** Bloque `seo` obligatorio en `meta.json` (keyword de EE. UU., 2 títulos alternativos, playlist, 3 preguntas); `tools/seo.py` lo controla y `handoff.py` pone `hold` si falta algo.
 
 ## 3c. Variedad (originalidad, no plantilla)
 La política de YouTube sobre contenido "inauthentic" (producido en masa o repetitivo) es el riesgo real para la monetización, no el horario de subida. Cada video tiene que verse hecho a mano. Comparalo con los 3 anteriores (`videos/`, `publish/*/metadata.json`) y cambiá:

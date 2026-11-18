@@ -133,5 +133,18 @@
   "id": "xr010-phone-germs",
   "duration_s": 30.13,
   "status": "ready",
-  "publish_time_local": "12:41"
+  "publish_time_local": "12:41",
+  "seo": {
+    "keyword": "phone dirtier than toilet seat",
+    "playlist": "Weird Body Facts You Never Knew",
+    "title_alts": [
+      "How Dirty Is Your Phone, Really?",
+      "Your Phone Has 10x More Germs Than a Toilet"
+    ],
+    "questions": [
+      "Is your phone dirtier than a toilet seat?",
+      "How much bacteria is on a phone?",
+      "How do you clean your phone safely?"
+    ]
+  }
 }

@@ -12,6 +12,7 @@ Este repo produce los Shorts del canal Stories X-Ray (YouTube @StoriesXray, Inst
 - Si un video no cumple QUALITY.md o hay una duda de datos que no se puede resolver, poner `"status": "hold"` en vez de publicarlo.
 - **YouTube, Instagram y Facebook salen siempre juntos** (pedido de la dueña, 17/11/2026): a la misma hora o muy cerca, nunca uno solo. `platforms` siempre con las 3 (lo fuerza `handoff.py`) y `video_social.mp4` obligatorio; XR-03 publica el Reel a la hora de YouTube.
 - Producción automática: seguir `topics/AUTOPILOT.md`.
+- Posicionamiento en búsquedas (YouTube, Google, IAs) para EE. UU. y los países de habla inglesa que más pagan: seguir `SEO.md`.
 - Make: cuenta de Greentech. Crear solo escenarios nuevos para el canal y no tocar nada existente.
 
 ## Comandos
