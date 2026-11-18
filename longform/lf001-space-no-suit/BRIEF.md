@@ -10,6 +10,14 @@ Tema elegido por la dueña el 18/11/2026 (descartó la inundación de melaza de 
 - **Rayos X puro:** pulmones, sangre, cerebro y corazón por dentro, segundo a segundo.
 - **Embudo:** el Short `xr001-space-no-suit` (ya publicado, ~1.250 vistas) pasa a ser el tráiler: video relacionado = este largo.
 
+## Publicación y prueba (decisión de la dueña, 18/11/2026)
+- Es una **prueba única**: según los resultados se decide si pasar ElevenLabs a Creator para seguir con largos.
+- **Fecha: domingo 29/11/2026, 10:00 ET (12:00 Córdoba)** en YouTube y Facebook completo + tráiler vertical en Instagram a la misma hora. Los estudios grandes de 2026 (Buffer, vidIQ) ponen el domingo a la mañana como la mejor franja para largos en EE. UU., y es el fin de semana largo de Acción de Gracias. Se descartó el sábado 21/11: no da el tiempo para hacerlo perfecto.
+- Subido a YouTube como privado con fecha programada **a más tardar el viernes 27/11** (procesamiento en 1440p + revisión de la dueña en YouTube Studio).
+- Shorts: se mantienen en 1 por día hasta la decisión, para que los créditos del Starter alcancen con margen.
+- **Medición:** a las 48 h (martes 1/12) y a los 7 días (domingo 6/12): vistas, % visto en promedio, retención a los 30 s, suscriptores, horas de reproducción y CTR de la miniatura (si la API no lo da, pedirlo a la dueña por email).
+- **Regla de decisión a los 7 días:** sigue con Creator si cumple al menos 2 de 3: % visto ≥ 40 %, retención a los 30 s ≥ 65 %, CTR ≥ 4 %. Si no, se analiza qué falló antes de gastar más.
+
 ## Empaque
 **Títulos:**
 1. You Have 15 Seconds in Space Without a Suit
