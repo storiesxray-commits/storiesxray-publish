@@ -26,15 +26,16 @@
    "id": "N17",
    "title_es": "Nunca escuchaste tu voz como la escuchan los demás",
    "hook": "You've never heard your real voice.",
-   "status": "todo",
-   "video_id": null,
+   "status": "done",
+   "video_id": "xr011-real-voice",
    "reveal": "Oís tu voz por aire + conducción ósea (graves extra); la grabación es la que oyen los demás.",
    "note": "Owner idea #17 = hook #03. Claude can't hear audio: keep the sound demo simple (low-pass vs. plain).",
    "viral": 10,
    "hook_power": 10,
    "score": 100,
    "cat": "body",
-   "rank": 2
+   "rank": 2,
+   "produced": "2026-11-18"
   },
   {
    "id": "A30",

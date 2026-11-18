@@ -40,6 +40,7 @@ publish/<id>/         lo que Make publica
 | xr008-mirror-face | Nunca viste tu cara real: el espejo te invierte (N08, puntaje 100; voz ElevenLabs xr1; extra pedido por la dueña) | `ready` (17/11/2026) |
 | xr009-gta-flu | GTA 6: soldados que se reengancharon para jugarlo y la "GTA flu" (pedido de la dueña, puntaje 100; voz ElevenLabs xr2) | `ready`, extra cargado a mano en el ledger para el miércoles 18/11 17:34 NY |
 | xr010-phone-germs | Tu celular está más sucio que un inodoro (opción 5 elegida por la dueña, puntaje 100; voz xr4) | `ready`, extra cargado a mano en el ledger para el jueves 19/11 12:41 NY |
+| xr011-real-voice | Nunca escuchaste tu voz real (cola v3 N17, puntaje 100; voz ElevenLabs xr6; E2 brazo largo, 36,9 s) | `ready`, horario lo elige Make (21:56 NY) |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).

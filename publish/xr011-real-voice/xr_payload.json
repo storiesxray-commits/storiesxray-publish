@@ -1,0 +1,63 @@
+{
+  "content_id": "xr-011",
+  "repo_id": "xr011-real-voice",
+  "sha256": "e73173b92fda9d2f15b8023dbc73c16b5b0403e3c1ab1bf530fc5a8126253e56",
+  "file_size_bytes": 21853020,
+  "duration_seconds": 36.887,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4617169,
+  "faststart": true,
+  "title_youtube": "Why Your Voice Sounds So Weird on Recordings",
+  "description_youtube": "Does your recorded voice make you cringe? Here's why it sounds like a stranger.\n\nWhen you talk, you hear yourself two ways: through the air AND through vibrations in your skull that reach your inner ear directly. Your head boosts the low frequencies, so to you, your voice sounds deeper and fuller. A recording only captures the air version, the one everyone else hears.\n\nThe twist: in a 2013 study (Hughes & Harrison, Perception), people rated voice clips without knowing their own voice was mixed in, and rated their own voice as more attractive than others did and more than other people's voices.\n\nWould you recognize your own voice in a blind test? 👇\n\nSources:\n- Scientific American, Why does my voice sound so different when it is recorded and played back? (Timothy Hullar, Washington University School of Medicine): https://scientificamerican.com/article/why-does-my-voice-sound-different\n- Popular Science, Why your voice sounds different on recordings (Ben Hornsby, Vanderbilt University): https://www.popsci.com/scitech/article/2009-06/why-your-voice-sounds-different-recordings/\n- ScienceDaily (2013), Hate the sound of your voice? Not really (Albright College): https://sciencedaily.com/releases/2013/09/130912112733.htm\n- Hearing Review (2013), Study says we actually like our own voice: https://hearingreview.com/inside-hearing/research/study-says-we-actually-like-our-own-voice\n- Discover Magazine (2021), Why the sound of your voice makes you cringe: https://www.discovermagazine.com/why-the-sound-of-your-voice-makes-you-cringe-42563\n\n#voice #science #hearing #psychology",
+  "caption_instagram": "You've never heard your real voice. 🎙️\n\nWhen you talk, your skull vibrates and sends the sound straight to your inner ear, boosting the low notes. So in your head you sound deeper. A recording only catches the air: that's the voice everyone else hears.\n\nPlot twist: in a 2013 study, people unknowingly rated their own recorded voice as more attractive than other people's.\n\nDo you cringe at your own voice?\n\nFull story on YouTube: @StoriesXray\n\n#voice #science #hearing #psychology",
+  "tags": [
+    "why does my voice sound different on recordings",
+    "recorded voice",
+    "hate my voice on recording",
+    "voice sounds different",
+    "bone conduction",
+    "how others hear your voice",
+    "your real voice",
+    "voice confrontation",
+    "inner ear",
+    "psychology facts",
+    "science facts",
+    "animation"
+  ],
+  "series": "Body X-Ray",
+  "sources": [
+    {
+      "title": "Scientific American: Why does my voice sound so different when it is recorded and played back? (Timothy E. Hullar, Washington University School of Medicine) — bone conduction, head enhances low frequencies, recording removes that path",
+      "url": "https://scientificamerican.com/article/why-does-my-voice-sound-different"
+    },
+    {
+      "title": "Popular Science (2009): Why your voice sounds different on recordings (Ben Hornsby, Vanderbilt University) — skull vibrations lower the pitch you hear; recordings are air only",
+      "url": "https://www.popsci.com/scitech/article/2009-06/why-your-voice-sounds-different-recordings/"
+    },
+    {
+      "title": "ScienceDaily (12 Sep 2013): Albright College / Penn State Harrisburg study, Hughes & Harrison, Perception — 80 participants rated their own voice more attractive without knowing it",
+      "url": "https://sciencedaily.com/releases/2013/09/130912112733.htm"
+    },
+    {
+      "title": "Hearing Review (2013): Study says we actually like our own voice",
+      "url": "https://hearingreview.com/inside-hearing/research/study-says-we-actually-like-our-own-voice"
+    },
+    {
+      "title": "Discover Magazine (29 May 2021): Why the sound of your voice makes you cringe — skull path vs. air; most participants didn't realize their voice was included",
+      "url": "https://www.discovermagazine.com/why-the-sound-of-your-voice-makes-you-cringe-42563"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "21:56",
+  "checks_failed": []
+}

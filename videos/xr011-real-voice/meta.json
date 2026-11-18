@@ -1,0 +1,192 @@
+{
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Why Your Voice Sounds So Weird on Recordings",
+  "description": "Does your recorded voice make you cringe? Here's why it sounds like a stranger.\n\nWhen you talk, you hear yourself two ways: through the air AND through vibrations in your skull that reach your inner ear directly. Your head boosts the low frequencies, so to you, your voice sounds deeper and fuller. A recording only captures the air version, the one everyone else hears.\n\nThe twist: in a 2013 study (Hughes & Harrison, Perception), people rated voice clips without knowing their own voice was mixed in, and rated their own voice as more attractive than others did and more than other people's voices.\n\nWould you recognize your own voice in a blind test? 👇\n\nSources:\n- Scientific American, Why does my voice sound so different when it is recorded and played back? (Timothy Hullar, Washington University School of Medicine): https://scientificamerican.com/article/why-does-my-voice-sound-different\n- Popular Science, Why your voice sounds different on recordings (Ben Hornsby, Vanderbilt University): https://www.popsci.com/scitech/article/2009-06/why-your-voice-sounds-different-recordings/\n- ScienceDaily (2013), Hate the sound of your voice? Not really (Albright College): https://sciencedaily.com/releases/2013/09/130912112733.htm\n- Hearing Review (2013), Study says we actually like our own voice: https://hearingreview.com/inside-hearing/research/study-says-we-actually-like-our-own-voice\n- Discover Magazine (2021), Why the sound of your voice makes you cringe: https://www.discovermagazine.com/why-the-sound-of-your-voice-makes-you-cringe-42563\n\n#voice #science #hearing #psychology",
+  "tags": [
+    "why does my voice sound different on recordings",
+    "recorded voice",
+    "hate my voice on recording",
+    "voice sounds different",
+    "bone conduction",
+    "how others hear your voice",
+    "your real voice",
+    "voice confrontation",
+    "inner ear",
+    "psychology facts",
+    "science facts",
+    "animation"
+  ],
+  "pinned_comment": "Be honest: do you cringe when you hear your own voice on a recording? 🎙️",
+  "series": "Body X-Ray",
+  "caption_instagram": "You've never heard your real voice. 🎙️\n\nWhen you talk, your skull vibrates and sends the sound straight to your inner ear, boosting the low notes. So in your head you sound deeper. A recording only catches the air: that's the voice everyone else hears.\n\nPlot twist: in a 2013 study, people unknowingly rated their own recorded voice as more attractive than other people's.\n\nDo you cringe at your own voice?\n\nFull story on YouTube: @StoriesXray\n\n#voice #science #hearing #psychology",
+  "sources": [
+    {
+      "title": "Scientific American: Why does my voice sound so different when it is recorded and played back? (Timothy E. Hullar, Washington University School of Medicine) — bone conduction, head enhances low frequencies, recording removes that path",
+      "url": "https://scientificamerican.com/article/why-does-my-voice-sound-different"
+    },
+    {
+      "title": "Popular Science (2009): Why your voice sounds different on recordings (Ben Hornsby, Vanderbilt University) — skull vibrations lower the pitch you hear; recordings are air only",
+      "url": "https://www.popsci.com/scitech/article/2009-06/why-your-voice-sounds-different-recordings/"
+    },
+    {
+      "title": "ScienceDaily (12 Sep 2013): Albright College / Penn State Harrisburg study, Hughes & Harrison, Perception — 80 participants rated their own voice more attractive without knowing it",
+      "url": "https://sciencedaily.com/releases/2013/09/130912112733.htm"
+    },
+    {
+      "title": "Hearing Review (2013): Study says we actually like our own voice",
+      "url": "https://hearingreview.com/inside-hearing/research/study-says-we-actually-like-our-own-voice"
+    },
+    {
+      "title": "Discover Magazine (29 May 2021): Why the sound of your voice makes you cringe — skull path vs. air; most participants didn't realize their voice was included",
+      "url": "https://www.discovermagazine.com/why-the-sound-of-your-voice-makes-you-cringe-42563"
+    }
+  ],
+  "notes": "Topic N17 (queue_v3, score 100). Generic people only (random parametric busts), generic mic and phone, cartoon x-ray skull (schematic, not graphic). Facts: own voice = air + bone conduction; bone-conducted sound reaches the cochlea directly through the head and the head enhances lower frequencies (Hullar, Scientific American); skull vibrations lower the pitch you hear, recordings are air only (Hornsby, PopSci). Hughes & Harrison 2013 (Perception, 'I like my voice better'): 80 participants rated voice recordings (counting 1-10) with 3 samples of their own mixed in; they rated their own voice more attractive than other raters did and more favorably than other people's voices; researchers believe most did not recognize their own voice (ScienceDaily, Hearing Review, Discover) -> script says 'Most didn't recognize it'. Star ratings in the cards are illustrative. Queue note asked for a simple sound demo (low-pass vs plain): skipped on purpose because Claude can't listen to verify it; the idea is shown visually (EQ bars, phone with bass cut). E2 duration arm: odd id -> long (36-40 s).",
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "N17",
+    "score": 100
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr6",
+    "duration": "long"
+  },
+  "thumbnail": {
+    "time": 2.4,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      130,
+      380,
+      700,
+      1050
+    ],
+    "circle": [
+      415,
+      715,
+      330
+    ],
+    "rays": [
+      415,
+      715
+    ],
+    "tilt": -5,
+    "badge": "2013 STUDY",
+    "badge_x": 560,
+    "badge_y": 150,
+    "text_y": 1110,
+    "lines": [
+      {
+        "text": "THAT'S NOT",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "YOUR VOICE",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#22D3EE",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "YOUR REAL",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "VOICE?",
+            "color": "#FFD60A"
+          }
+        ],
+        "badge": "NO BASS",
+        "glow": "#FF3EA5"
+      },
+      {
+        "lines": [
+          {
+            "text": "WHAT THEY",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "REALLY HEAR",
+            "color": "#FFD60A"
+          }
+        ],
+        "glow": "#FFD60A"
+      },
+      {
+        "time": 33.8,
+        "protect": [
+          250,
+          530,
+          810,
+          1000
+        ],
+        "circle": [
+          530,
+          760,
+          330
+        ],
+        "rays": [
+          530,
+          760
+        ],
+        "text_y": 130,
+        "badge_x": 800,
+        "badge_y": 1150,
+        "lines": [
+          {
+            "text": "YOU SECRETLY",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "LIKE IT",
+            "box": "#FF3B30"
+          }
+        ],
+        "glow": "#FF3EA5"
+      }
+    ],
+    "pick": 0
+  },
+  "social_thumbnail": {
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      130,
+      380,
+      700,
+      1050
+    ],
+    "circle": [
+      420,
+      750,
+      255
+    ],
+    "rays": [
+      420,
+      750
+    ],
+    "badge": "2013",
+    "badge_x": 760,
+    "badge_y": 272,
+    "text_y": 1070
+  }
+}
