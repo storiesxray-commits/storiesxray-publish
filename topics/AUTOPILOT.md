@@ -11,13 +11,20 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 
 ## 1. Elegir el tema
 - **`topics/queue_v3.json`** (desde el 16/11/2026): las **100 mejores ideas** calificadas por viralidad extrema. Tomar el ítem `todo` del **nivel de puntaje más alto** (95–100, después 90–94, 85–89, 80–84) y, dentro del nivel, el primero en el orden de la lista. La lista ya viene ordenada así, así que en la práctica es el primer `todo`. `queue.json` y `queue_v2.json` quedaron solo como historial.
-- **Puntaje (regla de la dueña):** `score = 5 × viral + 5 × hook_power` (cada uno de 1 a 10). `viral` = curiosidad universal para EE. UU., ganas de compartir/comentar, que hable del espectador; `hook_power` = cuánto frena el scroll la frase de los primeros 1–2 s. Todo lo que está en la cola tiene ≥ 80.
+- **Puntaje (regla de la dueña):** `score = 5 × viral + 5 × hook_power` (cada uno de 1 a 10). `viral` = curiosidad universal para EE. UU., ganas de compartir/comentar, que hable del espectador; `hook_power` = cuánto frena el scroll la frase de los primeros 1–2 s. Desde el 18/11/2026 la cola fue purgada: solo quedan temas ultra virales (ver `rule`); el orden de la lista es el orden de producción.
 - **Usar el `hook` del ítem como frase de apertura** (pantalla + voz en los primeros 1–2 s). Se puede afilar, nunca suavizar. Cumplir la `note` si tiene.
 - **Temas nuevos:** los busca cada semana `topics/SCOUT.md` (100 ideas). Solo entran con `score ≥ 90` **y** `hook_power ≥ 9` (ultra virales con hook extremo), al final de su nivel; si pasan de 100 `todo`, los de menor puntaje salen a `dropped_low_score`. Nunca producir un tema sin puntaje.
 - **Fuera siempre:** ideas que necesitan personajes con copyright o logos de marca para entenderse (ver `excluded_ip`), datos que no se pueden verificar y tragedias o crímenes como tema central.
 - Prefijos: `N` = lista "100 ideas" de la dueña, `H` = lista "50 hooks", `B`/`A`/`C`/`R` = bancos anteriores (`topics/BANK_100.txt`, `topics/BANK_2.txt`).
 - Línea editorial: **bizarro o sorprendente, real y muy compartible**.
 - Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr007-wombat-cubes`).
+
+## 1a. FILTRO ULTRA VIRAL (regla de la dueña, 18/11/2026 — OBLIGATORIO, gana sobre todo lo demás)
+"No nos podemos permitir publicar nada que no sea ultra viral, ultra buscado y ultra perfecto, en todo sentido." Antes de escribir una sola línea, el tema elegido tiene que pasar LAS TRES pruebas; si falla una, marcarlo `dropped` con `drop_reason` y tomar el siguiente:
+1. **Ultra viral:** provoca una reacción fuerte de la lista de `rule` en `queue_v3.json` (asco/horror, historia real increíble, escándalo o dinero de marca conocida, miedo/misterio, debate para comentarios, ilusión para probar ya). La prueba: ¿un adolescente de EE. UU. se lo mandaría a un amigo con "bro look at this"? Un dato curioso tibio NO pasa (rechazado: "Your fingers have ZERO muscles").
+2. **Ultra buscado:** con WebSearch confirmar que la gente lo busca o lo comparte (autocompletado de Google/YouTube, artículos o videos virales recientes, Reddit). Anotar la evidencia en `meta.json` → `seo.demand` (consulta + fuente). Sin evidencia, no pasa.
+3. **Ultra perfecto:** después de producir, cero errores de QUALITY.md, miniatura que se lee en chico, gancho dicho antes de 1,5 s, datos con 2 fuentes. Cualquier duda → `"status": "hold"` con `hold_reason`. Nunca publicar "casi bien".
+Ante la duda en cualquiera de las tres: NO se publica.
 
 ## 2. Verificar los datos ANTES de escribir
 - Buscar en la web y abrir fuentes primarias u oficiales (la "FUENTE PARA INVESTIGAR" es una pista, no un fact-check).
