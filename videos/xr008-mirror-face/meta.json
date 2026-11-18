@@ -45,5 +45,5 @@
     "text_y": 1100,
     "badge_y": 300
   },
-  "seo": {"keyword": "why do i look different in the mirror", "playlist": "Psychology Facts: Why Your Brain Does That", "title_alts": ["Why You Look Different in Photos Than in the Mirror", "You've Never Seen Your Real Face"], "questions": ["Why do I look different in the mirror than in photos?", "Is the mirror or the camera more accurate?", "Why do I prefer my mirror image?"]}
+  "seo": {"keyword": "why do i look different in the mirror", "playlist": "Psychology Facts: Why Your Brain Does That", "title_alts": ["Why You Look Different in Photos Than in the Mirror", "You've Never Seen Your Real Face"], "questions": [{"q": "Why do I look different in the mirror than in photos?", "a": "A mirror flips you left to right, and almost every face is a little asymmetrical, so the face you know best is a reversed one. Photos show the real, unflipped face."}, {"q": "Is the mirror or the camera more accurate?", "a": "The camera shows your face the way other people see it. The mirror shows it reversed."}, {"q": "Why do I prefer my mirror image?", "a": "Because of the mere-exposure effect: we like what we see most. In a 1977 study, people preferred their mirror image, while their friends preferred the true image."}]}
 }

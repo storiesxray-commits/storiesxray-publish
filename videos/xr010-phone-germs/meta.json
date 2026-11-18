@@ -159,9 +159,18 @@
       "Your Phone Has 10x More Germs Than a Toilet"
     ],
     "questions": [
-      "Is your phone dirtier than a toilet seat?",
-      "How much bacteria is on a phone?",
-      "How do you clean your phone safely?"
+      {
+        "q": "Is your phone dirtier than a toilet seat?",
+        "a": "It can be. University of Arizona microbiologist Charles Gerba found phones can carry about 10 times more bacteria than most toilet seats, because toilet seats get cleaned and phones almost never do."
+      },
+      {
+        "q": "How much bacteria is on a phone?",
+        "a": "About 10 times more than most toilet seats, according to Charles Gerba's research. Most of those microbes are harmless."
+      },
+      {
+        "q": "How do you clean your phone safely?",
+        "a": "Wipe it regularly with a microfiber cloth, and keep it out of the bathroom: a lidless toilet flush can send an invisible plume up to about 5 feet high within 8 seconds."
+      }
     ]
   }
 }

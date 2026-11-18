@@ -144,9 +144,18 @@
       "Millions Are Calling In Sick for GTA 6"
     ],
     "questions": [
-      "Did soldiers reenlist to get GTA 6 days off?",
-      "How many people are taking work off for GTA 6?",
-      "What is the GTA flu?"
+      {
+        "q": "Did soldiers reenlist to get GTA 6 days off?",
+        "a": "Yes. One U.S. Army unit offered a 4-day pass timed to the GTA 6 launch to soldiers who reenlisted for at least two more years, and 20 soldiers signed up."
+      },
+      {
+        "q": "How many people are taking work off for GTA 6?",
+        "a": "Almost 1 in 5 full-time workers said they plan to take launch day off, according to BambooHR data."
+      },
+      {
+        "q": "What is the GTA flu?",
+        "a": "The \"GTA flu\" is the nickname for people calling in sick to play GTA 6 on launch day. About half of gamers taking time off for a release say they'll call in sick."
+      }
     ]
   }
 }

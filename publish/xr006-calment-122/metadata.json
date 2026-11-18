@@ -133,9 +133,18 @@
       "She Outlived the Lawyer Who Bet on Her Death"
     ],
     "questions": [
-      "Who is the oldest person ever?",
-      "How old was Jeanne Calment when she died?",
-      "What was Jeanne Calment's apartment deal?"
+      {
+        "q": "Who is the oldest person ever?",
+        "a": "Jeanne Calment of Arles, France, is the oldest person whose age has been verified: 122 years and 164 days."
+      },
+      {
+        "q": "How old was Jeanne Calment when she died?",
+        "a": "She died at 122 years and 164 days old, in 1997."
+      },
+      {
+        "q": "What was Jeanne Calment's apartment deal?",
+        "a": "At 90 she sold her apartment to a 47-year-old lawyer who paid her 2,500 francs a month until she died. He paid for 30 years, died first, and his family kept paying: more than double the apartment's value."
+      }
     ]
   }
 }

@@ -134,9 +134,18 @@
       "What Really Happened at the 1984 Pepsi Commercial"
     ],
     "questions": [
-      "What happened to Michael Jackson in the Pepsi commercial?",
-      "How badly was Michael Jackson burned in 1984?",
-      "What did Michael Jackson do with the Pepsi settlement?"
+      {
+        "q": "What happened to Michael Jackson in the Pepsi commercial?",
+        "a": "On January 27, 1984, during take six of a Pepsi commercial shoot at the Shrine Auditorium in Los Angeles, pyrotechnics went off early and sparks set Michael Jackson's hair on fire."
+      },
+      {
+        "q": "How badly was Michael Jackson burned in 1984?",
+        "a": "He suffered second- and third-degree burns to his scalp."
+      },
+      {
+        "q": "What did Michael Jackson do with the Pepsi settlement?",
+        "a": "He gave his entire $1.5 million settlement to Brotman Medical Center, which named its burn center after him."
+      }
     ]
   }
 }

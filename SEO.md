@@ -11,12 +11,12 @@ Bloque `seo` en `meta.json`:
 - 3 a 5 hashtags en la descripción.
 - `title_alts`: 2 títulos alternativos distintos. **XR-10** cambia al primero a las 48 h si el video tiene menos de 1.500 vistas (prueba A/B automática; una sola vez).
 - `playlist`: nombre de lista con palabras de búsqueda (una por serie). XR-10 la crea si no existe y agrega el video.
-- `questions`: 3 preguntas reales que la gente escribe. Van al sitio web como preguntas frecuentes (Google y las IAs leen eso).
-- `pinned_comment`: XR-10 lo publica como comentario del canal al salir el video (la API no permite fijarlo; fijarlo a mano si se quiere).
+- `questions`: 3 preguntas reales que la gente escribe, cada una con su respuesta (`{"q": …, "a": …}`, 1–2 oraciones con datos de las fuentes). Van al sitio web como preguntas frecuentes con schema `FAQPage` (Google y las IAs citan eso).
+- `pinned_comment`: por ahora se publica a mano (la conexión de YouTube de Make no tiene el permiso de comentarios).
 
 ## 2. Automático después de publicar (Make, XR-10-YT-SEO-BOOST, cada 1 h)
 1. Video público → lo agrega a la playlist de su serie (crea la playlist pública si no existe).
-2. Publica el comentario del canal.
+2. Fija idioma del video `en` / audio `en-US` (señal de público de EE. UU.).
 3. Escribe `publish/<id>/yt.json` en el repo con el id de YouTube → el sitio se reconstruye solo.
 4. A las 48 h: si tiene < 1.500 vistas, cambia el título por `title_alts[0]` (una vez) y lo anota en el ledger.
 

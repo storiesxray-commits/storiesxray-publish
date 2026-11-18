@@ -200,9 +200,18 @@
       "The Voice Everyone Else Hears Is Your Real One"
     ],
     "questions": [
-      "Why does my voice sound different on recordings?",
-      "Which voice is my real voice?",
-      "Why do people hate their recorded voice?"
+      {
+        "q": "Why does my voice sound different on recordings?",
+        "a": "When you talk, you hear your voice through the air and through vibrations in your skull, which boost the low frequencies. A recording only captures the air version, so it sounds thinner."
+      },
+      {
+        "q": "Which voice is my real voice?",
+        "a": "The recorded one: it's the version everyone else hears."
+      },
+      {
+        "q": "Why do people hate their recorded voice?",
+        "a": "It doesn't sound like the voice you're used to hearing in your head. In a 2013 study, people who didn't know their own voice was mixed in actually rated it as more attractive."
+      }
     ]
   }
 }

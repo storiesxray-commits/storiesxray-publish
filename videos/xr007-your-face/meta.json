@@ -170,9 +170,18 @@
       "Strangers Who Look Like Twins Share DNA"
     ],
     "questions": [
-      "Do doppelgangers share DNA?",
-      "What are the odds of having an exact look-alike?",
-      "How many people in the world look like me?"
+      {
+        "q": "Do doppelgangers share DNA?",
+        "a": "Some do. In a 2022 study of 32 pairs of unrelated look-alikes, 16 pairs were matched by all three face-recognition programs, and 9 of those pairs shared many of the same gene variants."
+      },
+      {
+        "q": "What are the odds of having an exact look-alike?",
+        "a": "Extremely low: a 2015 study of 8 facial measurements on nearly 4,000 faces put the odds of an exact match below 1 in a trillion."
+      },
+      {
+        "q": "How many people in the world look like me?",
+        "a": "Nobody knows an exact number, but researchers say that with more people on Earth, look-alikes become more likely."
+      }
     ]
   }
 }

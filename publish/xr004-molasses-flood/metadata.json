@@ -127,9 +127,18 @@
       "Boston's Deadliest Wave Wasn't Water"
     ],
     "questions": [
-      "What was the Great Molasses Flood?",
-      "How fast was the Boston molasses wave?",
-      "How many people died in the Great Molasses Flood?"
+      {
+        "q": "What was the Great Molasses Flood?",
+        "a": "On January 15, 1919, a 50-foot steel tank in Boston's North End burst and released about 2.3 million gallons of molasses into the streets."
+      },
+      {
+        "q": "How fast was the Boston molasses wave?",
+        "a": "The wave of molasses was up to about 25 feet high and moved at up to 35 miles per hour."
+      },
+      {
+        "q": "How many people died in the Great Molasses Flood?",
+        "a": "21 people died and about 150 were injured."
+      }
     ]
   }
 }

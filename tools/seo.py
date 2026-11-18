@@ -5,12 +5,13 @@ meta.json / publish/<id>/metadata.json must carry an `seo` block:
     "keyword":   "why does my voice sound different on recordings",   # the exact US search phrase this video should rank for
     "title_alts": ["Your Recorded Voice Is the Real One", "..."],      # 2+ alternative titles: XR-10 swaps to #1 at 48 h if views are low
     "playlist":  "Weird Body Facts You Never Knew",                    # search-friendly playlist (one per series); XR-10 creates/fills it
-    "questions": ["Why do I hate my voice on recordings?", "...", "..."]  # 3+ real questions people type; used by the website FAQ (Google / AI answers)
+    "questions": [{"q": "Why do I hate my voice on recordings?", "a": "1-2 sentence factual answer, from the sources"}, ...]
+                                                                       # 3+ real questions people type, each with a sourced answer: website FAQ (Google / AI answers)
   }
 
 Rules checked (SEO.md): keyword in the title or the first line of the description, keyword words in the first 150 characters
 of the description, first tag = keyword, 10-20 tags with >= 2 long-tail (4+ words), 3-5 hashtags, 2 distinct alt titles
-<= 100 chars without < >, playlist name, 3 questions ending in "?".
+<= 100 chars without < >, playlist name, 3 questions ending in "?" with answers >= 40 chars.
 Usage: python tools/seo.py <video-id>   (handoff.py calls check() and puts the video on hold if anything fails)"""
 import json, os, re, sys
 
@@ -47,8 +48,8 @@ def check(meta):
     if len(set(alts)) < 2: errs.append("seo_fewer_than_2_title_alts")
     if any(len(a) > 100 or "<" in a or ">" in a for a in alts): errs.append("seo_title_alt_invalid")
     if not (seo.get("playlist") or "").strip(): errs.append("seo_playlist_missing")
-    qs = [q for q in (seo.get("questions") or []) if q.strip().endswith("?")]
-    if len(qs) < 3: errs.append("seo_fewer_than_3_questions")
+    qs = [q for q in (seo.get("questions") or []) if isinstance(q, dict) and str(q.get("q", "")).strip().endswith("?") and len(str(q.get("a", ""))) >= 40]
+    if len(qs) < 3: errs.append("seo_fewer_than_3_questions_with_answers")
     return errs
 
 
