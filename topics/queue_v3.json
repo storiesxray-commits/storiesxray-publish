@@ -164,20 +164,6 @@
    "produced": "2026-11-18"
   },
   {
-   "id": "A30",
-   "title_es": "El animal que hace caca en forma de cubos.",
-   "hook": "This animal literally poops cubes.",
-   "status": "todo",
-   "video_id": null,
-   "planned_date": "2026-11-18",
-   "note": "Merged with owner idea #65.",
-   "viral": 9,
-   "hook_power": 10,
-   "score": 95,
-   "cat": "animal",
-   "rank": 3
-  },
-  {
    "id": "N08",
    "title_es": "Nunca viste tu cara como la ven los demás",
    "hook": "You've never seen your own face the way other people do.",
@@ -190,6 +176,43 @@
    "score": 100,
    "cat": "mind",
    "rank": 4
+  },
+  {
+   "id": "N101",
+   "title_es": "Tus dedos no tienen músculos",
+   "hook": "Your fingers have ZERO muscles.",
+   "status": "done",
+   "video_id": "xr012-finger-muscles",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body"
+  },
+  {
+   "id": "T01",
+   "title_es": "Efecto puerta: por qué olvidás a qué entraste",
+   "hook": "Walking through a door makes you forget.",
+   "reveal": "Radvansky et al. 2011 (Quarterly J. of Experimental Psychology): cruzar una puerta crea un 'límite de evento' y baja el recuerdo.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "A30",
+   "title_es": "El animal que hace caca en forma de cubos.",
+   "hook": "This animal literally poops cubes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-18",
+   "note": "Merged with owner idea #65.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "animal",
+   "rank": 3
   },
   {
    "id": "N18",
@@ -344,6 +367,69 @@
    "score": 95,
    "cat": "mind",
    "rank": 15
+  },
+  {
+   "id": "S01",
+   "title_es": "Senado de EE. UU.: Wyoming y California tienen 2 senadores cada uno",
+   "hook": "Wyoming has 2 senators. So does California.",
+   "reveal": "Cada estado tiene 2 senadores sin importar su población (Constitución, Gran Compromiso de 1787). Verificar poblaciones del Censo.",
+   "note": "PEDIDO DE LA DUEÑA 18/11: publicar ~25/11 como EXTRA. Cero política partidaria: ni partidos, ni candidatos, ni opiniones; solo cómo funciona el sistema. Hashtags neutros (#ussenate #constitution #civics #history).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "history",
+   "status": "todo"
+  },
+  {
+   "id": "T02",
+   "title_es": "CrowdStrike 2024: una actualización tiró aviones, bancos y hospitales",
+   "hook": "One bad update crashed 8.5 million computers.",
+   "reveal": "19/07/2024, Microsoft estimó 8,5 M de equipos Windows afectados; vuelos cancelados en todo el mundo.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin logos (pantalla azul genérica)."
+  },
+  {
+   "id": "T03",
+   "title_es": "Saciedad semántica",
+   "hook": "Say one word 30 times. It stops meaning anything.",
+   "reveal": "Término de Leon Jakobovits James (1962); interactivo: que el espectador lo pruebe.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T04",
+   "title_es": "El pancho de Costco que no aumenta desde 1985",
+   "hook": "Costco's hot dog has cost $1.50 since 1985.",
+   "reveal": "Verificar que siga en $1.50 hoy; frase atribuida al cofundador Jim Sinegal ('If you raise the hot dog, I will kill you').",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin logo de Costco."
+  },
+  {
+   "id": "T05",
+   "title_es": "Parálisis del sueño y la 'figura' en la habitación",
+   "hook": "Millions wake up unable to move. And see someone.",
+   "reveal": "~8 % de la población la tuvo alguna vez (Sharpless & Barber 2011); explicación REM.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Nada gráfico; tono misterio, no terror explícito."
   },
   {
    "id": "A58",
@@ -808,6 +894,106 @@
    "score": 90,
    "cat": "animal",
    "rank": 48
+  },
+  {
+   "id": "T06",
+   "title_es": "Déjà vu: el cerebro chequeándose a sí mismo",
+   "hook": "Your brain thinks this already happened.",
+   "reveal": "Estudio de O'Connor (St Andrews, 2016) sobre déjà vu inducido.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T07",
+   "title_es": "Netflix personaliza la miniatura para cada uno",
+   "hook": "Netflix shows you a different poster than your friend.",
+   "reveal": "Netflix Tech Blog 2017, 'Artwork Personalization'.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin logo; pósters inventados."
+  },
+  {
+   "id": "T08",
+   "title_es": "Ley cuadrado-cubo: los monstruos gigantes no pueden existir",
+   "hook": "A 300-foot monster would collapse under its own weight.",
+   "reveal": "Galileo / ley cuadrado-cubo.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Monstruo genérico propio, NADA de Godzilla ni personajes con copyright."
+  },
+  {
+   "id": "T09",
+   "title_es": "El mito de que Coca-Cola creó a Papá Noel de rojo",
+   "hook": "Coca-Cola didn't invent red Santa.",
+   "reveal": "Santa ya aparecía de rojo antes (Thomas Nast, ilustraciones de 1900s); Haddon Sundblom 1931 lo popularizó.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin logo ni botella reconocible. Ideal 1–20/12."
+  },
+  {
+   "id": "T10",
+   "title_es": "Las papas de McDonald's se freían en grasa vacuna",
+   "hook": "McDonald's fries tasted different before 1990.",
+   "reveal": "En 1990 cambiaron sebo vacuno por aceite vegetal (presión de Phil Sokolof).",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin logo."
+  },
+  {
+   "id": "T11",
+   "title_es": "La señal Wow! de 1977",
+   "hook": "In 1977, space sent us a signal. Then silence.",
+   "reveal": "Big Ear (Ohio State), 15/08/1977, 72 s; nunca se repitió.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T12",
+   "title_es": "Titanic: botes para la mitad y era legal",
+   "hook": "The Titanic carried lifeboats for half its people. Legally.",
+   "reveal": "1.178 lugares para ~2.200 personas; la ley británica calculaba por tonelaje.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T13",
+   "title_es": "Fosa de las Marianas: la presión en tu cuerpo",
+   "hook": "At the bottom of the ocean, 8 tons press on every inch.",
+   "reveal": "~1.086 bar ≈ 8 t por pulgada cuadrada; verificar cifra.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
   },
   {
    "id": "A35",
@@ -1282,6 +1468,80 @@
    "rank": 81
   },
   {
+   "id": "T14",
+   "title_es": "La habitación más silenciosa del mundo",
+   "hook": "In the quietest room on Earth, you hear your blood.",
+   "reveal": "Cámaras anecoicas (Microsoft Redmond, Orfield Labs); no afirmar el mito de 'nadie aguanta 45 min'.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T15",
+   "title_es": "Por qué se te pega una canción (earworm)",
+   "hook": "This sound is stuck in your head. Here's why.",
+   "reveal": "Estudios de Kelly Jakubowski; sin melodías con copyright.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T16",
+   "title_es": "Qué le pasa al cerebro en un nocaut",
+   "hook": "A knockout turns your brain off in a split second.",
+   "reveal": "Aceleración rotacional; sin peleadores reales ni logos UFC/WWE.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T17",
+   "title_es": "Por qué el tiempo pasa más rápido al crecer",
+   "hook": "Why does time feel faster every year?",
+   "reveal": "Teoría proporcional y menos 'recuerdos nuevos'.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+  },
+  {
+   "id": "T18",
+   "title_es": "Cómo se cuentan los votos en EE. UU.",
+   "hook": "How does America count 150 million votes?",
+   "reveal": "Proceso técnico (cédulas, escáneres, auditorías). Alternativa a S01.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "CERO política: sin partidos, candidatos ni fraude. Solo el proceso."
+  },
+  {
+   "id": "T19",
+   "title_es": "Cuánto paga un millón de reproducciones",
+   "hook": "1 million streams pays less than you think.",
+   "reveal": "Verificar rango actual por stream.",
+   "viral": 8,
+   "hook_power": 9,
+   "score": 85,
+   "cat": "trend",
+   "status": "todo",
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "note": "Sin artistas reales ni canciones."
+  },
+  {
    "id": "H27",
    "title_es": "Estás perdiendo piel mientras mirás esto",
    "hook": "You're shedding skin while you watch this.",
@@ -1546,29 +1806,6 @@
    "score": 80,
    "cat": "animal",
    "rank": 100
-  },
-  {
-   "id": "N101",
-   "title_es": "Tus dedos no tienen músculos",
-   "hook": "Your fingers have ZERO muscles.",
-   "status": "done",
-   "video_id": "xr012-finger-muscles",
-   "viral": 10,
-   "hook_power": 10,
-   "score": 100,
-   "cat": "body"
-  },
-  {
-   "id": "S01",
-   "title_es": "Senado de EE. UU.: Wyoming y California tienen 2 senadores cada uno",
-   "hook": "Wyoming has 2 senators. So does California.",
-   "reveal": "Cada estado tiene 2 senadores sin importar su población (Constitución, Gran Compromiso de 1787). Verificar poblaciones del Censo.",
-   "note": "PEDIDO DE LA DUEÑA 18/11: publicar ~25/11 como EXTRA. Cero política partidaria: ni partidos, ni candidatos, ni opiniones; solo cómo funciona el sistema. Hashtags neutros (#ussenate #constitution #civics #history).",
-   "viral": 9,
-   "hook_power": 10,
-   "score": 95,
-   "cat": "history",
-   "status": "todo"
   }
  ],
  "dropped_low_score": [
@@ -2453,6 +2690,10 @@
   {
    "date": "2026-11-18",
    "change": "J01 al tope (extra 19-20/11), N102-N111 nuevos de 100, S01 Senado (~25/11, sin política partidaria), N101 hecho = xr012 (prueba ultra corta en bucle)."
+  },
+  {
+   "date": "2026-11-18",
+   "change": "19 temas T01–T19 de la lista de búsquedas de EE. UU. de la dueña (85–100). Cola reordenada por nivel de puntaje."
   }
  ]
 }
