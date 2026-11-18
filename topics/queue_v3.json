@@ -21,16 +21,17 @@
    "status": "todo"
   },
   {
-   "id": "S01",
-   "title_es": "Senado de EE. UU.: Wyoming y California tienen 2 senadores cada uno",
-   "hook": "Wyoming has 2 senators. So does California.",
-   "reveal": "Cada estado tiene 2 senadores sin importar su población (Constitución, Gran Compromiso de 1787). Verificar poblaciones del Censo.",
-   "note": "PEDIDO DE LA DUEÑA 18/11: publicar ~25/11 como EXTRA. Cero política partidaria: ni partidos, ni candidatos, ni opiniones; solo cómo funciona el sistema. Hashtags neutros (#ussenate #constitution #civics #history).",
-   "viral": 9,
+   "id": "M01",
+   "title_es": "Ronald Wayne vendió su 10 % de Apple por USD 800",
+   "hook": "He sold 10% of Apple for $800.",
+   "reveal": "Cofundador con Jobs y Wozniak en 1976; vendió a los 12 días por USD 800 (después cobró USD 1.500 más). Hoy valdría cientos de miles de millones (Fortune estima hasta ~USD 400 mil millones).",
+   "viral": 10,
    "hook_power": 10,
-   "score": 95,
-   "cat": "history",
-   "status": "todo"
+   "score": 100,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Fuentes: Fortune 2025/2026, Yahoo Finance. Recalcular con la capitalización del día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
   },
   {
    "id": "R04",
@@ -47,6 +48,35 @@
    "rank": 12
   },
   {
+   "id": "M02",
+   "title_es": "Bitcoin Pizza Day: 2 pizzas por 10.000 BTC (2010)",
+   "hook": "Someone paid 10,000 bitcoin for two pizzas.",
+   "reveal": "22/05/2010, Laszlo Hanyecz. Calcular el valor actual con el precio del día de producción.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar precio de BTC el mismo día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "B06",
+   "title_es": "Pepsi anunció un avión de combate y un hombre quiso cobrarlo",
+   "hook": "Pepsi put a fighter jet in an ad. He tried to claim it.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-19",
+   "source_hint": "Sentencia Leonard v. Pepsico",
+   "reveal": "John Leonard quiso obtener un Harrier de la promoción. Los tribunales interpretaron el anuncio como una broma, no una oferta contractual.",
+   "open_0_2s": "Un caza militar aterriza en un instituto; sobre la pista aparece el número de puntos Pepsi.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "rank": 18
+  },
+  {
    "id": "R01",
    "title_es": "Los animales microscópicos que viven en tu cara",
    "hook": "Something is living on your face right now.",
@@ -61,6 +91,49 @@
    "rank": 9
   },
   {
+   "id": "M04",
+   "title_es": "Red Bull pagó USD 13 M por 'te da alas'",
+   "hook": "Red Bull paid $13 million over 'gives you wings'.",
+   "reveal": "Demanda colectiva de 2014 (Benjamin Careathers, Nueva York): la queja era que no mejoraba el rendimiento más que un café; vouchers de USD 10 o USD 15 en producto.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "NO decir que lo demandaron por no tener alas literalmente (eso es mito): el gancho es el eslogan, el reveal es la verdad. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "B21",
+   "title_es": "La primera Coca-Cola utilizó ingredientes derivados de coca",
+   "hook": "The original Coca-Cola had a shocking ingredient.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-11-27",
+   "source_hint": "McGill University, historia de Coca-Cola",
+   "reveal": "La fórmula histórica usó extractos de coca y cambió con el tiempo; no equiparar el refresco actual con la receta antigua.",
+   "open_0_2s": "Una botella de 1880 se transparenta; aparecen hojas de coca y un antiguo jarabe.",
+   "note": "Historical recipe; do not equate modern Coca-Cola with the old formula. No logo.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "rank": 21
+  },
+  {
+   "id": "M03",
+   "title_es": "Blockbuster rechazó comprar Netflix por USD 50 M",
+   "hook": "Blockbuster could have bought Netflix for $50 million.",
+   "reveal": "En 2000 Hastings y Randolph ofrecieron Netflix por USD 50 M; el CEO John Antioco los rechazó ('se rieron de nosotros'). Blockbuster quebró en 2010.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Fuentes: Marketplace (extracto de 'No Rules Rules'), Fortune 2023, Newsweek fact-check. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
    "id": "R02",
    "title_es": "El parásito que reemplaza la lengua de un pez",
    "hook": "This parasite literally becomes a fish's tongue.",
@@ -73,6 +146,86 @@
    "score": 95,
    "cat": "animal",
    "rank": 11
+  },
+  {
+   "id": "M05",
+   "title_es": "The Million Dollar Homepage",
+   "hook": "A man built a website and sold pixels for $1 each. He made a million.",
+   "reveal": "Alex Tew, estudiante, 2005: 1 millón de píxeles a USD 1; lo logró en meses.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar con 2 fuentes. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "B02",
+   "title_es": "El Monopoly de McDonald’s estaba amañado desde adentro",
+   "hook": "Someone rigged McDonald’s million-dollar Monopoly prizes.",
+   "status": "todo",
+   "video_id": null,
+   "planned_date": "2026-12-11",
+   "source_hint": "Departamento de Justicia de EE. UU.",
+   "reveal": "Un empleado de la firma de marketing que gestionaba las promociones desviaba las fichas de mayor valor. No fue una conspiración de todos los restaurantes.",
+   "open_0_2s": "Una etiqueta ganadora de US$1 millón es retirada de una pila de premios delante de cámara.",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "brand",
+   "rank": 74
+  },
+  {
+   "id": "M07",
+   "title_es": "Listerine: limpiapisos y el invento de la 'halitosis'",
+   "hook": "Listerine was sold as a floor cleaner.",
+   "reveal": "Se vendió como antiséptico, limpiador de pisos y hasta para gonorrea; en los años 20 su publicidad popularizó la palabra 'halitosis' para vender.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar con 2 fuentes; nada gráfico. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "M06",
+   "title_es": "Pet Rock: una piedra en una caja hizo millonario a su creador",
+   "hook": "A rock in a box made a man a millionaire.",
+   "reveal": "Gary Dahl, 1975; millones de unidades vendidas en Navidad.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar cifras. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "M08",
+   "title_es": "El logo de Nike costó USD 35",
+   "hook": "Nike's logo cost $35.",
+   "reveal": "Carolyn Davidson, estudiante, 1971; después recibió acciones.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "NO mostrar el logo real: describirlo/forma genérica. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "S01",
+   "title_es": "Senado de EE. UU.: Wyoming y California tienen 2 senadores cada uno",
+   "hook": "Wyoming has 2 senators. So does California.",
+   "reveal": "Cada estado tiene 2 senadores sin importar su población (Constitución, Gran Compromiso de 1787). Verificar poblaciones del Censo.",
+   "note": "PEDIDO DE LA DUEÑA 18/11: publicar ~25/11 como EXTRA. Cero política partidaria: ni partidos, ni candidatos, ni opiniones; solo cómo funciona el sistema. Hashtags neutros (#ussenate #constitution #civics #history).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "history",
+   "status": "todo"
   },
   {
    "id": "R05",
@@ -131,37 +284,56 @@
    "rank": 17
   },
   {
-   "id": "B06",
-   "title_es": "Pepsi anunció un avión de combate y un hombre quiso cobrarlo",
-   "hook": "Pepsi put a fighter jet in an ad. He tried to claim it.",
-   "status": "todo",
-   "video_id": null,
-   "planned_date": "2026-11-19",
-   "source_hint": "Sentencia Leonard v. Pepsico",
-   "reveal": "John Leonard quiso obtener un Harrier de la promoción. Los tribunales interpretaron el anuncio como una broma, no una oferta contractual.",
-   "open_0_2s": "Un caza militar aterriza en un instituto; sobre la pista aparece el número de puntos Pepsi.",
+   "id": "M09",
+   "title_es": "Lamborghini fabricaba tractores y Ferrari lo humilló",
+   "hook": "Lamborghini made tractors. Then Ferrari insulted him.",
+   "reveal": "Ferruccio Lamborghini se quejó del embrague de su Ferrari y Enzo Ferrari lo despreció; fundó su marca en 1963.",
    "viral": 9,
    "hook_power": 9,
    "score": 90,
-   "cat": "brand",
-   "rank": 18
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "La anécdota del insulto es la versión que contaba Ferruccio: decirlo así. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
   },
   {
-   "id": "B21",
-   "title_es": "La primera Coca-Cola utilizó ingredientes derivados de coca",
-   "hook": "The original Coca-Cola had a shocking ingredient.",
-   "status": "todo",
-   "video_id": null,
-   "planned_date": "2026-11-27",
-   "source_hint": "McGill University, historia de Coca-Cola",
-   "reveal": "La fórmula histórica usó extractos de coca y cambió con el tiempo; no equiparar el refresco actual con la receta antigua.",
-   "open_0_2s": "Una botella de 1880 se transparenta; aparecen hojas de coca y un antiguo jarabe.",
-   "note": "Historical recipe; do not equate modern Coca-Cola with the old formula. No logo.",
+   "id": "M10",
+   "title_es": "El trueque de Pepsi con la URSS: barcos de guerra por gaseosa",
+   "hook": "The Soviet Union paid Pepsi with warships.",
+   "reveal": "1989: 17 submarinos, un crucero, una fragata y un destructor (vendidos como chatarra). OJO: que haya sido 'la 6.ª armada del mundo' es FALSO (Foreign Policy): usarlo como giro que desmiente el mito.",
    "viral": 9,
    "hook_power": 9,
    "score": 90,
-   "cat": "brand",
-   "rank": 21
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Hay fuentes que dudan del trato; verificar con Bloomberg/Foreign Policy antes de producir. Si no se confirma, dropped. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "M11",
+   "title_es": "Kodak inventó la cámara digital en 1975 y la guardó",
+   "hook": "Kodak invented the digital camera. Then hid it.",
+   "reveal": "Steve Sasson, 1975; Kodak no quiso canibalizar el rollo; quebró en 2012.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+  },
+  {
+   "id": "M12",
+   "title_es": "La plastilina Play-Doh era limpiador de empapelado",
+   "hook": "Play-Doh was invented to clean wallpaper.",
+   "reveal": "Kutol Products, años 30-50.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brands_money",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
+   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
   },
   {
    "id": "B28",
@@ -196,22 +368,6 @@
    "score": 85,
    "cat": "brand",
    "rank": 53
-  },
-  {
-   "id": "B02",
-   "title_es": "El Monopoly de McDonald’s estaba amañado desde adentro",
-   "hook": "Someone rigged McDonald’s million-dollar Monopoly prizes.",
-   "status": "todo",
-   "video_id": null,
-   "planned_date": "2026-12-11",
-   "source_hint": "Departamento de Justicia de EE. UU.",
-   "reveal": "Un empleado de la firma de marketing que gestionaba las promociones desviaba las fichas de mayor valor. No fue una conspiración de todos los restaurantes.",
-   "open_0_2s": "Una etiqueta ganadora de US$1 millón es retirada de una pila de premios delante de cámara.",
-   "viral": 9,
-   "hook_power": 8,
-   "score": 85,
-   "cat": "brand",
-   "rank": 74
   },
   {
    "id": "B38",
@@ -2796,6 +2952,10 @@
   {
    "date": "2026-11-18",
    "change": "Purga por pedido de la dueña: quedan 40 temas ultra virales; 88 pasados a dropped_low_score. xr012 (dedos) cancelado antes de publicarse."
+  },
+  {
+   "date": "2026-11-18",
+   "change": "Pedido de la dueña: marcas ultra conocidas, secretos y negocios extremos. +12 temas M01–M12; orden de producción reordenado (los más extremos primero)."
   }
  ]
 }
