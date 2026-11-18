@@ -21,7 +21,7 @@ Tema elegido por la dueña el 18/11/2026 (descartó la inundación de melaza de 
 - B: lengua con burbujas en primer plano (estilizado, nada grotesco); texto "IT BOILS"; círculo rojo.
 - C: cuenta regresiva "0:15" enorme sobre una silueta flotando; flecha a los pulmones; texto "DON'T HOLD YOUR BREATH".
 
-**Duración objetivo:** ~9–10 min (guion v1 ≈ 1.380 palabras).
+**Duración objetivo:** ~8,5 min (guion v1 ≈ 1.160 palabras, ≈ 6.700 caracteres). Si la voz final queda por debajo de 8:15, sumar el bloque de Kittinger (una vez verificado) para pasar los 8 min de los anuncios en el medio.
 
 ## Datos verificados (fuentes en `meta.json` al producir)
 | Dato | Fuente |
@@ -68,7 +68,7 @@ Notas: LeBlanc aparece como 1965 en un par de fuentes; Guinness y Wikipedia dice
 
 ---
 
-## GUION (v1, ≈ 1.380 palabras)
+## GUION (v1, ≈ 1.160 palabras)
 
 ### COLD OPEN
 You have fifteen seconds.

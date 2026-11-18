@@ -46,6 +46,8 @@ Regla de la dueña (18/11/2026): **un video largo por semana**, a nivel extremo 
 - Para 12 minutos, una voz a estabilidad 0,0 cansa. Narrador de largos: **storyteller carismático, estabilidad 0,35–0,5**, que suba la intensidad en los momentos clave. Se prueba primero con 60 s del cold open.
 - Mismo narrador en todos los largos (la voz es la marca del canal en formato largo).
 - Consumo: ~11.000 caracteres por video largo (+ reintentos). Con Shorts diarios, el plan Starter (30.000 créditos/mes) **no alcanza**: hace falta **Creator** (121.000 créditos/mes).
+- **Generar la voz por capítulo** (un archivo por capítulo, ~1.000 caracteres cada uno): si cambia una frase se rehace solo ese capítulo y no los ~7.000 caracteres del guion entero.
+- Créditos: Make **XR-09-ELEVENLABS-USAGE** (7091835) deja plan, usados, límite y fecha de renovación en `global.bridge_last` del data store 202381. Mirarlo antes de generar.
 - Claude no puede escuchar el audio: lo dice siempre. Se revisa por la transcripción (`voice.py`) y los tiempos de las pausas.
 
 ## 6. Textos en pantalla
