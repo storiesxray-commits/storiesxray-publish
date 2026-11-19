@@ -19,9 +19,13 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Línea editorial: **bizarro o sorprendente, real y muy compartible**.
 - Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr007-wombat-cubes`).
 
+## 1c. EVERYDAY X-RAY (formato de la dueña, 19/11/2026 — OBLIGATORIO)
+- Si el número del id nuevo es **mod 3 = 2** (xr014, xr017, xr020…) y §1b no obliga a una noticia, el video es **EVERYDAY X-RAY**: tomar el primer `todo` con `"format": "everyday"` de `queue_v3.json` y seguir `topics/EVERYDAY.md` (estructura, duración 20–28 s, estilo pro, rigor). `meta.json` → `experiment.topic_type = "everyday"`.
+- Si no quedan `everyday` en `todo`, usar la cola normal y avisarlo en el resumen.
+
 ## 1a. FILTRO ULTRA VIRAL (regla de la dueña, 18/11/2026 — OBLIGATORIO, gana sobre todo lo demás)
 "No nos podemos permitir publicar nada que no sea ultra viral, ultra buscado y ultra perfecto, en todo sentido." Antes de escribir una sola línea, el tema elegido tiene que pasar LAS TRES pruebas; si falla una, marcarlo `dropped` con `drop_reason` y tomar el siguiente:
-1. **Ultra viral:** provoca una reacción fuerte de la lista de `rule` en `queue_v3.json` (asco/horror, historia real increíble, escándalo o dinero de marca conocida, miedo/misterio, debate para comentarios, ilusión para probar ya). La prueba: ¿un adolescente de EE. UU. se lo mandaría a un amigo con "bro look at this"? Un dato curioso tibio NO pasa (rechazado: "Your fingers have ZERO muscles").
+1. **Ultra viral:** provoca una reacción fuerte de la lista de `rule` en `queue_v3.json` (asco/horror, historia real increíble, escándalo o dinero de marca conocida, miedo/misterio, debate para comentarios, ilusión para probar ya; en EVERYDAY X-RAY: identificación inmediata con un conflicto cotidiano + revelación no obvia, ver `topics/EVERYDAY.md` §2). La prueba: ¿un adolescente de EE. UU. se lo mandaría a un amigo con "bro look at this"? Un dato curioso tibio NO pasa (rechazado: "Your fingers have ZERO muscles").
 2. **Ultra buscado:** con WebSearch confirmar que la gente lo busca o lo comparte (autocompletado de Google/YouTube, artículos o videos virales recientes, Reddit). Anotar la evidencia en `meta.json` → `seo.demand` (consulta + fuente). Sin evidencia, no pasa.
 3. **Ultra perfecto:** después de producir, cero errores de QUALITY.md, miniatura que se lee en chico, gancho dicho antes de 1,5 s, datos con 2 fuentes. Cualquier duda → `"status": "hold"` con `hold_reason`. Nunca publicar "casi bien".
 Ante la duda en cualquiera de las tres: NO se publica.

@@ -2,7 +2,7 @@
 
 1. **Tema.** El siguiente del banco del manual (o uno nuevo con gancho fuerte y pocos personajes). Verificar los datos con búsqueda web.
 2. **Carpeta.** Copiar la de un video parecido: `cp -r videos/xr003-fingers-wrinkle videos/xr004-<tema>`.
-3. **`script.json`.** Frases y pausa después de cada una (segundos). 28–40 s en total. Primera frase ≤ 7 palabras con el dato más fuerte (AUTOPILOT §2b).
+3. **`script.json`.** Frases y pausa después de cada una (segundos). 28–40 s en total (EVERYDAY X-RAY: 20–28 s, ver `topics/EVERYDAY.md`). Primera frase ≤ 7 palabras con el dato más fuerte (AUTOPILOT §2b).
 4. **Voz (ElevenLabs, desde 16/11/2026).** Las voces son 3 narradores histriónicos diseñados en la cuenta de ElevenLabs de la dueña (`tools/voices.json`; hoy `xr1` Campfire Maniac, `xr2` Unhinged Podcaster, `xr3` Porch Legend, `xr4` Absolute Lunatic; voces nuevas con `tools/new_voice.py` + Make XR-08). Se rotan por número de video (`xrNNN % len(rotation)`) salvo que `script.json` fije `"voice"`. El sandbox no llega a api.elevenlabs.io, así que la llamada la hace Make:
    1. `python tools/tts.py request xr004-<tema> > /tmp/tts_req.json` (imprime `voice_id`, `out_name`, `payload_b64`).
    2. Correr **XR-07-ELEVENLABS-TTS** (Make, id en `tools/voices.json` → `make_scenario_id`) con `scenarios_run`, `responsive: true` y `data` = ese JSON. Make escribe `tts/<out_name>.mp3` y `.json` en `main`.
