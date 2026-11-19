@@ -11,7 +11,8 @@ Este repo produce los Shorts del canal Stories X-Ray (YouTube @StoriesXray, Inst
 - Revisar cuadros a tamaño real antes del render completo y las hojas `review.jpg` / `review_mid.jpg` después. Si aparece cualquier error de QUALITY.md §4, corregir y volver a renderizar ese plano (`--only`).
 - Claude no puede escuchar audio: decirlo siempre. Por regla de la dueña (15/11/2026) no hay aprobación previa: Make publica todo lo de `publish/` salvo `"status": "hold"`. YouTube lo recibe privado con fecha (≥ 24 h antes), así que se puede revisar en YouTube Studio.
 - Si un video no cumple QUALITY.md o hay una duda de datos que no se puede resolver, poner `"status": "hold"` en vez de publicarlo.
-- **YouTube, Instagram y Facebook salen siempre juntos** (pedido de la dueña, 17/11/2026): a la misma hora o muy cerca, nunca uno solo. `platforms` siempre con las 3 (lo fuerza `handoff.py`) y `video_social.mp4` obligatorio; XR-03 publica el Reel a la hora de YouTube.
+- **Instagram en pausa desde 19/11/2026** (Meta inhabilitó @storiesxray): `ig_paused: true` en el data store 202381, así XR-03 publica solo en Facebook. No crear cuentas nuevas de Instagram.
+- **YouTube y Facebook salen siempre juntos** (pedido de la dueña, 17/11/2026; Instagram en pausa): a la misma hora o muy cerca, nunca uno solo. `platforms` siempre con las 3 (lo fuerza `handoff.py`) y `video_social.mp4` obligatorio; XR-03 publica el Reel a la hora de YouTube.
 - Producción automática: seguir `topics/AUTOPILOT.md`.
 - Posicionamiento en búsquedas (YouTube, Google, IAs) para EE. UU. y los países de habla inglesa que más pagan: seguir `SEO.md`.
 - Make: cuenta de Greentech. Crear solo escenarios nuevos para el canal y no tocar nada existente.

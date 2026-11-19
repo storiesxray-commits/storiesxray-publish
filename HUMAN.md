@@ -28,5 +28,16 @@ Instagram inhabilitó @storiesxray el 19/11/2026. Pedido de la dueña: que a You
 - Antes de `handoff.py`, correr `python tools/audit_human.py --id <id>`. Si sale con ROJO (código 2), corregir; si no se puede, `status: "hold"`. Los AMARILLO se corrigen si es barato.
 - La tarea "Stories X-Ray: auditor de canal humano" revisa todos los días el canal entero y deja sus decisiones en "Historial de auditorías" al final de este archivo.
 
+## 7. Explotar el canal sin parecer máquina
+Crecer y verse humano no chocan: lo que YouTube premia (gente que mira, vuelve a mirar y comparte) es lo mismo que lo protege.
+- **El primer segundo decide todo:** imagen en movimiento y frase de impacto desde el cuadro 0, sin intro. Final que empalma con el principio (bucle) cuando el tema lo permite: suma repeticiones.
+- **Compartidos = 0 hoy:** elegir temas que la gente quiere mandarle a alguien ("esto es tan vos", "no me creías"), no pedirlo siempre con la misma frase. Un dato que da ganas de discutir en comentarios vale más que diez seguros.
+- **Duplicar a los ganadores rápido:** si un video rinde muy por encima del resto, secuela o variante en 48–72 h (otro ángulo, no copia) y playlist propia.
+- **Noticias calientes de 24–72 h** que la gente está buscando en EE. UU., con datos verificados.
+- **Embudo Short → video largo:** cada Short del mismo tema enlaza al largo como video relacionado; el largo cita al Short.
+- **Series** (THE MIRROR y las que surjan de los ganadores): dan razones para suscribirse y volver.
+- **Lo que sí o sí hace una persona (la dueña):** responder a mano los primeros comentarios en la primera hora, y de vez en cuando una encuesta o post en Comunidad. Es la señal humana más fuerte y no se automatiza.
+
 ## Historial de auditorías
 - 19/11/2026 — Primera auditoría (xr004–xr013): 9/9 miniaturas con la misma receta (círculo + rayos + sello) y 5 comentarios fijados que arrancan con "Be honest". Los guiones abren variados.
+- 19/11/2026 — Instagram pausado (ig_paused). XR-11 (A/B automático de títulos) apagado: solo el optimizador semanal edita metadata publicada, máx. 3 videos por corrida.
