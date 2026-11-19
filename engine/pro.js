@@ -10,6 +10,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { SubjectPro } from './character.js';
+import { mat as worldMat } from './world.js';
 
 const Finish = {
   uniforms: { tDiffuse: { value: null }, time: { value: 0 }, grain: { value: 0.045 }, vig: { value: 0.32 }, ca: { value: 0.0016 } },
@@ -21,6 +22,7 @@ const Finish = {
       vec3 col; col.r = texture2D(tDiffuse, vUv + c*ca*r*4.).r; col.g = texture2D(tDiffuse, vUv).g; col.b = texture2D(tDiffuse, vUv - c*ca*r*4.).b;
       // grade: slight S-curve, warm highlights / cool shadows
       float l = dot(col, vec3(.2126,.7152,.0722));
+      col = mix(vec3(l), col, 1.14);  // ACES eats saturation: give it back
       col = mix(col, col*col*(3.-2.*col), 0.18);
       col += vec3(.018,.008,-.012) * smoothstep(.45,1.,l) + vec3(-.01,.0,.018) * (1.-smoothstep(0.,.35,l));
       col *= 1. - vig * smoothstep(.12, .62, r*1.6);
@@ -53,6 +55,8 @@ export function setup(renderer) {
       roughness: cloth ? 0.72 : 0.48, metalness: 0, clearcoat: cloth ? 0.05 : 0.3, clearcoatRoughness: 0.45,
       sheen: cloth ? 0.35 : 0.0, sheenRoughness: 0.7, sheenColor: m.color.clone().multiplyScalar(1.4), envMapIntensity: 0.7,
     });
+    // micro surface detail (smudges / tiny bumps) so flat-colored props stop reading as plastic toys
+    if (!m.map) { const d = worldMat('smudge'); p.normalMap = d.normalMap; p.roughnessMap = d.roughnessMap; p.normalScale = new THREE.Vector2(0.35, 0.35); p.roughness = Math.min(1, p.roughness * 1.4); }
     p.name = m.name; swapped.set(m, p); return p;
   }
   return {

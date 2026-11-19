@@ -96,8 +96,8 @@ export function SubjectPro(o = {}) {
   const g = new THREE.Group(); const J = { root: g };
   const hips = J.hips = new THREE.Group(); hips.position.y = 0.95; g.add(hips);
   // pelvis + belt
-  lathe([[0, -0.13], [0.12, -0.12], [0.165, -0.06], [f ? 0.178 : 0.17, 0.02], [0.165, 0.09], [0, 0.1]], pants, hips, [0, 0, 0], [1, 1, 0.74]);
-  mesh(new THREE.TorusGeometry(0.165, 0.016, 10, 48), plain(0x1d1a18, { roughness: 0.35, clearcoat: 0.6 }), hips, [0, 0.07, 0], [1, 0.74, 1], [Math.PI / 2, 0, 0]);
+  lathe([[0, -0.15], [0.1, -0.145], [0.155, -0.08], [f ? 0.172 : 0.165, 0.02], [0.163, 0.09], [0, 0.1]], pants, hips, [0, 0, 0], [1, 1, 0.74]);
+  mesh(new THREE.TorusGeometry(0.168, 0.009, 10, 48), plain(0x2a1e16, { roughness: 0.45, clearcoat: 0.4 }), hips, [0, 0.07, 0], [1.0, 0.73, 1], [Math.PI / 2, 0, 0]);
   const chest = J.chest = new THREE.Group(); chest.position.y = 0.06; hips.add(chest);
   // torso (shirt): waist -> chest -> shoulders
   const torso = lathe(f
@@ -129,9 +129,9 @@ export function SubjectPro(o = {}) {
     const eye = new THREE.Group(); eye.position.set(s * 0.049, 0.016, 0.112); eye.rotation.y = s * 0.28; head.add(eye);
     mesh(new THREE.SphereGeometry(0.026, 28, 20), white, eye);
     const pupil = new THREE.Group(); eye.add(pupil);
-    mesh(new THREE.SphereGeometry(0.0152, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), irisM, pupil, [0, 0, 0.0198], [1, 0.45, 1], [Math.PI / 2, 0, 0]);
-    mesh(new THREE.CircleGeometry(0.0068, 24), pupM, pupil, [0, 0, 0.0279]);
-    mesh(new THREE.CircleGeometry(0.0026, 12), glint, pupil, [0.0045, 0.0045, 0.0281]);
+    mesh(new THREE.SphereGeometry(0.0172, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), irisM, pupil, [0, 0, 0.0185], [1, 0.45, 1], [Math.PI / 2, 0, 0]);
+    mesh(new THREE.CircleGeometry(0.0076, 24), pupM, pupil, [0, 0, 0.0266]);
+    mesh(new THREE.CircleGeometry(0.0026, 12), glint, pupil, [0.005, 0.005, 0.0269]);
     eye.userData.pupil = pupil; J.eyes.push(eye);
     // upper / lower lid (skin shells) - face() rotates the upper one down to blink
     const up = new THREE.Group(); eye.add(up);
