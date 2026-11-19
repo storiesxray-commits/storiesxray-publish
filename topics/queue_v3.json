@@ -729,6 +729,71 @@
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
   },
   {
+   "id": "I01",
+   "title_es": "Microquimerismo: parte de vos sigue viviendo dentro de tu madre",
+   "hook": "A piece of you never left your mom.",
+   "reveal": "Durante el embarazo, células del bebé cruzan la placenta y se quedan en el cuerpo de la madre por décadas: en la sangre, el corazón y hasta el cerebro (se encontró ADN masculino en cerebros de mujeres; células fetales detectadas 27 años después del parto).",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body_you",
+   "note": "Tema probado: en @asifue.tv hizo 1 millón de vistas, el mejor de su perfil. Cierre obligatorio: 'Send this to your mom.' NO copiar su guion ni su estética. Fuentes a verificar: Bianchi 1996 (PNAS), Chan et al. 2012 (PLoS One, ADN masculino en cerebro).",
+   "status": "todo",
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+  },
+  {
+   "id": "I02",
+   "title_es": "Estuviste dentro de tu abuela",
+   "hook": "You were once inside your grandma.",
+   "reveal": "Las mujeres forman todos sus óvulos siendo fetos. El óvulo del que naciste ya existía dentro de tu madre cuando ella todavía estaba en el útero de tu abuela.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body_you",
+   "note": "Mismo patrón que el de 1 millón de @asifue.tv (vos + alguien que querés). Cierre: 'Send this to your grandma.' Precisar que es el óvulo, no el espermatozoide.",
+   "status": "todo",
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+  },
+  {
+   "id": "I03",
+   "title_es": "Científicos hicieron respirar animales por el ano",
+   "hook": "Scientists made pigs breathe through their butts.",
+   "reveal": "Ventilación enteral: en 2021 un equipo japonés (Takebe) oxigenó ratones y cerdos por el recto; ganó el Ig Nobel 2024 y ya hubo una primera prueba de seguridad en humanos en Japón. Podría salvar pacientes que no pueden usar los pulmones.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "science_bizarre",
+   "note": "Idea de la dueña (formato '¿qué pasaría si…?' de @asifue.tv, 33 mil vistas). Verificar los datos de la prueba en humanos (año, cantidad de voluntarios) con 2 fuentes. Nada gráfico: animales y cuerpos en estilo simple.",
+   "status": "todo",
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+  },
+  {
+   "id": "I04",
+   "title_es": "Las células del bebé pueden reparar el corazón de la madre",
+   "hook": "Your baby can repair your heart.",
+   "reveal": "En experimentos con ratones (Kara et al. 2012, Circulation Research), células fetales viajaron al corazón dañado de la madre y se convirtieron en células cardíacas que laten.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body_you",
+   "note": "Secuela de I01: publicar después de I01. Decir claramente que se probó en ratones; no prometer curas en humanos.",
+   "status": "todo",
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+  },
+  {
+   "id": "I05",
+   "title_es": "Les decían a las mujeres que correr les haría caer el útero",
+   "hook": "They said running would make her uterus fall out.",
+   "reveal": "Las mujeres no pudieron correr oficialmente la maratón de Boston hasta 1972. En 1967 Kathrine Switzer se inscribió como 'K.V. Switzer' y un organizador intentó arrancarle el dorsal en plena carrera. La maratón olímpica femenina recién llegó en 1984.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "history_underdog",
+   "note": "Patrón 'lo que antes castigaban hoy gana medallas' (193 mil vistas en @asifue.tv). Verificar con 2 fuentes que el mito del útero se decía en esa época; si no, usar el gancho 'Women were banned from the Boston Marathon until 1972.' Persona real: solo silueta, sin cara.",
+   "status": "todo",
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+  },
+  {
    "id": "N01",
    "title_es": "¿Existe alguien con tu misma cara?",
    "hook": "8 billion people. How many have YOUR face?",
@@ -2961,6 +3026,10 @@
   {
    "date": "2026-11-18",
    "change": "Pedido de la dueña: marcas ultra conocidas, secretos y negocios extremos. +12 temas M01–M12; orden de producción reordenado (los más extremos primero)."
+  },
+  {
+   "date": "2026-11-18",
+   "change": "Pedido de la dueña: análisis de la competencia @asifue.tv (IG). +5 temas I01–I05 (cuerpo + alguien que querés, hipotéticos absurdos, historia de revancha), agregados al final de los pendientes para usar más adelante."
   }
  ]
 }
