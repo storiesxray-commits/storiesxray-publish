@@ -6,6 +6,7 @@ La producción nocturna (`topics/AUTOPILOT.md`) **sigue este archivo**; donde al
 Retención inicial = `engagedViews / views` (≈ "Stayed to watch"). Objetivo ≥ 70 %. Secundarias: `averageViewPercentage`, vistas a 48 h, suscriptores por 1.000 vistas, compartidos.
 
 ## Reglas ganadoras (se aplican siempre)
+- **Imagen "pro" (pedido de la dueña, 19/11/2026: la mejor gráfica posible, lo más realista y profesional):** todo video nuevo lleva `"render_style": "pro"` en `meta.json`, personajes nuevos con variedad (género, piel, peinado) y escenarios de `engine/world.js` (cuarto, calle, cielo, estudio, materiales reales). Nada de fondos lisos ni objetos de un color plano. Ver NEW_VIDEO.md paso 5. El render tarda ~4× (~35–45 min un video de 30–35 s): arrancar el build con tiempo.
 - Apertura v2 (AUTOPILOT §2b): gancho completo < 1,5 s, título + subtítulo desde el frame 0, imagen más extrema en el frame 0.
 
 ## Voz — rotación de narradores (corre siempre, en paralelo al experimento activo)
@@ -43,6 +44,7 @@ La dueña quiere que se pruebe MUCHO a la vez y que el optimizador analice como 
 ## Historial de decisiones
 | Fecha | Cambio | Motivo / datos |
 |---|---|---|
+| 19/11/2026 (dueña) | Estilo de imagen "pro" obligatorio para videos nuevos: luz física, PBR, brillo/grano/gradación, cámara en mano, personajes v2 y kit de escenarios | Pedido de la dueña: gráfica más real y profesional para que despegue el canal. Probado con xr010 completo en pro (30 s, 36 min de render) y regresión toon con xr006 OK |
 | 18/11/2026 (optimizador) | MEZCLA suma variable **Cierre** (share vs comment). Gancho pregunta: obligatorio con cifra/imagen en la misma frase. Sin cambios de pesos, de cola ni narradores nuevos | Analytics 18/11: solo videos v1/kokoro (5 con datos): retención inicial 47–64 % (53,4 %), % visto 58–70 %, todos frenados en ~1.300 vistas y **0 shares**. xr006 (pregunta genérica) 47 % vs xr005 (imagen extrema) 54 %, n = 1. Ningún video ElevenLabs/MEZCLA con datos todavía; última alta de voces 18/11 (próxima 21/11) |
 | 18/11/2026 (dueña) | E2 reemplazado por MEZCLA multivariable (duración corto/medio/largo, tipo de gancho, noticia vs evergreen, narrador) + 1 de cada 3 videos es noticia de horas/días | Pedido de la dueña: probar muchas cosas, analizar como una persona, y actualidad ultra buscada cada 2–3 videos, siempre ultra viral |
 | 17/11/2026 (optimizador) | Abre E2 duración (impar 36–40 s / par 28–32 s). Voz como rotación permanente aparte; reglas de narradores unificadas (4–6 activos, alta cada 3 días, retiro con ≥ 3 videos). Sin cambios de pesos ni narrador nuevo | Analytics 17/11: solo hay 3 videos viejos (kokoro, 41–47 s) con datos: retención inicial 49–65 % (prom. 55,4 %), % reproducido ~64 %. Ningún video ElevenLabs publicado todavía (el primero, xr009, sale el 18/11) → sin datos de narradores. Ya se crearon 2 voces hoy |
