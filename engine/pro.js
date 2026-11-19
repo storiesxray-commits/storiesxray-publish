@@ -9,6 +9,7 @@ import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
 import { SubjectPro } from './character.js';
 import { mat as worldMat } from './world.js';
 
@@ -45,6 +46,7 @@ export function setup(renderer) {
   const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.22, 0.45, 0.97); composer.addPass(bloom);
   composer.addPass(new OutputPass());
   const fin = new ShaderPass(Finish); composer.addPass(fin);
+  composer.addPass(new SMAAPass(W, H));  // smoother edges on top of MSAA
   const swapped = new WeakMap();
   function physical(m) {
     if (swapped.has(m)) return swapped.get(m);
