@@ -24,7 +24,9 @@ try:
         pg = b.new_page(viewport={"width": 1080, "height": 1920}, device_scale_factor=1)
         errs = []; pg.on("pageerror", lambda e: errs.append(str(e)))
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
-        pg.goto(f"http://127.0.0.1:{PORT}/engine/player.html?v={VID}" + ("&clean=1" if MODE == "clean" else ""))
+        try: STYLE = os.environ.get("RENDER_STYLE") or json.load(open(f"{ROOT}/videos/{VID}/meta.json")).get("render_style", "toon")
+        except Exception: STYLE = os.environ.get("RENDER_STYLE", "toon")
+        pg.goto(f"http://127.0.0.1:{PORT}/engine/player.html?v={VID}&style={STYLE}" + os.environ.get("RENDER_EXTRA", "") + ("&clean=1" if MODE == "clean" else ""))
         try: pg.wait_for_function("window.READY===true", timeout=60000)
         except Exception: print("LOAD FAILED:", errs); raise
         shots = pg.evaluate("window.SHOTS")

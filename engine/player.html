@@ -47,12 +47,18 @@ const mctx = document.createElement('canvas').getContext('2d');
 function fit(el, maxW) { const fs = parseFloat(getComputedStyle(el).fontSize); mctx.font = `900 ${fs}px Inter`; const w = mctx.measureText(el.textContent.toUpperCase()).width + 36; if (w > maxW) el.style.fontSize = (fs * maxW / w) + 'px'; }
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true });
 renderer.setSize(W, H, false); renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+// Render style "pro" (?style=pro or meta.json render_style): physically based materials lit by a studio environment,
+// ambient occlusion, soft bloom, film grain + color grade, subtle handheld camera. Default ("toon") is unchanged.
+const STYLE = new URLSearchParams(location.search).get('style') || 'toon';
+const PRO = STYLE === 'pro' ? await import('./pro.js') : null;
+const pro = PRO ? PRO.setup(renderer) : null;
 let cur = null, curId = null;
 window.renderAt = (T) => {
   const sh = shots.find(s => T >= s.start && T < s.end) || shots[shots.length - 1];
-  if (curId !== sh.id) { cur = sh.make(); curId = sh.id; }
+  if (curId !== sh.id) { cur = sh.make(); curId = sh.id; if (pro) pro.upgrade(cur.scene); }
   const t = T - sh.start, d = sh.end - sh.start;
-  cur.update(t, d); renderer.render(cur.scene, cur.camera);
+  cur.update(t, d);
+  if (pro) pro.render(cur.scene, cur.camera, T); else renderer.render(cur.scene, cur.camera);
   const ui = cur.ui ? cur.ui(t, d) : {};
   document.getElementById('flash').style.opacity = ui.flash || 0;
   document.getElementById('dark').style.opacity = ui.vig || 0; document.getElementById('sep').style.opacity = ui.sepia || 0;
