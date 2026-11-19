@@ -794,6 +794,32 @@
    "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
   },
   {
+   "id": "I06",
+   "title_es": "Tus recuerdos no pasaron así: el cerebro rellena lo que olvida",
+   "hook": "You remember things that never happened.",
+   "reveal": "El cerebro no guarda los recuerdos como un video: cada vez que recordás algo, lo reconstruye y rellena los huecos con lo que cree que pasó. En experimentos de Elizabeth Loftus, cerca de 1 de cada 4 personas 'recordó' haberse perdido de chico en un shopping, algo que nunca les pasó.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "body_you",
+   "note": "Idea de la dueña. Gancho alternativo: 'Your memories are lying to you.' Verificar con 2 fuentes: Loftus y Pickrell 1995 ('lost in the mall'), reconsolidación de la memoria (Nader 2000). Cierre que invite a comentar: 'What's a memory you're 100% sure about?'",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll"
+  },
+  {
+   "id": "I07",
+   "title_es": "¿Qué te pasa si no dormís nunca más?",
+   "hook": "You stop sleeping. Day 3, you start hallucinating.",
+   "reveal": "Día por día: al día 1 falla la memoria y el humor; al 2–3 aparecen microsueños; alrededor del día 4 alucinaciones (Randy Gardner estuvo 11 días despierto en 1964); en ratas, la privación total de sueño fue mortal en 2–3 semanas (Rechtschaffen, 1989).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body_you",
+   "note": "Idea de la dueña: formato '¿qué pasaría si…?' contado en segunda persona. Verificar la cronología con 2 fuentes; no dar consejos médicos y no mostrar a Randy Gardner con cara real (solo silueta).",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll"
+  },
+  {
    "id": "N01",
    "title_es": "¿Existe alguien con tu misma cara?",
    "hook": "8 billion people. How many have YOUR face?",
@@ -3030,6 +3056,10 @@
   {
    "date": "2026-11-18",
    "change": "Pedido de la dueña: análisis de la competencia @asifue.tv (IG). +5 temas I01–I05 (cuerpo + alguien que querés, hipotéticos absurdos, historia de revancha), agregados al final de los pendientes para usar más adelante."
+  },
+  {
+   "date": "2026-11-18",
+   "change": "Pedido de la dueña: +2 temas I06 (recuerdos reconstruidos) e I07 (no dormir nunca más), con ganchos que arrancan con 'You…'."
   }
  ]
 }
