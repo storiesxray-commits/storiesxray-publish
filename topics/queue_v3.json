@@ -820,6 +820,58 @@
    "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll"
   },
   {
+   "id": "I08",
+   "title_es": "Si dejás de cepillarte los dientes: día por día",
+   "hook": "You stop brushing. Day 21, your gums bleed.",
+   "reveal": "Horas: se forma la placa. Días 2–3: mal aliento. Días 10–21: gingivitis, las encías sangran (experimento de Löe, 1965, con voluntarios que dejaron de cepillarse). Meses o años: periodontitis, el hueso se pierde y los dientes se aflojan hasta caerse.",
+   "viral": 10,
+   "hook_power": 9,
+   "score": 95,
+   "cat": "body_you",
+   "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Verificar con 2 fuentes (Löe 1965 'Experimental gingivitis in man'; ADA/NIDCR). Asco moderado, nada gore.",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+  },
+  {
+   "id": "I09",
+   "title_es": "Si dejás de tomar agua: día por día",
+   "hook": "You stop drinking water. Day 3 could kill you.",
+   "reveal": "Horas: sed y orina oscura. Día 1: dolor de cabeza, cansancio, la sangre se espesa. Día 2: los riñones empiezan a fallar, confusión. Alrededor del día 3 (varía con el calor y la persona) puede ser mortal.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body_you",
+   "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Decir que el plazo varía según calor y actividad. Verificar con 2 fuentes médicas serias.",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+  },
+  {
+   "id": "I10",
+   "title_es": "Si dejás de bañarte: día por día",
+   "hook": "You stop showering. Week 3, your skin grows a crust.",
+   "reveal": "Día 1–2: el olor lo hacen las bacterias que comen el sudor. Semana 1: grasa, piel muerta, granos. Semanas: aparecen costras marrones de piel muerta y mugre; tiene nombre médico, dermatitis neglecta, y sale frotando con agua y jabón.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body_you",
+   "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Asco = ultra viral, pero nada gore ni personas reales. Verificar dermatitis neglecta / terra firma-forme dermatosis con 2 fuentes.",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+  },
+  {
+   "id": "I11",
+   "title_es": "Si dejás de comer carne: qué le pasa a tu cuerpo",
+   "hook": "You stop eating meat. Your gut changes in 48 hours.",
+   "reveal": "En 1–2 días cambian las bacterias del intestino (David et al. 2014, Nature). Semanas: cambian la digestión y la energía. Las reservas de vitamina B12 del hígado duran años, así que el faltante aparece recién después de 3–5 años si no se suplementa.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body_you",
+   "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Tema que arma debate en comentarios (bien), pero contarlo neutral: ni a favor ni en contra de comer carne y sin consejos de dieta. Verificar con 2 fuentes.",
+   "status": "todo",
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+  },
+  {
    "id": "N01",
    "title_es": "¿Existe alguien con tu misma cara?",
    "hook": "8 billion people. How many have YOUR face?",
@@ -3060,6 +3112,10 @@
   {
    "date": "2026-11-18",
    "change": "Pedido de la dueña: +2 temas I06 (recuerdos reconstruidos) e I07 (no dormir nunca más), con ganchos que arrancan con 'You…'."
+  },
+  {
+   "date": "2026-11-18",
+   "change": "Pedido de la dueña: nueva serie 'You stop X' (día por día hasta algo extremo) +4 temas I08–I11 (dientes, agua, bañarse, carne). Ganchos que arrancan con 'You…' sumados como formato prioritario en SCOUT.md."
   }
  ]
 }
