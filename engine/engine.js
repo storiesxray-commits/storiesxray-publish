@@ -93,6 +93,7 @@ export function setOpacity(root, op) {
 
 // ---------- character: "the Subject" ----------
 export function Subject(o = {}) {
+  if (globalThis.XR_PRO_SUBJECT && !o.suit && !o.xray && !o.toon) return globalThis.XR_PRO_SUBJECT(o);  // render style 'pro' (engine/character.js)
   const suit = !!o.suit, xr = !!o.xray;
   const fm = xr ? fresnel(C.cyan, 2.0, 0.9, 0.02) : null;
   const mk = (geo, color) => xr ? new THREE.Mesh(geo, fm) : M(geo, color, { px: o.px || 5 });
