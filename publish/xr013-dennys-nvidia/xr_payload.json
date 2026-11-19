@@ -1,0 +1,76 @@
+{
+  "content_id": "xr-013",
+  "repo_id": "xr013-dennys-nvidia",
+  "sha256": "484cdd789aa437963afbf45069c01272e4a81e79df8dc38b86eb8eccdfef7cf0",
+  "file_size_bytes": 16939973,
+  "duration_seconds": 32.46,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 30.0,
+  "video_bit_rate": 4056811,
+  "faststart": true,
+  "title_youtube": "Jensen Huang Built Nvidia in a Denny's Booth. Then He Resigned.",
+  "description_youtube": "Jensen Huang went from washing dishes at Denny's to planning Nvidia in a Denny's booth.\n\nThe quick version:\n- At 15, Huang worked at a Denny's in Portland, Oregon: dishwasher, busboy, waiter.\n- In 1993 he met engineers Chris Malachowsky and Curtis Priem in a booth at a Denny's in San Jose, California, to plan a graphics chip company. His reason: all the coffee you could drink and nobody could chase you out.\n- That company became Nvidia, now the AI chip giant worth trillions. In 2023 Denny's put a plaque on the booth: \"The booth that launched a $1 trillion company.\"\n- On Nov. 12, 2026, Huang resigned as Nvidia's CEO and left its board, effective immediately. CFO Colette Kress became interim CEO.\n- After he resigned, the plaque was taken down. Days later Denny's reinstalled it.\n\nSources:\n- Nvidia blog (2023), Jensen Huang returns to Denny's where Nvidia launched: https://blogs.nvidia.com/blog/nvidia-dennys-trillion/\n- Fortune, From Denny's dishwasher to Nvidia CEO: https://fortune.com/article/how-nvidias-billionaire-ceo-went-from-dennys-dishwasher-to-leading-a-company-with-a-2-9-trillion-market-cap/\n- Al Jazeera (Nov. 12, 2026), Why did Jensen Huang resign: https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress\n- SF Standard (Nov. 12, 2026), Nvidia CEO Jensen Huang resigns: https://sfstandard.com/2026/11/12/nvidia-ceo-jensen-huang-resigns/\n- Tom's Hardware (updated Nov. 15, 2026), Denny's plaque removed, then restored: https://www.tomshardware.com/tech-industry/commemorative-plaque-at-dennys-booth-where-nvidia-was-born-has-been-removed-sign-removed-in-wake-of-jensens-scandals-marked-the-booth-that-launched-a-usd1-trillion-company\n- Inc. (Nov. 2026), Denny's statement on the plaque: https://www.inc.com/victoria-salves/dennys-wanted-out-jensen-huang-controversy-put-itself-at-center/91436429\n- Yahoo Finance (Nov. 2026), Nvidia earnings without Jensen Huang: https://finance.yahoo.com/markets/stocks/articles/nvidia-reports-earnings-tuesday-without-164548681.html\n- SEC filing (Nov. 17, 2026), Nvidia Q3 FY2027 results: https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm\n\n#nvidia #jensenhuang #dennys #startup",
+  "caption_instagram": "Nvidia was born at Denny's?! ☕\n\nAt 15, Jensen Huang washed dishes at Denny's. In 1993 he and two engineers planned Nvidia in a Denny's booth in San Jose: bottomless coffee, nobody kicks you out. Today it's the AI chip giant worth trillions.\n\nOn Nov. 12, 2026 he resigned as CEO. The plaque on that booth was taken down... and then Denny's put it back.\n\nSend this to a friend with a billion-dollar idea.\n\nFull story on YouTube: @StoriesXray\n\n#nvidia #jensenhuang #dennys #startup",
+  "tags": [
+    "jensen huang denny's nvidia",
+    "nvidia denny's booth",
+    "nvidia founded at denny's",
+    "jensen huang dishwasher at denny's",
+    "jensen huang resigns",
+    "denny's nvidia plaque",
+    "how nvidia started",
+    "jensen huang story",
+    "nvidia origin story",
+    "trillion dollar company",
+    "startup story",
+    "ai chips",
+    "business facts"
+  ],
+  "series": "Brands Exposed",
+  "sources": [
+    {
+      "title": "Nvidia blog (26 Sep 2023): Huang's first job at 15 at a Denny's in Portland (dishwasher, busboy, waiter); 1993 meeting with Malachowsky and Priem at a Silicon Valley Denny's; 'all the coffee you could drink and no one could chase you out'",
+      "url": "https://blogs.nvidia.com/blog/nvidia-dennys-trillion/"
+    },
+    {
+      "title": "Fortune: How Nvidia's billionaire CEO went from Denny's dishwasher to leading a trillion-dollar company",
+      "url": "https://fortune.com/article/how-nvidias-billionaire-ceo-went-from-dennys-dishwasher-to-leading-a-company-with-a-2-9-trillion-market-cap/"
+    },
+    {
+      "title": "Al Jazeera (12 Nov 2026): Huang stepped down as CEO and left the board; Colette Kress interim CEO; Nvidia gave no reason; no criminal charges reported",
+      "url": "https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress"
+    },
+    {
+      "title": "SF Standard (12 Nov 2026): Nvidia CEO Jensen Huang resigns",
+      "url": "https://sfstandard.com/2026/11/12/nvidia-ceo-jensen-huang-resigns/"
+    },
+    {
+      "title": "Tom's Hardware (update 15 Nov 2026): plaque 'The booth that launched a $1 trillion company' at the San Jose Denny's removed after the resignation, then reinstalled by Denny's",
+      "url": "https://www.tomshardware.com/tech-industry/commemorative-plaque-at-dennys-booth-where-nvidia-was-born-has-been-removed-sign-removed-in-wake-of-jensens-scandals-marked-the-booth-that-launched-a-usd1-trillion-company"
+    },
+    {
+      "title": "Inc. (Nov 2026): Denny's spokesperson: the plaque 'has been reinstalled'; Huang 'started at Denny's as a dishwasher'",
+      "url": "https://www.inc.com/victoria-salves/dennys-wanted-out-jensen-huang-controversy-put-itself-at-center/91436429"
+    },
+    {
+      "title": "Yahoo Finance (Nov 2026): Nvidia market value about $3.97 trillion; Huang resigned Thursday Nov 12 'effective immediately'",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-reports-earnings-tuesday-without-164548681.html"
+    },
+    {
+      "title": "SEC 8-K (17 Nov 2026): Nvidia Q3 FY2027 results, Colette Kress interim CEO and CFO",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "publish_time_local": "13:52",
+  "checks_failed": []
+}

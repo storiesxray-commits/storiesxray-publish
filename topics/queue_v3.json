@@ -18,7 +18,12 @@
    "hook_power": 10,
    "score": 100,
    "cat": "business",
-   "status": "todo"
+   "status": "done",
+   "video_id": "xr013-dennys-nvidia",
+   "topic_type": "news",
+   "event_date": "2026-11-12",
+   "expires": "2026-11-19",
+   "done_note": "19/11/2026: producido como NOTICIA (§1b) con el gancho de la semana: renuncia de Huang (12/11) y la placa del Denny's retirada y repuesta (13-15/11). Publicación rápida como EXTRA (ledger manual) el 19/11 13:52 NY. Sin mencionar los motivos de la renuncia (acusaciones sin cargos)."
   },
   {
    "id": "M01",

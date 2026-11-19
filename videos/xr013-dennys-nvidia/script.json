@@ -1,0 +1,15 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Nvidia was born at Denny's?!", 0.1],
+  ["[gasps] At fifteen, Jensen Huang washed dishes at Denny's!", 0.1],
+  ["In 1993, he and two engineers grabbed a booth.", 0.1],
+  ["[laughs] Bottomless coffee. Nobody kicks you out!", 0.15],
+  ["That booth became Nvidia.", 0.15],
+  ["Today the AI chip giant is worth trillions!", 0.2],
+  ["But now? [whispers] He resigned.", 0.2],
+  ["The plaque on that booth? Gone!", 0.15],
+  ["[shouting] Then Denny's put it back!", 0.25],
+  ["Send this to a friend with a billion-dollar idea!", 0.4]
+ ]
+}
