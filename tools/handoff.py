@@ -36,7 +36,7 @@ else:
     # hyper-viral thumbnail gate (QUALITY.md §5b): subject protected, 3 hooks, >= 3 variants compared,
     # and the published file must be exactly the one tools/thumbnail.py checked (thumb_report.json).
     if th and not th.get("protect"): errs.append("thumbnail_no_protect_box")
-    if th and not th.get("badge"): errs.append("thumbnail_no_badge")
+    if th and th.get("badge") is not False and not th.get("badge"): errs.append("thumbnail_no_badge")
     if th and len(th.get("variants") or []) < 3: errs.append("thumbnail_fewer_than_3_variants")
     rep = f"{ROOT}/out/{VID}/thumb_report.json"
     if not os.path.exists(rep): errs.append("thumbnail_report_missing_run_thumbnail_py")

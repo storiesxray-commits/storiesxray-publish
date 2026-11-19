@@ -3,6 +3,7 @@
 Este repo produce los Shorts del canal Stories X-Ray (YouTube @StoriesXray, Instagram @storiesxray). Objetivo del canal: audiencia de habla inglesa (EE. UU., Australia) y monetizar; Instagram sirve para llevar gente a YouTube.
 
 ## Reglas
+- **`HUMAN.md` primero (19/11/2026): el canal tiene que verse y sentirse hecho por personas, video por video. Gana sobre PLAYBOOK, AUTOPILOT y QUALITY cuando chocan.**
 - Los videos se hacen por código con este repo. No usar Kling. **La voz es ElevenLabs** (pedido de la dueña, 16/11/2026): 3 narradores propios en rotación, vía Make XR-07 (NEW_VIDEO.md paso 4). Kokoro solo de respaldo.
 - Antes de crear o corregir un video, leer `QUALITY.md` y seguir `NEW_VIDEO.md`.
 - Guiones en inglés. Comunicación con la dueña en español, directa y sin vueltas.

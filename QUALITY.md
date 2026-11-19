@@ -43,6 +43,8 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Efectos sincronizados con lo que pasa (golpe, burbujas, tic del reloj), nunca tapando una palabra clave.
 
 ## 5b. Miniatura HYPER CLICKBAIT (obligatoria, define el clic)
+> **Desde 19/11/2026 manda HUMAN.md §2:** la receta círculo + rayos + sello no puede repetirse en más de 2 videos seguidos. Para rotar diseños, `meta.json` → `thumbnail` acepta `"circle": false`, `"rays": false` y `"badge": false`. Lo demás de esta sección (legible, honesta, sujeto protegido, 3 variantes) sigue igual.
+
 **Regla de la dueña (16/11/2026): TODOS los videos salen con miniatura perfecta e hiperviral, sin excepción.** `tools/thumbnail.py` corta con error y `handoff.py` pone `hold` si no se cumple lo siguiente:
 - **`protect` obligatorio:** caja (px finales) del sujeto clave: cara, fuego, ola. El texto y el sello nunca lo tapan (el script mueve el texto arriba o abajo). Los rayos y la franja oscura no lo ensucian, y el brillo del círculo queda solo por fuera del aro. La cara o el objeto tienen que verse nítidos y enteros.
 - **Los 3 ganchos siempre:** círculo, rayos y sello (`badge`). Si falta el círculo o los rayos, se centran en `protect`; el sello es obligatorio.

@@ -54,11 +54,12 @@ def frame_for(T):
 
 def render(th):
     if not th.get("protect"): raise Fail("'protect' box missing (the subject the text must never cover)")
-    if not th.get("badge"): raise Fail("'badge' missing (date, place or number sticker is mandatory)")
+    if th.get("badge") is not False and not th.get("badge"): raise Fail("'badge' missing (date, place or number sticker; set false only for a HUMAN.md §2 rotation layout)")
     P = [int(v) for v in th["protect"]]
     pcx, pcy = (P[0] + P[2]) // 2, (P[1] + P[3]) // 2
-    circle = th.get("circle") or [pcx, pcy, int(max(P[2] - P[0], P[3] - P[1]) / 2 + 30)]
-    rays = th.get("rays") or [pcx, pcy]
+    # HUMAN.md §2: "circle": false / "rays": false / "badge": false turn a hook off so layouts rotate
+    circle = None if th.get("circle") is False else (th.get("circle") or [pcx, pcy, int(max(P[2] - P[0], P[3] - P[1]) / 2 + 30)])
+    rays = None if th.get("rays") is False else (th.get("rays") or [pcx, pcy])
     specs = [l if isinstance(l, dict) else {"text": l} for l in th["lines"]][:3]
     words = sum(len(str(s["text"]).split()) for s in specs)
     if not 2 <= words <= 4: raise Fail(f"text has {words} words; use 2-4")
@@ -73,8 +74,8 @@ def render(th):
     img = ImageEnhance.Brightness(img).enhance(1.04)
     # subject mask (soft) — rays and the dark band stay off it
     pm = Image.new("L", (W, H), 0); ImageDraw.Draw(pm).rounded_rectangle(P, 60, fill=255); pm = pm.filter(ImageFilter.GaussianBlur(40))
-    rx, ry = rays; ray = Image.new("L", (W, H), 0); rd = ImageDraw.Draw(ray)
-    for k in range(24):
+    rx, ry = rays or (W // 2, H // 2); ray = Image.new("L", (W, H), 0); rd = ImageDraw.Draw(ray)
+    for k in (range(24) if rays else ()):
         a0 = k * 2 * math.pi / 24; a1 = a0 + math.pi / 30
         rd.polygon([(rx, ry), (rx + 2600 * math.cos(a0), ry + 2600 * math.sin(a0)), (rx + 2600 * math.cos(a1), ry + 2600 * math.sin(a1))], fill=int(th.get("ray_alpha", 80)))
     fade = Image.radial_gradient("L").resize((W * 2, W * 2)).crop((W - rx, W - ry, W - rx + W, W - ry + H))
@@ -136,14 +137,14 @@ def render(th):
     draw = ImageDraw.Draw(img); boxes = []
 
     # red ring around the subject (glow only OUTSIDE the ring so the subject stays crisp)
-    cx, cy, r = circle; pad = 40
+    cx, cy, r = circle or (W // 2, H // 2, 0); pad = 40
     r = min(r, (SR - SL) // 2 - pad, (SB - ST) // 2 - pad)
     cx = clamp(cx, SL + pad + r, SR - pad - r); cy = clamp(cy, ST + pad + r, SB - pad - r)
     glow = Image.new("L", (W, H), 0); gd = ImageDraw.Draw(glow); gd.ellipse([cx - r - 30, cy - r - 30, cx + r + 30, cy + r + 30], fill=255); gd.ellipse([cx - r, cy - r, cx + r, cy + r], fill=0)
-    img.paste((255, 70, 50), (0, 0), glow.filter(ImageFilter.GaussianBlur(18)).point(lambda v: int(v * 0.75))); draw = ImageDraw.Draw(img)
-    for wdt, col in ((40, (255, 255, 255)), (30, (10, 10, 12)), (20, RED)):
+    if circle: img.paste((255, 70, 50), (0, 0), glow.filter(ImageFilter.GaussianBlur(18)).point(lambda v: int(v * 0.75))); draw = ImageDraw.Draw(img)
+    for wdt, col in (((40, (255, 255, 255)), (30, (10, 10, 12)), (20, RED)) if circle else ()):
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=col, width=wdt)
-    boxes.append(("circle", (cx - r - 20, cy - r - 20, cx + r + 20, cy + r + 20)))
+    if circle: boxes.append(("circle", (cx - r - 20, cy - r - 20, cx + r + 20, cy + r + 20)))
     if th.get("arrow"):
         (ax, ay), (bx, by) = [(clamp(x, SL + 40, SR - 40), clamp(y, ST + 40, SB - 40)) for x, y in th["arrow"]]
         ang = math.atan2(by - ay, bx - ax); hl = 95
@@ -158,7 +159,7 @@ def render(th):
 
     # badge: never on the text, the ring's subject or the protect box
     placed = None
-    for fs in (100, 90, 80, 70):
+    for fs in ((100, 90, 80, 70) if th.get("badge") is not False else ()):
         f = ImageFont.truetype(FONT, fs); t = str(th["badge"]).upper()
         tb = draw.textbbox((0, 0), t, font=f); bw, bh = tb[2] - tb[0] + int(fs * 0.8), tb[3] - tb[1] + int(fs * 0.56)
         tag = Image.new("RGBA", (bw + 30, bh + 30), (0, 0, 0, 0)); td = ImageDraw.Draw(tag)
@@ -173,11 +174,11 @@ def render(th):
             rect = (cand[0], cand[1], cand[0] + tw, cand[1] + tht)
             if not inter(rect, P, 12) and not any(inter(rect, b, 12) for _, b in boxes): placed = cand; break
         if placed: break
-    if not placed: raise Fail(f"badge collides everywhere; smaller circle/protect or shorter badge (text {box}, circle {(cx, cy, r)}, protect {P}, safe {ST}..{SB})")
-    img.paste(tag, placed, tag); boxes.append(("badge", (placed[0], placed[1], placed[0] + tw, placed[1] + tht)))
+    if th.get("badge") is not False and not placed: raise Fail(f"badge collides everywhere; smaller circle/protect or shorter badge (text {box}, circle {(cx, cy, r)}, protect {P}, safe {ST}..{SB})")
+    if placed: img.paste(tag, placed, tag); boxes.append(("badge", (placed[0], placed[1], placed[0] + tw, placed[1] + tht)))
     for name, (a, b_, c, d_) in boxes:
         if a < SL - 1 or b_ < ST - 1 or c > SR + 1 or d_ > SB + 1: raise Fail(f"{name} outside the safe zone: {(a, b_, c, d_)}")
-    checks = {"hooks": "circle+rays+badge", "words": words, "min_line_px": minh, "text_box": box, "protect": P,
+    checks = {"hooks": "+".join(k for k, on in (("circle", circle), ("rays", rays), ("badge", placed)) if on) or "none", "words": words, "min_line_px": minh, "text_box": box, "protect": P,
               "text_off_subject": not inter(box, P), "lowest_overlay_px": max(b[1][3] for b in boxes)}
     return img, checks
 
