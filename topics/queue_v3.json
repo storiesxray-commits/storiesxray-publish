@@ -936,9 +936,11 @@
    "cat": "mind",
    "format": "everyday",
    "topic_type": "evergreen",
-   "status": "todo",
+   "status": "done",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 01)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 01. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 01. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "video_id": "xr014-served-first",
+   "done_date": "2026-11-20"
   },
   {
    "id": "E04",

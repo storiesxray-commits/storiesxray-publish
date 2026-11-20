@@ -1,0 +1,206 @@
+{
+  "render_style": "pro",
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": true,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook"
+  ],
+  "title": "Tables Served Before You? It's Not the Wait That Makes You Mad 😤",
+  "description": "Tables served before you, even though you sat down first? The wait isn't what's making you mad.\n\nQueue researchers have a name for it: \"slips and skips.\" MIT professor Richard Larson (\"Dr. Queue\") has studied the psychology of waiting lines since the 1970s. In 1976 he was skipped at a store pickup counter while buying his son's first bike. He was furious, and he went on to research why being skipped stings more than the wait itself. Service researcher David Maister put it in one line: unfair waits feel longer than equitable waits.\n\nFair warning: in a restaurant the other table often isn't skipping you. Different dishes take different times in the kitchen. Your brain still reads it as a cut in line.\n\nDo you say something, or just stew? Tell us below.\n\nSources:\n- MIT News (2008), Richard Larson and the psychology of queuing (the 1976 story): https://news.mit.edu/2008/eureka-larson-tt0206\n- 99% Invisible, Episode 49: Queue Theory and Design (Larson on \"slips and skips\"): https://99percentinvisible.org/episode/episode-49-queue-theory-and-design/transcript/\n- Larson (1987), Perspectives on Queues: Social Justice and the Psychology of Queueing, Operations Research: https://ideas.repec.org/a/inm/oropre/v35y1987i6p895-905.html\n- Rafaeli et al. (2002), The Effects of Queue Structure on Attitudes, Journal of Service Research: https://serveng.technion.ac.il/files/Lectures/Rafaeli-Queue-structure-and-attitudes-JSR.pdf\n- Maister's principles of waiting (summary): https://uen.pressbooks.pub/servicesmgt/chapter/chapter-12-the-psychology-of-waiting/\n- Tasting Table, why other tables get served before you: https://www.tastingtable.com/2161755/why-tables-served-before-you/\n\n#psychology #restaurant #waitinginline #everydayxray",
+  "tags": [
+    "tables served before you",
+    "why other tables get food first",
+    "served after people who came later",
+    "psychology of waiting in line",
+    "getting skipped in line makes you angry",
+    "slips and skips",
+    "dr queue richard larson",
+    "queue psychology",
+    "restaurant psychology",
+    "line cutting",
+    "waiting at a restaurant",
+    "everyday psychology",
+    "fairness psychology",
+    "everyday x-ray"
+  ],
+  "pinned_comment": "Honest question: have you ever actually called the waiter over when this happened? Or did you just sit there and stew?",
+  "series": "Everyday X-Ray",
+  "caption_instagram": "18 minutes. No food. And the couple who sat down AFTER you is already eating. 😤\n\nMIT professor Richard Larson has studied lines for decades. His take: waiting is annoying, but getting skipped is what makes people furious. He started after it happened to him, in 1976.\n\nDo you say something, or just stew?\n\nMore on YouTube: @StoriesXray\n\n#psychology #restaurant #waitinginline #everydayxray",
+  "sources": [
+    {
+      "title": "MIT News (2008): Larson, MIT professor and 'Dr. Q' of queue psychology; in 1976 people skipped ahead of him at a store pickup window while he bought his son's first bike ('I was furious'); he then got NSF funding to research the psychology of queuing, 'including the slips and skips'; skipping can provoke 'queue rage'",
+      "url": "https://news.mit.edu/2008/eureka-larson-tt0206"
+    },
+    {
+      "title": "99% Invisible ep. 49 transcript: 'I'm Dick Larson. I'm a professor at MIT... my nickname is Dr. Queue'; 'We call them slips and skips'",
+      "url": "https://99percentinvisible.org/episode/episode-49-queue-theory-and-design/transcript/"
+    },
+    {
+      "title": "Larson (1987), Perspectives on Queues: Social Justice and the Psychology of Queueing, Operations Research 35(6):895-905. Abstract: attitudes toward queues 'may be influenced more strongly by other factors' than the wait; 'customers may become infuriated if they experience social injustice, defined as violation of first in, first out'",
+      "url": "https://ideas.repec.org/a/inm/oropre/v35y1987i6p895-905.html"
+    },
+    {
+      "title": "Rafaeli, Barron & Haber (2002), The Effects of Queue Structure on Attitudes, Journal of Service Research 5(2):125-139: a multiple-queue structure 'is shown to produce a sense of lack of justice, even when no objective inequalities exist' (lab study, same ~12 min wait)",
+      "url": "https://serveng.technion.ac.il/files/Lectures/Rafaeli-Queue-structure-and-attitudes-JSR.pdf"
+    },
+    {
+      "title": "Maister's principles of waiting: 'Unfair waits are longer than equitable waits' (services management textbook)",
+      "url": "https://uen.pressbooks.pub/servicesmgt/chapter/chapter-12-the-psychology-of-waiting/"
+    },
+    {
+      "title": "Tasting Table: the dishes ordered are the main factor in which table is served first",
+      "url": "https://www.tastingtable.com/2161755/why-tables-served-before-you/"
+    }
+  ],
+  "human_angle": "The thing that ruins your dinner isn't the 18 minutes, it's the couple who sat down after you: the man who has studied lines for 50 years got into it the same way, furious at a pickup counter in 1976.",
+  "everyday": {
+    "concept": "Waiting at a restaurant and watching a table that arrived later get served first",
+    "emotion": "frustration / sense of unfairness",
+    "question": "Why does being skipped feel so much worse than the wait itself?",
+    "phenomenon": "Queue social justice ('slips and skips'): perceived unfairness, not wait time, drives the anger (Larson 1987; Maister 1985)",
+    "evidence": [
+      "https://news.mit.edu/2008/eureka-larson-tt0206",
+      "https://ideas.repec.org/a/inm/oropre/v35y1987i6p895-905.html",
+      "https://serveng.technion.ac.il/files/Lectures/Rafaeli-Queue-structure-and-attitudes-JSR.pdf",
+      "https://uen.pressbooks.pub/servicesmgt/chapter/chapter-12-the-psychology-of-waiting/"
+    ],
+    "closing_line": "Waiting isn't the problem. Watching someone else go first is.",
+    "human_angle": "The expert on lines started studying them because someone cut in front of him."
+  },
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "E01",
+    "score": 96
+  },
+  "experiment": {
+    "opening": "v2",
+    "voice": "xr8",
+    "duration": "mid",
+    "format_duration": "everyday 25-28 s",
+    "hook_type": "fact",
+    "topic_type": "everyday",
+    "ending": "comment"
+  },
+  "thumbnail": {
+    "time": 3.5,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      190,
+      830,
+      890,
+      1380
+    ],
+    "circle": false,
+    "rays": false,
+    "tilt": -4,
+    "badge": false,
+    "text_y": 170,
+    "lines": [
+      {
+        "text": "IT'S NOT",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "THE WAIT",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#FFD60A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "SERVED",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "FIRST?!",
+            "box": "#FF3B30"
+          }
+        ],
+        "glow": "#FF3B30"
+      },
+      {
+        "time": 6.9,
+        "protect": [
+          330,
+          380,
+          1000,
+          1100
+        ],
+        "text_y": 1130,
+        "lines": [
+          {
+            "text": "THEY CAME",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "AFTER YOU",
+            "box": "#FF3B30"
+          }
+        ],
+        "glow": "#FFD60A"
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.12,
+    "contrast": 1.18
+  },
+  "social_thumbnail": {
+    "protect": [
+      190,
+      830,
+      890,
+      1380
+    ],
+    "text_y": 280
+  },
+  "seo": {
+    "keyword": "tables served before you",
+    "playlist": "Everyday X-Ray: Why You Feel That Way",
+    "title_alts": [
+      "The Couple Who Sat Down After You Already Has Food 😤",
+      "An MIT Professor Explains Why Getting Skipped Feels So Bad"
+    ],
+    "questions": [
+      {
+        "q": "Why do other tables get their food before me?",
+        "a": "Usually it's the kitchen, not favoritism: different dishes take different times to cook, so a table that ordered later can be served first. Tasting Table says the dishes ordered are the main factor in serving order."
+      },
+      {
+        "q": "Why does getting skipped in line make people so angry?",
+        "a": "Queue researchers call it social injustice: when someone who arrived later goes first ('slips and skips'), people get angrier than the wait alone explains. MIT's Richard Larson says skipping can even trigger 'queue rage'."
+      },
+      {
+        "q": "Who is Richard Larson, 'Dr. Queue'?",
+        "a": "An MIT engineering professor who has studied the psychology of waiting lines since the 1970s. He started after people were served ahead of him at a store pickup counter in 1976, while he was buying his son's first bike."
+      }
+    ],
+    "demand": [
+      {
+        "query": "why do other tables get food before me",
+        "evidence": "Recurring explainer articles: AOL 'The Real Reason Some Tables Get Food Before You Do'; Tasting Table 'Notice Other Tables Getting Served Before You? There's A Good Reason For That'",
+        "url": "https://www.tastingtable.com/2161755/why-tables-served-before-you/"
+      },
+      {
+        "query": "psychology of waiting in line",
+        "evidence": "Evergreen topic: 99% Invisible episode, Behavioral Scientist 'Why most lines are rage-inducing', HBS Working Knowledge on queue switching",
+        "url": "https://www.thebehavioralscientist.com/?p=2679"
+      }
+    ]
+  },
+  "id": "xr014-served-first",
+  "duration_s": 25.9,
+  "status": "ready",
+  "publish_time_local": "12:12"
+}
