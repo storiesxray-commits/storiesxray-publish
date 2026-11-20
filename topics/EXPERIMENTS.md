@@ -105,6 +105,57 @@ Total: 9.170 vistas en 7 videos con datos, **1 share** (xr004), retención inici
 - **Defecto de diseño encontrado:** desde que EVERYDAY usa los ids mod 3 = 2, la duración (id mod 3) quedaba pegada al tipo de tema (noticia siempre corta, everyday siempre "largo" pisado por sus 20–28 s): nunca se iba a poder separar el efecto de la duración del del tema. Corregido en PLAYBOOK (duración por (id div 3) mod 3) y se suma el gancho de contradicción.
 - Sin cambios de pesos de narradores, de cola ni voces nuevas: ninguna variable tiene n suficiente y ninguna categoría se separa (53–57 %). Próxima alta de voz: 21/11.
 
+## YouTube Analytics (XR-06) — 20/11/2026 23:48 UTC (optimizador diario)
+XR-06 status=200. Retención inicial = engagedViews / views. Mapeo nuevo: **TqVget3OnhQ = xr012 finger-muscles** (cancelado por la dueña el 18/11 22:48 UTC, ledger `YT_CANCELLED`, pero **salió público** a las 23:10 UTC y tiene vistas) y 2LF0hl69P0c = xr011 (programado 21/11 02:56 UTC, 2 vistas privadas).
+| YouTube id | Video | Dur. | Gancho (1.ª frase) | Narrador | Tema / categoría | Hora NY | Edad | Vistas | Ret. inicial | % visto | Likes | Shares | Coment. | Subs / 1.000 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| FghYtMnXkz8 | xr009 gta-flu | 39,5 s | dato absurdo: "Soldiers reenlisted... to play GTA 6." | xr2 | **noticia** / pop culture, gaming | 17:34 | 49 h | **2.046** ↑ | 57,1 % | 61,5 % | 33 | 0 | 2 | 0,5 |
+| TqVget3OnhQ | xr012 finger-muscles | **15,7 s bucle** | dato: "Your fingers have ZERO muscles." | xr4 | evergreen / cuerpo | 18:10 | 49 h | **1.631** | 49,7 % | **96,8 %** | 3 | 0 | 0 | 0,0 |
+| dKt3jbZP3y0 | legado (xr002/xr003) | ~41–47 s | — | kokoro | — | — | > 5 d | 1.442 | 48,6 % | 66,1 % | 37 | 0 | 0 | 1,4 |
+| yFCoFoknAtY | xr005 pepsi-fire | 41,1 s | dato / imagen extrema | kokoro | pop culture / famosos | 19:03 | 4 d | 1.422 | 54,0 % | 58,0 % | 16 | 0 | 1 | **2,8** |
+| R1tUFDFpg1E | xr006 calment-122 | 44,6 s | pregunta genérica | kokoro | historia rara | 11:05 | 4,3 d | 1.378 | 46,2 % | 92,5 % ⚠️ | 44 | 0 | 1 | 0,0 |
+| 9i9w4fNvt8I | xr007 your-face | 39,6 s | cifra + pregunta | xr4 | mind | 21:50 | 45 h | 1.328 | 56,6 % | 61,3 % | 21 | **1** | 2 | 0,8 |
+| _VH127Agpmg | legado (xr002/xr003) | ~41–47 s | — | kokoro | — | — | > 5 d | 1.279 | **64,4 %** | 61,5 % | 19 | 0 | 0 | 1,6 |
+| Kx3zQdMqgwE | xr001 space | ~45 s | dato | kokoro | cuerpo / ciencia | — | > 5 d | 1.265 | 53,6 % | 64,3 % | 27 | 0 | 1 | 0,8 |
+| oNWohhg7UF8 | xr004 molasses | 47,2 s | contradicción | kokoro | historia rara | 12:00 | 3,3 d | 1.162 | 62,7 % | 52,2 % | 29 | 1 | 0 | 0,0 |
+| G3Zfe1HCCuI | xr010 phone-germs | 30,1 s | dato | xr4 | cuerpo / asco | 12:41 | 30 h | 1 | — | — | | | | |
+| Crdu6Bam1c0 | xr008 mirror-face | 34,3 s | pregunta | xr1 | mind | 16:16 | 26 h | 0 | — | — | | | | |
+xr013 (zcv8gv3iYRg, noticia, medio) todavía sin fila. Total: 12.953 vistas en 9 videos con datos, **2 shares**. Analytics demora ~2 días en cargar un video nuevo (xr004: 4 vistas a 31 h → 1.159; xr009: 6 a 25 h → 2.046 a 49 h), así que xr008/xr010 en 0–1 todavía es normal; si mañana siguen < 50, revisar en Studio. ⚠️ xr008: el ledger sigue en `YT_SCHEDULED` y **sin `FB_PUBLISHED`** (xr010 y xr013 sí lo tienen).
+
+### Por variable (20/11) — ninguna variable cumple el criterio (≥ 3 videos por nivel con ≥ 300 vistas y ≥ 48 h)
+| Variable | Nivel | n | Ret. inicial | % visto | Vistas prom. | Shares | Subs/1.000 |
+|---|---|---|---|---|---|---|---|
+| Duración | corto 15–22 s (bucle) | 1 (xr012) | 49,7 % | **96,8 %** | **1.631** | 0 | 0,0 |
+| Duración | medio 25–32 s | 0 | sin datos (xr013, xr014, xr010 en camino) | | | | |
+| Duración | largo 39–47 s | 8 | 55,2 % | 52–66 % (sin xr006 ⚠️) | 1.415 | 2 | 1,0 |
+| Gancho | contradicción | 1 | **62,7 %** | 52,2 % | 1.162 | 1 | 0,0 |
+| Gancho | cifra + pregunta | 1 | 56,6 % | 61,3 % | 1.328 | 1 | 0,8 |
+| Gancho | dato / imagen extrema | 4 | 53,8 % | 58–97 % | 1.591 | 0 | 0,9 |
+| Gancho | pregunta genérica | 1 | 46,2 % | — | 1.378 | 0 | 0,0 |
+| Narrador | kokoro (v1) | 6 | 54,5 % | 52–66 % | 1.325 | 1 | 1,1 |
+| Narrador | xr4 Absolute Lunatic | 2 | 52,8 % (56,6 / 49,7) | 61 / 97 % | 1.480 | 1 | 0,3 |
+| Narrador | xr2 Unhinged Podcaster | 1 | 57,1 % | 61,5 % | **2.046** | 0 | 0,5 |
+| Narrador | xr1, xr5–xr9 | 0 | sin datos | | | | |
+| Tema | noticia | 1 | 57,1 % | 61,5 % | **2.046** | 0 | 0,5 |
+| Tema | evergreen | 8 | 54,1 % | | 1.363 | 2 | 0,9 |
+| Tema | everyday | 0 | sin datos (xr014 sale 21/11) | | | | |
+| Categoría | pop culture / famosos | 2 | **55,9 %** | 60,1 % | **1.734** | 0 | 1,4 |
+| Categoría | mind | 1 | 56,6 % | 61,3 % | 1.328 | 1 | 0,8 |
+| Categoría | historia rara | 2 | 53,7 % | | 1.270 | 1 | 0,0 |
+| Categoría | cuerpo | 2 | 51,4 % | | 1.448 | 0 | 0,3 |
+| Horario (NY) | mañana 11–13 h | 2 | 53,7 % | | 1.270 | 1 | 0,0 |
+| Horario (NY) | tarde 17–18:30 h | 2 | 53,8 % | | **1.838** | 0 | 0,3 |
+| Horario (NY) | noche 19–22 h | 2 | 55,2 % | | 1.375 | 1 | 1,8 |
+
+### Lectura video por video (20/11)
+- **Por primera vez dos videos rompen el techo de ~1.150–1.450 vistas: xr009 (2.046 y sigue subiendo) y xr012 (1.631).** Los otros 7 siguen clavados ahí. Lo que tienen en común no es la retención inicial (57 % y 50 %, normales o bajas) ni el narrador: xr009 es **noticia** (GTA 6, búsqueda caliente → tráfico extra además del feed) y xr012 es **corto con bucle** (15,7 s; % visto 96,8 %: la gente lo ve entero y vuelve a empezar). Los dos salieron a la tarde de NY (17:34 y 18:10), pero con n = 2 eso puede ser casualidad.
+- **xr012 es la lección más fuerte del día:** un tema que la dueña calificó de tibio, con la peor retención inicial de los nuevos (49,7 %), superó en alcance a 7 de 9 videos solo por la duración y el bucle ("See? Because..." → "Your fingers have ZERO muscles."). En Shorts, terminar visto (y re-visto) pesa más que el primer segundo para salir del lote inicial. Con un tema ultra viral, corto + bucle tendría que andar todavía mejor. Ojo: 0 subs y 0 shares; corto atrae vistas, no fans.
+- **xr009 (noticia GTA):** 57,1 % de retención y a las 49 h sigue sumando (era 6 vistas a 25 h por la demora de Analytics). Es el único que siguió creciendo después del lote: la búsqueda del tema lo sostiene. Si xr013 (otra noticia) también pasa ~1.700 a 48 h, las noticias suben a 1 de cada 2.
+- **xr007 (xr4):** sumó su primer share; 56,6 % se mantiene. Sigue en el techo.
+- **Largos (8 videos, 39–47 s):** todos entre 1.162 y 1.442 vistas y 52–66 % visto. Este nivel ya tiene datos de sobra; lo que falta medir es corto y medio.
+- **Narradores:** xr2 57,1 % (n = 1) y xr4 52,8 % (n = 2, uno es el corto tibio). Sin diferencia que no explique el tema/duración. Sin cambios.
+- **Decisión:** la duración pasa a priorizar corto (ver PLAYBOOK): el largo queda pausado hasta que corto y medio tengan 3 videos con datos cada uno. Hora: se anota la tarde de NY como hipótesis (la elige `handoff.py`, que ya le da 50 % a 16:10–20:50; no se toca).
+
 ## E2 — Duración (desde 17/11/2026; impar = largo 36–40 s, par = corto 28–32 s)
 | Video | Brazo | Duración | Narrador | Tema / categoría | Retención inicial | % reproducido | Vistas a 48 h | Subs / 1.000 |
 |---|---|---|---|---|---|---|---|---|
@@ -120,10 +171,16 @@ Objetivo: **≥ 70 % stayed to watch**. Si a las 4–6 v2 no sube de ~62 %, el p
 ## Narradores (ElevenLabs) — por video
 | Video | Narrador | Estabilidad | Tema / categoría | Duración | Stayed to watch | % promedio reproducido | Vistas a 48 h | Subs / 1.000 vistas |
 |---|---|---|---|---|---|---|---|---|
-| xr007-your-face | xr4 Absolute Lunatic | 0.0 | dobles / mind | 39,6 s | 56,5 % (21 h) | 61,2 % | (1.277 a 21 h) | 0,8 |
+| xr007-your-face | xr4 Absolute Lunatic | 0.0 | dobles / mind | 39,6 s | 56,6 % | 61,3 % | 1.328 | 0,8 |
 | xr008-mirror-face | xr1 Campfire Maniac | 0.5 | espejo / mind | 34,3 s | | | | |
-| xr009-gta-flu | xr2 Unhinged Podcaster | 0.0 | GTA 6 / pop culture (tendencia) | 39,5 s | | | | |
+| xr009-gta-flu | xr2 Unhinged Podcaster | 0.0 | GTA 6 / pop culture (noticia) | 39,5 s | 57,1 % | 61,5 % | 2.046 | 0,5 |
 | xr010-phone-germs | xr4 Absolute Lunatic | 0.0 | celular vs inodoro / cuerpo (asco) | 30,1 s | | | | |
+| xr012-finger-muscles | xr4 Absolute Lunatic | 0.0 | dedos / cuerpo (tibio, cancelado pero público) | 15,7 s bucle | 49,7 % | 96,8 % | 1.631 | 0,0 |
+| xr011-real-voice | xr6 Total Meltdown | 0.0 | tu voz grabada / cuerpo | 36,9 s | sale 21/11 | | | |
+| xr013-dennys-nvidia | xr7 Queens Firecracker | 0.0 | Nvidia / noticia | 32,5 s | sin fila | | | |
+| xr014-served-first | xr8 Southie Hothead | 0.0 | everyday / mind | 26,0 s | sale 21/11 | | | |
+
+Resumen por narrador (20/11): **sin ganador** — xr2 57,1 % (n = 1, 2.046 vistas, noticia), xr4 52,8 % (n = 2: 56,6 % largo + 49,7 % corto tibio), kokoro 54,5 % (n = 6). Las diferencias las explican tema y duración, no la voz. xr1, xr6–xr8 con videos en camino. Pesos sin cambios; próxima alta de voz 21/11.
 
 Resumen por narrador (19/11): **sin datos suficientes** — solo xr4 tiene 1 video con datos (xr007: 56,5 % ret. inicial, 21 h, vs 54,5 % del promedio kokoro). xr009 (xr2) con 6 vistas a 25 h (posible demora); xr010 (xr4) y xr008 (xr1) recién salieron. Primer corte posible el 21–22/11. Pesos sin cambios.
 
