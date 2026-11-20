@@ -70,19 +70,30 @@ function lathe(points, mat, parent, pos, scale) {
   const geo = new THREE.LatheGeometry(points.map(([r, y]) => new THREE.Vector2(r, y)), 48);
   return mesh(geo, mat, parent, pos, scale);
 }
-// egg head with narrower jaw and chin, flatter sides
+// sculpted head: egg skull, narrower jaw and chin, cheekbones, brow ridge, eye sockets, a real nose ridge and lip volume
+const G = (a, b) => Math.exp(-(a * a + b * b));
 function headGeo(f) {
-  const g = new THREE.SphereGeometry(0.15, 64, 48); const p = g.attributes.position, v = new THREE.Vector3();
+  const g = new THREE.SphereGeometry(0.15, 128, 96); const p = g.attributes.position, v = new THREE.Vector3();
   for (let i = 0; i < p.count; i++) {
     v.fromBufferAttribute(p, i); const y = v.y / 0.15, z = v.z / 0.15;
     const low = clamp(-y), jaw = lerp(1, f ? 0.7 : 0.76, Math.pow(low, 1.4));
     v.x *= 0.9 * jaw; v.z *= 1.0 * lerp(1, 0.9, low * (z < 0 ? 1 : 0.3));
     if (z > 0) v.z += 0.012 * Math.exp(-Math.pow((y + 0.78) / 0.18, 2)) * z;        // chin
-    if (z > 0) v.z -= 0.01 * Math.exp(-Math.pow((y - 0.05) / 0.18, 2)) * Math.pow(Math.abs(v.x / 0.13), 2) * 0; // keep
     v.y *= 1.1; if (y > 0.2) v.y += 0.008 * (y - 0.2);
-    if (v.z > 0) for (const ex of [-0.049, 0.049]) {        // eye sockets so the eyeballs sit in the face, not on it
-      const d2 = ((v.x - ex) ** 2) / (0.03 ** 2) + ((v.y - 0.016) ** 2) / (0.026 ** 2);
-      v.z -= 0.016 * Math.exp(-d2);
+    if (v.z > 0) {
+      const fz = clamp(v.z / 0.12);                                                   // only the front of the face
+      for (const ex of [-0.049, 0.049]) v.z -= 0.016 * G((v.x - ex) / 0.03, (v.y - 0.016) / 0.026);   // eye sockets
+      v.z += 0.006 * fz * G(v.x / 0.07, (v.y - 0.052) / 0.012);                        // brow ridge
+      for (const cx of [-0.072, 0.072]) { const c = G((v.x - cx) / 0.03, (v.y + 0.022) / 0.028) * fz; v.z += 0.008 * c; v.x += Math.sign(cx) * 0.004 * c; } // cheekbones
+      // nose: narrow ridge that grows from the bridge to the tip, then tucks under
+      const ny = v.y, prof = ny > 0.02 ? 0 : ny > -0.032 ? (0.02 - ny) / 0.052 : Math.max(0, 1 - (-0.032 - ny) / 0.012);
+      const w = f ? 0.012 : 0.014, nz = (f ? 0.03 : 0.036) * Math.pow(prof, 1.25) * Math.exp(-Math.pow(v.x / (w * (0.7 + 0.6 * prof)), 2));
+      v.z += nz * fz;
+      v.z += (f ? 0.006 : 0.008) * fz * G(v.x / 0.015, (v.y + 0.03) / 0.013);             // rounded nose tip
+      for (const ax of [-1, 1]) v.z += 0.004 * fz * G((v.x - ax * 0.015) / 0.008, (v.y + 0.038) / 0.008);   // nostril wings
+      v.z += 0.006 * fz * G(v.x / 0.02, (v.y + 0.054) / 0.008);                        // upper lip (philtrum)
+      v.z += 0.007 * fz * G(v.x / 0.022, (v.y + 0.082) / 0.009);                       // lower lip
+      v.z -= 0.004 * fz * G(v.x / 0.03, (v.y + 0.097) / 0.008);                        // chin crease
     }
     p.setXYZ(i, v.x, v.y, v.z);
   }
@@ -123,20 +134,18 @@ export function SubjectPro(o = {}) {
   const hg = headGeo(f), hp = hg.attributes.position, hc = new Float32Array(hp.count * 3);
   for (let i = 0; i < hp.count; i++) { const x = hp.getX(i), y = hp.getY(i), z = hp.getZ(i); let w = 0;
     if (z > 0) { for (const cx of [-0.075, 0.075]) w += 0.9 * Math.exp(-(((x - cx) / 0.035) ** 2 + ((y + 0.04) / 0.03) ** 2)); w += 0.5 * Math.exp(-((x / 0.03) ** 2 + ((y + 0.02) / 0.03) ** 2)); }
-    w = Math.min(1, w) * (f ? 0.16 : 0.1); hc.set([1, 1 - w * 0.9, 1 - w], i * 3); }
+    w = Math.min(1, w) * (f ? 0.16 : 0.1);
+    const lip = z > 0 ? Math.min(1, G(x / 0.024, (y + 0.06) / 0.008) + G(x / 0.026, (y + 0.079) / 0.009)) * (f ? 0.42 : 0.24) : 0;   // lip color
+    hc.set([1 - lip * 0.08, (1 - w * 0.9) * (1 - lip * 0.42), (1 - w) * (1 - lip * 0.36)], i * 3); }
   hg.setAttribute('color', new THREE.BufferAttribute(hc, 3));
-  const headSK = SK.clone(); headSK.vertexColors = true;
+  const headSK = SK.clone(); headSK.vertexColors = true; headSK.clearcoat = 0.03;
   const skull = J.skull = mesh(hg, headSK, head, [0, 0.0, 0]);
   // ears
   for (const s of [-1, 1]) {
     const ear = mesh(new THREE.SphereGeometry(0.03, 20, 14), SK, head, [s * 0.132, -0.005, -0.008], [0.38, 1, 0.75], [0, s * 0.35, 0]);
     mesh(new THREE.TorusGeometry(0.016, 0.0055, 8, 20), SK, ear, [s * 0.012, 0, 0.0], [0.6, 1, 1], [0, s * Math.PI / 2, 0]);
   }
-  // nose: bridge + tip + wings
-  const noseG = new THREE.Group(); noseG.position.set(0, -0.02, 0.142); head.add(noseG);
-  mesh(new THREE.SphereGeometry(0.016, 20, 14), SK, noseG, [0, 0.018, -0.004], [0.75, 1.9, 0.9], [-0.25, 0, 0]);
-  mesh(new THREE.SphereGeometry(0.016, 20, 14), SK, noseG, [0, -0.012, 0.008], [1.1, 0.95, 1]);
-  for (const s of [-1, 1]) mesh(new THREE.SphereGeometry(0.011, 14, 10), SK, noseG, [s * 0.014, -0.016, 0.0], [1, 0.8, 0.9]);
+  // nose is sculpted into the head; add soft nostril wings
   // eyes: white, iris, pupil, catchlight, eyelids; J.eyes[i].userData.pupil moves the iris
   J.eyes = []; J.brows = []; J.lids = [];
   const white = plain(0xf6f2ee, { roughness: 0.15, clearcoat: 1, clearcoatRoughness: 0.05 });
@@ -163,11 +172,12 @@ export function SubjectPro(o = {}) {
     brow.userData.s = s; J.brows.push(brow);
   }
   // mouth: dark interior + lips (scaled as one group by face())
-  const mouth = J.mouth = new THREE.Group(); mouth.position.set(0, -0.068, 0.124); head.add(mouth);
-  mesh(new THREE.SphereGeometry(0.024, 24, 14), plain(0x3a1414, { roughness: 0.6 }), mouth, [0, 0, -0.004], [1, 1, 0.4]);
+  // mouth sits exactly on the sculpted surface between the lips
+  let zs = 0.12; for (let i = 0; i < hp.count; i++) if (Math.abs(hp.getX(i)) < 0.006 && Math.abs(hp.getY(i) + 0.069) < 0.0035) zs = Math.max(zs, hp.getZ(i));
+  const mouth = J.mouth = new THREE.Group(); mouth.position.set(0, -0.069, zs - 0.0025); head.add(mouth);
+  mesh(new THREE.SphereGeometry(0.021, 24, 14), plain(0x2a0e0e, { roughness: 0.6 }), mouth, [0, 0, 0], [1, 0.5, 0.36]);
   mesh(new THREE.SphereGeometry(0.0055, 10, 8), plain(0xf4efe6, { roughness: 0.2 }), mouth, [0, 0.012, 0.002], [3.2, 0.9, 0.6]);  // teeth hint
   const lipM = plain(new THREE.Color(skinC).lerp(new THREE.Color(f ? 0xc0545a : 0xa65a50), f ? 0.55 : 0.35), { roughness: 0.4, clearcoat: f ? 0.6 : 0.2 });
-  mesh(new THREE.TorusGeometry(0.024, 0.0065, 12, 40), lipM, mouth, [0, 0, 0.002], [1, 1, 0.6]);
   if (o.beard && !f) {                                    // short boxed beard: jaw band + chin + moustache
     const bm = hairMat(hairC);
     mesh(new THREE.TorusGeometry(0.098, 0.022, 12, 40, Math.PI), bm, head, [0, -0.06, 0.02], [1.02, 0.95, 1.05], [0, 0, Math.PI]);
@@ -176,14 +186,19 @@ export function SubjectPro(o = {}) {
   }
   // hair
   const H = new THREE.Group(); head.add(H);
-  const cap = (phi = 0.48, sc = [0.96, 1.1, 1.03], tilt = -0.3) => mesh(new THREE.SphereGeometry(0.158, 48, 24, 0, Math.PI * 2, 0, Math.PI * phi), HAIR, H, [0, 0.01, -0.004], sc, [tilt, 0, 0]);
+  // hair shapes get combed grooves (strand clumps) displaced into the geometry, so short hair reads as hair, not a helmet
+  const groove = (geo, amp = 0.0045, freq = 210, seed = 3) => { const q = geo.attributes.position, v = new THREE.Vector3(), rn = rnd(seed), ph = rn() * 6;
+    for (let i = 0; i < q.count; i++) { v.fromBufferAttribute(q, i); const n = v.clone().normalize();
+      const k = 0.5 + 0.5 * Math.sin(v.x * freq + Math.sin(v.z * 40 + ph) * 1.6 + Math.sin(v.y * 55) * 0.8); v.addScaledVector(n, amp * (k * k - 0.3)); q.setXYZ(i, v.x, v.y, v.z); }
+    geo.computeVertexNormals(); return geo; };
+  const cap = (phi = 0.48, sc = [0.96, 1.1, 1.03], tilt = -0.3) => mesh(groove(new THREE.SphereGeometry(0.158, 96, 48, 0, Math.PI * 2, 0, Math.PI * phi), style === 'buzz' ? 0.0012 : 0.0026, 330), HAIR, H, [0, 0.01, -0.004], sc, [tilt, 0, 0]);
   if (style !== 'bald') {
     if (style === 'buzz') cap(0.5, [0.93, 1.09, 1.0], -0.35);
     else cap(style === 'curly' ? 0.52 : 0.47, style === 'curly' ? [1.02, 1.14, 1.07] : [0.97, 1.11, 1.04]);
     if (style === 'short' || style === 'side') {
       // swept fringe: one smooth lock across the forehead + volume on top
-      mesh(new THREE.SphereGeometry(0.1, 32, 16), HAIR, H, [style === 'side' ? 0.025 : 0, 0.105, 0.072], [1.15, 0.42, 0.72], [0.55, 0, style === 'side' ? -0.28 : 0]);
-      mesh(new THREE.SphereGeometry(0.12, 32, 16), HAIR, H, [0, 0.135, 0.0], [1.08, 0.5, 1.12], [0.15, 0, 0]);
+      mesh(groove(new THREE.SphereGeometry(0.1, 64, 32), 0.0035, 300, 5), HAIR, H, [style === 'side' ? 0.02 : 0, 0.112, 0.064], [1.12, 0.36, 0.7], [0.55, 0, style === 'side' ? -0.28 : 0]);
+      // (no extra top volume: it read as rolls)
     }
     if (style === 'curly') {
       const rr = rnd(4);
@@ -200,7 +215,7 @@ export function SubjectPro(o = {}) {
         for (let i = 0; i < 34; i++) { const th = Math.PI * 0.32 + (i / 33) * Math.PI * 1.36, rad = 0.146 + rh() * 0.01, L = len * (0.8 + rh() * 0.25);
           const b = limb(H, L, 0.019, 0.011, HAIR, 0); b.position.set(Math.sin(th) * rad, 0.03, Math.cos(th) * rad - 0.012); b.rotation.set(Math.cos(th) * 0.12, 0, -Math.sin(th) * 0.12); }
       }
-      mesh(new THREE.SphereGeometry(0.1, 32, 16), HAIR, H, [-0.02, 0.11, 0.07], [1.25, 0.42, 0.75], [0.6, 0, 0.32]);  // side-swept bangs
+      mesh(groove(new THREE.SphereGeometry(0.1, 64, 32), 0.0035, 300, 9), HAIR, H, [-0.02, 0.11, 0.07], [1.25, 0.42, 0.75], [0.6, 0, 0.32]);  // side-swept bangs
       if (style === 'ponytail') { mesh(new THREE.SphereGeometry(0.03, 12, 10), HAIR, H, [0, 0.07, -0.16]); limb(H, 0.2, 0.035, 0.018, HAIR, 0).position.set(0, 0.06, -0.18); }
       if (style === 'bun') mesh(new THREE.SphereGeometry(o.elder ? 0.07 : 0.06, 24, 16), HAIR, H, [0, 0.13, -0.11]);
     }
@@ -214,7 +229,7 @@ export function SubjectPro(o = {}) {
   J.arm = {}; J.leg = {};
   for (const [name, s] of [['L', -1], ['R', 1]]) {
     const a = new THREE.Group(); a.position.set(s * (f ? 0.215 : 0.232), 0.44, 0); chest.add(a);
-    mesh(new THREE.SphereGeometry(0.058, 24, 16), sleeveM, a, [s * -0.008, 0.0, 0], [1, 0.9, 0.95]);
+    mesh(new THREE.SphereGeometry(0.054, 24, 16), sleeveM, a, [s * -0.012, -0.004, 0], [0.95, 0.85, 0.92]);
     const armSkin = longSleeve ? foreM : SK;
     limb(a, 0.24, f ? 0.043 : 0.05, f ? 0.036 : 0.041, armSkin, 0);
     if (!longSleeve) { limb(a, 0.11, 0.058, f ? 0.05 : 0.054, sleeveM, 0); mesh(new THREE.TorusGeometry(f ? 0.05 : 0.054, 0.005, 8, 32), sleeveM, a, [0, -0.11, 0], null, [Math.PI / 2, 0, 0]); } // T-shirt sleeve + hem

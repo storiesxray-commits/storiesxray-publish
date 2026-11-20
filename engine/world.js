@@ -141,3 +141,134 @@ export function studio(scene, o = {}) {
   const rim = new THREE.DirectionalLight(o.rim ?? 0x9fd8ff, o.rimI ?? 2.0); rim.position.set(2, 3, -4);
   scene.add(key, fill, rim); for (const l of [key, fill, rim]) l.userData.proScaled = true; return cyc;
 }
+
+// ---------------- props (all real-world scale in meters, origin on the floor, facing +z) ----------------
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+const _m = (geo, m, p, r, s) => { const o = new THREE.Mesh(geo, m); o.castShadow = o.receiveShadow = true; if (p) o.position.set(...p); if (r) o.rotation.set(...r); if (s) o.scale.set(...s); return o; };
+const RB = (w, h, d, r = 0.01) => new RoundedBoxGeometry(w, h, d, 4, Math.min(r, w / 2.1, h / 2.1, d / 2.1));
+// potted plant: terracotta pot, soil, a few dozen leaves fanning out
+export function plant(o = {}) {
+  const g = new THREE.Group(), r = rnd(o.seed ?? 4), h = o.h ?? 0.9;
+  g.add(_m(new THREE.CylinderGeometry(0.16, 0.12, 0.28, 32), mat('ceramic', { color: o.pot ?? 0xb5653d, roughness: 1.2 }), [0, 0.14, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.15, 0.15, 0.02, 32), mat('concrete', { color: 0x3a2a1e }), [0, 0.27, 0]));
+  const leafM = new THREE.MeshPhysicalMaterial({ color: o.leaf ?? 0x3f7a35, roughness: 0.45, sheen: 0.5, sheenColor: new THREE.Color(0x9fd27a), side: THREE.DoubleSide, clearcoat: 0.3 });
+  const leaf = new THREE.SphereGeometry(0.1, 16, 8); leaf.scale(0.35, 1, 0.06); leaf.translate(0, 0.1, 0);
+  for (let i = 0; i < (o.leaves ?? 26); i++) { const a = r() * Math.PI * 2, t = 0.25 + r() * 0.9, L = 0.6 + r() * 0.8;
+    const stem = new THREE.Group(); stem.position.set(0, 0.28, 0); stem.rotation.set(0, a, 0); g.add(stem);
+    const lf = _m(leaf, leafM, [0, (h - 0.3) * (0.3 + 0.7 * r()), 0], [t, 0, (r() - 0.5) * 0.6], [L, L * (h / 0.9), L]); stem.add(lf); }
+  return g;
+}
+export function table(o = {}) {
+  const g = new THREE.Group(), w = o.w ?? 1.2, d = o.d ?? 0.75, h = o.h ?? 0.75, wm = mat('wood', { color: o.color ?? 0x9a7250, repeat: [1, 1] });
+  g.add(_m(RB(w, 0.04, d, 0.012), wm, [0, h - 0.02, 0]));
+  for (const [x, z] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) g.add(_m(new THREE.CylinderGeometry(0.022, 0.018, h - 0.04, 16), wm, [x * (w / 2 - 0.07), (h - 0.04) / 2, z * (d / 2 - 0.07)]));
+  return g;
+}
+export function chair(o = {}) {
+  const g = new THREE.Group(), wm = mat(o.fabric ? 'fabric' : 'wood', { color: o.color ?? 0x7a5a3e });
+  g.add(_m(RB(0.44, 0.05, 0.44, 0.015), wm, [0, 0.45, 0]));
+  g.add(_m(RB(0.44, 0.45, 0.04, 0.015), wm, [0, 0.7, -0.2], [-0.08, 0, 0]));
+  for (const [x, z] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) g.add(_m(new THREE.CylinderGeometry(0.016, 0.014, 0.45, 12), wm, [x * 0.19, 0.225, z * 0.19]));
+  return g;
+}
+export function lamp(o = {}) {
+  const g = new THREE.Group(), metal = mat('metal', { color: 0x2b2d31 });
+  g.add(_m(new THREE.CylinderGeometry(0.12, 0.14, 0.03, 32), metal, [0, 0.015, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.01, 0.01, o.h ?? 1.5, 12), metal, [0, (o.h ?? 1.5) / 2, 0]));
+  const shade = _m(new THREE.CylinderGeometry(0.12, 0.2, 0.22, 32, 1, true), new THREE.MeshPhysicalMaterial({ color: 0xf3e9d6, roughness: 0.8, side: THREE.DoubleSide, emissive: 0xffcf8a, emissiveIntensity: 0.6, transmission: 0.3 }), [0, (o.h ?? 1.5), 0]); g.add(shade);
+  const pl = new THREE.PointLight(0xffd29a, o.light ?? 2.5, 5, 2); pl.position.set(0, (o.h ?? 1.5) - 0.05, 0); pl.userData.proScaled = true; g.add(pl);
+  return g;
+}
+export function laptop(o = {}) {
+  const g = new THREE.Group(), al = mat('metal', { color: o.color ?? 0xc9ccd1 });
+  g.add(_m(RB(0.32, 0.015, 0.22, 0.006), al, [0, 0.0075, 0]));
+  g.add(_m(RB(0.29, 0.002, 0.1, 0.001), mat('rubber'), [0, 0.016, -0.02]));
+  const lid = new THREE.Group(); lid.position.set(0, 0.015, -0.11); lid.rotation.x = -(o.open ?? 1.85) + Math.PI / 2; g.add(lid);
+  lid.add(_m(RB(0.32, 0.21, 0.008, 0.006), al, [0, 0.105, 0]));
+  const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.29, 0.18), o.screen || new THREE.MeshBasicMaterial({ color: 0x8fc4ff })); scr.position.set(0, 0.105, 0.0045); lid.add(scr); g.userData.screen = scr;
+  return g;
+}
+export function mug(o = {}) {
+  const g = new THREE.Group(), cm = mat('ceramic', { color: o.color ?? 0xf2efe9 });
+  g.add(_m(new THREE.CylinderGeometry(0.042, 0.038, 0.1, 32, 1, true), cm, [0, 0.05, 0])); g.children[0].material.side = THREE.DoubleSide;
+  g.add(_m(new THREE.CylinderGeometry(0.038, 0.038, 0.006, 32), cm, [0, 0.003, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.039, 0.039, 0.004, 32), new THREE.MeshPhysicalMaterial({ color: o.drink ?? 0x3b2314, roughness: 0.1, clearcoat: 1 }), [0, 0.085, 0]));
+  g.add(_m(new THREE.TorusGeometry(0.025, 0.007, 10, 24, Math.PI), cm, [0.042, 0.05, 0], [0, 0, -Math.PI / 2]));
+  return g;
+}
+// lab glass: Erlenmeyer flask and beaker with colored liquid
+export function flask(o = {}) {
+  const g = new THREE.Group(), glass = mat('glass'), pts = [[0.001, 0], [0.07, 0], [0.075, 0.01], [0.03, 0.13], [0.018, 0.15], [0.018, 0.2], [0.022, 0.205]];
+  g.add(_m(new THREE.LatheGeometry(pts.map(([x, y]) => new THREE.Vector2(x, y)), 48), glass));
+  const lq = [[0.001, 0.004], [0.066, 0.004], [0.07, 0.012], [0.047, 0.07], [0.001, 0.07]];
+  g.add(_m(new THREE.LatheGeometry(lq.map(([x, y]) => new THREE.Vector2(x, y)), 48), new THREE.MeshPhysicalMaterial({ color: o.liquid ?? 0x39d17a, roughness: 0.05, transmission: 0.6, thickness: 0.1, emissive: o.liquid ?? 0x39d17a, emissiveIntensity: o.glow ?? 0.25 })));
+  return g;
+}
+export function beaker(o = {}) {
+  const g = new THREE.Group(); g.add(_m(new THREE.CylinderGeometry(0.05, 0.05, 0.14, 40, 1, true), mat('glass'), [0, 0.07, 0])); g.children[0].material.side = THREE.DoubleSide;
+  g.add(_m(new THREE.CylinderGeometry(0.047, 0.047, 0.08, 40), new THREE.MeshPhysicalMaterial({ color: o.liquid ?? 0x4aa8ff, roughness: 0.05, transmission: 0.6, thickness: 0.1, emissive: o.liquid ?? 0x4aa8ff, emissiveIntensity: o.glow ?? 0.2 }), [0, 0.042, 0]));
+  return g;
+}
+// food
+export function burger() {
+  const g = new THREE.Group(), bun = new THREE.MeshPhysicalMaterial({ color: 0xc98a3e, roughness: 0.5, clearcoat: 0.5, clearcoatRoughness: 0.4, sheen: 0.3 });
+  const top = new THREE.SphereGeometry(0.06, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2); top.scale(1, 0.62, 1);
+  g.add(_m(new THREE.CylinderGeometry(0.058, 0.055, 0.02, 32), bun, [0, 0.01, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.062, 0.06, 0.018, 32), mat('concrete', { color: 0x4a2a1a, roughness: 1 }), [0, 0.03, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.066, 0.064, 0.004, 6), new THREE.MeshPhysicalMaterial({ color: 0xf2b630, roughness: 0.4 }), [0, 0.041, 0], [0, 0.3, 0]));
+  g.add(_m(new THREE.CylinderGeometry(0.066, 0.064, 0.006, 24), new THREE.MeshPhysicalMaterial({ color: 0x5fae3a, roughness: 0.5 }), [0, 0.046, 0]));
+  g.add(_m(top, bun, [0, 0.049, 0]));
+  return g;
+}
+export function pizzaSlice() {
+  const g = new THREE.Group(), sh = new THREE.Shape(); sh.moveTo(0, 0); sh.lineTo(-0.07, 0.17); sh.quadraticCurveTo(0, 0.19, 0.07, 0.17); sh.lineTo(0, 0);
+  const geo = new THREE.ExtrudeGeometry(sh, { depth: 0.012, bevelEnabled: true, bevelSize: 0.004, bevelThickness: 0.004, bevelSegments: 3 }); geo.rotateX(-Math.PI / 2);
+  g.add(_m(geo, new THREE.MeshPhysicalMaterial({ color: 0xe8a84a, roughness: 0.6 })));
+  const cheese = geo.clone(); cheese.scale(0.92, 0.4, 0.92); g.add(_m(cheese, new THREE.MeshPhysicalMaterial({ color: 0xf7c94a, roughness: 0.35, clearcoat: 0.6 }), [0, 0.012, -0.004]));
+  const r = rnd(7); for (let i = 0; i < 5; i++) { const t = 0.2 + r() * 0.7; g.add(_m(new THREE.CylinderGeometry(0.012, 0.012, 0.004, 20), new THREE.MeshPhysicalMaterial({ color: 0xa8332a, roughness: 0.5 }), [(r() - 0.5) * 0.09 * t, 0.02, -0.17 * t])); }
+  return g;
+}
+// car: sedan with a real side profile (extruded), glass greenhouse, wheels with rims, head/tail lights
+function sideExtrude(pts, width, bevel = 0.06) {
+  const sh = new THREE.Shape(); sh.moveTo(pts[0][0], pts[0][1]); for (const [x, y] of pts.slice(1)) sh.lineTo(x, y); sh.closePath();
+  const geo = new THREE.ExtrudeGeometry(sh, { depth: width - 2 * bevel, bevelEnabled: true, bevelSize: bevel, bevelThickness: bevel, bevelSegments: 6, curveSegments: 12 });
+  geo.rotateY(-Math.PI / 2); geo.translate((width - 2 * bevel) / 2, 0, 0); geo.computeVertexNormals(); return geo;
+}
+export function car(o = {}) {
+  const g = new THREE.Group(), paint = new THREE.MeshPhysicalMaterial({ color: o.color ?? 0xb3202a, metalness: 0.55, roughness: 0.32, clearcoat: 1, clearcoatRoughness: 0.04 });
+  g.add(_m(sideExtrude([[-2.2, 0.32], [-2.3, 0.62], [-2.25, 0.86], [-1.45, 0.98], [1.25, 1.0], [2.2, 0.86], [2.32, 0.6], [2.25, 0.32]], 1.8, 0.09), paint));
+  g.add(_m(sideExtrude([[-1.4, 0.95], [-0.95, 1.4], [0.55, 1.42], [1.25, 0.97]], 1.62, 0.07), paint));
+  g.add(_m(sideExtrude([[-1.33, 0.99], [-0.92, 1.36], [0.52, 1.38], [1.15, 1.0]], 1.68, 0.05), new THREE.MeshPhysicalMaterial({ color: 0x0e1620, roughness: 0.03, metalness: 0.3, clearcoat: 1 })));
+  const tire = mat('rubber'), rim = mat('chrome', { roughness: 0.25 });
+  for (const [x, z] of [[1, 1.45], [-1, 1.45], [1, -1.4], [-1, -1.4]]) { const w = new THREE.Group(); w.position.set(x * 0.78, 0.34, z); w.rotation.z = Math.PI / 2; g.add(w);
+    w.add(_m(new THREE.CylinderGeometry(0.34, 0.34, 0.24, 32), tire)); w.add(_m(new THREE.CylinderGeometry(0.22, 0.22, 0.25, 24), rim));
+    w.add(_m(new THREE.CylinderGeometry(0.07, 0.07, 0.27, 16), mat('metal', { color: 0x2b2d31 }))); }
+  const head = new THREE.MeshPhysicalMaterial({ color: 0xffffff, emissive: 0xfff2d0, emissiveIntensity: o.lights ?? 1.2, roughness: 0.1 });
+  const tail = new THREE.MeshPhysicalMaterial({ color: 0x8a0d0d, emissive: 0xff2010, emissiveIntensity: 0.8, roughness: 0.1 });
+  for (const x of [-0.62, 0.62]) { g.add(_m(RB(0.4, 0.1, 0.08, 0.03), head, [x, 0.74, 2.24])); g.add(_m(RB(0.4, 0.1, 0.08, 0.03), tail, [x, 0.78, -2.26])); }
+  g.add(_m(RB(1.0, 0.14, 0.06, 0.02), mat('metal', { color: 0x1a1b1e }), [0, 0.5, 2.3]));      // grille
+  return g;
+}
+// city building facade with real windows (frames, reflective glass, some lit rooms)
+export function building(o = {}) {
+  const g = new THREE.Group(), w = o.w ?? 4, h = o.h ?? 8, r = rnd(o.seed ?? 3);
+  g.add(_m(new THREE.BoxGeometry(w, h, 3), mat(o.wall ?? 'brick', { color: o.color ?? 0xa0533d, repeat: [w / 2, h / 2] }), [0, h / 2, -1.5]));
+  const fr = mat('plastic', { color: 0xe9e6df }), cols = Math.max(1, Math.floor(w / 1.2)), rows = Math.max(1, Math.floor((h - 1) / 2));
+  for (let i = 0; i < cols; i++) for (let j = 0; j < rows; j++) {
+    const x = -w / 2 + (i + 0.5) * w / cols, y = 1.6 + j * 2, lit = r() < (o.lit ?? 0.35);
+    g.add(_m(new THREE.BoxGeometry(0.9, 1.3, 0.08), fr, [x, y, 0.0]));
+    g.add(_m(new THREE.PlaneGeometry(0.78, 1.18), new THREE.MeshPhysicalMaterial({ color: lit ? 0xffd9a0 : 0x1c2633, emissive: lit ? 0xffb860 : 0x000000, emissiveIntensity: lit ? 0.9 : 0, roughness: 0.04, metalness: lit ? 0 : 0.5, clearcoat: 1 }), [x, y, 0.045]));
+    g.add(_m(new THREE.BoxGeometry(0.05, 1.18, 0.05), fr, [x, y, 0.06]));
+    g.add(_m(new THREE.BoxGeometry(1.0, 0.06, 0.18), mat('concrete', { color: 0xcfc9bf }), [x, y - 0.68, 0.06]));
+  }
+  return g;
+}
+export function bookshelf(o = {}) {
+  const g = new THREE.Group(), wm = mat('wood', { color: o.color ?? 0x6e4a2e }), r = rnd(o.seed ?? 8), W = 1.0, H = 1.8;
+  g.add(_m(new THREE.BoxGeometry(W, H, 0.02), wm, [0, H / 2, -0.15]));
+  for (const x of [-W / 2, W / 2]) g.add(_m(new THREE.BoxGeometry(0.03, H, 0.32), wm, [x, H / 2, 0]));
+  for (let k = 0; k < 5; k++) { const y = 0.05 + k * 0.42; g.add(_m(new THREE.BoxGeometry(W, 0.03, 0.32), wm, [0, y, 0]));
+    if (k < 4) { let x = -W / 2 + 0.03; while (x < W / 2 - 0.08) { const bw = 0.025 + r() * 0.03, bh = 0.24 + r() * 0.1;
+      g.add(_m(RB(bw, bh, 0.22, 0.004), new THREE.MeshPhysicalMaterial({ color: new THREE.Color().setHSL(r(), 0.45, 0.25 + r() * 0.3), roughness: 0.7 }), [x + bw / 2, y + 0.015 + bh / 2, 0.02], [0, 0, r() < 0.1 ? 0.15 : 0])); x += bw + 0.004; } } }
+  return g;
+}

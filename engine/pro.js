@@ -32,21 +32,48 @@ const Finish = {
     }`,
 };
 
+// cheap depth of field: disc blur scaled by circle of confusion around the focus depth (sampled on screen or given by the scene)
+const DOF = {
+  uniforms: { tDiffuse: { value: null }, tDepth: { value: null }, near: { value: 0.1 }, far: { value: 100 }, focusUV: { value: new THREE.Vector2(0.5, 0.45) },
+    focusDist: { value: -1 }, aperture: { value: 0.07 }, maxR: { value: 7.0 }, res: { value: new THREE.Vector2(W, H) } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }`,
+  fragmentShader: `uniform sampler2D tDiffuse, tDepth; uniform float near, far, focusDist, aperture, maxR; uniform vec2 focusUV, res; varying vec2 vUv;
+    float lin(float d){ float z = d*2.-1.; return 2.*near*far/(far+near-z*(far-near)); }
+    float coc(float z, float zf){ return clamp(abs(1./zf - 1./z) * aperture * zf * 40., 0., 1.); }
+    void main(){
+      // auto focus: nearest thing around the focus point (the subject is almost always in front of the background)
+      float zf = focusDist;
+      if (zf <= 0.) { zf = 1e9; for (int i = -1; i <= 1; i++) for (int j = -1; j <= 1; j++) zf = min(zf, lin(texture2D(tDepth, focusUV + vec2(float(i) * .14, float(j) * .16)).x)); }
+      float z = lin(texture2D(tDepth, vUv).x); float c = coc(z, zf);
+      vec4 base = texture2D(tDiffuse, vUv); if (c < 0.04) { gl_FragColor = base; return; }
+      vec3 acc = base.rgb; float wsum = 1.;
+      for (int i = 0; i < 16; i++) { float a = float(i) * 2.39996; float r = sqrt((float(i)+.5)/16.) * c * maxR;
+        vec2 o = vec2(cos(a), sin(a)) * r / res; float zs = lin(texture2D(tDepth, vUv + o).x); float cs = coc(zs, zf);
+        float w = zs < z ? cs : 1.;   // nearer sharp pixels must not bleed into the blur
+        acc += texture2D(tDiffuse, vUv + o).rgb * w; wsum += w; }
+      gl_FragColor = vec4(acc / wsum, base.a);
+    }`,
+};
+class DofPass extends ShaderPass { render(r, w, rb, dt, m) { this.uniforms.tDepth.value = rb.depthTexture; super.render(r, w, rb, dt, m); } }
+
 export function setup(renderer) {
+  const Q = new URLSearchParams(location.search);
   globalThis.XR_PRO_SUBJECT = SubjectPro;
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.95;
   renderer.shadowMap.type = THREE.VSMShadowMap;
   const pm = new THREE.PMREMGenerator(renderer); const env = pm.fromScene(new RoomEnvironment(), 0.04).texture;
-  const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: 4 });
+  const rt = new THREE.WebGLRenderTarget(W, H, { type: THREE.HalfFloatType, samples: Q.get('msaa') ? 4 : 0 });  // SMAA instead of MSAA: ~30% faster
+  rt.depthTexture = new THREE.DepthTexture(W, H); rt.depthTexture.type = THREE.UnsignedIntType;
   const composer = new EffectComposer(renderer, rt); composer.setSize(W, H);
   const rp = new RenderPass(new THREE.Scene(), new THREE.PerspectiveCamera()); composer.addPass(rp);
+  const dof = new DofPass(DOF); if (!Q.get('nodof')) composer.addPass(dof);
   const ao = new GTAOPass(new THREE.Scene(), new THREE.PerspectiveCamera(), W, H);
   ao.updateGtaoMaterial({ radius: 0.35, distanceExponent: 1.5, thickness: 1, scale: 1.2, samples: 12 });
   ao.blendIntensity = 0.85; if (new URLSearchParams(location.search).get('ao')) composer.addPass(ao);  // off by default: GTAO paints black boxes behind sprites/particles
-  const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.22, 0.45, 0.97); composer.addPass(bloom);
+  const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.22, 0.45, 0.97); if (!Q.get('nobloom')) composer.addPass(bloom);
   composer.addPass(new OutputPass());
   const fin = new ShaderPass(Finish); composer.addPass(fin);
-  composer.addPass(new SMAAPass(W, H));  // smoother edges on top of MSAA
+  if (!Q.get('nosmaa')) composer.addPass(new SMAAPass(W, H));  // edge antialiasing
   const swapped = new WeakMap();
   function physical(m) {
     if (swapped.has(m)) return swapped.get(m);
@@ -73,14 +100,24 @@ export function setup(renderer) {
         else if (o.material.isMeshToonMaterial) o.material = physical(o.material);
       });
     },
-    render(scene, camera, T) {
+    // k = progress of the shot (0..1); P = optional scene settings `pro: { focus: meters | [u, v], aperture, push, dof: false }`
+    render(scene, camera, T, k = 0, P = {}) {
       scene.traverse(o => { if (o.userData && o.userData.keepHidden) o.visible = false; });
       // subtle handheld: < 0.4 deg, two incommensurate frequencies
       const rx = Math.sin(T * 1.3) * 0.0025 + Math.sin(T * 2.9) * 0.0012, ry = Math.cos(T * 1.1) * 0.003 + Math.sin(T * 2.3) * 0.001;
       camera.rotation.x += rx; camera.rotation.y += ry;
+      // slow push-in through each shot (a lens zoom, so the scene's own framing is kept): feels like a camera operator
+      const persp = camera.isPerspectiveCamera, fov0 = camera.fov;
+      if (persp) { const e = k * k * (3 - 2 * k); camera.fov = fov0 * (1 - (P.push ?? 0.045) * e); camera.updateProjectionMatrix(); }
+      dof.uniforms.near.value = camera.near; dof.uniforms.far.value = camera.far;
+      dof.uniforms.aperture.value = persp && P.dof !== false ? (P.aperture ?? 0.07) : 0;
+      if (Array.isArray(P.focus)) { dof.uniforms.focusUV.value.set(P.focus[0], P.focus[1]); dof.uniforms.focusDist.value = -1; }
+      else if (typeof P.focus === 'number') dof.uniforms.focusDist.value = P.focus;
+      else { dof.uniforms.focusUV.value.set(0.5, 0.45); dof.uniforms.focusDist.value = -1; }
       rp.scene = ao.scene = scene; rp.camera = ao.camera = camera; fin.uniforms.time.value = T;
       composer.render();
       camera.rotation.x -= rx; camera.rotation.y -= ry;
+      if (persp) { camera.fov = fov0; camera.updateProjectionMatrix(); }
     },
   };
 }

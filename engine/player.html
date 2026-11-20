@@ -58,7 +58,7 @@ window.renderAt = (T) => {
   if (curId !== sh.id) { cur = sh.make(); curId = sh.id; if (pro) pro.upgrade(cur.scene); }
   const t = T - sh.start, d = sh.end - sh.start;
   cur.update(t, d);
-  if (pro) pro.render(cur.scene, cur.camera, T); else renderer.render(cur.scene, cur.camera);
+  if (pro) pro.render(cur.scene, cur.camera, T, Math.min(1, t / d), cur.pro || {}); else renderer.render(cur.scene, cur.camera);
   const ui = cur.ui ? cur.ui(t, d) : {};
   document.getElementById('flash').style.opacity = ui.flash || 0;
   document.getElementById('dark').style.opacity = ui.vig || 0; document.getElementById('sep').style.opacity = ui.sepia || 0;
