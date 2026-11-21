@@ -1,14 +1,12 @@
 {
-  "render_style": "pro",
+  "render_style": "cartoon",
   "language": "en-US",
   "category": "Education",
   "made_for_kids": false,
-  "altered_or_synthetic_realistic": true,
+  "altered_or_synthetic_realistic": false,
   "publish_timezone": "America/New_York",
   "platforms": [
-    "youtube",
-    "instagram",
-    "facebook"
+    "youtube"
   ],
   "title": "Tables Served Before You? It's Not the Wait That Makes You Mad 😤",
   "description": "Tables served before you, even though you sat down first? The wait isn't what's making you mad.\n\nQueue researchers have a name for it: \"slips and skips.\" MIT professor Richard Larson (\"Dr. Queue\") has studied the psychology of waiting lines since the 1970s. In 1976 he was skipped at a store pickup counter while buying his son's first bike. He was furious, and he went on to research why being skipped stings more than the wait itself. Service researcher David Maister put it in one line: unfair waits feel longer than equitable waits.\n\nFair warning: in a restaurant the other table often isn't skipping you. Different dishes take different times in the kitchen. Your brain still reads it as a cut in line.\n\nDo you say something, or just stew? Tell us below.\n\nSources:\n- MIT News (2008), Richard Larson and the psychology of queuing (the 1976 story): https://news.mit.edu/2008/eureka-larson-tt0206\n- 99% Invisible, Episode 49: Queue Theory and Design (Larson on \"slips and skips\"): https://99percentinvisible.org/episode/episode-49-queue-theory-and-design/transcript/\n- Larson (1987), Perspectives on Queues: Social Justice and the Psychology of Queueing, Operations Research: https://ideas.repec.org/a/inm/oropre/v35y1987i6p895-905.html\n- Rafaeli et al. (2002), The Effects of Queue Structure on Attitudes, Journal of Service Research: https://serveng.technion.ac.il/files/Lectures/Rafaeli-Queue-structure-and-attitudes-JSR.pdf\n- Maister's principles of waiting (summary): https://uen.pressbooks.pub/servicesmgt/chapter/chapter-12-the-psychology-of-waiting/\n- Tasting Table, why other tables get served before you: https://www.tastingtable.com/2161755/why-tables-served-before-you/\n\n#psychology #restaurant #waitinginline #everydayxray",
@@ -87,17 +85,17 @@
     "ending": "comment"
   },
   "thumbnail": {
-    "time": 3.5,
+    "time": 6.15,
     "zoom": 1.0,
     "focus": [
       0.5,
       0.5
     ],
     "protect": [
-      190,
-      830,
-      890,
-      1380
+      170,
+      520,
+      910,
+      1330
     ],
     "circle": false,
     "rays": false,
@@ -131,14 +129,14 @@
         "glow": "#FF3B30"
       },
       {
-        "time": 6.9,
+        "time": 7.0,
         "protect": [
-          330,
-          380,
+          150,
+          760,
           1000,
-          1100
+          1450
         ],
-        "text_y": 1130,
+        "text_y": 170,
         "lines": [
           {
             "text": "THEY CAME",
@@ -155,15 +153,6 @@
     "pick": 0,
     "saturation": 1.12,
     "contrast": 1.18
-  },
-  "social_thumbnail": {
-    "protect": [
-      190,
-      830,
-      890,
-      1380
-    ],
-    "text_y": 280
   },
   "seo": {
     "keyword": "tables served before you",
@@ -199,8 +188,14 @@
       }
     ]
   },
+  "qa_words_ok": [
+    "Maister",
+    "Rafaeli",
+    "queueing",
+    "Larson"
+  ],
   "id": "xr014-served-first",
-  "duration_s": 25.9,
+  "duration_s": 26.71,
   "status": "ready",
   "publish_time_local": "12:12"
 }

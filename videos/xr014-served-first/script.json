@@ -1,17 +1,54 @@
 {
  "lang": "en-us",
  "sentences": [
-  ["Eighteen minutes.", 0.1],
-  ["No food.", 0.15],
-  ["But that's NOT why you're mad.", 0.25],
-  ["That couple sat down after you... [gasps] and they're already eating.", 0.55],
-  ["MIT professor Richard Larson studied lines for decades.", 0.2],
-  ["His take?", 0.15],
-  ["Waiting is annoying.", 0.15],
-  ["Getting skipped is what makes people furious.", 0.45],
-  ["[whispers] He started after it happened to him.", 0.45],
-  ["Waiting isn't the problem.", 0.15],
-  ["Watching someone else go first is.", 0.5],
-  ["So... do you say something, or just stew?", 0.4]
- ]
+  [
+   "Eighteen minutes.",
+   0.1
+  ],
+  [
+   "No food.",
+   0.15
+  ],
+  [
+   "But that's NOT why you're mad.",
+   0.25
+  ],
+  [
+   "That couple sat down after you... [gasps] and they're already eating.",
+   0.55
+  ],
+  [
+   "MIT professor Richard Larson studied lines for decades.",
+   0.2
+  ],
+  [
+   "His take?",
+   0.15
+  ],
+  [
+   "Waiting is annoying.",
+   0.15
+  ],
+  [
+   "Getting skipped is what makes people furious.",
+   0.45
+  ],
+  [
+   "[whispers] He started after it happened to him.",
+   0.45
+  ],
+  [
+   "Waiting isn't the problem.",
+   0.15
+  ],
+  [
+   "Watching someone else go first is.",
+   0.5
+  ],
+  [
+   "So... do you say something, or just stew?",
+   0.4
+  ]
+ ],
+ "tone": "comedy"
 }

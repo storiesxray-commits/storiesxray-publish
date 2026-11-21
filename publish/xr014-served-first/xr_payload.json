@@ -1,15 +1,15 @@
 {
   "content_id": "xr-014",
   "repo_id": "xr014-served-first",
-  "sha256": "c3f2edb1f680d76d0982d3f8d5f69b399127739b2148e9ad5f6f10e68fed7aaa",
-  "file_size_bytes": 15433140,
-  "duration_seconds": 25.967,
+  "sha256": "bca826e570cc88cc5e1b30e11b6cd4610d746101a2a6cc6281ad8057451943e3",
+  "file_size_bytes": 16907771,
+  "duration_seconds": 26.706,
   "width": 1080,
   "height": 1920,
   "video_codec": "h264",
   "audio_codec": "aac",
-  "fps": 30.0,
-  "video_bit_rate": 4628566,
+  "fps": 29.976,
+  "video_bit_rate": 4931531,
   "faststart": true,
   "title_youtube": "Tables Served Before You? It's Not the Wait That Makes You Mad 😤",
   "description_youtube": "Tables served before you, even though you sat down first? The wait isn't what's making you mad.\n\nQueue researchers have a name for it: \"slips and skips.\" MIT professor Richard Larson (\"Dr. Queue\") has studied the psychology of waiting lines since the 1970s. In 1976 he was skipped at a store pickup counter while buying his son's first bike. He was furious, and he went on to research why being skipped stings more than the wait itself. Service researcher David Maister put it in one line: unfair waits feel longer than equitable waits.\n\nFair warning: in a restaurant the other table often isn't skipping you. Different dishes take different times in the kitchen. Your brain still reads it as a cut in line.\n\nDo you say something, or just stew? Tell us below.\n\nSources:\n- MIT News (2008), Richard Larson and the psychology of queuing (the 1976 story): https://news.mit.edu/2008/eureka-larson-tt0206\n- 99% Invisible, Episode 49: Queue Theory and Design (Larson on \"slips and skips\"): https://99percentinvisible.org/episode/episode-49-queue-theory-and-design/transcript/\n- Larson (1987), Perspectives on Queues: Social Justice and the Psychology of Queueing, Operations Research: https://ideas.repec.org/a/inm/oropre/v35y1987i6p895-905.html\n- Rafaeli et al. (2002), The Effects of Queue Structure on Attitudes, Journal of Service Research: https://serveng.technion.ac.il/files/Lectures/Rafaeli-Queue-structure-and-attitudes-JSR.pdf\n- Maister's principles of waiting (summary): https://uen.pressbooks.pub/servicesmgt/chapter/chapter-12-the-psychology-of-waiting/\n- Tasting Table, why other tables get served before you: https://www.tastingtable.com/2161755/why-tables-served-before-you/\n\n#psychology #restaurant #waitinginline #everydayxray",
@@ -58,11 +58,9 @@
     }
   ],
   "made_for_kids": false,
-  "contains_synthetic_media": true,
+  "contains_synthetic_media": false,
   "publishing_targets": [
-    "youtube",
-    "instagram",
-    "facebook"
+    "youtube"
   ],
   "publish_time_local": "12:12",
   "checks_failed": []
