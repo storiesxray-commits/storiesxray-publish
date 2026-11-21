@@ -42,5 +42,5 @@ if not a.no_publish:
     pub = {k: meta[k] for k in meta if k not in ("thumb_time", "notes")}
     pub.update(id=VID, duration_s=round(dur, 2), status=meta.get("status", "needs_approval"))
     json.dump(pub, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
-    if meta.get("thumbnail"): run(PY, "tools/social.py", VID)   # IG/FB version: custom cover as frame 0 -> publish/<id>/video_social.mp4
+    # (21/11/2026) YouTube only: the IG/FB version (tools/social.py) is no longer built
     print("publish package:", P, "-> commit and push it; Make picks it up from GitHub")

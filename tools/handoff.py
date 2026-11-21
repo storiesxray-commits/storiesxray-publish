@@ -21,7 +21,7 @@ vbr = int(v.get("bit_rate") or 0)
 if v["codec_name"] != "h264": errs.append("video_codec_not_h264")
 if a.get("codec_name") != "aac": errs.append("audio_missing_or_not_aac")
 if (int(v["width"]), int(v["height"])) != (1080, 1920): errs.append("not_1080x1920")
-if vbr > 5_000_000: errs.append("video_bitrate_over_5mbps_instagram")
+if vbr > 5_000_000: errs.append("video_bitrate_over_5mbps")
 if not faststart: errs.append("moov_not_at_start")
 if float(pr["format"]["duration"]) > 59: errs.append("duration_over_59s")
 thumb = f"{P}/thumb.jpg"
@@ -43,10 +43,7 @@ else:
     else:
         tsha = hashlib.sha256(open(thumb, "rb").read()).hexdigest()
         if json.load(open(rep)).get("sha256") != tsha: errs.append("thumbnail_not_the_checked_one")
-    # Instagram/Facebook: video_social.mp4 must exist (custom cover as frame 0) and be the file tools/social.py checked
-    vs, srep = f"{P}/video_social.mp4", f"{ROOT}/out/{VID}/social_report.json"
-    if not os.path.exists(vs) or not os.path.exists(f"{P}/cover_social.jpg"): errs.append("social_video_missing_run_social_py")
-    elif not os.path.exists(srep) or json.load(open(srep)).get("sha256") != hashlib.sha256(open(vs, "rb").read()).hexdigest(): errs.append("social_video_not_the_checked_one")
+    # Owner 21/11/2026: YouTube only (Facebook and Instagram dropped) -> no video_social.mp4 / cover_social.jpg required.
 # Owner rule 20/11/2026: the cartoon engine is the only way to make videos, and nothing goes out without the full audit
 # (voice, picture, text) of tools/qa.py, including the visual sign-off, for this exact file.
 if meta.get("render_style") != "cartoon": errs.append("render_style_not_cartoon")
@@ -93,12 +90,9 @@ publish_time = meta.get("publish_time_local") if len(str(meta.get("publish_time_
 if meta.get("publish_time_local") != publish_time:
     meta["publish_time_local"] = publish_time
     json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
-# Owner rule (17/11/2026): every video goes out on YouTube, Instagram AND Facebook at the same time (or very close).
-# XR-03 posts the Reel at the YouTube publish time, so the three targets are always forced here.
-ALL = ["youtube", "instagram", "facebook"]
-targets = ALL + [x for x in meta.get("platforms", []) if x not in ALL]
-if meta.get("platforms") != targets:
-    meta["platforms"] = targets
+# Owner rule (21/11/2026): from now on ONLY YouTube (Facebook and Instagram dropped; XR-03 stays off, fb/ig paused).
+if meta.get("platforms") != ["youtube"]:
+    meta["platforms"] = ["youtube"]
     json.dump(meta, open(f"{P}/metadata.json", "w"), indent=2, ensure_ascii=False)
 payload = {
     "content_id": f"xr-{num_id}", "repo_id": VID, "sha256": h.hexdigest(),

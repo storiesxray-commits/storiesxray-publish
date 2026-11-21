@@ -90,6 +90,10 @@ ve = lp(np.abs(v), 6); duck = 1 - 0.45 * np.clip(ve / 0.08, 0, 1)
 MG = 0.075
 bedL = mus * MG * duck + sfxL * duck ** 0.5; bedR = np.roll(mus, 137) * MG * duck + sfxR * duck ** 0.5
 out = np.stack([v + bedL, v + bedR], 1); out = np.tanh(out * 1.1) / 1.1; pk = np.abs(out).max(); out = out / pk * 0.95
+# owner 21/11/2026: nothing may sound cut -> 15 ms fade-in and a smooth music tail after the last word (fade to silence)
+_fi = int(0.015 * SR); out[:_fi] *= np.linspace(0, 1, _fi)[:, None]
+_lw = tm["sentences"][-1]["words"][-1]["e"]; _f0 = int(SR * min(_lw + 0.15, TOT - 0.5))
+_fo = np.ones(N); _fo[_f0:] = np.linspace(1, 0, N - _f0) ** 1.6; out *= _fo[:, None]
 sf.write(f"{OUT}/mix_raw.wav", out, SR)
 db = lambda x: 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-9)
 bed = np.stack([bedL, bedR], 1) / pk * 0.95; worst = 99

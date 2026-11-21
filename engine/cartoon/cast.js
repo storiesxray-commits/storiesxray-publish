@@ -174,7 +174,7 @@ export function person(p, O, opts = {}) {
       case 'raise': return { pts: [s, [X(10), s[1] - 0.12 * HH * k], [X(14 + 6 * k), s[1] + (0.2 - 0.75 * k) * HH]], finger: k > 0.5 };
       case 'hip': return { pts: [s, [X(22), s[1] + 0.3 * HH], [tcx + side * TB.a * 0.95, torsoBot - 0.3 * HH]] };
       case 'cross': return { pts: [s, [X(2), s[1] + 0.38 * HH], [tcx - side * 0.45 * TB.a, s[1] + 0.32 * HH]], front: true };
-      case 'chin': return { pts: [s, [tcx + side * 0.75 * TB.a, tY - 2 * u], [cx + side * 0.22 * H.a, hc + 1.06 * H.b]], front: true, fist: true, over: true };
+      case 'chin': return { pts: [s, [tcx + side * 0.75 * TB.a, Math.min(tY - 2 * u, s[1] + 0.42 * HH)], [cx + side * 0.22 * H.a, hc + 1.06 * H.b]], front: true, fist: true, over: true }; // elbow on the table when seated, at the waist when standing
       case 'temple': return { pts: [s, [X(26), s[1] + 0.05 * HH], [cx + side * (H.a + 14 * u), hc - 0.1 * HH]] };
       case 'cheek': return { pts: [s, [X(16), s[1] + 0.05 * HH], [cx + side * (H.a + 2 * u), hc + 0.25 * H.b]] };
       case 'table': return { pts: [s, [X(6), (s[1] + tY) / 2 + 6 * u], [tcx + side * 0.55 * TB.a, tY - 3 * u]], front: true };

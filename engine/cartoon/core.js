@@ -304,6 +304,8 @@ for (const s of sen) { let cur = [];
   for (const w of s.words) { if (cur.length && (cur.map((x) => x.w).join(' ') + ' ' + w.w).replace(/[.,!?…]/g, '').length > 12) flush(); cur.push(w); if (cur.length >= 3 || /[,.!?]$/.test(w.w)) flush(); }
   flush(); }
 for (let i = 0; i < chunks.length - 1; i++) if (chunks[i + 1].s - chunks[i].e < 0.4) chunks[i].e = chunks[i + 1].s;
+// a caption never carries over a cut (it ends at the cut if it would spill into the next shot)
+for (const c of chunks) { const cut = shots.find((sh) => sh.start > c.e - 0.4 && sh.start < c.e && sh.start > c.s + 0.25); if (cut) c.e = cut.start; }
 const mctx = document.createElement('canvas').getContext('2d');
 function fit(el, maxW) { el.style.fontSize = ''; const fs = parseFloat(getComputedStyle(el).fontSize); mctx.font = `900 ${fs}px Inter`; const w = mctx.measureText(el.textContent.toUpperCase()).width + 36; if (w > maxW) el.style.fontSize = (fs * maxW / w) + 'px'; }
 const back = (t) => EASE.back(t);

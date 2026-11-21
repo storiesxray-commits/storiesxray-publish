@@ -34,10 +34,6 @@ if "--visual-ok" in sys.argv:
 # ---- STYLE ----
 if meta.get("render_style") != "cartoon": errs.append("style_not_cartoon")
 # ---- VOICE ----
-vcfg = json.load(open(f"{ROOT}/tools/voices.json"))
-tone = script.get("tone"); cast = vcfg.get("casting", {}).get(tone)
-if not cast: errs.append("script_tone_missing_or_unknown(see tools/voices.json casting)")
-elif tm.get("voice_key", script.get("voice")) not in cast["voices"]: errs.append(f"voice_not_cast_for_{tone}:{tm.get('voice_key', script.get('voice'))}")
 tm = json.load(open(f"{OUT}/timing.json"))
 if not str(tm.get("engine", "")).startswith("elevenlabs"): errs.append("voice_not_elevenlabs")
 TAG = re.compile(r"\[[^\]]*\]")
@@ -49,12 +45,16 @@ for s in tm["sentences"]:
     for w in s["words"]:
         if w["s"] < prev - 1e-3 or w["e"] < w["s"]: errs.append(f"word_timing_out_of_order:{w['w']}"); break
         prev = w["s"]
+vcfg = json.load(open(f"{ROOT}/tools/voices.json"))
+tone = script.get("tone"); cast = vcfg.get("casting", {}).get(tone)
+if not cast: errs.append("script_tone_missing_or_unknown(see tools/voices.json casting)")
+elif tm.get("voice_key", script.get("voice")) not in cast["voices"]: errs.append(f"voice_not_cast_for_{tone}:{tm.get('voice_key', script.get('voice'))}")
 # ---- VIDEO / AUDIO ----
 pr = json.loads(run("ffprobe", "-v", "error", "-print_format", "json", "-show_format", "-show_streams", final).stdout)
 v = next(s for s in pr["streams"] if s["codec_type"] == "video"); a = next((s for s in pr["streams"] if s["codec_type"] == "audio"), None)
 dur = float(pr["format"]["duration"])
 if (int(v["width"]), int(v["height"])) != (1080, 1920): errs.append("not_1080x1920")
-if v["avg_frame_rate"] not in ("30/1", "30000/1000"): errs.append("not_30fps")
+if v["r_frame_rate"] != "30/1" or abs(int(v.get("nb_frames", 0)) / float(v["duration"]) - 30) > 0.2: errs.append("not_30fps")
 if v["codec_name"] != "h264": errs.append("not_h264")
 if not a or a["codec_name"] != "aac" or int(a["sample_rate"]) != 48000: errs.append("audio_not_aac_48k")
 if dur >= 59: errs.append("over_59s")
@@ -96,7 +96,11 @@ for s_ in tm["sentences"]:
     for w in s_["words"]:
         seg = vw[int(w["s"] * vsr):int(max(w["e"], w["s"] + 0.06) * vsr)]
         if len(seg) and db(seg) < -45: errs.append(f"word_silent_in_take:{w['w']}@{w['s']:.2f}"); break
-if len(vw) / vsr < last_w["e"] + 0.04: errs.append("voice_take_truncated_after_last_word")
+if db(vw[-int(0.03 * vsr):]) > -40: errs.append("voice_take_ends_inside_sound(truncated)")
+# every splice of the take (voice.py cuts it between sentences to add pauses) must fall where the voice is already silent
+for b in tm.get("seams", []):
+    if db(vw[max(0, int((b - 0.012) * vsr)):int((b - 0.002) * vsr)]) > -38: errs.append(f"voice_cut_inside_sound@{b:.2f}")
+if "seams" not in tm and str(tm.get("engine", "")).startswith("elevenlabs"): errs.append("timing_without_seams_rerun_voice_py")
 # ---- PICTURE: frame-by-frame composition audit written by the cartoon engine ----
 import glob
 fq = []

@@ -44,25 +44,49 @@ def elevenlabs():
         sents.append(dict(text=clean(txt), pause=pause, words=words, first_char=T(off, cs)))
         off += len(txt) + 1
     # cut the take into sentences: pre-word sounds (laughs, gasps) stay with the sentence they introduce
-    L = len(a) / sr; cuts = [max(0.0, sents[0]["first_char"] - 0.01)]
+    # owner 21/11/2026 ("se cortan los videos"): never cut inside sound. ElevenLabs timestamps can run early or late by
+    # a few hundred ms, so each cut goes to the QUIETEST 10 ms point between the two sentences (searched a little
+    # beyond the timestamps), and every segment gets 6 ms fades so a cut can never click.
+    L = len(a) / sr; mono = a if a.ndim == 1 else a.mean(axis=1)
+    def quietest(t0, t1):
+        i0, i1 = max(0, int(t0 * sr)), min(len(mono), int(t1 * sr)); w = int(0.01 * sr)
+        if i1 - i0 <= w: return (t0 + t1) / 2
+        e = np.convolve(mono[i0:i1] ** 2, np.ones(w) / w, mode="valid"); return (i0 + int(np.argmin(e)) + w // 2) / sr
+    cuts = [quietest(max(0.0, sents[0]["first_char"] - 0.25), sents[0]["words"][0]["s"] + 0.02)]
     for i in range(1, len(sents)):
         e0, s1 = sents[i - 1]["words"][-1]["e"], sents[i]["words"][0]["s"]
-        cuts.append(min(e0 + 0.08, max(e0, sents[i]["first_char"] - 0.02), s1))
-    cuts.append(min(L, sents[-1]["words"][-1]["e"] + 0.25))
-    out = [np.zeros(int(sr * 0.03), dtype=np.float32)]; t = 0.03; meta = []
+        cuts.append(quietest(min(e0, s1) - 0.04, max(e0, s1) + 0.12))
+    cuts.append(L)  # the take always ends where ElevenLabs ended it (never trimmed)
+    out = [np.zeros(int(sr * 0.03), dtype=np.float32)]; t = 0.03; meta = []; seams = []
     for i, se in enumerate(sents):
-        c0, c1 = cuts[i], cuts[i + 1]; seg = a[int(c0 * sr):int(c1 * sr)]; sh = t - c0
+        c0, c1 = cuts[i], cuts[i + 1]; seg = a[int(c0 * sr):int(c1 * sr)].copy(); sh = t - c0
+        fz = min(int(0.006 * sr), len(seg) // 4); ramp = np.linspace(0, 1, fz)
+        if fz: seg[:fz] = (seg[:fz].T * ramp).T; seg[-fz:] = (seg[-fz:].T * ramp[::-1]).T
         nat = (sents[i + 1]["words"][0]["s"] - se["words"][-1]["e"]) if i + 1 < len(sents) else 0
         extra = max(0.0, se["pause"] - nat)
         ws = [dict(w=w["w"], s=round(w["s"] + sh, 3), e=round(w["e"] + sh, 3)) for w in se["words"]]
         meta.append(dict(i=i + 1, text=se["text"], start=ws[0]["s"], end=ws[-1]["e"], words=ws, gaps=1, punct=1))
-        out.append(seg); out.append(np.zeros(int(sr * extra), dtype=np.float32)); t += len(seg) / sr + extra
+        out.append(seg); out.append(np.zeros(int(sr * extra), dtype=np.float32)); seams.append(round(t + len(seg) / sr, 4)); t += len(seg) / sr + extra
     audio = np.concatenate(out); audio = audio / np.abs(audio).max() * 0.9
+    # realign words to the real sound: a word whose timestamp window is silent starts at the next onset
+    am = audio if audio.ndim == 1 else audio.mean(axis=1); W10 = int(0.01 * sr)
+    lvl = lambda t0, t1: 20 * np.log10(np.sqrt(np.mean(am[int(t0 * sr):max(int(t0 * sr) + 1, int(t1 * sr))] ** 2)) + 1e-9)
+    allw = [w for m in meta for w in m["words"]]
+    for k, w in enumerate(allw):
+        if lvl(w["s"], w["e"]) > -42: continue
+        lim = allw[k + 1]["e"] if k + 1 < len(allw) else len(am) / sr
+        t = w["s"]
+        while t < lim and lvl(t, t + 0.01) < -36: t += 0.01
+        if t < lim:
+            d = round(t - 0.02 - w["s"], 3); nxt = allw[k + 1]["s"] if k + 1 < len(allw) else 1e9
+            w["s"] = round(w["s"] + d, 3); w["e"] = round(max(w["s"] + 0.12, min(w["e"] + d, nxt)), 3)
+        if k + 1 < len(allw) and allw[k + 1]["s"] < w["e"]: allw[k + 1]["s"] = w["e"]
+    for m in meta: m["start"], m["end"] = m["words"][0]["s"], m["words"][-1]["e"]
     sf.write(f"{OUT}/voice.wav", audio, sr)
     v = TTS.CFG["voices"][key]
-    json.dump(dict(total=round(meta[-1]["end"] + 0.25, 3), voice=key, voice_name=v["name"], engine="elevenlabs:" + TTS.CFG["model"],
-                   tts_file=f"tts/{name}.mp3", sentences=meta), open(f"{OUT}/timing.json", "w"), indent=1)
-    print("elevenlabs", key, v["name"], "total", round(meta[-1]["end"] + 0.25, 2))
+    json.dump(dict(total=round(meta[-1]["end"] + 1.1, 3), voice=key, voice_key=key, voice_name=v["name"], engine="elevenlabs:" + TTS.CFG["model"],
+                   tts_file=f"tts/{name}.mp3", seams=seams[:-1], sentences=meta), open(f"{OUT}/timing.json", "w"), indent=1)
+    print("elevenlabs", key, v["name"], "total", round(meta[-1]["end"] + 1.1, 2))
     [print(m["i"], m["start"], m["end"], m["text"][:40]) for m in meta]
     return True
 
@@ -111,7 +135,7 @@ for i,(txt,pause) in enumerate(S):
     out.append(a); out.append(np.zeros(int(sr*pause),dtype=np.float32)); t+=d+pause
 audio=np.concatenate(out); audio=audio/np.abs(audio).max()*0.9
 sf.write(f"{OUT}/voice.wav",audio,sr)
-json.dump(dict(total=round(t,3),voice=VOICE,engine="kokoro",sentences=meta),open(f"{OUT}/timing.json","w"),indent=1)
+json.dump(dict(total=round(t+0.85,3),voice=VOICE,engine="kokoro",sentences=meta),open(f"{OUT}/timing.json","w"),indent=1)
 bad=[m["i"] for m in meta if m["punct"] and m["gaps"]<m["punct"]]
 if bad: print("WARNING: caption timing fell back to letter-count spread in sentences", bad)
 print(VOICE,"total",round(t,2)); [print(m['i'],m['start'],m['end'],m['text'][:40]) for m in meta]
