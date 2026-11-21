@@ -106,7 +106,7 @@ export default function story(E, tm) {
     s05: [k(T.s05, CPL, 2.6, yawToCpl + 10, 12, 40, { ease: 'easeOut' }), k(T.s06 - 0.1, CPL, 2.0, yawToCpl + 4, 9, 40)],
     s06: [k(T.s06, [LX - 0.3, 1.9, LZ - 3.0], 3.6, 12, 4, 40), k(wd(5, 4), [LX - 0.5, 1.4, LZ - 2.6], 2.2, 22, 6, 40), k(T.s07, [LX - 0.55, 1.35, LZ - 2.6], 2.0, 24, 6, 40)],
     s07: [k(T.s07, [SX, 1.1, SZ + 0.6], 3.4, 30, 8, 46), k(T.s08, [SX, 1.15, SZ + 0.2], 2.9, 24, 7, 46)],
-    s08: [k(T.s08, [SX + 0.45, 1.2, SZ - 0.9], 2.7, 36, 8, 46), k(wd(8, 6) - 0.05, [SX + 0.3, 1.3, SZ - 1.0], 2.0, 30, 5, 46, { ease: 'easeOut' }), k(T.s09, [SX + 0.3, 1.3, SZ - 1.0], 1.9, 29, 5, 46)],
+    s08: [k(T.s08, [SX + 0.1, 1.15, SZ - 0.55], 2.9, 82, 7, 54), k(wd(8, 1) + 0.3, [SX + 0.05, 1.25, SZ - 0.75], 2.5, 86, 5, 54), k(wd(8, 6) - 0.05, [SX + 0.05, 1.3, SZ - 0.6], 2.45, 88, 4, 54, { ease: 'easeOut' }), k(T.s09, [SX + 0.05, 1.3, SZ - 0.6], 2.4, 88, 4, 54)],
     s09: [k(T.s09, [SX + 0.6, 1.15, SZ - 1.5], 3.0, 28, 8, 44), k(T.s10, [SX + 0.7, 1.2, SZ - 1.3], 2.4, 22, 7, 44)],
     s10: [k(T.s10, [0.62, 1.78, -4.72], 0.9, 4, 4, 34), k(wd(10, 1) + 0.15, [0.05, 1.0, HZ], 1.8, 5, 10, 36), k(T.s11, [0.05, 1.0, HZ], 1.7, 4, 10, 36)],
     s11: [k(T.s11, CPL, 2.2, yawToCpl - 14, 6, 34), k(T.s12, CPL, 1.5, yawToCpl - 10, 4, 34)],
@@ -123,7 +123,7 @@ export default function story(E, tm) {
     if (s === 's05') return { focus: dist(c.pos, CPL), cinf: 7 };
     if (s === 's06') return { focus: dist(c.pos, [LX - 0.4, 1.7, LZ - 2.5]), cinf: 6 };
     if (s === 's07') return { focus: dist(c.pos, [SX, 1.6, SZ + 0.5]), cinf: 5 };
-    if (s === 's08') return { focus: dist(c.pos, [SX + 0.1, 1.5, SZ - 1.0]), cinf: 7 };
+    if (s === 's08') return { focus: dist(c.pos, [SX, 1.5, SZ - 0.9]), cinf: 5 };
     if (s === 's09') return { focus: dist(c.pos, [SX + 0.3, 1.5, SZ - 1.4]), cinf: 7 };
     if (s === 's10' && t < wd(10, 1)) return { focus: dist(c.pos, [0.62, 1.78, -4.72]), cinf: 8 };
     if (s === 's01' || s === 's10') return { focus: dist(c.pos, hero), cinf: 6 };
@@ -168,7 +168,7 @@ export default function story(E, tm) {
       const back = s === 's03' || s === 's11';
       if (back) hp = { mode: 'sit', tableY: TY, expr: 'angry', L: 'table', R: 'table', back: true };
       A.push(actor({ id: 'hero', look: 'diner', seed: 5, x: HERO.x, y: 0, z: HERO.z - 0.02, pose: alive(t, 5, hp) }));
-      if (t >= wd(12, 6)) A.push(fxCard({ id: 'steam', kind: 'steam', args: [(t * 1.4) % 1, 330], x: HERO.x, y: 0.0, z: HERO.z + 0.02, s: 1 }));
+      if (t >= wd(12, 6)) A.push(fxCard({ id: 'steam', kind: 'steam', args: [(t * 1.4) % 1, 470], x: HERO.x, y: 0.0, z: HERO.z + 0.02, s: 1 }));
       // the couple: arrive standing, sit down on "down", eat once the plates land
       const sitT = wd(4, 3) - 0.1;
       for (const [i, P0] of [[0, S1], [1, S2]]) {
@@ -206,8 +206,8 @@ export default function story(E, tm) {
       });
       // cutter: walks in from the side on "skipped", smug
       const c0 = wd(8, 1) - 0.35, c1 = wd(8, 1) + 0.25;
-      if (s === 's08') { const k = EASE.easeOut((t - c0) / (c1 - c0)); A.push(actor({ id: 'cutter', look: 'cutter', seed: 47, x: SX + lerp(1.9, 0.05, k), y: 0, z: SZ - 1.45, pose: alive(t, 47, { mode: k < 1 ? 'walk' : 'stand', step: (t * 2) % 1, expr: 'smug', L: 'hip', R: k < 1 ? 'hang' : 'wave', k: t, facing: -1 }) }));
-        if (k > 0 && k < 1) A.push(fxCard({ id: 'spd', kind: 'speed', args: [-1], x: SX + lerp(1.9, 0.05, k) + 0.55, y: 0.1, z: SZ - 1.45, s: 0.9 })); }
+      if (s === 's08') { const k = EASE.easeOut((t - c0) / (c1 - c0)); A.push(actor({ id: 'cutter', look: 'cutter', seed: 47, x: SX + lerp(-1.7, 0.0, k), y: 0, z: SZ - 1.45, pose: alive(t, 47, { mode: k < 1 ? 'walk' : 'stand', step: (t * 2) % 1, expr: 'smug', L: 'hip', R: k < 1 ? 'hang' : 'wave', k: t, facing: -1 }) }));
+        }
       if (s === 's07') A.push(actor({ id: 'clerk', look: 'waiter', seed: 51, x: SX - 0.3, y: 0, z: SZ - 2.75, pose: alive(t, 51, { expr: 'smile', L: 'hang', R: 'hold', hold: { R: 'ticket' } }) }));
     }
     if (w === '1976') {

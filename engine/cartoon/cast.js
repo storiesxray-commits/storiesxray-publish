@@ -279,7 +279,7 @@ export const fx = {
   /** anger steam: two puffs shooting up from both sides of the head, k 0..1 loops */
   steam(p, k, y = 300) { const g = p.g; g.save();
     for (const s of [-1, 1]) for (let i = 0; i < 3; i++) { const t = (k + i / 3) % 1, r = 18 + 40 * t;
-      g.globalAlpha = Math.max(0, 1 - t) * 0.95; p.ell(300 + s * (150 + 60 * t), y - 40 - 220 * t, r, r * 0.85, '#f4f6fa', 6); }
+      g.globalAlpha = Math.max(0, 1 - t) * 0.95; p.ell(300 + s * (140 + 50 * t), y - 20 - 150 * t, r, r * 0.85, '#ffffff', 6); }
     g.restore(); },
   /** anime anger mark */
   vein(p, s = 1) { const c = '#e0302a'; p.g.save(); p.g.translate(300, 300); p.g.scale(s, s); p.g.translate(-300, -300);

@@ -200,5 +200,11 @@
       }
     ]
   },
-  "status": "hold"
+  "status": "hold",
+  "qa_words_ok": [
+    "Maister",
+    "Rafaeli",
+    "queueing",
+    "Larson"
+  ]
 }

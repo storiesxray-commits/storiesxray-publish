@@ -87,8 +87,10 @@ sp = SpellChecker(); ok = {w.lower() for w in meta.get("qa_words_ok", [])} | {"x
 texts = {"script": " ".join(TAG.sub(" ", s[0]) for s in script["sentences"]), "title": meta.get("title", ""), "description": re.sub(r"https?://\S+", " ", meta.get("description", "")),
          "caption_instagram": meta.get("caption_instagram", ""), "pinned_comment": meta.get("pinned_comment", "")}
 for k, t in texts.items():
+    t = re.sub(r"#\w+", " ", t)
     toks = [w.lower() for w in re.findall(r"[A-Za-z][A-Za-z'’-]*", t) if not re.match(r"^[A-Z]{2,}$", w) or len(w) > 4]
-    toks = [re.sub(r"['’](s|re|ve|ll|d|t|m)$", "", w).strip("'’-") for w in toks]
+    toks = [re.sub(r"(n['’]t|['’](s|re|ve|ll|d|m))$", "", w).strip("'’-") for w in toks]
+    toks = [p for w in toks for p in w.split("-") if p]
     bad = sorted({w for w in sp.unknown([w for w in toks if w and w not in ok and not w.startswith("#")]) if w not in ok})
     if bad: errs.append(f"spelling_{k}:" + ",".join(bad[:12]))
 # ---- sheets for the visual sign-off ----
@@ -102,7 +104,7 @@ inp = sum([["-i", f] for f in files], [])
 lay = "|".join(f"{(i % cols) * 540}_{(i // cols) * 960}" for i in range(len(files)))
 run("ffmpeg", "-y", "-loglevel", "error", *inp, "-filter_complex", "".join(f"[{i}]" for i in range(len(files))) + f"xstack=inputs={len(files)}:layout={lay}:fill=black", "-q:v", "3", f"{OUT}/qa_mid.jpg")
 old = json.load(open(f"{OUT}/qa_report.json")) if os.path.exists(f"{OUT}/qa_report.json") else {}
-vis = old.get("visual") if old.get("visual", {}).get("sha256") == sha else None
+vis = old.get("visual") if (old.get("visual") or {}).get("sha256") == sha else None
 rep = {"id": VID, "sha256": sha, "duration": round(dur, 3), "loudness": I, "true_peak": TP, "voice_margin_db": margin, "voice": tm.get("voice_name"),
        "errors": errs, "visual": vis, "pass": not errs and bool(vis)}
 json.dump(rep, open(f"{OUT}/qa_report.json", "w"), indent=1, ensure_ascii=False)
