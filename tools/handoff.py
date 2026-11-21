@@ -47,6 +47,15 @@ else:
     vs, srep = f"{P}/video_social.mp4", f"{ROOT}/out/{VID}/social_report.json"
     if not os.path.exists(vs) or not os.path.exists(f"{P}/cover_social.jpg"): errs.append("social_video_missing_run_social_py")
     elif not os.path.exists(srep) or json.load(open(srep)).get("sha256") != hashlib.sha256(open(vs, "rb").read()).hexdigest(): errs.append("social_video_not_the_checked_one")
+# Owner rule 20/11/2026: the cartoon engine is the only way to make videos, and nothing goes out without the full audit
+# (voice, picture, text) of tools/qa.py, including the visual sign-off, for this exact file.
+if meta.get("render_style") != "cartoon": errs.append("render_style_not_cartoon")
+qrep = f"{ROOT}/out/{VID}/qa_report.json"
+if not os.path.exists(qrep): errs.append("qa_report_missing_run_tools_qa_py")
+else:
+    q = json.load(open(qrep))
+    if q.get("sha256") != h.hexdigest(): errs.append("qa_report_is_for_another_file")
+    elif not q.get("pass"): errs.append("qa_failed:" + ",".join(q.get("errors") or ["visual_signoff_pending"])[:200])
 for k in ("title", "description", "caption_instagram", "series", "sources"):
     if not meta.get(k): errs.append(f"{k}_missing")
 for s in meta.get("sources", []):

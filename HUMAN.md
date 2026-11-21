@@ -9,7 +9,7 @@ Instagram inhabilitó @storiesxray el 19/11/2026. Pedido de la dueña: que a You
 
 ## 2. Nada de plantilla visible
 - **Miniaturas:** no repetir la misma receta en más de 2 videos seguidos. Rotar entre al menos 4 diseños: (a) círculo + rayos + sello, (b) primer plano sin círculo con texto en caja, (c) antes/después partido en dos, (d) objeto en estudio con flecha o número gigante, (e) sin texto o con 1 palabra. Variar lado del texto, color dominante y fondo.
-- **Videos:** variar paleta, escenarios (`world.js`), personajes y estilo de subtítulo entre videos. Duraciones distintas (de 15 a 55 s), no siempre 30–45 s.
+- **Videos:** variar paleta, escenarios (`engine/cartoon/sets.js` y lugares nuevos), personajes y estilo de subtítulo entre videos. Duraciones distintas (de 15 a 55 s), no siempre 30–45 s.
 - **Títulos, descripciones, comentarios fijados y tags:** escritos para ese video. No arrancar 3 o más de los últimos 10 con las mismas palabras; tags con menos de la mitad en común con cualquier otro video.
 
 ## 3. Ritmo de persona, no de máquina

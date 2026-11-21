@@ -26,9 +26,12 @@ try:
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
         try: STYLE = os.environ.get("RENDER_STYLE") or json.load(open(f"{ROOT}/videos/{VID}/meta.json")).get("render_style", "toon")
         except Exception: STYLE = os.environ.get("RENDER_STYLE", "toon")
-        pg.goto(f"http://127.0.0.1:{PORT}/engine/player.html?v={VID}&style={STYLE}" + os.environ.get("RENDER_EXTRA", "") + ("&clean=1" if MODE == "clean" else ""))
-        try: pg.wait_for_function("window.READY===true", timeout=60000)
+        # render_style "cartoon" (20/11/2026): 2D characters in an inked 3D world, engine/cartoon/ (same page contract)
+        page = "engine/cartoon/index.html" if STYLE == "cartoon" else "engine/player.html"
+        pg.goto(f"http://127.0.0.1:{PORT}/{page}?v={VID}&style={STYLE}" + os.environ.get("RENDER_EXTRA", "") + ("&clean=1" if MODE == "clean" else ""))
+        try: pg.wait_for_function("window.READY===true || !!window.ERR", timeout=180000)
         except Exception: print("LOAD FAILED:", errs); raise
+        if pg.evaluate("window.ERR || null"): print("LOAD FAILED:", pg.evaluate("window.ERR"), errs); sys.exit(2)
         shots = pg.evaluate("window.SHOTS")
         if MODE == "list":
             json.dump(shots, open(f"{OUT}/shots.json", "w"), indent=1)

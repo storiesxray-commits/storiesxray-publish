@@ -97,4 +97,5 @@ for s in SHOTS:
     a, b = int(s["start"] * SR), int(s["end"] * SR); gap = db(out[a:b]) - db(bed[a:b]); worst = min(worst, gap)
     print(f'{s["id"]:6s} mix {db(out[a:b]):6.1f} dB   bed {db(bed[a:b]):6.1f} dB   voice margin {gap:4.1f} dB{"   <-- LOW" if gap < 4 else ""}')
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{OUT}/mix_raw.wav", "-af", "loudnorm=I=-14:TP=-1.0:LRA=11", "-ar", "48000", f"{OUT}/mix.wav"], check=True)
+json.dump({"smallest_voice_margin_db": round(float(worst), 2)}, open(f"{OUT}/mix_report.json", "w"))
 print("mix.wav written; smallest voice margin", round(worst, 1), "dB")

@@ -22,7 +22,7 @@ AUTOPILOT §1c: los ids con número **mod 3 = 2** (xr014, xr017, xr020…) son E
 - Narrador con frases cortas y naturales, sin lenguaje académico. Actuación sutil: este formato pide menos grito y más complicidad que los otros (máx. 2–3 etiquetas).
 
 ## 4. Imagen y sonido
-- Estilo **"pro"** (NEW_VIDEO.md paso 5): escenas humanas creíbles en lugares reconocibles con `world.js` (restaurante, supermercado, casa, calle, colectivo, aeropuerto, oficina), primeros planos de caras y manos, cámara con intención, profundidad de campo, cortes que aportan información o emoción. Nada de diapositivas ni imágenes genéricas con voz encima.
+- Motor **cartoon** (NEW_VIDEO.md paso 5, desde 20/11/2026): escenas humanas creíbles en lugares reconocibles armados con `engine/cartoon/sets.js` (restaurante, supermercado, casa, calle, colectivo, aeropuerto, oficina), primeros planos de caras y manos, cámara con intención, profundidad de campo, cortes que aportan información o emoción. Nada de diapositivas ni imágenes genéricas con voz encima.
 - Interfaces (mensajería, barra de carga, streaming, reseñas) siempre **inventadas**: sin logos ni pantallas reconocibles de WhatsApp, Netflix, etc.
 - Sonido sincronizado con la acción: notificaciones, bocinas, pasos, relojes, respiraciones, silencios dramáticos. Música que acompaña el conflicto y la revelación, nunca la misma pista en serie.
 - Texto en pantalla corto, minimalista y legible; no tapar la escena. Marca Stories X-Ray discreta.

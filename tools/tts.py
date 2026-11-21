@@ -31,6 +31,9 @@ def full_text(script):
     return " ".join(s[0].strip() for s in script["sentences"])
 
 def out_name(vid, script):
+    # "tts_id" (optional): reuse the narration already generated for another video id with the same text
+    # (test renders of a new visual engine must not spend ElevenLabs credits or change the voice).
+    vid = script.get("tts_id", vid)
     key = pick_voice(vid, script)
     h = hashlib.sha1((key + "|" + CFG["model"] + "|" + full_text(script)).encode()).hexdigest()[:10]
     return f"{vid}-{key}-{h}", key

@@ -20,7 +20,7 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr007-wombat-cubes`).
 
 ## 1c. EVERYDAY X-RAY (formato de la dueña, 19/11/2026 — OBLIGATORIO)
-- Si el número del id nuevo es **mod 3 = 2** (xr014, xr017, xr020…) y §1b no obliga a una noticia, el video es **EVERYDAY X-RAY**: tomar el primer `todo` con `"format": "everyday"` de `queue_v3.json` y seguir `topics/EVERYDAY.md` (estructura, duración 20–28 s, estilo pro, rigor). `meta.json` → `experiment.topic_type = "everyday"`.
+- Si el número del id nuevo es **mod 3 = 2** (xr014, xr017, xr020…) y §1b no obliga a una noticia, el video es **EVERYDAY X-RAY**: tomar el primer `todo` con `"format": "everyday"` de `queue_v3.json` y seguir `topics/EVERYDAY.md` (estructura, duración 20–28 s, motor cartoon, rigor). `meta.json` → `experiment.topic_type = "everyday"`.
 - Si no quedan `everyday` en `todo`, usar la cola normal y avisarlo en el resumen.
 
 ## 1a. FILTRO ULTRA VIRAL (regla de la dueña, 18/11/2026 — OBLIGATORIO, gana sobre todo lo demás)

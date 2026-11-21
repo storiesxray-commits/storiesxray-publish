@@ -23,7 +23,8 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Ningún texto encima de lo importante de la imagen. Las etiquetas 3D (`labelSprite`) van debajo o arriba del objeto, sin pisar otros elementos.
 
 ## 4. Imagen
-- Estilo fijo: color plano, sombreado en 3 tonos, contorno negro, fondo oscuro con halo para los rayos X (cian `#22d3ee`).
+- Estilo fijo (desde 20/11/2026): motor **cartoon** (`engine/cartoon/`, ver su README): personajes 2D de contorno negro dentro de escenarios 3D entintados, con luz, sombras y profundidad. Los rayos X, cuando el tema los pide, se hacen dentro de ese mundo (corte o vista interna), nunca como diapositiva.
+- Errores del motor cartoon que no pueden pasar: cámara del otro lado de una pared, personajes flotando o hundidos, manos que no apoyan donde deberían, una persona tapando a otra sin querer, subtítulo encima de una cara, cabezas cortadas sin intención, planos sin nada en movimiento, salto de posición o de dirección entre planos del mismo lugar.
 - Antes del render completo: dibujar a tamaño real (`render.py stills`) el momento más cargado de cada plano y mirarlo.
 - Errores que ya pasaron y no pueden volver a pasar:
   - Cuerpo metido dentro de un asiento o de otro objeto. Personaje sentado = cuerpo entero visible delante del respaldo.
@@ -77,3 +78,11 @@ La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el 
 4. Duración < 59 s, loudness −14 LUFS, sin errores de página en el render.
 5. Escuchar el video entero con sonido (esto lo hace una persona: Claude no puede escuchar audio).
 6. Regla de la dueña (15/11/2026): no hay aprobación previa. Todo lo que está en `publish/` se publica salvo que `metadata.json` tenga `"status": "hold"`. Si algo de este archivo no se cumple, poner `hold` y avisar.
+
+## 7. Auditoría final obligatoria (regla de la dueña, 20/11/2026)
+"El video siempre antes tiene que salir auditado perfecto: voz, imágenes, textos, todo, sin ningún error."
+- `python tools/qa.py <id>` tiene que dar **0 errores**: motor cartoon, voz de ElevenLabs con tiempos completos, −14 LUFS ±1, pico ≤ −0,9 dBTP, voz ≥ 6 dB sobre música y efectos en todos los planos, 1080×1920 30 fps H.264/AAC 48 kHz, imagen tan larga como la voz, sin cuadros congelados ni negros, subtítulos idénticos al guion y del largo correcto, ortografía sin errores en guion, título, descripción, caption y comentario fijado (los nombres propios correctos se agregan a `meta.json` → `qa_words_ok`).
+- Firma visual: mirar `qa_sheet.jpg` y `qa_mid.jpg` y firmar con `--visual-ok` solo si no hay ningún error de la sección 4. La firma vale para ese archivo exacto.
+- Claude no puede escuchar el audio: las pruebas de audio son mediciones. Por eso nunca se regenera ni se edita la voz: se usa la toma de ElevenLabs tal cual y la imagen se ajusta a ella.
+- `handoff.py` pone `hold` si falta cualquiera de las dos cosas.
+

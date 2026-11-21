@@ -1,0 +1,20 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,">
+<!-- Stories X-Ray cartoon engine page: ?v=<video-id>[&clean=1]. Same contract as engine/player.html (READY, SHOTS, renderAt). -->
+<style>
+html,body{margin:0;background:#000;overflow:hidden}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:'Inter',sans-serif}
+canvas{position:absolute;left:0;top:0;display:block}
+#title{position:absolute;left:90px;width:840px;top:170px;white-space:nowrap;text-align:center;font-weight:900;color:#fff;line-height:.92;letter-spacing:-2px;
+ -webkit-text-stroke:18px #0b0b0f;paint-order:stroke fill;transform-origin:50% 60%;opacity:0}
+#title .big{font-size:250px;color:#FFD60A;display:block}
+#title .mid{font-size:120px;display:block}
+#title .y{color:#FFD60A} #title .r{color:#ff3b30} #title .g{color:#4dff88}
+#cap{position:absolute;left:110px;width:800px;top:1290px;white-space:nowrap;text-align:center;font-weight:900;font-size:84px;color:#fff;letter-spacing:-1px;line-height:1;
+ -webkit-text-stroke:15px #0b0b0f;paint-order:stroke fill;text-transform:uppercase;transform-origin:50% 50%;opacity:0}
+#cap .y{color:#FFD60A}
+</style></head><body>
+<div id="stage"><canvas id="c" width="1080" height="1920"></canvas><div id="title"></div><div id="cap"></div></div>
+<script>window.addEventListener('error', e => { window.ERR = String(e.message); console.error('ERR ' + e.message); });
+window.addEventListener('unhandledrejection', e => { window.ERR = String(e.reason && e.reason.stack || e.reason); console.error('ERR ' + window.ERR); });</script>
+<script type="module" src="core.js"></script>
+</body></html>
