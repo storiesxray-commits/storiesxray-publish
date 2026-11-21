@@ -54,6 +54,7 @@ if v["avg_frame_rate"] not in ("30/1", "30000/1000"): errs.append("not_30fps")
 if v["codec_name"] != "h264": errs.append("not_h264")
 if not a or a["codec_name"] != "aac" or int(a["sample_rate"]) != 48000: errs.append("audio_not_aac_48k")
 if dur >= 59: errs.append("over_59s")
+if int(v.get("bit_rate") or 0) > 5_000_000: errs.append("video_bitrate_over_5mbps")
 if dur < tm["total"] - 0.05: errs.append("picture_shorter_than_narration")
 if a and abs(float(a.get("duration", dur)) - float(v.get("duration", dur))) > 0.15: errs.append("audio_video_length_mismatch")
 lo = run("ffmpeg", "-hide_banner", "-i", final, "-af", "ebur128=peak=true", "-f", "null", "-").stderr

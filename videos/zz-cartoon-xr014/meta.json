@@ -88,7 +88,7 @@
     "ending": "comment"
   },
   "thumbnail": {
-    "time": 6.0,
+    "time": 6.15,
     "zoom": 1.0,
     "focus": [
       0.5,
@@ -132,14 +132,14 @@
         "glow": "#FF3B30"
       },
       {
-        "time": 7.3,
+        "time": 7.0,
         "protect": [
-          200,
-          620,
+          150,
+          760,
           1000,
-          1300
+          1450
         ],
-        "text_y": 1360,
+        "text_y": 170,
         "lines": [
           {
             "text": "THEY CAME",
@@ -158,12 +158,7 @@
     "contrast": 1.18
   },
   "social_thumbnail": {
-    "protect": [
-      170,
-      520,
-      910,
-      1330
-    ],
+    "pick": 2,
     "text_y": 280
   },
   "seo": {
