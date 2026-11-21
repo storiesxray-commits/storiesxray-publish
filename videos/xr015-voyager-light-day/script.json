@@ -1,13 +1,39 @@
 {
  "lang": "en-us",
  "sentences": [
-  ["Light needs a whole day to reach it.", 0.1],
-  ["Voyager 1. Launched in 1977.", 0.1],
-  ["Now sixteen billion miles away.", 0.15],
-  ["[whispers] Its memory? Smaller than one selfie.", 0.2],
-  ["Text it... [laughs] the reply takes two days.", 0.15],
-  ["And last week? It went quiet.", 0.2],
-  ["Would you keep waiting?", 0.1],
-  ["Out there, even...", 0.0]
- ]
+  [
+   "Light needs a whole day to reach it.",
+   0.1
+  ],
+  [
+   "Voyager 1. Launched in 1977.",
+   0.1
+  ],
+  [
+   "Now sixteen billion miles away.",
+   0.15
+  ],
+  [
+   "[whispers] Its memory? Smaller than one selfie.",
+   0.2
+  ],
+  [
+   "Text it... [pause] the reply takes two days.",
+   0.15
+  ],
+  [
+   "And last week? It went quiet.",
+   0.2
+  ],
+  [
+   "Would you keep waiting?",
+   0.15
+  ],
+  [
+   "Out there, even light needs a whole day.",
+   0.0
+  ]
+ ],
+ "tone": "awe",
+ "voice": "xr10"
 }

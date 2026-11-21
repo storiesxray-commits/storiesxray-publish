@@ -102,7 +102,7 @@ payload = {
     "title_youtube": meta["title"], "description_youtube": meta["description"], "caption_instagram": meta.get("caption_instagram", ""),
     "tags": meta.get("tags", []), "series": meta.get("series", ""), "sources": meta.get("sources", []),
     "made_for_kids": bool(meta.get("made_for_kids", False)), "contains_synthetic_media": bool(meta.get("altered_or_synthetic_realistic", False)),
-    "publishing_targets": targets, "publish_time_local": publish_time, "checks_failed": errs,
+    "publishing_targets": meta["platforms"], "publish_time_local": publish_time, "checks_failed": errs,
 }
 json.dump(payload, open(f"{P}/xr_payload.json", "w"), indent=2, ensure_ascii=False)
 print(("OK" if not errs else "PROBLEMS: " + ", ".join(errs)), f"{P}/xr_payload.json", payload["sha256"][:16])

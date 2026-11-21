@@ -1,15 +1,15 @@
 {
   "content_id": "xr-015",
   "repo_id": "xr015-voyager-light-day",
-  "sha256": "792eceb1c98ea632b7d26fd0bbd69da3c4765ebb1aa32b172e54e692ebaab192",
-  "file_size_bytes": 16971165,
-  "duration_seconds": 26.857,
+  "sha256": "9eef0d2b41a780e9df19efaea3a44c8193285238b2886e24cbaf37982f1041ad",
+  "file_size_bytes": 16594110,
+  "duration_seconds": 26.176,
   "width": 1080,
   "height": 1920,
   "video_codec": "h264",
   "audio_codec": "aac",
-  "fps": 30.0,
-  "video_bit_rate": 4931591,
+  "fps": 29.976,
+  "video_bit_rate": 4938279,
   "faststart": true,
   "title_youtube": "Voyager 1 Is Now One Light-Day Away. Light Needs 24 Hours to Reach It",
   "description_youtube": "Voyager 1 is now one light-day from Earth: a radio signal moving at the speed of light needs a full 24 hours to reach it. NASA's Voyager 1 crossed that line on Nov. 18, 2026.\n\nThe numbers:\n- About 16.1 billion miles (25.9 billion km) from Earth, the farthest spacecraft humans have ever flown.\n- Launched in 1977, still moving at about 38,000 mph.\n- 24 hours for a command to get there, 24 hours for the answer to come back. NASA sends it commands about once a week.\n- Its three onboard computers hold 69.63 kilobytes of memory in total, less than a single phone photo.\n- On Nov. 14, 2026 it went quiet: no science or engineering data, only its carrier signal (the \"hum\"). As of Nov. 19, NASA engineers were analyzing the problem.\n\nWould you keep waiting for that reply? Tell us below.\n\nSources:\n- NASA JPL, Voyager 1 reaches one light-day from Earth (Nov. 19, 2026): https://www.jpl.nasa.gov/news/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/\n- Spaceflight Now, NASA's Voyager 1 is one light-day from Earth (Nov. 18, 2026): https://spaceflightnow.com/2026/11/18/nasas-voyager-1-is-one-light-day-from-earth/\n- Space.com, Empire State Building glows gold for Voyager (Nov. 19, 2026): https://www.space.com/space-exploration/voyager/empire-state-building-glows-gold-for-nasas-voyager-spacecraft-space-photo-of-the-day-for-nov-19-2026\n- Popular Science, Voyager's 1977 computers (69.63 KB of memory): https://www.popsci.com/science/nasa-voyager-computers-video/\n\n#voyager1 #space #lightday #nasa",
@@ -53,9 +53,7 @@
   "made_for_kids": false,
   "contains_synthetic_media": false,
   "publishing_targets": [
-    "youtube",
-    "instagram",
-    "facebook"
+    "youtube"
   ],
   "publish_time_local": "16:50",
   "checks_failed": []

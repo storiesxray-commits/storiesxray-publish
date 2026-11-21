@@ -59,7 +59,7 @@
   },
   "experiment": {
     "opening": "v2",
-    "voice": "xr9",
+    "voice": "xr10",
     "duration": "mid",
     "duration_assigned": "short",
     "duration_note": "PLAYBOOK assigned short (15-22 s, (15 div 3) mod 3 = 2); the xr9 Texas drawl reads slowly, so even after cutting the script once the take is 26.7 s, which falls in the mid band. Logged as mid so the optimizer measures the real length.",
@@ -67,8 +67,9 @@
     "hook_note": "contradiction is implicit: light (expected to be instant) needs a whole day",
     "topic_type": "news",
     "ending": "comment",
-    "loop": true,
-    "event_date": "2026-11-18"
+    "loop": "visual_only",
+    "event_date": "2026-11-18",
+    "redo_note": "21/11: redone after the owner saw a cut ending and camera problems: complete last sentence, awe voice xr10 (casting), cameras reframed, audit v2."
   },
   "thumbnail": {
     "time": 3.6,

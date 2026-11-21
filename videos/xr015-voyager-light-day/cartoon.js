@@ -82,9 +82,14 @@ export default function story(E, tm) {
   const pulse = group(0, 0, 0); const trail = [];
   for (let i = 0; i < 16; i++) { const k = i / 15, m = new THREE.MeshBasicMaterial({ color: new THREE.Color('#fff4c8').multiplyScalar(i ? 1.4 : 2.2), transparent: true, opacity: i ? 0.75 * (1 - k) : 1, fog: false, depthWrite: false });
     const s = add(sph(i ? 0.42 * (1 - k * 0.7) : 0.6, 16, 12), m, 0, 0, -i * 2.0, pulse, { cast: false, noink: true }); s.userData.ndSkip = true; trail.push(s); }
-  const halo = add(sph(1.5, 16, 12), new THREE.MeshBasicMaterial({ color: '#ffe9a0', transparent: true, opacity: 0.25, fog: false, depthWrite: false }), 0, 0, 0, pulse, { cast: false, noink: true }); halo.userData.ndSkip = true;
-  const BEAM_FROM = EARTH.clone().add(new THREE.Vector3(0, 0, 0)), BEAM_TO = S0.clone().add(new THREE.Vector3(0, 0, 0.6));
-  const setPulse = (u) => { pulse.position.lerpVectors(BEAM_FROM, BEAM_TO, u); pulse.lookAt(BEAM_TO); pulse.scale.setScalar(0.65); };
+  const halo = add(sph(1.5, 16, 12), new THREE.MeshBasicMaterial({ color: '#ffe9a0', transparent: true, opacity: 0.0, fog: false, depthWrite: false }), 0, 0, 0, pulse, { cast: false, noink: true }); halo.userData.ndSkip = true; halo.visible = false;
+  const BEAM_TO = S0.clone().add(new THREE.Vector3(0, 0, 0.6)), BEAM_FROM = EARTH.clone().add(BEAM_TO.clone().sub(EARTH).normalize().multiplyScalar(3.4)); // starts outside the atmosphere, never drawn over the globe
+  const _wp = new THREE.Vector3(), _cp = new THREE.Vector3(); let camNow = null;
+  // true when, seen from the current camera, a point falls on Earth's disc (+25 %): such pulse pieces look pasted on the planet
+  const onGlobe = (p) => { if (!camNow) return false; _cp.set(...camNow); const a = p.clone().sub(_cp), b = EARTH.clone().sub(_cp);
+    return a.angleTo(b) < Math.atan(2.95 * 1.25 / b.length()); };
+  const setPulse = (u) => { pulse.position.lerpVectors(BEAM_FROM, BEAM_TO, u); pulse.lookAt(BEAM_TO); pulse.scale.setScalar(0.65); pulse.updateMatrixWorld(true);
+    for (const tr of trail) { tr.getWorldPosition(_wp); tr.visible = _wp.distanceTo(EARTH) > 5.5 && !onGlobe(_wp); } }; // never drawn over the globe
   // "hum" rings around the quiet spacecraft
   const rings = [0, 1, 2].map(() => { const m = new THREE.MeshBasicMaterial({ color: '#7fd0ff', transparent: true, opacity: 0, fog: false, depthWrite: false, side: THREE.DoubleSide });
     const r = add(new THREE.TorusGeometry(1, 0.03, 6, 64), m, 0, 0, 0.9, V, { cast: false, noink: true }); r.userData.ndSkip = true; return r; });
@@ -194,10 +199,10 @@ export default function story(E, tm) {
     s01: [HOOK, camAt(13.2, 1.9, -2.8, 46, T.s02)],
     s02: [k(T.s02, VC, 6.4, yawE + 145, 12, 36), k(T.s03, VC, 5.6, yawE + 128, 10, 36)],
     s03: [k(T.s03, [LX + 0.2, 1.55, LZ - 1.6], 4.6, 6, 6, 40), k(wd(2, 4), [LX + 0.2, 1.55, LZ - 1.6], 4.1, 2, 5, 40), k(T.s04, [LX + 0.1, 1.6, LZ - 1.8], 3.8, 0, 4, 40)],
-    s04: [k(T.s04, [0, 1.8, -2.9], 6.2, 0, 2, 44), k(wd(3, 2), [0.05, 1.78, -2.85], 5.4, -3, 2, 44), k(T.s05, [0.1, 1.75, -2.8], 5.1, -4, 2, 44)],
-    s05: [k(T.s05, [HD.x + 0.55, 1.3, HD.z - 0.38], 2.0, 4, 3, 34), k(T.s06, [HD.x + 0.5, 1.28, HD.z - 0.38], 1.75, 2, 3, 34)],
-    s06: [k(T.s06, [HD.x + 0.25, 1.05, HD.z - 0.2], 2.0, -18, 12, 36), k(wd(5, 2), [HD.x + 0.25, 1.05, HD.z - 0.2], 1.8, -14, 10, 36), k(wd(5, 6), [HD.x + 1.05, 1.5, -1.4], 3.9, -16, 5, 40, { ease: 'easeOut' }), k(T.s07, [HD.x + 1.1, 1.52, -1.5], 3.7, -17, 5, 40)],
-    s07: [k(T.s07, [0, 1.75, -2.6], 6.0, 8, 4, 44), k(T.s08, [0, 1.8, -2.8], 5.0, 6, 3, 44)],
+    s04: [k(T.s04, [0, 1.5, -2.6], 4.45, 0, 3, 44), k(wd(3, 2), [0.02, 1.48, -2.6], 4.0, -2, 3, 44), k(T.s05, [0.03, 1.47, -2.6], 3.95, -3, 3, 44)],
+    s05: [k(T.s05, [HD.x + 0.62, 1.62, HD.z - 0.45], 2.95, 2, 2, 36), k(T.s06, [HD.x + 0.62, 1.6, HD.z - 0.45], 2.85, 1, 2, 36)],
+    s06: [k(T.s06, [HD.x + 0.05, 1.1, HD.z - 0.2], 2.3, -18, 12, 36), k(wd(5, 2), [HD.x + 0.05, 1.1, HD.z - 0.2], 2.1, -14, 10, 36), k(wd(5, 6), [HD.x + 1.05, 1.5, -1.4], 3.9, -16, 5, 40, { ease: 'easeOut' }), k(T.s07, [HD.x + 1.1, 1.52, -1.5], 3.7, -17, 5, 40)],
+    s07: [k(T.s07, [0, 1.42, -2.5], 3.75, 4, 3, 44), k(T.s08, [0, 1.42, -2.5], 3.6, 3, 3, 44)],
     s08: [k(T.s08, VC, 9.5, yawE + 160, 4, 36), k(T.s09, VC, 8.0, yawE + 170, 2, 36)],
     s09: [k(T.s09, [-0.9, 1.72, -2.45], 1.5, 6, 2, 34), k(T.s10, [-0.9, 1.72, -2.45], 1.25, 4, 2, 34)],
     s10: [camAt(21, 3.2, -3.5, 46, T.s10), { ...HOOK, t: total - 0.02, ease: 'easeOut' }],
@@ -237,7 +242,7 @@ export default function story(E, tm) {
   const update = (t) => {
     const s = shotAt(t);
     let u = s === 's01' ? U0 + (0.86 - U0) * EASE.easeIn(Math.pow(t / T.s02, 0.6)) : s === 's10' ? 0.2 + (U0 - 0.2) * ramp(t, T.s10, total - 0.02) : -1;
-    pulse.visible = u >= 0; if (u >= 0) setPulse(u);
+    camNow = cam(t).pos; pulse.visible = u >= 0; if (u >= 0) setPulse(u);
     const halo0 = 1 + 0.12 * Math.sin(t * 9); halo.scale.setScalar(halo0);
     // wall screen pages
     const pg = s === 's05' ? 'mem' : s === 's06' ? 'wait' : s === 's07' ? 'quiet' : s === 's09' ? 'hum' : 'dist';
@@ -272,8 +277,8 @@ export default function story(E, tm) {
       if (s === 's07') { ap = { expr: t > wd(6, 1) ? 'nervous' : 'think', L: 'cross', R: 'chin', facing: 1, look: 0.7 }; bp = { expr: 'nervous', L: 'temple', R: 'hang', facing: -1, look: -0.7 }; }
       if (s === 's09') ap = { expr: t > wd(7, 3) - 0.1 ? 'think' : 'whisper', L: 'chin', R: 'cross', facing: 0, look: 0, talk: 0 };
       if (s !== 's05' && s !== 's06') {
-        A.push(actor({ id: 'ana', look: LK.ana, seed: 71, x: s === 's09' ? -0.9 : -1.6, y: 0, z: -2.45, pose: alive(t, 71, ap) }));
-        if (s !== 's09') A.push(actor({ id: 'ben', look: LK.ben, seed: 74, x: 1.7, y: 0, z: -2.3, pose: alive(t, 74, bp) }));
+        A.push(actor({ id: 'ana', look: LK.ana, seed: 71, x: s === 's09' ? -0.9 : s === 's07' ? -1.12 : -1.4, y: 0, z: -2.45, pose: alive(t, 71, ap) }));
+        if (s !== 's09') A.push(actor({ id: 'ben', look: LK.ben, seed: 74, x: s === 's07' ? 1.12 : 1.42, y: 0, z: -2.3, pose: alive(t, 74, bp) }));
         if (s === 's07') { A.push(fxCard({ id: 'sw1', kind: 'sweat', x: 1.88, y: 1.78, z: -2.25, s: 0.12 })); A.push(fxCard({ id: 'sw2', kind: 'sweat', x: -1.4, y: 1.85, z: -2.4, s: 0.11 })); }
         if (s === 's09' && t > wd(7, 3) - 0.1) A.push(fxCard({ id: 'q', kind: 'question', x: -1.2, y: 1.84, z: -2.4, s: 0.28 }));
       }
@@ -301,7 +306,7 @@ export default function story(E, tm) {
   // ================= text =================
   const M_ = (a, cls = '') => `<span class="mid ${cls}">${a}</span>`, B_ = (a, cls = '', fs = 230) => `<span class="big ${cls}" style="font-size:${fs}px">${a}</span>`;
   const ui = (t) => {
-    const s = shotAt(t), o = { capY: 1290 };
+    const s = shotAt(t), o = { capY: 1290, exterior: ['s01', 's02', 's08', 's10'].includes(s) };
     if (s === 's01') { o.title = M_('LIGHT NEEDS') + M_('A WHOLE DAY', 'y'); o.titleK = 1; o.capY = 1480; }
     if (s === 's02') { o.title = M_('VOYAGER 1', 'y'); o.titleK = (t - T.s02) / 0.28; o.capY = 1480; }
     if (s === 's03' && t > wd(2, 4) - 0.1) { o.title = B_('1977', 'y', 200); o.titleK = (t - wd(2, 4) + 0.1) / 0.28; }

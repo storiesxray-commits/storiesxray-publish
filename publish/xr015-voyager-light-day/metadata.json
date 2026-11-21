@@ -6,9 +6,7 @@
   "altered_or_synthetic_realistic": false,
   "publish_timezone": "America/New_York",
   "platforms": [
-    "youtube",
-    "instagram",
-    "facebook"
+    "youtube"
   ],
   "title": "Voyager 1 Is Now One Light-Day Away. Light Needs 24 Hours to Reach It",
   "description": "Voyager 1 is now one light-day from Earth: a radio signal moving at the speed of light needs a full 24 hours to reach it. NASA's Voyager 1 crossed that line on Nov. 18, 2026.\n\nThe numbers:\n- About 16.1 billion miles (25.9 billion km) from Earth, the farthest spacecraft humans have ever flown.\n- Launched in 1977, still moving at about 38,000 mph.\n- 24 hours for a command to get there, 24 hours for the answer to come back. NASA sends it commands about once a week.\n- Its three onboard computers hold 69.63 kilobytes of memory in total, less than a single phone photo.\n- On Nov. 14, 2026 it went quiet: no science or engineering data, only its carrier signal (the \"hum\"). As of Nov. 19, NASA engineers were analyzing the problem.\n\nWould you keep waiting for that reply? Tell us below.\n\nSources:\n- NASA JPL, Voyager 1 reaches one light-day from Earth (Nov. 19, 2026): https://www.jpl.nasa.gov/news/nasas-voyager-1-makes-history-reaching-one-light-day-from-earth/\n- Spaceflight Now, NASA's Voyager 1 is one light-day from Earth (Nov. 18, 2026): https://spaceflightnow.com/2026/11/18/nasas-voyager-1-is-one-light-day-from-earth/\n- Space.com, Empire State Building glows gold for Voyager (Nov. 19, 2026): https://www.space.com/space-exploration/voyager/empire-state-building-glows-gold-for-nasas-voyager-spacecraft-space-photo-of-the-day-for-nov-19-2026\n- Popular Science, Voyager's 1977 computers (69.63 KB of memory): https://www.popsci.com/science/nasa-voyager-computers-video/\n\n#voyager1 #space #lightday #nasa",
@@ -58,7 +56,7 @@
   },
   "experiment": {
     "opening": "v2",
-    "voice": "xr9",
+    "voice": "xr10",
     "duration": "mid",
     "duration_assigned": "short",
     "duration_note": "PLAYBOOK assigned short (15-22 s, (15 div 3) mod 3 = 2); the xr9 Texas drawl reads slowly, so even after cutting the script once the take is 26.7 s, which falls in the mid band. Logged as mid so the optimizer measures the real length.",
@@ -66,8 +64,9 @@
     "hook_note": "contradiction is implicit: light (expected to be instant) needs a whole day",
     "topic_type": "news",
     "ending": "comment",
-    "loop": true,
-    "event_date": "2026-11-18"
+    "loop": "visual_only",
+    "event_date": "2026-11-18",
+    "redo_note": "21/11: redone after the owner saw a cut ending and camera problems: complete last sentence, awe voice xr10 (casting), cameras reframed, audit v2."
   },
   "thumbnail": {
     "time": 3.6,
@@ -209,7 +208,7 @@
     "voyager1"
   ],
   "id": "xr015-voyager-light-day",
-  "duration_s": 26.86,
+  "duration_s": 26.18,
   "status": "ready",
   "publish_time_local": "16:50"
 }
