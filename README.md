@@ -43,6 +43,7 @@ publish/<id>/         lo que Make publica
 | xr011-real-voice | Nunca escuchaste tu voz real (cola v3 N17, puntaje 100; voz ElevenLabs xr6; E2 brazo largo, 36,9 s) | `ready`, horario lo elige Make (21:56 NY) |
 | xr013-dennys-nvidia | Nvidia nació en un Denny's: de lavaplatos a gigante de chips, la renuncia de Huang y la placa que desapareció (J01, puntaje 100, NOTICIA; voz ElevenLabs xr7; medio 32 s) | extra cargado a mano en el ledger para el jueves 19/11 13:52 NY |
 | xr014-served-first | EVERYDAY X-RAY: la pareja que llegó después ya está comiendo; Larson (MIT, "Dr. Queue"): que te salteen enoja más que esperar (E01, puntaje 96; voz ElevenLabs xr8; 25,9 s; estilo pro) | `ready`, horario lo elige Make (12:12 NY) |
+| xr015-voyager-light-day | NOTICIA (18/11/2026): Voyager 1 llegó a un día luz de la Tierra; la luz tarda un día, memoria menor que una selfie, respuesta en 2 días y sin datos desde el 14/11 (X1120, puntaje 95; voz ElevenLabs xr9; 26,7 s; motor cartoon) | publicación rápida (§1b), extra cargado a mano en el ledger |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).

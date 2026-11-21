@@ -1528,6 +1528,23 @@
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 35)",
    "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 35. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+  },
+  {
+   "id": "X1120",
+   "title_es": "Voyager 1 llegó a un día luz de la Tierra (18/11/2026): la luz tarda un día entero en alcanzarla",
+   "hook": "Light needs a whole day to reach it.",
+   "reveal": "El 18/11/2026 05:16 EST la Voyager 1 (lanzada en 1977) llegó a un día luz: ~16.100 millones de millas; señal 24 h de ida y 24 h de vuelta; memoria total 69,63 KB; sin datos científicos desde el 14/11 (solo portadora).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "space",
+   "topic_type": "news",
+   "event_date": "2026-11-18",
+   "expires": "2026-11-25",
+   "status": "done",
+   "video_id": "xr015-voyager-light-day",
+   "source": "Noticia (AUTOPILOT §1b) elegida el 20/11/2026: NASA JPL, Spaceflight Now, Space.com, CNN, Smithsonian",
+   "note": "Publicación rápida (§1b). Descartadas en la misma búsqueda: hipopótamo Fiona murió (muerte = fuera), Jensen Huang deja Nvidia (ya cubierto en xr013), salida a bolsa de Anthropic (conflicto de interés), sismo menor en LA, récord de apnea de Zharkova (124 m, 14/11; menos buscado en EE. UU.)."
   }
  ],
  "dropped_low_score": [
