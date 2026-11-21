@@ -59,7 +59,7 @@ Dato del canal (YouTube Studio, 16/11): **solo 58–62 % "Stayed to watch"** en 
 - **Título del gancho a tamaño completo y primer subtítulo visibles desde el frame 0** (lo hace `player.html` solo). La voz arranca a los 0,03 s (`voice.py`).
 - **El título de pantalla del plano 1 dice lo mismo que la voz**, en 2–5 palabras grandes; no un rótulo de tema ("THE HOT COFFEE LAWSUIT" ✗).
 - **Duración 28–40 s** (antes 40–50): más corto = más % reproducido. Cada 3–5 s un dato nuevo, un giro o un cambio de plano.
-- **Voz (desde 16/11/2026): ElevenLabs, 3 narradores histriónicos en rotación** (`xr1` Campfire Maniac, `xr2` Unhinged Podcaster, `xr3` Porch Legend; `tools/voices.json`). Seguir NEW_VIDEO.md paso 4 (Make XR-07). Escribir el guion para ser ACTUADO: frases cortas con ritmo, 2–4 etiquetas `[whispers]`/`[laughs]`/`[gasps]` donde está el giro, exclamaciones reales. Anotar en `meta.json` → `"experiment": {"opening": "v2", "voice": "xrN"}`. Kokoro (`af_heart`/`am_michael`) solo como respaldo si Make falla, y anotarlo.
+- **Voz (desde 21/11/2026): ElevenLabs elegida por el tono del tema** (`script.json` → `"tone"` y `"voice"` de `tools/voices.json` → `casting`; NEW_VIDEO.md paso 4, Make XR-07). Nunca siempre la histriónica: la que haga viral ese tema.
 - Antes de renderizar, revisar `render.py stills` en 0.0, 0.5 y 1.0 s: en el frame 0 ya se entiende de qué va y por qué no hay que deslizar. Si no, rehacer el plano 1.
 
 ## 3. Reglas visuales y de contenido

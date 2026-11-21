@@ -24,7 +24,10 @@ def pick_voice(vid, script):
         return v
     m = re.match(r"xr(\d+)", vid)
     n = int(m.group(1)) if m else 0
-    rot = CFG["rotation"]
+    tone = script.get("tone")
+    if tone in CFG.get("casting", {}):  # owner 21/11/2026: voice by topic tone, not by rotation
+        return CFG["casting"][tone]["voices"][0]
+    rot = [v for v in CFG["rotation"] if not CFG["voices"][v].get("deleted")]
     return rot[n % len(rot)]
 
 def full_text(script):

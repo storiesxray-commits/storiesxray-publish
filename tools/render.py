@@ -48,10 +48,15 @@ try:
                 ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-c:v", "mjpeg", "-framerate", str(FPS), "-i", "-",
                                        "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(FPS), tmp], stdin=subprocess.PIPE)
                 t0 = time.time()
+                qa = []  # per-frame composition audit from the cartoon engine (window.QA_FRAME), judged by tools/qa.py
                 for f in range(f0, f1):
                     pg.evaluate(f"window.renderAt({(f + 0.5) / FPS})"); ff.stdin.write(pg.screenshot(type="jpeg", quality=92))
+                    q = pg.evaluate("window.QA_FRAME || null")
+                    if q: q["f"] = f; qa.append(q)
                 ff.stdin.close(); rc = ff.wait()
-                if rc == 0: os.replace(tmp, out)
+                if rc == 0:
+                    os.replace(tmp, out)
+                    if qa: json.dump({"shot": sid, "frames": qa}, open(f"{OUT}/shots/{sid}.qa.json", "w"))
                 print(f"{sid}: {f1-f0} frames in {time.time()-t0:.0f}s rc={rc}", flush=True)
                 if rc: sys.exit(rc)
         real = [e for e in errs if "GL_CLOSE_PATH_NV" not in e and "GPU stall" not in e]

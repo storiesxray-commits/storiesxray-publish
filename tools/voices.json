@@ -5,7 +5,6 @@
  "model": "eleven_v3",
  "output_format": "pcm_24000",
  "rotation": [
-  "xr5",
   "xr4",
   "xr2",
   "xr1",
@@ -13,7 +12,9 @@
   "xr8",
   "xr9",
   "xr4",
-  "xr6"
+  "xr10",
+  "xr11",
+  "xr12"
  ],
  "voices": {
   "xr1": {
@@ -32,7 +33,8 @@
    "name": "XR Narrator 3 - Porch Legend",
    "voice_id": "H3R91oDmjJogG2a1GF6v",
    "style": "Deep South man, late 50s, gravelly porch storyteller: slow raspy whispers, booming laughs and shouts",
-   "stability": 0.5
+   "stability": 0.5,
+   "deleted": "2026-11-21: deleted from the ElevenLabs account to free slots (Starter = 10 custom voices) for topic-fit voices; audio already generated stays licensed"
   },
   "xr4": {
    "name": "XR Narrator 4 - Absolute Lunatic",
@@ -44,13 +46,15 @@
    "name": "XR Narrator 5 - Breathless Hype Host",
    "voice_id": "aTpH3EiGTCUxsRktSYkg",
    "style": "American woman, mid 30s, breathless game-show/sports play-by-play energy: rapid-fire builds to shrieks, dead-silent pauses, gasps, cackles (designed 17/11 by XR-08)",
-   "stability": 0.0
+   "stability": 0.0,
+   "deleted": "2026-11-21: deleted from the ElevenLabs account to free slots (Starter = 10 custom voices) for topic-fit voices; audio already generated stays licensed"
   },
   "xr6": {
    "name": "XR Narrator 6 - Total Meltdown",
    "voice_id": "4i0jcZMazjFANHWT2k3t",
    "style": "American man, early 40s, even wilder than xr4: roaring gleeful shouts to trembling whispers, manic giggles, stretched vowels, breathless rushes, wheezing excitement (designed 17/11 by XR-08)",
-   "stability": 0.0
+   "stability": 0.0,
+   "deleted": "2026-11-21: deleted from the ElevenLabs account to free slots (Starter = 10 custom voices) for topic-fit voices; audio already generated stays licensed"
   },
   "xr7": {
    "name": "XR Narrator 7 - Queens Firecracker",
@@ -69,8 +73,88 @@
    "voice_id": "7WCzVTQEpBHdMdxk3Yyr",
    "style": "American woman, late 20s, big bright Texas drawl: squeals, honking laughs, slow suspense whispers snapping into fast shouting (designed 18/11 by XR-08)",
    "stability": 0.0
+  },
+  "xr10": {
+   "name": "XR Narrator 10 - Midnight Documentary",
+   "voice_id": "RAHdEIQENNEKOnmbxdU7",
+   "style": "American man, late 40s, deep warm calm late-night documentary narrator: quiet awe, slow deliberate pauses, never shouts (designed 21/11 by XR-08; owner asked for topic-fit, non-histrionic voices)",
+   "stability": 0.5
+  },
+  "xr11": {
+   "name": "XR Narrator 11 - Velvet Suspense",
+   "voice_id": "eXYSwWD07ucsmnWlrtTl",
+   "style": "American woman, early 30s, low velvety intimate suspense voice: half-whispered secrets, tightens on reveals, never theatrical (designed 21/11 by XR-08)",
+   "stability": 0.5
+  },
+  "xr12": {
+   "name": "XR Narrator 12 - Smooth Insider",
+   "voice_id": "uYhLgXrDzX8HfidO3aw3",
+   "style": "American man, mid 30s, confident smooth quick-talking insider: dry humor, punchy numbers, energetic but controlled (designed 21/11 by XR-08)",
+   "stability": 0.45
   }
  },
  "make_new_voice_scenario_id": 7068664,
- "_rotation_note": "Owner preference 17/11/2026: xr4 'Absolute Lunatic' (used in xr007) is the favourite style (crazy, exalted) -> it appears twice in the rotation (weight). xr3 Porch Legend retired from rotation (voice kept). Duplicates in rotation are weights. 18/11/2026: owner asked to test hyper-histrionic male AND female voices, some with funny US regional accents -> added xr7 (Queens NY woman), xr8 (Boston man), xr9 (Texas woman). Order set so xr013/xr014/xr015 (13,14,15 mod 9 = 4,5,6) use the three new voices first."
+ "_rotation_note": "rotation is only the fallback when a script has neither \"voice\" nor \"tone\"; casting decides (21/11/2026).",
+ "casting": {
+  "_doc": "Owner 21/11/2026: the voice must fit the topic and be viral, NOT always histrionic. Pick the tone of the story, then a voice from its list (first = default; rotate inside the list for experiments). Write it in script.json as \"voice\" and the tone as \"tone\". Never pick by rotation alone.",
+  "awe": {
+   "for": "space, the universe, record-breaking science, deep time, huge numbers, quiet 'think about that' facts",
+   "voices": [
+    "xr10",
+    "xr1"
+   ],
+   "delivery": "calm, slow, wonder; few or no audio tags; short pauses ([pause]) before the reveal"
+  },
+  "mystery": {
+   "for": "unsolved cases, creepy true stories, psychology tricks, hidden explanations, secrets",
+   "voices": [
+    "xr11",
+    "xr1"
+   ],
+   "delivery": "low and intimate, [whispers] only on the key line, tension rising; no laughing"
+  },
+  "insider": {
+   "for": "brands, companies, money, business ideas, how stores/apps trick you, prices",
+   "voices": [
+    "xr12",
+    "xr2"
+   ],
+   "delivery": "confident, quick, punchy numbers, dry humor ([chuckles] at most once)"
+  },
+  "comedy": {
+   "for": "absurd everyday moments, funny food/brand stories, petty human behaviour, EVERYDAY X-RAY situations",
+   "voices": [
+    "xr8",
+    "xr7",
+    "xr9",
+    "xr2"
+   ],
+   "delivery": "big personality, regional accent, laughs where it is funny"
+  },
+  "shock": {
+   "for": "gross body facts, extreme dares, 'you won't believe' records, chaotic history",
+   "voices": [
+    "xr4",
+    "xr2"
+   ],
+   "delivery": "theatrical (owner's favourite xr4), roars and whispers"
+  },
+  "news": {
+   "for": "something that happened in the last 72 h",
+   "voices": [
+    "xr12",
+    "xr10",
+    "xr2"
+   ],
+   "delivery": "urgent but credible; match the story: tech/business -> xr12, science/space -> xr10, pop culture -> xr2"
+  },
+  "story": {
+   "for": "historic legends and campfire-style tales",
+   "voices": [
+    "xr1",
+    "xr10"
+   ],
+   "delivery": "storyteller, warm, builds to the twist"
+  }
+ }
 }

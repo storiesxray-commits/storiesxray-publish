@@ -237,12 +237,43 @@ function keepInside(c, min, max) {
   return { ...c, pos: p, fov: Math.min(75, fov) };
 }
 
+
+// ---------- frame audit ----------
+const ndBuf = new Uint16Array(4), half = (h) => THREE.DataUtils.fromHalfFloat(h);
+const ndAt = (px, py) => { renderer.readRenderTargetPixels(rtNd, Math.max(0, Math.min(W - 1, Math.round(px))), Math.max(0, Math.min(H - 1, Math.round(H - 1 - py))), 1, 1, ndBuf);
+  return { n: half(ndBuf[0]) + half(ndBuf[1]) + half(ndBuf[2]), d: half(ndBuf[3]) }; };
+const proj = (v) => { const p = v.clone().project(camera); return { x: (p.x + 1) / 2 * W, y: (1 - p.y) / 2 * H, z: p.z }; };
+const rectOf = (el) => { if (!el || getComputedStyle(el).opacity === '0' || !el.textContent) return null; const r = el.getBoundingClientRect(); return r.width ? r : null; };
+const overlap = (a, b) => Math.max(0, Math.min(a.x1, b.right) - Math.max(a.x0, b.left)) * Math.max(0, Math.min(a.y1, b.bottom) - Math.max(a.y0, b.top));
+function frameQA(T, ACT, ui) {
+  const camR = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 0), camU = new THREE.Vector3().setFromMatrixColumn(camera.matrixWorld, 1);
+  const cap = rectOf(capEl), tit = rectOf(titleEl), heads = [];
+  for (const a of ACT) {
+    if (a.fxCard || a.head === undefined) continue;
+    const c = new THREE.Vector3(a.x, a.y + a.head, a.z), r = 0.27 * (a.s || 1);
+    const toC = c.clone().sub(camera.position), fwd = new THREE.Vector3(); camera.getWorldDirection(fwd);
+    if (toC.dot(fwd) < 0.05) { heads.push({ id: a.id, vis: 0, h: 0 }); continue; }
+    const P = [c.clone().addScaledVector(camR, -r).addScaledVector(camU, -r), c.clone().addScaledVector(camR, r).addScaledVector(camU, r)].map(proj);
+    const b = { x0: Math.min(P[0].x, P[1].x), x1: Math.max(P[0].x, P[1].x), y0: Math.min(P[0].y, P[1].y), y1: Math.max(P[0].y, P[1].y) };
+    const area = (b.x1 - b.x0) * (b.y1 - b.y0) || 1;
+    const vis = Math.max(0, Math.min(b.x1, W) - Math.max(b.x0, 0)) * Math.max(0, Math.min(b.y1, H) - Math.max(b.y0, 0)) / area;
+    const ctr = proj(c), dist = toC.length();
+    let occ = false; if (vis > 0.5 && ctr.x > 0 && ctr.x < W && ctr.y > 0 && ctr.y < H) { const s = ndAt(ctr.x, ctr.y); occ = s.d > 0 && s.d < dist - 0.35 && s.n > 0.01; }
+    heads.push({ id: a.id, vis: +vis.toFixed(2), h: Math.round(b.y1 - b.y0), edgeOk: a.edgeOk || undefined, main: a.main || undefined, occ: occ || undefined,
+      cap: cap && vis > 0.3 ? +(overlap(b, cap) / area).toFixed(2) : 0, title: tit && vis > 0.3 ? +(overlap(b, tit) / area).toFixed(2) : 0 });
+  }
+  let near = 0, voids = 0, n = 0;
+  if (Math.round(T * FPS - 0.5) % 2 === 0) for (let gy = 1; gy < 10; gy++) for (let gx = 1; gx < 6; gx++) { const s = ndAt(gx * W / 6, gy * H / 10); n++; if (s.d <= 0 && s.n < 0.01) voids++; else if (s.d < 0.3) near++; }
+  return { t: +T.toFixed(3), cam: camera.position.toArray().map((v) => +v.toFixed(3)), heads, near: n ? +(near / n).toFixed(3) : 0, void: n ? +(voids / n).toFixed(3) : 0, exterior: !!ui.exterior };
+}
+
 // ---------- engine API handed to the story ----------
 const E = { keepInside, THREE, scene, camera, P, mat, glow, toon, add, box, tbox, group, lamp, rx, person, fx, headY, LOOKS, SKINS, EASE, spline, idle, blinkAt, q, clamp, lerp, lerp3, camKeys, FPS,
   /** card actor helper: a person card. o: {id, look, x, y, z, s, pose:{...person opts}, yaw, tint, blob} */
   actor(o) { const L = typeof o.look === 'string' ? LOOKS[o.look] : o.look, pose = o.pose || {};
     const key = o.id + JSON.stringify(pose, (k, v) => typeof v === 'number' ? Math.round(v * 100) / 100 : v);
     return { id: o.id, key, x: o.x, y: o.y ?? 0, z: o.z, s: o.s, yaw: o.yaw, face: o.face, tint: o.tint, blob: o.blob, ground: o.ground, roll: o.roll, order: o.order, flip: o.flip,
+      head: (975 - headY(L, pose.mode || 'stand', o.seed ?? 3)) * 0.00225 * (o.s || 1), edgeOk: !!o.edgeOk, main: !!o.main,
       draw: (p) => person(p, L, { seed: o.seed ?? 3, ...pose }) }; },
   /** 2D effect card. o: {id, x, y, z, s, kind, args, key} */
   fxCard(o) { return { id: o.id, key: o.key ?? (o.kind + JSON.stringify(o.args || []).slice(0, 60)), x: o.x, y: o.y, z: o.z, s: o.s, fxCard: true, blob: false, alpha: o.alpha, order: 5, overlay: o.overlay,
@@ -287,7 +318,7 @@ window.renderAt = (T) => {
   camera.position.set(...C.pos); camera.up.set(0, 1, 0); camera.lookAt(...C.look); camera.rotateZ(rx(C.roll || 0));
   camera.fov = C.fov; camera.near = C.near || 0.05; camera.updateProjectionMatrix(); camera.updateMatrixWorld();
   applyLight(S.light(t), tmpV.set(...(C.shadowAt || C.look)));
-  drawActors(S.actors(t));
+  const ACT = S.actors(t).filter(Boolean); drawActors(ACT);
   sky.position.copy(camera.position);
   renderer.setRenderTarget(rtColor); renderer.setClearColor(0x000000, 1); renderer.clear(); renderer.render(scene, camera);
   const fog = scene.fog; scene.fog = null; const sm = renderer.shadowMap.enabled; renderer.shadowMap.enabled = false; renderer.shadowMap.autoUpdate = false;
@@ -310,6 +341,8 @@ window.renderAt = (T) => {
     capEl.innerHTML = ch.words.map((w) => { const b = w.replace(/[.,:!…]/g, '').replace(/\.\.\.$/, ''); return KEY.has(b.toLowerCase().replace(/[?]/g, '')) ? `<span class="y">${b}</span>` : b; }).join(' ');
     fit(capEl, 760); capEl.style.opacity = 1; capEl.style.transform = `scale(${0.82 + 0.18 * back(k)})`; }
   else capEl.style.opacity = 0;
+  // ---------- automatic frame audit (tools/render.py stores it, tools/qa.py judges it) ----------
+  window.QA_FRAME = frameQA(T, ACT, ui);
   return sh.id;
 };
 window.renderFrame = (f) => window.renderAt((f + 0.5) / FPS);

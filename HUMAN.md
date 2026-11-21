@@ -30,7 +30,7 @@ Instagram inhabilitó @storiesxray el 19/11/2026. Pedido de la dueña: que a You
 
 ## 7. Explotar el canal sin parecer máquina
 Crecer y verse humano no chocan: lo que YouTube premia (gente que mira, vuelve a mirar y comparte) es lo mismo que lo protege.
-- **El primer segundo decide todo:** imagen en movimiento y frase de impacto desde el cuadro 0, sin intro. Final que empalma con el principio (bucle) cuando el tema lo permite: suma repeticiones.
+- **El primer segundo decide todo:** imagen en movimiento y frase de impacto desde el cuadro 0, sin intro. Final completo (la última frase entera, la música cierra suave) y, si se puede, el último plano vuelve al encuadre del primero para que el video se repita sin corte. Nunca una frase cortada.
 - **Compartidos = 0 hoy:** elegir temas que la gente quiere mandarle a alguien ("esto es tan vos", "no me creías"), no pedirlo siempre con la misma frase. Un dato que da ganas de discutir en comentarios vale más que diez seguros.
 - **Duplicar a los ganadores rápido:** si un video rinde muy por encima del resto, secuela o variante en 48–72 h (otro ángulo, no copia) y playlist propia.
 - **Noticias calientes de 24–72 h** que la gente está buscando en EE. UU., con datos verificados.

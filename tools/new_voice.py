@@ -21,14 +21,25 @@ BANNED = ["clone", "impression of", "sound like", "sounds like", "imitat", "cele
 
 def b64(o): return base64.b64encode(json.dumps(o, ensure_ascii=False).encode()).decode()
 
-def request(key, name, desc):
+PREVIEWS = {  # owner 21/11/2026: the voice must fit the topic, not always histrionic -> preview text in the voice's own tone
+    "calm": ("It left Earth in 1977. [pause] Since then, it has never stopped moving. Today it is so far away that its "
+             "signal, travelling at the speed of light, needs a whole day to reach us. [softly] A whole day. And it is still "
+             "talking to us, with less memory than one photo on your phone. Think about that for a second."),
+    "suspense": ("Nobody noticed at first. [whispers] The door was locked from the inside. The lights were still on. And the "
+                 "cup of coffee on the table... was still warm. [pause] Police searched for three days. What they found in the "
+                 "basement changed the story completely. Stay with me, because this part is real."),
+    "insider": ("Here's what they don't tell you. That free refill? It costs them less than two cents. The real money is in "
+                "the cup, the lid and the forty seconds you wait at the counter, looking at the dessert case. [chuckles] "
+                "Every inch of that store is designed to make you spend. And it works on everybody. Even you."),
+}
+def request(key, name, desc, preview=None):
     low = desc.lower()
     if any(b in low for b in BANNED):
         sys.exit("ERROR: the description must describe an original voice, not imitate a real/famous person")
     if not 20 <= len(desc) <= 1000: sys.exit("ERROR: description must be 20-1000 chars")
     cfg = json.load(open(VJ))
     if key in cfg["voices"]: sys.exit(f"ERROR: {key} already exists")
-    design = {"voice_description": desc, "model_id": "eleven_ttv_v3", "text": PREVIEW, "stream_previews": True}
+    design = {"voice_description": desc, "model_id": "eleven_ttv_v3", "text": PREVIEWS.get(preview, PREVIEW), "stream_previews": True}
     create = {"voice_name": name, "voice_description": desc[:1000], "generated_voice_id": "__GEN__",
               "labels": {"project": "stories-xray", "language": "en"}}
     print(json.dumps({"key": key, "design_b64": b64(design), "create_b64": b64(create)}, indent=1))
@@ -46,6 +57,6 @@ def register(key, name, style, stability=0.3):
 
 if __name__ == "__main__":
     a = sys.argv[1:]
-    if len(a) == 4 and a[0] == "request": request(a[1], a[2], a[3])
+    if len(a) in (4, 5) and a[0] == "request": request(a[1], a[2], a[3], a[4] if len(a) == 5 else None)
     elif len(a) in (4, 5) and a[0] == "register": register(*a[1:])
     else: sys.exit(__doc__)

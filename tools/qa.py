@@ -34,6 +34,10 @@ if "--visual-ok" in sys.argv:
 # ---- STYLE ----
 if meta.get("render_style") != "cartoon": errs.append("style_not_cartoon")
 # ---- VOICE ----
+vcfg = json.load(open(f"{ROOT}/tools/voices.json"))
+tone = script.get("tone"); cast = vcfg.get("casting", {}).get(tone)
+if not cast: errs.append("script_tone_missing_or_unknown(see tools/voices.json casting)")
+elif tm.get("voice_key", script.get("voice")) not in cast["voices"]: errs.append(f"voice_not_cast_for_{tone}:{tm.get('voice_key', script.get('voice'))}")
 tm = json.load(open(f"{OUT}/timing.json"))
 if not str(tm.get("engine", "")).startswith("elevenlabs"): errs.append("voice_not_elevenlabs")
 TAG = re.compile(r"\[[^\]]*\]")
@@ -67,6 +71,70 @@ if margin is None or margin < 6: errs.append(f"voice_margin_{margin}")
 fz = run("ffmpeg", "-hide_banner", "-i", final, "-vf", "freezedetect=n=0.0015:d=0.6,blackdetect=d=0.05:pix_th=0.06", "-an", "-f", "null", "-").stderr
 if "freeze_start" in fz: errs.append("frozen_picture_" + ",".join(re.findall(r"freeze_start: ([\d.]+)", fz))[:60])
 if "black_start" in fz: errs.append("black_frames_" + ",".join(re.findall(r"black_start:([\d.]+)", fz))[:60])
+# ---- START / END / CUTS (owner 21/11/2026: nothing may sound or look cut, at the start, at the end or in between) ----
+import numpy as np, soundfile as sf
+last_txt = TAG.sub(" ", script["sentences"][-1][0]).strip()
+if not re.search(r"[.!?][\"')]*$", last_txt) or re.search(r"(\.\.\.|…)$", last_txt): errs.append(f"ending_sentence_incomplete:{last_txt[-30:]}")
+first_w, last_w = tm["sentences"][0]["words"][0], tm["sentences"][-1]["words"][-1]
+if first_w["s"] > 0.25: errs.append(f"voice_starts_late_{first_w['s']}")
+tail = dur - last_w["e"]
+if tail < 0.7: errs.append(f"ends_{tail:.2f}s_after_last_word_(min_0.7)")
+if tail > 3.0: errs.append(f"dead_air_{tail:.2f}s_after_last_word")
+vst = next(s for s in pr["streams"] if s["codec_type"] == "video"); ast = next((s for s in pr["streams"] if s["codec_type"] == "audio"), {})
+if abs(float(vst.get("start_time", 0)) - float(ast.get("start_time", 0))) > 0.02: errs.append(f"audio_video_offset_{float(vst.get('start_time', 0)) - float(ast.get('start_time', 0)):.3f}s")
+wav = f"{OUT}/_qa_audio.wav"; run("ffmpeg", "-y", "-loglevel", "error", "-i", final, "-vn", "-ac", "1", "-ar", "48000", wav)
+x, sr = sf.read(wav); os.remove(wav)
+db = lambda a: 20 * np.log10(np.sqrt(np.mean(a ** 2)) + 1e-9)
+if db(x[-int(0.15 * sr):]) > -35: errs.append(f"audio_ends_abruptly_{db(x[-int(0.15 * sr):]):.0f}dB_in_last_150ms")
+if np.max(np.abs(x[:int(0.004 * sr)])) > 0.05: errs.append("click_at_start")
+d = np.abs(np.diff(x)); env = np.convolve(np.abs(x), np.ones(480) / 480, mode="same")[1:] + 1e-4
+clicks = np.where((d > 0.3) & (d > 25 * env))[0]
+if len(clicks): errs.append("audio_clicks_at_" + ",".join(f"{c / sr:.2f}" for c in clicks[:6]))
+# the narration itself: every word audible, the take not truncated (voice.wav = the ElevenLabs take, as placed)
+vw, vsr = sf.read(f"{OUT}/voice.wav"); vw = vw.mean(axis=1) if vw.ndim > 1 else vw
+for s_ in tm["sentences"]:
+    for w in s_["words"]:
+        seg = vw[int(w["s"] * vsr):int(max(w["e"], w["s"] + 0.06) * vsr)]
+        if len(seg) and db(seg) < -45: errs.append(f"word_silent_in_take:{w['w']}@{w['s']:.2f}"); break
+if len(vw) / vsr < last_w["e"] + 0.04: errs.append("voice_take_truncated_after_last_word")
+# ---- PICTURE: frame-by-frame composition audit written by the cartoon engine ----
+import glob
+fq = []
+for p in sorted(glob.glob(f"{OUT}/shots/*.qa.json")): fq += [dict(q, shot=json.load(open(p))["shot"]) for q in json.load(open(p))["frames"]]
+shot_ids = [s["id"] for s in json.load(open(f"{OUT}/shots.json"))]
+missing = [s for s in shot_ids if not os.path.exists(f"{OUT}/shots/{s}.qa.json")]
+if missing: errs.append("frame_audit_missing_for_" + ",".join(missing))
+def runs(flags, n):  # first time of any run of >= n consecutive True
+    k = 0
+    for q, fl in flags:
+        k = k + 1 if fl else 0
+        if k == n: return q["t"]
+    return None
+fq.sort(key=lambda q: q["t"])
+by_shot = {}
+for q in fq: by_shot.setdefault(q["shot"], []).append(q)
+for sid, Q in by_shot.items():
+    ids = {h["id"] for q in Q for h in q["heads"]}
+    for i in ids:
+        hs = [(q, next((h for h in q["heads"] if h["id"] == i), None)) for q in Q]
+        t = runs([(q, h is not None and not h.get("edgeOk") and 0.12 < h["vis"] < 0.9) for q, h in hs], 4)
+        if t is not None: errs.append(f"face_cut_by_frame_edge:{sid}:{i}@{t:.2f}")
+        t = runs([(q, h is not None and h.get("cap", 0) > 0.2) for q, h in hs], 3)
+        if t is not None: errs.append(f"caption_over_face:{sid}:{i}@{t:.2f}")
+        t = runs([(q, h is not None and h.get("title", 0) > 0.2) for q, h in hs], 3)
+        if t is not None: errs.append(f"title_over_face:{sid}:{i}@{t:.2f}")
+        t = runs([(q, h is not None and h.get("main") and h.get("occ")) for q, h in hs], 6)
+        if t is not None: errs.append(f"main_character_hidden:{sid}:{i}@{t:.2f}")
+    vis_frames = [q for q in Q if any(h["vis"] >= 0.9 for h in q["heads"])]
+    if vis_frames and sum(max(h["h"] for h in q["heads"] if h["vis"] >= 0.9) < 85 for q in vis_frames) > 0.6 * len(vis_frames):
+        errs.append(f"characters_too_small:{sid}")
+    t = runs([(q, q["near"] > 0.04) for q in Q], 2)
+    if t is not None: errs.append(f"camera_inside_object:{sid}@{t:.2f}")
+    t = runs([(q, q["void"] > 0.01 and not q.get("exterior")) for q in Q], 2)
+    if t is not None: errs.append(f"camera_outside_set_or_hole:{sid}@{t:.2f}")
+    for a, b in zip(Q, Q[1:]):
+        step = sum((u - v) ** 2 for u, v in zip(a["cam"], b["cam"])) ** 0.5
+        if step > 0.6: errs.append(f"camera_jump_inside_shot:{sid}@{b['t']:.2f}"); break
 # ---- TEXT: captions (same chunking as the engine) + spelling ----
 chunks = []
 for s in tm["sentences"]:

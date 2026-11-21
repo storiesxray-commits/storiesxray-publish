@@ -12,7 +12,7 @@ Todo lo que se aprendió corrigiendo los videos 1 a 3. Un video no se publica si
 - Gancho completo antes de 1,5 s, primera frase ≤ 7 palabras, con el dato más fuerte (ver `topics/AUTOPILOT.md` §2b, regla del 16/11/2026: el canal pierde ~40 % en el swipe).
 - 28 a 40 segundos. Nunca más de 59.
 - Una idea por frase. Frases cortas para que los subtítulos no se amontonen.
-- Final en bucle: la última imagen vuelve a la primera para que el video se repita sin corte.
+- Final: la última frase completa, la música cierra con una caída suave (≥ 0,8 s después de la última palabra) y, si se puede, la última imagen vuelve a la primera. Nunca una frase cortada ni un corte seco.
 - Revisar cómo pronuncia la voz los nombres propios (`python -c` con `k.tokenizer.phonemize`). Si suena mal, escribirlo como se pronuncia.
 
 ## 3. Textos en pantalla
@@ -84,5 +84,7 @@ La hace `tools/thumbnail.py` con el bloque `"thumbnail"` de `meta.json` (ver el 
 - `python tools/qa.py <id>` tiene que dar **0 errores**: motor cartoon, voz de ElevenLabs con tiempos completos, −14 LUFS ±1, pico ≤ −0,9 dBTP, voz ≥ 6 dB sobre música y efectos en todos los planos, 1080×1920 30 fps H.264/AAC 48 kHz, imagen tan larga como la voz, sin cuadros congelados ni negros, subtítulos idénticos al guion y del largo correcto, ortografía sin errores en guion, título, descripción, caption y comentario fijado (los nombres propios correctos se agregan a `meta.json` → `qa_words_ok`).
 - Firma visual: mirar `qa_sheet.jpg` y `qa_mid.jpg` y firmar con `--visual-ok` solo si no hay ningún error de la sección 4. La firma vale para ese archivo exacto.
 - Claude no puede escuchar el audio: las pruebas de audio son mediciones. Por eso nunca se regenera ni se edita la voz: se usa la toma de ElevenLabs tal cual y la imagen se ajusta a ella.
+- Desde el 21/11 (la dueña vio xr015 cortado y con problemas de cámara) `qa.py` también falla con: última frase incompleta, menos de 0,7 s después de la última palabra, audio que termina de golpe, clic al inicio o clics en medio, voz que arranca tarde, palabra sin sonido en la toma, imagen y audio desfasados, voz que no corresponde al tono del tema (`casting`), y la auditoría cuadro por cuadro que escribe el motor: cara cortada por el borde, personajes demasiado chicos en un plano, subtítulo o título sobre una cara, personaje principal tapado, cámara metida en un objeto, cámara fuera del set o agujero en el escenario y saltos de cámara dentro de un plano.
+- La firma visual la hace **un revisor aparte** (subagente nuevo que no hizo el video, con esta lista y las hojas `qa_sheet.jpg`, `qa_mid.jpg` y los cuadros de cada corte), no quien armó el video. Si encuentra cualquier cosa, se corrige y se vuelve a auditar.
 - `handoff.py` pone `hold` si falta cualquiera de las dos cosas.
 
