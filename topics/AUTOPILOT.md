@@ -97,6 +97,7 @@ La política de YouTube sobre contenido "inauthentic" (producido en masa o repet
 python tools/handoff.py <id>     # pone status "ready", o "hold" si algún chequeo falla
 ```
 - Si quedó alguna duda de calidad o de datos sin resolver, poner `"status": "hold"` y `"hold_reason"` a mano.
+- **Hold automático ya corregido (regla de la dueña, 22/11/2026):** `handoff.py` nunca saca un `hold` que ya está puesto. Si el `hold` lo puso `handoff.py` por un chequeo concreto (`hold_reason: "handoff checks failed: …"`), ese problema se corrigió en la misma corrida y después `qa.py` da 0 errores con la firma visual OK y `audit_human.py` sin ROJO, Claude puede borrar `status` y `hold_reason` de `publish/<id>/metadata.json` y volver a correr `handoff.py` (tiene que quedar `ready`). Nunca para un `hold` puesto a mano por dudas de datos o de calidad, ni para uno de otro video. Anotarlo en el resumen final.
 - Actualizar `topics/queue_v3.json` (`status: "done"`, `video_id`) y la tabla de `README.md`.
 - `git add videos/<id> publish/<id> topics/queue_v3.json README.md && git commit -m "<id>: <título>" && git pull --rebase && git push origin main`.
 
