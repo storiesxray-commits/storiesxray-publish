@@ -23,7 +23,8 @@
    "topic_type": "news",
    "event_date": "2026-11-12",
    "expires": "2026-11-19",
-   "done_note": "19/11/2026: producido como NOTICIA (§1b) con el gancho de la semana: renuncia de Huang (12/11) y la placa del Denny's retirada y repuesta (13-15/11). Publicación rápida como EXTRA (ledger manual) el 19/11 13:52 NY. Sin mencionar los motivos de la renuncia (acusaciones sin cargos)."
+   "done_note": "19/11/2026: producido como NOTICIA (§1b) con el gancho de la semana: renuncia de Huang (12/11) y la placa del Denny's retirada y repuesta (13-15/11). Publicación rápida como EXTRA (ledger manual) el 19/11 13:52 NY. Sin mencionar los motivos de la renuncia (acusaciones sin cargos).",
+   "rank": 1
   },
   {
    "id": "M01",
@@ -38,7 +39,8 @@
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
    "note": "Fuentes: Fortune 2025/2026, Yahoo Finance. Recalcular con la capitalización del día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
    "video_id": "xr016-apple-800",
-   "topic_type": "evergreen"
+   "topic_type": "evergreen",
+   "rank": 2
   },
   {
    "id": "R04",
@@ -52,7 +54,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "human",
-   "rank": 12
+   "rank": 3
   },
   {
    "id": "M02",
@@ -65,7 +67,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar precio de BTC el mismo día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar precio de BTC el mismo día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 4
   },
   {
    "id": "B06",
@@ -81,7 +84,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "brand",
-   "rank": 18
+   "rank": 5
   },
   {
    "id": "R01",
@@ -95,7 +98,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "body",
-   "rank": 9
+   "rank": 6
   },
   {
    "id": "M04",
@@ -108,7 +111,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "NO decir que lo demandaron por no tener alas literalmente (eso es mito): el gancho es el eslogan, el reveal es la verdad. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "NO decir que lo demandaron por no tener alas literalmente (eso es mito): el gancho es el eslogan, el reveal es la verdad. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 7
   },
   {
    "id": "B21",
@@ -125,7 +129,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "brand",
-   "rank": 21
+   "rank": 8
   },
   {
    "id": "M03",
@@ -138,7 +142,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Fuentes: Marketplace (extracto de 'No Rules Rules'), Fortune 2023, Newsweek fact-check. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Fuentes: Marketplace (extracto de 'No Rules Rules'), Fortune 2023, Newsweek fact-check. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 9
   },
   {
    "id": "R02",
@@ -152,7 +157,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "animal",
-   "rank": 11
+   "rank": 10
   },
   {
    "id": "M05",
@@ -165,7 +170,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar con 2 fuentes. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar con 2 fuentes. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 11
   },
   {
    "id": "B02",
@@ -181,7 +187,7 @@
    "hook_power": 8,
    "score": 85,
    "cat": "brand",
-   "rank": 74
+   "rank": 12
   },
   {
    "id": "M07",
@@ -194,7 +200,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar con 2 fuentes; nada gráfico. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar con 2 fuentes; nada gráfico. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 13
   },
   {
    "id": "M06",
@@ -207,7 +214,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar cifras. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar cifras. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 14
   },
   {
    "id": "M08",
@@ -220,7 +228,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "NO mostrar el logo real: describirlo/forma genérica. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "NO mostrar el logo real: describirlo/forma genérica. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 15
   },
   {
    "id": "S01",
@@ -232,7 +241,8 @@
    "hook_power": 10,
    "score": 95,
    "cat": "history",
-   "status": "todo"
+   "status": "todo",
+   "rank": 16
   },
   {
    "id": "R05",
@@ -246,7 +256,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "body",
-   "rank": 14
+   "rank": 17
   },
   {
    "id": "R20",
@@ -259,7 +269,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 48
+   "rank": 18
   },
   {
    "id": "R16",
@@ -272,7 +282,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 47
+   "rank": 19
   },
   {
    "id": "B03",
@@ -288,7 +298,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "human",
-   "rank": 17
+   "rank": 20
   },
   {
    "id": "M09",
@@ -301,7 +311,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "La anécdota del insulto es la versión que contaba Ferruccio: decirlo así. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "La anécdota del insulto es la versión que contaba Ferruccio: decirlo así. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 21
   },
   {
    "id": "M10",
@@ -314,7 +325,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Hay fuentes que dudan del trato; verificar con Bloomberg/Foreign Policy antes de producir. Si no se confirma, dropped. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Hay fuentes que dudan del trato; verificar con Bloomberg/Foreign Policy antes de producir. Si no se confirma, dropped. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 22
   },
   {
    "id": "M11",
@@ -327,7 +339,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 23
   },
   {
    "id": "M12",
@@ -340,7 +353,8 @@
    "cat": "brands_money",
    "status": "todo",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Verificar. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "rank": 24
   },
   {
    "id": "B28",
@@ -357,7 +371,7 @@
    "hook_power": 9,
    "score": 85,
    "cat": "brand",
-   "rank": 50
+   "rank": 25
   },
   {
    "id": "B34",
@@ -374,7 +388,7 @@
    "hook_power": 9,
    "score": 85,
    "cat": "brand",
-   "rank": 53
+   "rank": 26
   },
   {
    "id": "B38",
@@ -390,7 +404,7 @@
    "hook_power": 8,
    "score": 85,
    "cat": "history",
-   "rank": 75
+   "rank": 27
   },
   {
    "id": "B65",
@@ -407,7 +421,7 @@
    "hook_power": 8,
    "score": 85,
    "cat": "animal",
-   "rank": 77
+   "rank": 28
   },
   {
    "id": "C96",
@@ -420,7 +434,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "human",
-   "rank": 23
+   "rank": 29
   },
   {
    "id": "N75",
@@ -434,7 +448,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 41
+   "rank": 30
   },
   {
    "id": "T02",
@@ -447,7 +461,8 @@
    "cat": "trend",
    "status": "todo",
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
-   "note": "Sin logos (pantalla azul genérica)."
+   "note": "Sin logos (pantalla azul genérica).",
+   "rank": 31
   },
   {
    "id": "T05",
@@ -460,7 +475,8 @@
    "cat": "trend",
    "status": "todo",
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
-   "note": "Nada gráfico; tono misterio, no terror explícito."
+   "note": "Nada gráfico; tono misterio, no terror explícito.",
+   "rank": 32
   },
   {
    "id": "T04",
@@ -473,7 +489,8 @@
    "cat": "trend",
    "status": "todo",
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
-   "note": "Sin logo de Costco."
+   "note": "Sin logo de Costco.",
+   "rank": 33
   },
   {
    "id": "A58",
@@ -487,7 +504,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "tech",
-   "rank": 16
+   "rank": 34
   },
   {
    "id": "N40",
@@ -501,7 +518,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "science",
-   "rank": 37
+   "rank": 35
   },
   {
    "id": "H06",
@@ -515,7 +532,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "mind",
-   "rank": 10
+   "rank": 36
   },
   {
    "id": "H37",
@@ -529,7 +546,7 @@
    "hook_power": 9,
    "score": 85,
    "cat": "mind",
-   "rank": 73
+   "rank": 37
   },
   {
    "id": "N110",
@@ -541,7 +558,8 @@
    "hook_power": 10,
    "score": 100,
    "cat": "history",
-   "status": "todo"
+   "status": "todo",
+   "rank": 38
   },
   {
    "id": "C67",
@@ -554,7 +572,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 19
+   "rank": 39
   },
   {
    "id": "C71",
@@ -568,7 +586,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 22
+   "rank": 40
   },
   {
    "id": "R11",
@@ -581,7 +599,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "animal",
-   "rank": 45
+   "rank": 41
   },
   {
    "id": "H46",
@@ -595,7 +613,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "mind",
-   "rank": 36
+   "rank": 42
   },
   {
    "id": "H21",
@@ -609,7 +627,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "mind",
-   "rank": 33
+   "rank": 43
   },
   {
    "id": "A30",
@@ -623,7 +641,7 @@
    "hook_power": 10,
    "score": 95,
    "cat": "animal",
-   "rank": 3
+   "rank": 44
   },
   {
    "id": "T09",
@@ -636,7 +654,8 @@
    "cat": "trend",
    "status": "todo",
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
-   "note": "Sin logo ni botella reconocible. Ideal 1–20/12."
+   "note": "Sin logo ni botella reconocible. Ideal 1–20/12.",
+   "rank": 45
   },
   {
    "id": "N30",
@@ -650,7 +669,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "brand",
-   "rank": 35
+   "rank": 46
   },
   {
    "id": "T10",
@@ -663,7 +682,8 @@
    "cat": "trend",
    "status": "todo",
    "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
-   "note": "Sin logo."
+   "note": "Sin logo.",
+   "rank": 47
   },
   {
    "id": "N81",
@@ -677,7 +697,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "earth",
-   "rank": 42
+   "rank": 48
   },
   {
    "id": "H09",
@@ -691,7 +711,7 @@
    "hook_power": 9,
    "score": 90,
    "cat": "mind",
-   "rank": 24
+   "rank": 49
   },
   {
    "id": "R15",
@@ -704,7 +724,7 @@
    "hook_power": 8,
    "score": 85,
    "cat": "animal",
-   "rank": 80
+   "rank": 50
   },
   {
    "id": "T12",
@@ -716,7 +736,8 @@
    "score": 90,
    "cat": "trend",
    "status": "todo",
-   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "rank": 51
   },
   {
    "id": "T11",
@@ -728,7 +749,8 @@
    "score": 90,
    "cat": "trend",
    "status": "todo",
-   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)"
+   "source": "lista de la dueña 18/11 (temas buscados en EE. UU.)",
+   "rank": 52
   },
   {
    "id": "I01",
@@ -741,7 +763,8 @@
    "cat": "body_you",
    "note": "Tema probado: en @asifue.tv hizo 1 millón de vistas, el mejor de su perfil. Cierre obligatorio: 'Send this to your mom.' NO copiar su guion ni su estética. Fuentes a verificar: Bianchi 1996 (PNAS), Chan et al. 2012 (PLoS One, ADN masculino en cerebro).",
    "status": "todo",
-   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro",
+   "rank": 53
   },
   {
    "id": "I02",
@@ -754,7 +777,8 @@
    "cat": "body_you",
    "note": "Mismo patrón que el de 1 millón de @asifue.tv (vos + alguien que querés). Cierre: 'Send this to your grandma.' Precisar que es el óvulo, no el espermatozoide.",
    "status": "todo",
-   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro",
+   "rank": 54
   },
   {
    "id": "I03",
@@ -767,7 +791,8 @@
    "cat": "science_bizarre",
    "note": "Idea de la dueña (formato '¿qué pasaría si…?' de @asifue.tv, 33 mil vistas). Verificar los datos de la prueba en humanos (año, cantidad de voluntarios) con 2 fuentes. Nada gráfico: animales y cuerpos en estilo simple.",
    "status": "todo",
-   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro",
+   "rank": 55
   },
   {
    "id": "I04",
@@ -780,7 +805,8 @@
    "cat": "body_you",
    "note": "Secuela de I01: publicar después de I01. Decir claramente que se probó en ratones; no prometer curas en humanos.",
    "status": "todo",
-   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro",
+   "rank": 56
   },
   {
    "id": "I05",
@@ -793,7 +819,8 @@
    "cat": "history_underdog",
    "note": "Patrón 'lo que antes castigaban hoy gana medallas' (193 mil vistas en @asifue.tv). Verificar con 2 fuentes que el mito del útero se decía en esa época; si no, usar el gancho 'Women were banned from the Boston Marathon until 1972.' Persona real: solo silueta, sin cara.",
    "status": "todo",
-   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro"
+   "source": "competencia @asifue.tv (IG), pedido de la dueña 18/11/2026: sumar los mejores para usar a futuro",
+   "rank": 57
   },
   {
    "id": "I06",
@@ -807,7 +834,8 @@
    "note": "Idea de la dueña. Gancho alternativo: 'Your memories are lying to you.' Verificar con 2 fuentes: Loftus y Pickrell 1995 ('lost in the mall'), reconsolidación de la memoria (Nader 2000). Cierre que invite a comentar: 'What's a memory you're 100% sure about?' Hecho con el motor HyperFrames el 22/11/2026 (pedido de la dueña).",
    "status": "done",
    "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll",
-   "video_id": "xr018-false-memories"
+   "video_id": "xr018-false-memories",
+   "rank": 58
   },
   {
    "id": "I07",
@@ -821,7 +849,8 @@
    "note": "Idea de la dueña: formato '¿qué pasaría si…?' contado en segunda persona. Verificar la cronología con 2 fuentes; no dar consejos médicos y no mostrar a Randy Gardner con cara real (solo silueta). Hecho con el motor HyperFrames el 22/11/2026 (pedido de la dueña).",
    "status": "done",
    "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll",
-   "video_id": "xr019-no-sleep"
+   "video_id": "xr019-no-sleep",
+   "rank": 59
   },
   {
    "id": "I08",
@@ -834,7 +863,8 @@
    "cat": "body_you",
    "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Verificar con 2 fuentes (Löe 1965 'Experimental gingivitis in man'; ADA/NIDCR). Asco moderado, nada gore.",
    "status": "todo",
-   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)",
+   "rank": 60
   },
   {
    "id": "I09",
@@ -847,7 +877,127 @@
    "cat": "body_you",
    "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Decir que el plazo varía según calor y actividad. Verificar con 2 fuentes médicas serias.",
    "status": "todo",
-   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)",
+   "rank": 61
+  },
+  {
+   "id": "S261122-01",
+   "rank": 62,
+   "title_es": "Un estudiante compró google.com por 12 dólares y fue su dueño un minuto",
+   "hook": "He bought google.com for $12.",
+   "reveal": "29/09/2015: Sanmay Ved (ex-Googler, MBA) compró google.com en Google Domains por US$12 y fue dueño ~1 minuto hasta que Google canceló la venta. Google le pagó US$6.006,13 (los números deletrean 'Google') y lo duplicó cuando él lo donó a una ONG.",
+   "source_hint": "CNN Money 29/01/2016 (money.cnn.com/2016/01/29/technology/google-domain-purchase); Fortune 29/01/2016; Global News",
+   "why": "Mismo nivel que M01 (10% de Apple por $800): marca que todos usan + cifra ridícula; hook de 6 palabras que no se puede scrollear.",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. Mostrar una barra de navegador genérica, sin logo de Google. Cerrar con el pago 6006.13 = G-O-O-G-L-E. Motor cartoon (persona en lugar).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "tech",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-02",
+   "rank": 63,
+   "title_es": "Un gusano vivo de 8 cm dentro del cerebro de una mujer en Australia",
+   "hook": "Doctors pulled a live worm from her brain.",
+   "reveal": "Junio 2022, Canberra: la neurocirujana Hari Priya Bandi sacó un gusano vivo de 8 cm (Ophidascaris robertsi, parásito de pitones) del lóbulo frontal de una mujer de 64 años; primer caso humano conocido. Se habría contagiado juntando plantas donde había heces de pitón. Publicado en Emerging Infectious Diseases (CDC) en agosto 2023. La paciente se recuperó.",
+   "source_hint": "CDC Emerging Infectious Diseases (sept 2023); Al Jazeera 29/08/2023; CBC; The Globe and Mail",
+   "why": "Asco/horror del nivel de R01-R02 (95) y historia real increíble con final feliz; 'live worm' + 'brain' frena en 1 s.",
+   "note": "Nada de sangre ni cirugía gráfica: gusano estilizado, cerebro esquemático, tono 'cómo sobrevivió'. Incluir que se recuperó y que es extremadamente raro. Sin consejos médicos. Motor HyperFrames (por dentro).",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "body",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-03",
+   "rank": 64,
+   "title_es": "El matemático que ganó la lotería 14 veces comprando todas las combinaciones",
+   "hook": "He won the lottery 14 times. Legally.",
+   "reveal": "Stefan Mandel (Rumania/Australia) ganó 14 loterías comprando todas las combinaciones cuando el pozo superaba el costo. En 1992 su consorcio compró ~7 millones de boletos de la lotería de Virginia y ganó US$27 millones; lo investigaron FBI y CIA y no hubo delito. Después cambiaron las reglas.",
+   "source_hint": "NPR Planet Money (npr.org/transcripts/659988605); The Hustle; IFLScience; Business Insider",
+   "why": "Dinero + truco que todos quieren saber; 'Legally' es el giro que obliga a mirar. Debate en comentarios ('¿por qué no lo hacemos todos?').",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. Ojo: años después estuvo preso en Israel por otro esquema; 'Legally' se refiere solo a las loterías; no decir que nunca tuvo problemas legales. Motor cartoon o HyperFrames (números).",
+   "viral": 10,
+   "hook_power": 9,
+   "score": 95,
+   "cat": "human",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-04",
+   "rank": 65,
+   "title_es": "En EE. UU. se mandaban chicos por correo postal",
+   "hook": "Americans used to mail their kids. Literally.",
+   "reveal": "Con el Parcel Post (1913) algunos padres enviaron niños por correo: en 1914 May Pierstorff, de 4 años, viajó como paquete 73 millas en Idaho con estampillas por 53 centavos pegadas en el abrigo. El Correo lo prohibió en 1913, pero siguió pasando hasta ~1915.",
+   "source_hint": "Smithsonian National Postal Museum (postalmuseum.si.edu, 'Precious Packages'); Smithsonian Magazine; History.com",
+   "why": "Historia real absurda de EE. UU., visual (nene con estampillas); nivel N110 / Pepsi jet. Comentarios garantizados.",
+   "note": "Tono gracioso, no de abuso: los chicos viajaban acompañados por empleados del correo, a menudo parientes. Fecha exacta de la prohibición: verificar con el Postal Museum. Motor cartoon.",
+   "viral": 10,
+   "hook_power": 9,
+   "score": 95,
+   "cat": "history",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-05",
+   "rank": 66,
+   "title_es": "Pagó 6,2 millones por una banana pegada con cinta y se la comió",
+   "hook": "Someone paid $6.2 million for a banana. Then ate it.",
+   "reveal": "20/11/2024, Sotheby's NY: el empresario cripto Justin Sun pagó US$6,2 millones por 'Comedian' de Maurizio Cattelan (una banana pegada a la pared con cinta). La banana costaba 35 centavos en un puesto de frutas. El 29/11/2024 se la comió en Hong Kong. Lo que se compra es el certificado.",
+   "source_hint": "The Art Newspaper (21/11/2024 y 29/11/2024); Fortune 21/11/2024; Fox Business",
+   "why": "Dinero absurdo al nivel de M02 (pizzas por bitcoin): número enorme + objeto ridículo + giro final en la misma línea.",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. No reproducir la obra exacta como imagen central: banana genérica con cinta. Remate: lo que compró es un certificado. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "human",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-06",
+   "rank": 67,
+   "title_es": "Toy Story 2 se borró por accidente y la salvó una copia en la casa de una empleada",
+   "hook": "Someone accidentally deleted Toy Story 2.",
+   "reveal": "1998: un comando (rm -rf) en los servidores de Pixar borró ~90% de los archivos de Toy Story 2 y los backups estaban rotos. La salvó la directora técnica Galyn Susman, que tenía una copia en su computadora de casa porque trabajaba desde ahí tras tener un bebé.",
+   "source_hint": "Slashfilm; Techdirt 18/05/2012; The Next Web 21/05/2012; Creative Bloq",
+   "why": "Película que todos vieron + desastre de un comando + heroína inesperada; frena por pura incredulidad.",
+   "note": "SIN personajes ni imágenes de la película ni logo de Pixar: computadora genérica, barras de archivos que desaparecen, auto con una compu envuelta en mantas. El nombre de la película solo en texto/voz. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "tech",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-07",
+   "rank": 68,
+   "title_es": "Cambió un clip rojo por una casa en 14 trueques",
+   "hook": "He traded one red paperclip for a house.",
+   "reveal": "2005-2006: el canadiense Kyle MacDonald empezó con un clip rojo y en 14 trueques por internet (lapicera con forma de pez, picaporte, ... un papel en una película) terminó con una casa en Kipling, Saskatchewan.",
+   "source_hint": "NPR 04/09/2006; CBS News; ABC News; NBC News",
+   "why": "Historia real increíble y compartible (nivel M05 pixeles a $1); objeto mínimo vs casa en una línea.",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. Mostrar la escalera de trueques rápido (un objeto cada ~2 s). Verificar la lista exacta de los 14 trueques. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 10,
+   "score": 95,
+   "cat": "human",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
   },
   {
    "id": "I10",
@@ -860,7 +1010,8 @@
    "cat": "body_you",
    "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Asco = ultra viral, pero nada gore ni personas reales. Verificar dermatitis neglecta / terra firma-forme dermatosis con 2 fuentes.",
    "status": "todo",
-   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)",
+   "rank": 69
   },
   {
    "id": "I11",
@@ -873,7 +1024,76 @@
    "cat": "body_you",
    "note": "Serie 'You stop…': cuenta regresiva día por día en pantalla (DAY 1 → DAY X), cada salto con un cambio visible en el cuerpo, y el momento más extremo al final para retener. Sin consejos médicos ni de dieta: solo qué pasa. Tema que arma debate en comentarios (bien), pero contarlo neutral: ni a favor ni en contra de comer carne y sin consejos de dieta. Verificar con 2 fuentes.",
    "status": "todo",
-   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)"
+   "source": "pedido de la dueña 18/11/2026: serie 'You stop X' (qué le pasa a tu cuerpo día por día hasta algo extremo)",
+   "rank": 70
+  },
+  {
+   "id": "S261122-08",
+   "rank": 71,
+   "title_es": "El pase ilimitado de por vida de American Airlines",
+   "hook": "He paid $250,000 to fly free forever. The airline regretted it.",
+   "reveal": "AAirpass: en 1987 Steven Rothstein pagó US$250.000 por primera clase ilimitada de por vida en American Airlines (+US$150.000 por un acompañante). Hizo ~10.000 vuelos, a veces solo para almorzar en otra ciudad. La aerolínea calculó que le costaba ~US$1 millón por año y se lo canceló en 2008.",
+   "source_hint": "ABC News 2012; The Points Guy; Wikipedia AAirpass (verificar cifras con LA Times 2012)",
+   "why": "Dinero + marca que todos conocen + 'demasiado bueno para ser verdad'; nivel B06 Pepsi jet.",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. Sin logo ni colores de la aerolínea. Dar el desenlace (juicio, se lo cancelaron) sin acusar. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-09",
+   "rank": 72,
+   "title_es": "Los cuervos recuerdan tu cara, te guardan rencor y avisan a otros",
+   "hook": "Crows remember your face. And tell other crows.",
+   "reveal": "Universidad de Washington (John Marzluff, desde 2006): investigadores con máscaras atraparon cuervos; años después los cuervos seguían gritándole a esa máscara, incluso cuervos que nunca fueron atrapados. El rencor duró hasta 17 años.",
+   "source_hint": "UW Urban (urban.uw.edu, 'Crows hold grudges... up to 17 years'); NPR; Star Tribune",
+   "why": "Miedo + animal que todos ven a diario + 'te pasa a vos'; nivel H09 (90).",
+   "note": "Máscara genérica (no de un personaje). Motor cartoon o HyperFrames.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "animal",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-10",
+   "rank": 73,
+   "title_es": "El creador de la lata de Pringles fue enterrado en una lata de Pringles",
+   "hook": "The man who invented Pringles is buried in one.",
+   "reveal": "Fredric Baur, químico de Procter & Gamble que diseñó la lata de Pringles (patente 1966), murió en 2008; por su pedido, parte de sus cenizas se enterró en una lata de Pringles (sabor original) en Ohio.",
+   "source_hint": "TIME 2008 ('The man buried in a Pringles can'); NPR 2008; CBS News; Toledo Blade 02/06/2008",
+   "why": "Marca que todos conocen + final absurdo; en una línea, comentarios de 'qué sabor'.",
+   "note": "Persona real: solo hechos verificados, figura genérica sin parecido, nombres en texto, sin logos. Lata genérica de papas apiladas, sin logo ni bigote de la marca. Tono simpático, no fúnebre. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "brand",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
+  },
+  {
+   "id": "S261122-11",
+   "rank": 74,
+   "title_es": "Un chatarrero casi funde un huevo Fabergé de 33 millones",
+   "hook": "He almost melted a $33 million egg for scrap.",
+   "reveal": "Un chatarrero del Medio Oeste de EE. UU. compró en un mercado de pulgas un huevo dorado por ~US$14.000 para fundirlo y ganar ~US$500. Nadie lo quiso; googleando descubrió que era el Tercer Huevo Imperial de Fabergé (1887), perdido desde 1922 y valuado en ~US$33 millones (Wartski, 2014).",
+   "source_hint": "NPR 2014; PBS NewsHour; Irish Times; UPI 19/03/2014",
+   "why": "'Casi lo tira' + cifra enorme; misma fibra que M06 (rock in a box). Historia real con giro.",
+   "note": "Huevo dorado genérico. El dueño es anónimo: no inventarle cara ni nombre. Motor cartoon.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "history",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026"
   },
   {
    "id": "N01",
@@ -887,7 +1107,7 @@
    "hook_power": 10,
    "score": 100,
    "cat": "mind",
-   "rank": 1
+   "rank": 75
   },
   {
    "id": "N17",
@@ -901,7 +1121,7 @@
    "hook_power": 10,
    "score": 100,
    "cat": "body",
-   "rank": 2,
+   "rank": 76,
    "produced": "2026-11-18"
   },
   {
@@ -916,7 +1136,7 @@
    "hook_power": 10,
    "score": 100,
    "cat": "mind",
-   "rank": 4
+   "rank": 77
   },
   {
    "id": "N101",
@@ -927,7 +1147,8 @@
    "viral": 10,
    "hook_power": 10,
    "score": 100,
-   "cat": "body"
+   "cat": "body",
+   "rank": 78
   },
   {
    "id": "E01",
@@ -944,7 +1165,8 @@
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 01)",
    "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 01. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
    "video_id": "xr014-served-first",
-   "done_date": "2026-11-20"
+   "done_date": "2026-11-20",
+   "rank": 79
   },
   {
    "id": "E04",
@@ -959,7 +1181,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 04)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 04. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 04. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 80
   },
   {
    "id": "E03",
@@ -974,7 +1197,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 03)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 03. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 03. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 81
   },
   {
    "id": "E02",
@@ -989,7 +1213,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 02)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 02. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 02. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 82
   },
   {
    "id": "E06",
@@ -1004,7 +1229,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 06)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 06. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 06. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 83
   },
   {
    "id": "E10",
@@ -1019,7 +1245,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 10)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 10. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 10. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 84
   },
   {
    "id": "E09",
@@ -1034,7 +1261,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 09)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 09. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 09. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 85
   },
   {
    "id": "E15",
@@ -1049,7 +1277,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 15)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 15. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 15. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 86
   },
   {
    "id": "E29",
@@ -1064,7 +1293,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 29)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 29. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 29. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 87
   },
   {
    "id": "E30",
@@ -1079,7 +1309,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 30)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 30. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 30. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 88
   },
   {
    "id": "E36",
@@ -1094,7 +1325,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 36)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 36. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 36. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 89
   },
   {
    "id": "E37",
@@ -1109,7 +1341,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 37)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 37. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 37. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 90
   },
   {
    "id": "E11",
@@ -1125,7 +1358,8 @@
    "status": "dropped",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 11)",
    "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 11. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
-   "drop_reason": "duplicado: xr008-mirror-face ya cubrió espejo vs foto (mera exposición)"
+   "drop_reason": "duplicado: xr008-mirror-face ya cubrió espejo vs foto (mera exposición)",
+   "rank": 91
   },
   {
    "id": "E12",
@@ -1140,7 +1374,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 12)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 12. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 12. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 92
   },
   {
    "id": "E14",
@@ -1155,7 +1390,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 14)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 14. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 14. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 93
   },
   {
    "id": "E16",
@@ -1170,7 +1406,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 16)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 16. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 16. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 94
   },
   {
    "id": "E17",
@@ -1186,7 +1423,8 @@
    "status": "dropped",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 17)",
    "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 17. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
-   "drop_reason": "duplicado: xr011-real-voice ya cubrió la voz grabada"
+   "drop_reason": "duplicado: xr011-real-voice ya cubrió la voz grabada",
+   "rank": 95
   },
   {
    "id": "E18",
@@ -1201,7 +1439,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 18)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 18. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 18. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 96
   },
   {
    "id": "E20",
@@ -1216,7 +1455,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 20)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 20. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 20. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 97
   },
   {
    "id": "E21",
@@ -1231,7 +1471,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 21)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 21. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 21. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 98
   },
   {
    "id": "E22",
@@ -1246,7 +1487,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 22)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 22. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 22. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 99
   },
   {
    "id": "E24",
@@ -1261,7 +1503,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 24)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 24. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 24. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 100
   },
   {
    "id": "E28",
@@ -1276,7 +1519,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 28)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 28. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 28. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 101
   },
   {
    "id": "E33",
@@ -1291,7 +1535,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 33)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 33. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 33. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 102
   },
   {
    "id": "E38",
@@ -1306,7 +1551,82 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 38)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 38. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 38. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 103
+  },
+  {
+   "id": "E41",
+   "rank": 104,
+   "title_es": "Por qué los mosquitos te pican a vos y no a tu amigo",
+   "hook": "Mosquitoes love you more than your friend. It's real.",
+   "reveal": "Rockefeller University (Vosshall, Cell, oct 2022): durante 3 años, los mosquitos prefirieron siempre a las mismas personas; la clave son ácidos carboxílicos de la piel. El 'sujeto 33' atraía unas 100 veces más que el menos atractivo. No cambia con jabón ni dieta.",
+   "source_hint": "Rockefeller University news ('Why some people are mosquito magnets'); NIH Research Matters; Scientific American",
+   "why": "Conflicto cotidiano universal ('¿por qué solo a mí?') + revelación con número enorme; debate en comentarios.",
+   "note": "Seguir topics/EVERYDAY.md. Verificar el fenómeno con ≥2 fuentes serias antes del guion. Sin consejos de repelentes ni de salud. Motor HyperFrames.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026",
+   "format": "everyday"
+  },
+  {
+   "id": "E42",
+   "rank": 105,
+   "title_es": "El 'efecto primera noche': medio cerebro hace guardia",
+   "hook": "First night in a hotel? Half your brain stays awake.",
+   "reveal": "Brown University (Tamaki et al., Current Biology 2016): la primera noche en un lugar nuevo, el hemisferio izquierdo duerme menos profundo y reacciona más a ruidos raros; es un 'vigía nocturno'. Desaparece a la segunda noche.",
+   "source_hint": "Brown University news 21/04/2016; NPR 21/04/2016; PBS NewsHour",
+   "why": "Todos dormimos mal en hoteles; 'half your brain stays awake' es un giro increíble y verdadero.",
+   "note": "Seguir topics/EVERYDAY.md. Verificar el fenómeno con ≥2 fuentes serias antes del guion. Motor HyperFrames (cerebro por dentro).",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "mind",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026",
+   "format": "everyday"
+  },
+  {
+   "id": "E43",
+   "rank": 106,
+   "title_es": "La nube invisible que sale del inodoro cuando tirás la cadena",
+   "hook": "Every flush sprays a cloud you can't see.",
+   "reveal": "CU Boulder (Scientific Reports, dic 2022): con láseres verdes filmaron la nube de gotitas que lanza un inodoro con la tapa abierta: sube hasta ~1,5 m (5 pies) en 8 segundos.",
+   "source_hint": "CU Boulder Today 08/12/2022; CBS News; Smithsonian Magazine",
+   "why": "Asco cotidiano que le pasa a todos + imagen que nadie vio; el comentario 'por eso cierro la tapa' llena la sección.",
+   "note": "Seguir topics/EVERYDAY.md. Verificar el fenómeno con ≥2 fuentes serias antes del guion. Mostrarlo con partículas verdes estilizadas, nada asqueroso explícito. Aclarar que se probó con inodoro comercial sin tapa. Motor HyperFrames.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body",
+   "status": "todo",
+   "topic_type": "evergreen",
+   "source": "weekly scout 22/11/2026",
+   "format": "everyday"
+  },
+  {
+   "id": "E44",
+   "rank": 107,
+   "title_es": "El sueño después de la cena de Acción de Gracias no es por el pavo",
+   "hook": "That turkey isn't why you're sleepy.",
+   "reveal": "El pavo tiene casi el mismo triptófano que el pollo o la carne. El sopor viene de comer muchísimo (carbohidratos, grasa, alcohol) y del descanso del feriado.",
+   "source_hint": "NPR 27/11/2008; Harvard Health ('The turkey coma: fact or fiction'); Scientific American; National Geographic",
+   "why": "Efeméride de EE. UU. (Thanksgiving 26/11/2026): todos lo dicen en la mesa, mito derribado en una línea.",
+   "note": "Seguir topics/EVERYDAY.md. Verificar el fenómeno con ≥2 fuentes serias antes del guion. ESTACIONAL: cargado como news para que salga antes del jueves 26/11; si vence sin producirse, no descartar: guardarlo para noviembre 2027. Sin consejos de dieta. Motor HyperFrames.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "body",
+   "status": "todo",
+   "topic_type": "news",
+   "source": "weekly scout 22/11/2026",
+   "format": "everyday",
+   "event_date": "2026-11-26",
+   "expires": "2026-11-28"
   },
   {
    "id": "E08",
@@ -1321,7 +1641,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 08)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 08. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 08. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 108
   },
   {
    "id": "E13",
@@ -1336,7 +1657,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 13)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 13. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 13. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 109
   },
   {
    "id": "E23",
@@ -1351,7 +1673,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 23)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 23. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 23. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 110
   },
   {
    "id": "E26",
@@ -1366,7 +1689,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 26)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 26. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 26. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 111
   },
   {
    "id": "E27",
@@ -1381,157 +1705,8 @@
    "topic_type": "evergreen",
    "status": "todo",
    "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 27)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 27. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E39",
-   "title_es": "El celular interrumpe una conversación",
-   "hook": "Your screen lit up. You missed everything they said.",
-   "reveal": "Captura atencional; presencia del teléfono (Przybylski & Weinstein 2013; Ward et al. 2017).",
-   "viral": 9,
-   "hook_power": 8,
-   "score": 85,
-   "cat": "tech",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 39)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 39. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E40",
-   "title_es": "Volver de vacaciones y sentir que nunca te fuiste",
-   "hook": "Best trip ever. Two days later, it never happened.",
-   "reveal": "Desvanecimiento del efecto de las vacaciones (de Bloom et al. 2010).",
-   "viral": 9,
-   "hook_power": 8,
-   "score": 85,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 40)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 40. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E05",
-   "title_es": "El supermercado y las 40 opciones",
-   "hook": "40 options. So why is choosing harder?",
-   "reveal": "Sobrecarga de elección (Iyengar & Lepper 2000, mermeladas); efecto dependiente del contexto (metaanálisis Scheibehenne 2010).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 05)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 05. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E07",
-   "title_es": "El 99 % que nunca termina",
-   "hook": "It's been at 99% forever. Here's why it hurts.",
-   "reveal": "La espera depende de expectativas, incertidumbre y percepción de progreso (Maister; investigación sobre barras de progreso).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "tech",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 07)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 07. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E19",
-   "title_es": "Mirar el reloj y que no avance",
-   "hook": "Ten clock checks. Two minutes passed.",
-   "reveal": "La atención al tiempo alarga su percepción (Zakay & Block).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 19)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 19. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E25",
-   "title_es": "Terminar una película malísima",
-   "hook": "This movie is terrible. Why are you still watching?",
-   "reveal": "Falacia del costo hundido (Arkes & Blumer 1985).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 25)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 25. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E31",
-   "title_es": "Sacar fotos y recordar menos",
-   "hook": "40 minutes of photos. How much did you see?",
-   "reveal": "Efecto de deterioro por fotografiar (Henkel 2014); no siempre perjudica (Barasch et al. 2017).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "tech",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 31)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 31. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E32",
-   "title_es": "Llegar primero a una reunión",
-   "hook": "You arrived early. Nobody's here. You want to leave.",
-   "reveal": "Incomodidad por incertidumbre de normas sociales.",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "human",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 32)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 32. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E34",
-   "title_es": "Todos cambian de fila",
-   "hook": "Everyone switched lines. Should you?",
-   "reveal": "Prueba social y cascadas de información (Bikhchandani et al. 1992).",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 34)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 34. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
-  },
-  {
-   "id": "E35",
-   "title_es": "Los últimos cinco minutos de espera",
-   "hook": "Your food is almost here. Why is this the longest part?",
-   "reveal": "Anticipación y atención al tiempo.",
-   "viral": 8,
-   "hook_power": 8,
-   "score": 80,
-   "cat": "mind",
-   "format": "everyday",
-   "topic_type": "evergreen",
-   "status": "todo",
-   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 35)",
-   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 35. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización."
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 27. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "rank": 112
   },
   {
    "id": "X1120",
@@ -1548,7 +1723,8 @@
    "status": "done",
    "video_id": "xr015-voyager-light-day",
    "source": "Noticia (AUTOPILOT §1b) elegida el 20/11/2026: NASA JPL, Spaceflight Now, Space.com, CNN, Smithsonian",
-   "note": "Publicación rápida (§1b). Descartadas en la misma búsqueda: hipopótamo Fiona murió (muerte = fuera), Jensen Huang deja Nvidia (ya cubierto en xr013), salida a bolsa de Anthropic (conflicto de interés), sismo menor en LA, récord de apnea de Zharkova (124 m, 14/11; menos buscado en EE. UU.)."
+   "note": "Publicación rápida (§1b). Descartadas en la misma búsqueda: hipopótamo Fiona murió (muerte = fuera), Jensen Huang deja Nvidia (ya cubierto en xr013), salida a bolsa de Anthropic (conflicto de interés), sismo menor en LA, récord de apnea de Zharkova (124 m, 14/11; menos buscado en EE. UU.).",
+   "rank": 113
   }
  ],
  "dropped_low_score": [
@@ -3575,6 +3751,166 @@
    "cat": "animal",
    "rank": 100,
    "drop_reason": "Dueña 18/11: no es ultra viral (dato curioso tibio). Ej. que NO va: \"tus dedos no tienen músculos\"."
+  },
+  {
+   "id": "E35",
+   "title_es": "Los últimos cinco minutos de espera",
+   "hook": "Your food is almost here. Why is this the longest part?",
+   "reveal": "Anticipación y atención al tiempo.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 35)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 35. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E34",
+   "title_es": "Todos cambian de fila",
+   "hook": "Everyone switched lines. Should you?",
+   "reveal": "Prueba social y cascadas de información (Bikhchandani et al. 1992).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 34)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 34. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E32",
+   "title_es": "Llegar primero a una reunión",
+   "hook": "You arrived early. Nobody's here. You want to leave.",
+   "reveal": "Incomodidad por incertidumbre de normas sociales.",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "human",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 32)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 32. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E31",
+   "title_es": "Sacar fotos y recordar menos",
+   "hook": "40 minutes of photos. How much did you see?",
+   "reveal": "Efecto de deterioro por fotografiar (Henkel 2014); no siempre perjudica (Barasch et al. 2017).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "tech",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 31)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 31. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E25",
+   "title_es": "Terminar una película malísima",
+   "hook": "This movie is terrible. Why are you still watching?",
+   "reveal": "Falacia del costo hundido (Arkes & Blumer 1985).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 25)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 25. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E19",
+   "title_es": "Mirar el reloj y que no avance",
+   "hook": "Ten clock checks. Two minutes passed.",
+   "reveal": "La atención al tiempo alarga su percepción (Zakay & Block).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 19)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 19. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E07",
+   "title_es": "El 99 % que nunca termina",
+   "hook": "It's been at 99% forever. Here's why it hurts.",
+   "reveal": "La espera depende de expectativas, incertidumbre y percepción de progreso (Maister; investigación sobre barras de progreso).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "tech",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 07)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 07. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E05",
+   "title_es": "El supermercado y las 40 opciones",
+   "hook": "40 options. So why is choosing harder?",
+   "reveal": "Sobrecarga de elección (Iyengar & Lepper 2000, mermeladas); efecto dependiente del contexto (metaanálisis Scheibehenne 2010).",
+   "viral": 8,
+   "hook_power": 8,
+   "score": 80,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 05)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 05. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E40",
+   "title_es": "Volver de vacaciones y sentir que nunca te fuiste",
+   "hook": "Best trip ever. Two days later, it never happened.",
+   "reveal": "Desvanecimiento del efecto de las vacaciones (de Bloom et al. 2010).",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "mind",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 40)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 40. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
+  },
+  {
+   "id": "E39",
+   "title_es": "El celular interrumpe una conversación",
+   "hook": "Your screen lit up. You missed everything they said.",
+   "reveal": "Captura atencional; presencia del teléfono (Przybylski & Weinstein 2013; Ward et al. 2017).",
+   "viral": 9,
+   "hook_power": 8,
+   "score": 85,
+   "cat": "tech",
+   "format": "everyday",
+   "topic_type": "evergreen",
+   "status": "todo",
+   "source": "dueña 19/11/2026: documento maestro EVERYDAY X-RAY (topics/EVERYDAY_MASTER.txt, idea 39)",
+   "note": "Seguir topics/EVERYDAY.md. Escena del doc maestro, idea 39. Las fuentes del reveal son pistas: verificar el fenómeno con ≥2 fuentes serias antes del guion; las cifras de la escena son dramatización.",
+   "reason": "pushed out by weekly scout 2026-11-22"
   }
  ],
  "excluded_ip": [
@@ -3712,7 +4048,57 @@
    "B21 la Coca-Cola original tenía cocaína"
   ]
  },
- "scout_log": [],
+ "scout_log": [
+  {
+   "date": "2026-11-22",
+   "found": 100,
+   "everyday_found": 35,
+   "news_found": 0,
+   "scored_90_plus_hook9": 15,
+   "added": [
+    "S261122-01",
+    "S261122-02",
+    "S261122-03",
+    "S261122-04",
+    "S261122-05",
+    "S261122-06",
+    "S261122-07",
+    "S261122-08",
+    "S261122-09",
+    "S261122-10",
+    "S261122-11",
+    "E41",
+    "E42",
+    "E43",
+    "E44"
+   ],
+   "dropped": [
+    "E35",
+    "E34",
+    "E32",
+    "E31",
+    "E25",
+    "E19",
+    "E07",
+    "E05",
+    "E40",
+    "E39"
+   ],
+   "top_ideas_left_out": [
+    "85 | There's a spoon of plastic in your brain.",
+    "85 | One man cracked only one hand's knuckles for 60 years.",
+    "85 | Mammoths were alive when the pyramids were built.",
+    "85 | T. rex lived closer to you than to Stegosaurus.",
+    "85 | Russia is bigger than Pluto.",
+    "85 | He threw away a hard drive. It's worth hundreds of millions.",
+    "85 | The Frisbee inventor was turned into Frisbees.",
+    "85 | A 17-year-old named Mike Rowe made MikeRoweSoft. Microsoft came.",
+    "85 | 7 Up used to contain a psychiatric drug.",
+    "85 | Subway's footlong wasn't a foot long."
+   ],
+   "note": "Sin noticias de los últimos 7 días que pasen el filtro. 'Spoon of plastic in your brain' quedó afuera: el dato del estudio de Nature Medicine (2025) está muy cuestionado (Slate ene 2026)."
+  }
+ ],
  "chat_log": [
   {
    "date": "2026-11-18",
