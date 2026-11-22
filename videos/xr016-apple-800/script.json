@@ -1,0 +1,14 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["He sold ten percent of Apple for eight hundred dollars.", 0.1],
+  ["Ronald Wayne quit just twelve days in.", 0.1],
+  ["Jobs borrowed fifteen grand for their first order.", 0.1],
+  ["[whispers] And only Wayne had a house to lose.", 0.15],
+  ["[chuckles] Ten percent of Apple today?", 0.1],
+  ["Nearly five hundred billion dollars.", 0.2],
+  ["He says he has no regrets.", 0.0]
+ ],
+ "tone": "insider",
+ "voice": "xr12"
+}

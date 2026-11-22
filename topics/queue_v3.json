@@ -34,9 +34,11 @@
    "hook_power": 10,
    "score": 100,
    "cat": "brands_money",
-   "status": "todo",
+   "status": "done",
    "source": "pedido de la dueña 18/11: marcas ultra conocidas, secretos extremos, negocios extremos",
-   "note": "Fuentes: Fortune 2025/2026, Yahoo Finance. Recalcular con la capitalización del día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos)."
+   "note": "Fuentes: Fortune 2025/2026, Yahoo Finance. Recalcular con la capitalización del día. Nombres de marca sí; logos, empaques reconocibles y caras reales NO (siluetas y objetos genéricos).",
+   "video_id": "xr016-apple-800",
+   "topic_type": "evergreen"
   },
   {
    "id": "R04",

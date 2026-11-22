@@ -1,0 +1,71 @@
+{
+  "content_id": "xr-016",
+  "repo_id": "xr016-apple-800",
+  "sha256": "33189a6d35d3b68089e1a2a7eb652078ec09b004fa69cfe7f94d5b1fea9f7869",
+  "file_size_bytes": 10469448,
+  "duration_seconds": 17.639,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.964,
+  "video_bit_rate": 4612352,
+  "faststart": true,
+  "title_youtube": "Ronald Wayne Sold 10% of Apple for $800 (10% Today: ~$500 Billion)",
+  "description_youtube": "Ronald Wayne sold his 10% of Apple for $800 in April 1976, just 12 days after he signed the partnership with Steve Jobs and Steve Wozniak. As of Nov. 20, 2026, 10% of Apple's market value is about $498 billion.\n\nWhy he walked away:\n- He was 41. Jobs was 21, Wozniak 25. He was the one who drew up the partnership agreement (and drew the first Apple logo and wrote the Apple I manual).\n- Jobs took out a $15,000 loan to build the company's first order for a local computer store.\n- In a general partnership every partner is personally liable for the debts. Wayne had a house and savings. The other two had almost nothing to lose.\n- About a year later he took another $1,500 to give up any future claim. He has said he has no regrets.\n\nThe real math: Apple has issued many shares since 1976, so his original stake would have been diluted. Fortune has estimated it at anywhere from $75 billion to $400 billion depending on the assumptions.\n\nSources:\n- Fortune (Apr. 27, 2026), Ronald Wayne at 91, no regrets: https://fortune.com/2026/04/27/apple-cofounder-ronald-wayne-missed-billionaire-opportunity-no-regrets-gen-z-advice-steve-jobs-steve-wozniak/\n- Men's Journal (Oct. 19, 2026), 12 days after the company was founded: https://www.mensjournal.com/news/ronald-wayne-apple-10-percent-stake-800-dollars\n- Snopes, Apple's third cofounder: https://www.snopes.com/fact-check/third-apple-cofounder/\n- CompaniesMarketCap, Apple market cap (Nov. 20, 2026 close, $4.978 trillion): https://companiesmarketcap.com/apple/marketcap/\n- Stock Analysis, Apple closes above $5 trillion for the first time (Oct. 2026): https://stockanalysis.com/news/apple-closes-above-5-trillion/\n- KQED, the man who sold the Apple founding papers for $500: https://www.kqed.org/news/50244/meet-the-guy-who-sold-the-apple-founding-documents-for-1-6-million-and-the-guy-who-sold-them-for-500\n- CBC (2011), Apple's 1976 founding contract sells for $1.6M: https://www.cbc.ca/news/technology/apple-s-1976-founding-contract-sells-for-1-6m-1.1065644\n\n#apple #ronaldwayne #stevejobs #money",
+  "caption_instagram": "He sold 10% of Apple for $800. Ronald Wayne, 1976, twelve days in. 10% of Apple today: about $500 billion. #apple #ronaldwayne #money",
+  "tags": [
+    "ronald wayne sold apple for 800",
+    "ronald wayne",
+    "apple third cofounder",
+    "who was the third founder of apple",
+    "ronald wayne 10 percent apple stake",
+    "apple cofounder sold his stake for 800 dollars",
+    "how much would ronald wayne's stake be worth",
+    "apple 1976 partnership",
+    "apple market cap 5 trillion",
+    "worst business decisions",
+    "steve jobs steve wozniak 1976",
+    "general partnership liability",
+    "apple history",
+    "business story"
+  ],
+  "series": "Brands Exposed",
+  "sources": [
+    {
+      "title": "Fortune (Apr. 27, 2026): Wayne drafted Apple's partnership agreement and got 10% (Jobs and Wozniak 45% each); 'Just 12 days later, he walked away' for $800, later $1,500 more to forfeit any claim; Jobs had taken out a $15,000 loan to fulfill the first order; he feared personal assets could be seized; 'at 91, he has no regrets'",
+      "url": "https://fortune.com/2026/04/27/apple-cofounder-ronald-wayne-missed-billionaire-opportunity-no-regrets-gen-z-advice-steve-jobs-steve-wozniak/"
+    },
+    {
+      "title": "Men's Journal (Oct. 19, 2026): partnership formed April 1, 1976; 12 days later Wayne filed an amendment taking his name off; $800, about a year later another $1,500; he was 41, Jobs 21, Wozniak 25; he had a house and savings, 'the two Steves didn't'; $15,000 Byte Shop loan; Apple closed above $5T on Oct. 14, 2026",
+      "url": "https://www.mensjournal.com/news/ronald-wayne-apple-10-percent-stake-800-dollars"
+    },
+    {
+      "title": "Snopes: Apple's third cofounder Ronald Wayne sold his 10% stake for $800",
+      "url": "https://www.snopes.com/fact-check/third-apple-cofounder/"
+    },
+    {
+      "title": "CompaniesMarketCap: Apple market cap $4.978 trillion (end of day Nov. 20, 2026)",
+      "url": "https://companiesmarketcap.com/apple/marketcap/"
+    },
+    {
+      "title": "Stock Analysis: Apple closes above $5 trillion for the first time (Oct. 2026)",
+      "url": "https://stockanalysis.com/news/apple-closes-above-5-trillion/"
+    },
+    {
+      "title": "KQED: the man who sold the Apple founding documents for $500, and the auction for about $1.6 million (2011)",
+      "url": "https://www.kqed.org/news/50244/meet-the-guy-who-sold-the-apple-founding-documents-for-1-6-million-and-the-guy-who-sold-them-for-500"
+    },
+    {
+      "title": "CBC (2011): Apple's 1976 founding contract sells for $1.6M at Sotheby's",
+      "url": "https://www.cbc.ca/news/technology/apple-s-1976-founding-contract-sells-for-1-6m-1.1065644"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "21:35",
+  "checks_failed": []
+}
