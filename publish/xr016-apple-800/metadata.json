@@ -193,7 +193,6 @@
   ],
   "id": "xr016-apple-800",
   "duration_s": 17.64,
-  "status": "hold",
-  "hold_reason": "handoff checks failed: source_url_not_in_description",
-  "publish_time_local": "21:35"
+  "publish_time_local": "21:35",
+  "status": "ready"
 }
