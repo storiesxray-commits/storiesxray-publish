@@ -4,7 +4,7 @@ Este repo produce los Shorts del canal Stories X-Ray (YouTube @StoriesXray, Inst
 
 ## Reglas
 - **`HUMAN.md` primero (19/11/2026): el canal tiene que verse y sentirse hecho por personas, video por video. Gana sobre PLAYBOOK, AUTOPILOT y QUALITY cuando chocan.**
-- **Motor cartoon obligatorio desde 20/11/2026 (pedido de la dueña):** todos los videos nuevos con `"render_style": "cartoon"` (`engine/cartoon/`, NEW_VIDEO.md pasos 5–7). Los estilos "pro" y "toon" quedan dados de baja; su código queda solo para poder rehacer videos viejos. `handoff.py` rechaza cualquier otro estilo.
+- **Dos motores desde 22/11/2026 (pedido de la dueña): mitad de los videos en `"render_style": "cartoon"` (`engine/cartoon/`, `tools/build.py`) y mitad en `"render_style": "hyperframes"` (`engine/hyperframes/README.md`, `tools/hf_build.py`).** Qué motor toca y qué temas van a cada uno: `topics/AUTOPILOT.md` §1d. Los estilos "pro" y "toon" quedan dados de baja; su código queda solo para poder rehacer videos viejos. `handoff.py` rechaza cualquier otro estilo. **Subtítulos siempre** en los dos motores.
 - **Auditoría obligatoria antes de publicar (pedido de la dueña, 20/11/2026):** `python tools/qa.py <id>` en 0 errores + firma visual (`--visual-ok`) después de mirar `qa_sheet.jpg` y `qa_mid.jpg` (QUALITY.md §7). Sin eso, `hold`.
 - Los videos se hacen por código con este repo. No usar Kling. **La voz es ElevenLabs** (pedido de la dueña, 16/11/2026): 3 narradores propios en rotación, vía Make XR-07 (NEW_VIDEO.md paso 4). Kokoro solo de respaldo.
 - Antes de crear o corregir un video, leer `QUALITY.md` y seguir `NEW_VIDEO.md`.
@@ -20,7 +20,8 @@ Este repo produce los Shorts del canal Stories X-Ray (YouTube @StoriesXray, Inst
 
 ## Comandos
 ```bash
-python tools/build.py <id>                 # video completo + paquete publish/<id>/
+python tools/build.py <id>                 # video completo + paquete publish/<id>/ (motor cartoon)
+python tools/hf_build.py <id>              # lo mismo con el motor HyperFrames (--stills 0.5,3.2 para cuadros sueltos)
 python tools/build.py <id> --only s03,s05  # rehace solo esos planos
 python tools/render.py <id> stills 2.5 7.0 # cuadros sueltos para revisar
 python tools/qa.py <id>                    # auditoría completa (después: --visual-ok "qué se revisó")

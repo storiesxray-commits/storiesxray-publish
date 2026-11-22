@@ -1,0 +1,57 @@
+{
+  "content_id": "xr-019",
+  "repo_id": "xr019-no-sleep",
+  "sha256": "9f45a1bfb4cea346eb18061cef79db0f1b96c223d6b09dbce0f875bd8991e930",
+  "file_size_bytes": 19153332,
+  "duration_seconds": 30.688,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.979,
+  "video_bit_rate": 4854767,
+  "faststart": true,
+  "title_youtube": "What Happens If You Stop Sleeping? Day 3 You Hallucinate (Sleep Deprivation)",
+  "description_youtube": "What happens if you stop sleeping? Sleep deprivation hits fast: by the third day without sleep, healthy people start to hallucinate.\n\nDay by day:\n- 24 hours awake: your performance is impaired about as much as a blood alcohol level of 0.10%, above the U.S. legal limit of 0.08% (CDC/NIOSH).\n- 24-48 hours: perceptual distortions start: things look warped, colors and shapes seem off, time feels strange.\n- 48-72 hours and beyond: complex hallucinations and disordered thinking; by the third day people report seeing, hearing and feeling things that aren't there (Waters et al., Frontiers in Psychiatry, 2018).\n- In 1963-64, 17-year-old Randy Gardner stayed awake for about 11 days (264 hours) for a science fair. Near the end he had serious memory problems. Afterward he slept 14 hours and 46 minutes and recovered fully.\n\nPlease don't try this: going without sleep for more than 48 hours is now considered unethical even in research. How long is the longest you've been awake?\n\nSources:\n- Waters et al. (2018), Severe sleep deprivation causes hallucinations, Frontiers in Psychiatry: https://pmc.ncbi.nlm.nih.gov/articles/PMC6048360\n- CDC/NIOSH, Driver fatigue on the job (24 hours awake = BAC 0.10): https://www.cdc.gov/niosh/motor-vehicle/driver-fatigue/index.html\n- NPR (2024), Lessons from sleeplessness: Randy Gardner's record: https://www.npr.org/2024/01/28/1227217274/sleep-deprivation-record\n- Scientific American, How long can humans stay awake?: https://www.scientificamerican.com/article/how-long-can-humans-stay/\n\n#sleepdeprivation #sleep #brain #shorts",
+  "caption_instagram": "Three days awake and you start hallucinating. Day one already works like being legally drunk. #sleepdeprivation #brain #shorts",
+  "tags": [
+    "what happens if you stop sleeping",
+    "sleep deprivation",
+    "sleep deprivation hallucinations",
+    "what happens after 3 days without sleep",
+    "24 hours without sleep like being drunk",
+    "randy gardner 11 days awake",
+    "longest time without sleep",
+    "sleep deprivation day by day",
+    "why you hallucinate without sleep",
+    "sleep facts",
+    "brain facts",
+    "science shorts"
+  ],
+  "series": "Your Body, X-Rayed",
+  "sources": [
+    {
+      "title": "Waters, Chiu, Atkinson & Blom (2018), Frontiers in Psychiatry: perceptual distortions within 24-48 h; complex hallucinations after 48-90 h; by the third day hallucinations in all three sensory modalities",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6048360"
+    },
+    {
+      "title": "CDC/NIOSH: after 24 hours awake, impairment equivalent to a BAC of 0.10 (U.S. limit 0.08)",
+      "url": "https://www.cdc.gov/niosh/motor-vehicle/driver-fatigue/index.html"
+    },
+    {
+      "title": "NPR (Jan. 28, 2024): Randy Gardner, 17, stayed awake 264 hours (11 days) in 1963-64; memory problems",
+      "url": "https://www.npr.org/2024/01/28/1227217274/sleep-deprivation-record"
+    },
+    {
+      "title": "Scientific American: 264 hours (about 11 days), Randy Gardner; progressive cognitive deficits",
+      "url": "https://www.scientificamerican.com/article/how-long-can-humans-stay/"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "19:49",
+  "checks_failed": []
+}

@@ -1,0 +1,164 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Face Mites Are Living on Your Face Right Now (They Mate at Night) 🔬",
+  "description": "Face mites live on almost every adult's face: tiny 8-legged Demodex mites, about 0.3 mm long, living head-down inside your pores and hair follicles.\n\nWhat they actually do:\n- They eat the oil (sebum) your skin makes.\n- At night they crawl out of the pores to find a mate, then go back in.\n- Their genome is so reduced they can't make their own melatonin, so they use the melatonin your skin releases at dusk to stay active all night (Molecular Biology and Evolution, 2022).\n- For years scientists thought they had no anus. The 2022 study found one.\n- They're normal and mostly harmless. Some researchers think they may even help keep pores unclogged.\n\nWould you rather not know? Tell us below.\n\nSources:\n- University of Reading (2022), The secret lives of mites in the skin of our faces: https://www.reading.ac.uk/news/2022/Research-News/Secret-lives-of-skin-mites-in-our-faces\n- Bangor University (2022), same study: https://www.bangor.ac.uk/news/the-secret-lives-of-mites-in-the-skin-of-our-faces\n- ScienceDaily (2022), Human follicular mites: ectoparasites becoming symbionts: https://www.sciencedaily.com/releases/2022/06/220622101404.htm\n- National Geographic, Hundreds of tiny arachnids are likely on your face right now: https://www.nationalgeographic.com/premium/article/face-mites-arachnids-human-skin-pores\n\n#facemites #demodex #science #shorts",
+  "tags": [
+    "face mites",
+    "demodex mites on your face",
+    "do face mites live on everyone",
+    "what are face mites",
+    "face mites mate at night",
+    "demodex folliculorum",
+    "tiny animals living on your skin",
+    "face mites have no anus myth",
+    "skin mites",
+    "microscopic creatures on humans",
+    "human body facts",
+    "gross science facts",
+    "science shorts"
+  ],
+  "pinned_comment": "The weirdest detail from the 2022 genome study: their DNA is shrinking so much that scientists think they're on their way to living fully inside us, not just on us.",
+  "series": "Your Body, X-Rayed",
+  "caption_instagram": "Something is living on your face right now: 0.3 mm Demodex mites that eat face oil and mate at night. #facemites #science #shorts",
+  "sources": [
+    {
+      "title": "University of Reading (Jun. 22, 2022): first genome study of D. folliculorum; mites mate on our faces at night; can't make melatonin and use the melatonin human skin secretes at dusk; assumed to have no anus, the study found one",
+      "url": "https://www.reading.ac.uk/news/2022/Research-News/Secret-lives-of-skin-mites-in-our-faces"
+    },
+    {
+      "title": "Bangor University (2022): around 0.3 mm long, live in hair follicles on the face incl. eyelashes, eat sebum, active at night, move between follicles to mate",
+      "url": "https://www.bangor.ac.uk/news/the-secret-lives-of-mites-in-the-skin-of-our-faces"
+    },
+    {
+      "title": "ScienceDaily (Jun. 22, 2022): Human follicular mites: ectoparasites becoming symbionts, Molecular Biology and Evolution",
+      "url": "https://www.sciencedaily.com/releases/2022/06/220622101404.htm"
+    },
+    {
+      "title": "National Geographic: hundreds or thousands of mites in the pores of pretty much every face; long thought to lack an anus; 2022 microscope images showed one",
+      "url": "https://www.nationalgeographic.com/premium/article/face-mites-arachnids-human-skin-pores"
+    }
+  ],
+  "human_angle": "It's not a horror story: the funniest part is that they borrow YOUR melatonin to party all night, and scientists spent decades sure they had no butt.",
+  "notes": "Queue R01 (score 95). First video of the HyperFrames engine (owner 22/11/2026: half the videos in this engine). Script checks: 0.3 mm, 8 legs, live head-down in follicles, eat sebum = Bangor/Reading 2022. Crawl out at night to mate = Reading/Bangor. Use the melatonin skin secretes at dusk = Reading 2022. Thought to have no anus, 2022 found one = Reading, National Geographic. Almost every adult = National Geographic (pretty much every face; prevalence rises with age). Voice reused from the test take hf001-face-mites (same text, no new ElevenLabs credits).",
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "R01",
+    "score": 95
+  },
+  "experiment": {
+    "engine": "hyperframes",
+    "opening": "v2",
+    "voice": "xr4",
+    "tone": "shock",
+    "duration": "short",
+    "hook_type": "fact",
+    "topic_type": "evergreen",
+    "ending": "none",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "face mites",
+    "playlist": "Your Body, X-Rayed: Weird Things Happening Inside You",
+    "title_alts": [
+      "Tiny Mites Live in Your Pores and Come Out at Night",
+      "There Are Mites on Your Face Right Now. Here's What They Do"
+    ],
+    "questions": [
+      {
+        "q": "Does everyone have face mites?",
+        "a": "Almost every adult does. Demodex mites live in the hair follicles and oil glands of the face, and the share of people carrying them rises with age."
+      },
+      {
+        "q": "What do face mites eat?",
+        "a": "They eat sebum, the oil your skin makes inside the pores, and possibly dead skin cells around the follicle."
+      },
+      {
+        "q": "Do face mites have an anus?",
+        "a": "For years scientists assumed they didn't. A 2022 study led by the University of Reading and Bangor University found that they do."
+      }
+    ],
+    "demand": [
+      {
+        "query": "face mites",
+        "evidence": "Evergreen viral science topic; NatGeo, ScienceDaily and university press releases; recurring Reddit TIL",
+        "url": "https://www.nationalgeographic.com/premium/article/face-mites-arachnids-human-skin-pores"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Demodex",
+    "folliculorum",
+    "sebum",
+    "facemites",
+    "demodex",
+    "symbionts",
+    "ectoparasites",
+    "Bangor",
+    "ScienceDaily",
+    "mm"
+  ],
+  "thumbnail": {
+    "time": 2.5,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      560,
+      960,
+      960,
+      1360
+    ],
+    "circle": [
+      760,
+      1150,
+      190
+    ],
+    "rays": false,
+    "badge": "0.3 MM",
+    "tilt": -4,
+    "text_y": 190,
+    "lines": [
+      {
+        "text": "ON YOUR FACE",
+        "color": "#FFD60A"
+      }
+    ],
+    "glow": "#FF3B30",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "IT LIVES HERE",
+            "box": "#FF3B30"
+          }
+        ],
+        "glow": "#FFFFFF"
+      },
+      {
+        "lines": [
+          {
+            "text": "RIGHT NOW",
+            "color": "#FFFFFF"
+          }
+        ],
+        "badge": false,
+        "circle": false
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.08,
+    "design_note": "HUMAN.md §2: xr016 had no circle/rays/badge with text at the bottom; here a ring on the lens + sticker, text on top, teal palette."
+  }
+}

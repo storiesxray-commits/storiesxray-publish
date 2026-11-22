@@ -44,9 +44,9 @@ else:
         tsha = hashlib.sha256(open(thumb, "rb").read()).hexdigest()
         if json.load(open(rep)).get("sha256") != tsha: errs.append("thumbnail_not_the_checked_one")
     # Owner 21/11/2026: YouTube only (Facebook and Instagram dropped) -> no video_social.mp4 / cover_social.jpg required.
-# Owner rule 20/11/2026: the cartoon engine is the only way to make videos, and nothing goes out without the full audit
-# (voice, picture, text) of tools/qa.py, including the visual sign-off, for this exact file.
-if meta.get("render_style") != "cartoon": errs.append("render_style_not_cartoon")
+# Owner rule 20/11/2026 (+22/11/2026): only the "cartoon" engine or, since 22/11, the "hyperframes" engine (half and half),
+# and nothing goes out without the full audit (voice, picture, text) of tools/qa.py, including the visual sign-off, for this exact file.
+if meta.get("render_style") not in ("cartoon", "hyperframes"): errs.append("render_style_not_cartoon_or_hyperframes")
 qrep = f"{ROOT}/out/{VID}/qa_report.json"
 if not os.path.exists(qrep): errs.append("qa_report_missing_run_tools_qa_py")
 else:

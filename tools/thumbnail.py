@@ -49,7 +49,8 @@ class Fail(Exception): pass
 def frame_for(T):
     f = f"{OUT}/frames/c_{T:06.2f}.jpg"
     if not os.path.exists(f):
-        subprocess.run([sys.executable, f"{ROOT}/tools/render.py", VID, "clean", str(T)], check=True)
+        eng = "hf_build.py" if meta.get("render_style") == "hyperframes" else "render.py"   # owner 22/11/2026: two engines
+        subprocess.run([sys.executable, f"{ROOT}/tools/{eng}", VID, "clean", str(T)], check=True)
     return f
 
 def render(th):

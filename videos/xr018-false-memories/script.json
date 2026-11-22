@@ -1,0 +1,47 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "You remember things that never happened.",
+   0.25
+  ],
+  [
+   "Your brain doesn't replay memories.",
+   0.05
+  ],
+  [
+   "It rebuilds them, every single time.",
+   0.25
+  ],
+  [
+   "In 1995, psychologists told people four childhood stories.",
+   0.1
+  ],
+  [
+   "Three were real. [whispers] One was invented.",
+   0.2
+  ],
+  [
+   "Getting lost in a shopping mall, at age five.",
+   0.3
+  ],
+  [
+   "About one in four remembered it anyway.",
+   0.25
+  ],
+  [
+   "Later studies found it in up to half.",
+   0.3
+  ],
+  [
+   "So that memory you'd swear by...",
+   0.15
+  ],
+  [
+   "[whispers] How sure are you, really?",
+   0.0
+  ]
+ ],
+ "tone": "mystery",
+ "voice": "xr11"
+}

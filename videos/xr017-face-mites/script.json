@@ -1,0 +1,44 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Something is living on your face right now.",
+   0.15
+  ],
+  [
+   "Tiny eight-legged mites, hiding head-down inside your pores.",
+   0.1
+  ],
+  [
+   "All day long, they eat your face oil.",
+   0.15
+  ],
+  [
+   "[whispers] And at night... they crawl out to mate.",
+   0.2
+  ],
+  [
+   "They even steal the melatonin your skin makes at dusk, just to party all night.",
+   0.15
+  ],
+  [
+   "For years, scientists swore they didn't have a butt.",
+   0.1
+  ],
+  [
+   "[gasps] In 2022, they finally found one.",
+   0.2
+  ],
+  [
+   "Almost every adult has them.",
+   0.1
+  ],
+  [
+   "[laughs] Yes. Including you.",
+   0.0
+  ]
+ ],
+ "tone": "shock",
+ "voice": "xr4",
+ "tts_id": "hf001-face-mites"
+}

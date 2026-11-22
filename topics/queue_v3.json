@@ -87,10 +87,10 @@
    "id": "R01",
    "title_es": "Los animales microscópicos que viven en tu cara",
    "hook": "Something is living on your face right now.",
-   "status": "todo",
-   "video_id": null,
+   "status": "done",
+   "video_id": "xr017-face-mites",
    "planned_date": "2026-11-30",
-   "note": "Merged with owner idea #61.",
+   "note": "Merged with owner idea #61. Hecho con el motor HyperFrames el 22/11/2026 (pedido de la dueña).",
    "viral": 9,
    "hook_power": 10,
    "score": 95,
@@ -804,9 +804,10 @@
    "hook_power": 10,
    "score": 100,
    "cat": "body_you",
-   "note": "Idea de la dueña. Gancho alternativo: 'Your memories are lying to you.' Verificar con 2 fuentes: Loftus y Pickrell 1995 ('lost in the mall'), reconsolidación de la memoria (Nader 2000). Cierre que invite a comentar: 'What's a memory you're 100% sure about?'",
-   "status": "todo",
-   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll"
+   "note": "Idea de la dueña. Gancho alternativo: 'Your memories are lying to you.' Verificar con 2 fuentes: Loftus y Pickrell 1995 ('lost in the mall'), reconsolidación de la memoria (Nader 2000). Cierre que invite a comentar: 'What's a memory you're 100% sure about?' Hecho con el motor HyperFrames el 22/11/2026 (pedido de la dueña).",
+   "status": "done",
+   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll",
+   "video_id": "xr018-false-memories"
   },
   {
    "id": "I07",
@@ -817,9 +818,10 @@
    "hook_power": 10,
    "score": 95,
    "cat": "body_you",
-   "note": "Idea de la dueña: formato '¿qué pasaría si…?' contado en segunda persona. Verificar la cronología con 2 fuentes; no dar consejos médicos y no mostrar a Randy Gardner con cara real (solo silueta).",
-   "status": "todo",
-   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll"
+   "note": "Idea de la dueña: formato '¿qué pasaría si…?' contado en segunda persona. Verificar la cronología con 2 fuentes; no dar consejos médicos y no mostrar a Randy Gardner con cara real (solo silueta). Hecho con el motor HyperFrames el 22/11/2026 (pedido de la dueña).",
+   "status": "done",
+   "source": "pedido de la dueña 18/11/2026 (estilo @asifue.tv): ganchos que arrancan con 'You…' para frenar el scroll",
+   "video_id": "xr019-no-sleep"
   },
   {
    "id": "I08",

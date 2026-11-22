@@ -1,0 +1,15 @@
+# xr019 (HyperFrames): no sleep, day by day. Ticking clock, a woozy meter, a warped room, a dark whisper, 1964 calendar pages, a calm morning.
+MUSIC.update(tension_start=0.3, tension_len=16.0, resolve=wd(9, 0) - 0.2, dip=wd(5, 0) + 0.6, dip_w=1.2)
+for c in cuts:
+    if not 13.0 < c < 14.0: put(whoosh(0.3), c - 0.15, 0.06, pan=rng.uniform(-.4, .4))
+put(heartbeat(), 0.2, 0.09); put(heartbeat(), 1.1, 0.09); put(hiss(1.2), 1.7, 0.03)
+for k in range(26): put(tick(k % 2 == 0), 3.05 + k * 0.13, 0.04)
+put(bell(1047), 6.2, 0.04)
+put(sweep(200, 900, 2.0), 6.7, 0.025); put(alarm(0.5), wd(3, 6), 0.025)
+put(sweep(600, 200, 2.5), 10.8, 0.02); put(rumble(1.5), 11.0, 0.05)
+put(thump(50, 0.6), 15.2, 0.12); put(hiss(1.0), 15.85, 0.035)
+for k in range(10): put(paper(0.06), 19.0 + k * 0.13, 0.08, pan=-0.4)
+put(blip(800), wd(6, 5), 0.05)
+for k in range(4): put(pop_ := blip(1200 - 150 * k, 0.08), 21.6 + k * 0.45, 0.04)
+for k in range(14): put(tick(k % 2 == 0), 24.4 + k * 0.22, 0.03)
+put(bell(1319), 27.8, 0.05); put(bell(1760), 28.0, 0.04); put(glass(), wd(9, 3), 0.04)

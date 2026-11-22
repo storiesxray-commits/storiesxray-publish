@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Three days awake? You hallucinate.", 0.2],
+  ["Day one: twenty-four hours without sleep.", 0.05],
+  ["Your brain works like you're legally drunk.", 0.2],
+  ["Day two: the walls start to bend.", 0.2],
+  ["[whispers] Day three: you see things that aren't there.", 0.3],
+  ["One teenager stayed awake for eleven days.", 0.1],
+  ["[gasps] By the end, he could barely remember anything.", 0.2],
+  ["Then he slept almost fifteen hours.", 0.1],
+  ["And woke up fine.", 0.0]
+ ],
+ "tone": "shock",
+ "voice": "xr2"
+}

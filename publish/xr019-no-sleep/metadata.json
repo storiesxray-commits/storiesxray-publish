@@ -1,0 +1,159 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "What Happens If You Stop Sleeping? Day 3 You Hallucinate (Sleep Deprivation)",
+  "description": "What happens if you stop sleeping? Sleep deprivation hits fast: by the third day without sleep, healthy people start to hallucinate.\n\nDay by day:\n- 24 hours awake: your performance is impaired about as much as a blood alcohol level of 0.10%, above the U.S. legal limit of 0.08% (CDC/NIOSH).\n- 24-48 hours: perceptual distortions start: things look warped, colors and shapes seem off, time feels strange.\n- 48-72 hours and beyond: complex hallucinations and disordered thinking; by the third day people report seeing, hearing and feeling things that aren't there (Waters et al., Frontiers in Psychiatry, 2018).\n- In 1963-64, 17-year-old Randy Gardner stayed awake for about 11 days (264 hours) for a science fair. Near the end he had serious memory problems. Afterward he slept 14 hours and 46 minutes and recovered fully.\n\nPlease don't try this: going without sleep for more than 48 hours is now considered unethical even in research. How long is the longest you've been awake?\n\nSources:\n- Waters et al. (2018), Severe sleep deprivation causes hallucinations, Frontiers in Psychiatry: https://pmc.ncbi.nlm.nih.gov/articles/PMC6048360\n- CDC/NIOSH, Driver fatigue on the job (24 hours awake = BAC 0.10): https://www.cdc.gov/niosh/motor-vehicle/driver-fatigue/index.html\n- NPR (2024), Lessons from sleeplessness: Randy Gardner's record: https://www.npr.org/2024/01/28/1227217274/sleep-deprivation-record\n- Scientific American, How long can humans stay awake?: https://www.scientificamerican.com/article/how-long-can-humans-stay/\n\n#sleepdeprivation #sleep #brain #shorts",
+  "tags": [
+    "what happens if you stop sleeping",
+    "sleep deprivation",
+    "sleep deprivation hallucinations",
+    "what happens after 3 days without sleep",
+    "24 hours without sleep like being drunk",
+    "randy gardner 11 days awake",
+    "longest time without sleep",
+    "sleep deprivation day by day",
+    "why you hallucinate without sleep",
+    "sleep facts",
+    "brain facts",
+    "science shorts"
+  ],
+  "pinned_comment": "The crazy part about the 11-day record: after all that, his first sleep was just under 15 hours, not days. The brain doesn't pay back hour for hour.",
+  "series": "Your Body, X-Rayed",
+  "caption_instagram": "Three days awake and you start hallucinating. Day one already works like being legally drunk. #sleepdeprivation #brain #shorts",
+  "sources": [
+    {
+      "title": "Waters, Chiu, Atkinson & Blom (2018), Frontiers in Psychiatry: perceptual distortions within 24-48 h; complex hallucinations after 48-90 h; by the third day hallucinations in all three sensory modalities",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6048360"
+    },
+    {
+      "title": "CDC/NIOSH: after 24 hours awake, impairment equivalent to a BAC of 0.10 (U.S. limit 0.08)",
+      "url": "https://www.cdc.gov/niosh/motor-vehicle/driver-fatigue/index.html"
+    },
+    {
+      "title": "NPR (Jan. 28, 2024): Randy Gardner, 17, stayed awake 264 hours (11 days) in 1963-64; memory problems",
+      "url": "https://www.npr.org/2024/01/28/1227217274/sleep-deprivation-record"
+    },
+    {
+      "title": "Scientific American: 264 hours (about 11 days), Randy Gardner; progressive cognitive deficits",
+      "url": "https://www.scientificamerican.com/article/how-long-can-humans-stay/"
+    }
+  ],
+  "human_angle": "Nobody notices day one, but the CDC math says one sleepless night already puts you above the legal driving limit; the hallucinations are just where it ends up.",
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "I07",
+    "score": 95
+  },
+  "experiment": {
+    "engine": "hyperframes",
+    "opening": "v2",
+    "voice": "xr2",
+    "tone": "shock",
+    "duration": "short",
+    "hook_type": "fact",
+    "topic_type": "evergreen",
+    "ending": "none",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "what happens if you stop sleeping",
+    "playlist": "Your Body, X-Rayed: Weird Things Happening Inside You",
+    "title_alts": [
+      "3 Days Without Sleep: What Your Brain Does Day by Day",
+      "He Stayed Awake 11 Days. Here's What Day 3 Does to You"
+    ],
+    "questions": [
+      {
+        "q": "What happens after 3 days without sleep?",
+        "a": "Studies of healthy volunteers show that by the third day without sleep most people experience hallucinations, often visual, auditory and tactile, plus confused thinking."
+      },
+      {
+        "q": "Is 24 hours without sleep like being drunk?",
+        "a": "According to CDC/NIOSH, being awake for 24 hours impairs performance about as much as a blood alcohol concentration of 0.10%, above the U.S. legal limit of 0.08%."
+      },
+      {
+        "q": "What is the longest anyone has stayed awake?",
+        "a": "Randy Gardner stayed awake about 11 days (264 hours) in 1963-64; longer claims exist, but Guinness stopped accepting attempts because they are dangerous."
+      }
+    ],
+    "demand": [
+      {
+        "query": "what happens if you stop sleeping",
+        "evidence": "Evergreen high-volume question; recurring NPR/SciAm coverage of Randy Gardner",
+        "url": "https://www.npr.org/2024/01/28/1227217274/sleep-deprivation-record"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Gardner",
+    "Randy",
+    "NIOSH",
+    "Waters",
+    "metamorphopsia",
+    "sleepdeprivation",
+    "Frontiers",
+    "BAC",
+    "hrs"
+  ],
+  "thumbnail": {
+    "time": 15.9,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      120,
+      660,
+      1080,
+      1300
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "DAY 3",
+    "tilt": -4,
+    "text_y": 170,
+    "lines": [
+      {
+        "text": "NO SLEEP",
+        "color": "#B6FF6E"
+      }
+    ],
+    "glow": "#FF4D4D",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "72 HOURS",
+            "box": "#FF4D4D"
+          }
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "DON'T BLINK",
+            "color": "#FFFFFF"
+          }
+        ],
+        "badge": false
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.12,
+    "design_note": "HUMAN.md §2: dark green-black palette (xr018 indigo, xr017 teal), sticker only, text on top."
+  },
+  "id": "xr019-no-sleep",
+  "duration_s": 30.69,
+  "status": "ready",
+  "publish_time_local": "19:49"
+}

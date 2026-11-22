@@ -1,0 +1,152 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Education",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "False Memory: You Remember Things That Never Happened (Lost in the Mall Study)",
+  "description": "False memories are real: your brain doesn't replay memories like a video, it rebuilds them every time you recall them, and it can rebuild things that never happened.\n\nThe famous experiment:\n- In 1995, psychologists Elizabeth Loftus and Jacqueline Pickrell gave 24 people four short stories about their childhood, written with help from their relatives.\n- Three were true. One was invented: getting lost in a shopping mall around age five.\n- After the interviews, about 1 in 4 (6 of 24) remembered the fake event, fully or partly.\n- A 2023 replication with 123 people found 35%. Across later memory-implant studies, rates often land between 30% and 50%.\n\nThis is why eyewitness memory can be confident and still wrong. Which childhood memory are you most sure about?\n\nSources:\n- University College Cork (2023), replication of the Lost in the Mall study: https://cora.ucc.ie/server/api/core/bitstreams/075c236a-356f-4694-94c5-9500b6c148d3/content\n- Wellcome Collection, Lost in the mall and other false memories: https://wellcomecollection.org/articles/XQze2hIAAGYP8ckl\n- Association for Psychological Science, Grand illusions of memory (Loftus): https://www.psychologicalscience.org/observer/grand-illusions-of-memory-keynote-address-showcases-evidence-of-false-memories\n\n#falsememory #psychology #brain #shorts",
+  "tags": [
+    "false memory",
+    "false memories explained",
+    "lost in the mall experiment",
+    "elizabeth loftus false memory study",
+    "can you remember something that never happened",
+    "how memory works",
+    "memory is reconstructive",
+    "psychology facts",
+    "brain facts",
+    "memory implantation",
+    "eyewitness memory",
+    "psychology shorts"
+  ],
+  "pinned_comment": "Later studies planted even stranger 'memories': some people recalled shaking hands with Bugs Bunny at Disneyland. Impossible, he's not a Disney character.",
+  "series": "Mind Tricks",
+  "caption_instagram": "You remember things that never happened. In 1995, 1 in 4 people 'remembered' getting lost in a mall as a kid. It never happened. #falsememory #psychology #shorts",
+  "sources": [
+    {
+      "title": "Murphy et al., University College Cork (2023): replication of Loftus & Pickrell (1995); 25% in the original (6 of 24), 35% in the replication",
+      "url": "https://cora.ucc.ie/server/api/core/bitstreams/075c236a-356f-4694-94c5-9500b6c148d3/content"
+    },
+    {
+      "title": "Wellcome Collection: three true stories and one false (lost in a mall); later studies usually 30-50% false memory creation",
+      "url": "https://wellcomecollection.org/articles/XQze2hIAAGYP8ckl"
+    },
+    {
+      "title": "Association for Psychological Science: Elizabeth Loftus on planting false memories (Lost in the Mall technique)",
+      "url": "https://www.psychologicalscience.org/observer/grand-illusions-of-memory-keynote-address-showcases-evidence-of-false-memories"
+    }
+  ],
+  "human_angle": "The scary part isn't that strangers can trick you: it's that the fake memory was built by your own brain from a story your family helped write.",
+  "notes": "Queue I06 (score 100), owner pick 22/11/2026. Script checks: 1995 study, four childhood stories (three true, one false: lost in a mall around age 5) = UCC replication paper, Wellcome. 'About one in four remembered it anyway' = 6 of 24 (25%). 'Later studies found it in up to half' = Wellcome (usually 30-50%). 'It rebuilds them every time' = reconstructive memory (Loftus; APS). Pinned comment: Braun, Ellis & Loftus (2002) Bugs Bunny at Disneyland ad study (well-known follow-up).",
+  "queue": {
+    "file": "topics/queue_v3.json",
+    "id": "I06",
+    "score": 100
+  },
+  "experiment": {
+    "engine": "hyperframes",
+    "opening": "v2",
+    "voice": "xr11",
+    "tone": "mystery",
+    "duration": "medium",
+    "hook_type": "you",
+    "topic_type": "evergreen",
+    "ending": "question",
+    "loop": "first_frame_echo"
+  },
+  "seo": {
+    "keyword": "false memory",
+    "playlist": "Mind Tricks: Why Your Brain Lies to You",
+    "title_alts": [
+      "Your Brain Can Invent Memories. This 1995 Experiment Proved It",
+      "1 in 4 People Remembered a Day That Never Happened"
+    ],
+    "questions": [
+      {
+        "q": "Can you remember something that never happened?",
+        "a": "Yes. Memory is reconstructive: each time you recall an event, the brain rebuilds it, and suggestion can add details or whole events that never happened."
+      },
+      {
+        "q": "What was the Lost in the Mall experiment?",
+        "a": "In 1995 Elizabeth Loftus and Jacqueline Pickrell gave 24 adults four childhood stories, one of them invented (getting lost in a shopping mall). About 25% came to remember the invented one."
+      },
+      {
+        "q": "How common are false memories?",
+        "a": "A 2023 replication found 35% of participants formed a false memory of the mall event, and later implantation studies often report rates between 30% and 50%."
+      }
+    ],
+    "demand": [
+      {
+        "query": "false memory",
+        "evidence": "Evergreen psychology search; Lost in the Mall replicated in 2023 (UCC); recurring viral topic",
+        "url": "https://wellcomecollection.org/articles/XQze2hIAAGYP8ckl"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Loftus",
+    "Pickrell",
+    "Jacqueline",
+    "Wellcome",
+    "falsememory",
+    "Cork",
+    "replication",
+    "Disneyland",
+    "Bugs"
+  ],
+  "thumbnail": {
+    "time": 34.5,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      150,
+      380,
+      930,
+      1500
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": false,
+    "tilt": -3,
+    "text_y": 140,
+    "lines": [
+      {
+        "text": "NEVER HAPPENED",
+        "box": "#FF2A3D"
+      }
+    ],
+    "glow": "#FFB02E",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "IT WASN'T REAL",
+            "color": "#FFB02E"
+          }
+        ],
+        "glow": "#FFFFFF"
+      },
+      {
+        "lines": [
+          {
+            "text": "FAKE MEMORY",
+            "box": "#7A4CFF"
+          }
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.08,
+    "design_note": "HUMAN.md §2: no circle/rays/badge (xr017 had ring + sticker), text in a red box on top, indigo dream palette."
+  }
+}

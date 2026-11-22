@@ -1,0 +1,58 @@
+{
+  "content_id": "xr-017",
+  "repo_id": "xr017-face-mites",
+  "sha256": "95580bb443298168e309f04fdbecda821d5e4eadc302bdac0b15e62b73541745",
+  "file_size_bytes": 19260940,
+  "duration_seconds": 31.116,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.979,
+  "video_bit_rate": 4819974,
+  "faststart": true,
+  "title_youtube": "Face Mites Are Living on Your Face Right Now (They Mate at Night) 🔬",
+  "description_youtube": "Face mites live on almost every adult's face: tiny 8-legged Demodex mites, about 0.3 mm long, living head-down inside your pores and hair follicles.\n\nWhat they actually do:\n- They eat the oil (sebum) your skin makes.\n- At night they crawl out of the pores to find a mate, then go back in.\n- Their genome is so reduced they can't make their own melatonin, so they use the melatonin your skin releases at dusk to stay active all night (Molecular Biology and Evolution, 2022).\n- For years scientists thought they had no anus. The 2022 study found one.\n- They're normal and mostly harmless. Some researchers think they may even help keep pores unclogged.\n\nWould you rather not know? Tell us below.\n\nSources:\n- University of Reading (2022), The secret lives of mites in the skin of our faces: https://www.reading.ac.uk/news/2022/Research-News/Secret-lives-of-skin-mites-in-our-faces\n- Bangor University (2022), same study: https://www.bangor.ac.uk/news/the-secret-lives-of-mites-in-the-skin-of-our-faces\n- ScienceDaily (2022), Human follicular mites: ectoparasites becoming symbionts: https://www.sciencedaily.com/releases/2022/06/220622101404.htm\n- National Geographic, Hundreds of tiny arachnids are likely on your face right now: https://www.nationalgeographic.com/premium/article/face-mites-arachnids-human-skin-pores\n\n#facemites #demodex #science #shorts",
+  "caption_instagram": "Something is living on your face right now: 0.3 mm Demodex mites that eat face oil and mate at night. #facemites #science #shorts",
+  "tags": [
+    "face mites",
+    "demodex mites on your face",
+    "do face mites live on everyone",
+    "what are face mites",
+    "face mites mate at night",
+    "demodex folliculorum",
+    "tiny animals living on your skin",
+    "face mites have no anus myth",
+    "skin mites",
+    "microscopic creatures on humans",
+    "human body facts",
+    "gross science facts",
+    "science shorts"
+  ],
+  "series": "Your Body, X-Rayed",
+  "sources": [
+    {
+      "title": "University of Reading (Jun. 22, 2022): first genome study of D. folliculorum; mites mate on our faces at night; can't make melatonin and use the melatonin human skin secretes at dusk; assumed to have no anus, the study found one",
+      "url": "https://www.reading.ac.uk/news/2022/Research-News/Secret-lives-of-skin-mites-in-our-faces"
+    },
+    {
+      "title": "Bangor University (2022): around 0.3 mm long, live in hair follicles on the face incl. eyelashes, eat sebum, active at night, move between follicles to mate",
+      "url": "https://www.bangor.ac.uk/news/the-secret-lives-of-mites-in-the-skin-of-our-faces"
+    },
+    {
+      "title": "ScienceDaily (Jun. 22, 2022): Human follicular mites: ectoparasites becoming symbionts, Molecular Biology and Evolution",
+      "url": "https://www.sciencedaily.com/releases/2022/06/220622101404.htm"
+    },
+    {
+      "title": "National Geographic: hundreds or thousands of mites in the pores of pretty much every face; long thought to lack an anus; 2022 microscope images showed one",
+      "url": "https://www.nationalgeographic.com/premium/article/face-mites-arachnids-human-skin-pores"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "14:04",
+  "checks_failed": []
+}

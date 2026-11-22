@@ -19,8 +19,16 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 - Línea editorial: **bizarro o sorprendente, real y muy compartible**.
 - Id nuevo: el `xrNNN` más alto en `videos/` + 1, con slug corto en inglés (`xr007-wombat-cubes`).
 
+## 1d. MOTOR: mitad "cartoon", mitad "hyperframes" (regla de la dueña, 22/11/2026 — OBLIGATORIA)
+"Que el sistema tenga mitad de videos así (HyperFrames) y mitad del otro modelo, y que vayan llevando a videos muy muy buenos."
+- **Balance:** en los últimos 10 videos de `videos/` (mirar `meta.json` → `render_style`) tiene que haber entre 4 y 6 de cada motor. Si un motor quedó atrás, el video nuevo va en ese motor. Si están parejos, alternar con el último producido.
+- **Qué tema va a cada motor:** HyperFrames (`engine/hyperframes/README.md`, `tools/hf_build.py`) rinde mejor en temas que se **explican por dentro o con gráficos**: cuerpo y cerebro, parásitos y animales por dentro, ilusiones, líneas de tiempo, números, día por día, "qué pasa si". El motor cartoon (`engine/cartoon/`) rinde mejor con **personas en lugares**: historias de marcas, negocios, crímenes de guante blanco, historia con escenarios. Si el tema del turno no encaja en el motor que toca, tomar el siguiente `todo` que sí encaje (sin bajar de nivel de puntaje) o cambiar de motor y compensar en el próximo.
+- Referencia de HyperFrames: `videos/xr017-face-mites/`, `videos/xr018-false-memories/`, `videos/xr019-no-sleep/` (las tres hechas el 22/11, la dueña aprobó el estilo). Cada video con paleta, personajes y planos propios (HUMAN.md §2): no copiar escenas de un video a otro.
+- Subtítulos SIEMPRE en los dos motores (dueña, 22/11/2026). En HyperFrames: estilo tranquilo (frase corta en minúscula, letra gruesa blanca con borde y sombra, `XR.captions()` en `engine/hyperframes/lib.js`) y las palabras o frases clave grandes y animadas en Anton.
+- `meta.json` → `experiment.engine` = `"cartoon"` o `"hyperframes"` para que el optimizador compare los dos.
+
 ## 1c. EVERYDAY X-RAY (formato de la dueña, 19/11/2026 — OBLIGATORIO)
-- Si el número del id nuevo es **mod 3 = 2** (xr014, xr017, xr020…) y §1b no obliga a una noticia, el video es **EVERYDAY X-RAY**: tomar el primer `todo` con `"format": "everyday"` de `queue_v3.json` y seguir `topics/EVERYDAY.md` (estructura, duración 20–28 s, motor cartoon, rigor). `meta.json` → `experiment.topic_type = "everyday"`.
+- Si el número del id nuevo es **mod 3 = 2** (xr014, xr017, xr020…) y §1b no obliga a una noticia, el video es **EVERYDAY X-RAY**: tomar el primer `todo` con `"format": "everyday"` de `queue_v3.json` y seguir `topics/EVERYDAY.md` (estructura, duración 20–28 s, motor según §1d, rigor). `meta.json` → `experiment.topic_type = "everyday"`.
 - Si no quedan `everyday` en `todo`, usar la cola normal y avisarlo en el resumen.
 
 ## 1a. FILTRO ULTRA VIRAL (regla de la dueña, 18/11/2026 — OBLIGATORIO, gana sobre todo lo demás)

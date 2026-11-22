@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      :root { --ink: #fff; --hi: #ffd400; --font-display: "Anton"; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { position: relative; width: 100%; height: 100%; font-family: var(--font-display); }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; pointer-events: none; }
+      .ln { display: block; font-family: "Anton"; font-size: 132px; line-height: 1.02; color: var(--ink);
+            -webkit-text-stroke: 14px #111; paint-order: stroke fill; letter-spacing: 1px;
+            text-shadow: 0 10px 0 rgba(0,0,0,.35); }
+      .ln.hi { color: var(--hi); }
+      .ln.sm { font-size: 92px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .07; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.42) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute;left:0;top:0"><g id="s1defs"></g><defs><pattern id="tile" width="120" height="120" patternUnits="userSpaceOnUse"><rect width="120" height="120" fill="#2b8d97"/><path d="M0 0H120V120" fill="none" stroke="#1f6f78" stroke-width="6"/></pattern></defs></svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="31.2" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: magnifier on the cheek -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="3.05" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <defs>
+            <clipPath id="lensClip"><circle cx="760" cy="1150" r="150"/></clipPath>
+          </defs>
+          <g id="s1cam">
+            <rect width="1080" height="1920" fill="url(#tile)"/>
+            <rect width="1080" height="1920" fill="url(#s1light)" />
+            <radialGradient id="s1light" cx="50%" cy="38%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></radialGradient>
+            <g id="s1p" transform="translate(540 1010)"></g>
+            <g id="lens">
+              <path d="M860 1262 L975 1420" stroke="#1d120b" stroke-width="58" stroke-linecap="round"/>
+              <path d="M860 1262 L975 1420" stroke="#8a5a2b" stroke-width="40" stroke-linecap="round"/>
+              <g clip-path="url(#lensClip)">
+                <rect x="600" y="990" width="320" height="320" fill="#f0b28f"/>
+                <circle cx="700" cy="1060" r="28" fill="#e7a07c"/><circle cx="830" cy="1250" r="22" fill="#e7a07c"/>
+                <ellipse cx="760" cy="1185" rx="46" ry="22" fill="#5b2a20"/>
+                <g id="s1mite" transform="translate(760 1150) rotate(-90)"></g>
+                <ellipse cx="760" cy="1196" rx="58" ry="20" fill="#f0b28f"/>
+                <ellipse cx="700" cy="1060" rx="120" ry="60" fill="#fff" opacity=".18" transform="rotate(-30 700 1060)"/>
+              </g>
+              <circle cx="760" cy="1150" r="150" fill="none" stroke="#1d120b" stroke-width="34"/>
+              <circle cx="760" cy="1150" r="150" fill="none" stroke="#d6dde6" stroke-width="20"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S2 skin cross-section, mites head-down in a follicle -->
+      <div id="s2" class="clip scene" data-start="3.05" data-duration="4.86" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <defs>
+            <linearGradient id="derm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6c2ae"/><stop offset="1" stop-color="#e9a48f"/></linearGradient>
+            <linearGradient id="air" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe6ff"/><stop offset="1" stop-color="#ffe6dc"/></linearGradient>
+          </defs>
+          <g id="s2cam">
+            <rect x="-400" y="-600" width="1880" height="1200" fill="url(#air)"/>
+            <rect x="-400" y="520" width="1880" height="2400" fill="url(#derm)"/>
+            <g id="s2cells"></g>
+            <path d="M-400 520 Q-300 500 -200 520 T0 520 T200 520 T400 520 T600 520 T800 520 T1000 520 T1200 520 T1480 520 L1480 640 L-400 640Z" fill="#f2a990" stroke="#b9604c" stroke-width="6"/>
+            <!-- side follicles -->
+            <path d="M90 520 C80 800 120 1000 150 1150 C170 1220 230 1220 240 1150 C255 1000 230 800 220 520Z" fill="#d98472" stroke="#a8584a" stroke-width="6"/>
+            <path d="M860 520 C850 760 880 960 905 1080 C925 1150 990 1150 995 1080 C1005 960 990 760 990 520Z" fill="#d98472" stroke="#a8584a" stroke-width="6"/>
+            <g id="s2side"></g>
+            <!-- main follicle -->
+            <path d="M405 520 C395 900 420 1250 455 1450 C480 1560 600 1560 625 1450 C660 1250 685 900 675 520Z" fill="#d98472" stroke="#a8584a" stroke-width="7"/>
+            <ellipse cx="740" cy="900" rx="80" ry="120" fill="#f5d36a" stroke="#c4932a" stroke-width="6"/>
+            <path d="M672 860 Q700 880 668 940" fill="#f5d36a" stroke="none"/>
+            <path d="M540 1480 C538 1100 538 700 544 520 C548 380 575 270 610 150" fill="none" stroke="#3a2416" stroke-width="30" stroke-linecap="round"/>
+            <path d="M540 1480 C538 1100 538 700 544 520 C548 380 575 270 610 150" fill="none" stroke="#6b4a33" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+            <ellipse cx="540" cy="1490" rx="60" ry="46" fill="#8a5a3b" stroke="#3a2416" stroke-width="6"/>
+            <g id="s2m"></g>
+            <!-- labels -->
+            <g id="lab1" opacity="0"><path d="M440 600 L420 600 L420 795 L440 795" fill="none" stroke="#111" stroke-width="8"/>
+              <text x="405" y="715" text-anchor="end" font-family="Anton" font-size="58" fill="#fff" stroke="#111" stroke-width="10" paint-order="stroke">0.3 mm</text></g>
+            <g id="lab2" opacity="0"><path d="M705 718 L636 800" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+              <text x="690" y="700" font-family="Anton" font-size="76" fill="#ffd400" stroke="#111" stroke-width="12" paint-order="stroke">8 LEGS</text></g>
+            <g id="lab3" opacity="0"><text x="800" y="1240" font-family="Anton" font-size="78" fill="#fff" stroke="#111" stroke-width="12" paint-order="stroke" text-anchor="middle">HEAD</text>
+              <text x="800" y="1320" font-family="Anton" font-size="78" fill="#fff" stroke="#111" stroke-width="12" paint-order="stroke" text-anchor="middle">DOWN</text>
+              <path d="M800 1340 L800 1430 M770 1400 L800 1435 L830 1400" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M800 1340 L800 1430 M770 1400 L800 1435 L830 1400" fill="none" stroke="#ffd400" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S3 eating face oil -->
+      <div id="s3" class="clip scene" data-start="7.91" data-duration="2.72" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <defs><radialGradient id="s3bg" cx="50%" cy="50%" r="75%"><stop offset="0" stop-color="#f3a58e"/><stop offset="1" stop-color="#a94f45"/></radialGradient></defs>
+          <g id="s3cam">
+            <rect x="-200" y="-200" width="1480" height="2320" fill="url(#s3bg)"/>
+            <g id="s3bok"></g>
+            <g id="s3m" transform="translate(700 1010) rotate(-12)"></g>
+            <g id="drops"></g>
+            <g id="clk" transform="translate(230 420)" opacity="0">
+              <circle r="78" fill="#fff" stroke="#111" stroke-width="10"/><path id="clkH" d="M0 0 L0 -52" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+              <path d="M0 0 L34 0" stroke="#111" stroke-width="10" stroke-linecap="round"/><circle r="9" fill="#e53"/>
+              <g transform="translate(150 -60)"><circle r="44" fill="#ffd400" stroke="#111" stroke-width="7"/></g>
+            </g>
+            <g id="lab4" opacity="0"><path d="M900 700 Q960 800 960 880" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+              <text x="700" y="680" font-family="Anton" font-size="100" fill="#ffd400" stroke="#111" stroke-width="14" paint-order="stroke" text-anchor="middle">FACE OIL</text></g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S4a asleep -->
+      <div id="s4a" class="clip scene" data-start="10.63" data-duration="1.04" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s4acam">
+            <rect width="1080" height="1920" fill="#14213f"/>
+            <rect x="620" y="260" width="360" height="420" rx="20" fill="#0b1430" stroke="#3a4a78" stroke-width="16"/>
+            <circle cx="820" cy="420" r="80" fill="#fff6c8" filter="url(#glow)"/><circle cx="850" cy="400" r="72" fill="#0b1430"/>
+            <circle cx="700" cy="330" r="5" fill="#fff"/><circle cx="910" cy="600" r="4" fill="#fff"/><circle cx="680" cy="560" r="3" fill="#fff"/>
+            <rect x="60" y="1060" width="960" height="300" rx="140" fill="#e9eef8" stroke="#1d120b" stroke-width="8"/>
+            <path d="M-20 1300 L1100 1300 L1100 1920 L-20 1920Z" fill="#4c5fa8" stroke="#1d120b" stroke-width="8"/>
+            <g id="s4ap" transform="translate(520 1080) rotate(-78)"></g>
+            <path d="M-20 1340 C300 1300 700 1320 1100 1300 L1100 1920 L-20 1920Z" fill="#5f74c4" stroke="#1d120b" stroke-width="8"/>
+            <g id="zzz" font-family="Anton" fill="#fff" stroke="#111" stroke-width="8" paint-order="stroke"></g>
+            <rect width="1080" height="1920" fill="#2b4cff" opacity=".18"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S4b crawl out to mate -->
+      <div id="s4b" class="clip scene" data-start="11.66" data-duration="1.74" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s4bcam">
+            <rect width="1080" height="1920" fill="#b98078"/>
+            <g id="s4bpores"></g>
+            <g id="s4bm"></g>
+            <g transform="translate(545 860)"><g id="heart" transform="scale(0)"><path d="M0 40 C-90 -20 -70 -110 0 -70 C70 -110 90 -20 0 40Z" fill="#ff3b6b" stroke="#111" stroke-width="10" stroke-linejoin="round"/><path d="M-30 -60 Q-45 -40 -40 -20" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round" opacity=".7"/></g></g>
+            <g id="hearts"></g>
+            <rect width="1080" height="1920" fill="#1b2a7a" opacity=".22"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S5 melatonin + party -->
+      <div id="s5" class="clip scene" data-start="13.4" data-duration="5.0" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s5cam">
+            <rect id="s5bg" width="1080" height="1920" fill="#d7866a"/>
+            <g id="s5pores"></g>
+            <rect id="s5dusk" width="1080" height="1920" fill="#5a2a8a" opacity="0"/>
+            <g id="beams" opacity="0"></g>
+            <g id="melp"></g>
+            <g id="s5m"></g>
+            <g id="cup" opacity="0"><circle id="cupb" cx="0" cy="0" r="70" fill="url(#mel)"/><path d="M-10 0 L-120 0" stroke="#fff" stroke-width="12" stroke-linecap="round"/><path d="M-10 0 L-120 0" stroke="#ff4f8a" stroke-width="6" stroke-dasharray="14 12"/></g>
+            <g id="disco" transform="translate(540 -200)"><path d="M0 -400 L0 -95" stroke="#ddd" stroke-width="6"/><circle r="95" fill="#c9d3e3" stroke="#111" stroke-width="8"/><g id="discoTiles"></g></g>
+            <text id="meltxt" x="540" y="430" text-anchor="middle" font-family="Anton" font-size="128" fill="#e9d4ff" stroke="#2a0f4f" stroke-width="16" paint-order="stroke" opacity="0" filter="url(#glow)">MELATONIN</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S6 scientists: no butt -->
+      <div id="s6" class="clip scene" data-start="18.4" data-duration="3.55" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s6cam">
+            <rect width="1080" height="1920" fill="#cfe0ea"/>
+            <rect y="1400" width="1080" height="520" fill="#8fa9b8"/>
+            <rect x="560" y="530" width="470" height="760" rx="18" fill="#fdfdf8" stroke="#1d120b" stroke-width="10"/>
+            <g id="board" transform="translate(800 1090) rotate(-90)"></g>
+            <g id="qmark" opacity="0" transform="translate(800 1250)"><circle r="70" fill="#ff3344" stroke="#111" stroke-width="8"/><text y="34" text-anchor="middle" font-family="Anton" font-size="100" fill="#fff">?</text></g>
+            <g id="s6p" transform="translate(300 1040) scale(1.05)"></g>
+            <path d="M-20 1560 L1100 1560 L1100 1920 L-20 1920Z" fill="#6b5340" stroke="#1d120b" stroke-width="8"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S7 2022: found it -->
+      <div id="s7" class="clip scene" data-start="21.95" data-duration="3.22" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <defs><clipPath id="scope"><circle cx="540" cy="1000" r="400"/></clipPath></defs>
+          <g id="s7cam">
+            <rect width="1080" height="1920" fill="#f4efe2"/>
+            <g id="paper" stroke="#c9c1ad" stroke-width="18" stroke-linecap="round"></g>
+            <g id="scopeG" opacity="0">
+              <rect width="1080" height="1920" fill="#111"/>
+              <g clip-path="url(#scope)"><rect x="140" y="600" width="800" height="800" fill="#e9f2df"/>
+                <g id="s7zoom"><g id="s7m" transform="translate(1230 1000)"></g></g>
+                <path d="M540 600 V1400 M140 1000 H940" stroke="#000" stroke-width="3" opacity=".25"/>
+              </g>
+              <circle cx="540" cy="1000" r="400" fill="none" stroke="#2b2b2b" stroke-width="40"/>
+              <circle id="ring" cx="540" cy="1000" r="70" fill="none" stroke="#ffd400" stroke-width="14" opacity="0"/>
+            </g>
+            <g transform="translate(540 960)"><g id="stamp" opacity="0">
+              <rect x="-330" y="-150" width="660" height="300" rx="24" fill="none" stroke="#d1242f" stroke-width="22"/>
+              <text y="95" text-anchor="middle" font-family="Anton" font-size="260" fill="#d1242f">2022</text>
+            </g></g>
+            <g transform="translate(230 1560) scale(.62)"><g id="s7p" opacity="0"></g></g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- S8 almost every adult -->
+      <div id="s8" class="clip scene" data-start="25.17" data-duration="2.8" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s8cam"><rect width="1080" height="1920" fill="#ffcf4a"/><g id="s8rays"></g><g id="s8faces"></g></g>
+        </svg>
+      </div>
+
+      <!-- S9 including you -->
+      <div id="s9" class="clip scene" data-start="27.97" data-duration="3.23" data-track-index="0">
+        <svg viewBox="0 0 1080 1920">
+          <g id="s9cam">
+            <rect width="1080" height="1920" fill="url(#tile)"/>
+            <rect width="1080" height="1920" fill="#000" opacity=".18"/>
+            <g id="s9p" transform="translate(540 1010)"></g>
+            <g id="s9mwrap"><g id="s9m"></g></g>
+          </g>
+          <g id="ui"><rect x="30" y="30" width="1020" height="1860" rx="70" fill="none" stroke="#fff" stroke-width="6" opacity=".7"/>
+            <circle cx="140" cy="330" r="20" fill="#ff2b2b"/><text x="180" y="346" font-family="Inter" font-weight="700" font-size="44" fill="#fff">REC</text>
+</g>
+        </svg>
+      </div>
+
+      <!-- Key text -->
+      <div id="c1" class="clip cap" data-start="0" data-duration="3.05" data-track-index="1" style="top:300px"><span id="c1a" class="ln">ON YOUR FACE</span><span id="c1b" class="ln hi">RIGHT NOW</span></div>
+      <div id="c5" class="clip cap" data-start="17.15" data-duration="1.25" data-track-index="1" style="top:520px"><span id="c5a" class="ln hi">ALL NIGHT</span></div>
+      <div id="c6" class="clip cap" data-start="21.0" data-duration="0.95" data-track-index="1" style="top:290px"><span id="c6a" class="ln sm">NO BUTT?!</span></div>
+      <div id="c7" class="clip cap" data-start="24.7" data-duration="0.47" data-track-index="1" style="top:300px"><span id="c7a" class="ln hi">FOUND ONE</span></div>
+      <div id="c8" class="clip cap" data-start="25.7" data-duration="2.27" data-track-index="1" style="top:300px"><span id="c8a" class="ln sm">ALMOST EVERY</span><span id="c8b" class="ln hi sm" style="margin-top:14px">ADULT</span></div>
+      <div id="c9" class="clip cap" data-start="29.3" data-duration="1.9" data-track-index="1" style="top:310px"><span id="c9a" class="ln sm">INCLUDING</span><span id="c9b" class="ln hi">YOU.</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="31.2" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = window.XR.tf;
+      const R = X.rand(42);
+      // shared defs once (gradients/filters used by every scene)
+      document.getElementById("s1defs").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      // subtitles always on (owner 22/11/2026); moved down where faces would be covered
+      X.captions({ capY: (t) => (t < 3.05 ? 1560 : t < 6.4 ? 330 : t < 7.85 ? 1450 : t < 13.4 ? 1290 : t < 18.4 ? 1520 : t < 21.95 ? 1440 : t < 25.17 ? 1290 : t < 27.97 ? 1440 : 1650) });
+
+      // ---------- build characters ----------
+      const guy = { skin: "#f0bf96", skinD: "#d4936b", hair: "#3b2516", hairStyle: "short", shirt: "#e8573a", iris: "#3e6b2e" };
+      X.put("s1p", X.person("g1", 1.45, guy));
+      X.put("s1mite", X.mite("m0", 0.62));
+      X.put("s4ap", X.person("g2", 1.25, guy));
+      X.put("s9p", X.person("g3", 1.45, guy));
+
+      const s2m = [["m1", 478, 760, 0.7], ["m2", 604, 820, 0.68], ["m3", 488, 1150, 0.66], ["m4", 598, 1265, 0.62]];
+      for (const [id, x, y, s] of s2m) X.put("s2m", `<g transform="translate(${x} ${y}) rotate(90)">${X.mite(id, s)}</g>`);
+      X.put("s2side", `<g transform="translate(165 700) rotate(92)">${X.mite("ms1", 0.55)}</g><g transform="translate(935 660) rotate(88)">${X.mite("ms2", 0.55)}</g>`);
+      let cells = ""; for (let i = 0; i < 60; i++) cells += `<ellipse cx="${(R() * 1600 - 260).toFixed(0)}" cy="${(700 + R() * 1700).toFixed(0)}" rx="${(30 + R() * 50).toFixed(0)}" ry="${(20 + R() * 30).toFixed(0)}" fill="#fff" opacity="${(0.06 + R() * 0.08).toFixed(2)}"/>`;
+      X.put("s2cells", cells);
+
+      X.put("s3m", X.mite("m5", 2.5));
+      let bok = ""; for (let i = 0; i < 18; i++) bok += `<circle cx="${(R() * 1080).toFixed(0)}" cy="${(R() * 1920).toFixed(0)}" r="${(40 + R() * 90).toFixed(0)}" fill="#ffd9c8" opacity="${(0.08 + R() * 0.12).toFixed(2)}" filter="url(#soft)"/>`;
+      X.put("s3bok", bok);
+      const drops = [[990, 960, 50], [1020, 1130, 30], [900, 800, 26], [960, 1270, 36], [820, 1220, 22]];
+      X.put("drops", drops.map((d, i) => `<g id="dr${i}" transform="translate(${d[0]} ${d[1]})"><circle r="${d[2]}" fill="url(#oil)" stroke="#9a6a10" stroke-width="5"/><ellipse cx="${-d[2] * 0.3}" cy="${-d[2] * 0.35}" rx="${d[2] * 0.28}" ry="${d[2] * 0.18}" fill="#fff" opacity=".8"/></g>`).join(""));
+
+      let zz = ""; for (let i = 0; i < 3; i++) zz += `<text id="z${i}" x="0" y="0" font-size="${80 + i * 30}">Z</text>`;
+      X.put("zzz", zz);
+
+      const pores = (n, seed, col) => { const r = X.rand(seed); let s = ""; for (let i = 0; i < n; i++) { const x = r() * 1080, y = r() * 1920; s += `<ellipse cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" rx="${(14 + r() * 10).toFixed(0)}" ry="${(9 + r() * 6).toFixed(0)}" fill="${col}"/><path d="M${x.toFixed(0)} ${y.toFixed(0)} q${(r() * 40 - 20).toFixed(0)} -60 ${(r() * 60 - 30).toFixed(0)} -120" stroke="#3a2416" stroke-width="5" fill="none" opacity=".55"/>`; } return s; };
+      X.put("s4bpores", `<ellipse cx="300" cy="1150" rx="60" ry="34" fill="#4a1f1a"/><ellipse cx="800" cy="1060" rx="60" ry="34" fill="#4a1f1a"/>` + pores(26, 7, "#7e4038"));
+      X.put("s4bm", `<g id="w6"><g transform="rotate(-8)">${X.mite("m6", 1.35)}</g></g><g id="w7"><g transform="scale(-1 1) rotate(-6)">${X.mite("m7", 1.35)}</g></g>`);
+      let hs = ""; for (let i = 0; i < 6; i++) hs += `<path id="h${i}" d="M0 14 C-30 -6 -24 -38 0 -24 C24 -38 30 -6 0 14Z" fill="#ff5c86" stroke="#111" stroke-width="5" opacity="0"/>`;
+      X.put("hearts", hs);
+
+      X.put("s5pores", pores(30, 11, "#8a4a3a"));
+      X.put("s5m", `<g id="w8" transform="translate(540 1200)">${X.mite("m8", 1.8, { glasses: true })}</g><g id="w9" transform="translate(-300 1500)"><g transform="rotate(-20)">${X.mite("m9", 0.9, { glasses: true })}</g></g><g id="w10" transform="translate(1380 900)"><g transform="scale(-1 1) rotate(-15)">${X.mite("m10", 0.9, { glasses: true })}</g></g>`);
+      let mp = ""; for (let i = 0; i < 26; i++) mp += `<circle id="mp${i}" r="${(14 + R() * 22).toFixed(0)}" fill="url(#mel)" opacity="0"/>`;
+      X.put("melp", mp);
+      let tiles = ""; for (let a = 0; a < 6; a++) for (let b = 0; b < 6; b++) tiles += `<rect x="${-90 + a * 30}" y="${-90 + b * 30}" width="26" height="26" fill="#fff" opacity="${(0.2 + ((a * 7 + b * 3) % 5) * 0.15).toFixed(2)}"/>`;
+      X.put("discoTiles", `<g clip-path="circle(92px at 0 0)">${tiles}</g>`);
+      const bc = ["#ff3cac", "#2bd2ff", "#fff23a", "#7bff5a", "#a259ff", "#ff7a2b"];
+      X.put("beams", bc.map((c, i) => `<path id="bm${i}" d="M540 120 L380 2000 L700 2000Z" fill="${c}" opacity=".32"/>`).join(""));
+
+      X.put("board", X.mite("m11", 1.15));
+      X.put("s6p", X.person("g4", 1, { skin: "#8d5a3b", skinD: "#6b3f26", hair: "#d8d8d8", hairStyle: "bald", shirt: "#ffffff", glasses: true, iris: "#2a1a10", beard: true }));
+
+      let pl = ""; for (let i = 0; i < 22; i++) { const y = 260 + i * 70, w = 600 + ((i * 37) % 260); pl += `<path d="M${(1080 - w) / 2} ${y} H${(1080 + w) / 2}"/>`; }
+      X.put("paper", `<path d="M200 170 H880" stroke="#8d8676" stroke-width="34"/>` + pl);
+      X.put("s7m", X.mite("m12", 3));
+      X.put("s7p", X.person("g5", 1, { skin: "#8d5a3b", skinD: "#6b3f26", hair: "#d8d8d8", hairStyle: "bald", shirt: "#ffffff", glasses: true, iris: "#2a1a10", beard: true }));
+
+      const faces = [
+        { skin: "#f6d0b1", hair: "#d9a441", hairStyle: "long", shirt: "#3aa76d" },
+        { skin: "#6e4128", skinD: "#53301c", hair: "#1a0f08", hairStyle: "curly", shirt: "#e84a5f" },
+        { skin: "#e8b48c", hair: "#2a1a10", hairStyle: "bun", shirt: "#4b6cff", glasses: true },
+        { skin: "#c58c62", hair: "#111", hairStyle: "short", shirt: "#ff9f1c", beard: true },
+        { skin: "#f2c6a8", hair: "#bbbbbb", hairStyle: "bald", shirt: "#7a4cff", glasses: true },
+        { skin: "#a8724c", hair: "#3b1f10", hairStyle: "long", shirt: "#10a5a5" },
+      ];
+      const fpos = [[300, 640], [780, 640], [300, 940], [780, 940], [300, 1240], [780, 1240]];
+      let rays = ""; for (let i = 0; i < 16; i++) rays += `<path d="M540 960 L${540 + Math.cos(i / 16 * 6.283) * 1600} ${960 + Math.sin(i / 16 * 6.283) * 1600} L${540 + Math.cos((i + 0.5) / 16 * 6.283) * 1600} ${960 + Math.sin((i + 0.5) / 16 * 6.283) * 1600}Z" fill="#ffe08a" opacity=".6"/>`;
+      X.put("s8rays", `<g id="raysR">${rays}</g>`);
+      X.put("s8faces", faces.map((f, i) => `<g transform="translate(${fpos[i][0]} ${fpos[i][1]})"><g id="fc${i}" transform="scale(0)">
+          <clipPath id="fcc${i}"><circle r="135"/></clipPath><circle r="135" fill="#fff6e0"/>
+          <g clip-path="url(#fcc${i})"><g transform="translate(0 30)">${X.person("f" + i, 0.48, f)}</g></g>
+          <circle r="135" fill="none" stroke="#111" stroke-width="10"/>
+          <g transform="translate(${i % 2 ? -70 : 70} -95) rotate(-90)"><g id="fm${i}" transform="scale(0)">${X.mite("fmm" + i, 0.22)}</g></g></g></g>`).join(""));
+      X.put("s9m", `<g transform="rotate(-90)">${X.mite("m13", 0.5)}</g>`);
+
+      // ---------- per-frame life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      const tm = (s, w) => window.TIMING[s][w];
+      X.life((t) => {
+        if (W(t, 0, 3.05)) {
+          const gz = t < 0.9 ? [6, 4] : [14, 12];
+          X.personLife("g1", t, { gaze: gz, brow: X.sm(1.6, 2.0, t) * 0.9, open: X.sm(1.7, 2.0, t) * 0.55, smile: 0.4 - X.sm(1.6, 2.0, t) * 0.9, pupil: 1 - X.sm(2.1, 2.4, t) * 0.25, tilt: -3 });
+          X.miteLife("m0", t, { mouth: 0.3 + 0.3 * Math.sin(t * 6), phase: 1 });
+          T("s1mite", `translate(760 ${1200 - X.sm(0.3, 0.9, t) * 85}) rotate(-90)`);
+        }
+        if (W(t, 3.05, 7.91)) {
+          s2m.forEach(([id], i) => X.miteLife(id, t, { phase: i * 1.7, mouth: 0.2, gaze: [0, 4] }));
+          X.miteLife("ms1", t, { phase: 3 }); X.miteLife("ms2", t, { phase: 5 });
+          // m2 legs pop on "eight-legged"
+          const p = X.sm(3.5, 3.7, t) - X.sm(4.6, 4.9, t);
+          X.attr("m2", "transform", `scale(${0.68 * (1 + p * 0.12)})`);
+        }
+        if (W(t, 7.91, 10.63)) {
+          const chew = t > 8.95 ? Math.abs(Math.sin((t - 8.95) * Math.PI * 2.85)) : 0.1;
+          X.miteLife("m5", t, { mouth: chew, phase: 2, gaze: [6, 0], pupil: 1.1, bounce: t > 8.95 ? 0 : 0 });
+          const bites = [9.0, 9.35, 9.7, 10.05, 10.4];
+          const nb = bites.filter((b) => t >= b).length;
+          drops.forEach((d, i) => {
+            const fl = Math.sin(t * 1.6 + i) * 10;
+            let s = 1, x = d[0], y = d[1];
+            if (i === 0) { s = Math.max(0, 1 - nb * 0.22); x = 990 - X.sm(8.4, 8.95, t) * 120; }
+            T(`dr${i}`, `translate(${x} ${y + fl}) scale(${s.toFixed(3)})`);
+          });
+          T("clkH", `rotate(${(t - 7.91) * 720})`);
+        }
+        if (W(t, 10.63, 11.67)) {
+          X.personLife("g2", t, { lid: 1, open: 0.35 + 0.25 * Math.sin(t * 3.2), smile: -0.2, mw: 30 });
+          for (let i = 0; i < 3; i++) { const k = ((t - 10.6) * 0.9 + i / 3) % 1; X.attr(`z${i}`, "transform", `translate(${300 + k * 120 + i * 40} ${900 - k * 330})`); X.attr(`z${i}`, "opacity", Math.sin(k * Math.PI).toFixed(2)); }
+        }
+        if (W(t, 11.66, 13.4)) {
+          const meet = X.sm(11.75, 12.7, t), love = X.sm(12.72, 12.95, t);
+          const em = 0.3 + 0.7 * X.sm(11.7, 12.15, t);
+          T("w6", `translate(${300 + meet * 30} ${1150 - meet * 40}) scale(${em.toFixed(3)})`);
+          T("w7", `translate(${800 - meet * 40} ${1060 + meet * 30}) scale(${em.toFixed(3)})`);
+          X.miteLife("m6", t, { walk: meet < 1 && meet > 0, phase: 0, lid: love * 0.85, blush: love, mouth: 0.2 + love * 0.3, gaze: [6, 0] });
+          X.miteLife("m7", t, { walk: meet < 1 && meet > 0, phase: 2, lid: love * 0.85, blush: love, mouth: 0.2 + love * 0.3, gaze: [6, 0] });
+          for (let i = 0; i < 6; i++) { const k = X.clamp((t - 12.8 - i * 0.08) / 0.6, 0, 1); X.attr(`h${i}`, "opacity", k > 0 && k < 1 ? (1 - k).toFixed(2) : 0); X.attr(`h${i}`, "transform", `translate(${545 + Math.sin(i * 2.1) * 140 * k} ${880 - k * 260 - i * 10}) scale(${0.6 + k * 0.6})`); }
+        }
+        if (W(t, 13.4, 18.4)) {
+          const party = t >= tm(5, 12) - 0.02;
+          const sip = X.sm(15.1, 15.4, t) - X.sm(16.65, 16.85, t);
+          const wide = X.sm(16.1, 16.3, t);
+          const shades = X.sm(16.7, 16.95, t);
+          X.attr("m8-shades", "opacity", shades); X.attr("m9-shades", "opacity", party ? 1 : 0); X.attr("m10-shades", "opacity", party ? 1 : 0);
+          X.miteLife("m8", t, { mouth: party ? 0.9 : sip > 0.5 ? 0.05 : 0.2 + wide * 0.6, pupil: 1 - wide * 0.4, gaze: sip > 0.5 ? [8, 0] : [0, 4], walk: party, bounce: party ? 9.2 : 0, phase: 1 });
+          X.miteLife("m9", t, { walk: true, bounce: party ? 9.2 : 0, mouth: 0.8, phase: 3 });
+          X.miteLife("m10", t, { walk: true, bounce: party ? 9.2 : 0, mouth: 0.8, phase: 5 });
+          const ent = X.sm(17.1, 17.5, t);
+          T("w9", `translate(${-300 + ent * 560} ${1520 - ent * 40})`);
+          T("w10", `translate(${1380 - ent * 560} ${930})`);
+          const cupS = X.sm(14.9, 15.2, t) * (1 - X.sm(16.6, 16.8, t));
+          X.attr("cup", "opacity", cupS);
+          X.attr("cup", "transform", `translate(${540 + 1.8 * 48 + 130} 1200)`);
+          X.attr("cupb", "r", (70 * (1 - X.sm(15.4, 16.6, t) * 0.75)).toFixed(1));
+          for (let i = 0; i < 26; i++) {
+            const st = 14.4 + (i % 13) * 0.11, k = (t - st) / 2.6;
+            const vis = k > 0 && k < 1;
+            const x = 80 + ((i * 397) % 920), y = 1800 - k * 1500;
+            const toM = X.sm(15.3, 16.5, t) * (i % 3 === 0 ? 1 : 0);
+            X.attr(`mp${i}`, "opacity", vis ? (Math.sin(k * Math.PI) * 0.95).toFixed(2) : 0);
+            X.attr(`mp${i}`, "transform", `translate(${(x + (730 - x) * toM).toFixed(1)} ${(y + (1200 - y) * toM).toFixed(1)})`);
+          }
+          const dusk = X.sm(14.3, 16.5, t);
+          X.attr("s5dusk", "opacity", party ? 0.55 : dusk * 0.45);
+          if (party) {
+            const b = Math.floor((t - 17.18) / 0.22) % 4;
+            X.attr("s5bg", "fill", ["#7a2bd1", "#d12b9a", "#2b6fd1", "#16a39a"][b]);
+            X.attr("beams", "opacity", 1);
+            for (let i = 0; i < 6; i++) X.attr(`bm${i}`, "transform", `rotate(${Math.sin(t * 2.4 + i * 1.1) * 38 + (i - 2.5) * 12} 540 120)`);
+            T("disco", `translate(540 ${-200 + X.sm(17.18, 17.5, t) * 420}) rotate(${(t - 17.18) * 90})`);
+          } else { X.attr("s5bg", "fill", "#d7866a"); X.attr("beams", "opacity", 0); T("disco", "translate(540 -300)"); }
+        }
+        if (W(t, 18.4, 21.95)) {
+          const shake = t > 19.85 && t < 20.9 ? Math.sin((t - 19.85) * 18) * 9 : 0;
+          const smug = X.sm(19.8, 20.1, t);
+          X.personLife("g4", t, { tilt: shake, lid: smug * 0.75, smile: 0.5 + smug * 0.4, open: t > 21.0 ? 0.2 : 0, brow: smug > 0.5 ? -0.4 : 0.3, gaze: [16, -2], phase: 0.4 });
+          X.miteLife("m11", t, { phase: 4, mouth: 0.1 });
+        }
+        if (W(t, 21.95, 25.17)) {
+          const jaw = X.sm(24.2, 24.4, t);
+          X.personLife("g5", t, { open: jaw * 0.95, smile: 0.4 - jaw * 0.8, brow: jaw, pupil: 1 - jaw * 0.45, gaze: [0, -6], phase: 1.1 });
+          X.miteLife("m12", t, { phase: 2, mouth: 0.2 });
+        }
+        if (W(t, 25.17, 27.97)) {
+          for (let i = 0; i < 6; i++) X.personLife("f" + i, t, { phase: i * 0.9, open: X.sm(26.9 + i * 0.05, 27.1 + i * 0.05, t) * 0.5, smile: 0.5 - X.sm(26.9, 27.1, t) * 0.6, brow: X.sm(26.9, 27.1, t) * 0.8, gaze: [i % 2 ? -12 : 12, -12] });
+          for (let i = 0; i < 6; i++) X.miteLife("fmm" + i, t, { phase: i, mouth: 0.6 });
+          T("raysR", `rotate(${(t - 25.17) * 12} 540 960)`);
+        }
+        if (W(t, 27.97, 31.2)) {
+          const shock = X.sm(29.3, 29.5, t);
+          const nod = t > 27.98 && t < 28.5 ? Math.sin((t - 27.98) * 12) * 4 : 0;
+          X.personLife("g3", t, { noBlink: t > 30.5, gaze: shock > 0.5 ? [0, 0] : [0, 2], brow: shock, open: shock * 0.85, smile: 0.4 - shock * 0.9, pupil: 1 - shock * 0.4, tilt: nod });
+          const peek = X.sm(29.6, 30.0, t);
+          X.miteLife("m13", t, { phase: 1, mouth: 0.55, lid: t > 30.4 && t < 30.6 ? 1 : 0, gaze: [0, 5] });
+          T("s9mwrap", `translate(${540 + 1.45 * 64} ${1010 + 1.45 * (-120) - peek * 40}) scale(${peek.toFixed(3)})`);
+        }
+      });
+
+      // ---------- camera + text timeline ----------
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 31.2, duration: 31.2, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, at);
+      // S1
+      tl.fromTo("#s1cam", { scale: 1, svgOrigin: "720 1100" }, { scale: 1.12, svgOrigin: "720 1100", duration: 2.55, ease: "sine.inOut" }, 0);
+      tl.to("#s1cam", { scale: 6, svgOrigin: "760 1170", duration: 0.5, ease: "power3.in" }, 2.55);
+      tl.fromTo("#c1", { scale: 1 }, { scale: 1.06, duration: 2.4, ease: "sine.inOut" }, 0); tl.fromTo("#c1b", { scale: 1, color: "#ffd400" }, { scale: 1.12, duration: 0.2, ease: "back.out(3)" }, 2.23); tl.to("#c1", { opacity: 0, duration: 0.15 }, 2.45);
+      // S2
+      tl.fromTo("#s2cam", { scale: 2.3, svgOrigin: "540 560" }, { scale: 1, svgOrigin: "540 560", duration: 1.0, ease: "power3.out" }, 3.05);
+      tl.to("#s2cam", { y: -260, duration: 3.8, ease: "sine.inOut" }, 4.05);
+      tl.fromTo("#lab1", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 4.0);
+      tl.fromTo("#lab2", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.25, ease: "back.out(2)" }, 3.9);
+      tl.to("#lab1", { opacity: 0, duration: 0.2 }, 5.0);
+      tl.to("#lab2", { opacity: 0, duration: 0.2 }, 5.1);
+      tl.fromTo("#lab3", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, 5.48);
+      // S3
+      tl.fromTo("#s3cam", { scale: 1.12, svgOrigin: "700 1000" }, { scale: 1.0, svgOrigin: "700 1000", duration: 2.7, ease: "sine.out" }, 7.91);
+      tl.fromTo("#clk", { opacity: 0, scale: 0.4, svgOrigin: "230 420" }, { opacity: 1, scale: 1, svgOrigin: "230 420", duration: 0.3, ease: "back.out(2.4)" }, 7.95);
+      tl.fromTo("#lab4", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.25, ease: "back.out(2)" }, 9.54);
+      // S4a / S4b
+      tl.fromTo("#s4acam", { scale: 1, svgOrigin: "520 1080" }, { scale: 1.6, svgOrigin: "560 1010", duration: 1.04, ease: "power2.in" }, 10.63);
+      tl.fromTo("#s4bcam", { scale: 1.35, svgOrigin: "550 1050" }, { scale: 1.0, svgOrigin: "550 1000", duration: 1.0, ease: "power2.out" }, 11.66);
+      tl.fromTo("#heart", { scale: 0, svgOrigin: "0 0" }, { scale: 1.25, svgOrigin: "0 0", duration: 0.3, ease: "back.out(3)" }, 12.74);
+      tl.to("#heart", { scale: 1, duration: 0.2, ease: "sine.inOut" }, 13.04);
+      // S5
+      tl.fromTo("#s5cam", { scale: 1.08, svgOrigin: "540 1100" }, { scale: 1, svgOrigin: "540 1100", duration: 3.7, ease: "sine.out" }, 13.4);
+      tl.fromTo("#meltxt", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, 14.52);
+      tl.to("#meltxt", { opacity: 0, duration: 0.2 }, 17.0);
+      tl.fromTo("#s5cam", { x: 0 }, { x: 0, keyframes: [{ x: -14, duration: 0.05 }, { x: 12, duration: 0.05 }, { x: 0, duration: 0.06 }] }, 17.18);
+      pop("#c5a", 17.59);
+      // S6
+      tl.fromTo("#s6cam", { scale: 1, svgOrigin: "540 1000" }, { scale: 1.1, svgOrigin: "700 1050", duration: 3.5, ease: "sine.inOut" }, 18.4);
+      tl.fromTo("#qmark", { opacity: 0, scale: 0.2, svgOrigin: "800 1250" }, { opacity: 1, scale: 1, svgOrigin: "800 1250", duration: 0.3, ease: "back.out(3)" }, 20.9);
+      pop("#c6a", 21.06, 1.8);
+      // S7
+      tl.fromTo("#stamp", { scale: 3.2, opacity: 0, rotation: -18, svgOrigin: "0 0" }, { scale: 1, opacity: 1, rotation: -8, svgOrigin: "0 0", duration: 0.18, ease: "power4.in" }, 22.12);
+      tl.fromTo("#s7cam", { x: 0, y: 0 }, { keyframes: [{ x: -22, y: 14, duration: 0.04 }, { x: 18, y: -10, duration: 0.05 }, { x: -8, y: 6, duration: 0.05 }, { x: 0, y: 0, duration: 0.06 }] }, 22.3);
+      tl.to("#stamp", { scale: 1.08, rotation: -5, svgOrigin: "0 0", duration: 0.95, ease: "sine.inOut" }, 22.32);
+      tl.fromTo("#paper", { scale: 1, svgOrigin: "540 960" }, { scale: 1.07, svgOrigin: "540 960", duration: 1.4, ease: "sine.inOut" }, 21.95);
+      tl.to("#stamp", { opacity: 0, duration: 0.15 }, 23.3);
+      tl.fromTo("#scopeG", { opacity: 0 }, { opacity: 1, duration: 0.18 }, 23.35);
+      tl.fromTo("#s7zoom", { scale: 1, svgOrigin: "540 1000" }, { scale: 2.6, svgOrigin: "540 1000", duration: 0.55, ease: "power3.inOut" }, 24.15);
+      tl.fromTo("#ring", { opacity: 0, scale: 2.5, svgOrigin: "540 1000" }, { opacity: 1, scale: 1, svgOrigin: "540 1000", duration: 0.22, ease: "back.out(2)" }, 24.7);
+      tl.fromTo("#s7p", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, 23.9);
+      pop("#c7a", 24.73);
+      // S8
+      for (let i = 0; i < 6; i++) tl.fromTo(`#fc${i}`, { scale: 0.55, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.3, ease: "back.out(2.2)" }, 25.17 + i * 0.07);
+      for (let i = 0; i < 6; i++) tl.fromTo(`#fm${i}`, { scale: 0, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.25, ease: "back.out(3)" }, 26.9 + i * 0.07);
+      pop("#c8a", 25.77); pop("#c8b", 26.13);
+      // S9
+      tl.fromTo("#s9cam", { scale: 1, svgOrigin: "540 960" }, { scale: 1, svgOrigin: "540 960", duration: 0.01 }, 27.97);
+      tl.to("#s9cam", { scale: 1.32, svgOrigin: "600 900", duration: 0.35, ease: "power3.out" }, 28.86);
+      tl.to("#s9cam", { scale: 1.45, svgOrigin: "600 900", duration: 1.6, ease: "sine.out" }, 29.3);
+      pop("#c9a", 29.0); pop("#c9b", 29.34, 1.8);
+      // cut flashes
+      [3.05, 21.95, 25.17].forEach((at, i) => tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, at));
+      // film grain boils at 12 fps
+      const gr = { k: 0 };
+      tl.to(gr, { k: 31.2, duration: 31.2, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
 handoff.py refuses (status hold) any video whose out/<id>/qa_report.json is missing, failed, or belongs to another file.
 
 Automatic checks (python tools/qa.py <id>):
-  STYLE   render_style "cartoon" (the only engine for new videos since 20/11/2026)
+  STYLE   render_style "cartoon" or "hyperframes" (owner 22/11/2026: half the videos in each engine)
   VOICE   ElevenLabs take (no kokoro fallback), word timings complete and in order, narration not cut off
   AUDIO   -14 LUFS +-1, true peak <= -0.9 dBTP, voice over music/SFX >= 6 dB in every shot, audio as long as the picture
   VIDEO   1080x1920, 30 fps, H.264 + AAC 48 kHz, < 59 s, picture length = narration, no frozen spans >= 0.6 s, no black frames
@@ -32,7 +32,8 @@ if "--visual-ok" in sys.argv:
     print("visual sign-off saved;", "PASS" if rep["pass"] else "still FAILING: " + ", ".join(rep["errors"])); sys.exit(0 if rep["pass"] else 2)
 
 # ---- STYLE ----
-if meta.get("render_style") != "cartoon": errs.append("style_not_cartoon")
+STYLE = meta.get("render_style")
+if STYLE not in ("cartoon", "hyperframes"): errs.append("style_not_cartoon_or_hyperframes")
 # ---- VOICE ----
 tm = json.load(open(f"{OUT}/timing.json"))
 if not str(tm.get("engine", "")).startswith("elevenlabs"): errs.append("voice_not_elevenlabs")
@@ -106,7 +107,8 @@ import glob
 fq = []
 for p in sorted(glob.glob(f"{OUT}/shots/*.qa.json")): fq += [dict(q, shot=json.load(open(p))["shot"]) for q in json.load(open(p))["frames"]]
 shot_ids = [s["id"] for s in json.load(open(f"{OUT}/shots.json"))]
-missing = [s for s in shot_ids if not os.path.exists(f"{OUT}/shots/{s}.qa.json")]
+missing = [s for s in shot_ids if not os.path.exists(f"{OUT}/shots/{s}.qa.json")] if STYLE == "cartoon" else []
+# hyperframes: there is no 3D camera/face audit; the visual sign-off (qa_sheet + qa_mid, a fresh reviewer) covers it
 if missing: errs.append("frame_audit_missing_for_" + ",".join(missing))
 def runs(flags, n):  # first time of any run of >= n consecutive True
     k = 0

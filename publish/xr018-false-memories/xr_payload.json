@@ -1,0 +1,53 @@
+{
+  "content_id": "xr-018",
+  "repo_id": "xr018-false-memories",
+  "sha256": "974c089a14695c6f7fa9c7d210c7c06f9efe0b7bb893a377700830b157cfb453",
+  "file_size_bytes": 25049233,
+  "duration_seconds": 41.249,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.984,
+  "video_bit_rate": 4724697,
+  "faststart": true,
+  "title_youtube": "False Memory: You Remember Things That Never Happened (Lost in the Mall Study)",
+  "description_youtube": "False memories are real: your brain doesn't replay memories like a video, it rebuilds them every time you recall them, and it can rebuild things that never happened.\n\nThe famous experiment:\n- In 1995, psychologists Elizabeth Loftus and Jacqueline Pickrell gave 24 people four short stories about their childhood, written with help from their relatives.\n- Three were true. One was invented: getting lost in a shopping mall around age five.\n- After the interviews, about 1 in 4 (6 of 24) remembered the fake event, fully or partly.\n- A 2023 replication with 123 people found 35%. Across later memory-implant studies, rates often land between 30% and 50%.\n\nThis is why eyewitness memory can be confident and still wrong. Which childhood memory are you most sure about?\n\nSources:\n- University College Cork (2023), replication of the Lost in the Mall study: https://cora.ucc.ie/server/api/core/bitstreams/075c236a-356f-4694-94c5-9500b6c148d3/content\n- Wellcome Collection, Lost in the mall and other false memories: https://wellcomecollection.org/articles/XQze2hIAAGYP8ckl\n- Association for Psychological Science, Grand illusions of memory (Loftus): https://www.psychologicalscience.org/observer/grand-illusions-of-memory-keynote-address-showcases-evidence-of-false-memories\n\n#falsememory #psychology #brain #shorts",
+  "caption_instagram": "You remember things that never happened. In 1995, 1 in 4 people 'remembered' getting lost in a mall as a kid. It never happened. #falsememory #psychology #shorts",
+  "tags": [
+    "false memory",
+    "false memories explained",
+    "lost in the mall experiment",
+    "elizabeth loftus false memory study",
+    "can you remember something that never happened",
+    "how memory works",
+    "memory is reconstructive",
+    "psychology facts",
+    "brain facts",
+    "memory implantation",
+    "eyewitness memory",
+    "psychology shorts"
+  ],
+  "series": "Mind Tricks",
+  "sources": [
+    {
+      "title": "Murphy et al., University College Cork (2023): replication of Loftus & Pickrell (1995); 25% in the original (6 of 24), 35% in the replication",
+      "url": "https://cora.ucc.ie/server/api/core/bitstreams/075c236a-356f-4694-94c5-9500b6c148d3/content"
+    },
+    {
+      "title": "Wellcome Collection: three true stories and one false (lost in a mall); later studies usually 30-50% false memory creation",
+      "url": "https://wellcomecollection.org/articles/XQze2hIAAGYP8ckl"
+    },
+    {
+      "title": "Association for Psychological Science: Elizabeth Loftus on planting false memories (Lost in the Mall technique)",
+      "url": "https://www.psychologicalscience.org/observer/grand-illusions-of-memory-keynote-address-showcases-evidence-of-false-memories"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "12:23",
+  "checks_failed": []
+}
