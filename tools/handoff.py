@@ -59,6 +59,11 @@ for s in meta.get("sources", []):
     if not str(s.get("url", "")).startswith("https://"): errs.append("source_url_not_https")
     elif s["url"] not in meta.get("description", ""): errs.append("source_url_not_in_description")
 if "<" in meta.get("title", "") or ">" in meta.get("title", "") or len(meta.get("title", "")) > 100: errs.append("title_invalid")
+# YPP shield (owner 23/11/2026, topics/BLINDAJE_YPP.md): the "canal humano" audit is mandatory, not a reminder.
+# Exit code 2 = at least one ROJO (no own angle, <2 sources, no promise_check, advice on a sensitive topic, near-identical thumbnail...).
+_ah = subprocess.run([sys.executable, f"{ROOT}/tools/audit_human.py", "--id", VID], capture_output=True, text=True)
+if _ah.returncode == 2: errs.append("audit_human_rojo_see_out_human_audit_md")
+elif _ah.returncode != 0: errs.append("audit_human_crashed")
 # Search positioning gate (owner request 18/11/2026, SEO.md): keyword, long-tail tags, alt titles, playlist, questions
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import seo as _seo

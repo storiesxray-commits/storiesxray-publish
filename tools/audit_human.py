@@ -52,6 +52,8 @@ def colordist(a, b):
     return d / (len(a) * 3 * 255)
 
 def opener(text, n=2):
+    t = re.sub(r"^(honest(ly)?( question)?|be honest|real talk|quick question)\b", "be honest", (text or "").strip().lower())
+    text = t
     w = re.findall(r"[a-z0-9']+", re.sub(r"\[[^\]]*\]", "", (text or "").lower()))
     return " ".join(w[:n])
 
@@ -75,6 +77,10 @@ def items(limit, only=None):
             "first": sents[0] if sents else "", "last": sents[-1] if sents else "",
             "sents": sents, "style": vm.get("render_style", "toon"),
             "thumbcfg": vm.get("thumbnail") or {},
+            "angle": m.get("human_angle") or vm.get("human_angle") or "",
+            "sources": [x for x in m.get("sources", []) if str(x.get("url", "")).startswith("https://")],
+            "promise": m.get("promise_check") or "",
+            "sensitive_review": m.get("sensitive_review") or "",
         })
     if only:
         target = [x for x in out if x["id"] == only]
@@ -163,6 +169,31 @@ def audit(vs, focus=None):
         if v["style"] == "pro" and v["synthetic"] is False and re.search(r"\b(real|footage|photo|cctv|news)\b", v["desc"].lower()):
             flag("AMARILLO", "revisar etiqueta de contenido sintético",
                  "estilo realista + descripción que sugiere imágenes reales", [v["id"]])
+    # 5. Valor propio (YPP "inauthentic content": falta de valor creativo/educativo). Owner 23/11/2026.
+    #    Para el video nuevo (--id) es ROJO; en la auditoría general del canal, AMARILLO.
+    lvl = "ROJO" if focus else "AMARILLO"
+    ADVICE = re.compile(r"\b(you should (take|buy|invest|stop taking|try)|cure[sd]?|treat(ment|s)? for|dosage|"
+                        r"guaranteed (profit|returns)|buy (this|now)|invest in|financial advice|lose \d+ (lb|pounds|kg))\b")
+    SENS = re.compile(r"\b(cancer|diabetes|depress\w*|suicid\w*|vaccin\w*|medication|pill|drug|stock|crypto|bitcoin|"
+                      r"invest\w*|loan|debt|election|shooting|war|terror\w*|lawsuit)\b")
+    for v in vs:
+        if len(v["angle"].strip()) < 40:
+            flag(lvl, "sin ángulo propio", "human_angle vacío o corto: ¿qué aporta que no esté en Wikipedia?", [v["id"]])
+        if len(v["sources"]) < 2:
+            flag(lvl, "menos de 2 fuentes https", "datos verificados con 2+ fuentes (BLINDAJE_YPP)", [v["id"]])
+        if focus and len(v["promise"].strip()) < 20:
+            flag("ROJO", "falta promise_check",
+                 "anotar en qué segundo el video cumple lo que prometen título y miniatura", [v["id"]])
+        text = " ".join([v["title"], v["desc"][:400]] + v["sents"]).lower()
+        if ADVICE.search(text) and not v["sensitive_review"]:
+            flag(lvl, "consejo en tema sensible", f"\"{ADVICE.search(text).group(0)}\": un narrador IA no da consejos de salud/dinero; reescribir o sensitive_review", [v["id"]])
+        elif focus and SENS.search(text) and not v["sensitive_review"]:
+            flag("AMARILLO", "tema sensible", f"\"{SENS.search(text).group(0)}\": tono de curiosidad, fuentes serias, nada de 'experto'", [v["id"]])
+    # 6. Plantilla en producción: el video nuevo no puede repetir motor+voz+gancho del anterior.
+    if focus and len(vs) >= 2:
+        key = lambda v: (v["style"], str(v["exp"].get("voice")), str(v["exp"].get("hook_type")))
+        if key(vs[-1]) == key(vs[-2]) and all(key(vs[-1])):
+            flag("AMARILLO", "misma combinación que el anterior", f"motor/voz/gancho {key(vs[-1])}", [vs[-1]["id"]])
     return F
 
 def main():

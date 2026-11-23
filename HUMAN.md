@@ -25,6 +25,7 @@ Instagram inhabilitó @storiesxray el 19/11/2026. Pedido de la dueña: que a You
 - Personas reales: solo hechos verificados con fuentes, sin parecido físico, nada que sugiera delitos sin fuente seria.
 
 ## 6. Control automático
+- **Desde 23/11/2026 es obligatorio:** `handoff.py` corre `audit_human.py --id` y pone `hold` si hay ROJO. Reglas de valor propio en `topics/BLINDAJE_YPP.md`.
 - Antes de `handoff.py`, correr `python tools/audit_human.py --id <id>`. Si sale con ROJO (código 2), corregir; si no se puede, `status: "hold"`. Los AMARILLO se corrigen si es barato.
 - La tarea "Stories X-Ray: auditor de canal humano" revisa todos los días el canal entero y deja sus decisiones en "Historial de auditorías" al final de este archivo.
 
@@ -42,3 +43,4 @@ Crecer y verse humano no chocan: lo que YouTube premia (gente que mira, vuelve a
 - 19/11/2026 — Primera auditoría (xr004–xr013): 9/9 miniaturas con la misma receta (círculo + rayos + sello) y 5 comentarios fijados que arrancan con "Be honest". Los guiones abren variados.
 - 19/11/2026 — Instagram pausado (ig_paused). XR-11 (A/B automático de títulos) apagado: solo el optimizador semanal edita metadata publicada, máx. 3 videos por corrida.
 - 21/11/2026 — Auditoría (xr004–xr015; sin salir: solo xr015, ya programado en YouTube 22/11 16:50 ET, 0 ROJO, no se tocó). Mejoró: xr014 y xr015 rompen la receta círculo+rayos+sello y traen `human_angle`; "Be honest" no volvió. Sigue: tipografía de miniatura y subtítulos idénticos en todos, fondo azul noche/violeta en 4 de los últimos 5, xr013 y xr014 en el mismo diner rojo, "NOT…" en 3 miniaturas (xr008/011/014), "Honest question" en el fijado de xr014 (variante de "Be honest" que `audit_human.py` no detecta), 5 cierres seguidos pidiendo algo, descripciones que arrancan con pregunta, duraciones todas 26–37 s. Ritmo: 1 por día desde el 20/11 con horas variadas; el 19/11 salieron 3 Shorts (antes de esta regla); títulos cambiados: xr004–006, uno cada uno el 18/11 (no tocar hasta el 18/12). xr014 se subió a YouTube 1 h 18 min antes de salir (no hubo margen de revisión). Instrucciones para xr016 en PLAYBOOK.
+- 23/11/2026 — Blindaje YPP: audit_human suma valor propio (human_angle, 2+ fuentes, promise_check, consejos en temas sensibles) y detecta "Honest question"/"Real talk" como variante de "Be honest". handoff.py lo corre solo. Pendiente legado: xr010, xr011, xr013 sin human_angle; 4 fijados con "be honest".
