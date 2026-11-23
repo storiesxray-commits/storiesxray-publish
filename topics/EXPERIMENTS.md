@@ -156,6 +156,75 @@ xr013 (zcv8gv3iYRg, noticia, medio) todavía sin fila. Total: 12.953 vistas en 9
 - **Narradores:** xr2 57,1 % (n = 1) y xr4 52,8 % (n = 2, uno es el corto tibio). Sin diferencia que no explique el tema/duración. Sin cambios.
 - **Decisión:** la duración pasa a priorizar corto (ver PLAYBOOK): el largo queda pausado hasta que corto y medio tengan 3 videos con datos cada uno. Hora: se anota la tarde de NY como hipótesis (la elige `handoff.py`, que ya le da 50 % a 16:10–20:50; no se toca).
 
+## YouTube Analytics (XR-06) — 23/11/2026 23:50 UTC (optimizador diario)
+XR-06 status=200. Retención inicial = engagedViews / views. Mapeo nuevo: **muJY3x20XvU = xr014** (everyday, cartoon), **Hoz_y4MsBEM = xr015** (2 vistas a 26 h: demora de Analytics). xr016 (wwAlEAp9ack) y xr017 (9p6JpvenW_A) todavía sin fila. Los optimizadores del 21 y 22/11 no dejaron registro.
+| YouTube id | Video | Dur. real | Gancho (1.ª frase) | Narrador | Tema / categoría | Hora NY | Edad | Vistas | Ret. inicial | % visto | Likes | Shares | Coment. | Subs / 1.000 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| TqVget3OnhQ | xr012 finger-muscles | 15,7 s | dato | xr4 | evergreen / cuerpo | 18:10 | 5 d | **2.799** ↑↑ (+1.168 en 3 d) | 53,2 % | **91,8 %** | 4 | 0 | 0 | 0,0 |
+| FghYtMnXkz8 | xr009 gta-flu | 39,5 s | dato absurdo | xr2 | noticia / pop culture | 17:34 | 5 d | 2.087 (plano) | **56,9 %** | 61,6 % | 34 | 0 | 2 | 0,5 |
+| 2LF0hl69P0c | xr011 real-voice | 36,9 s | "You've never heard…" | xr6 (borrada) | evergreen / cuerpo | 21:56 | 2,9 d | 1.587 | 48,0 % | 64,8 % | 16 | 0 | 1 | 0,6 |
+| muJY3x20XvU | xr014 served-first | 26,7 s | cifra suelta "Eighteen minutes." | xr8 | **everyday** / mind | 12:12 | 2,3 d | 1.552 | 51,2 % | **86,8 %** | 21 | 0 | 0 | 0,6 |
+| Crdu6Bam1c0 | xr008 mirror-face | 34,3 s | "You've never seen…" | xr1 | evergreen / mind | 16:16 | 4,1 d | 1.544 | 53,5 % | 79,7 % | 26 | 0 | 1 | 0,6 |
+| yFCoFoknAtY | xr005 pepsi-fire | 41,1 s | imagen extrema | kokoro | pop culture | 19:03 | 7 d | 1.453 | 54,0 % | 57,9 % | 16 | 0 | 1 | **2,8** |
+| dKt3jbZP3y0 | legado | ~41–47 s | — | kokoro | — | — | > 7 d | 1.445 | 48,6 % | 66,1 % | 37 | 0 | 0 | 1,4 |
+| R1tUFDFpg1E | xr006 calment-122 | 44,6 s | pregunta genérica | kokoro | historia rara | 11:05 | 7,3 d | 1.418 | 46,3 % | 92,1 % ⚠️ | 45 | 0 | 1 | 0,0 |
+| 9i9w4fNvt8I | xr007 your-face | 39,6 s | cifra + pregunta | xr4 | mind | 21:50 | 4,9 d | 1.349 | 56,2 % | 61,2 % | 21 | 1 | 2 | 0,7 |
+| _VH127Agpmg | legado | ~41–47 s | — | kokoro | — | — | > 7 d | 1.279 | **64,4 %** | 61,4 % | 19 | 0 | 0 | 1,6 |
+| Kx3zQdMqgwE | xr001 space | ~45 s | dato | kokoro | cuerpo | — | > 7 d | 1.265 | 53,6 % | 64,3 % | 27 | 0 | 1 | 0,8 |
+| oNWohhg7UF8 | xr004 molasses | 47,2 s | contradicción | kokoro | historia rara | 12:00 | 6,3 d | 1.245 | **63,1 %** | 52,1 % | 30 | 1 | 0 | 0,0 |
+| G3Zfe1HCCuI | xr010 phone-germs | 30,1 s | "Your phone?" | xr4 | evergreen / cuerpo (asco) | 12:41 | 4,3 d | 1.236 | 51,7 % | 54,9 % | 19 | 0 | 1 | 1,6 |
+| zcv8gv3iYRg | xr013 dennys-nvidia | 32,5 s | "Nvidia was born at Denny's?!" | xr7 | **noticia** / negocios-tech | 13:52 | 4,2 d | **546** ⚠️ | 49,3 % | **41,2 %** | 3 | 0 | 0 | 0,0 |
+| Hoz_y4MsBEM | xr015 voyager | 26,2 s | contradicción implícita | xr10 | noticia / espacio | 16:50 | 26 h | 2 (demora) | — | — | | | | |
+Total: 20.805 vistas en 14 videos con datos, retención inicial ponderada 53,6 %, **2 shares** en total (ninguno nuevo desde el 20/11).
+
+### Por variable (23/11) — videos con ≥ 300 vistas y ≥ 48 h, duración REAL del mp4
+| Variable | Nivel | n | Ret. inicial | % visto | Vistas prom. | Shares | Subs/1.000 |
+|---|---|---|---|---|---|---|---|
+| Duración | corto ≤ 22 s | 1 (xr012) | 53,2 % | **91,8 %** | **2.799** | 0 | 0,0 |
+| Duración | medio 25–33 s | **3** (xr010, xr013, xr014) | 51,1 % | 61,0 % | 1.111 | 0 | 0,9 |
+| Duración | largo ≥ 34 s | 10 | 54,3 % | 63,2 % (sin xr006 ⚠️) | 1.467 | 2 | 0,9 |
+| Gancho | dato / imagen | 6 | 53,6 % | 69,5 % | **1.732** | 0 | 0,9 |
+| Gancho | pregunta / "you…" | 5 | 50,8 % | 67,8 % | 1.289 | 1 | 0,5 |
+| Gancho | contradicción | 1 | **63,1 %** | 52,1 % | 1.245 | 1 | 0,0 |
+| Narrador | xr4 Absolute Lunatic | **3** | 53,6 % | 69,3 % | **1.795** | 1 | 0,6 |
+| Narrador | kokoro (v1) | 6 | 54,7 % | 65,6 % | 1.351 | 1 | 1,1 |
+| Narrador | xr2 / xr1 / xr6 / xr7 / xr8 | 1 c/u | 56,9 / 53,5 / 48,0 / 49,3 / 51,2 % | | | | |
+| Tema | noticia | 2 | 55,3 % (56,9 / 49,3) | 51,4 % | 1.316 (2.087 / 546) | 0 | 0,4 |
+| Tema | evergreen | 11 | 53,6 % | 67,8 % | 1.511 | 2 | 0,8 |
+| Tema | everyday | 1 | 51,2 % | 86,8 % | 1.552 | 0 | 0,6 |
+| Categoría | pop culture / famosos | 2 | **55,7 %** | 59,8 % | **1.770** | 0 | **1,4** |
+| Categoría | mind / psicología | 3 | 53,5 % | **75,9 %** | 1.482 | 1 | 0,7 |
+| Categoría | historia rara | 2 | 54,1 % | — | 1.332 | 1 | 0,0 |
+| Categoría | cuerpo | 4 | 51,8 % | 69,0 % | 1.722 (xr012 tira) | 0 | 0,6 |
+| Categoría | negocios / tech | 1 | 49,3 % | 41,2 % | 546 | 0 | 0,0 |
+| Horario (NY) | mediodía 11–14 h | 5 | 52,4 % | 65,4 % | 1.199 | 1 | 0,5 |
+| Horario (NY) | tarde 16–18:30 h | **3** | 54,4 % | **77,7 %** | **2.143** | 0 | 0,3 |
+| Horario (NY) | noche 19–22 h | 3 | 52,5 % | 61,3 % | 1.463 | 1 | 1,4 |
+| Motor | cartoon / hyperframes | 1 / 0 | xr014 51,2 % / sin datos (xr017 salió hoy) | | | | |
+Ninguna variable cumple la regla de retención (≥ 3 por nivel y ≥ 3 puntos): duración tiene medio n = 3 pero corto n = 1; horario tiene 3/3/3 pero la ventaja de la tarde es +2,0 puntos (no 3). **En alcance la tarde NY es clara (2.143 vs 1.199–1.463 vistas, n = 3 por nivel)**, aunque xr009 (noticia) y xr012 (corto) pueden explicar parte.
+
+### Lectura video por video (23/11)
+- **xr012 es el único video del canal que sigue creciendo después del lote inicial:** 1.631 → 2.799 en 3 días, con 91,8 % visto. Todos los demás quedaron planos entre 1.240 y 1.590 (xr009 también se frenó en 2.087). El patrón se confirma: un Short de ~16 s que se ve entero y se repite sigue recibiendo feed; los de 35–47 s no. Ojo: 0 subs y 0 shares; alcance, no fans.
+- **xr013 (noticia Nvidia/Denny's) es el peor del canal: 546 vistas, ni siquiera completó el lote.** 41 % visto (13 s de 32). Tres razones: (1) no era noticia caliente — la historia del Denny's es vieja y el hecho tenía 7 días; (2) la apertura "<marca> was born at…?!" no dice nada nuevo a quien la conoce y no le importa a quien no; (3) negocios/CEO es la categoría con menos ganas de compartir. **Noticias: 1 de 2 anduvo (xr009 GTA, hecho de horas y cultura pop) → siguen 1 de cada 3, y solo si el hecho tiene ≤ 72 h y es de cultura pop / internet / algo que la gente ya está buscando.**
+- **xr014 (everyday, cartoon, 26,7 s):** 86,8 % visto, la mejor terminación entre los de > 20 s. La retención inicial (51 %) la bajó la apertura "Eighteen minutes." (cifra suelta sin contexto, ya prohibida por HUMAN 21/11). Formato everyday promete: se ve entero.
+- **xr008 (espejo, 34 s):** 79,7 % visto pese a 34 s; el tema "tu cara real" sostiene. Pero "You've never seen…" (y xr011 "You've never heard…", 48,0 %) no frena el scroll: los dos "You've never…" promedian 50,9 %. Confirma la prohibición de HUMAN.
+- **xr011 (voz grabada, 36,9 s, xr6):** 48,0 %, de los peores. Largo + apertura "You've never…". La voz xr6 ya fue borrada.
+- **Shares: 0 nuevos en 3 días (2 en 20.805 vistas).** Ni el cierre "share" (xr013) ni el "comment" movieron nada. El cierre no es la palanca; el tema sí.
+- **Etiquetado:** xr017 (31,1 s) y xr019 (30,7 s) salieron con `duration: "short"` pero duran como MEDIO. Desde hoy cuenta la duración real del mp4; "short" = ≤ 22 s.
+
+## Narradores — 23/11
+| Narrador | n (≥ 300 v, ≥ 48 h) | Videos | Ret. inicial | % visto | Vistas prom. | Subs/1.000 |
+|---|---|---|---|---|---|---|
+| xr4 Absolute Lunatic | 3 | xr007, xr010, xr012 | 53,6 % | 69,3 % | 1.795 | 0,6 |
+| xr2 Unhinged Podcaster | 1 | xr009 | 56,9 % | 61,6 % | 2.087 | 0,5 |
+| xr1 Campfire Maniac | 1 | xr008 | 53,5 % | 79,7 % | 1.544 | 0,6 |
+| xr8 Southie Hothead | 1 | xr014 | 51,2 % | 86,8 % | 1.552 | 0,6 |
+| xr7 Queens Firecracker | 1 | xr013 | 49,3 % | 41,2 % | 546 | 0,0 |
+| xr6 Total Meltdown (borrada) | 1 | xr011 | 48,0 % | 64,8 % | 1.587 | 0,6 |
+| xr10 / xr11 / xr12 | 0 | xr015 (demora), xr018, xr016/xr020 | sin datos | | | |
+| kokoro (respaldo) | 6 | v1 | 54,7 % | 65,6 % | 1.351 | 1,1 |
+Resumen (23/11): **sin ganador**. Solo xr4 tiene n = 3 (53,6 %, el que más alcance trae por xr012). Las diferencias entre voces de n = 1 (48–57 %) las explican tema y apertura (xr7 cargó con la noticia vieja, xr6 con el "You've never…"). Pesos sin cambios. Sin voz nueva: la cuenta está en 10/10 y la última alta fue el 21/11 (máx. 1 por semana); las voces sobrias xr10–xr12 todavía no tienen datos.
+
 ## E2 — Duración (desde 17/11/2026; impar = largo 36–40 s, par = corto 28–32 s)
 | Video | Brazo | Duración | Narrador | Tema / categoría | Retención inicial | % reproducido | Vistas a 48 h | Subs / 1.000 |
 |---|---|---|---|---|---|---|---|---|
