@@ -1,0 +1,13 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["This painting made Van Gogh nothing.", 0.1],
+  ["Last week, it sold for a hundred ninety million dollars.", 0.15],
+  ["He painted these chestnut trees in May of eighteen ninety.", 0.1],
+  ["[sighs] He died two months later.", 0.25],
+  ["It beat his old record by seventy-three million.", 0.15],
+  ["[chuckles] Show this to whoever called your art a waste of time.", 0.0]
+ ],
+ "tone": "news",
+ "voice": "xr12"
+}

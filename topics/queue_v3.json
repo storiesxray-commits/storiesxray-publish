@@ -1851,6 +1851,23 @@
    "score": 82,
    "cat": "everyday",
    "source": "owner_doc_2026-11-22"
+  },
+  {
+   "id": "X1122",
+   "title_es": "Un Van Gogh ('Châtaigniers en fleurs', mayo 1890) se vendió por US$190,4 millones en Sotheby's Nueva York (18/11/2026): récord del artista; él nunca cobró nada por ese cuadro",
+   "hook": "This painting made Van Gogh nothing.",
+   "reveal": "Pintado en Auvers en mayo de 1890, dos meses antes de morir; nunca se vendió en vida (pasó a Theo y a Jo, primera venta 1905). Récord anterior US$117,2 M (2022): +US$73 M.",
+   "viral": 9,
+   "hook_power": 9,
+   "score": 90,
+   "cat": "money",
+   "topic_type": "news",
+   "event_date": "2026-11-18",
+   "expires": "2026-11-25",
+   "status": "done",
+   "video_id": "xr020-van-gogh-190m",
+   "source": "Noticia (AUTOPILOT §1b: ni xr018 ni xr019 fueron noticia) elegida el 22/11/2026: Reuters, CNN, ARTnews, Town & Country, Artsy, The Art Newspaper",
+   "note": "Motor cartoon (personas en un lugar: sala de subastas + Auvers 1890). Sin Publicación rápida: la cola ya tiene un Short por día hasta el 25/11 (HUMAN.md §3: máx. 1 por día, y YouTube con ≥ 24 h de margen); un récord de subasta es atemporal (§1b rescate a) y 'Last week' sigue siendo cierto hasta el 28/11. Descartadas en la misma búsqueda: pez barreleye con cabeza transparente (mejor para HyperFrames), 76 bolas de fuego en una noche (fuente secundaria), ciclón Xavier (tragedia/clima), ballenas varadas (muerte). Quedó en HOLD (3 rondas de revisión visual sin PASS sobre el archivo final; el único error marcado en la ronda 3 ya está corregido): la dueña lo libera con qa.py --visual-ok + handoff.py."
   }
  ],
  "dropped_low_score": [

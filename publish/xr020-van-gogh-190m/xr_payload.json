@@ -1,0 +1,73 @@
+{
+  "content_id": "xr-020",
+  "repo_id": "xr020-van-gogh-190m",
+  "sha256": "dee5f3380ac8c702551f5c3c72a156827a1aae71722640eba282b7a6e8664791",
+  "file_size_bytes": 10724287,
+  "duration_seconds": 16.721,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.962,
+  "video_bit_rate": 4992049,
+  "faststart": true,
+  "title_youtube": "Van Gogh Painting Sells for $190.4 Million (He Never Made a Cent From It)",
+  "description_youtube": "Vincent van Gogh's \"Chestnut Trees in Blossom\" (Chataigniers en fleurs) sold for $190.4 million with fees at Sotheby's New York on Wednesday, Nov. 18, 2026, a new auction record for the artist.\n\nThe facts:\n- He painted it in May 1890 in Auvers-sur-Oise, just outside Paris, a few days after he arrived there. He died two months later, on July 29, 1890.\n- It never sold while he was alive: after his death it went to his brother Theo, then to Theo's widow Jo, who sold it in 1905.\n- The old Van Gogh auction record was $117.2 million for \"Orchard with Cypresses\" in 2022. The new one is about $73 million higher.\n- The owners, the Blaquier-Arrieta family, had owned it since 1975. A claim by the heirs of an earlier owner was settled before the sale.\n\nSources:\n- Reuters via TimesLIVE (Nov. 19, 2026): https://www.timeslive.co.za/lifestyle/2026-11-19-van-goghs-chataigniers-en-fleurs-nets-record-1904m-at-auction/\n- Town & Country via Yahoo (Nov. 19, 2026): https://www.yahoo.com/entertainment/articles/vincent-van-gogh-painting-sells-165230296.html\n- CNN (Nov. 18, 2026): https://www.cnn.com/2026/11/18/style/vincent-van-gogh-painting-auction-record\n- ARTnews: https://www.artnews.com/art-news/market/van-gogh-auction-record-sothebys-chataigniers-en-fleurs-2026-1234806413/\n- The Art Newspaper (Oct. 2, 2026), the painting's history: https://theartnewspaper.com/2026/10/02/the-story-behind-the-180m-van-gogh-up-for-auction-this-november\n- Artsy, November 2026 auction records: https://www.artsy.net/article/artsy-editorial-20-new-artist-auction-records-set-november-2026\n\n#vangogh #art #auction",
+  "caption_instagram": "This painting made Van Gogh nothing. Last week it sold for $190.4 million. #vangogh #art #auction",
+  "tags": [
+    "van gogh 190 million",
+    "van gogh painting sold",
+    "van gogh auction record",
+    "chestnut trees in blossom van gogh",
+    "chataigniers en fleurs",
+    "most expensive van gogh",
+    "van gogh record price 2026",
+    "sothebys van gogh",
+    "van gogh auvers 1890",
+    "art auction record",
+    "most expensive paintings",
+    "art news"
+  ],
+  "series": "Money Moves",
+  "sources": [
+    {
+      "title": "Reuters via TimesLIVE (Nov. 19, 2026): Chataigniers en fleurs sold for $190.4m at Sotheby's New York on Wednesday, a record for Van Gogh; previous record $117.2m (Orchard with Cypresses, Christie's 2022); depicts his last two months in Auvers-sur-Oise; owned by the Blaquier-Arrieta family since 1975; Fischer heirs' claim settled",
+      "url": "https://www.timeslive.co.za/lifestyle/2026-11-19-van-goghs-chataigniers-en-fleurs-nets-record-1904m-at-auction/"
+    },
+    {
+      "title": "Town & Country via Yahoo (Nov. 19, 2026): $190.4 million including fees, estimate $180 million; painted in May 1890 a few days after he arrived in Auvers-sur-Oise; he died there on July 29, 1890, about two months later; previous record $117.2M",
+      "url": "https://www.yahoo.com/entertainment/articles/vincent-van-gogh-painting-sells-165230296.html"
+    },
+    {
+      "title": "CNN (Nov. 18, 2026): Vincent van Gogh painting sells for $190 million, smashing auction record",
+      "url": "https://www.cnn.com/2026/11/18/style/vincent-van-gogh-painting-auction-record"
+    },
+    {
+      "title": "ARTnews: Van Gogh painting at Sotheby's smashes record, selling for $190.4 M.",
+      "url": "https://www.artnews.com/art-news/market/van-gogh-auction-record-sothebys-chataigniers-en-fleurs-2026-1234806413/"
+    },
+    {
+      "title": "The Art Newspaper (Oct. 2, 2026): painted in Auvers in May 1890 (letter to Theo of May 25, 1890 mentions a study of chestnut trees); he died July 29, 1890; after his death it passed to Theo and then his widow Jo Bonger, sold through a dealer in 1905; sale set for Nov. 18 at Sotheby's New York",
+      "url": "https://theartnewspaper.com/2026/10/02/the-story-behind-the-180m-van-gogh-up-for-auction-this-november"
+    },
+    {
+      "title": "Artsy (Nov. 20, 2026): 20 new artist auction records in November 2026, Van Gogh $190.4M (prior record $117.2M, 2022)",
+      "url": "https://www.artsy.net/article/artsy-editorial-20-new-artist-auction-records-set-november-2026"
+    },
+    {
+      "title": "WFTV / Cox Media national desk (Nov. 19, 2026): painting by Van Gogh sells for record $190.4 million at Sotheby's auction",
+      "url": "https://www.wftv.com/news/trending/painting-by-van-gogh-sells-record-1904-million-sothebys-auction/NGVUN55DMRF5JHFDHRR4FAYDCI/"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "18:25",
+  "checks_failed": [
+    "qa_failed:visual_signoff_pending",
+    "source_url_not_in_description",
+    "seo_first_tag_must_be_keyword"
+  ]
+}
