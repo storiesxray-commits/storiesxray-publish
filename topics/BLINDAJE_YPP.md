@@ -19,6 +19,8 @@ YouTube desmonetiza 3 cosas: (1) genérico/repetitivo/plantilla, (2) insatisfact
 
 ## Antes de pedir el YPP (no automatizable)
 - Primera postulación = la que importa (rechazo 1 → 30 días; rechazo 2 o suspensión → 90 días).
-- Revisar los 10 más vistos y los 10 más nuevos con este archivo; ocultar los que no pasen.
+- Lista oficial de lo que mira el revisor (support.google.com/youtube/answer/1311392): tema principal, más vistos, más recientes, **mayor tiempo de visualización**, metadatos (títulos, miniaturas, descripciones) y **sección "Información"**. Revisar todo eso con este archivo; ocultar los videos que no pasen.
+- Frase clave de la política: el contenido debe "entretener o informar", no existir "con el único propósito de conseguir visualizaciones". Viral sí, pero cada video tiene que enseñar o entretener de verdad.
+- Sección "Información" (23/11/2026): "Weird but true stories, explained." + investigación y fuentes en la descripción; sin afirmar nada falso sobre cómo se hacen los videos.
 - La dueña: responder comentarios a mano, posts de Comunidad propios, "Acerca de" honesto.
 - Nunca usar otro canal para esquivar una desmonetización.
