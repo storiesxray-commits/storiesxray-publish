@@ -12,10 +12,10 @@
   "video_bit_rate": 4992049,
   "faststart": true,
   "title_youtube": "Van Gogh Painting Sells for $190.4 Million (He Never Made a Cent From It)",
-  "description_youtube": "Vincent van Gogh's \"Chestnut Trees in Blossom\" (Chataigniers en fleurs) sold for $190.4 million with fees at Sotheby's New York on Wednesday, Nov. 18, 2026, a new auction record for the artist.\n\nThe facts:\n- He painted it in May 1890 in Auvers-sur-Oise, just outside Paris, a few days after he arrived there. He died two months later, on July 29, 1890.\n- It never sold while he was alive: after his death it went to his brother Theo, then to Theo's widow Jo, who sold it in 1905.\n- The old Van Gogh auction record was $117.2 million for \"Orchard with Cypresses\" in 2022. The new one is about $73 million higher.\n- The owners, the Blaquier-Arrieta family, had owned it since 1975. A claim by the heirs of an earlier owner was settled before the sale.\n\nSources:\n- Reuters via TimesLIVE (Nov. 19, 2026): https://www.timeslive.co.za/lifestyle/2026-11-19-van-goghs-chataigniers-en-fleurs-nets-record-1904m-at-auction/\n- Town & Country via Yahoo (Nov. 19, 2026): https://www.yahoo.com/entertainment/articles/vincent-van-gogh-painting-sells-165230296.html\n- CNN (Nov. 18, 2026): https://www.cnn.com/2026/11/18/style/vincent-van-gogh-painting-auction-record\n- ARTnews: https://www.artnews.com/art-news/market/van-gogh-auction-record-sothebys-chataigniers-en-fleurs-2026-1234806413/\n- The Art Newspaper (Oct. 2, 2026), the painting's history: https://theartnewspaper.com/2026/10/02/the-story-behind-the-180m-van-gogh-up-for-auction-this-november\n- Artsy, November 2026 auction records: https://www.artsy.net/article/artsy-editorial-20-new-artist-auction-records-set-november-2026\n\n#vangogh #art #auction",
+  "description_youtube": "Vincent van Gogh's \"Chestnut Trees in Blossom\" (Chataigniers en fleurs) sold for $190.4 million with fees at Sotheby's New York on Wednesday, Nov. 18, 2026, a new auction record for the artist.\n\nThe facts:\n- He painted it in May 1890 in Auvers-sur-Oise, just outside Paris, a few days after he arrived there. He died two months later, on July 29, 1890.\n- It never sold while he was alive: after his death it went to his brother Theo, then to Theo's widow Jo, who sold it in 1905.\n- The old Van Gogh auction record was $117.2 million for \"Orchard with Cypresses\" in 2022. The new one is about $73 million higher.\n- The owners, the Blaquier-Arrieta family, had owned it since 1975. A claim by the heirs of an earlier owner was settled before the sale.\n\nSources:\n- Reuters via TimesLIVE (Nov. 19, 2026): https://www.timeslive.co.za/lifestyle/2026-11-19-van-goghs-chataigniers-en-fleurs-nets-record-1904m-at-auction/\n- Town & Country via Yahoo (Nov. 19, 2026): https://www.yahoo.com/entertainment/articles/vincent-van-gogh-painting-sells-165230296.html\n- CNN (Nov. 18, 2026): https://www.cnn.com/2026/11/18/style/vincent-van-gogh-painting-auction-record\n- ARTnews: https://www.artnews.com/art-news/market/van-gogh-auction-record-sothebys-chataigniers-en-fleurs-2026-1234806413/\n- The Art Newspaper (Oct. 2, 2026), the painting's history: https://theartnewspaper.com/2026/10/02/the-story-behind-the-180m-van-gogh-up-for-auction-this-november\n- WFTV / Cox Media: https://www.wftv.com/news/trending/painting-by-van-gogh-sells-record-1904-million-sothebys-auction/NGVUN55DMRF5JHFDHRR4FAYDCI/\n- Artsy, November 2026 auction records: https://www.artsy.net/article/artsy-editorial-20-new-artist-auction-records-set-november-2026\n\n#vangogh #art #auction",
   "caption_instagram": "This painting made Van Gogh nothing. Last week it sold for $190.4 million. #vangogh #art #auction",
   "tags": [
-    "van gogh 190 million",
+    "van gogh painting sold 190 million",
     "van gogh painting sold",
     "van gogh auction record",
     "chestnut trees in blossom van gogh",
@@ -65,9 +65,5 @@
     "youtube"
   ],
   "publish_time_local": "18:25",
-  "checks_failed": [
-    "qa_failed:visual_signoff_pending",
-    "source_url_not_in_description",
-    "seo_first_tag_must_be_keyword"
-  ]
+  "checks_failed": []
 }

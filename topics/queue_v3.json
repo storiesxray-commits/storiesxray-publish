@@ -1867,7 +1867,7 @@
    "status": "done",
    "video_id": "xr020-van-gogh-190m",
    "source": "Noticia (AUTOPILOT §1b: ni xr018 ni xr019 fueron noticia) elegida el 22/11/2026: Reuters, CNN, ARTnews, Town & Country, Artsy, The Art Newspaper",
-   "note": "Motor cartoon (personas en un lugar: sala de subastas + Auvers 1890). Sin Publicación rápida: la cola ya tiene un Short por día hasta el 25/11 (HUMAN.md §3: máx. 1 por día, y YouTube con ≥ 24 h de margen); un récord de subasta es atemporal (§1b rescate a) y 'Last week' sigue siendo cierto hasta el 28/11. Descartadas en la misma búsqueda: pez barreleye con cabeza transparente (mejor para HyperFrames), 76 bolas de fuego en una noche (fuente secundaria), ciclón Xavier (tragedia/clima), ballenas varadas (muerte). Quedó en HOLD (3 rondas de revisión visual sin PASS sobre el archivo final; el único error marcado en la ronda 3 ya está corregido): la dueña lo libera con qa.py --visual-ok + handoff.py."
+   "note": "Motor cartoon (personas en un lugar: sala de subastas + Auvers 1890). Sin Publicación rápida: la cola ya tiene un Short por día hasta el 25/11 (HUMAN.md §3: máx. 1 por día, y YouTube con ≥ 24 h de margen); un récord de subasta es atemporal (§1b rescate a) y 'Last week' sigue siendo cierto hasta el 28/11. Descartadas en la misma búsqueda: pez barreleye con cabeza transparente (mejor para HyperFrames), 76 bolas de fuego en una noche (fuente secundaria), ciclón Xavier (tragedia/clima), ballenas varadas (muerte). Liberado por la dueña el 23/11 ('Dale') tras una 4.ª revisión visual independiente con PASS sobre el archivo final."
   }
  ],
  "dropped_low_score": [
