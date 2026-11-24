@@ -125,6 +125,12 @@ def audit(vs, focus=None):
                      [v["id"] for v in vs if opener(v[field], n) == op])
     repeated("pinned", "comentarios fijados", 2, 3)
     repeated("title", "títulos", 2, 3)
+    # molde de título: "Dato (aclaración entre paréntesis)" en 3+ de los últimos 5 (auditoría 24/11/2026)
+    last5 = vs[-5:]
+    par = [v["id"] for v in last5 if re.search(r"\([^)]{3,}\)\s*\S{0,3}\s*$", v["title"].strip())]
+    if len(par) >= 3:
+        flag("AMARILLO", "títulos con el mismo molde",
+             f"{len(par)} de los últimos 5 terminan con '(…)': escribir el próximo sin paréntesis (HUMAN.md §2)", par)
     repeated("first", "guiones", 2, 3)
     repeated("last", "cierres de guion", 2, 3)
     repeated("desc", "descripciones", 3, 3)
