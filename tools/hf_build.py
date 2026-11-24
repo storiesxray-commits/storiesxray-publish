@@ -30,6 +30,9 @@ def assemble(dst, clean=False):
     shutil.copy(f"{ENG}/hyperframes.json", f"{dst}/hyperframes.json")
     shutil.copy(f"{ROOT}/node_modules/gsap/dist/gsap.min.js", f"{dst}/assets/gsap.min.js")
     shutil.copy(f"{ROOT}/assets/fonts/Anton-Regular.ttf", f"{dst}/assets/fonts/Anton-Regular.ttf")
+    # THE MIRROR series (23/11/2026): "hijacked signal" overlay + its mono fonts. Unused by regular Shorts.
+    shutil.copy(f"{ENG}/mirror.js", f"{dst}/assets/mirror.js")
+    for fnt in ("VT323-Regular.woff2", "IBMPlexMono-Bold.woff2"): shutil.copy(f"{ROOT}/assets/fonts/{fnt}", f"{dst}/assets/fonts/{fnt}")
     tm = json.load(open(f"{OUT}/timing.json")); shots = json.load(open(f"{OUT}/shots.json"))
     words = {s["i"]: [round(w["s"], 3) for w in s["words"]] for s in tm["sentences"]}
     with open(f"{dst}/assets/timing.js", "w") as f:

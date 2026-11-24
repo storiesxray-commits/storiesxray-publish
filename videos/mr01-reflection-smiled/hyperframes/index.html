@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <script src="assets/mirror.js"></script>
+    <style id="mcss"></style>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+      #root { position: relative; width: 100%; height: 100%; background: #030504; }
+      #hidden { position:absolute; inset:0; z-index:60; display:none; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><defs id="mdefs"></defs>
+      <defs>
+        <linearGradient id="tileWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa29e"/><stop offset="1" stop-color="#5d6561"/></linearGradient>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a403d"/><stop offset=".5" stop-color="#2a2f2c"/><stop offset="1" stop-color="#1c201e"/></linearGradient>
+        <linearGradient id="hall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b514e"/><stop offset="1" stop-color="#1b1e1c"/></linearGradient>
+        <radialGradient id="fogG" cx="50%" cy="55%" r="60%"><stop offset="0" stop-color="#dfe6e2" stop-opacity=".85"/><stop offset=".7" stop-color="#cfd8d3" stop-opacity=".55"/><stop offset="1" stop-color="#cfd8d3" stop-opacity="0"/></radialGradient>
+        <radialGradient id="screenGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#bfe8ff" stop-opacity=".5"/><stop offset="1" stop-color="#bfe8ff" stop-opacity="0"/></radialGradient>
+        <clipPath id="mirClip"><rect x="330" y="80" width="420" height="330" rx="6"/></clipPath>
+        <clipPath id="mirClip3"><rect x="330" y="80" width="420" height="330" rx="6"/></clipPath>
+        <clipPath id="peepClip"><circle cx="540" cy="405" r="340"/></clipPath>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="47.0" data-width="1080" data-height="1920">
+      <div id="mwin">
+
+        <!-- S1 CCTV: man at the sink from behind; the reflection smiles, he doesn't -->
+        <div id="s1" class="clip scene" data-start="0" data-duration="3.2" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><g filter="url(#nv)"><g id="s1cam">
+            <rect width="1080" height="810" fill="url(#tileWall)"/>
+            <g id="tiles1" stroke="#3f4643" stroke-width="3" opacity=".7"></g>
+            <rect x="314" y="64" width="452" height="362" rx="12" fill="#1a1d1b"/>
+            <rect x="330" y="80" width="420" height="330" rx="6" fill="url(#glass)"/>
+            <g clip-path="url(#mirClip)"><rect x="330" y="80" width="420" height="330" fill="#6b726e" opacity=".35"/>
+              <path d="M330 80 L520 80 L330 300Z" fill="#fff" opacity=".05"/>
+              <g transform="translate(610 560)"><g id="r1host"></g></g></g>
+            <path d="M120 470 L960 470 L1080 600 L0 600Z" fill="#c9cfcb"/><path d="M0 600 L1080 600 L1080 810 L0 810Z" fill="#7b827e"/>
+            <ellipse cx="540" cy="520" rx="150" ry="40" fill="#8e9591" stroke="#545a57" stroke-width="5"/>
+            <g transform="translate(450 1080)"><g id="m1host"></g></g>
+            <rect width="1080" height="810" fill="url(#winVig)"/>
+          </g></g></svg>
+        </div>
+
+        <!-- S2 POV: phone flashlight on the mirror, reflection normal -->
+        <div id="s2" class="clip scene" data-start="3.2" data-duration="5.8" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><g filter="url(#nv)"><g id="s2cam">
+            <rect x="-100" y="-100" width="1280" height="1010" fill="#0c0e0d"/>
+            <rect x="140" y="20" width="800" height="700" rx="10" fill="#1b1e1c" stroke="#2c302e" stroke-width="18"/>
+            <g transform="translate(540 1050)"><g id="r2host"></g></g>
+            <circle id="lens2" cx="540" cy="520" r="34" fill="#fff" opacity=".9"/>
+            <rect x="-100" y="680" width="1280" height="240" fill="#3b403d"/>
+          </g>
+          <circle id="torch2" cx="540" cy="420" r="420" fill="url(#torch)" style="mix-blend-mode:overlay"/>
+          <rect id="dark2" x="-100" y="-100" width="1280" height="1010" fill="#000" opacity=".55"/></g></svg>
+        </div>
+
+        <!-- S3 CCTV: he raises a hand, the reflection follows half a second late -->
+        <div id="s3" class="clip scene" data-start="9.0" data-duration="6.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><g filter="url(#nv)"><g id="s3cam">
+            <rect width="1080" height="810" fill="url(#tileWall)"/>
+            <g id="tiles3" stroke="#3f4643" stroke-width="3" opacity=".7"></g>
+            <rect x="314" y="64" width="452" height="362" rx="12" fill="#1a1d1b"/>
+            <rect x="330" y="80" width="420" height="330" rx="6" fill="url(#glass)"/>
+            <g clip-path="url(#mirClip3)"><rect x="330" y="80" width="420" height="330" fill="#6b726e" opacity=".35"/>
+              <g transform="translate(610 560)"><g id="r3host"></g></g></g>
+            <path d="M120 470 L960 470 L1080 600 L0 600Z" fill="#c9cfcb"/><path d="M0 600 L1080 600 L1080 810 L0 810Z" fill="#7b827e"/>
+            <ellipse cx="540" cy="520" rx="150" ry="40" fill="#8e9591" stroke="#545a57" stroke-width="5"/>
+            <g transform="translate(450 1080)"><g id="m3host"></g></g>
+            <rect width="1080" height="810" fill="url(#winVig)"/>
+          </g></g></svg>
+        </div>
+
+        <!-- S4 close-up: the glass fogs from inside; LET ME OUT at a child's height, child's handwriting -->
+        <div id="s4" class="clip scene" data-start="15.0" data-duration="6.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><g id="s4cam">
+            <g filter="url(#nv)"><rect width="1080" height="810" fill="#2a2f2c"/>
+              <path d="M0 0 L420 0 L0 520Z" fill="#fff" opacity=".04"/>
+              <ellipse id="fog4" cx="540" cy="520" rx="0" ry="0" fill="url(#fogG)"/></g>
+            <g id="lmo" filter="url(#amber)" opacity=".95"></g>
+            <rect width="1080" height="810" fill="url(#winVig)"/>
+          </g></svg>
+        </div>
+
+        <!-- S5 phone: incoming call from your own number (generic, unbranded UI) -->
+        <div id="s5" class="clip scene" data-start="21.0" data-duration="8.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><rect width="1080" height="810" fill="#050607"/>
+            <ellipse cx="540" cy="420" rx="520" ry="380" fill="url(#screenGlow)"/>
+            <g id="ph5" transform="translate(540 430)"><g id="ph5s">
+              <rect x="-250" y="-470" width="500" height="1000" rx="60" fill="#0d0f12" stroke="#2b2f36" stroke-width="10"/>
+              <rect x="-226" y="-446" width="452" height="952" rx="44" fill="#141b24"/>
+              <text y="-330" text-anchor="middle" font-family="PlexMono" font-size="30" fill="#8fa3b8" letter-spacing="4">INCOMING CALL</text>
+              <text y="-250" text-anchor="middle" font-family="PlexMono" font-size="54" fill="#eaf2ff">(555) 013-0317</text>
+              <rect x="-120" y="-200" width="240" height="56" rx="28" fill="#2a3644"/>
+              <text y="-161" text-anchor="middle" font-family="PlexMono" font-size="30" fill="#ffcf7a" letter-spacing="3">MY NUMBER</text>
+              <circle cx="0" cy="-20" r="92" fill="#22303e"/><path d="M-40 10 C-40 -60 40 -60 40 10 M-62 70 C-60 20 60 20 62 70" stroke="#5b6f84" stroke-width="16" fill="none" stroke-linecap="round"/>
+            </g></g>
+          </svg>
+        </div>
+
+        <!-- S6 black: call in progress; the double's voice. Amber = the other side -->
+        <div id="s6" class="clip scene" data-start="29.0" data-duration="7.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><rect width="1080" height="810" fill="#000"/>
+            <text x="540" y="210" text-anchor="middle" font-family="PlexMono" font-size="40" fill="#ffb14a" letter-spacing="6">CALL IN PROGRESS</text>
+            <text id="ct6" x="540" y="300" text-anchor="middle" font-family="VT323" font-size="96" fill="#ffb14a">00:00</text>
+            <path id="wave6" fill="none" stroke="#ffb14a" stroke-width="6" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- S7 hallway CCTV, then the peephole: someone in your clothes, face in shadow -->
+        <div id="s7" class="clip scene" data-start="36.0" data-duration="5.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><g filter="url(#nv)">
+            <g id="hall7"><rect width="1080" height="810" fill="url(#hall)"/>
+              <path d="M0 0 L300 180 L300 640 L0 810Z" fill="#3a3f3c"/><path d="M1080 0 L780 180 L780 640 L1080 810Z" fill="#2f3431"/>
+              <rect x="300" y="180" width="480" height="460" fill="#252927"/>
+              <rect x="430" y="250" width="220" height="390" fill="#5c625f" stroke="#1a1d1b" stroke-width="8"/>
+              <circle cx="625" cy="460" r="10" fill="#b9c0bc"/><circle cx="540" cy="330" r="7" fill="#0c0e0d"/>
+              <path d="M300 640 L780 640 L1080 810 L0 810Z" fill="#4a504d"/></g>
+            <g id="peep7" opacity="0"><rect width="1080" height="810" fill="#000"/>
+              <g clip-path="url(#peepClip)"><rect width="1080" height="810" fill="#6c7370"/>
+                <path d="M200 0 L880 0 L760 810 L320 810Z" fill="#545b58"/>
+                <g transform="translate(540 1020) scale(1.3)"><g id="d7host"></g></g></g>
+              <circle cx="540" cy="405" r="340" fill="none" stroke="#000" stroke-width="40"/>
+              <circle cx="540" cy="405" r="360" fill="url(#winVig)"/></g>
+          </g></svg>
+        </div>
+
+        <!-- S8 the vote (drawn by XRM.voteBuild over the whole frame) -->
+        <div id="s8" class="clip scene" data-start="41.0" data-duration="6.0" data-track-index="0">
+          <svg viewBox="0 0 1080 810"><rect width="1080" height="810" fill="#000"/></svg>
+        </div>
+      </div>
+      <div id="subs" class="mono"></div>
+      <!-- hidden frame (one frame): childhood nickname, before anyone explains it -->
+      <div id="hidden"><svg viewBox="0 0 1080 1920" width="1080" height="1920"><rect width="1080" height="1920" fill="#000"/>
+        <text x="540" y="1000" text-anchor="middle" font-family="PlexMono" font-size="220" fill="#ffb14a" transform="rotate(-4 540 1000)">PIP</text>
+        <text x="540" y="1120" text-anchor="middle" font-family="VT323" font-size="80" fill="#ffb14a">03:17 · 2001</text></svg></div>
+      <audio id="mix" src="assets/mix.wav" data-start="0" data-duration="47.0" data-track-index="9"></audio>
+    </div>
+
+    <script>
+      const X = window.XR, M = window.XRM;
+      document.getElementById("mcss").textContent = M.CSS + X.CAP_CSS;
+      document.getElementById("mdefs").innerHTML = M.defs();
+      M.chrome({ part: 1 });
+      M.voteBuild({ next: 2 });
+      // tiles (perspective-free grid, CCTV distance)
+      for (const id of ["tiles1", "tiles3"]) { let h = ""; for (let x = 0; x <= 1080; x += 90) h += `<path d="M${x} 0 V470"/>`; for (let y = 0; y <= 470; y += 90) h += `<path d="M0 ${y} H1080"/>`; X.put(id, h); }
+      X.put("m1host", M.backFigure("m1", 1.0)); X.put("r1host", M.reflection("r1", 0.62));
+      X.put("m3host", M.backFigure("m3", 1.0)); X.put("r3host", M.reflection("r3", 0.62));
+      X.put("r2host", M.reflection("r2", 1.25));
+      X.put("d7host", M.reflection("d7", 1.0, { fill: "#4a4f4c" }));
+      // LET ME OUT: low on the glass (child height), uneven child letters, drawn from inside (mirrored once written)
+      (function () { const word = "LET ME OUT"; let h = "", x = 225; const r = X.rand(1317);
+        for (let i = 0; i < word.length; i++) { const c = word[i]; if (c === " ") { x += 46; continue; }
+          const rot = (r() - 0.5) * 16, dy = (r() - 0.5) * 26, sz = 96 + r() * 22;
+          h += `<text id="lm${i}" x="${x}" y="${640 + dy}" font-family="Anton" font-size="${sz}" fill="none" stroke="#f3f6f4" stroke-width="7" stroke-linejoin="round" transform="rotate(${rot} ${x} ${640 + dy})" opacity="0">${c}</text>`;
+          x += sz * 0.56 + 14; }
+        X.put("lmo", h); })();
+
+      const step = M.step;
+      M.drive({
+        cams: [[0, "CAM 02 · HALLWAY", "nv"], [3.2, "CAM 04 · HANDHELD", "nv"], [9.0, "CAM 02 · HALLWAY", "nv"], [15.0, "CAM 00 · MIRROR SIDE", "amber"],
+               [21.0, "PHONE", "phone"], [29.0, "LINE 1 · UNKNOWN", "amber"], [36.0, "CAM 01 · FRONT DOOR", "nv"], [38.6, "PEEPHOLE", "nv"], [41.0, "NO SIGNAL", "black"]],
+        back: [[1.0, 2.2], [11.1, 12.6], [17.0, 20.6]],
+        temp: [[0, 68.4], [9, 67.9], [11.1, 61.5], [15, 58.2], [21, 54.0], [36, 52.1], [41, 49.8]],
+        bpm: [[0, 74], [3, 82], [11.1, 104], [21, 112], [36, 128], [41, 140]],
+        glitches: [{ t: 1.0, d: 0.07, shift: 10 }, { t: 12.1, d: 0.1, flip: true }, { t: 20.85, d: 0.13, flip: true }, { t: 36.0, d: 0.1 }, { t: 38.55, d: 0.07 }, { t: 41.0, d: 0.13, flip: true }],
+        keys: [{ t: 0, d: 3.2, text: "IT SMILED.", y: 1120 }, { t: 20.85, d: 0.13, text: "LET ME OUT", y: 1180, mirror: true, amber: true }],
+        corruption: M.corruption(1),
+        vote: { t: 41.12 },
+      });
+
+      X.life((t) => {
+        // S1 — reflection lags 12 frames (0.4 s), smiles at 1.0 s; the man never does
+        const a = step(t);
+        X.tf("s1cam", `translate(${(-a * 6).toFixed(1)} 0) scale(1.02)`);
+        X.attr("r1-smile", "opacity", t > 1.0 ? 0.75 : 0);
+        X.tf("r1-hd", `rotate(${(t > 1.0 ? -4 : 0)} 0 -540)`);
+        // S2 — handheld torch, everything normal
+        const sx = Math.sin(t * 3.1) * 10 + Math.sin(t * 7.3) * 4, sy = Math.cos(t * 2.4) * 8;
+        X.tf("s2cam", `translate(${sx.toFixed(1)} ${sy.toFixed(1)})`);
+        X.attr("torch2", "cx", (540 + sx * 1.5).toFixed(1)); X.attr("torch2", "cy", (420 + sy).toFixed(1));
+        X.tf("r2-b", `translate(${(-sx * 0.3).toFixed(1)} 0)`);
+        // S3 — he raises his right hand at 10.6 s; the reflection follows at 11.1 s
+        const b = step(t);
+        const kM = X.sm(10.6, 11.0, b) * (1 - X.sm(13.6, 14.0, b)), kR = X.sm(11.1, 11.5, b) * (1 - X.sm(14.1, 14.5, b));
+        M.arm("m3", "R", kM); M.arm("r3", "L", kR);   // a mirror image raises the opposite side
+        const z3 = 1 + X.sm(9, 15, t) * 0.08; X.tf("s3cam", `translate(${(540 * (1 - z3)).toFixed(1)} ${(300 * (1 - z3)).toFixed(1)}) scale(${z3.toFixed(3)})`);
+        // S4 — fog grows from inside, letters appear one by one
+        const f = X.sm(15.2, 17.2, t);
+        X.attr("fog4", "rx", (620 * f).toFixed(0)); X.attr("fog4", "ry", (420 * f).toFixed(0));
+        for (let i = 0; i < 10; i++) X.attr("lm" + i, "opacity", t > 17.0 + i * 0.32 ? 1 : 0);
+        const z4 = 1 + X.sm(15, 21, t) * 0.06; X.tf("s4cam", `translate(${(540 * (1 - z4)).toFixed(1)} ${(600 * (1 - z4)).toFixed(1)}) scale(${z4.toFixed(3)})`);
+        // S5 — phone vibrates in bursts
+        const vib = (t > 21.3 && (t % 1.2) < 0.55) ? Math.sin(t * 90) * 7 : 0;
+        X.tf("ph5s", `translate(${vib.toFixed(1)} 0) scale(${(0.78 + X.sm(21, 29, t) * 0.08).toFixed(3)})`);
+        // S6 — call timer and the double's waveform
+        const ct = Math.max(0, Math.floor(t - 29.0));
+        const ce = document.getElementById("ct6"); if (ce) ce.textContent = "00:" + String(ct).padStart(2, "0");
+        let w = ""; const amp = t > 30.2 && t < 35.2 ? 1 : 0.15;
+        for (let x = 140; x <= 940; x += 10) { const y = 520 + Math.sin(x * 0.05 + t * 9) * 40 * amp * Math.sin(x * 0.011 + t * 2) + Math.sin(x * 0.13 + t * 17) * 14 * amp; w += (x === 140 ? "M" : "L") + x + " " + y.toFixed(1); }
+        X.attr("wave6", "d", w);
+        // S7 — hallway, then the peephole (fisheye wobble)
+        X.attr("peep7", "opacity", t >= 38.6 ? 1 : 0); X.attr("hall7", "opacity", t >= 38.6 ? 0 : 1);
+        X.tf("d7-b", `translate(0 ${(Math.sin(t * 1.7) * 4).toFixed(1)})`);
+        // grain moves at 15 fps
+        const gf = Math.floor(t * 15); document.getElementById("mgrain").style.backgroundPosition = `${(gf * 137) % 400}px ${(gf * 251) % 400}px`;
+        // one hidden frame
+        document.getElementById("hidden").style.display = t >= 33.39 && t < 33.42 && !window.XR_CLEAN ? "block" : "none";
+      });
+
+      X.captions({ capY: () => 1395 });
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 47.0, duration: 47.0, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      window.__timelines = window.__timelines || {}; window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

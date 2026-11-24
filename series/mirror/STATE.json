@@ -1,0 +1,19 @@
+{
+ "status": "active",
+ "engine": "hyperframes",
+ "next_part": 1,
+ "parts": [],
+ "voices": {
+  "narrator": null,
+  "other_side": null,
+  "double": "narrator + phone filter (80 ms delay), done in sound.py"
+ },
+ "voices_note": "The 23/11 prep may have created series voices in ElevenLabs but its commit never reached main. Before voicing Part 1, list the account voices (Make XR-10, 7133301) and look for MIRROR narrator / other-side voices; if they exist, register them in tools/voices.json (outside the rotation) and here. If not and a slot is free, design them with tools/new_voice.py + XR-08 from BIBLE.md. Fallback narrator: xr10.",
+ "playlist_id": "PLQ-ZnF-aqW0g",
+ "playlist_title": "THE MIRROR · Interactive Horror Story",
+ "vote_scenario_id": 7159263,
+ "playlist_scenario_id": 7159275,
+ "vote_store": "xr_mirror",
+ "part1_dir": "videos/mr01-reflection-smiled",
+ "part1_publish": "2026-11-26T20:00:00[America/Argentina/Cordoba]"
+}

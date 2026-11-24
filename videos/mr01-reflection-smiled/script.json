@@ -1,0 +1,69 @@
+{
+ "lang": "en-us",
+ "series": "the-mirror",
+ "part": 1,
+ "sentences": [
+  [
+   "Your reflection just smiled at you.",
+   0.15
+  ],
+  [
+   "[pause] But you didn't.",
+   0.6
+  ],
+  [
+   "[breathing] You told yourself it was the light.",
+   0.1
+  ],
+  [
+   "It's 3:17 in the morning. You're tired.",
+   0.5
+  ],
+  [
+   "But the camera in the hallway saw something you didn't.",
+   0.9
+  ],
+  [
+   "[whispers] Something wrote on the glass.",
+   0.3
+  ],
+  [
+   "From the other side.",
+   1.0
+  ],
+  [
+   "Then your phone rang.",
+   0.2
+  ],
+  [
+   "The caller ID showed your own number.",
+   0.5
+  ],
+  [
+   "A voice exactly like yours whispered:",
+   0.2
+  ],
+  [
+   "[whispers] Whatever you do, don't break the mirror. I made that mistake.",
+   0.7
+  ],
+  [
+   "Someone knocked on your front door.",
+   0.2
+  ],
+  [
+   "Through the peephole, you saw yourself.",
+   0.9
+  ],
+  [
+   "[pause] What do you do?",
+   0.0
+  ]
+ ],
+ "phone_filter_sentences": [
+  10
+ ],
+ "tone": "mystery",
+ "voice": "xr10",
+ "_voice_note": "Temporary: xr10 (calm deep American man). Replace with STATE.json voices.narrator once the series narrator exists in tools/voices.json (BIBLE.md, Voices)."
+}
