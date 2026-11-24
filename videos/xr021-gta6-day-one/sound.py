@@ -1,0 +1,15 @@
+# xr021 (HyperFrames): GTA 6 day one. Cash burst, launch-night TV, a chart that climbs, a scale that tips, a whispered counter, a building full of players.
+MUSIC.update(tension_start=0.2, tension_len=12.0, resolve=wd(6, 0) - 0.3, dip=wd(5, 0) - 0.2, dip_w=1.6)
+for c in cuts:
+    if not 13.0 < c < 14.0: put(whoosh(0.3), c - 0.15, 0.06, pan=rng.uniform(-.4, .4))
+put(boom(1.0), 0.02, 0.10)
+for k in range(9): put(paper(0.07), 0.1 + k * 0.27, 0.07, pan=rng.uniform(-.6, .6))
+put(bell(1568), wd(1, 2) - 0.05, 0.035)
+for k in range(3): put(tick(k % 2 == 0), 3.2 + k * 0.5, 0.04)
+put(thump(55, 0.5), 5.2, 0.13)
+put(sweep(300, 1200, 1.3), 7.15, 0.025)
+put(blip(1500), w_ := wd(3, 1), 0.04)
+put(thud(), 11.7, 0.12)
+for k in range(12): put(tick(k % 2 == 0), 13.7 + k * 0.2, 0.025)
+put(bell(1319), wd(6, 4), 0.035)
+for k in range(5): put(paper(0.06), 19.3 + k * 0.25, 0.05, pan=rng.uniform(-.5, .5))

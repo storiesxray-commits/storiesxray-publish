@@ -1,0 +1,31 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "[gasps] Nearly four billion dollars in one day?",
+   0.1
+  ],
+  [
+   "That's GTA six's first day, says Rockstar.",
+   0.1
+  ],
+  [
+   "Almost five times GTA five's launch.",
+   0.1
+  ],
+  [
+   "More than Avengers: Endgame's entire box office.",
+   0.15
+  ],
+  [
+   "[whispers] Thirty-two and a half million copies sold before it even came out.",
+   0.15
+  ],
+  [
+   "[chuckles] Someone you know helped pay for that.",
+   0.0
+  ]
+ ],
+ "tone": "news",
+ "voice": "xr2"
+}

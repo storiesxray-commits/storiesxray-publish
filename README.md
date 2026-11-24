@@ -46,6 +46,7 @@ publish/<id>/         lo que Make publica
 | xr015-voyager-light-day | NOTICIA (18/11/2026): Voyager 1 llegó a un día luz de la Tierra; la luz tarda un día, memoria menor que una selfie, respuesta en 2 días y sin datos desde el 14/11 (X1120, puntaje 95; voz ElevenLabs xr9; 26,7 s; motor cartoon) | publicación rápida (§1b), extra cargado a mano en el ledger |
 | xr016-apple-800 | Ronald Wayne vendió su 10 % de Apple por USD 800 a los 12 días (1976); el 10 % de Apple hoy ≈ USD 498 mil millones; era el único de los tres con una casa que perder (M01, puntaje 100; voz ElevenLabs xr12; 17,6 s; motor cartoon) | `ready`, liberado por la dueña (21:35 NY) |
 | xr020-van-gogh-190m | NOTICIA (18/11/2026): el Van Gogh 'Châtaigniers en fleurs' (mayo 1890) se vendió por USD 190,4 millones, récord del artista (+USD 73 M); él nunca cobró nada por ese cuadro (X1122, puntaje 90; voz ElevenLabs xr12; 16,7 s; motor cartoon) | `ready` (liberado por la dueña 23/11 tras revisión visual ronda 4 PASS), horario lo elige Make (18:25 NY) |
+| xr021-gta6-day-one | NOTICIA (20/11/2026): GTA 6 vendió unos USD 3.790 millones el primer día (estimación de Rockstar): casi 5 veces GTA 5, más que toda la taquilla de Avengers: Endgame; 32,5 millones de copias antes de salir (X1120G, puntaje 100; voz ElevenLabs xr2; 21,1 s; motor hyperframes) | `ready`, 16:58 NY; turno normal de XR-01 (sin publicación rápida: cola llena hasta el 26/11) |
 
 ## Documentos
 - [QUALITY.md](QUALITY.md) — reglas para que no salga ningún error (obligatorio leer).

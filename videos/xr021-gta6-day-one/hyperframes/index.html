@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #1a0f0a; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 140px; line-height: 1.02; color: #fff; -webkit-text-stroke: 14px #1a0f0a;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.35); letter-spacing: 1px; }
+      .ln.gold { color: #ffd23f; } .ln.coral { color: #ff6b4a; } .ln.mint { color: #7dffb0; } .ln.sm { font-size: 92px; } .ln.xs { font-size: 70px; -webkit-text-stroke: 10px #1a0f0a; }
+      .ln.box { display: inline-block; background: #ff3b30; color: #fff; padding: 6px 34px 10px; border-radius: 18px; border: 10px solid #1a0f0a; -webkit-text-stroke: 0; text-shadow: none; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .08; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 55%, rgba(20,6,0,.5) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff6d6; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <radialGradient id="burst" cx="50%" cy="52%" r="70%"><stop offset="0" stop-color="#fff1a8"/><stop offset=".45" stop-color="#ffb627"/><stop offset="1" stop-color="#f0641e"/></radialGradient>
+        <radialGradient id="tvglow" cx="50%" cy="60%" r="60%"><stop offset="0" stop-color="#7ff6ff" stop-opacity=".55"/><stop offset="1" stop-color="#7ff6ff" stop-opacity="0"/></radialGradient>
+        <radialGradient id="room" cx="50%" cy="55%" r="75%"><stop offset="0" stop-color="#4a2c22"/><stop offset="1" stop-color="#1a0d09"/></radialGradient>
+        <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7e8"/><stop offset="1" stop-color="#ffe6c2"/></linearGradient>
+        <linearGradient id="barHot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff4f5e"/></linearGradient>
+        <linearGradient id="barOld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fc98a"/><stop offset="1" stop-color="#2f9a62"/></linearGradient>
+        <linearGradient id="curtain" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6e0f1e"/><stop offset=".5" stop-color="#b8243a"/><stop offset="1" stop-color="#6e0f1e"/></linearGradient>
+        <radialGradient id="spot" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#ffe9b8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe9b8" stop-opacity="0"/></radialGradient>
+        <radialGradient id="plum" cx="50%" cy="45%" r="75%"><stop offset="0" stop-color="#3d1f4f"/><stop offset="1" stop-color="#140a1d"/></radialGradient>
+        <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1630"/><stop offset="1" stop-color="#5a2e2a"/></linearGradient>
+        <linearGradient id="billG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9f0b0"/><stop offset="1" stop-color="#6cc46a"/></linearGradient>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="21.08" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: a gamepad erupting money under the number -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="2.88" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="1080" height="1920" fill="url(#burst)"/>
+          <g id="rays1" opacity=".35"></g>
+          <g id="bills1back"></g>
+          <g transform="translate(540 1010)"><g id="pad1w"><g id="pad1"></g></g></g>
+          <g id="bills1"></g>
+          <g id="pile1"></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 launch night: a gamer lit by the TV, DAY 1 -->
+      <div id="s2" class="clip scene" data-start="2.88" data-duration="3.75" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam">
+          <rect width="1080" height="1920" fill="url(#room)"/>
+          <rect x="0" y="1560" width="1080" height="360" fill="#24130d"/>
+          <g transform="translate(190 725) scale(.8)"><rect x="-100" y="-120" width="200" height="240" rx="14" fill="#fffaf0" stroke="#120804" stroke-width="8"/>
+            <rect x="-100" y="-120" width="200" height="70" rx="14" fill="#ff5a3c"/><text y="-70" text-anchor="middle" font-family="Anton" font-size="48" fill="#fff">NOV</text>
+            <text y="85" text-anchor="middle" font-family="Anton" font-size="140" fill="#2a1408">19</text></g>
+          <g transform="translate(840 720) scale(.8)"><circle r="96" fill="#fffaf0" stroke="#120804" stroke-width="10"/>
+            <path id="hh2" d="M0 0 L0 -52" stroke="#120804" stroke-width="12" stroke-linecap="round"/><path id="mh2" d="M0 0 L0 -76" stroke="#ff5a3c" stroke-width="7" stroke-linecap="round"/><circle r="10" fill="#120804"/></g>
+          <ellipse id="glow2" cx="540" cy="1080" rx="560" ry="700" fill="url(#tvglow)"/>
+          <g id="s2p" transform="translate(540 1000) scale(1.5)"></g>
+                    <path d="M-40 1770 H1120 V1960 H-40Z" fill="#5a3322" stroke="#120804" stroke-width="10"/><path d="M-40 1790 H1120" stroke="#7a4a32" stroke-width="8"/>
+          <g transform="translate(540 1630)"><g id="pad2w"><g id="pad2"></g>
+            <ellipse cx="-130" cy="-40" rx="46" ry="34" fill="#c98a5e" stroke="#1d120b" stroke-width="6"/><ellipse cx="130" cy="-40" rx="46" ry="34" fill="#c98a5e" stroke="#1d120b" stroke-width="6"/></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 the chart: GTA V day one vs GTA VI day one -->
+      <div id="s3" class="clip scene" data-start="6.63" data-duration="2.89" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#paper)"/>
+          <g transform="translate(0 -200)"><g id="grid3" stroke="#e8c9a0" stroke-width="3"></g>
+          <path d="M120 1480 H900" stroke="#2a1408" stroke-width="12" stroke-linecap="round"/>
+          <rect id="barL" x="190" y="1480" width="250" height="0" fill="url(#barOld)" stroke="#2a1408" stroke-width="10"/>
+          <rect id="barR" x="560" y="1480" width="300" height="0" fill="url(#barHot)" stroke="#2a1408" stroke-width="10"/>
+          <g id="seg3" stroke="#fff" stroke-width="6" stroke-dasharray="18 14" opacity=".85"></g>
+          <text id="valL" x="315" y="1270" text-anchor="middle" font-family="Anton" font-size="84" fill="#2f9a62" stroke="#2a1408" stroke-width="8" paint-order="stroke">$800M</text>
+          <text id="valR" x="710" y="1420" text-anchor="middle" font-family="Anton" font-size="104" fill="#ff4f5e" stroke="#2a1408" stroke-width="9" paint-order="stroke">$0.80B</text>
+          <text x="315" y="1560" text-anchor="middle" font-family="Anton" font-size="62" fill="#2a1408">GTA V · 2013</text>
+          <text x="710" y="1560" text-anchor="middle" font-family="Anton" font-size="62" fill="#2a1408">GTA VI · 2026</text>
+          <text x="315" y="900" text-anchor="middle" font-family="Anton" font-size="56" fill="#8a5a3a">FIRST-DAY</text><text x="315" y="962" text-anchor="middle" font-family="Anton" font-size="56" fill="#8a5a3a">SALES</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 the scale: a whole movie run vs one game day -->
+      <div id="s4" class="clip scene" data-start="9.52" data-duration="3.88" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="#2b0d14"/>
+                    <ellipse cx="540" cy="900" rx="620" ry="900" fill="url(#spot)"/>
+          <path id="curL" fill="url(#curtain)" stroke="#3a0610" stroke-width="8"/>
+          <path id="curR" fill="url(#curtain)" stroke="#3a0610" stroke-width="8"/>
+          <rect x="0" y="1310" width="1080" height="620" fill="#3d1018"/>
+          <g transform="translate(-20 -240)">
+          <!-- stand -->
+          <path d="M420 1520 L660 1520 L620 1470 L460 1470Z" fill="#d9a441" stroke="#2a1408" stroke-width="10" stroke-linejoin="round"/>
+          <rect x="522" y="840" width="36" height="640" fill="#e8b84f" stroke="#2a1408" stroke-width="10"/>
+          <g id="armL"><path id="strL" stroke="#2a1408" stroke-width="7" fill="none"/>
+            <g id="panL"><g transform="scale(.85)"><path d="M-170 0 Q0 90 170 0Z" fill="#e8b84f" stroke="#2a1408" stroke-width="10" stroke-linejoin="round"/><g id="tix"></g></g></g></g>
+          <g id="armR"><path id="strR" stroke="#2a1408" stroke-width="7" fill="none"/>
+            <g id="panR"><g transform="scale(.85)"><path d="M-170 0 Q0 90 170 0Z" fill="#e8b84f" stroke="#2a1408" stroke-width="10" stroke-linejoin="round"/>
+              <g transform="translate(0 -6)"><rect x="-80" y="-230" width="160" height="226" rx="12" fill="#1c1a24" stroke="#2a1408" stroke-width="9"/>
+                <rect x="-62" y="-210" width="124" height="120" rx="8" fill="#ff7a3d"/><circle cx="0" cy="-150" r="34" fill="#ffd23f"/><rect x="-62" y="-130" width="124" height="40" fill="#ff4f5e"/>
+                <text y="-30" text-anchor="middle" font-family="Anton" font-size="46" fill="#fff">GAME</text></g></g></g></g>
+          <g id="beamG"><rect x="280" y="826" width="520" height="28" rx="14" fill="#e8b84f" stroke="#2a1408" stroke-width="10"/></g>
+          <circle cx="540" cy="840" r="30" fill="#d9a441" stroke="#2a1408" stroke-width="10"/>
+          <g id="tagL"><rect x="-135" y="-90" width="270" height="190" rx="18" fill="#fffaf0" stroke="#2a1408" stroke-width="8"/>
+            <text y="-38" text-anchor="middle" font-family="Anton" font-size="44" fill="#2a1408">ENDGAME</text>
+            <text y="4" text-anchor="middle" font-family="Anton" font-size="42" fill="#8a5a3a">WHOLE RUN</text>
+            <text y="74" text-anchor="middle" font-family="Anton" font-size="64" fill="#b8243a">$2.8B</text></g>
+          <g id="tagR"><rect x="-135" y="-90" width="270" height="190" rx="18" fill="#fffaf0" stroke="#2a1408" stroke-width="8"/>
+            <text y="-38" text-anchor="middle" font-family="Anton" font-size="44" fill="#2a1408">GTA VI</text>
+            <text y="4" text-anchor="middle" font-family="Anton" font-size="42" fill="#8a5a3a">FIRST DAY</text>
+            <text y="74" text-anchor="middle" font-family="Anton" font-size="64" fill="#ff4f5e">$3.79B</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 sold before it came out: a locked door and a counter -->
+      <div id="s5" class="clip scene" data-start="13.4" data-duration="3.95" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="url(#plum)"/>
+          <g id="dots5"></g>
+          <g transform="translate(510 1235)">
+            <rect x="-300" y="-70" width="600" height="140" rx="22" fill="#24122f" stroke="#ffd23f" stroke-width="8"/>
+            <text id="cd5" y="26" text-anchor="middle" font-family="Anton" font-size="74" fill="#ffd23f">LOCKED UNTIL NOV 19</text>
+            <g id="lock5" transform="translate(350 -10)"><path d="M-30 -20 V-50 A30 30 0 0 1 30 -50 V-20" fill="none" stroke="#ffd23f" stroke-width="12"/><rect x="-44" y="-24" width="88" height="74" rx="12" fill="#ffd23f" stroke="#140a1d" stroke-width="6"/></g>
+          </g>
+        </g></svg>
+      </div>
+
+      <!-- S6 the building: someone you know is in one of these windows -->
+      <div id="s6" class="clip scene" data-start="17.35" data-duration="3.73" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="url(#night)"/>
+          <circle cx="880" cy="200" r="70" fill="#fff1c8" opacity=".85"/>
+          <rect x="60" y="300" width="960" height="1700" fill="#7a3a2a" stroke="#2a1008" stroke-width="10"/>
+          <g id="brick6" stroke="#5e2a1e" stroke-width="4"></g>
+          <g id="win6"></g>
+          <g id="s6p" transform="translate(540 1020) scale(0.27)"></g>
+          <g id="frame6"></g>
+          <g id="bills6"></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="2.88" data-track-index="1" style="top:290px"><span id="c1a" class="ln gold">$3.79 BILLION</span><span id="c1b" class="ln sm">IN ONE DAY?</span><span id="c1c" class="ln xs">GTA 6 · LAUNCH DAY</span></div>
+      <div id="c2" class="clip cap" data-start="5.0" data-duration="1.63" data-track-index="1" style="top:300px"><span id="c2a" class="ln box">DAY 1</span><span id="c2b" class="ln xs">GTA 6 · PER ROCKSTAR</span></div>
+      <div id="c3" class="clip cap" data-start="7.25" data-duration="2.27" data-track-index="1" style="top:300px"><span id="c3a" class="ln coral">ALMOST 5X</span></div>
+      <div id="c4" class="clip cap" data-start="11.0" data-duration="2.4" data-track-index="1" style="top:300px"><span id="c4a" class="ln gold sm">BIGGER THAN</span><span id="c4b" class="ln sm">ALL OF ENDGAME</span></div>
+      <div id="c5" class="clip cap" data-start="13.4" data-duration="3.95" data-track-index="1" style="top:300px"><span id="c5a" class="ln gold">1 MILLION</span><span id="c5b" class="ln xs" style="margin-top:26px">COPIES SOLD</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="21.08" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf, R = X.rand(21);
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const io2 = (k) => (k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2);
+      const s6z = (t) => (t < 19.25 ? 1 + io2(X.clamp((t - 17.35) / 1.9, 0, 1)) : t < 19.3 ? 2 : 2 - 0.6 * io2(X.clamp((t - 19.3) / 1.6, 0, 1)));
+      X.captions({ capY: (t) => (t < 2.88 ? 1300 : t < 6.63 ? 1395 : t < 9.52 ? 1420 : t < 13.4 ? 1370 : t < 17.35 ? 1400 : 1030 + 118 * s6z(t) + 22) });
+
+      // ---- shared drawings ----
+      const gamepad = (btn) => `
+        <path d="M-270 -70 C-270 -140 -210 -160 -120 -160 L120 -160 C210 -160 270 -140 270 -70 C300 50 330 190 258 214 C196 234 160 156 112 104 L-112 104 C-160 156 -196 234 -258 214 C-330 190 -300 50 -270 -70Z" fill="#2b2733" stroke="#120c08" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M-240 -110 C-200 -140 -150 -140 -110 -138" fill="none" stroke="#fff" stroke-width="8" opacity=".18" stroke-linecap="round"/>
+        <g transform="translate(-160 -50)"><rect x="-20" y="-60" width="40" height="120" rx="8" fill="#14111a"/><rect x="-60" y="-20" width="120" height="40" rx="8" fill="#14111a"/></g>
+        <g transform="translate(160 -50)" fill="${btn}" stroke="#120c08" stroke-width="5"><circle cx="0" cy="-46" r="22"/><circle cx="46" cy="0" r="22"/><circle cx="0" cy="46" r="22"/><circle cx="-46" cy="0" r="22"/></g>
+        <circle cx="-80" cy="50" r="44" fill="#14111a" stroke="#4a4458" stroke-width="8"/><circle cx="80" cy="50" r="44" fill="#14111a" stroke="#4a4458" stroke-width="8"/>
+        <rect x="-36" y="-110" width="72" height="18" rx="9" fill="${btn}" opacity=".9"/>`;
+      const bill = (id, s = 1) => `<g id="${id}"><g transform="scale(${s})"><rect x="-95" y="-45" width="190" height="90" rx="8" fill="url(#billG)" stroke="#1f4d22" stroke-width="5"/>
+        <rect x="-80" y="-32" width="160" height="64" rx="4" fill="none" stroke="#2f7a34" stroke-width="3"/><circle r="26" fill="#d8f7cf" stroke="#2f7a34" stroke-width="4"/>
+        <text y="15" text-anchor="middle" font-family="Anton" font-size="40" fill="#2f7a34">$</text></g></g>`;
+
+      // S1
+      let rays = ""; for (let i = 0; i < 20; i++) { const a0 = i / 20 * 6.283, a1 = (i + 0.5) / 20 * 6.283;
+        rays += `<path d="M540 1010 L${540 + Math.cos(a0) * 2000} ${1010 + Math.sin(a0) * 2000} L${540 + Math.cos(a1) * 2000} ${1010 + Math.sin(a1) * 2000}Z" fill="#fff6c0"/>`; }
+      X.put("rays1", rays);
+      X.put("pad1", gamepad("#ff5a3c"));
+      const NB = 30, B1 = [];
+      for (let i = 0; i < NB; i++) { const b = { a: -Math.PI / 2 + (R() - 0.5) * 2.9, v: 0.7 + R() * 0.6, ph: R(), spin: (R() - 0.5) * 2.4, s: 0.75 + R() * 0.55, back: i % 3 === 0 };
+        B1.push(b); X.put(b.back ? "bills1back" : "bills1", bill(`b1_${i}`, b.s)); }
+      let pile = ""; for (let r = 0; r < 4; r++) for (let c = 0; c < 7; c++) { const x = 60 + c * 150 + (r % 2) * 70 + (R() - 0.5) * 30, y = 1880 - r * 70 + (R() - 0.5) * 16;
+        pile += `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)}) rotate(${((R() - 0.5) * 16).toFixed(1)})"><rect x="-90" y="-36" width="180" height="72" rx="6" fill="#7fcf7a" stroke="#1f4d22" stroke-width="5"/><rect x="-24" y="-38" width="48" height="76" fill="#f3e9c6" stroke="#1f4d22" stroke-width="4"/></g>`; }
+      X.put("pile1", pile);
+
+      // S2
+      const gamer = { skin: "#c98a5e", skinD: "#a56a44", hair: "#1d120b", hairStyle: "curly", shirt: "#ff7a3d", iris: "#3a2414" };
+      X.put("s2p", X.person("g2", 1, gamer));
+      X.put("pad2", `<g transform="scale(.62)">${gamepad("#7ff6ff")}</g>`);
+
+      // S3
+      let gr = ""; for (let y = 788; y <= 1480; y += 92) gr += `<path d="M120 ${y} H900"/>`; for (let x = 120; x <= 900; x += 130) gr += `<path d="M${x} 788 V1480"/>`;
+      X.put("grid3", gr);
+      const HMAX = 640, HL = HMAX * 0.8 / 3.79;
+      let sg = ""; for (let k = 1; k <= 4; k++) sg += `<path id="sg${k}" d="M572 ${1480 - HL * k} H848" opacity="0"/>`;
+      X.put("seg3", sg);
+
+      // S4 tickets + popcorn on the left pan
+      let tix = "";
+      for (let i = 0; i < 16; i++) { const x = -130 + (i % 6) * 48 + (R() - 0.5) * 20, y = -18 - Math.floor(i / 6) * 34 - (R() * 10), r = (R() - 0.5) * 40;
+        tix += `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)}) rotate(${r.toFixed(0)})"><rect x="-44" y="-20" width="88" height="40" rx="5" fill="${i % 2 ? "#ffd23f" : "#ff8a7a"}" stroke="#2a1408" stroke-width="5"/><path d="M-20 -20 V20" stroke="#2a1408" stroke-width="3" stroke-dasharray="5 5"/></g>`; }
+      tix += `<g transform="translate(70 -110)"><path d="M-60 -70 L60 -70 L46 80 L-46 80Z" fill="#fffaf0" stroke="#2a1408" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M-36 -70 L-28 80 M0 -70 V80 M36 -70 L28 80" stroke="#e23a3a" stroke-width="14"/>
+        ${[...Array(7)].map((_, k) => `<circle cx="${-52 + k * 17}" cy="${-78 - (k % 2) * 16}" r="20" fill="#fff4c8" stroke="#2a1408" stroke-width="5"/>`).join("")}</g>`;
+      X.put("tix", tix);
+
+      // S5 dots: 20 x 26 preorder tickets that light up as the counter rises
+      const COLS = 20, ROWS = 18, D5 = [], ord = [];
+      let dots = ""; for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) { const i = r * COLS + c; ord.push(i);
+        dots += `<rect id="d5_${i}" x="${150 + c * 39}" y="${590 + r * 28}" width="28" height="18" rx="4" fill="#ffd23f" opacity=".12"/>`; }
+      for (let i = ord.length - 1; i > 0; i--) { const j = Math.floor(R() * (i + 1)); [ord[i], ord[j]] = [ord[j], ord[i]]; }
+      const rank = []; ord.forEach((d, k) => (rank[d] = k / ord.length));
+      X.put("dots5", dots);
+
+      // S6 building: 3 x 5 windows, the friend in the middle one
+      let br = ""; for (let y = 330; y < 1920; y += 44) { br += `<path d="M60 ${y} H1020"/>`; for (let x = 60 + ((y / 44) % 2) * 50; x < 1020; x += 100) br += `<path d="M${x} ${y} V${y + 44}"/>`; }
+      X.put("brick6", br);
+      const WX = [250, 540, 830], WY = [430, 730, 1030, 1330, 1630], WW = 230, WH = 200, WIN = [];
+      let wn = "", fr = "";
+      WY.forEach((y, r) => WX.forEach((x, c) => { const i = r * 3 + c, me = r === 2 && c === 1;
+        WIN.push({ i, x, y, me, hue: R(), ph: R() * 6 });
+        wn += `<g><rect id="w6_${i}" x="${x - WW / 2}" y="${y - WH / 2}" width="${WW}" height="${WH}" fill="#7ff6ff"/>`;
+        if (!me) wn += `<g id="sil${i}" transform="translate(${x} ${y + WH / 2})"><path d="M-62 0 C-60 -50 -36 -66 0 -66 C36 -66 60 -50 62 0Z" fill="#1a0d09"/><circle cy="-92" r="34" fill="#1a0d09"/><rect x="-40" y="-40" width="80" height="26" rx="12" fill="#1a0d09"/></g>`;
+        wn += `</g>`;
+        fr += `<rect x="${x - WW / 2}" y="${y - WH / 2}" width="${WW}" height="${WH}" fill="none" stroke="#2a1008" stroke-width="14"/><path d="M${x} ${y - WH / 2} V${y + WH / 2}" stroke="#2a1008" stroke-width="${me ? 0 : 8}"/><rect x="${x - WW / 2 - 16}" y="${y + WH / 2}" width="${WW + 32}" height="18" fill="#c9a07a" stroke="#2a1008" stroke-width="6"/>`; }));
+      X.put("win6", wn); X.put("frame6", fr);
+      // the friend's window gets a clip so the face stays inside it
+      document.getElementById("s6p").setAttribute("clip-path", "url(#winclip)");
+      X.put("gdefs", `<defs><clipPath id="winclip" clipPathUnits="userSpaceOnUse"><rect x="${-WW / 2 / 0.27}" y="${(1030 - WH / 2 - 1020) / 0.27}" width="${WW / 0.27}" height="${WH / 0.27}"/></clipPath></defs>`);
+      X.put("s6p", X.person("f6", 1, { skin: "#f0c8a0", skinD: "#d09a72", hair: "#8a4a1e", hairStyle: "bun", shirt: "#4fb3a9", iris: "#3a5a8a" }));
+      const NB6 = 14, B6 = []; for (let i = 0; i < NB6; i++) { const side = WIN.filter((q) => q.x !== 540 || q.y < 900), wi = side[Math.floor(R() * side.length)]; const b = { x: wi.x + (R() - 0.5) * 120, y: wi.y, dl: R() * 0.9, sx: (wi.x < 540 ? -1 : wi.x > 540 ? 1 : (R() < 0.5 ? -1 : 1)) * (60 + R() * 160), spin: (R() - 0.5) * 2 };
+        B6.push(b); X.put("bills6", bill(`b6_${i}`, 0.6)); }
+
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      const lerp = (a, b, k) => a + (b - a) * k;
+      const fmt = (n) => Math.round(n).toLocaleString("en-US");
+      X.life((t) => {
+        if (W(t, 0, 2.88)) {
+          T("rays1", `rotate(${(t * 14).toFixed(2)} 540 1010)`);
+          const kick = Math.sin(t * 22) * 6 * (1 - X.sm(0, 2.8, t) * 0.5);
+          T("pad1w", `translate(0 ${kick.toFixed(1)}) rotate(${(Math.sin(t * 9) * 3).toFixed(2)})`);
+          B1.forEach((b, i) => { const p = (t * 0.62 * b.v + b.ph) % 1, r = 110 + p * 1050;
+            const x = 540 + Math.cos(b.a) * r * 0.9, y = 1010 + Math.sin(b.a) * r + p * p * 520;
+            X.attr(`b1_${i}`, "transform", `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(b.spin * p * 360 + b.a * 40).toFixed(1)}) scale(${(0.5 + p * 0.7).toFixed(3)})`);
+            X.attr(`b1_${i}`, "opacity", (Math.min(1, p * 8) * (1 - X.sm(0.85, 1, p)) * X.sm(640, 760, y)).toFixed(2)); });
+        }
+        if (W(t, 2.88, 6.63)) {
+          const hype = X.sm(4.55, 4.8, t);
+          X.personLife("g2", t, { lid: 0, pupil: 1.25 - hype * 0.3, gaze: [0, 10], brow: 0.4 + hype * 0.6, open: Math.min(0.33, 0.2 + hype * 0.1 + Math.max(0, Math.sin(t * 13)) * 0.06), smile: 0.5 + hype * 0.4, phase: 0.4 });
+          const fl = 0.75 + 0.25 * Math.sin(t * 19) * Math.sin(t * 7.3);
+          X.attr("glow2", "opacity", fl.toFixed(2));
+          const m = 59 + X.sm(2.9, 4.6, t); // clock hits midnight
+          T("hh2", `rotate(${(m / 60) * 30 - 30})`); T("mh2", `rotate(${(m % 60) * 6})`);
+          T("pad2w", `translate(0 ${(Math.sin(t * 16) * 5 * (0.4 + hype)).toFixed(1)}) rotate(${(Math.sin(t * 11) * 2).toFixed(2)})`);
+        }
+        if (W(t, 6.63, 9.52)) {
+          const kl = X.sm(6.63, 6.95, t), kr = X.sm(7.15, 8.5, t);
+          X.attr("barL", "y", 1480 - HL * kl); X.attr("barL", "height", HL * kl);
+          const hr = HMAX * kr; X.attr("barR", "y", 1480 - hr); X.attr("barR", "height", hr);
+          X.attr("valL", "y", 1480 - HL * kl - 30);
+          X.attr("valR", "y", 1480 - hr - 34); X.attr("valR", "opacity", hr > HL + 20 ? 1 : 0);
+          document.getElementById("valR").textContent = "$" + (0.8 + (3.79 - 0.8) * Math.max(0, (hr - HL) / (HMAX - HL))).toFixed(2) + "B";
+          for (let k = 1; k <= 4; k++) X.attr(`sg${k}`, "opacity", hr > HL * k + 10 ? 0.85 : 0);
+          const pulse = X.sm(8.1, 8.25, t) - X.sm(8.45, 8.7, t);
+          X.attr("barL", "stroke-width", (10 + pulse * 8).toFixed(1));
+        }
+        if (W(t, 9.52, 13.4)) {
+          const tip = X.sm(10.55, 10.95, t), osc = Math.sin((t - 10.95) * 9) * Math.exp(-(t - 10.95) * 2.4) * 5 * (t > 10.95 ? 1 : 0);
+          const th = (lerp(0, 13, tip) + osc + Math.sin(t * 4) * 1.5 * (1 - tip)) * Math.PI / 180;
+          T("beamG", `rotate(${(th * 180 / Math.PI).toFixed(2)} 540 840)`);
+          const ex = 245, cx = 540, cy = 840, L = 250;
+          const lx = cx - Math.cos(th) * ex, ly = cy - Math.sin(th) * ex, rx = cx + Math.cos(th) * ex, ry = cy + Math.sin(th) * ex;
+          X.attr("strL", "d", `M${lx} ${ly} L${lx - 136} ${ly + L} M${lx} ${ly} L${lx + 136} ${ly + L}`);
+          X.attr("strR", "d", `M${rx} ${ry} L${rx - 136} ${ry + L} M${rx} ${ry} L${rx + 136} ${ry + L}`);
+          T("panL", `translate(${lx} ${ly + L})`); T("panR", `translate(${rx} ${ry + L})`);
+          T("tagL", `translate(${lx} ${ly + L + 170})`); T("tagR", `translate(${rx} ${ry + L + 170})`);
+          const sway = (k) => { let d = `M${k ? 1080 : 0} 0`; for (let y = 0; y <= 1920; y += 120) d += ` L${k ? 1080 - 130 - Math.sin(y / 260 + t * 1.3 + k) * 18 : 130 + Math.sin(y / 260 + t * 1.3) * 18} ${y}`; return d + ` L${k ? 1080 : 0} 1920Z`; };
+          X.attr("curL", "d", sway(0)); X.attr("curR", "d", sway(1));
+        }
+        if (W(t, 13.4, 17.35)) {
+          const k = X.sm(13.6, 16.2, t), n = 32.5 * k;
+          const c5 = document.getElementById("c5a"); if (c5) c5.textContent = k >= 1 ? "32.5 MILLION" : Math.max(1, Math.floor(n)) + " MILLION";
+          const c5b = document.getElementById("c5b"); if (c5b) { const bef = t > w(5, 7) - 0.05; c5b.textContent = bef ? "BEFORE LAUNCH" : "COPIES SOLD"; c5b.style.color = bef ? "#ff6b4a" : "#ffffff"; }
+          for (let i = 0; i < COLS * ROWS; i++) { const on = rank[i] < k; X.attr(`d5_${i}`, "opacity", on ? (0.85 + 0.15 * Math.sin(t * 6 + i)).toFixed(2) : 0.12); }
+          T("lock5", `translate(350 ${(-10 + Math.sin(t * 20) * 3 * (t > 16.0 ? 1 : 0)).toFixed(1)}) rotate(${(Math.sin(t * 17) * 4 * (t > 16.0 ? 1 : 0)).toFixed(1)})`);
+        }
+        if (W(t, 17.35, 21.08)) {
+          WIN.forEach((wi) => { const f = Math.sin(t * 7 + wi.ph) * Math.sin(t * 3.1 + wi.ph * 2);
+            const col = wi.me ? "#ffd9a0" : (f > 0.2 ? (wi.hue > 0.5 ? "#7ff6ff" : "#ff8ad8") : (wi.hue > 0.5 ? "#5ad0e0" : "#ffc36a"));
+            X.attr(`w6_${wi.i}`, "fill", col);
+            if (!wi.me) X.attr(`sil${wi.i}`, "transform", `translate(${wi.x} ${wi.y + WH / 2 + Math.sin(t * 9 + wi.ph) * 3})`); });
+          const ch = X.sm(17.4, 17.6, t) - X.sm(17.95, 18.15, t);
+          const look = X.sm(18.1, 18.4, t);
+          X.personLife("f6", t, { lid: ch * 0.6, gaze: [lerp(-24, 0, look), lerp(8, 0, look)], brow: look * 0.7, open: Math.min(0.33, ch * (0.2 + 0.12 * Math.abs(Math.sin(t * 18))) + (t > 18.15 && t < 19.9 ? 0.06 + 0.1 * Math.abs(Math.sin(t * 15)) : 0)), smile: 0.7 + look * 0.2, tilt: lerp(-8, 4, look), phase: 1.1 });
+          B6.forEach((b, i) => { const p = X.clamp((t - 19.2 - b.dl) / 1.6, 0, 1);
+            X.attr(`b6_${i}`, "transform", `translate(${(b.x + b.sx * p).toFixed(1)} ${(b.y - p * 700 + Math.sin(p * 9 + i) * 20).toFixed(1)}) rotate(${(b.spin * p * 300).toFixed(1)}) scale(${(0.6 + p * 0.9).toFixed(2)})`);
+            X.attr(`b6_${i}`, "opacity", p > 0 ? (Math.min(1, p * 6) * (1 - X.sm(0.8, 1, p))).toFixed(2) : 0); });
+        }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 21.08, duration: 21.08, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, at);
+      // S1: push in on the pad, the number pulses on "billion"
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1010" }, { scale: 1.12, svgOrigin: "540 1010", duration: 2.88, ease: "sine.in" }, 0);
+      tl.fromTo("#c1a", { scale: 1 }, { keyframes: [{ scale: 1.12, duration: 0.12 }, { scale: 1, duration: 0.2 }] }, w(1, 2));
+      tl.fromTo("#c1b", { scale: 1 }, { keyframes: [{ scale: 1.15, duration: 0.12 }, { scale: 1, duration: 0.2 }], immediateRender: false }, w(1, 5));
+      // S2
+      tl.fromTo("#s2cam", { scale: 1.03, svgOrigin: "540 1000" }, { scale: 1, svgOrigin: "540 1000", duration: 3.7, ease: "sine.out" }, 2.88);
+      tl.fromTo("#c2a", { scale: 2.4, opacity: 0, rotation: -14 }, { scale: 1, opacity: 1, rotation: -6, duration: 0.22, ease: "power3.in" }, 5.0);
+      tl.fromTo("#s2cam", { x: 0 }, { keyframes: [{ x: -14, duration: 0.04 }, { x: 10, duration: 0.05 }, { x: 0, duration: 0.05 }], immediateRender: false }, 5.22);
+      pop("#c2b", w(2, 6) - 0.1, 0.6);
+      // S3
+      tl.fromTo("#s3cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.07, svgOrigin: "700 900", duration: 2.89, ease: "sine.inOut" }, 6.63);
+      pop("#c3a", 7.25, 1.8);
+      // S4
+      tl.fromTo("#s4cam", { scale: 1.06, svgOrigin: "540 1000" }, { scale: 1, svgOrigin: "540 1000", duration: 3.85, ease: "sine.out" }, 9.52);
+      pop("#c4a", 11.0); pop("#c4b", 11.15);
+      // S5
+      tl.fromTo("#s5cam", { scale: 1.0, svgOrigin: "540 1000" }, { scale: 1.08, svgOrigin: "540 1000", duration: 3.9, ease: "sine.in" }, 13.4);
+      tl.fromTo("#c5b", { scale: 1 }, { keyframes: [{ scale: 1.25, duration: 0.12 }, { scale: 1, duration: 0.2 }] }, w(5, 7) - 0.05);
+      // S6: from the whole building into the friend's window, then back out as the money flies
+      tl.fromTo("#s6cam", { scale: 1.0, svgOrigin: "540 1030" }, { scale: 2.0, svgOrigin: "540 1030", duration: 1.9, ease: "power2.inOut" }, 17.35);
+      tl.to("#s6cam", { scale: 1.4, svgOrigin: "540 1030", duration: 1.6, ease: "power2.inOut" }, 19.3);
+      [2.88, 6.63, 9.52, 13.4, 17.35].forEach((at) => tl.fromTo("#flash", { opacity: 0.45 }, { opacity: 0, duration: 0.16, ease: "power2.out", immediateRender: false }, at));
+      const gk = { k: 0 };
+      tl.to(gk, { k: 21.08, duration: 21.08, ease: "none", onUpdate: () => { const f = Math.floor(gk.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

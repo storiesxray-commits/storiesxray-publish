@@ -9,6 +9,23 @@
  "sources": "B = original 100-idea bank (topics/BANK_100.txt), A/C = owner lists 21-60 / 61-100 (topics/BANK_2.txt), R = owner reserves; N = owner list '100 ideas con potencial de viralidad extrema' (16/11/2026), H = owner list '50 hooks' (16/11/2026)",
  "items": [
   {
+   "id": "X1120G",
+   "title_es": "GTA 6 vendió unos US$3.790 millones el día del lanzamiento (19/11/2026, estimación de Rockstar anunciada el 20/11): casi 5 veces GTA 5, más que toda la taquilla de Avengers: Endgame; 32,5 millones de copias antes de salir",
+   "hook": "Nearly four billion dollars in one day?",
+   "reveal": "Rockstar/Take-Two: US$3.79B en ventas minoristas estimadas del primer día; GTA V hizo US$800M en su primer día (2013); Endgame ~US$2.8B en cines; 32,5M de copias vendidas antes del lanzamiento.",
+   "viral": 10,
+   "hook_power": 10,
+   "score": 100,
+   "cat": "pop_culture",
+   "topic_type": "news",
+   "event_date": "2026-11-20",
+   "expires": "2026-11-27",
+   "status": "done",
+   "video_id": "xr021-gta6-day-one",
+   "source": "Noticia (AUTOPILOT §1b: xr021 múltiplo de 3) elegida el 23/11/2026: AP/ABC News, Fox Business, ABC GMA, Variety (vía Khaleej Times); GTA V: Take-Two 8-K 2013, Engadget; Endgame: Box Office Mojo",
+   "note": "Motor hyperframes (números y gráficos). Sin Publicación rápida: la cola de YouTube ya tiene un Short por día hasta el 26/11 (xr017-xr020) y HUMAN.md §3 (máx. 1 por día) gana sobre AUTOPILOT; el récord de ventas es atemporal (§1b rescate a) y el guion no dice 'this week'. publish_time_local 16:58 NY (franja de la tarde del PLAYBOOK). Id X1120G porque X1120 ya era Voyager. Descartado: el promedio de '8 horas jugadas' (una sola cadena de fuentes sin verificar)."
+  },
+  {
    "id": "J01",
    "title_es": "Jensen Huang: de lavaplatos en Denny's a fundar Nvidia en un booth de Denny's",
    "hook": "He washed dishes at Denny's. Then he built Nvidia in a Denny's booth.",
