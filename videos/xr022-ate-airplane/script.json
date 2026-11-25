@@ -1,0 +1,35 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "He ate a whole airplane.",
+   0.1
+  ],
+  [
+   "[gasps] Not a toy. A real Cessna.",
+   0.1
+  ],
+  [
+   "He sawed it up and swallowed the pieces.",
+   0.1
+  ],
+  [
+   "It took him two years.",
+   0.1
+  ],
+  [
+   "[whispers] Please don't try this. Guinness gave him a brass plaque.",
+   0.05
+  ],
+  [
+   "[laughs] He ate that too.",
+   0.15
+  ],
+  [
+   "But nobody ever verified every bite.",
+   0.0
+  ]
+ ],
+ "tone": "shock",
+ "voice": "xr4"
+}

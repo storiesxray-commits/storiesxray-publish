@@ -1,0 +1,179 @@
+{
+ "render_style": "cartoon",
+ "language": "en-US",
+ "category": "Education",
+ "made_for_kids": false,
+ "altered_or_synthetic_realistic": false,
+ "publish_timezone": "America/New_York",
+ "platforms": [
+  "youtube"
+ ],
+ "title": "This Man Ate an Entire Airplane, Piece by Piece",
+ "description": "The man who ate an airplane: Michel Lotito, a French entertainer known as Monsieur Mangetout (\"Mr. Eats-All\"), cut up a Cessna 150 and swallowed it between 1978 and 1980.\n\nHe sawed the metal into bite-size pieces and swallowed them like pills with mineral oil and lots of water. Guinness World Records gave him a brass plaque for the world's strangest diet, and he ate that too. Over his life he also claimed bicycles, shopping carts, TV sets and a coffin. His own doctor told Guinness they never found a valid medical explanation. Snopes points out that nobody ever documented the whole plane bite by bite.\n\nPlease don't try this: swallowing metal or glass can be deadly.\n\nSources:\n- Guinness World Records, \"The man who ate metal: Monsieur Mangetout's strange diet\" (2022): https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640\n- Snopes, \"Meet Michel Lotito, the Man Who Ate an Entire Airplane... or So He Claimed\" (2022): https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/\n- Wikipedia, Michel Lotito: https://en.wikipedia.org/wiki/Michel_Lotito\n\n#weirdhistory #guinnessworldrecords #aviation #truestory",
+ "tags": [
+  "man who ate an airplane",
+  "michel lotito",
+  "monsieur mangetout",
+  "man ate a cessna 150",
+  "man who ate a whole airplane",
+  "guinness world record strangest diet",
+  "man who eats metal",
+  "weird world records",
+  "strange human abilities",
+  "pica eating disorder metal",
+  "weird history facts",
+  "real people who did the impossible",
+  "craziest guinness records"
+ ],
+ "pinned_comment": "I picked this one because almost every retelling online sells it as proven fact. Reading the Guinness piece and the Snopes check side by side, what surprised me most was his own doctor admitting they never found a medical explanation.",
+ "series": "Extreme Humans",
+ "caption_instagram": "He ate a whole airplane. Not a toy. A real Cessna. #weirdhistory #worldrecord",
+ "sources": [
+  {
+   "title": "Guinness World Records (Oct. 2022): Lotito ate a Cessna 150 between 1978 and 1980, taking two years; cut metal into bite-size pieces with a power saw, swallowed them like pills with mineral oil and water; record for the world's strangest diet; his doctor: never found a valid medical explanation",
+   "url": "https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640"
+  },
+  {
+   "title": "Snopes (Mar. 2022): accounts from 1978-1980 newspapers of the plane-eating project; Snopes could not independently confirm he ate the entire airplane",
+   "url": "https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/"
+  },
+  {
+   "title": "Wikipedia: Michel Lotito, Cessna 150 1978-1980, brass plaque awarded by Guinness that he also ate",
+   "url": "https://en.wikipedia.org/wiki/Michel_Lotito"
+  }
+ ],
+ "human_angle": "Every viral retelling sells the airplane as proven; we keep the honest version: Guinness credited him and even watched him eat its own plaque, but nobody ever documented the whole plane bite by bite, so the video ends on that doubt instead of on the myth.",
+ "promise_check": "0:00-0:02 says he ate a whole airplane (plane and fork on screen); 0:03-0:05 shows it was a real Cessna, not a toy; 0:05-0:08 how (sawed up, swallowed); 0:08-0:09 the plane disappears over 1978-1980; 0:15-0:17 says nobody verified every bite",
+ "sensitive_review": "Eating metal is shown as a historic oddity, not a challenge: the narrator says 'Please don't try this' (0:09-0:11) and the description warns it can be deadly. No medical claims or advice; the only medical line (in the description) quotes his doctor via Guinness.",
+ "notes": "Snopes (2022) could not independently confirm the whole airplane; Guinness reports it as fact (1978-80, two years). Script states Guinness's version and ends with the doubt. Death year conflicts between sources (2006 vs 2007): not used. Thick stomach lining claim is disputed by the GWR quote of his doctor: not used.",
+ "queue": "R04",
+ "experiment": {
+  "engine": "cartoon",
+  "opening": "v2",
+  "voice": "xr4",
+  "tone": "shock",
+  "duration": "short",
+  "hook_type": "contradiction",
+  "hook_note": "(22 + 22 div 3) mod 3 = 2: 'He ate a whole airplane.' sets the joke reading, 'Not a toy. A real Cessna.' breaks it at 2.7-5.0 s",
+  "topic_type": "evergreen",
+  "ending": "none",
+  "ending_note": "MEZCLA would give 'comment' ((22 div 2) mod 2 = 1) but the 24/11 channel audit for xr022 requires a close without any ask: a final fact (no one verified every bite)",
+  "loop": "first_frame_echo"
+ },
+ "seo": {
+  "keyword": "man who ate an airplane",
+  "playlist": "Extreme Humans: Real People Who Did the Impossible",
+  "title_alts": [
+   "The Man Who Ate a Cessna 150 and Then Ate His Guinness Plaque",
+   "Michel Lotito Ate a Whole Plane. Nobody Checked Every Bite"
+  ],
+  "questions": [
+   {
+    "q": "Who ate an entire airplane?",
+    "a": "Michel Lotito, a French entertainer nicknamed Monsieur Mangetout. Guinness World Records says he ate a Cessna 150 between 1978 and 1980, about two years in total."
+   },
+   {
+    "q": "How did Michel Lotito eat a plane?",
+    "a": "He cut the metal into small bite-size pieces and swallowed them like pills, with mineral oil and large amounts of water, according to Guinness World Records."
+   },
+   {
+    "q": "Is it true that a man ate a whole airplane?",
+    "a": "Guinness World Records reports it and gave him a record for the world's strangest diet, but Snopes notes that the full airplane was never independently documented."
+   }
+  ],
+  "demand": [
+   {
+    "query": "man who ate an airplane",
+    "evidence": "Guinness World Records feature (Oct 2022) and Snopes fact-check (Mar 2022) both target this search; still recirculating in 2024-2025 (UNILAD Tech Feb 2024, BioBioChile Sep 2025, CNN Chile)",
+    "url": "https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640"
+   },
+   {
+    "query": "michel lotito",
+    "evidence": "Snopes wrote a dedicated check because the claim keeps going viral on social media",
+    "url": "https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/"
+   },
+   {
+    "query": "man ate a cessna",
+    "evidence": "Aviation and travel sites (View from the Wing, Fear of Landing) and Grunge/All That's Interesting run evergreen pieces on it",
+    "url": "https://viewfromthewing.com/it-took-two-years-but-this-man-actually-ate-an-airplane/"
+   }
+  ]
+ },
+ "qa_words_ok": [
+  "Lotito",
+  "Mangetout",
+  "Cessna",
+  "Snopes",
+  "Guinness",
+  "weirdhistory",
+  "guinnessworldrecords",
+  "worldrecord",
+  "truestory",
+  "Michel"
+ ],
+ "thumbnail": {
+  "time": 8.75,
+  "zoom": 1.3,
+  "focus": [
+   0.47,
+   0.66
+  ],
+  "protect": [
+   40,
+   300,
+   1040,
+   1080
+  ],
+  "circle": false,
+  "rays": false,
+  "badge": false,
+  "tilt": -3,
+  "text_y": 1100,
+  "lines": [
+   {
+    "text": "HE ATE",
+    "color": "#FFFFFF"
+   },
+   {
+    "text": "THIS PLANE",
+    "color": "#FFD60A"
+   }
+  ],
+  "glow": "#1F8A8A",
+  "variants": [
+   {},
+   {
+    "lines": [
+     {
+      "text": "DINNER:",
+      "color": "#FFFFFF"
+     },
+     {
+      "text": "ONE PLANE",
+      "color": "#FFD60A"
+     }
+    ]
+   },
+   {
+    "lines": [
+     {
+      "text": "HE ATE",
+      "color": "#FFD60A"
+     },
+     {
+      "text": "A CESSNA",
+      "color": "#FFFFFF"
+     }
+    ],
+    "glow": "#FF8A3D",
+    "tilt": -5
+   }
+  ],
+  "pick": 0,
+  "saturation": 1.1,
+  "contrast": 1.08,
+  "design_note": "HUMAN.md §2 diseño (c) antes/después partido en dos dentro del cuadro: detrás de él, la mitad derecha del avión todavía está (antes) y la mitad izquierda ya no (después, se ve el corte gris). Sin círculo, rayos ni sello; texto abajo; fondo claro de día; sin caja roja ni cifra con $; brillo verde azulado."
+ },
+ "status": "hold",
+ "hold_reason": "Revisión visual independiente: 3 rondas en FAIL (tope de AUTOPILOT §1d). Ronda 1: placa flotando en s08 y miniatura poco legible; ronda 2: nadie sostenía la placa en la entrega (s07); ronda 3: placa sin manos en s08 y mano de él sobre la panza de ella en s07. Después de la ronda 3 se corrigió (ella sostiene la placa con las dos manos, la mano de él la toca; en s08 la sostiene con las dos manos abajo y la mordida queda arriba), pero esa versión no la miró un revisor nuevo. Quedan menores: en s04 no se ve el gesto de serrar ni de tragar; miniatura (medio avión) correcta pero floja en tamaño feed. Falta firma visual. Para publicar: que la dueña mire el video y, si está bien, sacar el hold."
+}
