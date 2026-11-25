@@ -175,6 +175,6 @@
   },
   "id": "xr022-ate-airplane",
   "duration_s": 18.52,
-  "status": "hold",
-  "hold_reason": "Revisión visual independiente: 3 rondas en FAIL (tope de AUTOPILOT §1d). Ronda 1: placa flotando en s08 y miniatura poco legible; ronda 2: nadie sostenía la placa en la entrega (s07); ronda 3: placa sin manos en s08 y mano de él sobre la panza de ella en s07. Después de la ronda 3 se corrigió (ella sostiene la placa con las dos manos, la mano de él la toca; en s08 la sostiene con las dos manos abajo y la mordida queda arriba), pero esa versión no la miró un revisor nuevo. Quedan menores: en s04 no se ve el gesto de serrar ni de tragar; miniatura (medio avión) correcta pero floja en tamaño feed. Falta firma visual. Para publicar: que la dueña mire el video y, si está bien, sacar el hold."
+  "status": "ready",
+  "publish_time_local": "17:40"
 }

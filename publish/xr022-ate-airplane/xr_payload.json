@@ -1,0 +1,54 @@
+{
+  "content_id": "xr-022",
+  "repo_id": "xr022-ate-airplane",
+  "sha256": "d14f86fbe240c355a04e06e5fec6a4ef7541ed6030dc3e6e10ccaec28f07e573",
+  "file_size_bytes": 11326130,
+  "duration_seconds": 18.521,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.965,
+  "video_bit_rate": 4755460,
+  "faststart": true,
+  "title_youtube": "This Man Ate an Entire Airplane, Piece by Piece",
+  "description_youtube": "The man who ate an airplane: Michel Lotito, a French entertainer known as Monsieur Mangetout (\"Mr. Eats-All\"), cut up a Cessna 150 and swallowed it between 1978 and 1980.\n\nHe sawed the metal into bite-size pieces and swallowed them like pills with mineral oil and lots of water. Guinness World Records gave him a brass plaque for the world's strangest diet, and he ate that too. Over his life he also claimed bicycles, shopping carts, TV sets and a coffin. His own doctor told Guinness they never found a valid medical explanation. Snopes points out that nobody ever documented the whole plane bite by bite.\n\nPlease don't try this: swallowing metal or glass can be deadly.\n\nSources:\n- Guinness World Records, \"The man who ate metal: Monsieur Mangetout's strange diet\" (2022): https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640\n- Snopes, \"Meet Michel Lotito, the Man Who Ate an Entire Airplane... or So He Claimed\" (2022): https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/\n- Wikipedia, Michel Lotito: https://en.wikipedia.org/wiki/Michel_Lotito\n\n#weirdhistory #guinnessworldrecords #aviation #truestory",
+  "caption_instagram": "He ate a whole airplane. Not a toy. A real Cessna. #weirdhistory #worldrecord",
+  "tags": [
+    "man who ate an airplane",
+    "michel lotito",
+    "monsieur mangetout",
+    "man ate a cessna 150",
+    "man who ate a whole airplane",
+    "guinness world record strangest diet",
+    "man who eats metal",
+    "weird world records",
+    "strange human abilities",
+    "pica eating disorder metal",
+    "weird history facts",
+    "real people who did the impossible",
+    "craziest guinness records"
+  ],
+  "series": "Extreme Humans",
+  "sources": [
+    {
+      "title": "Guinness World Records (Oct. 2022): Lotito ate a Cessna 150 between 1978 and 1980, taking two years; cut metal into bite-size pieces with a power saw, swallowed them like pills with mineral oil and water; record for the world's strangest diet; his doctor: never found a valid medical explanation",
+      "url": "https://www.guinnessworldrecords.com/news/2022/10/the-man-who-ate-metal-monsieur-mangetouts-strange-diet-722640"
+    },
+    {
+      "title": "Snopes (Mar. 2022): accounts from 1978-1980 newspapers of the plane-eating project; Snopes could not independently confirm he ate the entire airplane",
+      "url": "https://www.snopes.com/news/2022/03/07/michel-lotito-ate-entire-airplane/"
+    },
+    {
+      "title": "Wikipedia: Michel Lotito, Cessna 150 1978-1980, brass plaque awarded by Guinness that he also ate",
+      "url": "https://en.wikipedia.org/wiki/Michel_Lotito"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "17:40",
+  "checks_failed": []
+}

@@ -136,7 +136,9 @@ export default function story(E, tm) {
   // the bitten one is a real cut-out shape (no transparent texture), so the ink follows the bite marks
   const plaqueGeo = (bitten) => { const sh = new THREE.Shape(); const W2 = 0.17, H2 = 0.12;
     sh.moveTo(-W2, -H2); sh.lineTo(W2, -H2);
-    if (bitten) { sh.lineTo(W2, 0.0); sh.absarc(W2, 0.09, 0.09, -Math.PI / 2, -Math.PI, true); sh.absarc(0.04, H2, 0.05, -0.6435, -Math.PI, true); }
+    if (bitten) { // a tooth-scalloped bite out of the top-right corner
+      const R0 = 0.13; sh.lineTo(W2, H2 - R0);
+      for (let i = 1; i <= 48; i++) { const f = i / 48 * Math.PI / 2, th = -Math.PI / 2 - f, r = R0 - 0.016 * Math.abs(Math.sin(f * 12)); sh.lineTo(W2 + r * Math.cos(th), H2 + r * Math.sin(th)); } }
     else sh.lineTo(W2, H2);
     sh.lineTo(-W2, H2); sh.lineTo(-W2, -H2);
     const g = new THREE.ShapeGeometry(sh, 16); const uv = g.attributes.uv; for (let k = 0; k < uv.count; k++) uv.setXY(k, (uv.getX(k) + W2) / (2 * W2), (uv.getY(k) + H2) / (2 * H2)); return g; };
@@ -155,8 +157,8 @@ export default function story(E, tm) {
   const K = {
     s01: [OPEN(0, 3.25), OPEN(T.s02, 3.0)],
     s02: [k(T.s02, [HERO.x - 0.25, TABLE_H + 0.05, HERO.z + 0.27], 0.5, 52, 24, 40), k(T.s03, [HERO.x - 0.25, TABLE_H + 0.06, HERO.z + 0.27], 0.44, 54, 22, 40)],
-    s03: [k(T.s03, [PL.x - 1.25, 1.75, PL.z + 1.6], 5.6, 31, -2, 60),
-      k(wd(2, 5) + 0.1, [PL.x - 1.25, 1.75, PL.z + 1.6], 5.35, 30, -2, 60), k(T.s04, [PL.x - 1.25, 1.75, PL.z + 1.6], 5.2, 29, -2, 60)],
+    s03: [k(T.s03, [PL.x - 1.55, 1.75, PL.z + 1.6], 5.6, 31, -2, 60),
+      k(wd(2, 5) + 0.1, [PL.x - 1.55, 1.75, PL.z + 1.6], 5.5, 31, -2, 60), k(T.s04, [PL.x - 1.55, 1.75, PL.z + 1.6], 5.45, 31, -2, 60)],
     s04: [k(T.s04, [HERO.x - 0.08, 0.88, HERO.z + 0.25], 1.25, -14, 9, 44), k(T.s05, [HERO.x - 0.04, 0.95, HERO.z + 0.2], 1.12, -10, 6, 44)],
     s05: [k(T.s05, [PL.x - 0.35, 1.3, PL.z + 1.2], 4.5, -10, 4, 50), k(T.s06, [PL.x - 0.35, 1.28, PL.z + 1.2], 4.2, -10, 4, 50)],
     s06: [k(T.s06, [HERO.x, 1.12, HERO.z], 1.0, 4, 2, 40), k(T.s07, [HERO.x, 1.12, HERO.z], 0.9, 2, 2, 40)],
@@ -217,7 +219,7 @@ export default function story(E, tm) {
         : { mode: 'sit', tableY: TY, expr: t > wd(3, 5) + 0.15 ? 'chew' : 'grin', L: 'hold', R: 'fork', k: 0.5 * EASE.smooth(ramp(t, wd(3, 4), wd(3, 5) + 0.15)), hold: { L: 'glass' }, look: 0, facing: 0 }; }
     if (s === 's05') hp = { mode: 'sit', tableY: TY, expr: 'chew', L: 'table', R: 'fork', k: (t * 2.2) % 1, look: 0, facing: 0 };
     if (s === 's06') hp = { mode: 'sit', tableY: TY, expr: 'whisper', L: 'table', R: 'wave', k: t, look: 0, facing: 0 };
-    if (s === 's07') hp = { mode: 'sit', tableY: TY, expr: t > wd(5, 8) ? 'happy' : 'gasp', L: 'table', R: t > wd(5, 8) ? 'reach' : 'table', look: 0.9, facing: 1, headTilt: 0 };
+    if (s === 's07') hp = { mode: 'sit', tableY: TY, expr: t > wd(5, 8) ? 'happy' : 'gasp', L: t > wd(5, 8) ? 'cheek' : 'table', R: t > wd(5, 8) ? 'cheek' : 'table', look: 0.9, facing: 1, headTilt: 0 };
     if (s === 's08') hp = { mode: 'sit', tableY: TY, expr: t > wd(6, 1) - 0.05 ? 'chew' : 'grin', L: 'hold', R: 'hold', look: 0.6, facing: 1 };
     if (s === 's09') hp = { mode: 'sit', tableY: TY, expr: t > wd(7, 3) ? 'sideeye' : 'smug', L: 'cross', R: 'cross', look: t > wd(7, 3) ? -0.8 : 0.3, facing: 0 };
     A.push(actor({ id: 'eater', look: LK.eater, seed: 7, x: HERO.x, y: 0, z: HERO.z, main: true, pose: alive(t, 7, hp) }));
