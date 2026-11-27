@@ -151,7 +151,7 @@ export default function story(E, tm) {
     if (s === 's07') { const j = jump(t, BREAK2, LAND2); mz = t < LAND2 ? j.z : Z0 + 0.35; my = t < LAND2 ? j.y : 0; pitch = t < LAND2 ? j.pitch : 0; walk = t < LAND2 ? 1.1 : 0; chew = t > LAND2 ? 1 : 0; }
     if (s === 's08') { const turn = EASE.smooth(ramp(t, T.s08 + 0.05, T.s08 + 0.5)), out = ramp(t, T.s08 + 0.45, total - 0.2);
       ry = turn * Math.PI; mz = Z0 + 0.35 - EASE.smooth(clamp(out * 2.2)) * 4.5; my = Math.sin(clamp(out * 3) * Math.PI) * 0.25; walk = turn < 1 ? 0.4 : 1; }
-    moose.root.position.set(0, my, mz); moose.root.rotation.set(pitch, ry, 0); moose.root.visible = mz > BW - 2.0 || s === 's08';
+    moose.root.position.set(s === 's07' ? -0.32 : 0, my, mz); moose.root.rotation.set(pitch, ry, 0); moose.root.visible = mz > BW - 2.0 || s === 's08';
     mooseLife(t, { walk, chew, look });
     const brokenNow = (s === 's03' && t > BREAK1) || s === 's04' || s === 's05' || (s === 's07' && t > BREAK2) || s === 's08';
     hole.visible = brokenNow;
@@ -184,7 +184,7 @@ export default function story(E, tm) {
     if (s !== 's02') {
       const fp = (side) => scare1 || scare2 ? (s === 's08' ? { expr: 'happy', L: 'wave', R: 'hang', k: t * 1.4, facing: side * -1, look: 0 } : { expr: 'shock', L: 'cheek', R: 'cheek', facing: 0, look: 0 })
         : s === 's06' ? { expr: 'annoyed', L: 'table', R: 'table', facing: -side, look: -side * 0.8 } : { expr: 'happy', L: 'table', R: side > 0 ? 'hold' : 'table', hold: { R: 'glass' }, facing: -side * 0.5, look: -side * 0.5 };
-      const fx = s === 's08' || (s === 's07' && t > BREAK2) ? 0.98 : 0.78; sit('f1', 'c1', 31, -fx, fp(-1)); sit('f2', 'c2', 32, fx, fp(1));
+      const fx = s === 's04' || s === 's05' || s === 's08' || (s === 's07' && t > BREAK2) ? 1.02 : 0.78; sit('f1', 'c1', 31, -fx, fp(-1)); sit('f2', 'c2', 32, fx, fp(1));
     }
     // the check splitter
     if ((s === 's01' || s === 's02' || s === 's03') && !crushed1) {
