@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Recycling won't save you.", 0.2],
+  ["Say you rinse every single can.", 0.1],
+  ["You even sort the plastic by number.", 0.15],
+  ["Then a blue whale falls out of the sky.", 0.15],
+  ["A hundred feet long. Three hundred thirty thousand pounds.", 0.2],
+  ["You'd probably die.", 0.4],
+  ["Now say you throw everything in one bag.", 0.25],
+  ["Also dead.", 0.4],
+  ["[whispers] And the whale knows what you did. [pause]", 0.0]
+ ],
+ "tone": "comedy",
+ "voice": "xr2"
+}

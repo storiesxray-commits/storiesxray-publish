@@ -1,0 +1,164 @@
+{
+  "render_style": "cartoon",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Being a Good Coworker Won't Save You From a Falling Piano",
+  "description": "Being a good coworker won't save you from a falling grand piano. Office etiquette, tested by physics.\n\nThe useless facts:\n- A nine-foot concert grand piano (like the Steinway Model D, 274 cm long) weighs about 990 pounds.\n- Microwaving fish at the office is the most hated break-room habit in America. The piano does not care. The office, however, claps.\n\nUseless Facts is our series of true facts nobody needed. What's the worst thing someone has microwaved at your job?\n\nSources:\n- Steinway & Sons (UK), Model D specifications (274 cm, 990 lb / 480 kg): https://steinway.co.uk/?p=1831\n- Wikipedia, Steinway D-274: https://en.wikipedia.org/wiki/Steinway_D-274\n\n#office #coworkers #uselessfacts #shorts",
+  "tags": [
+    "office etiquette",
+    "microwaving fish at work",
+    "how heavy is a grand piano",
+    "how much does a concert grand piano weigh",
+    "office humor",
+    "coworkers",
+    "falling piano",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "work memes",
+    "break room rules"
+  ],
+  "pinned_comment": "HR has asked us to clarify: the piano was not a disciplinary measure. The applause was unofficial.",
+  "series": "Useless Facts",
+  "caption_instagram": "Being a good coworker won't save you. #office #uselessfacts",
+  "sources": [
+    {
+      "title": "Steinway & Sons UK: Model D, length 274 cm (8'11 3/4\"), net weight 990 lb (480 kg)",
+      "url": "https://steinway.co.uk/?p=1831"
+    },
+    {
+      "title": "Wikipedia: Steinway D-274, 274 cm long, about 480 kg",
+      "url": "https://en.wikipedia.org/wiki/Steinway_D-274"
+    }
+  ],
+  "human_angle": "Takes the most universal office grievance (the coworker who microwaves fish) and settles it with a real 990-pound concert grand, so the joke is about office justice, not the piano.",
+  "promise_check": "0:00 'Being a good coworker won't save you'; 0:06-0:11 a real-size grand piano falls (9 ft, ~990 lb on screen); 0:13-0:19 the fish microwaver gets the same piano and the office claps.",
+  "notes": "USELESS FACTS series, owner 27/11/2026 ('more like the tornado one', some in the cartoon engine). Piano: generic black concert grand, no brand on screen; figures from Steinway Model D specs. Death is cartoon only: dust puff and a pair of shoes under the piano. Office sign text is our own.",
+  "experiment": {
+    "engine": "cartoon",
+    "format": "useless_facts",
+    "opening": "statement",
+    "voice": "xr8",
+    "tone": "comedy",
+    "duration": "short",
+    "hook_type": "debate",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "office etiquette",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Microwaving Fish at Work vs a 990 lb Piano",
+      "The Coworker Who Microwaves Fish Gets the Piano"
+    ],
+    "questions": [
+      {
+        "q": "How much does a grand piano weigh?",
+        "a": "A nine-foot concert grand such as the Steinway Model D weighs about 990 pounds (480 kg)."
+      },
+      {
+        "q": "Why shouldn't you microwave fish at work?",
+        "a": "Reheated fish releases strong-smelling compounds that fill shared break rooms, which is why many offices ban it."
+      },
+      {
+        "q": "How long is a concert grand piano?",
+        "a": "About 9 feet: the Steinway Model D is 274 cm (8 ft 11 3/4 in) long."
+      }
+    ],
+    "demand": [
+      {
+        "query": "microwaving fish at work",
+        "evidence": "Perennial office-etiquette debate on Reddit and in workplace polls; viral TikTok break-room rants",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      },
+      {
+        "query": "how heavy is a grand piano",
+        "evidence": "Evergreen question with dealer and manufacturer pages answering it",
+        "url": "https://steinway.co.uk/?p=1831"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Steinway",
+    "kg",
+    "lb",
+    "uselessfacts"
+  ],
+  "thumbnail": {
+    "time": 16.62,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      150,
+      560,
+      1000,
+      1260
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "990 LB",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "FALLING",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "PIANO",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#FFD23A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "NO FISH",
+            "color": "#FFD23A"
+          }
+        ],
+        "time": 3.6,
+        "protect": [
+          300,
+          700,
+          800,
+          1480
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "OFFICE CLAPS",
+            "color": "#8AF05A"
+          }
+        ],
+        "time": 20.0,
+        "protect": [
+          100,
+          700,
+          1000,
+          1480
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: cool blue office, black piano overhead, red box text.",
+    "badge_x": 60,
+    "badge_y": 1310
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Recycling Won't Save You From a Falling Blue Whale",
+  "description": "Recycling won't save you from a falling blue whale. The good-citizen test, settled by the largest animal that ever lived.\n\nThe useless facts:\n- Blue whales can reach about 100 feet long (up to ~110 ft in the Antarctic) and weigh more than 330,000 pounds, according to NOAA Fisheries.\n- That is roughly three school buses end to end.\n- Rinsing your cans and sorting plastic by number is still a good idea. It's just not whale-proof.\n\nUseless Facts is our series of true facts nobody needed. Be honest: do you rinse your cans?\n\nSources:\n- NOAA Fisheries, Blue Whale (Antarctic blue whales up to about 110 ft and more than 330,000 lb): https://www.fisheries.noaa.gov/species/blue-whale\n- Alaska Department of Fish and Game, Blue whale (southern hemisphere up to 100 ft and more than 330,000 lb): https://www.adfg.alaska.gov/static/education/wns/blue_whale.pdf\n\n#recycling #bluewhale #uselessfacts #shorts",
+  "tags": [
+    "blue whale",
+    "how big is a blue whale",
+    "how much does a blue whale weigh",
+    "largest animal ever",
+    "recycling",
+    "how to sort recycling",
+    "falling whale",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "do you rinse recycling"
+  ],
+  "pinned_comment": "The whale has asked us to remind you: number 5 plastics are not accepted everywhere.",
+  "series": "Useless Facts",
+  "caption_instagram": "Recycling won't save you. #bluewhale #uselessfacts",
+  "sources": [
+    {
+      "title": "NOAA Fisheries: Antarctic blue whales up to about 110 feet and more than 330,000 pounds",
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+    },
+    {
+      "title": "Alaska Department of Fish and Game: southern hemisphere blue whales up to 100 feet (33 m) and more than 330,000 pounds",
+      "url": "https://www.adfg.alaska.gov/static/education/wns/blue_whale.pdf"
+    }
+  ],
+  "human_angle": "Uses the most virtuous chore at home (rinsing cans, sorting plastic by number) as the setup for the real size of a blue whale, made visible as three school buses, with petty whale justice as the punchline.",
+  "promise_check": "0:00 'Recycling won't save you' with a whale's shadow growing; 0:06-0:14 a falling blue whale with 100 ft and 330,000 lb on screen; 0:16-0:20 the one-bag guy gets the same whale.",
+  "notes": "USELESS FACTS, owner 27/11/2026 ('more like the tornado one, better graphics'). Whale is our own drawing; 100 ft / 330,000 lb = NOAA and ADF&G upper range. Cartoon death only: sneakers sticking out, dust. 'Three school buses' = ~35-40 ft each.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "statement",
+    "voice": "xr2",
+    "tone": "comedy",
+    "duration": "short",
+    "hook_type": "debate",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "blue whale",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "A Blue Whale Is 3 School Buses Long",
+      "Recycling vs a 330,000 Pound Blue Whale"
+    ],
+    "questions": [
+      {
+        "q": "How big is a blue whale?",
+        "a": "Blue whales can reach about 100 feet long, and Antarctic blue whales up to about 110 feet, roughly three school buses end to end."
+      },
+      {
+        "q": "How much does a blue whale weigh?",
+        "a": "The largest blue whales weigh more than 330,000 pounds (about 150 metric tons), according to NOAA Fisheries."
+      },
+      {
+        "q": "Do you have to rinse recycling?",
+        "a": "Many US recycling programs ask for empty, quick-rinsed containers so food does not contaminate paper and cardboard."
+      }
+    ],
+    "demand": [
+      {
+        "query": "how big is a blue whale",
+        "evidence": "Evergreen high-volume question answered by NOAA, Oceana, National Geographic",
+        "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+      },
+      {
+        "query": "useless facts",
+        "evidence": "Useless-fact formats trend repeatedly (Know Your Meme, TikTok fun-facts creators)",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "NOAA",
+    "bluewhale",
+    "uselessfacts",
+    "lb",
+    "ft"
+  ],
+  "thumbnail": {
+    "time": 8.9,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      150,
+      620,
+      1000,
+      1480
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "330,000 LB",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "WHALE INCOMING",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#7FD0FF",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "IT KNOWS",
+            "color": "#7FD0FF"
+          }
+        ],
+        "time": 23.6,
+        "protect": [
+          200,
+          700,
+          900,
+          1250
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "RECYCLE THIS?",
+            "box": "#FF3B30"
+          }
+        ],
+        "time": 1.8,
+        "protect": [
+          200,
+          1200,
+          900,
+          1480
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: deep blue sky and whale, red box text, new layout."
+  }
+}

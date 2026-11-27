@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #0b1a2a; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #08121c;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4), 0 0 40px rgba(120,200,255,.35); letter-spacing: 1px; }
+      .ln.y { color: #ffd23a; } .ln.r { color: #ff4d4d; } .ln.b { color: #7fd0ff; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .05; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 50%, rgba(0,8,20,.55) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a7ac8"/><stop offset=".6" stop-color="#9fd0f2"/><stop offset="1" stop-color="#ffe6c2"/></linearGradient>
+        <linearGradient id="skyDoom" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a2a4a"/><stop offset=".6" stop-color="#4a6a9a"/><stop offset="1" stop-color="#c8a07a"/></linearGradient>
+        <linearGradient id="kitchen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2d8"/><stop offset="1" stop-color="#f2d8b0"/></linearGradient>
+        <linearGradient id="street" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a6a74"/><stop offset="1" stop-color="#3a3a44"/></linearGradient>
+        <linearGradient id="lawnG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd05a"/><stop offset="1" stop-color="#3f8a2a"/></linearGradient>
+        <linearGradient id="whaleG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f5578"/><stop offset=".55" stop-color="#4f7fa8"/><stop offset="1" stop-color="#9fc0d8"/></linearGradient>
+        <linearGradient id="binB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a4a9a"/><stop offset=".45" stop-color="#3a7ae0"/><stop offset="1" stop-color="#143a7a"/></linearGradient>
+        <linearGradient id="canG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a8e96"/><stop offset=".4" stop-color="#f4f6f8"/><stop offset="1" stop-color="#6a6e76"/></linearGradient>
+        <radialGradient id="sunG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6c8"/><stop offset=".5" stop-color="#ffe08a" stop-opacity=".6"/><stop offset="1" stop-color="#ffe08a" stop-opacity="0"/></radialGradient>
+        <radialGradient id="eyeDark" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#2a4a6a"/><stop offset="1" stop-color="#050a12"/></radialGradient>
+        <filter id="ds" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#000" flood-opacity=".35"/></filter>
+        <filter id="bgBlur"><feGaussianBlur stdDeviation="5"/></filter>
+        <clipPath id="eyeClip"><ellipse cx="0" cy="0" rx="300" ry="230"/></clipPath>
+        <filter id="mblur" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="0 14"/></filter>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="24.36" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: a proud recycler; the shadow of something huge grows on the lawn -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="2.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="1080" height="1920" fill="url(#sky)"/>
+          <g id="bgA1" filter="url(#bgBlur)"></g>
+          <rect y="1300" width="1080" height="620" fill="url(#lawnG)"/>
+          <ellipse id="shad1" cx="540" cy="1640" rx="10" ry="4" fill="#0a1a10" opacity=".45"/>
+          <g transform="translate(760 1640)"><g id="bin1"></g></g>
+          <g transform="translate(380 1680)"><g id="s1p"></g></g>
+          
+        </g></svg>
+      </div>
+
+      <!-- S2 rinse every single can (warm kitchen, water stream, sparkles) -->
+      <div id="s2" class="clip scene" data-start="2.15" data-duration="2.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam">
+          <rect width="1080" height="1920" fill="url(#kitchen)"/>
+          <g id="kit2"></g>
+          <g transform="translate(400 1700)"><g id="s2p"></g></g>
+          <g id="water2"></g>
+          <g id="cans2"></g>
+          <g id="spk2"></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 sort the plastic by number -->
+      <div id="s3" class="clip scene" data-start="4.3" data-duration="1.9" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#kitchen)"/>
+          <rect y="1450" width="1080" height="470" fill="#c9a37a"/>
+          <g id="bins3"></g>
+          <g id="bottles3"></g>
+          <g transform="translate(180 1700)"><g id="s3p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 a blue whale falls out of the sky -->
+      <div id="s4" class="clip scene" data-start="6.2" data-duration="3.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="url(#skyDoom)"/>
+          <g id="clouds4"></g>
+          <g id="bgA4" filter="url(#bgBlur)"></g>
+          <rect y="1380" width="1080" height="540" fill="url(#street)"/>
+          <ellipse id="shad4" cx="540" cy="1720" rx="40" ry="12" fill="#000" opacity=".4"/>
+          <g transform="translate(820 1720)"><g id="bin4"></g></g>
+          <g transform="translate(470 1740)"><g id="s4p"></g></g>
+          <g id="wh4p"><g id="wh4" filter="url(#mblur)"></g></g>
+          <g id="lines4" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".5"></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 100 ft, 330,000 lb (freeze mid-air, measurement) -->
+      <div id="s5" class="clip scene" data-start="9.35" data-duration="4.65" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="url(#skyDoom)"/>
+          <g id="clouds5"></g>
+          <rect y="1500" width="1080" height="420" fill="url(#street)"/>
+          <g id="bus5"></g>
+          <g transform="translate(540 900)"><g id="wh5"></g></g>
+          <g id="meas5" transform="translate(0 70)"><path d="M60 600 H1020" stroke="#ffd23a" stroke-width="10"/><path d="M60 570 V630 M1020 570 V630" stroke="#ffd23a" stroke-width="10"/>
+            <rect x="420" y="555" width="240" height="90" rx="16" fill="#08121c"/><text x="540" y="622" text-anchor="middle" font-family="Anton" font-size="70" fill="#ffd23a">100 FT</text></g>
+          <g transform="translate(540 1260)"><g id="lb5" class="ttl"><rect x="-380" y="-90" width="760" height="170" rx="26" fill="#08121c" stroke="#7fd0ff" stroke-width="8"/><text id="lb5t" y="45" text-anchor="middle" font-family="Anton" font-size="120" fill="#7fd0ff">0 LB</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 impact: whale on the street, sneakers sticking out, a bin lid rolling -->
+      <div id="s6" class="clip scene" data-start="14.0" data-duration="1.8" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="url(#skyDoom)"/>
+          <g id="bgA6" filter="url(#bgBlur)"></g>
+          <rect y="1380" width="1080" height="540" fill="url(#street)"/>
+          <g transform="translate(760 1765)"><path d="M-150 0 L-130 -50 L130 -50 L150 0Z" fill="url(#binB)" stroke="#08121c" stroke-width="8" stroke-linejoin="round"/><g transform="translate(0 -24) scale(.6 .35)" fill="none" stroke="#fff" stroke-width="12"><path d="M0 -40 L30 10 L-30 10Z"/></g><circle cx="-110" cy="4" r="18" fill="#14141a"/></g>
+          <g transform="translate(560 1600) scale(0.8)"><g id="wh6"></g></g>
+          <g id="shoes6"></g>
+          <g id="dust6"></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 the one who throws everything in one bag (very tall, tiny head, knees backwards) -->
+      <div id="s7" class="clip scene" data-start="15.8" data-duration="3.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam">
+          <rect width="1080" height="1920" fill="url(#sky)"/>
+          <g id="bgA7" filter="url(#bgBlur)"></g>
+          <rect y="1380" width="1080" height="540" fill="url(#street)"/>
+          <g id="bag7p"><g id="bag7"></g></g>
+          <g transform="translate(820 1720)"><g id="bin7"></g></g>
+          <g id="junk7"></g>
+          <g id="slob7p"><g id="s7p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 also dead -->
+      <div id="s8" class="clip scene" data-start="18.95" data-duration="1.6" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="url(#skyDoom)"/>
+          <g id="bgA8" filter="url(#bgBlur)"></g>
+          <rect y="1380" width="1080" height="540" fill="url(#street)"/>
+          <g id="slob8p" transform="translate(520 1720)"><g id="s8p"></g></g>
+          <g id="wh8p"><g transform="translate(560 1600) scale(0.8)"><g id="wh8"></g></g></g>
+          <g id="shoes8" opacity="0"></g>
+          <g id="dust8"></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 (whisper) the whale's eye turns to you -->
+      <div id="s9" class="clip scene" data-start="20.55" data-duration="3.81" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam">
+          <rect width="1080" height="1920" fill="#2f5578"/>
+          <g id="skin9"></g>
+          <g transform="translate(540 960)"><ellipse rx="300" ry="230" fill="#e8eef4" stroke="#08121c" stroke-width="16"/>
+            <g id="iris9"><circle r="150" fill="url(#eyeDark)"/><circle cx="-50" cy="-60" r="34" fill="#fff" opacity=".9"/><circle cx="40" cy="50" r="12" fill="#fff" opacity=".6"/></g>
+            <g clip-path="url(#eyeClip)"><path id="lidT9" fill="#3a6288" stroke="#08121c" stroke-width="14"/><path id="lidB9" fill="#3a6288" stroke="#08121c" stroke-width="14"/></g><ellipse rx="300" ry="230" fill="none" stroke="#08121c" stroke-width="16"/></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="2.15" data-track-index="1" style="top:300px"><span id="c1a" class="ln b">RECYCLING?</span></div>
+      <div id="c3" class="clip cap" data-start="4.6" data-duration="1.6" data-track-index="1" style="top:300px"><span id="c3a" class="ln sm">SORTED ✓</span></div>
+      <div id="c6" class="clip cap" data-start="14.5" data-duration="1.3" data-track-index="1" style="top:300px"><span id="c6a" class="ln r">R.I.P.</span></div>
+      <div id="c9" class="clip cap" data-start="21.5" data-duration="2.86" data-track-index="1" style="top:300px"><span id="c9a" class="ln b">IT KNOWS.</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="24.36" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf;
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const C = [0, 2.15, 4.3, 6.2, 9.35, 14.0, 15.8, 18.95, 20.55, 24.36];
+      X.captions({ capY: (t) => (t < C[1] ? 560 : t < C[2] ? 300 : t < C[3] ? 560 : t < C[4] ? 300 : t < C[5] ? 400 : t < C[6] ? 560 : t < C[7] ? 300 : t < C[8] ? 300 : 1560) });
+
+      // ---------- the blue whale (own drawing, facing right) ----------
+      const whale = (id) => `<g id="${id}" filter="url(#ds)">
+        <path d="M-560 -20 C-640 -90 -700 -120 -720 -60 C-700 -30 -660 -10 -620 0 C-660 10 -700 40 -720 70 C-690 110 -640 80 -560 20 Z" fill="#2f5578" stroke="#08121c" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M-560 0 C-420 -110 -40 -150 260 -120 C420 -105 520 -60 540 0 C520 70 400 110 260 118 C-40 140 -420 100 -560 0 Z" fill="url(#whaleG)" stroke="#08121c" stroke-width="10" stroke-linejoin="round"/>
+        ${[...Array(9)].map((_, i) => `<path d="M${180 - i * 60} 60 C${120 - i * 60} 80 ${40 - i * 60} 90 ${-40 - i * 60} 92" fill="none" stroke="#2f5578" stroke-width="5" opacity=".5"/>`).join("")}
+        <path d="M-200 -118 L-160 -170 L-120 -122Z" fill="#2f5578" stroke="#08121c" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M120 70 C80 130 20 160 -10 150 C20 120 60 90 80 62Z" fill="#2f5578" stroke="#08121c" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M300 30 C380 40 460 30 530 6" fill="none" stroke="#08121c" stroke-width="7"/>
+        <g id="${id}-eye" transform="translate(330 -10)"><ellipse rx="22" ry="18" fill="#fff" stroke="#08121c" stroke-width="5"/><circle id="${id}-pup" r="10" fill="#08121c"/><path id="${id}-lid" d="M-24 -18 H24" stroke="#2f5578" stroke-width="0"/></g>
+        ${[[-300, -60], [-100, -90], [60, -70], [-220, 20], [100, -30]].map(([x, y]) => `<ellipse cx="${x}" cy="${y}" rx="${14 + (x % 5)}" ry="8" fill="#9fc0d8" opacity=".35"/>`).join("")}
+        </g>`;
+      ["wh4", "wh5", "wh6", "wh8"].forEach((id) => X.put(id, whale(id + "w")));
+      // blue curbside bin
+      const bin = (s = 1) => `<g transform="scale(${s})" filter="url(#ds)"><path d="M-110 0 L-130 -300 L130 -300 L110 0Z" fill="url(#binB)" stroke="#08121c" stroke-width="9" stroke-linejoin="round"/>
+        <rect x="-145" y="-330" width="290" height="40" rx="10" fill="#1a4a9a" stroke="#08121c" stroke-width="9"/>
+        <g transform="translate(0 -160) scale(1.4)" fill="none" stroke="#fff" stroke-width="9" stroke-linejoin="round"><path d="M0 -40 L30 10 L-30 10Z"/><path d="M-12 -16 L0 -40 L12 -16"/></g>
+        <circle cx="-80" r="26" fill="#14141a"/><circle cx="80" r="26" fill="#14141a"/></g>`;
+      ["bin1", "bin4", "bin7"].forEach((id) => X.put(id, bin(1)));
+      // houses in the soft-focus background (suburb)
+      const suburb = `${[[80, 1320, "#e8c8a0"], [330, 1340, "#c8d8e8"], [600, 1310, "#f2e0c8"], [880, 1330, "#d8c8e8"]].map(([x, y, c]) => `<g transform="translate(${x} ${y})"><rect x="-110" y="-180" width="220" height="180" fill="${c}" stroke="#2a2a36" stroke-width="6"/><path d="M-140 -170 L0 -290 L140 -170Z" fill="#8a4a3a" stroke="#2a2a36" stroke-width="6"/><rect x="-30" y="-90" width="60" height="90" fill="#5a3a22"/><rect x="-90" y="-140" width="50" height="40" fill="#9fd8ff"/><rect x="40" y="-140" width="50" height="40" fill="#9fd8ff"/></g>`).join("")}
+        ${[[200, 1300], [740, 1290], [1000, 1300]].map(([x, y]) => `<g transform="translate(${x} ${y})"><rect x="-10" y="-160" width="20" height="160" fill="#5a3a22"/><circle cy="-200" r="80" fill="#4f9a3a"/><circle cx="-50" cy="-160" r="55" fill="#5fae4a"/></g>`).join("")}`;
+      ["bgA1", "bgA4", "bgA6", "bgA7", "bgA8"].forEach((id) => X.put(id, suburb));
+            // clouds parting
+      const clouds = (id) => X.put(id, [...Array(6)].map((_, i) => `<g id="${id}c${i}"><ellipse rx="${160 + (i % 3) * 40}" ry="70" fill="#e8eef6" opacity=".9"/><ellipse cx="-90" cy="20" rx="110" ry="55" fill="#e8eef6" opacity=".9"/><ellipse cx="100" cy="24" rx="120" ry="50" fill="#d8e2ee" opacity=".9"/></g>`).join(""));
+      clouds("clouds4"); clouds("clouds5");
+      X.put("lines4", [...Array(10)].map((_, i) => `<path id="ln4_${i}" d="M0 0 V${120 + (i % 3) * 60}"/>`).join(""));
+      // school buses for scale (3 x 35-45 ft ~ a 100 ft whale)
+      X.put("bus5", [0, 1, 2].map((i) => `<g transform="translate(${213 + i * 327} 1560)"><rect x="-158" y="-110" width="316" height="110" rx="18" fill="#f2c230" stroke="#08121c" stroke-width="7"/>${[0, 1, 2, 3].map((k) => `<rect x="${-136 + k * 70}" y="-95" width="46" height="40" fill="#cfe8ff" stroke="#08121c" stroke-width="4"/>`).join("")}<circle cx="-90" r="22" fill="#14141a"/><circle cx="90" r="22" fill="#14141a"/></g>`).join("") +
+        `<text x="540" y="1680" text-anchor="middle" font-family="Anton" font-size="52" fill="#fff" stroke="#08121c" stroke-width="8" paint-order="stroke">= 3 SCHOOL BUSES</text>`);
+      // kitchen sink, faucet, window
+      X.put("kit2", `<g transform="translate(0 170)"><rect x="80" y="300" width="420" height="380" fill="#9fd8ff" stroke="#fff" stroke-width="20"/><path d="M290 300 V680 M80 490 H500" stroke="#fff" stroke-width="14"/>
+        <rect x="620" y="320" width="380" height="300" rx="10" fill="#e8b06a" stroke="#7a5432" stroke-width="10"/></g><rect y="1360" width="1080" height="560" fill="#7a9ab8"/><rect y="1340" width="1080" height="40" fill="#f4f1ea" stroke="#3a3a44" stroke-width="6"/>
+        <rect x="560" y="1300" width="300" height="80" rx="16" fill="#c9ccd2" stroke="#3a3a44" stroke-width="6"/><path d="M820 1300 V1080 Q820 1040 780 1040 H700" fill="none" stroke="#9aa0a8" stroke-width="26" stroke-linecap="round"/>`);
+      X.put("water2", [...Array(8)].map((_, i) => `<ellipse id="wd${i}" rx="10" ry="18" fill="#7fd0ff" opacity=".85"/>`).join("") + `<path id="stream2" d="M700 1060 V1300" stroke="#7fd0ff" stroke-width="18" stroke-linecap="round" opacity=".8"/>`);
+      const can = (i) => `<g id="cn${i}"><rect x="-40" y="-110" width="80" height="110" rx="10" fill="url(#canG)" stroke="#3a3a44" stroke-width="6"/><ellipse cy="-110" rx="40" ry="10" fill="#c9ccd2" stroke="#3a3a44" stroke-width="5"/></g>`;
+      X.put("cans2", [0, 1, 2, 3, 4, 5].map(can).join(""));
+      X.put("spk2", [...Array(6)].map((_, i) => `<g id="sk${i}"><path d="M0 -24 L6 -6 L24 0 L6 6 L0 24 L-6 6 L-24 0 L-6 -6Z" fill="#fff8c0" stroke="#3a3a44" stroke-width="3"/></g>`).join(""));
+      // sorting bins with resin codes
+      X.put("bins3", [["1", "#3a7ae0"], ["2", "#2f8a5a"], ["5", "#e8a23a"]].map(([n, c], i) => `<g transform="translate(${430 + i * 220} 1640)" filter="url(#ds)"><path d="M-90 0 L-100 -260 L100 -260 L90 0Z" fill="${c}" stroke="#08121c" stroke-width="8"/>
+        <g transform="translate(0 -140)" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"><path d="M0 -50 L44 26 L-44 26Z"/></g><text y="-112" text-anchor="middle" font-family="Anton" font-size="56" fill="#fff">${n}</text></g>`).join(""));
+      X.put("bottles3", [0, 1, 2].map((i) => `<g id="bt${i}"><path d="M-18 -90 L-18 -60 C-34 -50 -34 -40 -34 0 L34 0 C34 -40 34 -50 18 -60 L18 -90Z" fill="${["#9fd8ff", "#c8f0c8", "#ffe0a0"][i]}" stroke="#08121c" stroke-width="5"/><rect x="-14" y="-104" width="28" height="16" fill="#3a7ae0" stroke="#08121c" stroke-width="4"/></g>`).join(""));
+      // characters: the perfect recycler (normal) and the slob (very tall, tiny head, knees backwards)
+      const GOOD = { skin: "#c99067", skinD: "#a8714a", hair: "#1e1512", hairStyle: "curly", shirt: "#3aa05a", pants: "#34425e", shoes: "#f4f1ea", glasses: true };
+      const SLOB = { skin: "#f2c29b", skinD: "#d99a72", hair: "#c7642e", hairStyle: "spiky", shirt: "#7a7a84", stripe: "#c0392b", pants: "#2a2a30", shoes: "#d81e2a", h: 1.75, torso: 1.3, headS: 0.55, arm: 1.6 };
+      ["s1p", "s2p", "s3p", "s4p"].forEach((g, i) => X.put(g, X.fig("gd" + i, 1.25, GOOD)));
+      X.put("gd0-handA", `<g transform="translate(0 -40)">${can(9)}</g>`); X.put("gd1-handA", `<g transform="translate(0 -40)">${can(8)}</g>`);
+      X.put("s7p", X.fig("sl7", 1.0, SLOB)); X.put("s8p", X.fig("sl8", 1.0, SLOB));
+      X.put("bag7", `<g filter="url(#ds)"><path d="M-110 0 C-140 -120 -90 -230 0 -240 C90 -230 140 -120 110 0Z" fill="#1a1a20" stroke="#08121c" stroke-width="8"/><path d="M-20 -240 L-34 -290 M20 -240 L34 -290" stroke="#1a1a20" stroke-width="16" stroke-linecap="round"/><path d="M-60 -160 C-40 -180 -10 -170 10 -190" stroke="#4a4a54" stroke-width="6" fill="none"/></g>`);
+      X.put("junk7", [...Array(7)].map((_, i) => `<g id="jk${i}" opacity="0">${i % 3 === 0 ? `<g transform="scale(.6)">${can(20 + i)}</g>` : i % 3 === 1 ? `<path d="M-30 -20 L30 -20 L24 30 L-24 30Z" fill="#ffe0a0" stroke="#08121c" stroke-width="5"/>` : `<rect x="-36" y="-26" width="72" height="52" fill="#c99a5a" stroke="#08121c" stroke-width="5"/>`}</g>`).join(""));
+      // sneakers sticking out from under the whale (cartoon, nothing graphic)
+      const shoes = (c) => `<g>${[[280, 1690, 230, 1770, -25], [380, 1695, 390, 1782, 10]].map(([x0, y0, x1, y1, r]) => `<path d="M${x0} ${y0} L${x1} ${y1}" stroke="#08121c" stroke-width="38" stroke-linecap="round"/><path d="M${x0} ${y0} L${x1} ${y1}" stroke="#34425e" stroke-width="24" stroke-linecap="round"/>
+          <g transform="translate(${x1} ${y1 + 10}) rotate(${r})"><rect x="-14" y="-30" width="28" height="22" fill="#f4f1ea" stroke="#08121c" stroke-width="5"/><path d="M-30 -10 C-30 -40 50 -40 70 -10 L70 14 L-30 14Z" fill="${c}" stroke="#08121c" stroke-width="6" stroke-linejoin="round"/><rect x="-34" y="10" width="108" height="16" rx="6" fill="#fff" stroke="#08121c" stroke-width="5"/></g>`).join("")}</g>`;
+      X.put("shoes6", shoes("#f4f1ea")); X.put("shoes8", shoes("#d81e2a"));
+      const dust = (id) => X.put(id, [...Array(14)].map((_, i) => `<circle id="${id}d${i}" r="${50 + (i % 4) * 22}" fill="#e8dcc8" stroke="#08121c" stroke-width="5" opacity="0"/>`).join(""));
+      dust("dust6"); dust("dust8");
+      // close-up skin texture for S9
+      X.put("skin9", [...Array(30)].map((_, i) => { const r = X.rand(i * 31 + 7); r(); return `<ellipse cx="${(r() * 1080).toFixed(0)}" cy="${(r() * 1920).toFixed(0)}" rx="${(20 + r() * 40).toFixed(0)}" ry="${(10 + r() * 20).toFixed(0)}" fill="#9fc0d8" opacity=".25"/>`; }).join("") +
+        [...Array(8)].map((_, i) => `<path d="M-40 ${1300 + i * 70} C300 ${1260 + i * 70} 700 ${1340 + i * 70} 1120 ${1290 + i * 70}" fill="none" stroke="#1f3f5f" stroke-width="10" opacity=".5"/>`).join(""));
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      const dustLife = (id, t, t0) => { for (let i = 0; i < 14; i++) { const q = X.clamp((t - t0) / 0.9, 0, 1), a = i / 14 * Math.PI * 2;
+        X.attr(`${id}d${i}`, "opacity", q > 0 && q < 1 ? (0.45 * (1 - q)).toFixed(2) : 0); X.attr(`${id}d${i}`, "cx", (560 + Math.cos(a) * (260 + q * 300)).toFixed(1)); X.attr(`${id}d${i}`, "cy", (1640 + Math.sin(a) * (60 + q * 120) - q * 40).toFixed(1)); } };
+      X.life((t) => {
+        if (W(t, C[0], C[1])) { const g = X.sm(0.2, C[1], t); X.attr("shad1", "rx", (20 + g * 520).toFixed(1)); X.attr("shad1", "ry", (6 + g * 90).toFixed(1));
+          
+          X.figLife("gd0", t, { mode: "stand", arms: { A: [-55, -70] }, smile: 0.9, look: [8, -2], brow: 0.2 }); }
+        if (W(t, C[1], C[2])) { X.figLife("gd1", t, { mode: "stand", arms: { A: [-55, -60 + Math.sin(t * 14) * 10] }, smile: 0.8, look: [10, 6], lid: 0.2 });
+          for (let i = 0; i < 8; i++) { const q = ((t * 2 + i / 8) % 1); T(`wd${i}`, `translate(${700 + Math.sin(i * 3) * 30} ${1080 + q * 240})`); }
+          for (let i = 0; i < 6; i++) { const k = X.sm(C[1] + 0.2 + i * 0.25, C[1] + 0.45 + i * 0.25, t); T(`cn${i}`, `translate(${600 + i * 70} ${1340 - k * 0}) scale(${(0.2 + 0.8 * k).toFixed(2)})`); X.attr(`cn${i}`, "opacity", k > 0.02 ? 1 : 0); }
+          for (let i = 0; i < 6; i++) { const q = ((t * 1.4 + i / 6) % 1); T(`sk${i}`, `translate(${600 + i * 70} ${1200 - q * 120}) scale(${Math.sin(q * Math.PI).toFixed(2)})`); } }
+        if (W(t, C[2], C[3])) { X.figLife("gd2", t, { mode: "stand", arms: { A: [-70 + Math.sin(t * 8) * 20, -40] }, smile: 0.9, look: [8, 2] });
+          for (let i = 0; i < 3; i++) { const q = X.clamp((t - C[2] - 0.2 - i * 0.45) / 0.5, 0, 1); const x0 = 260, x1 = 430 + i * 220, y = 1300 - Math.sin(q * Math.PI) * 220 + q * 120;
+            T(`bt${i}`, `translate(${(x0 + (x1 - x0) * q).toFixed(1)} ${y.toFixed(1)}) rotate(${(q * 360).toFixed(0)})`); X.attr(`bt${i}`, "opacity", q > 0 && q < 1 ? 1 : 0); } }
+        if (W(t, C[3], C[4])) { const f = X.sm(C[3] + 0.5, C[4], t), y = -250 + f * 950;
+          T("wh4p", `translate(540 ${y.toFixed(1)}) rotate(${(-8 + f * 6).toFixed(1)}) scale(${(0.55 + f * 0.25).toFixed(3)})`);
+          X.attr("shad4", "rx", (40 + f * 480).toFixed(1)); X.attr("shad4", "ry", (12 + f * 60).toFixed(1));
+          for (let i = 0; i < 6; i++) { const side = i % 2 ? 1 : -1; T(`clouds4c${i}`, `translate(${(540 + side * (180 + f * 500) + (i - 3) * 40).toFixed(1)} ${180 + (i % 3) * 120})`); }
+          for (let i = 0; i < 10; i++) { const q = ((t * 3 + i / 10) % 1); T(`ln4_${i}`, `translate(${100 + i * 95} ${(-200 + q * 2200).toFixed(0)})`); X.attr(`ln4_${i}`, "opacity", f > 0.05 ? 0.5 : 0); }
+          const look = t > w(4, 3) - 0.1; X.figLife("gd3", t, { mode: "stand", arms: look ? { A: [-200, 10], B: [-195, -10] } : { A: [-55, -70] }, mouth: look ? 0.9 : 0.1, smile: look ? -0.8 : 0.6, eyes: look ? 1.5 : 1, brow: look ? 1 : 0, look: look ? [4, -12] : [8, 0] }); }
+        if (W(t, C[4], C[5])) { T("wh5", `translate(0 ${(Math.sin(t * 1.5) * 10).toFixed(1)}) rotate(${(Math.sin(t * 0.8) * 1).toFixed(2)}) translate(70 0) scale(0.778)`);
+          const k = X.sm(w(5, 4) - 0.2, w(5, 8) + 0.1, t); document.getElementById("lb5t").textContent = Math.round(k * 330000).toLocaleString("en-US") + " LB";
+          X.attr("meas5", "opacity", t > w(5, 0) - 0.05 ? 1 : 0); X.attr("lb5", "opacity", t > w(5, 4) - 0.25 ? 1 : 0);
+          for (let i = 0; i < 6; i++) T(`clouds5c${i}`, `translate(${((i * 220 + t * 30) % 1300) - 110} ${160 + (i % 3) * 110})`); }
+        if (W(t, C[5], C[6])) {           T("wh6", `translate(0 ${(Math.sin(t * 2) * 2).toFixed(1)})`); dustLife("dust6", t, C[5]);
+          X.attr("wh6w-lid", "stroke-width", ((t * 0.7) % 1) < 0.08 ? 40 : 0); }
+        if (W(t, C[6], C[7])) { const walk = X.clamp((t - C[6]) / 1.4, 0, 1), x = 120 + walk * 420; T("slob7p", `translate(${x.toFixed(1)} 1740)`);
+          const toss = X.sm(w(7, 4), w(7, 7) + 0.2, t);
+          T("bag7p", `translate(${(x + 70 + toss * (820 - x - 70)).toFixed(1)} ${(1500 - Math.sin(toss * Math.PI) * 280 - toss * 60).toFixed(1)}) rotate(${(toss * 180).toFixed(0)}) scale(${(1 - toss * 0.3).toFixed(2)})`); X.attr("bag7p", "opacity", toss >= 0.98 ? 0 : 1);
+          for (let i = 0; i < 7; i++) { const q = X.clamp((t - w(7, 7) - 0.1 - i * 0.05) / 0.7, 0, 1); X.attr(`jk${i}`, "opacity", q > 0 && q < 1 ? 1 : 0); T(`jk${i}`, `translate(${(820 + Math.cos(i) * q * 260).toFixed(1)} ${(1380 - Math.sin(q * Math.PI) * 200 + q * 260).toFixed(1)}) rotate(${(q * 500).toFixed(0)})`); }
+          X.figLife("sl7", t, { mode: walk < 1 ? "weird" : "stand", speed: 1.4, smile: 0.9, lid: 0.4, arms: toss > 0 && toss < 1 ? { A: [-205, 25] } : walk < 1 ? undefined : { A: [-30, -80], B: [30, 80] }, look: [6, -2] }); }
+        if (W(t, C[7], C[8])) { const land = C[7] + 0.35, f = X.clamp((t - C[7]) / 0.35, 0, 1); T("wh8p", `translate(0 ${(-1600 * (1 - f * f)).toFixed(1)})`);
+          const landed = t >= land; X.attr("slob8p", "opacity", landed ? 0 : 1); X.attr("shoes8", "opacity", landed ? 1 : 0); dustLife("dust8", t, land);
+          X.figLife("sl8", t, { mode: "stand", mouth: 0.8, smile: -0.7, eyes: 1.6, brow: 1, look: [4, -12], arms: { A: [-200, 10], B: [-195, -10] } }); }
+        if (W(t, C[8], C[9])) { const turn = X.sm(C[8] + 0.2, w(9, 3), t), narrow = X.sm(w(9, 3), w(9, 3) + 0.6, t);
+          T("iris9", `translate(${(-110 + turn * 110).toFixed(1)} ${(-10 + turn * 10).toFixed(1)}) scale(${(1 - narrow * 0.12).toFixed(3)})`);
+          const top = -230 + narrow * 140, bot = 230 - narrow * 110;
+          X.attr("lidT9", "d", `M-320 -260 L320 -260 L320 ${(top + 20).toFixed(0)} Q0 ${(top + 60).toFixed(0)} -320 ${(top + 20).toFixed(0)}Z`);
+          X.attr("lidB9", "d", `M-320 260 L320 260 L320 ${(bot - 20).toFixed(0)} Q0 ${(bot - 50).toFixed(0)} -320 ${(bot - 20).toFixed(0)}Z`); }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 24.36, duration: 24.36, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#c1a", { scale: 1.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.6)" }, 0.0);
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1500" }, { scale: 1.08, svgOrigin: "540 1500", duration: 2.15, ease: "sine.in" }, 0);
+      tl.fromTo("#s2cam", { scale: 1.06, svgOrigin: "700 1300" }, { scale: 1.0, svgOrigin: "700 1300", duration: 2.15, ease: "sine.out" }, C[1]);
+      tl.fromTo("#s3cam", { scale: 1.0, svgOrigin: "600 1500" }, { scale: 1.05, svgOrigin: "600 1500", duration: 1.9, ease: "sine.inOut" }, C[2]);
+      pop("#c3a", 4.65, 1.6);
+      tl.fromTo("#s4cam", { scale: 1.0, svgOrigin: "540 1600" }, { scale: 1.1, svgOrigin: "540 1500", duration: 3.15, ease: "sine.in" }, C[3]);
+      tl.fromTo("#s5cam", { scale: 1.05, svgOrigin: "540 900" }, { scale: 1.0, svgOrigin: "540 900", duration: 4.6, ease: "sine.out" }, C[4]);
+      tl.fromTo("#lb5", { scale: 0.3, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.25, ease: "back.out(2.6)", immediateRender: false }, w(5, 4) - 0.25);
+      tl.set("#s6cam", { scale: 1.05, svgOrigin: "540 960" }, C[5]);
+      tl.fromTo("#s6cam", { y: 0 }, { keyframes: [{ y: 30, duration: 0.05 }, { y: -20, duration: 0.05 }, { y: 8, duration: 0.05 }, { y: 0, duration: 0.06 }], immediateRender: false }, C[5]);
+      pop("#c6a", 14.52, 1.8);
+      tl.fromTo("#s7cam", { scale: 1.0, svgOrigin: "540 1500" }, { scale: 1.06, svgOrigin: "540 1500", duration: 3.1, ease: "sine.inOut" }, C[6]);
+      tl.set("#s8cam", { scale: 1.05, svgOrigin: "540 960" }, C[7]);
+      tl.fromTo("#s8cam", { y: 0 }, { keyframes: [{ y: 30, duration: 0.05 }, { y: -20, duration: 0.05 }, { y: 8, duration: 0.05 }, { y: 0, duration: 0.06 }], immediateRender: false }, C[7] + 0.35);
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "540 960" }, { scale: 1.15, svgOrigin: "540 960", duration: 3.8, ease: "sine.in" }, C[8]);
+      pop("#c9a", 21.55, 1.5);
+      [C[3], C[5], C[7] + 0.35, C[8]].forEach((at) => tl.fromTo("#flash", { opacity: 0.45 }, { opacity: 0, duration: 0.16, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 24.36, duration: 24.36, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Using your blinker won't save you.",
+   0.2
+  ],
+  [
+   "Say you signal every single lane change.",
+   0.15
+  ],
+  [
+   "Then a bison charges your car.",
+   0.15
+  ],
+  [
+   "Two thousand pounds. Thirty-five miles per hour.",
+   0.2
+  ],
+  [
+   "You'd probably die.",
+   0.4
+  ],
+  [
+   "Now say you never use your blinker.",
+   0.25
+  ],
+  [
+   "Same bison.",
+   0.4
+  ],
+  [
+   "[whispers] It used... its blinker. [pause]",
+   0.0
+  ]
+ ],
+ "tone": "comedy",
+ "voice": "xr9",
+ "seed": 4417,
+ "gain_db": {
+  "8": 9
+ }
+}

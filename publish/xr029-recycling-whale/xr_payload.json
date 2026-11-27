@@ -1,0 +1,49 @@
+{
+  "content_id": "xr-029",
+  "repo_id": "xr029-recycling-whale",
+  "sha256": "65802d0519ed15697c8027eb74d954f16d997a4c7791b10b2e18ff5344cd03f1",
+  "file_size_bytes": 12407894,
+  "duration_seconds": 24.381,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.974,
+  "video_bit_rate": 3937757,
+  "faststart": true,
+  "title_youtube": "Recycling Won't Save You From a Falling Blue Whale",
+  "description_youtube": "Recycling won't save you from a falling blue whale. The good-citizen test, settled by the largest animal that ever lived.\n\nThe useless facts:\n- Blue whales can reach about 100 feet long (up to ~110 ft in the Antarctic) and weigh more than 330,000 pounds, according to NOAA Fisheries.\n- That is roughly three school buses end to end.\n- Rinsing your cans and sorting plastic by number is still a good idea. It's just not whale-proof.\n\nUseless Facts is our series of true facts nobody needed. Be honest: do you rinse your cans?\n\nSources:\n- NOAA Fisheries, Blue Whale (Antarctic blue whales up to about 110 ft and more than 330,000 lb): https://www.fisheries.noaa.gov/species/blue-whale\n- Alaska Department of Fish and Game, Blue whale (southern hemisphere up to 100 ft and more than 330,000 lb): https://www.adfg.alaska.gov/static/education/wns/blue_whale.pdf\n\n#recycling #bluewhale #uselessfacts #shorts",
+  "caption_instagram": "Recycling won't save you. #bluewhale #uselessfacts",
+  "tags": [
+    "blue whale",
+    "how big is a blue whale",
+    "how much does a blue whale weigh",
+    "largest animal ever",
+    "recycling",
+    "how to sort recycling",
+    "falling whale",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "do you rinse recycling"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "NOAA Fisheries: Antarctic blue whales up to about 110 feet and more than 330,000 pounds",
+      "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+    },
+    {
+      "title": "Alaska Department of Fish and Game: southern hemisphere blue whales up to 100 feet (33 m) and more than 330,000 pounds",
+      "url": "https://www.adfg.alaska.gov/static/education/wns/blue_whale.pdf"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "20:46",
+  "checks_failed": []
+}

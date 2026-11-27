@@ -1,0 +1,15 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Splitting the check won't save you.", 0.2],
+  ["Say you're the friend who splits it to the cent.", 0.15],
+  ["Then a moose crashes through the diner window.", 0.15],
+  ["Sixteen hundred pounds. Thirty-five miles per hour.", 0.2],
+  ["You'd probably die.", 0.4],
+  ["Now say you're the friend who forgot his wallet.", 0.25],
+  ["Same moose.", 0.4],
+  ["[whispers] It even left a tip. [pause]", 0.0]
+ ],
+ "tone": "comedy",
+ "voice": "xr7"
+}

@@ -90,6 +90,13 @@ def elevenlabs():
         if allw[k]["s"] < allw[k - 1]["s"]: allw[k]["s"] = allw[k - 1]["s"]
         if allw[k]["e"] < allw[k]["s"]: allw[k]["e"] = allw[k]["s"]
     for m in meta: m["start"], m["end"] = m["words"][0]["s"], m["words"][-1]["e"]
+    # optional per-sentence lift (script.json "gain_db": {"8": 9}): v3 whispers can come out ~18 dB under the read
+    for k, g in (cfg.get("gain_db") or {}).items():
+        m = meta[int(k) - 1]; a0 = int(max(0, m["start"] - 0.08) * sr); a1 = int(min(len(audio) / sr, m["end"] + 0.25) * sr)
+        ramp = np.ones(a1 - a0); n = min(int(0.03 * sr), len(ramp) // 4); ramp[:n] = np.linspace(0, 1, n); ramp[-n:] = np.linspace(1, 0, n)
+        gain = 1 + (10 ** (g / 20) - 1) * ramp
+        audio[a0:a1] = audio[a0:a1] * (gain[:, None] if audio.ndim == 2 else gain)
+    audio = np.clip(audio, -0.99, 0.99)
     sf.write(f"{OUT}/voice.wav", audio, sr)
     v = TTS.CFG["voices"][key]
     json.dump(dict(total=round(meta[-1]["end"] + 1.1, 3), voice=key, voice_key=key, voice_name=v["name"], engine="elevenlabs:" + TTS.CFG["model"],

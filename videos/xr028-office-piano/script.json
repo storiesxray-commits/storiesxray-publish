@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Being a good coworker won't save you.", 0.2],
+  ["Say you never microwave fish at the office.", 0.1],
+  ["You even refill the coffee pot.", 0.15],
+  ["Then a grand piano falls through the ceiling.", 0.15],
+  ["Nine feet long. Almost a thousand pounds.", 0.2],
+  ["You'd probably die.", 0.4],
+  ["Now say you microwave fish every single day.", 0.25],
+  ["Same piano.", 0.4],
+  ["[whispers] But this time, the whole office claps. [pause]", 0.0]
+ ],
+ "tone": "comedy",
+ "voice": "xr8"
+}
