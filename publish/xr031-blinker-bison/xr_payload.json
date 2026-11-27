@@ -1,0 +1,50 @@
+{
+  "content_id": "xr-031",
+  "repo_id": "xr031-blinker-bison",
+  "sha256": "a08f0749899edb70da8f550f878411c6277f061e6c44d474ee9537f800cec463",
+  "file_size_bytes": 12210575,
+  "duration_seconds": 23.035,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.972,
+  "video_bit_rate": 4105924,
+  "faststart": true,
+  "title_youtube": "Your Blinker Won't Save You From a Charging Bison",
+  "description_youtube": "Your blinker won't save you from a charging bison. The polite-driver test, settled by a 2,000 pound animal.\n\nThe useless facts:\n- Male bison can weigh up to 2,000 pounds, according to the National Park Service.\n- Bison can run up to 35 miles per hour.\n- Use your blinker anyway. The bison does.\n\nUseless Facts is our series of true facts nobody needed. Be honest: do you signal every lane change?\n\nSources:\n- National Park Service, Yellowstone: Bison (males up to 2,000 lb; can run up to 35 mph): https://www.nps.gov/yell/learn/nature/bison.htm\n- National Park Service, Bison bison (biology, weight and speed): https://www.nps.gov/subjects/bison/index.htm\n\n#bison #blinker #uselessfacts #shorts",
+  "caption_instagram": "Your blinker won't save you. #bison #uselessfacts",
+  "tags": [
+    "charging bison",
+    "bison",
+    "how fast can a bison run",
+    "how much does a bison weigh",
+    "bison charges car",
+    "yellowstone bison",
+    "turn signal",
+    "people who don't use blinkers",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "use your blinker"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "National Park Service, Yellowstone: bison males up to 2,000 pounds; can run up to 35 mph",
+      "url": "https://www.nps.gov/yell/learn/nature/bison.htm"
+    },
+    {
+      "title": "National Park Service: Bison bison",
+      "url": "https://www.nps.gov/subjects/bison/index.htm"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "17:21",
+  "checks_failed": []
+}

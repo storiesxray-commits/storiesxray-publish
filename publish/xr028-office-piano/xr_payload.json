@@ -1,0 +1,49 @@
+{
+  "content_id": "xr-028",
+  "repo_id": "xr028-office-piano",
+  "sha256": "c80317d3b7c86ccc72ba7798b2c3500c1d7daf50c91eb41aa0ea55e4b73836fd",
+  "file_size_bytes": 13482866,
+  "duration_seconds": 21.155,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.97,
+  "video_bit_rate": 4960915,
+  "faststart": true,
+  "title_youtube": "Being a Good Coworker Won't Save You From a Falling Piano",
+  "description_youtube": "Being a good coworker won't save you from a falling grand piano. Office etiquette, tested by physics.\n\nThe useless facts:\n- A nine-foot concert grand piano (like the Steinway Model D, 274 cm long) weighs about 990 pounds.\n- Microwaving fish at the office is the most hated break-room habit in America. The piano does not care. The office, however, claps.\n\nUseless Facts is our series of true facts nobody needed. What's the worst thing someone has microwaved at your job?\n\nSources:\n- Steinway & Sons (UK), Model D specifications (274 cm, 990 lb / 480 kg): https://steinway.co.uk/?p=1831\n- Wikipedia, Steinway D-274: https://en.wikipedia.org/wiki/Steinway_D-274\n\n#office #coworkers #uselessfacts #shorts",
+  "caption_instagram": "Being a good coworker won't save you. #office #uselessfacts",
+  "tags": [
+    "office etiquette",
+    "microwaving fish at work",
+    "how heavy is a grand piano",
+    "how much does a concert grand piano weigh",
+    "office humor",
+    "coworkers",
+    "falling piano",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "work memes",
+    "break room rules"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "Steinway & Sons UK: Model D, length 274 cm (8'11 3/4\"), net weight 990 lb (480 kg)",
+      "url": "https://steinway.co.uk/?p=1831"
+    },
+    {
+      "title": "Wikipedia: Steinway D-274, 274 cm long, about 480 kg",
+      "url": "https://en.wikipedia.org/wiki/Steinway_D-274"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "12:27",
+  "checks_failed": []
+}

@@ -123,11 +123,11 @@ export default function story(E, tm) {
     s01: [k(0, [0, 1.15, Z0 + 0.3], 3.0, 4, 6, 46), k(T.s02, [0, 1.12, Z0 + 0.3], 2.6, 0, 6, 46)],
     s02: [k(T.s02, [0.05, 1.05, Z0 + 0.2], 1.7, -14, 10, 44), k(T.s03, [0.05, 1.05, Z0 + 0.2], 1.5, -10, 10, 44)],
     s03: [k(T.s03, [0, 1.5, Z0 + 0.2], 3.6, 10, 2, 54), k(BREAK1, [0, 1.6, Z0 + 0.2], 3.8, 8, 0, 56), k(T.s04, [0, 1.6, Z0 + 0.4], 4.6, 6, 0, 58)],
-    s04: [k(T.s04, [0, 1.8, Z0 + 0.7], 4.4, 28, -4, 54), k(T.s05, [0, 1.8, Z0 + 0.7], 4.0, 20, -4, 54)],
+    s04: [k(T.s04, [0, 1.75, Z0 + 0.7], 4.6, -10, -2, 54), k(T.s05, [0, 1.75, Z0 + 0.7], 4.2, -6, -2, 54)],
     s05: [k(T.s05, [0, 1.0, Z0 + 0.9], 4.4, -12, 8, 56), k(T.s06, [0, 0.8, Z0 + 1.0], 3.4, -8, 10, 56)],
     s06: [k(T.s06, [0, 1.0, Z0 + 0.2], 2.6, 10, 8, 46), k(T.s07, [0, 1.0, Z0 + 0.2], 2.2, 6, 8, 46)],
-    s07: [k(T.s07, [0, 1.5, Z0 + 0.4], 4.4, -34, 2, 56), k(T.s08, [0, 1.5, Z0 + 0.4], 4.8, -30, 2, 56)],
-    s08: [k(T.s08, [0, 1.5, Z0 + 0.4], 5.4, 0, 6, 54), k(wd(8, 2), [0, 0.95, Z0 + 0.5], 3.0, 0, 18, 50), k(total, [0, 0.7, TBL.z + 0.15], 2.3, 0, 30, 46)],
+    s07: [k(T.s07, [0, 1.5, Z0 + 0.4], 4.4, -30, 2, 56), k(LAND2, [0, 1.5, Z0 + 0.4], 4.8, -22, 2, 56), k(T.s08, [0, 1.5, Z0 + 0.4], 5.0, -14, 2, 56)],
+    s08: [k(T.s08, [0, 1.5, Z0 + 0.4], 5.4, 0, 6, 54), k(wd(8, 2), [0, 0.95, Z0 + 0.5], 3.0, 0, 18, 50), k(total, [0, 0.75, TBL.z + 0.1], 2.8, 0, 28, 46)],
   };
   const shake = [{ t: BREAK1, a: 0.3 }, { t: LAND1, a: 0.45 }, { t: LAND2, a: 0.45 }];
   const cam = (t) => { const s = shotAt(t); return E.keepInside(camKeys(K[s], t, { shake, hand: 0.004, creep: 0.02 }), [-4.8, 0.2, -3.8], [4.8, 2.95, 9]); };
@@ -149,7 +149,7 @@ export default function story(E, tm) {
     if (s === 's03') { const j = jump(t, BREAK1, LAND1); mz = j.z; my = t < LAND1 ? j.y : 0; pitch = t < LAND1 ? j.pitch : 0; walk = t < LAND1 ? 1.1 : 0; }
     if (s === 's04' || s === 's05') { mz = Z0 + 0.35; chew = 1; look = s === 's05' ? Math.sin(t * 0.8) * 0.25 : 0.15; }
     if (s === 's07') { const j = jump(t, BREAK2, LAND2); mz = t < LAND2 ? j.z : Z0 + 0.35; my = t < LAND2 ? j.y : 0; pitch = t < LAND2 ? j.pitch : 0; walk = t < LAND2 ? 1.1 : 0; chew = t > LAND2 ? 1 : 0; }
-    if (s === 's08') { const turn = EASE.smooth(ramp(t, T.s08 + 0.1, T.s08 + 0.9)), out = ramp(t, T.s08 + 0.8, total - 0.2);
+    if (s === 's08') { const turn = EASE.smooth(ramp(t, T.s08 + 0.05, T.s08 + 0.5)), out = ramp(t, T.s08 + 0.45, total - 0.2);
       ry = turn * Math.PI; mz = Z0 + 0.35 - EASE.smooth(clamp(out * 2.2)) * 4.5; my = Math.sin(clamp(out * 3) * Math.PI) * 0.25; walk = turn < 1 ? 0.4 : 1; }
     moose.root.position.set(0, my, mz); moose.root.rotation.set(pitch, ry, 0); moose.root.visible = mz > BW - 2.0 || s === 's08';
     mooseLife(t, { walk, chew, look });
@@ -184,7 +184,7 @@ export default function story(E, tm) {
     if (s !== 's02') {
       const fp = (side) => scare1 || scare2 ? (s === 's08' ? { expr: 'happy', L: 'wave', R: 'hang', k: t * 1.4, facing: side * -1, look: 0 } : { expr: 'shock', L: 'cheek', R: 'cheek', facing: 0, look: 0 })
         : s === 's06' ? { expr: 'annoyed', L: 'table', R: 'table', facing: -side, look: -side * 0.8 } : { expr: 'happy', L: 'table', R: side > 0 ? 'hold' : 'table', hold: { R: 'glass' }, facing: -side * 0.5, look: -side * 0.5 };
-      const fx = s === 's08' ? 0.66 : 0.78; sit('f1', 'c1', 31, -fx, fp(-1)); sit('f2', 'c2', 32, fx, fp(1));
+      const fx = s === 's08' || (s === 's07' && t > BREAK2) ? 0.98 : 0.78; sit('f1', 'c1', 31, -fx, fp(-1)); sit('f2', 'c2', 32, fx, fp(1));
     }
     // the check splitter
     if ((s === 's01' || s === 's02' || s === 's03') && !crushed1) {
@@ -204,7 +204,7 @@ export default function story(E, tm) {
     }
     // the cook behind the counter
     if (s === 's01' || s === 's05' || s === 's07') A.push(actor({ id: 'cook', look: LK.cook, seed: 41, x: 4.75, y: 0, z: -0.8, pose: alive(t, 41, { mode: 'stand', expr: s === 's01' ? 'happy' : 'shock', L: s === 's01' ? 'hold' : 'cheek', R: s === 's01' ? 'hang' : 'cheek', hold: { L: 'plate' }, facing: -1, look: -0.7 }) }));
-    if ((s === 's03' && t > LAND1) || (s === 's07' && t > LAND2)) { const t0 = s === 's03' ? LAND1 : LAND2; const q = ramp(t, t0, t0 + 0.55); if (q < 1) A.push(fxCard({ id: 'puff', kind: 'puff', args: [q], x: 0, y: 0.35, z: TBL.z + 1.0, s: 0.9 })); }
+    if ((s === 's03' && t > LAND1) || (s === 's07' && t > LAND2)) { const t0 = s === 's03' ? LAND1 : LAND2; const q = ramp(t, t0, t0 + 0.55); if (q < 1 && s === 's03') A.push(fxCard({ id: 'puff', kind: 'puff', args: [q], x: 0, y: 0.35, z: TBL.z + 1.0, s: 0.9 })); }
     if (s === 's08' && t > wd(8, 2) - 0.2) A.push(fxCard({ id: 'sp8', kind: 'sparkle', args: [t * 3], x: -0.2, y: TABLE_H + 0.18, z: TBL.z + 0.25, s: 0.2 }));
     return A;
   };

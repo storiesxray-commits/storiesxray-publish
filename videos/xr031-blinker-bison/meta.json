@@ -5,43 +5,161 @@
   "made_for_kids": false,
   "altered_or_synthetic_realistic": false,
   "publish_timezone": "America/New_York",
-  "platforms": ["youtube"],
+  "platforms": [
+    "youtube"
+  ],
   "title": "Your Blinker Won't Save You From a Charging Bison",
   "description": "Your blinker won't save you from a charging bison. The polite-driver test, settled by a 2,000 pound animal.\n\nThe useless facts:\n- Male bison can weigh up to 2,000 pounds, according to the National Park Service.\n- Bison can run up to 35 miles per hour.\n- Use your blinker anyway. The bison does.\n\nUseless Facts is our series of true facts nobody needed. Be honest: do you signal every lane change?\n\nSources:\n- National Park Service, Yellowstone: Bison (males up to 2,000 lb; can run up to 35 mph): https://www.nps.gov/yell/learn/nature/bison.htm\n- National Park Service, Bison bison (biology, weight and speed): https://www.nps.gov/subjects/bison/index.htm\n\n#bison #blinker #uselessfacts #shorts",
-  "tags": ["bison", "how fast can a bison run", "how much does a bison weigh", "bison charges car", "yellowstone bison", "turn signal", "people who don't use blinkers", "useless facts", "absurd facts", "funny facts", "dumb facts", "use your blinker"],
+  "tags": [
+    "charging bison",
+    "bison",
+    "how fast can a bison run",
+    "how much does a bison weigh",
+    "bison charges car",
+    "yellowstone bison",
+    "turn signal",
+    "people who don't use blinkers",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "use your blinker"
+  ],
   "pinned_comment": "The bison would like to know why you didn't signal.",
   "series": "Useless Facts",
   "caption_instagram": "Your blinker won't save you. #bison #uselessfacts",
   "sources": [
-    {"title": "National Park Service, Yellowstone: bison males up to 2,000 pounds; can run up to 35 mph", "url": "https://www.nps.gov/yell/learn/nature/bison.htm"},
-    {"title": "National Park Service: Bison bison", "url": "https://www.nps.gov/subjects/bison/index.htm"}
+    {
+      "title": "National Park Service, Yellowstone: bison males up to 2,000 pounds; can run up to 35 mph",
+      "url": "https://www.nps.gov/yell/learn/nature/bison.htm"
+    },
+    {
+      "title": "National Park Service: Bison bison",
+      "url": "https://www.nps.gov/subjects/bison/index.htm"
+    }
   ],
   "human_angle": "Uses the universal American road grievance (people who never use their blinker) as the setup for the real size and speed of a bison, ending with the bison being the only polite driver.",
   "promise_check": "0:00 'Using your blinker won't save you'; 0:06-0:12 a bison charges the car, 2,000 lb and 35 mph on screen; 0:17 same bison for the no-blinker guy; 0:20 the bison signals.",
   "notes": "USELESS FACTS, owner 27/11/2026 ('like the tornado one, better graphics'). Bison, cars and truck are our own drawings; 2,000 lb / 35 mph = NPS. Cartoon only: car on its roof, dizzy stars, nobody hurt on screen.",
-  "experiment": {"engine": "hyperframes", "format": "useless_facts", "opening": "statement", "voice": "xr9", "tone": "comedy", "duration": "short", "hook_type": "debate", "topic_type": "evergreen", "ending": "punchline", "loop": "none"},
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "statement",
+    "voice": "xr9",
+    "tone": "comedy",
+    "duration": "short",
+    "hook_type": "debate",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
   "seo": {
-    "keyword": "bison",
+    "keyword": "charging bison",
     "playlist": "Useless Facts",
-    "title_alts": ["A Bison Runs 35 MPH (Use Your Blinker)", "Blinker vs a 2,000 Pound Bison"],
+    "title_alts": [
+      "A Bison Runs 35 MPH (Use Your Blinker)",
+      "Blinker vs a 2,000 Pound Bison"
+    ],
     "questions": [
-      {"q": "How fast can a bison run?", "a": "Bison can run up to 35 miles per hour, according to the National Park Service."},
-      {"q": "How much does a bison weigh?", "a": "Male bison can weigh up to 2,000 pounds; females are smaller, around 1,000 pounds."},
-      {"q": "Do bison charge cars?", "a": "Bison can charge when people get too close; Yellowstone asks visitors to stay at least 25 yards away and stay in their vehicles."}
+      {
+        "q": "How fast can a bison run?",
+        "a": "Bison can run up to 35 miles per hour, according to the National Park Service."
+      },
+      {
+        "q": "How much does a bison weigh?",
+        "a": "Male bison can weigh up to 2,000 pounds; females are smaller, around 1,000 pounds."
+      },
+      {
+        "q": "Do bison charge cars?",
+        "a": "Bison can charge when people get too close; Yellowstone asks visitors to stay at least 25 yards away and stay in their vehicles."
+      }
     ],
     "demand": [
-      {"query": "how fast can a bison run", "evidence": "Evergreen question answered by NPS and many news pieces about Yellowstone bison incidents", "url": "https://www.nps.gov/yell/learn/nature/bison.htm"},
-      {"query": "people who don't use blinkers", "evidence": "Recurring US driving complaint meme and survey topic", "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"}
+      {
+        "query": "how fast can a bison run",
+        "evidence": "Evergreen question answered by NPS and many news pieces about Yellowstone bison incidents",
+        "url": "https://www.nps.gov/yell/learn/nature/bison.htm"
+      },
+      {
+        "query": "people who don't use blinkers",
+        "evidence": "Recurring US driving complaint meme and survey topic",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
     ]
   },
-  "qa_words_ok": ["NPS", "uselessfacts", "lb", "mph", "MPH", "HONK"],
+  "qa_words_ok": [
+    "NPS",
+    "uselessfacts",
+    "lb",
+    "mph",
+    "MPH",
+    "HONK"
+  ],
   "thumbnail": {
-    "time": 7.4, "zoom": 1.0, "focus": [0.5, 0.6], "protect": [60, 1000, 1040, 1500],
-    "circle": false, "rays": false, "badge": "2,000 LB", "tilt": -4, "text_y": 150,
-    "lines": [{"text": "BLINKER", "color": "#FFB020"}, {"text": "VS BISON", "box": "#FF3B30"}],
+    "time": 7.4,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.6
+    ],
+    "protect": [
+      60,
+      1000,
+      1040,
+      1500
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "2,000 LB",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "BLINKER",
+        "color": "#FFB020"
+      },
+      {
+        "text": "VS BISON",
+        "box": "#FF3B30"
+      }
+    ],
     "glow": "#FFB020",
-    "variants": [{}, {"lines": [{"text": "IT SIGNALED", "color": "#FFB020"}], "time": 21.0, "protect": [300, 1300, 900, 1650]}, {"lines": [{"text": "SAME BISON", "box": "#FF3B30"}], "time": 13.4, "protect": [60, 1100, 1040, 1550]}],
-    "pick": 0, "saturation": 1.1, "contrast": 1.1,
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "IT SIGNALED",
+            "color": "#FFB020"
+          }
+        ],
+        "time": 21.0,
+        "protect": [
+          300,
+          1300,
+          900,
+          1650
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "SAME BISON",
+            "box": "#FF3B30"
+          }
+        ],
+        "time": 13.4,
+        "protect": [
+          60,
+          1100,
+          1040,
+          1550
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
     "design_note": "HUMAN.md §2: sunset desert palette, amber text, new layout."
   }
 }
