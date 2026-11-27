@@ -131,6 +131,17 @@ def audit(vs, focus=None):
     if len(par) >= 3:
         flag("AMARILLO", "títulos con el mismo molde",
              f"{len(par)} de los últimos 5 terminan con '(…)': escribir el próximo sin paréntesis (HUMAN.md §2)", par)
+    # mayúsculas de título (dueña, 27/11/2026): todos en Title Case perfecto se ve automático. Mezclar con oraciones normales y minúsculas.
+    def title_case(t):
+        w = [x for x in re.findall(r"[A-Za-z][A-Za-z']*", t) if len(x) > 3]
+        return len(w) >= 3 and sum(x[0].isupper() for x in w) / len(w) > 0.85
+    tc = [v["id"] for v in last5 if title_case(v["title"])]
+    if len(tc) >= 3:
+        flag("AMARILLO", "títulos todos en Title Case",
+             f"{len(tc)} de los últimos 5 con Mayúscula En Cada Palabra: escribir el próximo como oración normal o en minúsculas (HUMAN.md §2)", tc)
+    won = [v["id"] for v in last5 if re.search(r"won'?t save you", v["title"], re.I)]
+    if len(won) >= 2:
+        flag("AMARILLO", "títulos con el mismo molde", f"{len(won)} de los últimos 5 con \"won't save you\"", won)
     repeated("first", "guiones", 2, 3)
     repeated("last", "cierres de guion", 2, 3)
     repeated("desc", "descripciones", 3, 3)
