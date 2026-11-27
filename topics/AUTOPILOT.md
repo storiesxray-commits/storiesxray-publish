@@ -9,6 +9,17 @@ command -v ffmpeg && ls /usr/bin/google-chrome
 ```
 Si falta algo que no se puede instalar, no producir: dejar el motivo en el resumen final.
 
+## 0b. MODO USELESS FACTS (dueña, 27/11/2026 — GANA sobre §1, §1a, §1b, §1c y §2a hasta el análisis del 4/12/2026)
+"Por ahora pasamos a este contenido y después en una semana analiza todo."
+- **Todos los videos del día salen del formato USELESS FACTS, modelo cadena:** seguir `topics/USELESS_BANK.md` (reglas 1–10 y guiones verificados). Tomar el primer `todo` del banco que encaje en el motor que toca por §1d; si no queda ninguno listo, escribir uno nuevo con la lista "Ideas para desarrollar" cumpliendo TODAS las reglas del banco (cifras con 2 fuentes) y agregarlo al banco.
+- **70/30:** ~70 % termina en muerte cartoon y ~30 % sobrevive con final bizarro. Si los últimos 3 producidos murieron, el de hoy no muere.
+- **Cierre para suscribirse** ~1 de cada 4, nunca 2 seguidos.
+- **Títulos** con mayúsculas variadas (HUMAN.md §2): no todos en Title Case.
+- `meta.json`: `series: "Useless Facts"`, `experiment.format = "useless_facts"`, `experiment.ending = "death"` o `"bizarre_survive"`, `experiment.cta = true/false`, `human_angle` y `promise_check` como siempre.
+- Voces: `tools/voices.json` → `casting` "deadpan" (xr10, xr12) o "comedy" (xr8, xr7, xr9, xr2); rotar, no repetir la del video anterior.
+- Siguen valiendo §1d (alternar motor), §3, §3c, §4, §5, revisión visual independiente hasta PASS y 1 Short por día. La noticia caliente (§1b) y EVERYDAY (§1c) quedan en pausa hasta el análisis.
+- El 4/12/2026 una tarea programada compara este formato contra los videos anteriores y decide si sigue.
+
 ## 1. Elegir el tema
 - **`topics/queue_v3.json`** (desde el 16/11/2026): las **100 mejores ideas** calificadas por viralidad extrema. Tomar el ítem `todo` del **nivel de puntaje más alto** (95–100, después 90–94, 85–89, 80–84) y, dentro del nivel, el primero en el orden de la lista. La lista ya viene ordenada así, así que en la práctica es el primer `todo`. `queue.json` y `queue_v2.json` quedaron solo como historial.
 - **Puntaje (regla de la dueña):** `score = 5 × viral + 5 × hook_power` (cada uno de 1 a 10). `viral` = curiosidad universal para EE. UU., ganas de compartir/comentar, que hable del espectador; `hook_power` = cuánto frena el scroll la frase de los primeros 1–2 s. Desde el 18/11/2026 la cola fue purgada: solo quedan temas ultra virales (ver `rule`); el orden de la lista es el orden de producción.
