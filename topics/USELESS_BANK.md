@@ -15,6 +15,27 @@ Medidos: xr023, xr027 (publicados 27/11), xr024–xr026, xr028–xr031 (en cola)
 9. **Títulos humanos:** no todos en Title Case. Mezclar oración normal, minúsculas y alguno en Title Case. Sin repetir molde (HUMAN.md §2, `audit_human.py` lo marca).
 10. Duración 15–25 s. Personajes: algunos raros a propósito (muy bajo, cabeza enorme, rodillas al revés) y otros normales.
 
+## Variantes de estructura (alternar: nunca 3 seguidos de la misma)
+Todas cumplen las reglas 1–10: todo conectado, cifras reales, curiosidad hasta el final, remate seco.
+
+**A · Cadena (shawarma).** Acumulación o escalada de un objeto cotidiano → catástrofe con el mismo objeto. (U01–U05.)
+
+**B · Overkill técnico (referencia de la dueña 27/11: "cortar pan de molde" — NO copiar ese ejemplo).** Anatomía:
+1. Instrucción normal y precisa para una tarea mínima, con la herramienta humilde descripta como un manual ("a serrated stainless steel knife, gentle back-and-forth").
+2. "Under no circumstances use…" + una máquina industrial REAL con marca, modelo y ficha técnica exacta (caballos de fuerza, presión, velocidad, tolerancia en milímetros). La seriedad de la ficha es el chiste.
+3. Concesión: reconocer que funcionaría perfecto ("Although it will slice the crust to ±0.025 mm…").
+4. Cadena de daños colaterales que baja por la casa, cada uno más grave y más específico (la tabla → la mesada → el caño maestro de gas → el compresor de la heladera de abajo).
+5. Costo operativo absurdo de la tarea trivial ("$45 per minute for your sandwich").
+6. Cierre de 3 palabras, seco, volviendo a la herramienta humilde ("Use the knife.").
+Voz deadpan (xr10/xr12), leída como manual de seguridad. Gráficos: ficha técnica que se arma en pantalla, cotas y flechas de ingeniería, corte en sección de la casa piso por piso. Marcas solo dichas (sin logos). Cifras de la ficha verificadas con la hoja técnica del fabricante.
+Ideas B (verificar fichas antes de escribir):
+- Aplanar masa de pizza → no la prensa de forja de 50.000 toneladas de Cleveland, Ohio (la "Fifty"): la mesada, el sótano, el lecho de roca.
+- Abrir un frasco de pepinillos → no una herramienta hidráulica de rescate (fuerza de separación en libras-fuerza de la ficha): el frasco, la mesada, la puerta del auto del vecino.
+- Despertar a tu hijo adolescente → no un dispositivo acústico de largo alcance de la policía (decibeles y alcance de la ficha): las ventanas de la cuadra, el perro, el HOA.
+- Sacar la nieve del parabrisas → no un soplador de pista de aeropuerto con turbina de avión (empuje y temperatura de la ficha).
+
+**C · "Ni lo uno ni lo otro" (tanda 2, ya usado).** Dos conductas opuestas, mismo final. Usar poco; la dueña pidió no hacer todo "vs.".
+
 ## Guiones listos (datos verificados el 27/11/2026)
 Estado: `todo` → `done (xrNNN)` cuando se produce. Tomar el primer `todo` que encaje en el motor que toca (AUTOPILOT §1d: cartoon = adentro de una casa con personas; HyperFrames = acumulación con gráficos, números, cortes).
 
