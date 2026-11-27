@@ -12,7 +12,7 @@ Si falta algo que no se puede instalar, no producir: dejar el motivo en el resum
 ## 0b. MODO USELESS FACTS (dueña, 27/11/2026 — GANA sobre §1, §1a, §1b, §1c y §2a hasta el análisis del 4/12/2026)
 "Por ahora pasamos a este contenido y después en una semana analiza todo."
 - **Todos los videos del día salen del formato USELESS FACTS, modelo cadena:** seguir `topics/USELESS_BANK.md` (reglas 1–10 y guiones verificados). Tomar el primer `todo` del banco que encaje en el motor que toca por §1d; si no queda ninguno listo, escribir uno nuevo con la lista "Ideas para desarrollar" cumpliendo TODAS las reglas del banco (cifras con 2 fuentes) y agregarlo al banco.
-- **Variantes:** alternar la A "cadena" y la B "overkill técnico" del banco (nunca 3 seguidos de la misma); la C ("uno vs. otro") casi nunca.
+- **Variantes:** rotar la A "cadena", la B "overkill técnico" y la D "respuesta correcta vs. reacción desproporcionada" del banco (nunca 2 seguidos de la misma); la C ("uno vs. otro") casi nunca.
 - **70/30:** ~70 % termina en muerte cartoon y ~30 % sobrevive con final bizarro. Si los últimos 3 producidos murieron, el de hoy no muere.
 - **Cierre para suscribirse** ~1 de cada 4, nunca 2 seguidos.
 - **Títulos** con mayúsculas variadas (HUMAN.md §2): no todos en Title Case.

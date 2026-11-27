@@ -34,6 +34,18 @@ Ideas B (verificar fichas antes de escribir):
 - Despertar a tu hijo adolescente → no un dispositivo acústico de largo alcance de la policía (decibeles y alcance de la ficha): las ventanas de la cuadra, el perro, el HOA.
 - Sacar la nieve del parabrisas → no un soplador de pista de aeropuerto con turbina de avión (empuje y temperatura de la ficha).
 
+**D · Respuesta correcta vs. reacción desproporcionada (referencia de la dueña 27/11: "buenas noches, abuela" — NO copiar).** Anatomía:
+1. Situación social mínima y cotidiana, con la frase exacta que te dicen ("Goodnight, sweetie.").
+2. "The recommended answer is…" + la respuesta normal, citada tal cual.
+3. "Not…" + una reacción física desproporcionada de dibujito (llave de judo, patada voladora) con UNA cifra real exacta que la vuelve ridícula (velocidad orbital: ~17.500 mph, NASA; Mach 1; presión de una manguera de bomberos).
+4. Remate por **orden invertido de pérdidas**: primero lo trivial, después lo importante, seco ("Otherwise, you'll probably lose the window. And Grandma."). Este truco (bathos) sirve en todas las variantes.
+Cartoon puro y físicamente imposible (sale volando y queda en órbita, saluda desde la ventanilla de la Estación Espacial): nunca golpe realista, nunca sangre, la víctima se ve bien al final. Cuenta como "sobrevive bizarro" si la víctima aparece viva en el espacio.
+Ideas D (EE. UU.; verificar la cifra):
+- El mozo dice "Enjoy your meal" → "You too" es incómodo pero correcto → no catapultarlo por la ventana del drive-thru a velocidad de escape (~25.000 mph) → "you lose the fries. And Kevin from the drive-thru."
+- El conductor de Uber pregunta "How's your day going?" → "Good, you?" → no salir eyectado por el techo solar a Mach 1 (767 mph) → "you lose your five stars. And the sunroof."
+- Alguien estornuda → "Bless you" → no una manguera de bomberos a la presión de la ficha → "you lose the coworker. And the PowerPoint."
+- Tu tía pregunta "So when are you getting married?" en Thanksgiving → "Soon, Aunt Linda" → no lanzarle el pavo de 20 libras a 100 mph → "you lose the turkey. And the inheritance."
+
 **C · "Ni lo uno ni lo otro" (tanda 2, ya usado).** Dos conductas opuestas, mismo final. Usar poco; la dueña pidió no hacer todo "vs.".
 
 ## Guiones listos (datos verificados el 27/11/2026)
