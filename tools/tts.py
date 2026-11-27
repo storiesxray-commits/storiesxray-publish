@@ -38,7 +38,7 @@ def out_name(vid, script):
     # (test renders of a new visual engine must not spend ElevenLabs credits or change the voice).
     vid = script.get("tts_id", vid)
     key = pick_voice(vid, script)
-    h = hashlib.sha1((key + "|" + CFG["model"] + "|" + full_text(script)).encode()).hexdigest()[:10]
+    h = hashlib.sha1((key + "|" + CFG["model"] + "|" + full_text(script) + (f"|seed{script['seed']}" if script.get("seed") is not None else "")).encode()).hexdigest()[:10]
     return f"{vid}-{key}-{h}", key
 
 def request(vid):

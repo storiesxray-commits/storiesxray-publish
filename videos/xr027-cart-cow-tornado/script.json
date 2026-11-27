@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Returning your cart won't save you.", 0.2],
+  ["Say you're a good person.", 0.1],
+  ["You walk your cart all the way back.", 0.15],
+  ["Then a tornado throws a cow at you.", 0.15],
+  ["Winds over two hundred miles per hour. Thirteen hundred pounds of cow.", 0.2],
+  ["You'd probably die.", 0.4],
+  ["Now say you leave it in the parking spot.", 0.25],
+  ["Also dead.", 0.4],
+  ["[whispers] But you kind of deserved it.", 0.0]
+ ],
+ "tone": "comedy",
+ "voice": "xr8"
+}

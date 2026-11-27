@@ -1,0 +1,17 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Don't clean your room with this.", 0.2],
+  ["Use a vacuum.", 0.15],
+  ["Not the Bagger two ninety-three.", 0.1],
+  ["Fourteen thousand two hundred tons.", 0.1],
+  ["Taller than the Statue of Liberty.", 0.1],
+  ["It digs about four Olympic pools of dirt every hour.", 0.3],
+  ["Otherwise: no mess.", 0.2],
+  ["No room.", 0.2],
+  ["No Ohio.", 0.6],
+  ["[whispers] Nobody would notice.", 0.0]
+ ],
+ "tone": "deadpan",
+ "voice": "xr12"
+}

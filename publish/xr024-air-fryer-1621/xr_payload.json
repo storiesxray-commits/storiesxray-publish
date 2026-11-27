@@ -1,0 +1,55 @@
+{
+  "content_id": "xr-024",
+  "repo_id": "xr024-air-fryer-1621",
+  "sha256": "6f0dced990ffdeb21e8c3931a6b4626fa2690e2b2f8f3381b6ff643d8c9bf00c",
+  "file_size_bytes": 19530069,
+  "duration_seconds": 30.947,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.979,
+  "video_bit_rate": 4914396,
+  "faststart": true,
+  "title_youtube": "Your Air Fryer Was Not at the First Thanksgiving",
+  "description_youtube": "A completely useless Thanksgiving fact, with real history: your air fryer missed the first Thanksgiving.\n\nWhat we actually know about the 1621 harvest feast at Plymouth comes mostly from one letter by colonist Edward Winslow:\n- About 90 Wampanoag men came with their leader Massasoit.\n- They went out and brought five deer.\n- There were roughly 50 colonists; English hunters had gone fowling for wild birds.\n- The feasting and games lasted three days.\n- Air fryers present: zero (they were invented in the 2000s).\n\nUseless Facts is our series of true facts nobody needed. What actually sits at the head of your Thanksgiving table?\n\nSources:\n- Massachusetts Commonwealth Museum, Thanksgiving mysteries (Winslow's account: Massasoit and ninety men, five deer, three days): https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/online/thanksgiving/thanksgiving-mysteries-3.htm\n- TIME, The first Thanksgiving: Winslow's letter, five deer, three days of feasting: https://time.com/5021704/the-first-thanksgiving/\n- History.com, Colonists at the first Thanksgiving: https://www.history.com/news/first-thanksgiving-colonists-native-americans-men\n\n#thanksgiving #airfryer #uselessfacts #shorts",
+  "caption_instagram": "Your air fryer missed the first Thanksgiving. #thanksgiving #uselessfacts",
+  "tags": [
+    "first thanksgiving",
+    "who was at the first thanksgiving",
+    "how long was the first thanksgiving",
+    "first thanksgiving 1621",
+    "thanksgiving facts",
+    "what did they eat at the first thanksgiving",
+    "wampanoag thanksgiving",
+    "air fryer",
+    "air fryer thanksgiving",
+    "useless facts",
+    "funny thanksgiving",
+    "absurd facts",
+    "dumb facts",
+    "thanksgiving history"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "Massachusetts Commonwealth Museum (Secretary of the Commonwealth): Winslow's 1621 account; Massasoit and ninety men; Native hunters contributed five deer; three days of games and feasting",
+      "url": "https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/online/thanksgiving/thanksgiving-mysteries-3.htm"
+    },
+    {
+      "title": "TIME: Winslow's letter; a large Wampanoag group with Massasoit came with five deer; 'for three days we entertained and feasted'",
+      "url": "https://time.com/5021704/the-first-thanksgiving/"
+    },
+    {
+      "title": "History.com: the three-day 1621 harvest feast; about 50 surviving colonists, mostly men",
+      "url": "https://www.history.com/news/first-thanksgiving-colonists-native-americans-men"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "12:42",
+  "checks_failed": []
+}

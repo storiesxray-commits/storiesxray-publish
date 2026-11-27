@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #1a0f2e; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #12081f;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4); letter-spacing: 1px; }
+      .ln.y { color: #ffd23a; } .ln.r { color: #ff4d4d; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .08; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 52%, rgba(10,0,20,.5) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1650"/><stop offset=".55" stop-color="#8a3a7a"/><stop offset="1" stop-color="#ff9a5a"/></linearGradient>
+        <linearGradient id="asph" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4658"/><stop offset="1" stop-color="#2a2636"/></linearGradient>
+        <linearGradient id="glassG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd8ff"/><stop offset="1" stop-color="#4a7ab8"/></linearGradient>
+        <linearGradient id="soda" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b8141e"/><stop offset=".45" stop-color="#ff4a4a"/><stop offset="1" stop-color="#8a0e16"/></linearGradient>
+        <linearGradient id="pop" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#103a9a"/><stop offset=".45" stop-color="#3a8aff"/><stop offset="1" stop-color="#0a2a70"/></linearGradient>
+        <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2a8"/><stop offset=".5" stop-color="#e8b42a"/><stop offset="1" stop-color="#a8741a"/></linearGradient>
+        <linearGradient id="grassG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fae4a"/><stop offset="1" stop-color="#3a6a2a"/></linearGradient>
+        <radialGradient id="spot" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff6c8" stop-opacity=".75"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></radialGradient>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20.47" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: SODA vs POP, a tiny big-headed guy shrugging in the middle -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="2.2" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="540" height="1920" fill="#d81e2a"/><rect x="540" width="540" height="1920" fill="#1e5ad8"/>
+          <g id="rays1" opacity=".18"></g>
+          <g id="canS" transform="translate(270 1000)"></g><g id="canP" transform="translate(810 1000)"></g>
+          <g transform="translate(540 980)"><g id="vs1"><path d="M-40 -170 L50 -40 L0 -30 L60 150 L-60 -10 L-6 -20 Z" fill="#ffd23a" stroke="#12081f" stroke-width="10" stroke-linejoin="round"/>
+            <text y="30" text-anchor="middle" font-family="Anton" font-size="120" fill="#fff" stroke="#12081f" stroke-width="12" paint-order="stroke">VS</text></g></g>
+          <g transform="translate(540 1760)"><g id="s1p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 store front at 5 AM, guy #1 says SODA; shoppers pressed against the glass -->
+      <div id="s2" class="clip scene" data-start="2.2" data-duration="1.6" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam"><g id="store2"></g>
+          <g id="pos2a" transform="translate(760 1700)"><g id="s2p"></g></g>
+          <g id="bub2" transform="translate(640 1000)"><path d="M-170 -90 H170 Q200 -90 200 -60 V60 Q200 90 170 90 H40 L10 150 L-10 90 H-170 Q-200 90 -200 60 V-60 Q-200 -90 -170 -90Z" fill="#fff" stroke="#12081f" stroke-width="10"/>
+            <text y="40" text-anchor="middle" font-family="Anton" font-size="120" fill="#d81e2a">SODA.</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 the doors burst: the stampede runs him over -->
+      <div id="s3" class="clip scene" data-start="3.8" data-duration="3.18" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam"><g id="store3"></g>
+          <g id="hero3" transform="translate(800 1700)"><g id="s3p"></g></g>
+          <g id="crowd3"></g>
+          <g id="dust3" opacity="0"></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 126 million: an endless stampede crossing the frame, counter -->
+      <div id="s4" class="clip scene" data-start="6.98" data-duration="1.98" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="url(#dawn)"/>
+          <path d="M0 980 C200 940 400 1000 600 960 C800 920 960 980 1080 950 V1920 H0Z" fill="#3a2a4a"/>
+          <rect y="1080" width="1080" height="840" fill="url(#asph)"/>
+          <g id="lanes4"></g>
+          <g transform="translate(540 760)"><rect x="-430" y="-110" width="860" height="200" rx="30" fill="#12081f" stroke="#ffd23a" stroke-width="10"/>
+            <text id="cnt4" y="50" text-anchor="middle" font-family="Anton" font-size="150" fill="#ffd23a">0</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 at the same time: 9 store doors burst open at once -->
+      <div id="s5" class="clip scene" data-start="8.96" data-duration="1.25" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="#12081f"/>
+          <g id="grid5"></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 you would probably die: flattened on the asphalt, footprints, the cup rolls away -->
+      <div id="s6" class="clip scene" data-start="10.21" data-duration="1.71" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="url(#asph)"/>
+          <g opacity=".5" stroke="#f2e6c8" stroke-width="14"><path d="M120 0 V1920"/><path d="M960 0 V1920"/></g>
+          <g transform="translate(990 1060) rotate(-8)"><g id="flat6"></g></g>
+          <g id="prints6" fill="#1a1626" opacity=".55"></g>
+          <g id="cup6"><rect x="-38" y="-70" width="76" height="120" rx="8" fill="#fff" stroke="#12081f" stroke-width="8"/><rect x="-38" y="-30" width="76" height="34" fill="#d81e2a"/><path d="M10 -70 L30 -140" stroke="#ffd23a" stroke-width="10" stroke-linecap="round"/></g>
+          <g id="cart6"></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 same store, guy #2 (very tall, tiny head, beanie) says POP -->
+      <div id="s7" class="clip scene" data-start="11.92" data-duration="2.07" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam"><g id="store7"></g>
+          <g id="pos7a" transform="translate(760 1720)"><g id="s7p"></g></g>
+          <g id="bub7" transform="translate(560 780)"><path d="M-150 -90 H150 Q180 -90 180 -60 V60 Q180 90 150 90 H60 L40 150 L10 90 H-150 Q-180 90 -180 60 V-60 Q-180 -90 -150 -90Z" fill="#fff" stroke="#12081f" stroke-width="10"/>
+            <text y="40" text-anchor="middle" font-family="Anton" font-size="120" fill="#1e5ad8">POP.</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 also dead: two little tombstones -->
+      <div id="s8" class="clip scene" data-start="13.99" data-duration="1.53" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="#b8c8e8"/>
+          <path d="M0 1250 C300 1200 700 1230 1080 1190 V1920 H0Z" fill="url(#grassG)"/>
+          <g id="tombs8"></g>
+          <g id="beanie8"></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 guy #3 (cowboy hat, belly, short legs) calls every soda a Coke -->
+      <div id="s9" class="clip scene" data-start="15.52" data-duration="2.66" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam"><g id="store9"></g>
+          <rect width="1080" height="1920" fill="url(#spot)"/>
+          <g id="pos9a" transform="translate(540 1760)"><g id="s9p"></g></g>
+          <g id="cups9"></g>
+        </g></svg>
+      </div>
+
+      <!-- S10 especially dead: a giant gold tombstone slams down; the crowd keeps running behind -->
+      <div id="s10" class="clip scene" data-start="18.18" data-duration="2.29" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s10cam">
+          <rect width="1080" height="1920" fill="#b8c8e8"/>
+          <g id="crowd10"></g>
+          <path d="M0 1250 C300 1200 700 1230 1080 1190 V1920 H0Z" fill="url(#grassG)"/>
+          <g id="tombs10"></g>
+          <g transform="translate(540 1480)"><g id="gold10"><path d="M-230 0 V-520 Q-230 -700 0 -700 Q230 -700 230 -520 V0Z" fill="url(#goldG)" stroke="#5a3a0a" stroke-width="14"/>
+            <text y="-430" text-anchor="middle" font-family="Anton" font-size="150" fill="#5a3a0a">COKE</text>
+            <text y="-280" text-anchor="middle" font-family="Anton" font-size="64" fill="#5a3a0a">R.I.P.</text>
+            <path d="M-120 -150 H120" stroke="#5a3a0a" stroke-width="10"/></g></g>
+          <g id="dust10" opacity="0"></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="2.2" data-track-index="1" style="top:300px"><span id="c1a" class="ln">SODA OR POP?</span></div>
+      <div id="c4" class="clip cap" data-start="6.98" data-duration="1.98" data-track-index="1" style="top:330px"><span id="c4a" class="ln y sm">BLACK FRIDAY</span></div>
+      <div id="c5" class="clip cap" data-start="8.96" data-duration="1.25" data-track-index="1" style="top:300px"><span id="c5a" class="ln y">SAME TIME</span></div>
+      <div id="c10" class="clip cap" data-start="18.7" data-duration="1.77" data-track-index="1" style="top:300px"><span id="c10a" class="ln r">ESPECIALLY.</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="20.47" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf, R = X.rand(23);
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const cuts = [0, 2.2, 3.8, 6.98, 8.96, 10.21, 11.92, 13.99, 15.52, 18.18, 20.47];
+      X.captions({ capY: (t) => (t < 2.2 ? 560 : t < 3.8 ? 300 : t < 6.98 ? 300 : t < 8.96 ? 1000 : t < 10.21 ? 1790 : t < 11.92 ? 420 : t < 13.99 ? 300 : t < 15.52 ? 1580 : t < 18.18 ? 300 : 560) });
+
+      // ---------- props ----------
+      const can = (label, grad, col) => `<g><ellipse cy="-260" rx="130" ry="34" fill="#c9ccd2" stroke="#12081f" stroke-width="10"/>
+        <path d="M-130 -260 V240 Q0 290 130 240 V-260" fill="url(#${grad})" stroke="#12081f" stroke-width="10"/>
+        <ellipse cy="-260" rx="110" ry="24" fill="#e8eaee"/><path d="M-20 -270 h40" stroke="#8a8e96" stroke-width="10" stroke-linecap="round"/>
+        <path d="M-130 -40 H130 V90 H-130Z" fill="#fff" stroke="#12081f" stroke-width="8"/>
+        <text y="58" text-anchor="middle" font-family="Anton" font-size="110" fill="${col}">${label}</text>
+        <path d="M-90 -220 V200" stroke="#fff" stroke-width="16" opacity=".35" stroke-linecap="round"/></g>`;
+      X.put("canS", can("SODA", "soda", "#d81e2a")); X.put("canP", can("POP", "pop", "#1e5ad8"));
+      let rr = ""; for (let i = 0; i < 18; i++) { const a = i / 18 * 6.283, b = (i + 0.5) / 18 * 6.283; rr += `<path d="M540 1000 L${540 + Math.cos(a) * 1600} ${1000 + Math.sin(a) * 1600} L${540 + Math.cos(b) * 1600} ${1000 + Math.sin(b) * 1600}Z" fill="#fff"/>`; }
+      X.put("rays1", rr);
+      // store front: facade, banner, sliding glass doors, the people pressed behind the glass
+      const store = (p, shake) => `<rect width="1080" height="1920" fill="url(#dawn)"/>
+        <circle cx="880" cy="260" r="60" fill="#ffe9b0" opacity=".7"/>
+        <rect x="-20" y="380" width="1120" height="1000" fill="#c9c2d8" stroke="#12081f" stroke-width="10"/>
+        <rect x="-20" y="380" width="1120" height="70" fill="#8a8aa8"/>
+        <g transform="translate(540 560)"><rect x="-470" y="-90" width="940" height="180" rx="16" fill="#12081f"/>
+          <text y="20" text-anchor="middle" font-family="Anton" font-size="110" fill="#ffd23a">BLACK FRIDAY</text><text y="78" text-anchor="middle" font-family="Anton" font-size="46" fill="#ff4d4d">DOORBUSTERS · 5 AM</text></g>
+        <rect x="150" y="740" width="780" height="640" fill="#12081f"/>
+        <g id="${p}crowd"></g>
+        <g id="${p}doorL"><rect x="155" y="745" width="385" height="635" fill="url(#glassG)" opacity=".55" stroke="#c9ccd2" stroke-width="14"/><path d="M200 800 L330 1300" stroke="#fff" stroke-width="18" opacity=".3"/></g>
+        <g id="${p}doorR"><rect x="540" y="745" width="385" height="635" fill="url(#glassG)" opacity=".55" stroke="#c9ccd2" stroke-width="14"/><path d="M600 800 L730 1300" stroke="#fff" stroke-width="18" opacity=".3"/></g>
+        <rect y="1380" width="1080" height="540" fill="url(#asph)"/><rect y="1380" width="1080" height="40" fill="#8a8aa8"/>
+        <g fill="#f2e6c8" opacity=".6"><rect x="60" y="1560" width="160" height="16"/><rect x="420" y="1560" width="160" height="16"/><rect x="780" y="1560" width="160" height="16"/></g>`;
+      ["store2", "store7", "store9"].forEach((id, i) => X.put(id, store(`k${i}`)));
+      X.put("store3", store("k3"));
+      // faces pressed against the glass (eyes and hands) in the waiting stores
+      const press = (gid, n, seed) => { const r = X.rand(seed); let s = ""; for (let i = 0; i < n; i++) { const x = 200 + r() * 680, y = 900 + r() * 380, c = ["#f2c29b", "#c99067", "#8d5a3b", "#e8b48a"][i % 4];
+        s += `<g id="${gid}f${i}" transform="translate(${x.toFixed(0)} ${y.toFixed(0)})"><circle r="58" fill="${c}" stroke="#12081f" stroke-width="7"/><circle cx="-18" cy="-8" r="13" fill="#fff" stroke="#12081f" stroke-width="4"/><circle cx="18" cy="-8" r="13" fill="#fff" stroke="#12081f" stroke-width="4"/><circle cx="-16" cy="-6" r="6"/><circle cx="20" cy="-6" r="6"/><ellipse cy="26" rx="18" ry="${8 + (i % 3) * 5}" fill="#6e1f24"/></g>`; }
+        X.put(gid, s); };
+      press("k0crowd", 9, 3); press("k1crowd", 11, 5); press("k2crowd", 14, 7); press("k3crowd", 10, 9);
+
+      // ---------- characters (owner: some weird, some perfect) ----------
+      const LK = {
+        tiny: { skin: "#f2c29b", skinD: "#d99a72", hair: "#6b3a1a", hairStyle: "spiky", shirt: "#ffd23a", pants: "#2a4a8a", shoes: "#f4f1ea", h: 0.5, torso: 0.7, headS: 1.75, arm: 0.75 },
+        sodaGuy: { skin: "#e8b48a", skinD: "#c08a66", hair: "#2a1c16", hairStyle: "short", shirt: "#d81e2a", pants: "#34425e", shoes: "#1d1b22", hat: "cap", hatC: "#12081f" },
+        popGuy: { skin: "#f5c9a0", skinD: "#d9a072", hair: "#c7642e", hairStyle: "short", shirt: "#3a6ab0", stripe: "#c0392b", pants: "#4a4030", shoes: "#3a2a22", h: 1.6, torso: 1.35, headS: 0.62, arm: 1.5, hat: "beanie", hatC: "#2f8a5a" },
+        cokeGuy: { skin: "#e0a878", skinD: "#b8784e", hair: "#6b4628", hairStyle: "short", shirt: "#f4f1ea", pants: "#2a4a8a", shoes: "#6a3a1a", h: 0.55, belly: 1, headS: 1.15, moustache: true, hat: "cowboy" },
+      };
+      X.put("s1p", X.fig("t1", 1.3, LK.tiny));
+      X.put("s2p", X.fig("g2", 1.35, LK.sodaGuy));
+      X.put("s3p", X.fig("g3", 1.35, LK.sodaGuy));
+      X.put("s7p", X.fig("p7", 1.25, LK.popGuy));
+      X.put("s9p", X.fig("c9", 1.5, LK.cokeGuy));
+      // the stampede (S3): normal + weird runners, a cart, a TV box
+      const RUN = [
+        { lk: { skin: "#8d5a3b", skinD: "#6b3f26", hair: "#1e1512", hairStyle: "curly", shirt: "#7b5ac9", pants: "#2a2a30", shoes: "#f4f1ea" }, mode: "run", s: 1.0, lane: 1640, d: 0.0, cart: true },
+        { lk: { skin: "#f2c29b", hair: "#e0c070", hairStyle: "bun", shirt: "#e86e4a", pants: "#2e3446", shoes: "#8a2f2f" }, mode: "flail", s: 0.95, lane: 1560, d: 0.12 },
+        { lk: { skin: "#c99067", hair: "#2a1c16", hairStyle: "bald", shirt: "#5d8a3a", pants: "#4a4030", shoes: "#3a2a22", belly: 0.8, beard: true }, mode: "weird", s: 1.05, lane: 1720, d: 0.22 },
+        { lk: { ...LK.tiny, shirt: "#ff4d8a", hair: "#1e1512" }, mode: "run", s: 0.85, lane: 1600, d: 0.3, speed: 4.2 },
+        { lk: { skin: "#f5c9a0", hair: "#5a3b2a", hairStyle: "long", shirt: "#3f8f7a", pants: "#3b3f52", shoes: "#f0ece4" }, mode: "run", s: 1.0, lane: 1680, d: 0.4, tv: true },
+        { lk: { skin: "#e8b48a", hair: "#9a9aa2", hairStyle: "short", shirt: "#c9a24a", pants: "#2a2a30", shoes: "#1d1b22", glasses: true, h: 1.5, torso: 1.2, headS: 0.8, arm: 1.6 }, mode: "run", s: 0.95, lane: 1580, d: 0.5 },
+        { lk: { skin: "#a8714a", hair: "#1e1512", hairStyle: "mohawk", shirt: "#ffd23a", pants: "#2a4a8a", shoes: "#d81e2a" }, mode: "flail", s: 1.0, lane: 1740, d: 0.62 },
+        { lk: { skin: "#f2c29b", hair: "#3a2416", hairStyle: "short", shirt: "#2f6fd6", pants: "#34425e", shoes: "#1d1b22", hat: "cap" }, mode: "run", s: 1.0, lane: 1620, d: 0.72, cart: true },
+      ];
+      const cartSvg = `<g transform="translate(150 -20)"><path d="M-10 -170 L20 -170 L45 -60 L200 -60 L220 -150 L30 -150" fill="none" stroke="#c9ccd2" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M30 -150 L220 -150 L200 -60 L45 -60Z" fill="#c9ccd2" opacity=".35" stroke="#12081f" stroke-width="4"/><path d="M45 -60 L40 -20 M200 -60 L205 -20" stroke="#c9ccd2" stroke-width="10"/>
+        <circle cx="45" cy="-10" r="16" fill="#12081f"/><circle cx="200" cy="-10" r="16" fill="#12081f"/></g>`;
+      const tvSvg = `<g transform="translate(70 -330)"><rect x="-90" y="-70" width="180" height="140" rx="8" fill="#c99a5a" stroke="#12081f" stroke-width="8"/><text y="22" text-anchor="middle" font-family="Anton" font-size="62" fill="#12081f">TV</text></g>`;
+      X.put("crowd3", RUN.map((r, i) => `<g id="rp${i}">${r.cart ? cartSvg : ""}<g>${X.fig("r" + i, r.s, r.lk)}</g>${r.tv ? tvSvg : ""}</g>`).join(""));
+      // dust puffs
+      const dust = (n, sz) => { const r = X.rand(31); let s = ""; for (let i = 0; i < n; i++) s += `<circle cx="${((r() - 0.5) * sz).toFixed(0)}" cy="${((r() - 0.5) * sz * 0.5).toFixed(0)}" r="${(40 + r() * 70).toFixed(0)}" fill="#e8dcc8" stroke="#12081f" stroke-width="6"/>`; return s; };
+      X.put("dust3", `<g transform="translate(800 1600)">${dust(14, 520)}</g>`);
+      X.put("dust10", `<g transform="translate(540 1500)">${dust(16, 900)}</g>`);
+      // S4 lanes of tiny runners
+      const LANES = [1150, 1300, 1450, 1600, 1750, 1880];
+      let ln4 = ""; LANES.forEach((y, li) => { for (let j = 0; j < 7; j++) ln4 += `<g id="m${li}_${j}" transform="translate(0 ${y})">${X.fig(`m${li}_${j}f`, 0.28 + li * 0.07, { skin: ["#f2c29b", "#c99067", "#8d5a3b", "#e8b48a"][(li + j) % 4], hair: "#2a1c16", hairStyle: ["short", "curly", "bun", "spiky"][(li * 3 + j) % 4], shirt: ["#d81e2a", "#1e5ad8", "#ffd23a", "#3f8f7a", "#7b5ac9", "#e86e4a"][(li + j * 2) % 6], pants: "#2a2a30", shoes: "#f4f1ea", headS: j % 5 === 0 ? 1.6 : 1, h: j % 6 === 3 ? 0.55 : 1 })}</g>`; });
+      X.put("lanes4", ln4);
+      // S5 grid of 9 stores
+      let g5 = ""; for (let i = 0; i < 9; i++) { const cx = 180 + (i % 3) * 360, cy = 700 + Math.floor(i / 3) * 420;
+        g5 += `<g transform="translate(${cx} ${cy})"><rect x="-170" y="-200" width="340" height="400" fill="url(#dawn)"/><rect x="-150" y="-150" width="300" height="300" fill="#c9c2d8" stroke="#12081f" stroke-width="6"/>
+          <rect x="-110" y="-60" width="220" height="210" fill="#12081f"/><g id="pp${i}">${[0, 1, 2].map((k) => `<circle cx="${-60 + k * 60}" cy="${60 + (k % 2) * 20}" r="26" fill="${["#f2c29b", "#c99067", "#8d5a3b"][k]}" stroke="#000" stroke-width="4"/>`).join("")}</g>
+          <rect id="dl${i}" x="-110" y="-60" width="110" height="210" fill="url(#glassG)" opacity=".6" stroke="#c9ccd2" stroke-width="6"/><rect id="dr${i}" x="0" y="-60" width="110" height="210" fill="url(#glassG)" opacity=".6" stroke="#c9ccd2" stroke-width="6"/>
+          <rect x="-150" y="-140" width="300" height="56" fill="#12081f"/><text y="-98" text-anchor="middle" font-family="Anton" font-size="40" fill="#ffd23a">SALE</text></g>`; }
+      X.put("grid5", g5);
+      // S6 flattened guy (top view, paper-thin), footprints, cart
+      X.put("flat6", `<g transform="scale(1.7 0.42) rotate(-90)">${X.fig("fl6", 1.3, LK.sodaGuy)}</g>`);
+      { let pr = ""; const r = X.rand(66); for (let i = 0; i < 16; i++) { const x = 220 + r() * 640, y = 820 + r() * 520; pr += `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)}) rotate(${(r() * 40 - 110).toFixed(0)})"><ellipse rx="34" ry="16"/><ellipse cx="-42" rx="16" ry="13"/></g>`; } X.put("prints6", pr); }
+      X.put("cart6", `<g transform="scale(1.2)">${cartSvg}</g>`);
+      // tombstones
+      const tomb = (x, y, s, label) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-120 0 V-260 Q-120 -360 0 -360 Q120 -360 120 -260 V0Z" fill="#a8a8b8" stroke="#2a2a36" stroke-width="10"/>
+        <text y="-230" text-anchor="middle" font-family="Anton" font-size="78" fill="#3a3a48">${label}</text><text y="-130" text-anchor="middle" font-family="Anton" font-size="44" fill="#3a3a48">R.I.P.</text>
+        <path d="M-90 -2 Q-60 -40 -30 -2 M30 -2 Q60 -40 90 -2" stroke="#3a6a2a" stroke-width="10" fill="none"/></g>`;
+      X.put("tombs8", tomb(330, 1420, 1.3, "SODA") + tomb(750, 1400, 1.3, "POP"));
+      X.put("beanie8", `<g transform="translate(750 945)"><path d="M-70 0 C-70 -90 70 -90 70 0Z" fill="#2f8a5a" stroke="#12081f" stroke-width="8"/><circle cy="-80" r="20" fill="#fff" stroke="#12081f" stroke-width="7"/></g>`);
+      X.put("tombs10", tomb(150, 1480, 0.9, "SODA") + tomb(930, 1460, 0.9, "POP"));
+      // cups in the Coke scene: three different drinks, all labelled COKE in his speech
+      const cup = (i, col) => `<g id="cup9_${i}"><rect x="-46" y="-80" width="92" height="140" rx="10" fill="#fff" stroke="#12081f" stroke-width="8"/><rect x="-46" y="-40" width="92" height="44" fill="${col}"/><path d="M14 -80 L34 -160" stroke="#ff4d8a" stroke-width="10" stroke-linecap="round"/>
+        <g transform="translate(0 -250)"><path d="M-110 -60 H110 Q130 -60 130 -40 V40 Q130 60 110 60 H20 L0 100 L-10 60 H-110 Q-130 60 -130 40 V-40 Q-130 -60 -110 -60Z" fill="#fff" stroke="#12081f" stroke-width="8"/>
+        <text y="30" text-anchor="middle" font-family="Anton" font-size="84" fill="#8a3a1a">COKE</text></g></g>`;
+      X.put("cups9", [["#ff8a2a", 0], ["#5be38a", 1], ["#8a3a1a", 2]].map(([c, i]) => cup(i, c)).join(""));
+      // S10 crowd running behind the hill
+      let c10 = ""; for (let i = 0; i < 9; i++) c10 += `<g id="b${i}">${X.fig(`b${i}f`, 0.55, { skin: ["#f2c29b", "#c99067", "#8d5a3b"][i % 3], hair: "#2a1c16", hairStyle: ["short", "curly", "bun", "mohawk"][i % 4], shirt: ["#d81e2a", "#1e5ad8", "#ffd23a", "#7b5ac9"][i % 4], pants: "#2a2a30", shoes: "#f4f1ea", headS: i === 4 ? 1.8 : 1, h: i === 6 ? 0.5 : 1 })}</g>`;
+      X.put("crowd10", c10);
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      const lerp = (a, b, k) => a + (b - a) * k;
+      X.life((t) => {
+        if (W(t, 0, 2.2)) {
+          const shrug = X.sm(w(1, 3) - 0.1, w(1, 3) + 0.25, t);
+          X.figLife("t1", t, { mode: "stand", arms: { A: [-120 * shrug + 6, -60 * shrug - 10], B: [120 * shrug - 6, 60 * shrug + 10] }, mouth: t < 1.3 ? 0.3 + 0.3 * Math.sin(t * 18) : 0.1, smile: shrug > 0.5 ? -0.2 : 0.4, brow: shrug, eyes: 1.2, look: [4, -2] });
+          T("canS", `translate(270 ${1000 + Math.sin(t * 3) * 18}) rotate(${-6 + Math.sin(t * 2.4) * 4})`); T("canP", `translate(810 ${1000 + Math.sin(t * 3 + 1.5) * 18}) rotate(${6 + Math.sin(t * 2.2) * 4})`);
+          T("rays1", `rotate(${t * 10} 540 1000)`);
+        }
+        const waitStore = (p, t, base) => { for (let i = 0; i < 14; i++) { const e = document.getElementById(`${p}crowdf${i}`); if (!e) continue; const tr = e.getAttribute("transform").replace(/ scale\([^)]*\)/, ""); e.setAttribute("transform", `${tr} scale(${(1 + 0.06 * Math.sin(t * 9 + i)).toFixed(3)})`); }
+          T(`${p}doorL`, `translate(${Math.sin(t * 31) * base} 0)`); T(`${p}doorR`, `translate(${-Math.sin(t * 29) * base} 0)`); };
+        if (W(t, 2.2, 3.8)) { waitStore("k0", t, 3);
+          X.figLife("g2", t, { mode: "stand", flip: true, arms: { A: [-70, -70] }, mouth: t < 3.4 ? 0.25 + 0.25 * Math.abs(Math.sin(t * 15)) : 0.05, smile: 0.6, look: [-4, 0], brow: 0.3 }); }
+        if (W(t, 3.8, 6.98)) {
+          const open = X.sm(4.85, 5.1, t); if (open < 0.01) waitStore("k3", t, 6); T("k3doorL", `translate(${-open * 400} 0)`); T("k3doorR", `translate(${open * 400} 0)`);
+          const turn = t > 5.05, hit = w(3, 7) + 0.15, flat = X.sm(hit, hit + 0.12, t);
+          X.figLife("g3", t, { mode: "stand", flip: !turn, eyes: turn ? 1.5 : 1, mouth: turn ? 0.9 : 0.1, smile: turn ? -0.8 : 0.4, brow: turn ? 1 : 0, look: turn ? [-6, -2] : [-4, 0], squash: 1 - flat * 0.9,
+            arms: turn ? { A: [-150 + 15 * Math.sin(t * 20), 20], B: [150, -20] } : undefined });
+          RUN.forEach((r, i) => { const st = 5.2 + r.d * 0.8, k = Math.max(0, t - st), x = 400 + k * (1150 + i * 40), y = r.lane;
+            const sc = 0.5 + Math.min(1, k * 1.8) * 0.5;
+            T(`rp${i}`, `translate(${x.toFixed(1)} ${y}) scale(${sc.toFixed(3)})`); X.attr(`rp${i}`, "opacity", t > st ? 1 : 0);
+            X.figLife("r" + i, t, { mode: r.mode, speed: r.speed || 2.6, phase: i, mouth: 0.6, smile: -0.3, eyes: 1.3, brow: 0.6, hop: r.mode === "weird" ? 1.6 : 0 }); });
+          X.attr("dust3", "opacity", (X.sm(hit - 0.1, hit + 0.1, t) * (1 - X.sm(6.6, 6.98, t))).toFixed(2));
+          T("dust3", `translate(${Math.sin(t * 13) * 10} 0) scale(${(0.8 + X.sm(hit, 6.9, t) * 0.4).toFixed(3)})`);
+        }
+        if (W(t, 6.98, 8.96)) {
+          const k = X.sm(7.0, w(4, 4) + 0.1, t), n = Math.round(k * 126000000); document.getElementById("cnt4").textContent = n.toLocaleString("en-US");
+          LANES.forEach((y, li) => { for (let j = 0; j < 7; j++) { const spd = 380 + li * 90, x = ((j * 230 + (t - 6.98) * spd + li * 97) % 1610) - 260;
+            T(`m${li}_${j}`, `translate(${x.toFixed(1)} ${y})`); X.figLife(`m${li}_${j}f`, t, { mode: (li + j) % 5 === 2 ? "flail" : (li + j) % 7 === 3 ? "weird" : "run", speed: 2.8 + (j % 3) * 0.6, phase: li * 7 + j, mouth: 0.5 }); } });
+        }
+        if (W(t, 8.96, 10.21)) {
+          for (let i = 0; i < 9; i++) { const o = X.sm(9.15, 9.35, t); X.attr(`dl${i}`, "transform", `translate(${-o * 120} 0)`); X.attr(`dr${i}`, "transform", `translate(${o * 120} 0)`);
+            X.attr(`pp${i}`, "transform", `translate(0 ${o * 30 + Math.sin(t * 20 + i) * 4}) scale(${(1 + o * 0.6).toFixed(3)})`); }
+        }
+        if (W(t, 10.21, 11.92)) {
+          const k = X.clamp((t - 10.21) / 1.7, 0, 1); T("cup6", `translate(${280 + k * 520} ${1500 + Math.sin(k * 9) * 8}) rotate(${k * 540})`);
+          T("cart6", `translate(${-500 + k * 1500} 760)`);
+          X.figLife("fl6", t, { mode: "stand", lid: 0.7, mouth: 0.15, smile: -0.6, eyes: 0.7, look: [0, 4] });
+        }
+        if (W(t, 11.92, 13.99)) { waitStore("k1", t, 6 + X.sm(12.5, 13.8, t) * 10);
+          X.figLife("p7", t, { mode: "stand", flip: true, arms: { A: [-75, -60] }, mouth: t > w(7, 5) - 0.05 && t < 13.3 ? 0.5 : 0.08, smile: 0.5, look: [-3, 0] }); }
+        if (W(t, 13.99, 15.52)) { T("beanie8", `translate(0 ${X.sm(14.0, 14.4, t) * 20}) rotate(${-8 + Math.sin(t * 3) * 3} 750 945)`); }
+        if (W(t, 15.52, 18.18)) { waitStore("k2", t, 10 + X.sm(16.5, 18.0, t) * 16);
+          const lift = (i) => X.sm(w(9, 4) + i * 0.18, w(9, 4) + i * 0.18 + 0.25, t);
+          [0, 1, 2].forEach((i) => { const L = lift(i); T(`cup9_${i}`, `translate(${260 + i * 280} ${i === 1 ? 960 : 1040}) scale(${(0.3 + 0.7 * L).toFixed(3)})`); X.attr(`cup9_${i}`, "opacity", L > 0.02 ? 1 : 0); });
+          X.figLife("c9", t, { mode: "stand", arms: { A: [-95, -50], B: [100, 40] }, mouth: t > w(9, 7) - 0.05 && t < 17.3 ? 0.5 : 0.1, smile: 0.9, eyes: 1, look: [0, -4], brow: 0.4 }); }
+        if (W(t, 18.18, 20.47)) {
+          const drop = X.sm(18.2, 18.55, t); T("gold10", `translate(0 ${(-1700 * (1 - drop)).toFixed(1)})`);
+          X.attr("dust10", "opacity", (X.sm(18.5, 18.6, t) * (1 - X.sm(18.85, 19.25, t))).toFixed(2));
+          for (let i = 0; i < 9; i++) { const x = ((i * 160 + (t - 18.18) * 520) % 1400) - 160; T(`b${i}`, `translate(${x.toFixed(1)} ${1230 + (i % 3) * 14})`); X.figLife(`b${i}f`, t, { mode: i % 4 === 1 ? "flail" : i % 5 === 3 ? "weird" : "run", phase: i, mouth: 0.5 }); }
+        }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 20.47, duration: 20.47, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.1, svgOrigin: "540 1100", duration: 2.2, ease: "sine.in" }, 0);
+      tl.fromTo("#vs1", { scale: 1.6, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.3, ease: "back.out(3)" }, 0);
+      tl.fromTo("#s2cam", { scale: 1.0, svgOrigin: "700 1400" }, { scale: 1.08, svgOrigin: "700 1400", duration: 1.6, ease: "sine.inOut" }, 2.2);
+      tl.fromTo("#bub2", { scale: 0.2, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.25, ease: "back.out(2.6)" }, w(2, 4) - 0.15);
+      tl.fromTo("#s3cam", { scale: 1.1, svgOrigin: "600 1400" }, { scale: 1.04, svgOrigin: "600 1400", duration: 1.2, ease: "power2.out" }, 3.8);
+      tl.fromTo("#s3cam", { x: 0 }, { keyframes: [{ x: -16, duration: 0.04 }, { x: 14, duration: 0.05 }, { x: -8, duration: 0.05 }, { x: 0, duration: 0.05 }], immediateRender: false }, w(3, 7) + 0.15);
+      tl.fromTo("#s4cam", { scale: 1.06, svgOrigin: "540 1000" }, { scale: 1.0, svgOrigin: "540 1000", duration: 1.98, ease: "sine.out" }, 6.98);
+      pop("#c4a", 7.0, 1.6);
+      tl.fromTo("#s5cam", { scale: 1.0, svgOrigin: "540 960" }, { scale: 1.08, svgOrigin: "540 960", duration: 1.25, ease: "sine.in" }, 8.96);
+      pop("#c5a", 9.0, 1.8);
+      tl.fromTo("#s6cam", { scale: 1.12, svgOrigin: "540 1080" }, { scale: 1.0, svgOrigin: "540 1080", duration: 1.7, ease: "sine.out" }, 10.21);
+      tl.fromTo("#s7cam", { scale: 1.0, svgOrigin: "700 1300" }, { scale: 1.1, svgOrigin: "700 1300", duration: 2.0, ease: "sine.inOut" }, 11.92);
+      tl.fromTo("#bub7", { scale: 0.2, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.25, ease: "back.out(2.6)" }, w(7, 5) - 0.1);
+      tl.fromTo("#s8cam", { scale: 1.0, svgOrigin: "540 1200" }, { scale: 1.06, svgOrigin: "540 1200", duration: 1.5, ease: "sine.inOut" }, 13.99);
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "540 1400" }, { scale: 1.1, svgOrigin: "540 1400", duration: 2.6, ease: "sine.in" }, 15.52);
+      tl.fromTo("#s9cam", { x: 0 }, { keyframes: [{ x: -6, duration: 0.05 }, { x: 6, duration: 0.05 }, { x: 0, duration: 0.05 }], repeat: 6, immediateRender: false }, 17.2);
+      tl.fromTo("#s10cam", { x: 0, y: 0 }, { keyframes: [{ y: 26, duration: 0.05 }, { y: -18, duration: 0.05 }, { y: 8, duration: 0.05 }, { y: 0, duration: 0.06 }], immediateRender: false }, 18.55);
+      tl.fromTo("#s10cam", { scale: 1.05, svgOrigin: "540 1200" }, { scale: 1.1, svgOrigin: "540 1200", duration: 2.29, ease: "sine.inOut" }, 18.18);
+      pop("#c10a", 18.72, 1.8);
+      [3.8, 8.96, 13.99, 18.55].forEach((at) => tl.fromTo("#flash", { opacity: 0.55 }, { opacity: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 20.47, duration: 20.47, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

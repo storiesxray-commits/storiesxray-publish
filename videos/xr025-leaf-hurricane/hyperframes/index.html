@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #22303a; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #0e1a22;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4); letter-spacing: 1px; }
+      .ln.g { color: #8af05a; } .ln.r { color: #ff4d4d; } .ln.y { color: #ffd23a; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .08; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 52%, rgba(0,10,20,.5) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4f2"/><stop offset="1" stop-color="#d8f0ff"/></linearGradient>
+        <linearGradient id="storm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4a5a"/><stop offset="1" stop-color="#7a8a98"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fc24a"/><stop offset="1" stop-color="#3a8a2a"/></linearGradient>
+        <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a3a6a"/><stop offset="1" stop-color="#145a8a"/></linearGradient>
+        <linearGradient id="dirtG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a6a42"/><stop offset="1" stop-color="#6a4a2a"/></linearGradient>
+        <filter id="cloud" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="25.86" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: a dad walking a hurricane on a leash, toward his leaves -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="2.8" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="1080" height="1920" fill="url(#sky)"/>
+          <g transform="translate(700 620)"><g id="hur1"></g></g>
+          <g id="yard1"></g>
+          <path id="leash1" d="M0 0" fill="none" stroke="#1d120b" stroke-width="8" stroke-dasharray="2 0"/>
+          <g id="dad1p" transform="translate(300 1620)"><g id="s1p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 use a leaf blower (the nice, correct way) -->
+      <div id="s2" class="clip scene" data-start="2.8" data-duration="1.7" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam">
+          <rect width="1080" height="1920" fill="url(#sky)"/>
+          <g id="yard2"></g>
+          <g id="air2"></g>
+          <g id="lv2"></g>
+          <g transform="translate(330 1640)"><g id="s2p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 not a category five hurricane (satellite view) -->
+      <div id="s3" class="clip scene" data-start="4.5" data-duration="2.55" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#ocean)"/>
+          <path d="M-40 1500 C200 1400 300 1600 520 1560 C700 1530 760 1700 1120 1640 V1960 H-40Z" fill="#4a8a3a" stroke="#0e1a22" stroke-width="8"/>
+          <g transform="translate(540 960)"><g id="hur3"></g></g>
+          <g transform="translate(540 1500)"><g id="cat5" class="ttl"><rect x="-230" y="-100" width="460" height="190" rx="28" fill="#c0392b" stroke="#fff" stroke-width="10"/><text y="50" text-anchor="middle" font-family="Anton" font-size="150" fill="#fff">CAT 5</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 winds over 157 mph: gauge, things flying, a neighbor holding a pole like a flag -->
+      <div id="s4" class="clip scene" data-start="7.05" data-duration="3.45" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="url(#storm)"/>
+          <g id="streaks4" stroke="#e8f0f8" stroke-width="6" stroke-linecap="round" opacity=".55"></g>
+          <rect y="1560" width="1080" height="360" fill="#3a6a2a"/>
+          <rect x="140" y="760" width="26" height="820" fill="#5a5a66" stroke="#0e1a22" stroke-width="6"/>
+          <g transform="translate(153 900)"><g id="s4p"></g></g>
+          <g id="fly4"></g>
+          <g transform="translate(650 520) scale(0.8)"><circle r="260" fill="#f4f1ea" stroke="#0e1a22" stroke-width="14"/>
+            <path d="M-210 60 A220 220 0 1 1 210 60" fill="none" stroke="#ffd23a" stroke-width="30"/><path d="M150 -150 A220 220 0 0 1 210 60" fill="none" stroke="#ff4d4d" stroke-width="30"/>
+            <text y="230" text-anchor="middle" font-family="Anton" font-size="52" fill="#0e1a22">MPH</text>
+            <text id="mph4" y="180" text-anchor="middle" font-family="Anton" font-size="110" fill="#c0392b">0</text>
+            <g id="needle4"><path d="M0 0 L0 -210" stroke="#0e1a22" stroke-width="16" stroke-linecap="round"/></g><circle r="26" fill="#0e1a22"/></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 its heat = about 200x every power plant on Earth -->
+      <div id="s5" class="clip scene" data-start="10.5" data-duration="5.7" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="#16222c"/>
+          <g transform="translate(540 1050)"><g id="hur5"></g></g>
+          <g id="plants5"></g>
+          <g transform="translate(540 560)"><g id="x200" class="ttl"><rect x="-260" y="-110" width="520" height="210" rx="30" fill="#0e1a22" stroke="#ffd23a" stroke-width="10"/><text id="x200t" y="56" text-anchor="middle" font-family="Anton" font-size="170" fill="#ffd23a">×1</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 otherwise: no leaves -->
+      <div id="s6" class="clip scene" data-start="16.2" data-duration="2.1" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="url(#storm)"/>
+          <g id="streaks6" stroke="#e8f0f8" stroke-width="6" stroke-linecap="round" opacity=".5"></g>
+          <g id="yard6"></g>
+          <g id="lv6"></g>
+          <g transform="translate(330 1640)"><g id="s6p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 no lawn: the turf rolls up and leaves -->
+      <div id="s7" class="clip scene" data-start="18.3" data-duration="1.2" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam">
+          <rect width="1080" height="1920" fill="url(#storm)"/>
+          <g id="house7"></g>
+          <rect y="1400" width="1080" height="520" fill="url(#dirtG)"/>
+          <g id="turf7"><rect id="turfR" x="0" y="1400" width="1080" height="520" fill="url(#lawn)"/><g id="roll7"><circle r="90" fill="#3a8a2a" stroke="#0e1a22" stroke-width="8"/><path d="M0 -90 A90 90 0 1 1 -60 -66" fill="none" stroke="#6a4a2a" stroke-width="10"/><circle r="40" fill="none" stroke="#6a4a2a" stroke-width="8"/></g></g>
+          <g transform="translate(330 1660)"><g id="s7p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 no HOA: the HOA lady and her clipboard go up into the storm -->
+      <div id="s8" class="clip scene" data-start="19.5" data-duration="2.8" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="url(#storm)"/>
+          <g transform="translate(540 260)"><g id="hur8"></g></g>
+          <g id="house8"></g>
+          <rect y="1400" width="1080" height="520" fill="url(#dirtG)"/>
+          <g id="pages8"></g>
+          <g id="hoa8" transform="translate(760 1660)"><g id="s8p"></g></g>
+          <g id="sign8" transform="translate(860 1240)"></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 which, honestly... fair. calm, sun, one leaf falls on his head -->
+      <div id="s9" class="clip scene" data-start="22.3" data-duration="3.56" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam">
+          <rect width="1080" height="1920" fill="url(#sky)"/>
+          <g id="rays9" opacity=".25"></g>
+          <circle cx="860" cy="380" r="100" fill="#ffd23a" stroke="#e8a21a" stroke-width="8"/>
+          <g id="house9"></g>
+          <rect y="1400" width="1080" height="520" fill="url(#dirtG)"/>
+          <g transform="translate(540 1680)"><g id="s9p"></g></g>
+          <g id="leaf9"><path d="M0 -26 C20 -14 20 14 0 26 C-20 14 -20 -14 0 -26Z" fill="#e8a23a" stroke="#0e1a22" stroke-width="5"/><path d="M0 -26 V26" stroke="#0e1a22" stroke-width="3"/></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="2.8" data-track-index="1" style="top:300px"><span id="c1a" class="ln r">NEVER</span></div>
+      <div id="c2" class="clip cap" data-start="3.3" data-duration="1.2" data-track-index="1" style="top:300px"><span id="c2a" class="ln g sm">✓ LEAF BLOWER</span></div>
+      <div id="c8" class="clip cap" data-start="20.0" data-duration="2.3" data-track-index="1" style="top:300px"><span id="c8a" class="ln y">NO HOA</span></div>
+      <div id="c9" class="clip cap" data-start="24.1" data-duration="1.76" data-track-index="1" style="top:300px"><span id="c9a" class="ln g">FAIR.</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="25.86" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf;
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const C = [0, 2.8, 4.5, 7.05, 10.5, 16.2, 18.3, 19.5, 22.3, 25.86];
+      X.captions({ capY: (t) => (t < C[1] ? 1780 : t < C[2] ? 560 : t < C[3] ? 1760 : t < C[4] ? 1700 : t < C[5] ? 300 : t < C[6] ? 560 : t < C[7] ? 560 : t < C[8] ? 560 : 560) });
+
+      // ---------- hurricane (spiral cloud arms + eye), rotates ----------
+      const hurricane = (s, dark) => { let a = ""; for (let k = 0; k < 5; k++) { let d = ""; for (let i = 0; i <= 60; i++) { const th = i / 60 * 9 + k * 1.2566, r = 40 * Math.exp(0.2 * (i / 60 * 9)); d += (i ? "L" : "M") + (Math.cos(th) * r).toFixed(1) + " " + (Math.sin(th) * r).toFixed(1); }
+          a += `<path d="${d}" fill="none" stroke="${dark ? "#c8d2dc" : "#ffffff"}" stroke-width="${70}" stroke-linecap="round" opacity=".85" filter="url(#cloud)"/><path d="${d}" fill="none" stroke="${dark ? "#e8eef4" : "#f4f8fb"}" stroke-width="34" stroke-linecap="round"/>`; }
+        return `<g transform="scale(${s})"><circle r="250" fill="#f4f8fb" opacity=".6" filter="url(#cloud)"/>${a}<circle r="36" fill="#0a3a6a" stroke="#c8d2dc" stroke-width="10"/></g>`; };
+      X.put("hur1", hurricane(0.55, true)); X.put("hur3", hurricane(1.25)); X.put("hur5", hurricane(0.2)); X.put("hur8", hurricane(0.9, true));
+      // suburban yard: house, fence, maple, lawn, leaves
+      const house = `<path d="M560 1060 L800 880 L1040 1060Z" fill="#8a3b3b" stroke="#0e1a22" stroke-width="8" stroke-linejoin="round"/><rect x="600" y="1060" width="400" height="360" fill="#f2e6c8" stroke="#0e1a22" stroke-width="8"/>
+        <rect x="770" y="1250" width="80" height="170" fill="#5a3a22" stroke="#0e1a22" stroke-width="6"/><rect x="640" y="1120" width="100" height="90" fill="#9fd8ff" stroke="#0e1a22" stroke-width="6"/><rect x="880" y="1120" width="100" height="90" fill="#9fd8ff" stroke="#0e1a22" stroke-width="6"/>`;
+      const yard = (leaves = true) => `${house}
+        <g transform="translate(160 1420)"><path d="M-18 0 L-14 -300 L14 -300 L18 0Z" fill="#6a4a2e" stroke="#0e1a22" stroke-width="6"/>${[[0, -360, 140], [-90, -300, 100], [90, -310, 110], [0, -460, 100]].map(([a, b, r]) => `<circle cx="${a}" cy="${b}" r="${r}" fill="#e07a2a" stroke="#0e1a22" stroke-width="6"/>`).join("")}</g>
+        ${[...Array(18)].map((_, i) => `<rect x="${i * 62}" y="1330" width="40" height="110" fill="#fff" stroke="#0e1a22" stroke-width="4"/>`).join("")}<rect y="1370" width="1080" height="16" fill="#fff" stroke="#0e1a22" stroke-width="4"/>
+        <rect y="1420" width="1080" height="500" fill="url(#lawn)"/>
+        ${leaves ? [...Array(40)].map((_, i) => { const r = X.rand(i + 1); return `<ellipse cx="${(r() * 1080).toFixed(0)}" cy="${(1450 + r() * 450).toFixed(0)}" rx="18" ry="10" fill="${["#e07a2a", "#e8a23a", "#c0392b"][i % 3]}" stroke="#0e1a22" stroke-width="3" transform="rotate(${(r() * 180).toFixed(0)} ${(r() * 1080).toFixed(0)} 1600)"/>`; }).join("") : ""}`;
+      X.put("yard1", yard()); X.put("yard2", yard(false)); X.put("yard6", yard(false)); X.put("house7", house); X.put("house8", house); X.put("house9", house);
+      // loose leaves that move (S2 blown gently, S6 ripped away)
+      const leafSet = (n, pfx) => [...Array(n)].map((_, i) => `<g id="${pfx}${i}"><path d="M0 -18 C14 -10 14 10 0 18 C-14 10 -14 -10 0 -18Z" fill="${["#e07a2a", "#e8a23a", "#c0392b"][i % 3]}" stroke="#0e1a22" stroke-width="3"/></g>`).join("");
+      X.put("lv2", leafSet(22, "la")); X.put("lv6", leafSet(30, "lb"));
+      X.put("air2", [...Array(6)].map((_, i) => `<path id="air${i}" d="M0 0 C40 -10 80 10 120 0" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".8"/>`).join(""));
+      // characters. Dad: short legs, belly, giant moustache (weird-ish). HOA lady: very tall, tiny steps, perfect bun.
+      const DAD = { skin: "#f2c29b", skinD: "#d99a72", hair: "#6b4628", hairStyle: "short", shirt: "#c0392b", stripe: "#7a1a1a", pants: "#34425e", shoes: "#3a2a22", belly: 0.9, h: 0.7, moustache: true, hat: "cap", hatC: "#1e5ad8" };
+      const HOA = { skin: "#f5c9a0", skinD: "#d9a072", hair: "#e8c860", hairStyle: "bun", shirt: "#e86e9a", pants: "#efe6d2", shoes: "#c0392b", glasses: true, h: 1.35, torso: 1.15, headS: 0.85 };
+      ["s1p", "s2p", "s6p", "s7p", "s9p"].forEach((g, i) => X.put(g, X.fig("dad" + i, 1.35, DAD)));
+      X.put("s8p", X.fig("hoa", 1.2, HOA));
+      X.put("s4p", X.fig("nb4", 0.95, { skin: "#8d5a3b", hair: "#1e1512", hairStyle: "curly", shirt: "#ffd23a", pants: "#2a4a8a", shoes: "#f4f1ea", glasses: true }));
+      const blower = `<g transform="rotate(0)"><rect x="-36" y="-50" width="72" height="90" rx="16" fill="#ff8a1a" stroke="#0e1a22" stroke-width="6"/><path d="M-12 30 L-16 190 L16 190 L12 30Z" fill="#3a3f48" stroke="#0e1a22" stroke-width="6"/></g>`;
+      [1, 2, 3, 4].forEach((k) => X.put(`dad${k}-handA`, blower));
+      X.put("hoa-handA", `<g transform="rotate(-20)"><rect x="-60" y="-10" width="120" height="160" rx="8" fill="#a8743e" stroke="#0e1a22" stroke-width="6"/><rect x="-48" y="12" width="96" height="126" fill="#fff"/><rect x="-24" y="-18" width="48" height="22" rx="6" fill="#c9ccd2" stroke="#0e1a22" stroke-width="4"/>
+        <path d="M-36 40 H36 M-36 70 H36 M-36 100 H20" stroke="#0e1a22" stroke-width="5"/></g>`);
+      X.put("sign8", `<rect x="-6" y="0" width="12" height="200" fill="#5a5a66"/><rect x="-150" y="-110" width="300" height="120" rx="10" fill="#fff" stroke="#0e1a22" stroke-width="8"/><text y="-60" text-anchor="middle" font-family="Anton" font-size="44" fill="#c0392b">HOA NOTICE:</text><text y="-14" text-anchor="middle" font-family="Anton" font-size="36" fill="#0e1a22">LEAVES = $50 FINE</text>`);
+      X.put("pages8", [...Array(6)].map((_, i) => `<g id="pg${i}" opacity="0"><rect x="-40" y="-52" width="80" height="104" fill="#fff" stroke="#0e1a22" stroke-width="5"/><path d="M-26 -24 H26 M-26 0 H26 M-26 24 H14" stroke="#0e1a22" stroke-width="4"/></g>`).join(""));
+      // flying stuff in the wind (S4): lawn chair, gnome, mailbox, trash can lid, flamingo
+      const FLY = [
+        `<g><rect x="-70" y="-20" width="140" height="16" fill="#3aa0e0" stroke="#0e1a22" stroke-width="5"/><rect x="-70" y="-90" width="16" height="80" fill="#3aa0e0" stroke="#0e1a22" stroke-width="5"/><path d="M-60 -4 L-80 60 M60 -4 L80 60" stroke="#c9ccd2" stroke-width="8"/></g>`,
+        `<g><path d="M-30 40 L30 40 L22 -10 L-22 -10Z" fill="#3a6ab0" stroke="#0e1a22" stroke-width="5"/><circle cy="-30" r="24" fill="#f2c29b" stroke="#0e1a22" stroke-width="5"/><path d="M-30 -40 L0 -110 L30 -40Z" fill="#c0392b" stroke="#0e1a22" stroke-width="5"/><path d="M-20 -14 Q0 10 20 -14 L0 30Z" fill="#fff" stroke="#0e1a22" stroke-width="4"/></g>`,
+        `<g><rect x="-60" y="-40" width="120" height="70" rx="34" fill="#5a5a66" stroke="#0e1a22" stroke-width="6"/><rect x="40" y="-80" width="10" height="44" fill="#c0392b"/><rect x="-6" y="30" width="12" height="90" fill="#6a4a2e"/></g>`,
+        `<g><ellipse rx="70" ry="22" fill="#9aa0a8" stroke="#0e1a22" stroke-width="6"/><rect x="-14" y="-34" width="28" height="16" rx="6" fill="#9aa0a8" stroke="#0e1a22" stroke-width="5"/></g>`,
+        `<g><ellipse cy="-10" rx="50" ry="30" fill="#ff7ab0" stroke="#0e1a22" stroke-width="5"/><path d="M40 -20 C60 -80 30 -100 50 -130" fill="none" stroke="#ff7ab0" stroke-width="12"/><circle cx="52" cy="-136" r="14" fill="#ff7ab0" stroke="#0e1a22" stroke-width="4"/><path d="M-6 20 V90 M10 20 V90" stroke="#ff7ab0" stroke-width="6"/></g>`,
+      ];
+      X.put("fly4", FLY.map((f, i) => `<g id="fl${i}">${f}</g>`).join(""));
+      const streaks = (id) => X.put(id, [...Array(24)].map((_, i) => `<path id="${id}s${i}" d="M0 0 H${120 + (i % 4) * 50}"/>`).join(""));
+      streaks("streaks4"); streaks("streaks6");
+      // power plants (cooling towers with steam)
+      const tower = (i) => `<g id="pt${i}" opacity="0"><path d="M-60 0 C-40 -60 -40 -120 -50 -170 L50 -170 C40 -120 40 -60 60 0Z" fill="#c9ccd2" stroke="#0e1a22" stroke-width="5"/><path d="M-44 -120 H44" stroke="#c0392b" stroke-width="8"/>
+        <g id="ps${i}"><circle cx="0" cy="-200" r="34" fill="#f4f1ea" opacity=".85"/><circle cx="26" cy="-232" r="26" fill="#f4f1ea" opacity=".7"/></g></g>`;
+      const NP = 40; X.put("plants5", [...Array(NP)].map((_, i) => tower(i)).join(""));
+      const PP = [...Array(NP)].map((_, i) => [120 + (i % 8) * 120, 1880 - Math.floor(i / 8) * 150]);
+      PP.forEach(([x, y], i) => T(`pt${i}`, `translate(${x} ${y}) scale(0.7)`));
+      { let rr = ""; for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283, b = (i + 0.5) / 16 * 6.283; rr += `<path d="M860 380 L${860 + Math.cos(a) * 1800} ${380 + Math.sin(a) * 1800} L${860 + Math.cos(b) * 1800} ${380 + Math.sin(b) * 1800}Z" fill="#fff"/>`; } X.put("rays9", rr); }
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      X.life((t) => {
+        if (W(t, C[0], C[1])) { T("hur1", `rotate(${(-t * 50).toFixed(1)}) scale(${(1 + 0.04 * Math.sin(t * 3)).toFixed(3)})`);
+          X.figLife("dad0", t, { mode: "walk", speed: 1.1, look: [6, -6], smile: 0.9, mouth: 0.1, arms: { A: [-115, -30], B: [10, -10] } });
+          T("dad1p", `translate(${300 + t * 30} 1620)`);
+          const hx = 300 + t * 30 + 110, hy = 1620 - 451; X.attr("leash1", "d", `M${hx} ${hy} Q${(hx + 700) / 2} ${hy - 200 + Math.sin(t * 4) * 40} 660 760`); }
+        if (W(t, C[1], C[2])) { X.figLife("dad1", t, { mode: "stand", arms: { A: [-90, 0] }, smile: 0.8, look: [8, 4] });
+          for (let i = 0; i < 22; i++) { const k = ((t - C[1]) * 0.6 + i * 0.045) % 1; T(`la${i}`, `translate(${520 + k * 600 + (i % 5) * 20} ${1700 - Math.sin(k * Math.PI) * 120 + (i % 4) * 30}) rotate(${k * 400 + i * 30})`); }
+          for (let i = 0; i < 6; i++) { const k = ((t * 1.4 + i / 6) % 1); T(`air${i}`, `translate(${530 + k * 300} ${1560 + (i % 3) * 30 - 40})`); X.attr(`air${i}`, "opacity", (Math.sin(k * Math.PI) * 0.8).toFixed(2)); } }
+        if (W(t, C[2], C[3])) T("hur3", `rotate(${(-(t - C[2]) * 70).toFixed(1)})`);
+        if (W(t, C[3], C[4])) { const k = X.sm(C[3] + 0.1, w(4, 6), t), mph = Math.round(k * 157); document.getElementById("mph4").textContent = mph + (k > 0.99 ? "+" : "");
+          T("needle4", `rotate(${(-115 + k * 205 + Math.sin(t * 40) * 3 * k).toFixed(1)})`);
+          FLY.forEach((_, i) => { const q = ((t - C[3]) * (0.7 + i * 0.12) + i * 0.21) % 1; T(`fl${i}`, `translate(${(-200 + q * 1500).toFixed(1)} ${(1100 + i * 90 - Math.sin(q * 6 + i) * 120).toFixed(1)}) rotate(${(q * 720 + i * 50).toFixed(1)})`); });
+          for (let i = 0; i < 24; i++) { const q = ((t * 1.8 + i * 0.137) % 1); T(`streaks4s${i}`, `translate(${(-300 + q * 1600).toFixed(1)} ${(80 + i * 66) % 1500})`); }
+          X.figLife("nb4", t, { mode: "stand", legs: { A: [-90 + Math.sin(t * 22) * 8, 0], B: [-80 + Math.sin(t * 19) * 8, 0] }, arms: { A: [-180, 0], B: [-175, 0] }, mouth: 0.9, smile: -0.6, eyes: 1.4, brow: 1 });
+          T("s4p", `rotate(90) translate(${Math.sin(t * 30) * 4} 0)`); }
+        if (W(t, C[4], C[5])) { const k = X.sm(C[4] + 0.1, w(5, 7) + 0.3, t), n = Math.max(1, Math.round(k * 200)), shown = Math.ceil(k * NP);
+          document.getElementById("x200t").textContent = "×" + n;
+          for (let i = 0; i < NP; i++) { X.attr(`pt${i}`, "opacity", i < Math.max(1, shown) ? 1 : 0); T(`ps${i}`, `translate(0 ${(-((t * 0.8 + i * 0.13) % 1) * 30).toFixed(1)})`); }
+          const g = X.sm(w(5, 10) - 0.2, C[5] - 0.2, t); T("hur5", `rotate(${(-t * 60).toFixed(1)}) scale(${(2.5 + g * 5).toFixed(3)})`); }
+        if (W(t, C[5], C[6])) { X.figLife("dad2", t, { mode: "stand", lean: -14, arms: { A: [-90 + Math.sin(t * 25) * 6, 0], B: [40, -20] }, mouth: 0.8, smile: -0.5, eyes: 1.3, brow: 0.9 });
+          const gone = X.sm(w(6, 1) - 0.3, w(6, 2) + 0.2, t);
+          for (let i = 0; i < 30; i++) { const r = X.rand(i * 7919 + 131); r(); r(); const x0 = r() * 1080, y0 = 1450 + r() * 450; T(`lb${i}`, `translate(${(x0 + gone * (1400 + r() * 400)).toFixed(1)} ${(y0 - gone * (600 + r() * 600)).toFixed(1)}) rotate(${(gone * 900 + i * 40).toFixed(0)})`); }
+          for (let i = 0; i < 24; i++) { const q = ((t * 2.2 + i * 0.137) % 1); T(`streaks6s${i}`, `translate(${(-300 + q * 1600).toFixed(1)} ${(80 + i * 66) % 1500})`); } }
+        if (W(t, C[6], C[7])) { const k = X.sm(C[6] + 0.05, C[7] - 0.1, t); X.attr("turfR", "x", (60 + k * 1100).toFixed(1)); T("roll7", `translate(${(110 + k * 1100).toFixed(1)} ${(1400 - 50 - k * 60).toFixed(1)}) rotate(${(k * 720).toFixed(0)}) scale(${(0.6 + k * 0.9).toFixed(2)})`);
+          X.figLife("dad3", t, { mode: "stand", arms: { A: [-90, 0] }, mouth: 0.4, smile: -0.4, eyes: 1.2, look: [10, 4], squash: 1 + Math.sin(t * 30) * 0.01 }); }
+        if (W(t, C[7], C[8])) { const up = X.sm(w(8, 1) - 0.05, w(8, 1) + 1.3, t), hx = 760 + up * 520 + Math.sin(up * 9) * 60, hy = 1660 - up * 1300;
+          T("hoa8", `translate(${hx.toFixed(1)} ${hy.toFixed(1)}) rotate(${(up * 540).toFixed(0)}) scale(${(1 - up * 0.65).toFixed(3)})`);
+          X.figLife("hoa", t, { mode: up > 0 ? "flail" : "walk", speed: up > 0 ? 3 : 2.4, mouth: up > 0 ? 0.9 : 0.3, smile: up > 0 ? -0.8 : -0.3, brow: up > 0 ? 1 : -0.8, flip: true, arms: up > 0 ? undefined : { A: [-120, -40] } });
+          for (let i = 0; i < 6; i++) { const q = X.clamp((t - w(8, 1) - 0.2 - i * 0.12) / 1.4, 0, 1); X.attr(`pg${i}`, "opacity", q > 0 && q < 1 ? 1 : 0); T(`pg${i}`, `translate(${(hx + Math.sin(q * 7 + i) * 200).toFixed(1)} ${(hy + 200 - q * 400 + i * 30).toFixed(1)}) rotate(${(q * 600 + i * 60).toFixed(0)})`); }
+          T("sign8", `translate(860 1240) rotate(${(Math.sin(t * 20) * 6 * (1 - up) + up * 40).toFixed(1)})`); T("hur8", `rotate(${(-t * 60).toFixed(1)})`); }
+        if (W(t, C[8], C[9])) { const fair = t > w(9, 2) - 0.05, land = X.clamp((t - C[8]) / 1.6, 0, 1);
+          X.figLife("dad4", t, { mode: "stand", arms: fair ? { A: [-40, -80], B: [40, 80] } : { A: [-60, -20] }, mouth: fair ? 0.1 : 0.05, smile: fair ? 0.9 : 0.2, lid: fair ? 0.4 : 0.15, look: [4, -6] });
+          T("leaf9", `translate(${(600 + Math.sin(land * 8) * 80).toFixed(1)} ${(300 + land * 820).toFixed(1)}) rotate(${(Math.sin(land * 8) * 40).toFixed(0)})`);
+          T("rays9", `rotate(${(t * 8).toFixed(1)} 860 380)`); }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 25.86, duration: 25.86, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.08, svgOrigin: "540 1000", duration: 2.8, ease: "sine.in" }, 0);
+      tl.fromTo("#c1a", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, 0.0);
+      tl.fromTo("#s2cam", { scale: 1.06, svgOrigin: "500 1500" }, { scale: 1.0, svgOrigin: "500 1500", duration: 1.7, ease: "sine.out" }, C[1]);
+      pop("#c2a", 3.32, 1.6);
+      tl.fromTo("#s3cam", { scale: 1.3, svgOrigin: "540 960" }, { scale: 1.0, svgOrigin: "540 960", duration: 2.5, ease: "power2.out" }, C[2]);
+      tl.fromTo("#cat5", { scale: 0.2, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.28, ease: "back.out(3)" }, w(3, 3) - 0.1);
+      tl.set("#s4cam", { scale: 1.04, svgOrigin: "540 960" }, C[3]); tl.fromTo("#s4cam", { x: 0 }, { keyframes: [{ x: -10, duration: 0.05 }, { x: 10, duration: 0.05 }, { x: 0, duration: 0.05 }], repeat: 20, immediateRender: false }, C[3]);
+      tl.fromTo("#s5cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.06, svgOrigin: "540 1100", duration: 5.6, ease: "sine.inOut" }, C[4]);
+      tl.fromTo("#x200", { scale: 0.3, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.28, ease: "back.out(2.6)" }, w(5, 4) - 0.3);
+      tl.set("#s6cam", { scale: 1.05, svgOrigin: "540 960" }, C[5]); tl.fromTo("#s6cam", { x: 0 }, { keyframes: [{ x: -14, duration: 0.05 }, { x: 14, duration: 0.05 }, { x: 0, duration: 0.05 }], repeat: 12, immediateRender: false }, C[5]);
+      tl.fromTo("#s7cam", { scale: 1.0, svgOrigin: "540 1500" }, { scale: 1.08, svgOrigin: "540 1500", duration: 1.2, ease: "sine.in" }, C[6]);
+      tl.fromTo("#s8cam", { scale: 1.0, svgOrigin: "700 1400" }, { scale: 1.06, svgOrigin: "700 1400", duration: 2.8, ease: "sine.inOut" }, C[7]);
+      pop("#c8a", 20.05, 1.6);
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "540 1400" }, { scale: 1.1, svgOrigin: "540 1300", duration: 3.5, ease: "sine.inOut" }, C[8]);
+      pop("#c9a", 24.12, 1.6);
+      [C[2], C[5], C[8]].forEach((at) => tl.fromTo("#flash", { opacity: 0.45 }, { opacity: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 25.86, duration: 25.86, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

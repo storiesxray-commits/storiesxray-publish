@@ -55,7 +55,11 @@ def elevenlabs():
     cuts = [quietest(max(0.0, sents[0]["first_char"] - 0.25), sents[0]["words"][0]["s"] + 0.02)]
     for i in range(1, len(sents)):
         e0, s1 = sents[i - 1]["words"][-1]["e"], sents[i]["words"][0]["s"]
-        cuts.append(quietest(min(e0, s1) - 0.04, max(e0, s1) + 0.12))
+        c = quietest(min(e0, s1) - 0.04, max(e0, s1) + 0.12)
+        lv = lambda x: 20 * np.log10(np.sqrt(np.mean(mono[max(0, int((x - 0.01) * sr)):int((x + 0.01) * sr)] ** 2)) + 1e-9)
+        if lv(c) > -40:  # timestamps ran late (xr025 "Earth. Otherwise"): the real gap is earlier, search back to the last word's start
+            c = quietest(max(sents[i - 1]["words"][-1]["s"] + 0.08, min(e0, s1) - 0.7), max(e0, s1) + 0.12)
+        cuts.append(c)
     cuts.append(L)  # the take always ends where ElevenLabs ended it (never trimmed)
     out = [np.zeros(int(sr * 0.03), dtype=np.float32)]; t = 0.03; meta = []; seams = []
     for i, se in enumerate(sents):
@@ -81,6 +85,10 @@ def elevenlabs():
             d = round(t - 0.02 - w["s"], 3); nxt = allw[k + 1]["s"] if k + 1 < len(allw) else 1e9
             w["s"] = round(w["s"] + d, 3); w["e"] = round(max(w["s"] + 0.12, min(w["e"] + d, nxt)), 3)
         if k + 1 < len(allw) and allw[k + 1]["s"] < w["e"]: allw[k + 1]["s"] = w["e"]
+    # ElevenLabs alignment can give a word that starts 10 ms before the previous one ("if" / "you", xr023): keep starts in order
+    for k in range(1, len(allw)):
+        if allw[k]["s"] < allw[k - 1]["s"]: allw[k]["s"] = allw[k - 1]["s"]
+        if allw[k]["e"] < allw[k]["s"]: allw[k]["e"] = allw[k]["s"]
     for m in meta: m["start"], m["end"] = m["words"][0]["s"], m["words"][-1]["e"]
     sf.write(f"{OUT}/voice.wav", audio, sr)
     v = TTS.CFG["voices"][key]

@@ -1,0 +1,16 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Never blow your leaves with a hurricane.", 0.2],
+  ["Use a leaf blower.", 0.15],
+  ["Not a Category Five hurricane.", 0.1],
+  ["Winds over a hundred and fifty-seven miles per hour.", 0.1],
+  ["Its heat equals about two hundred times every power plant on Earth.", 0.3],
+  ["Otherwise: no leaves.", 0.2],
+  ["No lawn.", 0.2],
+  ["No HOA.", 0.6],
+  ["[sighs] Which, honestly... fair.", 0.0]
+ ],
+ "tone": "deadpan",
+ "voice": "xr10"
+}

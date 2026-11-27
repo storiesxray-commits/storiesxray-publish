@@ -1,0 +1,175 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Your Air Fryer Was Not at the First Thanksgiving",
+  "description": "A completely useless Thanksgiving fact, with real history: your air fryer missed the first Thanksgiving.\n\nWhat we actually know about the 1621 harvest feast at Plymouth comes mostly from one letter by colonist Edward Winslow:\n- About 90 Wampanoag men came with their leader Massasoit.\n- They went out and brought five deer.\n- There were roughly 50 colonists; English hunters had gone fowling for wild birds.\n- The feasting and games lasted three days.\n- Air fryers present: zero (they were invented in the 2000s).\n\nUseless Facts is our series of true facts nobody needed. What actually sits at the head of your Thanksgiving table?\n\nSources:\n- Massachusetts Commonwealth Museum, Thanksgiving mysteries (Winslow's account: Massasoit and ninety men, five deer, three days): https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/online/thanksgiving/thanksgiving-mysteries-3.htm\n- TIME, The first Thanksgiving: Winslow's letter, five deer, three days of feasting: https://time.com/5021704/the-first-thanksgiving/\n- History.com, Colonists at the first Thanksgiving: https://www.history.com/news/first-thanksgiving-colonists-native-americans-men\n\n#thanksgiving #airfryer #uselessfacts #shorts",
+  "tags": [
+    "first thanksgiving",
+    "who was at the first thanksgiving",
+    "how long was the first thanksgiving",
+    "first thanksgiving 1621",
+    "thanksgiving facts",
+    "what did they eat at the first thanksgiving",
+    "wampanoag thanksgiving",
+    "air fryer",
+    "air fryer thanksgiving",
+    "useless facts",
+    "funny thanksgiving",
+    "absurd facts",
+    "dumb facts",
+    "thanksgiving history"
+  ],
+  "pinned_comment": "Honest ranking of the most important guest at our Thanksgiving table: 1. the air fryer 2. grandma 3. the turkey",
+  "series": "Useless Facts",
+  "caption_instagram": "Your air fryer missed the first Thanksgiving. #thanksgiving #uselessfacts",
+  "sources": [
+    {
+      "title": "Massachusetts Commonwealth Museum (Secretary of the Commonwealth): Winslow's 1621 account; Massasoit and ninety men; Native hunters contributed five deer; three days of games and feasting",
+      "url": "https://www.sec.state.ma.us/divisions/commonwealth-museum/exhibits/online/thanksgiving/thanksgiving-mysteries-3.htm"
+    },
+    {
+      "title": "TIME: Winslow's letter; a large Wampanoag group with Massasoit came with five deer; 'for three days we entertained and feasted'",
+      "url": "https://time.com/5021704/the-first-thanksgiving/"
+    },
+    {
+      "title": "History.com: the three-day 1621 harvest feast; about 50 surviving colonists, mostly men",
+      "url": "https://www.history.com/news/first-thanksgiving-colonists-native-americans-men"
+    }
+  ],
+  "human_angle": "Uses the day after Thanksgiving to sneak real 1621 history (90 Wampanoag men, five deer, three days, from Winslow's letter) inside the dumbest possible fact: the kitchen gadget everyone fights over today wasn't there.",
+  "promise_check": "0:00 the air fryer is shown missing Thanksgiving; 0:03-0:16 the real 1621 feast (90 men, 5 deer, ~50 colonists, 3 days); 0:18 'Zero' air fryers; 0:28 it is crowned at today's table.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "statement",
+    "voice": "xr10",
+    "tone": "deadpan",
+    "duration": "medium",
+    "hook_type": "absurd",
+    "topic_type": "news",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "first thanksgiving",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "The First Thanksgiving Had Zero Air Fryers",
+      "What Was Really at the First Thanksgiving (Not Your Air Fryer)"
+    ],
+    "questions": [
+      {
+        "q": "Who was at the first Thanksgiving?",
+        "a": "In 1621 about 90 Wampanoag men led by Massasoit joined roughly 50 Plymouth colonists for a three-day harvest feast, according to Edward Winslow's letter."
+      },
+      {
+        "q": "What did they eat at the first Thanksgiving?",
+        "a": "Winslow mentions wild fowl and five deer brought by the Wampanoag; turkey is not specifically named."
+      },
+      {
+        "q": "How long did the first Thanksgiving last?",
+        "a": "Edward Winslow wrote that the 1621 feast and games lasted three days."
+      }
+    ],
+    "demand": [
+      {
+        "query": "first thanksgiving",
+        "evidence": "Peak search this week (Thanksgiving Nov. 26, 2026); yearly coverage by TIME, History.com, Smithsonian",
+        "url": "https://time.com/5021704/the-first-thanksgiving/"
+      },
+      {
+        "query": "useless facts",
+        "evidence": "Useless-fact formats trend repeatedly (Know Your Meme, TikTok fun-facts creators)",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Wampanoag",
+    "Massasoit",
+    "Winslow",
+    "Plymouth",
+    "airfryer",
+    "uselessfacts",
+    "fowling"
+  ],
+  "thumbnail": {
+    "time": 29.6,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      360,
+      820,
+      720,
+      1440
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "1621",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "GUEST OF",
+        "color": "#FFFFFF"
+      },
+      {
+        "text": "HONOR",
+        "box": "#FF5A3C"
+      }
+    ],
+    "glow": "#FFC23A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "AIR FRYER",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "1621?",
+            "color": "#FFC23A"
+          }
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "NOT",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "INVITED",
+            "box": "#FF5A3C"
+          }
+        ],
+        "time": 1.6,
+        "protect": [
+          200,
+          650,
+          880,
+          1400
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: deep red dining room, crowned appliance, box text."
+  },
+  "id": "xr024-air-fryer-1621",
+  "duration_s": 30.95,
+  "status": "ready",
+  "publish_time_local": "12:42"
+}

@@ -1,0 +1,55 @@
+{
+  "content_id": "xr-023",
+  "repo_id": "xr023-soda-pop-stampede",
+  "sha256": "6772bb191d766ca9d09a315e34abc37e3aac171fa7b37f73c1ea114e50db37bb",
+  "file_size_bytes": 13096042,
+  "duration_seconds": 20.49,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.969,
+  "video_bit_rate": 4974805,
+  "faststart": true,
+  "title_youtube": "Soda or Pop? On Black Friday It Doesn't Matter",
+  "description_youtube": "Soda, pop or Coke: the oldest argument in America, settled by 126 million Black Friday shoppers.\n\nThe useless facts, read with a straight face:\n- The National Retail Federation expects about 126 million people to shop on Black Friday 2026 (69% of the 182.7 million planning to shop Thanksgiving weekend).\n- \"Soda\" rules the coasts, \"pop\" the Midwest and Northwest, and in much of the South every soft drink is a \"Coke\", even when it isn't.\n- A stampede of that size would not care which one you say.\n\nUseless Facts is our new series: true facts nobody needed, with real numbers. Which one do you say?\n\nSources:\n- National Retail Federation (Nov. 19, 2026): 183 million consumers expected to shop during Thanksgiving weekend; 126 million on Black Friday: https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend\n- Wikipedia, Names for soft drinks in the United States: https://en.wikipedia.org/wiki/Names_for_soft_drinks_in_the_United_States\n- Mental Floss, Pop, soda or Coke: a state-by-state guide: https://www.mentalfloss.com/food/beverages/pop-soda-coke-state-by-state-guide\n\n#blackfriday #sodavspop #uselessfacts #shorts",
+  "caption_instagram": "Soda or pop? It doesn't matter. #blackfriday #uselessfacts",
+  "tags": [
+    "soda vs pop",
+    "why do people say pop instead of soda",
+    "what do you call soda in the south",
+    "soda or pop",
+    "soda pop coke",
+    "why southerners call everything coke",
+    "black friday",
+    "black friday 2026",
+    "black friday stampede",
+    "useless facts",
+    "dumb facts",
+    "absurd facts",
+    "funny facts",
+    "regional american words"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "National Retail Federation (Nov. 19, 2026): 182.7 million expected to shop Thanksgiving weekend; 69% (126 million) plan to shop on Black Friday",
+      "url": "https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend"
+    },
+    {
+      "title": "Wikipedia: soda and pop are the most common national terms; in the Southern US 'coke' is a generic term for any soft drink",
+      "url": "https://en.wikipedia.org/wiki/Names_for_soft_drinks_in_the_United_States"
+    },
+    {
+      "title": "Mental Floss: Midwest and Northwest say pop, Southerners call any fizzy drink Coke",
+      "url": "https://www.mentalfloss.com/food/beverages/pop-soda-coke-state-by-state-guide"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "20:27",
+  "checks_failed": []
+}

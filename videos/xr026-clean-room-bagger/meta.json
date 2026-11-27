@@ -1,0 +1,171 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Don't Clean Your Room With the World's Biggest Digger",
+  "description": "Cleaning advice nobody needed: use a vacuum, not the Bagger 293.\n\nThe real machine:\n- Bagger 293 is a bucket-wheel excavator built by TAKRAF in 1995 for German open-pit mining.\n- It weighs 14,200 tons and holds the Guinness record as the heaviest land vehicle.\n- It is 96 meters (315 feet) tall; the Statue of Liberty is 305 feet from the ground to the torch.\n- It can move about 240,000 cubic meters of earth a day, roughly four Olympic swimming pools (2,500 m³ each) every hour.\n\nUseless Facts is our series of true facts nobody needed. Be honest: how bad is your room right now?\n\nSources:\n- TAKRAF, Bucket-wheel excavators (Bagger 293: 225 m long, 96 m tall, 240,000 m³ per day): https://takraf.com/product/bucket-wheel-excavators\n- Wikipedia, Bagger 293: https://en.wikipedia.org/wiki/Bagger_293\n- National Park Service, Statue of Liberty statistics (305 ft 1 in ground to torch): https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm\n\n#bagger293 #ohio #uselessfacts #shorts",
+  "tags": [
+    "bagger 293",
+    "how big is the bagger 293",
+    "biggest machine in the world vs statue of liberty",
+    "biggest excavator in the world",
+    "heaviest land vehicle",
+    "bucket wheel excavator",
+    "clean your room",
+    "ohio memes",
+    "only in ohio",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "giant machines",
+    "dumb facts"
+  ],
+  "pinned_comment": "Ohio, if you're reading this, it's a joke. Mostly.",
+  "series": "Useless Facts",
+  "caption_instagram": "Don't clean your room with this. #bagger293 #uselessfacts",
+  "sources": [
+    {
+      "title": "TAKRAF (manufacturer): Bagger 293, 225 m long, 96 m tall, moves 240,000 m3 of overburden daily",
+      "url": "https://takraf.com/product/bucket-wheel-excavators"
+    },
+    {
+      "title": "Wikipedia: Bagger 293, 14,200 t, 96 m (315 ft) tall, Guinness record heaviest land vehicle, 240,000 m3 per day",
+      "url": "https://en.wikipedia.org/wiki/Bagger_293"
+    },
+    {
+      "title": "National Park Service: Statue of Liberty, ground to tip of torch 305 ft 1 in",
+      "url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+    }
+  ],
+  "human_angle": "Makes the world's heaviest land vehicle instantly understandable with things every American knows (a messy teen room, the Statue of Liberty, Olympic pools) and ends on the internet's favorite state to pick on, Ohio.",
+  "promise_check": "0:00 the giant wheel enters a messy room; 0:02-0:10 Bagger 293 real figures (14,200 tons, taller than the Statue of Liberty, ~4 Olympic pools per hour); 0:11-0:15 no mess, no room, no Ohio shown literally.",
+  "notes": "USELESS FACTS series, owner approved scripts 27/11/2026. 'About four Olympic pools of dirt every hour' = 240,000 m3/day / 24 h = 10,000 m3/h; Olympic pool minimum 2,500 m3 (50 x 25 x 2 m) -> 4 per hour. 'Taller than the Statue of Liberty' = 96 m (315 ft) vs 305 ft ground to torch (NPS). Ohio joke = the 'only in Ohio' meme, no real place is harmed; the Statue is a generic public-domain landmark silhouette. No logos.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "command",
+    "voice": "xr12",
+    "tone": "deadpan",
+    "duration": "short",
+    "hook_type": "absurd",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "bagger 293",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Bagger 293 vs Your Messy Room",
+      "The Biggest Digger on Earth Is Taller Than the Statue of Liberty"
+    ],
+    "questions": [
+      {
+        "q": "How big is the Bagger 293?",
+        "a": "Bagger 293 is 96 meters (315 feet) tall, 225 meters long and weighs 14,200 tons, the heaviest land vehicle ever built."
+      },
+      {
+        "q": "How much can the Bagger 293 dig?",
+        "a": "About 240,000 cubic meters of earth per day, roughly four Olympic swimming pools every hour."
+      },
+      {
+        "q": "Is the Bagger 293 taller than the Statue of Liberty?",
+        "a": "Yes. Bagger 293 is 96 m (315 ft) tall; the Statue of Liberty is 305 ft from the ground to the torch."
+      }
+    ],
+    "demand": [
+      {
+        "query": "bagger 293",
+        "evidence": "Perennial viral 'biggest machine' topic; heavy coverage (Wikipedia, Guinness, YouTube compilations, 2026 Click Petroleo article)",
+        "url": "https://en.clickpetroleoegas.com.br/maior-escavadeira-do-mundo-pesa-mais-de-14-mil-toneladas-equivale-a-um-predio-de-30-andares-e-consegue-escavar-ate-240-mil-metros-cubicos-por-dia-gstts/"
+      },
+      {
+        "query": "only in ohio",
+        "evidence": "Long-running US meme ('only in Ohio') with millions of TikTok/YouTube uses",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "Bagger",
+    "TAKRAF",
+    "bagger293",
+    "uselessfacts",
+    "Ohio",
+    "ft",
+    "FT"
+  ],
+  "thumbnail": {
+    "time": 0.9,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      220,
+      800,
+      1000,
+      1480
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "315 FT",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "DON'T",
+        "color": "#FF4D4D"
+      },
+      {
+        "text": "CLEAN WITH",
+        "color": "#FFFFFF"
+      }
+    ],
+    "glow": "#FFD23A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "NO OHIO",
+            "box": "#FF3B30"
+          }
+        ],
+        "time": 13.9,
+        "protect": [
+          260,
+          900,
+          860,
+          1480
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "NO OHIO",
+            "box": "#FF3B30"
+          }
+        ],
+        "time": 14.2,
+        "protect": [
+          100,
+          1000,
+          1000,
+          1480
+        ]
+      }
+    ],
+    "pick": 1,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: purple bedroom + yellow wheel; text top."
+  }
+}

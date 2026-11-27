@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #2a2440; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #15101f;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4); letter-spacing: 1px; }
+      .ln.y { color: #ffd23a; } .ln.r { color: #ff4d4d; } .ln.g { color: #8af05a; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .04; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 52%, rgba(10,0,20,.5) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="bed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a4a8a"/><stop offset="1" stop-color="#3a2e5a"/></linearGradient>
+        <linearGradient id="mine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ac8e8"/><stop offset="1" stop-color="#e8e0c8"/></linearGradient>
+        <linearGradient id="coal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a6a42"/><stop offset="1" stop-color="#3a2a1a"/></linearGradient>
+        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ac8f0"/><stop offset="1" stop-color="#2a8ac8"/></linearGradient>
+        <linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8ac85a"/><stop offset="1" stop-color="#5a9a3a"/></linearGradient>
+        <linearGradient id="libG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4aa88a"/><stop offset="1" stop-color="#2a7a62"/></linearGradient>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="16.71" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: a giant bucket wheel bursts into a messy teen bedroom -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="1.2" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam"><g id="room1"></g><g id="mess1"></g>
+          <g transform="translate(320 1640)"><g id="s1p"></g></g>
+          <g id="wheel1p" transform="translate(1050 760)"><g id="wh1"></g></g>
+          <g id="debris1"></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 use a vacuum (correct way) -->
+      <div id="s2" class="clip scene" data-start="1.2" data-duration="1.1" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam"><g id="room2"></g><g id="mess2"></g>
+          <g transform="translate(460 1640)"><g id="s2p"></g></g>
+          <g id="vac2" transform="translate(720 1640)"><rect x="-70" y="-120" width="140" height="120" rx="30" fill="#c0392b" stroke="#15101f" stroke-width="8"/><path d="M-60 -60 C-120 -80 -160 -140 -190 -230" fill="none" stroke="#15101f" stroke-width="22"/><path d="M-60 -60 C-120 -80 -160 -140 -190 -230" fill="none" stroke="#5a5a66" stroke-width="12"/><circle cx="-50" r="18" fill="#15101f"/><circle cx="50" r="18" fill="#15101f"/></g>
+          <g id="spk2"></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 not the Bagger 293 (a coal mine, a tiny house for scale) -->
+      <div id="s3" class="clip scene" data-start="2.3" data-duration="1.75" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#mine)"/>
+          <path d="M-20 1300 L300 1250 L560 1320 L820 1260 L1100 1300 V1940 H-20Z" fill="url(#coal)" stroke="#15101f" stroke-width="8"/>
+          <path d="M-20 1500 L1100 1460 M-20 1680 L1100 1640" stroke="#2a1c10" stroke-width="10" opacity=".5"/>
+          <g transform="translate(560 1360) scale(1.05)"><g id="bag3"></g></g>
+          <g transform="translate(130 1300) scale(0.22)"><path d="M-120 0 V-160 L0 -260 L120 -160 V0Z" fill="#f2e6c8" stroke="#15101f" stroke-width="14"/><path d="M-150 -150 L0 -280 L150 -150" fill="none" stroke="#8a3b3b" stroke-width="30"/></g>
+          <text x="130" y="1350" text-anchor="middle" font-family="Anton" font-size="34" fill="#15101f">a house</text>
+        </g></svg>
+      </div>
+
+      <!-- S4 14,200 tons: a scale with the Bagger vs a pile of elephants -->
+      <div id="s4" class="clip scene" data-start="4.05" data-duration="1.85" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="#2a2440"/>
+          <g transform="translate(540 1500) scale(0.84)"><path d="M-60 300 L0 0 L60 300Z" fill="#c9ccd2" stroke="#15101f" stroke-width="8"/>
+            <g id="beam4"><rect x="-470" y="-14" width="940" height="28" rx="12" fill="#c9ccd2" stroke="#15101f" stroke-width="8"/>
+              <g id="panL" transform="translate(-400 0)"><path d="M0 0 L-120 140 M0 0 L120 140" stroke="#15101f" stroke-width="6"/><rect x="-160" y="140" width="320" height="24" rx="8" fill="#ffd23a" stroke="#15101f" stroke-width="6"/><g transform="translate(0 140) scale(0.32)"><g id="bag4"></g></g></g>
+              <g id="panR" transform="translate(400 0)"><path d="M0 0 L-120 140 M0 0 L120 140" stroke="#15101f" stroke-width="6"/><rect x="-160" y="140" width="320" height="24" rx="8" fill="#ffd23a" stroke="#15101f" stroke-width="6"/><g id="feathR" transform="translate(0 140)"></g></g></g></g>
+          <g transform="translate(540 560)"><g id="tons4" class="ttl"><rect x="-380" y="-110" width="760" height="200" rx="30" fill="#15101f" stroke="#ffd23a" stroke-width="10"/><text id="tons4t" y="50" text-anchor="middle" font-family="Anton" font-size="140" fill="#ffd23a">0 TONS</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 taller than the Statue of Liberty -->
+      <div id="s5" class="clip scene" data-start="5.9" data-duration="1.8" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="url(#mine)"/>
+          <rect y="1700" width="1080" height="220" fill="#6a8a4a"/>
+          <g transform="translate(1000 1700) scale(1.68)"><g id="bag5"></g></g>
+          <g id="lib5" transform="translate(230 1700) scale(0.833)"></g>
+          <g id="lines5"><path d="M40 760 H1040" stroke="#c0392b" stroke-width="8" stroke-dasharray="26 16"/><path d="M40 800 H1040" stroke="#15101f" stroke-width="6" stroke-dasharray="20 16" opacity=".6"/>
+            <text x="920" y="740" text-anchor="end" font-family="Anton" font-size="60" fill="#c0392b">315 FT</text><text x="100" y="870" font-family="Anton" font-size="52" fill="#15101f">305 FT</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 four Olympic pools of dirt every hour -->
+      <div id="s6" class="clip scene" data-start="7.7" data-duration="3.0" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="#e8e0c8"/>
+          <g id="pools6"></g>
+          <g transform="translate(540 1770) scale(0.9)"><circle r="130" fill="#fff" stroke="#15101f" stroke-width="12"/><path id="clk6" d="M0 0 L0 -100" stroke="#c0392b" stroke-width="12" stroke-linecap="round"/><circle r="12" fill="#15101f"/><text y="-150" text-anchor="middle" font-family="Anton" font-size="56" fill="#15101f">1 HOUR</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 no mess: the wheel scoops the mess -->
+      <div id="s7" class="clip scene" data-start="10.7" data-duration="1.7" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam"><g id="room7"></g><g id="mess7"></g>
+          <g transform="translate(320 1640)"><g id="s7p"></g></g>
+          <g transform="translate(1000 1000)"><g id="wh7"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 no room: walls scooped away, he sits in a pit -->
+      <div id="s8" class="clip scene" data-start="12.4" data-duration="0.95" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="url(#mine)"/>
+          <path d="M-20 1300 C200 1360 880 1360 1100 1300 V1940 H-20Z" fill="url(#coal)" stroke="#15101f" stroke-width="8"/>
+          <g id="room8"><g id="room8i"></g></g>
+          <g transform="translate(480 1700)"><g id="s8p"></g></g>
+          <g transform="translate(980 900)"><g id="wh8"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 no Ohio -->
+      <div id="s9" class="clip scene" data-start="13.35" data-duration="1.25" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam">
+          <rect width="1080" height="1920" fill="url(#water)"/>
+          <rect y="500" width="1080" height="1420" fill="url(#field)"/>
+          <g transform="translate(540 1150)"><path id="ohioHole" fill="#3a2a1a" stroke="#15101f" stroke-width="10"/><g id="ohio9"><path id="ohioLand" fill="#c9b85a" stroke="#15101f" stroke-width="10"/><text y="40" text-anchor="middle" font-family="Anton" font-size="140" fill="#15101f">OHIO</text></g></g>
+          <g transform="translate(1030 780)"><g id="wh9"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S10 nobody would notice: neighbors walk past the Ohio-shaped hole -->
+      <div id="s10" class="clip scene" data-start="14.6" data-duration="2.11" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s10cam">
+          <rect width="1080" height="1920" fill="url(#mine)"/>
+          <rect y="1100" width="1080" height="820" fill="url(#field)"/>
+          <g transform="translate(540 1420) scale(0.95 0.42)"><path id="ohioHole10" fill="#2a1c10" stroke="#15101f" stroke-width="14"/></g>
+          <g transform="translate(210 1180)"><rect x="-6" y="0" width="12" height="160" fill="#5a5a66"/><rect x="-130" y="-120" width="260" height="130" rx="10" fill="#2a7a4a" stroke="#fff" stroke-width="8"/><text y="-70" text-anchor="middle" font-family="Anton" font-size="34" fill="#fff">WELCOME TO</text><text y="-20" text-anchor="middle" font-family="Anton" font-size="52" fill="#fff">OHIO</text></g>
+          <g id="walk10"></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="1.2" data-track-index="1" style="top:300px"><span id="c1a" class="ln r">DON'T.</span></div>
+      <div id="c2" class="clip cap" data-start="1.45" data-duration="0.85" data-track-index="1" style="top:300px"><span id="c2a" class="ln g sm">✓ VACUUM</span></div>
+      <div id="c3" class="clip cap" data-start="2.55" data-duration="1.5" data-track-index="1" style="top:300px"><span id="c3a" class="ln y sm">BAGGER 293</span></div>
+      <div id="c6" class="clip cap" data-start="8.2" data-duration="2.5" data-track-index="1" style="top:300px"><span class="ln sm">4 POOLS</span><span id="c6b" class="ln y sm">PER HOUR</span></div>
+      <div id="c9" class="clip cap" data-start="13.5" data-duration="1.1" data-track-index="1" style="top:300px"><span id="c9a" class="ln r">NO OHIO</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="16.71" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf;
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const C = [0, 1.2, 2.3, 4.05, 5.9, 7.7, 10.7, 12.4, 13.35, 14.6, 16.71];
+      X.captions({ capY: (t) => (t < C[1] ? 560 : t < C[2] ? 560 : t < C[3] ? 520 : t < C[4] ? 760 : t < C[5] ? 1780 : t < C[6] ? 1500 : t < C[7] ? 560 : t < C[8] ? 560 : t < C[9] ? 560 : 560) });
+
+      // ---------- bucket wheel + full Bagger ----------
+      const wheel = (r = 300) => { let b = ""; for (let i = 0; i < 18; i++) { const a = i / 18 * 360; b += `<g transform="rotate(${a})"><path d="M${-r * 0.16} ${-r} L${r * 0.16} ${-r} L${r * 0.12} ${-r * 0.78} L${-r * 0.2} ${-r * 0.8}Z" fill="#e8b42a" stroke="#15101f" stroke-width="${r * 0.025}"/><path d="M${-r * 0.13} ${-r * 0.98} L${-r * 0.2} ${-r * 1.1} M0 ${-r} L0 ${-r * 1.12} M${r * 0.13} ${-r * 0.98} L${r * 0.2} ${-r * 1.1}" stroke="#15101f" stroke-width="${r * 0.025}" stroke-linecap="round"/></g>`; }
+        let sp = ""; for (let i = 0; i < 9; i++) sp += `<path d="M0 0 L0 ${-r * 0.78}" stroke="#a8741a" stroke-width="${r * 0.05}" transform="rotate(${i * 40})"/>`;
+        return `<circle r="${r * 0.8}" fill="none" stroke="#c9941a" stroke-width="${r * 0.08}"/>${sp}${b}<circle r="${r * 0.18}" fill="#c9941a" stroke="#15101f" stroke-width="${r * 0.03}"/><circle r="${r * 0.08}" fill="#15101f"/>`; };
+      const bagger = () => `<g><rect x="-330" y="-90" width="560" height="90" rx="30" fill="#3a3a44" stroke="#15101f" stroke-width="8"/>${[...Array(7)].map((_, i) => `<circle cx="${-300 + i * 80}" cy="-45" r="26" fill="#5a5a66" stroke="#15101f" stroke-width="5"/>`).join("")}
+        <path d="M-240 -90 L-120 -330 L60 -330 L160 -90Z" fill="#e8b42a" stroke="#15101f" stroke-width="8"/>
+        ${[0, 1, 2, 3, 4].map((i) => `<path d="M${-200 + i * 70} -100 L${-150 + i * 60} -320" stroke="#a8741a" stroke-width="6"/>`).join("")}
+        <path d="M-60 -330 L-40 -560 L0 -560 L20 -330Z" fill="#e8b42a" stroke="#15101f" stroke-width="7"/>
+        <path d="M0 -480 L-560 -300" stroke="#15101f" stroke-width="34"/><path d="M0 -480 L-560 -300" stroke="#e8b42a" stroke-width="22"/>
+        <path d="M0 -540 L420 -380" stroke="#15101f" stroke-width="26"/><path d="M0 -540 L420 -380" stroke="#e8b42a" stroke-width="16"/><rect x="380" y="-420" width="90" height="110" fill="#5a5a66" stroke="#15101f" stroke-width="6"/>
+        <path d="M-20 -560 L-560 -300 M-20 -560 L420 -380" stroke="#15101f" stroke-width="4" opacity=".7"/>
+        <g transform="translate(-600 -290)"><g class="bw">${wheel(140)}</g></g></g>`;
+      X.put("wh1", wheel(420)); X.put("wh7", wheel(380)); X.put("wh8", wheel(360)); X.put("wh9", wheel(300));
+      X.put("bag3", bagger()); X.put("bag4", bagger()); X.put("bag5", bagger());
+      // ---------- teen bedroom ----------
+      const room = `<rect width="1080" height="1920" fill="url(#bed)"/><rect y="1500" width="1080" height="420" fill="#8a6a4a"/><rect y="1490" width="1080" height="20" fill="#2a1c10"/>
+        <rect x="80" y="760" width="200" height="270" fill="#c0392b" stroke="#15101f" stroke-width="8"/><circle cx="180" cy="870" r="56" fill="#ffd23a"/><text x="180" y="1000" text-anchor="middle" font-family="Anton" font-size="42" fill="#fff">ROCK</text>
+        <rect x="360" y="780" width="240" height="180" fill="#1a1a3a" stroke="#e9e1cf" stroke-width="14"/><circle cx="530" cy="820" r="18" fill="#fff6c8"/>
+        <rect x="680" y="1080" width="380" height="420" fill="#6a4a8a" stroke="#15101f" stroke-width="8"/><rect x="680" y="1040" width="380" height="80" rx="20" fill="#f4f1ea" stroke="#15101f" stroke-width="8"/>`;
+      const mess = (pfx) => { const items = [
+          `<rect x="-90" y="-20" width="180" height="40" rx="6" fill="#e8b04a" stroke="#15101f" stroke-width="6"/><circle cx="-40" cy="-4" r="10" fill="#c0392b"/><circle cx="30" cy="4" r="10" fill="#c0392b"/>`,
+          `<path d="M-80 0 C-60 -60 60 -60 80 0Z" fill="#3a6ab0" stroke="#15101f" stroke-width="6"/>`,
+          `<path d="M-30 -40 L30 -40 L40 30 L-40 30Z" fill="#f4f1ea" stroke="#15101f" stroke-width="6"/><path d="M-30 -10 H30" stroke="#c0392b" stroke-width="6"/>`,
+          `<ellipse rx="70" ry="22" fill="#5d8a3a" stroke="#15101f" stroke-width="6"/>`,
+          `<rect x="-40" y="-60" width="80" height="60" rx="8" fill="#c0392b" stroke="#15101f" stroke-width="6"/>`,
+          `<path d="M-60 0 C-40 -50 40 -50 60 0Z" fill="#e86e9a" stroke="#15101f" stroke-width="6"/>`,
+          `<rect x="-50" y="-10" width="100" height="20" fill="#2a2a30" stroke="#15101f" stroke-width="5"/><circle cx="-30" r="14" fill="#3a3a44"/>`,
+          `<path d="M-20 -30 L20 -30 L24 20 L-24 20Z" fill="#7fd0ff" stroke="#15101f" stroke-width="5"/>`];
+        const P = [[160, 1560], [420, 1600], [620, 1540], [820, 1600], [300, 1720], [560, 1760], [900, 1740], [740, 1820], [120, 1820], [980, 1560]];
+        return P.map(([x, y], i) => `<g id="${pfx}${i}" transform="translate(${x} ${y}) rotate(${(i * 37) % 40 - 20})">${items[i % items.length]}</g>`).join(""); };
+      ["room1", "room2", "room7"].forEach((id) => X.put(id, room)); X.put("room8i", room);
+      X.put("mess1", mess("ma")); X.put("mess2", mess("mb")); X.put("mess7", mess("mc"));
+      // the teen (weird: tiny legs, huge head, hoodie, headphones on the neck)
+      const TEEN = { skin: "#f2c29b", skinD: "#d99a72", hair: "#3a2416", hairStyle: "spiky", shirt: "#2f8a5a", pants: "#2a2a30", shoes: "#f4f1ea", h: 0.5, torso: 0.85, headS: 1.6, arm: 0.85 };
+      ["s1p", "s2p", "s7p", "s8p"].forEach((g, i) => X.put(g, X.fig("tn" + i, 1.35, TEEN)));
+      X.put("spk2", [0, 1, 2, 3].map((i) => `<g id="sk${i}"><path d="M0 -26 L7 -7 L26 0 L7 7 L0 26 L-7 7 L-26 0 L-7 -7Z" fill="#fff4b0" stroke="#15101f" stroke-width="4"/></g>`).join(""));
+      // elephants on the scale: counter-weight never enough
+      X.put("feathR", `<text y="80" text-anchor="middle" font-family="Anton" font-size="44" fill="#fff">1 ELEPHANT</text><g transform="translate(0 -40) scale(0.7)"><ellipse cy="-60" rx="90" ry="60" fill="#9aa0a8" stroke="#15101f" stroke-width="7"/><circle cx="80" cy="-90" r="44" fill="#9aa0a8" stroke="#15101f" stroke-width="7"/><path d="M110 -70 C140 -30 130 10 116 20" fill="none" stroke="#15101f" stroke-width="20"/><path d="M110 -70 C140 -30 130 10 116 20" fill="none" stroke="#9aa0a8" stroke-width="12"/>${[-60, -20, 30, 60].map((x) => `<rect x="${x - 14}" y="-20" width="28" height="30" fill="#9aa0a8" stroke="#15101f" stroke-width="6"/>`).join("")}</g>`);
+      // Statue of Liberty (generic public-domain landmark silhouette, scaled to 305 ft vs 315 ft)
+      X.put("lib5", `<g transform="scale(1.0)"><rect x="-110" y="-280" width="220" height="280" fill="#c9b89a" stroke="#15101f" stroke-width="8"/><rect x="-80" y="-420" width="160" height="140" fill="#d8c8a8" stroke="#15101f" stroke-width="8"/>
+        <path d="M-60 -420 C-70 -620 -50 -760 -20 -840 L30 -840 C60 -760 70 -620 60 -420Z" fill="url(#libG)" stroke="#15101f" stroke-width="7"/>
+        <circle cx="0" cy="-880" r="40" fill="url(#libG)" stroke="#15101f" stroke-width="7"/>${[...Array(7)].map((_, i) => `<path d="M0 -900 L${Math.cos(-Math.PI * (0.15 + i * 0.12)) * 80} ${-900 + Math.sin(-Math.PI * (0.15 + i * 0.12)) * 80}" stroke="#2a7a62" stroke-width="10"/>`).join("")}
+        <path d="M30 -800 L60 -960" stroke="#2a7a62" stroke-width="24" stroke-linecap="round"/><path d="M48 -960 L72 -960 L66 -1000 L54 -1000Z" fill="#ffd23a" stroke="#15101f" stroke-width="5"/><path d="M60 -1000 C40 -1030 60 -1060 60 -1080 C80 -1050 90 -1030 60 -1000Z" fill="#ff8a2a" stroke="#15101f" stroke-width="5"/>
+        <rect x="-50" y="-700" width="40" height="60" fill="#2a7a62" stroke="#15101f" stroke-width="5"/></g>`);
+      // pools of dirt (2x2)
+      X.put("pools6", [0, 1, 2, 3].map((i) => { const x = 280 + (i % 2) * 520, y = 780 + Math.floor(i / 2) * 470;
+        return `<g transform="translate(${x} ${y})"><rect x="-230" y="-200" width="460" height="400" rx="20" fill="#c9ccd2" stroke="#15101f" stroke-width="10"/><rect x="-200" y="-170" width="400" height="340" fill="url(#water)"/>
+          ${[...Array(7)].map((_, k) => `<path d="M${-200 + k * 66} -170 V170" stroke="#fff" stroke-width="4" stroke-dasharray="12 10" opacity=".7"/>`).join("")}
+          <rect id="dirt${i}" x="-200" y="170" width="400" height="0" fill="#6a4a2a"/><path id="dtop${i}" d="M0 0" fill="#8a6a42"/>
+          <text y="-220" text-anchor="middle" font-family="Anton" font-size="46" fill="#15101f">POOL ${i + 1}</text></g>`; }).join(""));
+      // Ohio (approximate outline, own drawing)
+      const OH = [[0, 0.02], [0.42, 0.06], [0.6, 0.14], [0.8, 0.03], [0.93, 0], [0.96, 0.46], [0.9, 0.62], [0.8, 0.76], [0.72, 0.94], [0.56, 1], [0.42, 0.88], [0.26, 0.96], [0.1, 0.86], [0.02, 0.8]];
+      const ohD = (s) => "M" + OH.map(([x, y]) => `${((x - 0.48) * s).toFixed(1)} ${((y - 0.5) * s * 0.95).toFixed(1)}`).join(" L") + "Z";
+      X.attr("ohioLand", "d", ohD(760)); X.attr("ohioHole", "d", ohD(760)); X.attr("ohioHole10", "d", ohD(900));
+      // neighbors walking past the hole, not noticing (one walks backwards, one is tiny with a huge coffee)
+      const NB = [
+        { lk: { skin: "#c99067", hair: "#1e1512", hairStyle: "curly", shirt: "#e86e4a", pants: "#2e3446", shoes: "#f4f1ea" }, mode: "walk", y: 1560, sp: 200, x0: 120 },
+        { lk: { skin: "#f2c29b", hair: "#e0c070", hairStyle: "bun", shirt: "#3f8f7a", pants: "#3b3f52", shoes: "#8a2f2f", h: 0.45, headS: 1.5 }, mode: "walk", y: 1720, sp: 160, x0: 150 },
+        { lk: { skin: "#8d5a3b", hair: "#1e1512", hairStyle: "short", shirt: "#7b5ac9", pants: "#2a2a30", shoes: "#1d1b22", h: 1.5, torso: 1.2, headS: 0.7, arm: 1.5 }, mode: "weird", y: 1840, sp: -180, x0: 960 },
+      ];
+      X.put("walk10", NB.map((n, i) => `<g id="nb${i}">${X.fig("nf" + i, 0.9, n.lk)}</g>`).join(""));
+      X.put("nf1-handA", `<g><rect x="-24" y="-10" width="48" height="70" rx="8" fill="#f4f1ea" stroke="#15101f" stroke-width="5"/><rect x="-24" y="10" width="48" height="20" fill="#8a5a2e"/></g>`);
+      X.put("debris1", [...Array(10)].map((_, i) => `<rect id="db${i}" x="-18" y="-12" width="36" height="24" fill="${["#8a6a4a", "#5a4a8a", "#e9e1cf"][i % 3]}" stroke="#15101f" stroke-width="4"/>`).join(""));
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      X.life((t) => {
+        if (W(t, C[0], C[1])) { const k = X.sm(0, 0.5, t); T("wheel1p", `translate(${1290 - k * 300} 800)`); T("wh1", `rotate(${(-t * 120).toFixed(1)})`);
+          X.figLife("tn0", t, { mode: "stand", mouth: 0.9, smile: -0.7, eyes: 1.5, brow: 1, look: [8, -4], arms: { A: [-160, -20], B: [160, 20] } });
+          for (let i = 0; i < 10; i++) { const q = X.clamp((t - 0.05 - i * 0.03) / 0.8, 0, 1); T(`db${i}`, `translate(${(920 - q * (300 + i * 40)).toFixed(1)} ${(700 + i * 40 - Math.sin(q * 3) * 200 + q * q * 500).toFixed(1)}) rotate(${(q * 500 + i * 30).toFixed(0)})`); X.attr(`db${i}`, "opacity", q > 0 ? 1 : 0); } }
+        if (W(t, C[1], C[2])) { X.figLife("tn1", t, { mode: "stand", flip: false, arms: { A: [-60, -30] }, smile: 0.8, look: [6, 4] });
+          for (let i = 0; i < 4; i++) { const q = ((t * 1.6 + i / 4) % 1); T(`sk${i}`, `translate(${380 + i * 120} ${1500 - q * 120}) scale(${Math.sin(q * Math.PI).toFixed(2)})`); }
+          for (let i = 0; i < 10; i++) { const q = X.clamp((t - C[1] - 0.1 - i * 0.06) / 0.5, 0, 1); X.attr(`mb${i}`, "opacity", (1 - q).toFixed(2)); } }
+        if (W(t, C[2], C[3])) document.querySelectorAll("#bag3 .bw").forEach((e) => e.setAttribute("transform", `rotate(${(-t * 60).toFixed(1)})`));
+        if (W(t, C[3], C[4])) { const k = X.sm(C[3] + 0.05, w(4, 4) + 0.1, t), n = Math.round(k * 14200); document.getElementById("tons4t").textContent = n.toLocaleString("en-US") + " TONS";
+          const tilt = -X.sm(C[3] + 0.1, C[3] + 0.6, t) * 16 + Math.sin(t * 9) * 0.8; T("beam4", `rotate(${tilt.toFixed(2)})`); T("panL", `translate(-400 0) rotate(${(-tilt).toFixed(2)})`); T("panR", `translate(400 0) rotate(${(-tilt).toFixed(2)})`);
+          document.querySelectorAll("#bag4 .bw").forEach((e) => e.setAttribute("transform", `rotate(${(-t * 60).toFixed(1)})`)); }
+        if (W(t, C[4], C[5])) { document.querySelectorAll("#bag5 .bw").forEach((e) => e.setAttribute("transform", `rotate(${(-t * 60).toFixed(1)})`)); X.attr("lines5", "opacity", t > w(5, 0) + 0.2 ? 1 : 0); }
+        if (W(t, C[5], C[6])) { const k = X.clamp((t - w(6, 3) + 0.2) / (C[6] - w(6, 3)), 0, 1); T("clk6", `rotate(${(k * 360).toFixed(1)})`);
+          for (let i = 0; i < 4; i++) { const f = X.clamp(k * 4 - i, 0, 1), h = f * 340; X.attr(`dirt${i}`, "y", (170 - h).toFixed(1)); X.attr(`dirt${i}`, "height", h.toFixed(1));
+            X.attr(`dtop${i}`, "d", f > 0 ? `M-200 ${(170 - h).toFixed(1)} Q-100 ${(170 - h - 40 * f).toFixed(1)} 0 ${(170 - h - 10).toFixed(1)} Q100 ${(170 - h - 50 * f).toFixed(1)} 200 ${(170 - h).toFixed(1)}Z` : "M0 0"); } }
+        if (W(t, C[6], C[7])) { T("wh7", `rotate(${(-t * 140).toFixed(1)})`);
+          for (let i = 0; i < 10; i++) { const q = X.clamp((t - C[6] - 0.1 - i * 0.07) / 0.5, 0, 1), P = [[160, 1560], [420, 1600], [620, 1540], [820, 1600], [300, 1720], [560, 1760], [900, 1740], [740, 1820], [120, 1820], [980, 1560]][i];
+            T(`mc${i}`, `translate(${(P[0] + q * (1000 - P[0])).toFixed(1)} ${(P[1] + q * (1000 - P[1]) - Math.sin(q * Math.PI) * 200).toFixed(1)}) rotate(${(q * 600).toFixed(0)}) scale(${(1 - q * 0.6).toFixed(2)})`); X.attr(`mc${i}`, "opacity", q < 1 ? 1 : 0); }
+          X.figLife("tn2", t, { mode: "stand", mouth: 0.6, smile: 0.5, eyes: 1.4, brow: 0.8, look: [10, 0] }); }
+        if (W(t, C[7], C[8])) { const k = X.sm(C[7] + 0.02, C[7] + 0.45, t); T("room8", `translate(${(k * 1300).toFixed(1)} ${(-k * 700).toFixed(1)}) rotate(${(k * 40).toFixed(1)} 540 960) scale(${(1 - k * 0.6).toFixed(2)})`); T("wh8", `rotate(${(-t * 160).toFixed(1)})`);
+          X.figLife("tn3", t, { mode: "stand", mouth: 0.2, smile: -0.3, eyes: 1.2, look: [-6, -8], arms: { A: [-20, -10] } }); }
+        if (W(t, C[8], C[9])) { const k = X.sm(w(9, 1) - 0.05, w(9, 1) + 0.45, t); T("ohio9", `translate(${(k * 900).toFixed(1)} ${(-k * 900).toFixed(1)}) rotate(${(k * 80).toFixed(1)}) scale(${(1 - k * 0.7).toFixed(2)})`); T("wh9", `rotate(${(-t * 160).toFixed(1)})`); }
+        if (W(t, C[9], C[10])) NB.forEach((n, i) => { const x = n.x0 + (t - C[9]) * n.sp; T(`nb${i}`, `translate(${x.toFixed(1)} ${n.y})`);
+          X.figLife("nf" + i, t, { mode: n.mode, flip: n.sp < 0, phase: i, smile: 0.7, mouth: i === 0 ? 0.15 : 0, look: [6, -4], lid: 0.2, arms: i === 1 ? { A: [-60, -80] } : undefined }); });
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 16.71, duration: 16.71, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#c1a", { scale: 1.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.6)" }, 0.0);
+      tl.set("#s1cam", { scale: 1.04, svgOrigin: "540 960" }, 0); tl.fromTo("#s1cam", { x: 0 }, { keyframes: [{ x: -12, duration: 0.04 }, { x: 12, duration: 0.04 }, { x: 0, duration: 0.04 }], repeat: 8, immediateRender: false }, 0.2);
+      tl.fromTo("#s2cam", { scale: 1.05, svgOrigin: "540 1500" }, { scale: 1.0, svgOrigin: "540 1500", duration: 1.1, ease: "sine.out" }, C[1]);
+      pop("#c2a", 1.47, 1.6);
+      tl.fromTo("#s3cam", { scale: 1.25, svgOrigin: "300 1200" }, { scale: 1.0, svgOrigin: "300 1200", duration: 1.7, ease: "power2.out" }, C[2]);
+      pop("#c3a", 2.6, 1.6);
+      tl.fromTo("#tons4", { scale: 0.3, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.25, ease: "back.out(2.6)" }, C[3] + 0.02);
+      tl.fromTo("#s5cam", { scale: 1.0, svgOrigin: "540 1700" }, { scale: 1.05, svgOrigin: "540 1700", duration: 1.8, ease: "sine.inOut" }, C[4]);
+      tl.fromTo("#s6cam", { scale: 1.0, svgOrigin: "540 1000" }, { scale: 1.06, svgOrigin: "540 1000", duration: 3.0, ease: "sine.inOut" }, C[5]);
+      tl.set("#s7cam", { scale: 1.04, svgOrigin: "540 960" }, C[6]); tl.fromTo("#s7cam", { x: 0 }, { keyframes: [{ x: -8, duration: 0.04 }, { x: 8, duration: 0.04 }, { x: 0, duration: 0.04 }], repeat: 10, immediateRender: false }, C[6]);
+      tl.fromTo("#s8cam", { scale: 1.0, svgOrigin: "540 1500" }, { scale: 1.06, svgOrigin: "540 1500", duration: 0.95, ease: "sine.in" }, C[7]);
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "540 1150" }, { scale: 1.05, svgOrigin: "540 1150", duration: 1.2, ease: "sine.in" }, C[8]);
+      pop("#c9a", 13.52, 1.6);
+      tl.fromTo("#s10cam", { scale: 1.06, svgOrigin: "540 1500" }, { scale: 1.0, svgOrigin: "540 1500", duration: 2.1, ease: "sine.out" }, C[9]);
+      [C[2], C[6], C[8]].forEach((at) => tl.fromTo("#flash", { opacity: 0.45 }, { opacity: 0, duration: 0.16, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 16.71, duration: 16.71, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  [
+   "Your air fryer missed the first Thanksgiving.",
+   0.25
+  ],
+  [
+   "Plymouth. Autumn, sixteen twenty-one.",
+   0.15
+  ],
+  [
+   "About ninety Wampanoag men showed up.",
+   0.1
+  ],
+  [
+   "With five deer.",
+   0.15
+  ],
+  [
+   "Around fifty colonists. Wild birds. Three days of eating.",
+   0.2
+  ],
+  [
+   "Number of air fryers?",
+   0.35
+  ],
+  [
+   "Zero.",
+   0.4
+  ],
+  [
+   "[whispers] It wasn't invited. It wasn't even invented.",
+   0.3
+  ],
+  [
+   "Four hundred and five years later...",
+   0.25
+  ],
+  [
+   "it still acts like the guest of honor. [pause]",
+   0.0
+  ]
+ ],
+ "tone": "deadpan",
+ "voice": "xr10",
+ "seed": 9021
+}

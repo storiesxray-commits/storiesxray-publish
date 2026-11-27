@@ -1,0 +1,174 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Never Blow Your Leaves With a Hurricane",
+  "description": "Yard-care advice nobody asked for: use a leaf blower, not a Category 5 hurricane.\n\nThe real numbers behind the useless advice:\n- A Category 5 hurricane has sustained winds of 157 mph or higher (Saffir-Simpson scale).\n- NOAA's Hurricane Research Division estimates the heat released by an average hurricane, through cloud and rain formation, at about 200 times the world's electrical generating capacity.\n- Leaves, lawn and homeowners association: not rated for that.\n\nUseless Facts is our series of true facts nobody needed. What's the pettiest HOA rule you've ever seen?\n\nSources:\n- NOAA AOML Hurricane Research Division, How much energy does a hurricane release?: https://www.aoml.noaa.gov/hrd/tcfaq/D7.html\n- NOAA National Hurricane Center, Saffir-Simpson Hurricane Wind Scale: https://www.nhc.noaa.gov/aboutsshws.php\n- PBS NOVA, Hurricane Power: https://www.pbs.org/wgbh/nova/article/hurricane-power\n\n#hurricane #hoa #uselessfacts #shorts",
+  "tags": [
+    "category 5 hurricane",
+    "how strong is a hurricane",
+    "hurricane energy",
+    "how much energy does a hurricane release",
+    "leaf blower",
+    "hoa",
+    "hoa memes",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "fall yard work",
+    "dumb advice"
+  ],
+  "pinned_comment": "The HOA sent a letter about the hurricane. It was also blown away.",
+  "series": "Useless Facts",
+  "caption_instagram": "Never blow your leaves with a hurricane. #hoa #uselessfacts",
+  "sources": [
+    {
+      "title": "NOAA AOML Hurricane Research Division FAQ D7: heat released by cloud/rain formation ~6.0e14 W, equivalent to 200 times the world-wide electrical generating capacity",
+      "url": "https://www.aoml.noaa.gov/hrd/tcfaq/D7.html"
+    },
+    {
+      "title": "NOAA National Hurricane Center: Saffir-Simpson scale, Category 5 = sustained winds 157 mph or higher",
+      "url": "https://www.nhc.noaa.gov/aboutsshws.php"
+    },
+    {
+      "title": "PBS NOVA: energy released in an average hurricane equivalent to 200 times worldwide electrical generating capacity",
+      "url": "https://www.pbs.org/wgbh/nova/article/hurricane-power"
+    }
+  ],
+  "human_angle": "Turns the most American fall chore (leaf blowing under HOA rules) into a real lesson on hurricane power: Cat 5 winds start at 157 mph and NOAA puts a hurricane's heat at ~200x the world's power plants; the HOA joke is the reward.",
+  "promise_check": "0:00 'Never blow your leaves with a hurricane' with a dad walking a hurricane; 0:05-0:16 Cat 5 = 157+ mph and NOAA's 200x power-plants figure; 0:16-0:22 no leaves, no lawn, no HOA shown literally.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "command",
+    "voice": "xr10",
+    "tone": "deadpan",
+    "duration": "short",
+    "hook_type": "absurd",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "category 5 hurricane",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Leaf Blower vs Category 5 Hurricane",
+      "Why You Shouldn't Rake Leaves With a Hurricane"
+    ],
+    "questions": [
+      {
+        "q": "How strong is a Category 5 hurricane?",
+        "a": "A Category 5 hurricane has sustained winds of 157 mph or higher on the Saffir-Simpson scale."
+      },
+      {
+        "q": "How much energy does a hurricane release?",
+        "a": "NOAA estimates an average hurricane releases heat equal to about 200 times the world's electrical generating capacity through cloud and rain formation."
+      },
+      {
+        "q": "What is an HOA?",
+        "a": "A homeowners association: a group that sets and enforces rules for a neighborhood, often including yard and leaf rules."
+      }
+    ],
+    "demand": [
+      {
+        "query": "how much energy does a hurricane release",
+        "evidence": "Evergreen question answered by NOAA FAQ and PBS NOVA; widely reshared fact",
+        "url": "https://www.aoml.noaa.gov/hrd/tcfaq/D7.html"
+      },
+      {
+        "query": "hoa memes",
+        "evidence": "HOA complaints are a recurring viral US meme topic (Reddit r/fuckHOA, TikTok)",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "HOA",
+    "NOAA",
+    "AOML",
+    "Saffir",
+    "Simpson",
+    "uselessfacts",
+    "hoa",
+    "mph"
+  ],
+  "thumbnail": {
+    "time": 1.6,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      150,
+      560,
+      1000,
+      1680
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "CAT 5",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "WRONG",
+        "color": "#FF4D4D"
+      },
+      {
+        "text": "WAY",
+        "box": "#FF3B30"
+      }
+    ],
+    "glow": "#8AF05A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "NO HOA",
+            "box": "#FF3B30"
+          }
+        ],
+        "time": 24.6,
+        "protect": [
+          260,
+          900,
+          860,
+          1700
+        ],
+        "badge": "CAT 5"
+      },
+      {
+        "lines": [
+          {
+            "text": "157 MPH",
+            "color": "#FFD23A"
+          }
+        ],
+        "time": 9.8,
+        "protect": [
+          380,
+          360,
+          1000,
+          920
+        ]
+      }
+    ],
+    "pick": 1,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: bright suburban sky blue + green, hurricane on a leash; text top."
+  },
+  "id": "xr025-leaf-hurricane",
+  "duration_s": 25.88,
+  "status": "ready",
+  "publish_time_local": "14:13"
+}

@@ -101,5 +101,14 @@ for s in SHOTS:
     a, b = int(s["start"] * SR), int(s["end"] * SR); gap = db(out[a:b]) - db(bed[a:b]); worst = min(worst, gap)
     print(f'{s["id"]:6s} mix {db(out[a:b]):6.1f} dB   bed {db(bed[a:b]):6.1f} dB   voice margin {gap:4.1f} dB{"   <-- LOW" if gap < 4 else ""}')
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{OUT}/mix_raw.wav", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000", f"{OUT}/mix.wav"], check=True)
+# one-pass loudnorm can undershoot on calm, dynamic narration (xr025: -15.2 LUFS): measure and trim the gain if there is peak room
+import re as _re
+_m = subprocess.run(["ffmpeg", "-hide_banner", "-i", f"{OUT}/mix.wav", "-af", "ebur128=peak=true", "-f", "null", "-"], capture_output=True, text=True).stderr
+_I = float(_re.findall(r"I:\s+(-?[\d.]+) LUFS", _m)[-1]); _P = float(_re.findall(r"Peak:\s+(-?[\d.]+) dBFS", _m)[-1])
+_g = min(-14.0 - _I, -1.6 - _P)
+if abs(-14.0 - _I) > 0.3 and _g > 0.05:
+    os.replace(f"{OUT}/mix.wav", f"{OUT}/mix_ln.wav")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{OUT}/mix_ln.wav", "-af", f"volume={_g:.2f}dB", f"{OUT}/mix.wav"], check=True); os.remove(f"{OUT}/mix_ln.wav")
+    print(f"loudness trim: {_I} LUFS -> +{_g:.2f} dB")
 json.dump({"smallest_voice_margin_db": round(float(worst), 2)}, open(f"{OUT}/mix_report.json", "w"))
 print("mix.wav written; smallest voice margin", round(worst, 1), "dB")

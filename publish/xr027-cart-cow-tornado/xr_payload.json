@@ -1,0 +1,53 @@
+{
+  "content_id": "xr-027",
+  "repo_id": "xr027-cart-cow-tornado",
+  "sha256": "f80efca62b1e0b1efa4b8c8e9de322891491ee7567cb5a04621ff50f3c80bed1",
+  "file_size_bytes": 10055673,
+  "duration_seconds": 20.089,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.968,
+  "video_bit_rate": 3867108,
+  "faststart": true,
+  "title_youtube": "Returning Your Shopping Cart Won't Save You From a Tornado Cow",
+  "description_youtube": "The shopping cart test, settled by physics: a tornado does not care if you returned your cart.\n\nThe useless facts:\n- An EF5 tornado, the top of the Enhanced Fujita scale, has estimated winds over 200 mph.\n- Tornadoes really have picked up cattle; a single cow can weigh over 600 kg (about 1,300 lb).\n- Returning your cart to the corral is still the right thing to do. Just not a force field.\n\nUseless Facts is our series of true facts nobody needed. Do you always return your cart?\n\nSources:\n- NOAA / National Weather Service, Enhanced Fujita scale and EF5 tornadoes (winds over 200 mph): https://www.weather.gov/arx/ef5tornadoes\n- The Weather Network, Could a cow really get swept up by a tornado? (cows over 600 kg; farm animals picked up): https://www.theweathernetwork.com/en/news/science/explainers/could-a-cow-really-get-swept-up-by-a-tornado\n- weather.com, EF5 tornadoes (winds estimated over 200 mph): https://weather.com/storms/tornado/news/2024-05-22-ef5-tornadoes-us-since-1950\n\n#shoppingcart #tornado #uselessfacts #shorts",
+  "caption_instagram": "Returning your cart won't save you. #shoppingcart #uselessfacts",
+  "tags": [
+    "shopping cart theory",
+    "return your shopping cart",
+    "tornado cow",
+    "can a tornado pick up a cow",
+    "ef5 tornado",
+    "tornado wind speed",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "parking lot",
+    "cart corral"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "NWS La Crosse: F5/EF5 tornadoes, wind speeds greater than 200 mph (less than 1% of tornadoes)",
+      "url": "https://www.weather.gov/arx/ef5tornadoes"
+    },
+    {
+      "title": "The Weather Network: average cow can be over 600 kg; reports of farm animals picked up by tornadoes",
+      "url": "https://www.theweathernetwork.com/en/news/science/explainers/could-a-cow-really-get-swept-up-by-a-tornado"
+    },
+    {
+      "title": "weather.com: EF5 tornadoes have estimated winds of over 200 mph",
+      "url": "https://weather.com/storms/tornado/news/2024-05-22-ef5-tornadoes-us-since-1950"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "19:10",
+  "checks_failed": []
+}

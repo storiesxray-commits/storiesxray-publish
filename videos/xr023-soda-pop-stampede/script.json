@@ -1,0 +1,17 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Soda or pop? It doesn't matter.", 0.25],
+  ["Say you call it soda.", 0.1],
+  ["And every Black Friday shopper in America runs you over.", 0.1],
+  ["A hundred and twenty-six million people.", 0.1],
+  ["At the same time.", 0.2],
+  ["You would probably die.", 0.45],
+  ["Now say you call it pop.", 0.25],
+  ["[sighs] Also dead.", 0.4],
+  ["And if you call every soda a Coke...", 0.35],
+  ["Especially dead.", 0.0]
+ ],
+ "tone": "deadpan",
+ "voice": "xr12"
+}

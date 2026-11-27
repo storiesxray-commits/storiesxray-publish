@@ -155,6 +155,14 @@
     "xr10"
    ],
    "delivery": "storyteller, warm, builds to the twist"
+  },
+  "deadpan": {
+   "for": "USELESS FACTS series (owner 27/11/2026): absurd, obviously useless facts read dead serious like a documentary or a news anchor, with real numbers; the contrast between the calm delivery and the absurd content is the joke",
+   "voices": [
+    "xr10",
+    "xr12"
+   ],
+   "delivery": "dead serious and calm, slow and precise on the numbers, a beat of silence before the punchline, never laugh at the joke; at most one [sighs] or [whispers] on the final twist"
   }
  }
 }

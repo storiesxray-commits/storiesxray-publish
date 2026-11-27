@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #3a3a2a; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #14140c;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4); letter-spacing: 1px; }
+      .ln.y { color: #ffd23a; } .ln.r { color: #ff4d4d; } .ln.g { color: #8af05a; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .05; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 52%, rgba(10,10,0,.5) 100%); }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="skyY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a6a4a"/><stop offset="1" stop-color="#c8c89a"/></linearGradient>
+        <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc4f2"/><stop offset="1" stop-color="#e0f2ff"/></linearGradient>
+        <linearGradient id="lot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5a62"/><stop offset="1" stop-color="#3a3a42"/></linearGradient>
+        <linearGradient id="funnel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4a4a52"/><stop offset=".5" stop-color="#8a8a92"/><stop offset="1" stop-color="#3a3a42"/></linearGradient>
+        <radialGradient id="holy" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff6c8" stop-opacity=".9"/><stop offset="1" stop-color="#fff6c8" stop-opacity="0"/></radialGradient>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20.07" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: a good man returns his cart; a cow spins in the sky behind him -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="2.05" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="1080" height="1920" fill="url(#skyY)"/>
+          <g transform="translate(840 760)"><g id="cow1"></g></g>
+          <g id="lot1"></g>
+          <g id="g1p" transform="translate(360 1640)"><g id="cart1"></g><g id="s1p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 say you're a good person: halo, holy light -->
+      <div id="s2" class="clip scene" data-start="2.05" data-duration="1.5" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam">
+          <rect width="1080" height="1920" fill="url(#skyB)"/>
+          <g id="lot2"></g>
+          <rect width="1080" height="1920" fill="url(#holy)"/>
+          <g id="rays2" opacity=".35"></g>
+          <g transform="translate(470 1660)"><g id="cart2"></g><g id="s2p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 the long walk back to the corral -->
+      <div id="s3" class="clip scene" data-start="3.55" data-duration="2.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#skyB)"/>
+          <rect y="1000" width="1080" height="920" fill="url(#lot)"/>
+          <g id="stripes3"></g>
+          <g id="corral3"></g>
+          <g id="g3p"><g id="cart3"></g><g id="s3p"></g></g>
+          <g id="dist3" transform="translate(540 760)"><rect x="-260" y="-80" width="520" height="140" rx="20" fill="#14140c" stroke="#ffd23a" stroke-width="8"/><text id="dist3t" y="35" text-anchor="middle" font-family="Anton" font-size="96" fill="#ffd23a">0.0 MI</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 then a tornado throws a cow at you -->
+      <div id="s4" class="clip scene" data-start="5.7" data-duration="2.25" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="url(#skyY)"/>
+          <g transform="translate(860 1100)"><g id="torn4"></g></g>
+          <rect y="1250" width="1080" height="670" fill="url(#lot)"/>
+          <g transform="translate(300 1700)"><g id="cart4"></g><g id="s4p"></g></g>
+          <g id="cow4p"><g id="cow4"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 200+ mph, 1,300 lb of cow -->
+      <div id="s5" class="clip scene" data-start="7.95" data-duration="4.25" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect width="1080" height="1920" fill="#2a2a22"/>
+          <g id="gauge5" transform="translate(540 820)"><circle r="300" fill="#f4f1ea" stroke="#14140c" stroke-width="14"/>
+            <path d="M-240 70 A250 250 0 1 1 240 70" fill="none" stroke="#ffd23a" stroke-width="34"/><path d="M170 -180 A250 250 0 0 1 240 70" fill="none" stroke="#ff4d4d" stroke-width="34"/>
+            <text id="mph5" y="140" text-anchor="middle" font-family="Anton" font-size="130" fill="#c0392b">0</text><text y="210" text-anchor="middle" font-family="Anton" font-size="60" fill="#14140c">MPH</text>
+            <g id="needle5"><path d="M0 0 L0 -240" stroke="#14140c" stroke-width="18" stroke-linecap="round"/></g><circle r="30" fill="#14140c"/></g>
+          <g id="scale5" opacity="0"><g transform="translate(540 1460)"><rect x="-360" y="0" width="720" height="140" rx="20" fill="#c9ccd2" stroke="#14140c" stroke-width="10"/>
+            <rect x="-180" y="30" width="360" height="80" rx="10" fill="#14140c"/><text id="lb5" y="95" text-anchor="middle" font-family="Anton" font-size="76" fill="#8af05a">0 LB</text>
+            <g transform="translate(0 0) scale(1.6)"><g id="cow5"></g></g></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 you'd probably die: legs sticking out from under the cow, halo floating up -->
+      <div id="s6" class="clip scene" data-start="12.2" data-duration="1.6" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="url(#skyY)"/>
+          <rect y="1250" width="1080" height="670" fill="url(#lot)"/>
+          <g id="cart6" transform="translate(760 1700) rotate(-20)"></g>
+          <g id="legs6"></g>
+          <g transform="translate(480 1720) scale(1.7)"><g id="cow6"></g></g>
+          <g id="halo6"><ellipse rx="70" ry="20" fill="none" stroke="#ffd23a" stroke-width="12"/></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 the other guy leaves his cart in the parking spot and struts off -->
+      <div id="s7" class="clip scene" data-start="13.8" data-duration="2.3" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam">
+          <rect width="1080" height="1920" fill="url(#skyB)"/>
+          <rect y="1000" width="1080" height="920" fill="url(#lot)"/>
+          <g id="lines7" stroke="#f2e6c8" stroke-width="12"><path d="M120 1250 L60 1920"/><path d="M560 1250 L560 1920"/><path d="M1000 1250 L1060 1920"/></g>
+          <g transform="translate(830 1460)"><g id="car7"></g></g>
+          <g id="signC7" transform="translate(150 1040)"></g>
+          <g id="cart7p"><g id="cart7"></g></g>
+          <g id="b7p"><g id="s7p"></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 also dead -->
+      <div id="s8" class="clip scene" data-start="16.1" data-duration="1.4" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="url(#skyB)"/>
+          <rect y="1000" width="1080" height="920" fill="url(#lot)"/>
+          <g transform="translate(830 1460)"><g id="car8"></g></g>
+          <g id="legs8" opacity="0"></g><g id="b8p" transform="translate(330 1720)"><g id="s8p"></g></g>
+          <g transform="translate(480 1720)"><g id="cow8p"><g transform="scale(1.7)"><g id="cow8"></g></g></g></g>
+          <g transform="translate(560 1760)"><g id="sunglass8"><rect x="-70" y="-16" width="60" height="32" rx="10" fill="#14140c"/><rect x="10" y="-16" width="60" height="32" rx="10" fill="#14140c"/><path d="M-10 -6 H10" stroke="#14140c" stroke-width="6"/></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 but you kind of deserved it: the cow gives the camera a look; his cart rolls in and bumps it -->
+      <div id="s9" class="clip scene" data-start="17.5" data-duration="2.57" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam">
+          <rect width="1080" height="1920" fill="url(#skyB)"/>
+          <rect y="1000" width="1080" height="920" fill="url(#lot)"/>
+          <g id="signC9" transform="translate(160 1040)"></g>
+          <g id="legs9"></g>
+          <g transform="translate(430 1700) scale(1.85)"><g id="cow9"></g></g>
+          <g id="cart9p" opacity="0"><g id="cart9"></g></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="2.05" data-track-index="1" style="top:300px"><span class="ln sm">RETURN</span><span id="c1b" class="ln y">YOUR CART?</span></div>
+      <div id="c6" class="clip cap" data-start="12.75" data-duration="1.05" data-track-index="1" style="top:300px"><span id="c6a" class="ln r">R.I.P.</span></div>
+      <div id="c9" class="clip cap" data-start="18.0" data-duration="2.07" data-track-index="1" style="top:300px"><span id="c9a" class="ln g">DESERVED.</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="20.07" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf;
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const C = [0, 2.05, 3.55, 5.7, 7.95, 12.2, 13.8, 16.1, 17.5, 20.07];
+      X.captions({ capY: (t) => (t < C[1] ? 1800 : t < C[2] ? 560 : t < C[3] ? 560 : t < C[4] ? 1820 : t < C[5] ? 300 : t < C[6] ? 560 : t < C[7] ? 560 : t < C[8] ? 560 : 560) });
+
+      // ---------- props ----------
+      const cow = (id) => `<g id="${id}"><g id="${id}-b">
+        ${[[-70, 0], [-40, 1], [60, 0], [90, 1]].map(([x, b], k) => `<g id="${id}-l${k}" transform="translate(${x} -60)"><path d="M0 0 L0 60" stroke="#14140c" stroke-width="26" stroke-linecap="round"/><path d="M0 0 L0 58" stroke="${b ? "#e8e4da" : "#f4f1ea"}" stroke-width="16" stroke-linecap="round"/><rect x="-14" y="52" width="28" height="14" rx="4" fill="#3a2a1a"/></g>`).join("")}
+        <ellipse cy="-110" rx="150" ry="80" fill="#f4f1ea" stroke="#14140c" stroke-width="9"/>
+        <path d="M-90 -170 C-60 -150 -40 -120 -80 -90 C-120 -100 -130 -150 -90 -170Z" fill="#14140c"/><path d="M30 -170 C70 -170 80 -120 40 -110 C10 -120 0 -150 30 -170Z" fill="#14140c"/><ellipse cx="-20" cy="-60" rx="28" ry="16" fill="#ffb0c0" stroke="#14140c" stroke-width="5"/>
+        <path d="M-150 -120 C-190 -110 -200 -60 -180 -40" fill="none" stroke="#14140c" stroke-width="7"/><circle cx="-180" cy="-36" r="10" fill="#14140c"/>
+        <g id="${id}-h" transform="translate(160 -150)"><ellipse rx="70" ry="58" fill="#f4f1ea" stroke="#14140c" stroke-width="9"/><path d="M-40 -48 C-60 -90 -30 -96 -20 -56 M30 -54 C50 -96 76 -84 46 -46" fill="#e8dcc0" stroke="#14140c" stroke-width="7"/>
+          <ellipse cx="-62" cy="-20" rx="26" ry="14" fill="#f4f1ea" stroke="#14140c" stroke-width="6"/>
+          <ellipse cx="30" cy="30" rx="48" ry="30" fill="#ffb0c0" stroke="#14140c" stroke-width="7"/><circle cx="16" cy="30" r="6" fill="#14140c"/><circle cx="44" cy="30" r="6" fill="#14140c"/>
+          <g id="${id}-eyes"><ellipse cx="-14" cy="-14" rx="12" ry="15" fill="#fff" stroke="#14140c" stroke-width="5"/><ellipse cx="22" cy="-14" rx="12" ry="15" fill="#fff" stroke="#14140c" stroke-width="5"/><circle id="${id}-p0" cx="-12" cy="-12" r="6"/><circle id="${id}-p1" cx="24" cy="-12" r="6"/>
+          <path id="${id}-lid" d="M-30 -30 H40" stroke="#14140c" stroke-width="0"/></g></g></g></g>`;
+      const cart = (s = 1) => `<g transform="scale(${s})"><path d="M-20 -230 L30 -230 L60 -80 L280 -80 L310 -200 L50 -200" fill="none" stroke="#c9ccd2" stroke-width="14" stroke-linejoin="round"/><path d="M50 -200 L310 -200 L280 -80 L60 -80Z" fill="#c9ccd2" opacity=".35" stroke="#14140c" stroke-width="5"/>
+        ${[0, 1, 2, 3, 4].map((i) => `<path d="M${90 + i * 45} -200 L${85 + i * 42} -80" stroke="#c9ccd2" stroke-width="5"/>`).join("")}<path d="M60 -80 L55 -20 M280 -80 L285 -20" stroke="#c9ccd2" stroke-width="12"/>
+        <circle cx="55" cy="-10" r="18" fill="#14140c"/><circle cx="285" cy="-10" r="18" fill="#14140c"/><rect x="-26" y="-240" width="40" height="22" rx="8" fill="#c0392b" stroke="#14140c" stroke-width="4"/></g>`;
+      ["cow1", "cow4", "cow5", "cow6", "cow8", "cow9"].forEach((id) => X.put(id, cow(id + "c")));
+      X.put("cart1", cart(1.15)); X.put("cart2", cart(1.15)); X.put("cart3", cart(1.0)); X.put("cart4", cart(1.1)); X.put("cart6", cart(1.2)); X.put("cart7", cart(1.2)); X.put("cart9", cart(1.2));
+      const corral = `<g><rect x="-200" y="-10" width="400" height="20" fill="#c9ccd2" stroke="#14140c" stroke-width="5"/><rect x="-200" y="-140" width="20" height="150" fill="#c9ccd2" stroke="#14140c" stroke-width="5"/><rect x="180" y="-140" width="20" height="150" fill="#c9ccd2" stroke="#14140c" stroke-width="5"/><rect x="-200" y="-150" width="400" height="20" fill="#c9ccd2" stroke="#14140c" stroke-width="5"/>
+        <rect x="-160" y="-330" width="320" height="140" rx="10" fill="#1e5ad8" stroke="#fff" stroke-width="8"/><rect x="-6" y="-190" width="12" height="40" fill="#5a5a66"/><text y="-272" text-anchor="middle" font-family="Anton" font-size="44" fill="#fff">RETURN</text><text y="-220" text-anchor="middle" font-family="Anton" font-size="44" fill="#fff">CARTS HERE</text></g>`;
+      const lot = `<rect y="1250" width="1080" height="670" fill="url(#lot)"/><g stroke="#f2e6c8" stroke-width="10">${[0, 1, 2, 3, 4].map((i) => `<path d="M${i * 270 - 40} 1270 L${i * 270 - 120} 1920"/>`).join("")}</g>
+        <rect x="-20" y="900" width="1120" height="350" fill="#c9c2a8" stroke="#14140c" stroke-width="8"/><rect x="380" y="1020" width="320" height="230" fill="#9fd8ff" stroke="#14140c" stroke-width="8"/><rect x="200" y="930" width="680" height="70" fill="#c0392b" stroke="#14140c" stroke-width="6"/><text x="540" y="985" text-anchor="middle" font-family="Anton" font-size="56" fill="#fff">SUPERMARKET</text>
+        <g transform="translate(900 1520) scale(0.8)">${corral}</g>`;
+      X.put("lot1", lot); X.put("lot2", lot);
+      X.put("corral3", `<g transform="translate(940 1560)">${corral}</g>`); X.put("signC7", `<g transform="scale(0.7)">${corral}</g>`); X.put("signC9", `<g transform="scale(0.75)">${corral}</g>`);
+      X.put("stripes3", [...Array(12)].map((_, i) => `<path id="st${i}" d="M0 1050 L-60 1920" stroke="#f2e6c8" stroke-width="10"/>`).join(""));
+      const car = `<g><path d="M-260 0 L-260 -110 C-220 -170 -150 -200 -60 -210 L80 -210 C150 -200 200 -150 240 -110 L260 0Z" fill="#3a8ac8" stroke="#14140c" stroke-width="8"/><path d="M-170 -120 C-140 -170 -100 -185 -50 -190 L-50 -120Z M-10 -190 L70 -190 C110 -180 140 -150 160 -120 L-10 -120Z" fill="#cfe8ff" stroke="#14140c" stroke-width="6"/>
+        <circle cx="-150" r="56" fill="#14140c"/><circle cx="-150" r="24" fill="#9aa0a8"/><circle cx="150" r="56" fill="#14140c"/><circle cx="150" r="24" fill="#9aa0a8"/><g id="dent"></g></g>`;
+      X.put("car7", car); X.put("car8", car);
+      // tornado funnel: stacked swirling ellipses
+      X.put("torn4", [...Array(14)].map((_, i) => `<ellipse id="tz${i}" cy="${-i * 60}" rx="${30 + i * 22}" ry="${12 + i * 4}" fill="url(#funnel)" stroke="#2a2a30" stroke-width="5" opacity=".92"/>`).join(""));
+      { let rr = ""; for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283, b = (i + 0.5) / 16 * 6.283; rr += `<path d="M540 700 L${540 + Math.cos(a) * 1600} ${700 + Math.sin(a) * 1600} L${540 + Math.cos(b) * 1600} ${700 + Math.sin(b) * 1600}Z" fill="#fff"/>`; } X.put("rays2", rr); }
+      // legs sticking out from under the cow (cartoon, not graphic)
+      const legsOut = (pants, shoes) => `<g><path d="M300 1730 L180 1770" stroke="#14140c" stroke-width="44" stroke-linecap="round"/><path d="M300 1730 L180 1770" stroke="${pants}" stroke-width="30" stroke-linecap="round"/><path d="M310 1760 L200 1830" stroke="#14140c" stroke-width="44" stroke-linecap="round"/><path d="M310 1760 L200 1830" stroke="${pants}" stroke-width="30" stroke-linecap="round"/>
+        <ellipse cx="170" cy="1770" rx="34" ry="20" fill="${shoes}" stroke="#14140c" stroke-width="6" transform="rotate(-70 170 1770)"/><ellipse cx="190" cy="1838" rx="34" ry="20" fill="${shoes}" stroke="#14140c" stroke-width="6" transform="rotate(-50 190 1838)"/></g>`;
+      X.put("legs6", `<g transform="translate(30 -40)">${legsOut("#34425e", "#f4f1ea")}</g>`); X.put("legs8", `<g transform="translate(30 -40)">${legsOut("#2a2a30", "#d81e2a")}</g>`); X.put("legs9", `<g transform="translate(-20 -40)">${legsOut("#2a2a30", "#d81e2a")}</g>`);
+      // characters: the good man (normal, perfect), the cart-leaver (weird: tiny legs, giant head, sunglasses look)
+      const GOOD = { skin: "#e8b48a", skinD: "#c08a66", hair: "#6b4628", hairStyle: "short", shirt: "#f4f1ea", tie: "#1e5ad8", pants: "#34425e", shoes: "#f4f1ea" };
+      const BAD = { skin: "#f2c29b", skinD: "#d99a72", hair: "#1e1512", hairStyle: "mohawk", shirt: "#d81e2a", pants: "#2a2a30", shoes: "#d81e2a", h: 0.45, torso: 0.8, headS: 1.7, glasses: true };
+      ["s1p", "s2p", "s3p", "s4p"].forEach((g, i) => X.put(g, X.fig("gm" + i, 1.25, GOOD)));
+      X.put("s7p", X.fig("bd", 1.3, BAD)); X.put("s8p", X.fig("bd8", 1.3, BAD));
+      X.put("gm1-head", `<g transform="translate(0 -110)"><ellipse id="halo2" rx="70" ry="18" fill="none" stroke="#ffd23a" stroke-width="12"/></g>`);
+      X.put("gm0-head", `<g transform="translate(0 -110)"><ellipse rx="64" ry="16" fill="none" stroke="#ffd23a" stroke-width="10"/></g>`);
+      // cow eye helpers
+      const cowLife = (id, t, o = {}) => { const ph = o.ph || 0; for (let k = 0; k < 4; k++) T(`${id}-l${k}`, `translate(${[-70, -40, 60, 90][k]} -60) rotate(${((o.kick || 0) * Math.sin(t * 14 + k + ph) * 30).toFixed(1)})`);
+        const lk = o.look || [0, 0]; T(`${id}-p0`, `translate(${lk[0]} ${lk[1]})`); T(`${id}-p1`, `translate(${lk[0]} ${lk[1]})`);
+        T(`${id}-h`, `translate(160 -150) rotate(${(o.tilt || 0) + Math.sin(t * 2 + ph) * 3})`);
+        X.attr(`${id}-lid`, "stroke-width", o.lid ? 18 : 0); T(`${id}-lid`, `translate(0 ${o.lid ? 6 : 0})`); };
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      X.life((t) => {
+        if (W(t, C[0], C[1])) { T("cow1", `rotate(${(t * 240).toFixed(0)}) scale(0.7)`); cowLife("cow1c", t, { kick: 1, look: [6, -4] });
+          T("g1p", `translate(${300 + t * 60} 1640)`); X.figLife("gm0", t, { mode: "walk", arms: { A: [-80, -20], B: [-70, -20] }, smile: 0.9, look: [6, 0] }); }
+        if (W(t, C[1], C[2])) { X.figLife("gm1", t, { mode: "stand", arms: { A: [-80, -20], B: [-70, -20] }, smile: 1, lid: 0.5, look: [0, -4] }); T("rays2", `rotate(${((t - C[1]) * 20).toFixed(1)} 540 700)`);
+          X.attr("halo2", "transform", `translate(0 ${(Math.sin(t * 4) * 6).toFixed(1)})`); }
+        if (W(t, C[2], C[3])) { const k = X.clamp((t - C[2]) / (C[3] - C[2]), 0, 1);
+          for (let i = 0; i < 12; i++) { const x = ((i * 180 - k * 900) % 2160 + 2160) % 2160 - 300; T(`st${i}`, `translate(${x.toFixed(1)} 0)`); }
+          T("corral3", `translate(${(700 - k * 520).toFixed(1)} 0)`); T("g3p", `translate(260 1640)`); document.getElementById("dist3t").textContent = (k * 0.6).toFixed(1) + " MI";
+          X.figLife("gm2", t, { mode: "walk", speed: 1.6, arms: { A: [-80, -20], B: [-70, -20] }, smile: 0.4 + 0.3 * (1 - k), mouth: 0.1, lid: k * 0.5, brow: -k * 0.3 }); }
+        if (W(t, C[3], C[4])) { const fl = X.clamp((t - C[3] - 0.2) / (w(4, 5) + 0.25 - C[3] - 0.2), 0, 1);
+          for (let i = 0; i < 14; i++) T(`tz${i}`, `translate(${(Math.sin(t * 6 + i * 0.6) * (10 + i * 3)).toFixed(1)} 0)`);
+          T("cow4p", `translate(${(860 - fl * 520).toFixed(1)} ${(700 - Math.sin(fl * Math.PI) * 300 + fl * 400).toFixed(1)}) rotate(${(fl * 720).toFixed(0)}) scale(${(0.4 + fl * 1.3).toFixed(2)})`); cowLife("cow4c", t, { kick: 1, look: [-6, 4] });
+          const see = t > w(4, 4); X.figLife("gm3", t, { mode: see ? "stand" : "stand", flip: false, arms: see ? { A: [-75, -70], B: [-170, -10] } : { A: [-80, -20], B: [-70, -20] }, mouth: see ? 0.9 : 0.05, smile: see ? -0.8 : 0.4, eyes: see ? 1.6 : 1, brow: see ? 1 : 0, look: [10, -8] }); }
+        if (W(t, C[4], C[5])) { const g = X.sm(C[4] + 0.1, w(5, 6), t), sw = t > w(5, 7) - 0.2; document.getElementById("mph5").textContent = Math.round(g * 200) + (g > 0.99 ? "+" : "");
+          T("needle5", `rotate(${(-115 + g * 215 + Math.sin(t * 40) * 3 * g).toFixed(1)})`);
+          X.attr("gauge5", "opacity", sw ? Math.max(0, 1 - (t - w(5, 7) + 0.2) * 4).toFixed(2) : 1); T("gauge5", `translate(540 ${sw ? 820 - (t - w(5, 7) + 0.2) * 600 : 820})`);
+          X.attr("scale5", "opacity", sw ? Math.min(1, (t - w(5, 7) + 0.2) * 5).toFixed(2) : 0);
+          const lb = X.sm(w(5, 7), w(5, 11), t); document.getElementById("lb5").textContent = Math.round(lb * 1300).toLocaleString("en-US") + " LB";
+          T("cow5", `translate(0 ${(-Math.abs(Math.sin(t * 3)) * 6).toFixed(1)})`); cowLife("cow5c", t, { look: [4, 2], lid: true }); }
+        if (W(t, C[5], C[6])) { cowLife("cow6c", t, { look: [8, 2], tilt: -4 }); const h = X.clamp((t - C[5] - 0.2) / 1.3, 0, 1); T("halo6", `translate(${(260 + Math.sin(h * 6) * 30).toFixed(1)} ${(1600 - h * 700).toFixed(1)})`); X.attr("halo6", "opacity", (1 - h * 0.4).toFixed(2)); }
+        if (W(t, C[6], C[7])) { const push = X.clamp((t - C[6]) / 0.8, 0, 1), roll = X.clamp((t - C[6] - 0.6) / 1.6, 0, 1);
+          T("cart7p", `translate(${(420 + push * 160 + roll * 120).toFixed(1)} ${(1700 + roll * 30).toFixed(1)}) rotate(${(roll * 8).toFixed(1)})`);
+          const bx = push < 1 ? 300 + push * 160 : Math.max(250, 460 - (t - C[6] - 0.8) * 260); T("b7p", `translate(${bx.toFixed(1)} 1720)`);
+          X.figLife("bd", t, push < 1 ? { mode: "walk", arms: { A: [-80, -10], B: [-70, -10] }, smile: 0.6 } : { mode: "run", speed: 4, flip: true, smile: 1, mouth: 0.3, lid: 0.4, arms: { A: [-20, -100], B: [20, -100] } }); }
+        if (W(t, C[7], C[8])) { cowLife("cow8c", t, { look: [8, 0], tilt: 4 }); const landed = t >= C[7] + 0.18; X.attr("legs8", "opacity", landed ? 1 : 0); X.attr("b8p", "opacity", landed ? 0 : 1); X.attr("sunglass8", "opacity", landed ? 1 : 0);
+          X.figLife("bd8", t, { mode: "stand", mouth: 0.8, smile: -0.7, eyes: 1.5, brow: 1, look: [6, -10], arms: { A: [-75, -70], B: [-170, -10] } }); }
+        if (W(t, C[8], C[9])) { cowLife("cow9c", t, { look: t > w(9, 3) ? [14, 2] : [0, 0], lid: t > w(9, 3), tilt: t > w(9, 3) ? -8 : 0 });
+          const r = X.clamp((t - C[8] - 0.3) / 1.4, 0, 1); T("cart9p", `translate(${(1200 - r * 380).toFixed(1)} 1820) rotate(${(-r * 6 + (r >= 1 ? Math.sin(t * 30) * 2 : 0)).toFixed(1)})`); }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 20.07, duration: 20.07, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1200" }, { scale: 1.08, svgOrigin: "540 1100", duration: 2.0, ease: "sine.in" }, 0);
+      tl.fromTo("#c1b", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "back.out(2.6)" }, 0.3);
+      tl.fromTo("#s2cam", { scale: 1.06, svgOrigin: "470 1300" }, { scale: 1.0, svgOrigin: "470 1300", duration: 1.5, ease: "sine.out" }, C[1]);
+      tl.fromTo("#s4cam", { scale: 1.0, svgOrigin: "400 1400" }, { scale: 1.08, svgOrigin: "400 1400", duration: 2.2, ease: "sine.in" }, C[3]);
+      tl.set("#s5cam", { scale: 1.04, svgOrigin: "540 960" }, C[4]); tl.fromTo("#s5cam", { x: 0 }, { keyframes: [{ x: -8, duration: 0.05 }, { x: 8, duration: 0.05 }, { x: 0, duration: 0.05 }], repeat: 8, immediateRender: false }, C[4] + 0.2);
+      tl.set("#s6cam", { scale: 1.05, svgOrigin: "540 960" }, C[5]); tl.fromTo("#s6cam", { y: 0 }, { keyframes: [{ y: 24, duration: 0.05 }, { y: -16, duration: 0.05 }, { y: 6, duration: 0.05 }, { y: 0, duration: 0.05 }], immediateRender: false }, C[5]);
+      pop("#c6a", 12.77, 1.8);
+      tl.fromTo("#s7cam", { scale: 1.0, svgOrigin: "540 1500" }, { scale: 1.06, svgOrigin: "540 1500", duration: 2.3, ease: "sine.inOut" }, C[6]);
+      tl.fromTo("#cow8p", { y: -1500 }, { y: 0, duration: 0.18, ease: "power2.in" }, C[7]);
+      tl.set("#s8cam", { scale: 1.05, svgOrigin: "540 960" }, C[7]); tl.fromTo("#s8cam", { y: 0 }, { keyframes: [{ y: 26, duration: 0.05 }, { y: -16, duration: 0.05 }, { y: 6, duration: 0.05 }, { y: 0, duration: 0.05 }], immediateRender: false }, C[7] + 0.18);
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "600 1500" }, { scale: 1.1, svgOrigin: "640 1450", duration: 2.5, ease: "sine.inOut" }, C[8]);
+      pop("#c9a", 18.05, 1.6);
+      [C[3], C[5], C[7]].forEach((at) => tl.fromTo("#flash", { opacity: 0.5 }, { opacity: 0, duration: 0.16, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 20.07, duration: 20.07, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

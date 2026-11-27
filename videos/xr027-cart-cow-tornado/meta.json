@@ -1,0 +1,169 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Returning Your Shopping Cart Won't Save You From a Tornado Cow",
+  "description": "The shopping cart test, settled by physics: a tornado does not care if you returned your cart.\n\nThe useless facts:\n- An EF5 tornado, the top of the Enhanced Fujita scale, has estimated winds over 200 mph.\n- Tornadoes really have picked up cattle; a single cow can weigh over 600 kg (about 1,300 lb).\n- Returning your cart to the corral is still the right thing to do. Just not a force field.\n\nUseless Facts is our series of true facts nobody needed. Do you always return your cart?\n\nSources:\n- NOAA / National Weather Service, Enhanced Fujita scale and EF5 tornadoes (winds over 200 mph): https://www.weather.gov/arx/ef5tornadoes\n- The Weather Network, Could a cow really get swept up by a tornado? (cows over 600 kg; farm animals picked up): https://www.theweathernetwork.com/en/news/science/explainers/could-a-cow-really-get-swept-up-by-a-tornado\n- weather.com, EF5 tornadoes (winds estimated over 200 mph): https://weather.com/storms/tornado/news/2024-05-22-ef5-tornadoes-us-since-1950\n\n#shoppingcart #tornado #uselessfacts #shorts",
+  "tags": [
+    "shopping cart theory",
+    "return your shopping cart",
+    "tornado cow",
+    "can a tornado pick up a cow",
+    "ef5 tornado",
+    "tornado wind speed",
+    "useless facts",
+    "absurd facts",
+    "funny facts",
+    "dumb facts",
+    "parking lot",
+    "cart corral"
+  ],
+  "pinned_comment": "The shopping cart theory says returning your cart proves you're a good person. The cow did not read the theory.",
+  "series": "Useless Facts",
+  "caption_instagram": "Returning your cart won't save you. #shoppingcart #uselessfacts",
+  "sources": [
+    {
+      "title": "NWS La Crosse: F5/EF5 tornadoes, wind speeds greater than 200 mph (less than 1% of tornadoes)",
+      "url": "https://www.weather.gov/arx/ef5tornadoes"
+    },
+    {
+      "title": "The Weather Network: average cow can be over 600 kg; reports of farm animals picked up by tornadoes",
+      "url": "https://www.theweathernetwork.com/en/news/science/explainers/could-a-cow-really-get-swept-up-by-a-tornado"
+    },
+    {
+      "title": "weather.com: EF5 tornadoes have estimated winds of over 200 mph",
+      "url": "https://weather.com/storms/tornado/news/2024-05-22-ef5-tornadoes-us-since-1950"
+    }
+  ],
+  "human_angle": "Takes the internet's 'shopping cart theory' (returning your cart = good person) and tests it against real tornado physics (EF5 winds over 200 mph, a 1,300 lb cow), with a petty verdict for the people who leave carts in parking spots.",
+  "promise_check": "0:00 'Returning your cart won't save you' while a cow spins in the sky; 0:06-0:12 tornado throws a cow, 200+ mph and 1,300 lb on screen; 0:14-0:19 the cart-leaver gets the same, 'deserved it'.",
+  "notes": "USELESS FACTS series, owner approved scripts 27/11/2026. 'Thirteen hundred pounds of cow' = 600+ kg (Weather Network). Tornado-carried cattle are documented (Elgin reports, Weather Network). Death is cartoon only: legs sticking out from under a calm cow, a halo, no injury. Store is generic ('SUPERMARKET'), no logos.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "statement",
+    "voice": "xr8",
+    "tone": "comedy",
+    "duration": "short",
+    "hook_type": "debate",
+    "topic_type": "evergreen",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "shopping cart theory",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Shopping Cart Theory vs an EF5 Tornado",
+      "Can a Tornado Throw a Cow? (Shopping Cart Edition)"
+    ],
+    "questions": [
+      {
+        "q": "Can a tornado pick up a cow?",
+        "a": "Yes. Strong tornadoes have lifted and carried cattle, although cows can weigh over 600 kg (about 1,300 lb)."
+      },
+      {
+        "q": "How fast are EF5 tornado winds?",
+        "a": "EF5 tornadoes, the strongest on the Enhanced Fujita scale, have estimated winds over 200 mph."
+      },
+      {
+        "q": "What is the shopping cart theory?",
+        "a": "An internet test that says returning your cart, with no reward or penalty, shows whether a person does the right thing on their own."
+      }
+    ],
+    "demand": [
+      {
+        "query": "shopping cart theory",
+        "evidence": "Long-running viral internet test (Know Your Meme, Reddit, TikTok) about returning carts",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      },
+      {
+        "query": "can a tornado pick up a cow",
+        "evidence": "Evergreen question boosted by Twister's 'we got cows' scene; explainers by The Weather Network and SYFY",
+        "url": "https://www.theweathernetwork.com/en/news/science/explainers/could-a-cow-really-get-swept-up-by-a-tornado"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "EF5",
+    "Fujita",
+    "uselessfacts",
+    "shoppingcart",
+    "lb",
+    "mph",
+    "kg"
+  ],
+  "thumbnail": {
+    "time": 7.4,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      200,
+      900,
+      900,
+      1480
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "200 MPH",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "TORNADO COW",
+        "color": "#FFFFFF"
+      }
+    ],
+    "glow": "#FFD23A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "KIND OF",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "DESERVED",
+            "color": "#8AF05A"
+          }
+        ],
+        "time": 19.2,
+        "protect": [
+          100,
+          1100,
+          1000,
+          1480
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "1,300 LB",
+            "color": "#FFD23A"
+          }
+        ],
+        "time": 11.9,
+        "protect": [
+          160,
+          1100,
+          920,
+          1480
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: olive storm sky + parking lot, flying cow, box word."
+  }
+}

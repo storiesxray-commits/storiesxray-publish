@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      @font-face { font-family: "Anton"; src: url("assets/fonts/Anton-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #2a1a10; }
+      #root { position: relative; width: 100%; height: 100%; }
+      .scene { position: absolute; inset: 0; overflow: hidden; }
+      .scene svg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; z-index: 20; }
+      .ln { display: block; font-family: "Anton"; font-size: 150px; line-height: 1.0; color: #fff; -webkit-text-stroke: 14px #1d120b;
+            paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.4); letter-spacing: 1px; }
+      .ln.y { color: #ffc23a; } .ln.r { color: #ff5a3c; } .ln.sm { font-size: 104px; }
+      #grain { position: absolute; inset: 0; z-index: 30; opacity: .1; mix-blend-mode: overlay; background: url(assets/grain.png); }
+      #vig { position: absolute; inset: 0; z-index: 29; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 50%, rgba(20,8,0,.55) 100%); }
+      #sepia { position: absolute; inset: 0; z-index: 28; background: #8a5a20; mix-blend-mode: multiply; opacity: 0; }
+      #flash { position: absolute; inset: 0; z-index: 31; background: #fff; opacity: 0; }
+      html.clean .cap, html.clean #subs, html.clean .ttl { opacity: 0 !important; }
+    </style>
+  </head>
+  <body>
+    <svg id="gdefs" width="0" height="0" style="position:absolute"><g id="defsHost"></g>
+      <defs>
+        <linearGradient id="kitchen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a3a4a"/><stop offset="1" stop-color="#1a2230"/></linearGradient>
+        <linearGradient id="fall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2d29a"/><stop offset="1" stop-color="#f7e6c0"/></linearGradient>
+        <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1a3a"/><stop offset="1" stop-color="#3a2a4a"/></linearGradient>
+        <linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b8a04a"/><stop offset="1" stop-color="#8a7032"/></linearGradient>
+        <linearGradient id="dining" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a3b3b"/><stop offset="1" stop-color="#4a2222"/></linearGradient>
+        <linearGradient id="fryerG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#14161a"/><stop offset=".4" stop-color="#3a3f48"/><stop offset="1" stop-color="#101216"/></linearGradient>
+        <linearGradient id="goldC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2a8"/><stop offset=".5" stop-color="#e8b42a"/><stop offset="1" stop-color="#a8741a"/></linearGradient>
+        <linearGradient id="parch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e6c0"/><stop offset="1" stop-color="#e2c48a"/></linearGradient>
+        <radialGradient id="spot10" cx="50%" cy="35%" r="55%"><stop offset="0" stop-color="#fff4c8" stop-opacity=".8"/><stop offset="1" stop-color="#fff4c8" stop-opacity="0"/></radialGradient>
+        <radialGradient id="fryGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb04a" stop-opacity=".55"/><stop offset="1" stop-color="#ffb04a" stop-opacity="0"/></radialGradient>
+      </defs>
+    </svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="30.93" data-width="1080" data-height="1920">
+
+      <!-- S1 hook: the air fryer, alone on the counter at night -->
+      <div id="s1" class="clip scene" data-start="0" data-duration="3.25" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s1cam">
+          <rect width="1080" height="1920" fill="url(#kitchen)"/>
+          <g id="kitch1"></g>
+          <circle cx="540" cy="1080" r="520" fill="url(#fryGlow)"/>
+          <g transform="translate(540 1300)"><g id="fry1"></g></g>
+          <g id="cal1" transform="translate(905 790) scale(0.8)"></g>
+        </g></svg>
+      </div>
+
+      <!-- S2 Plymouth, autumn 1621 (sepia) -->
+      <div id="s2" class="clip scene" data-start="3.25" data-duration="3.75" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s2cam">
+          <rect width="1080" height="1920" fill="url(#fall)"/>
+          <circle id="sun2" cx="780" cy="520" r="90" fill="#ffd27a"/>
+          <g id="village2"></g>
+          <g id="leaves2"></g>
+        </g></svg>
+      </div>
+
+      <!-- S3 about ninety Wampanoag men walk in -->
+      <div id="s3" class="clip scene" data-start="7.0" data-duration="3.15" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s3cam">
+          <rect width="1080" height="1920" fill="url(#fall)"/>
+          <g id="bg3"></g>
+          <g id="walk3"></g>
+          <g transform="translate(540 560)"><g id="n90" class="ttl"><rect x="-230" y="-110" width="460" height="200" rx="30" fill="#1d120b"/><text id="n90t" y="50" text-anchor="middle" font-family="Anton" font-size="160" fill="#ffc23a">~90</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S4 with five deer (walking in a polite line) -->
+      <div id="s4" class="clip scene" data-start="10.15" data-duration="1.45" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s4cam">
+          <rect width="1080" height="1920" fill="url(#fall)"/>
+          <g id="bg4"></g>
+          <g id="deer4"></g>
+        </g></svg>
+      </div>
+
+      <!-- S5 colonists at the long table, wild birds, three days (sun and moon circling) -->
+      <div id="s5" class="clip scene" data-start="11.6" data-duration="5.05" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s5cam">
+          <rect id="sky5" width="1080" height="1920" fill="url(#fall)"/>
+          <g id="nightL" opacity="0"><rect width="1080" height="1920" fill="url(#night)"/></g>
+          <g id="sun5"><circle r="80" fill="#ffd27a" stroke="#c08a2a" stroke-width="6"/></g><g id="moon5" opacity="0"><circle r="64" fill="#fff6c8"/><circle cx="26" cy="-14" r="58" fill="#1a1a3a"/></g>
+          <path d="M0 1100 C300 1060 700 1120 1080 1080 V1920 H0Z" fill="url(#field)"/>
+          <g id="eaters5"></g>
+          <g id="table5"></g>
+          <g transform="translate(540 520)"><g id="days5" class="ttl" opacity="0"><rect x="-240" y="-100" width="480" height="180" rx="28" fill="#1d120b"/><text id="dayT" y="44" text-anchor="middle" font-family="Anton" font-size="130" fill="#ffc23a">DAY 1</text></g></g>
+        </g></svg>
+      </div>
+
+      <!-- S6 the inventory: number of air fryers? -->
+      <div id="s6" class="clip scene" data-start="16.65" data-duration="2.35" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s6cam">
+          <rect width="1080" height="1920" fill="#6a4a2a"/>
+          <g transform="translate(540 1000) rotate(-3)"><rect x="-380" y="-620" width="760" height="1240" rx="20" fill="url(#parch)" stroke="#5a3a1a" stroke-width="10"/>
+            <text y="-480" text-anchor="middle" font-family="Anton" font-size="96" fill="#5a3a1a">FEAST · 1621</text>
+            <path d="M-300 -430 H300" stroke="#5a3a1a" stroke-width="6"/>
+            <g id="list6" font-family="Anton" font-size="78" fill="#3a2410"></g>
+            <g id="zero6" opacity="0"><circle cx="230" cy="290" r="120" fill="none" stroke="#c0392b" stroke-width="16"/><text x="230" y="340" text-anchor="middle" font-family="Anton" font-size="170" fill="#c0392b">0</text></g>
+          </g>
+          <g id="quill6" transform="translate(960 1250)"><path d="M0 0 L-180 260" stroke="#3a2410" stroke-width="8"/><path d="M-20 -40 C40 -160 120 -220 160 -260 C120 -160 70 -60 0 0Z" fill="#f4f1ea" stroke="#3a2410" stroke-width="6"/></g>
+        </g></svg>
+      </div>
+
+      <!-- S7 zero. Everyone stares. -->
+      <div id="s7" class="clip scene" data-start="19.0" data-duration="1.65" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s7cam">
+          <rect width="1080" height="1920" fill="url(#fall)"/>
+          <path d="M0 1100 C300 1060 700 1120 1080 1080 V1920 H0Z" fill="url(#field)"/>
+          <g id="stare7"></g>
+          <g id="table7"></g>
+          <g id="tumble7"><circle r="70" fill="none" stroke="#8a6a3a" stroke-width="8" stroke-dasharray="20 14"/><circle r="40" fill="none" stroke="#8a6a3a" stroke-width="7" stroke-dasharray="14 10"/></g>
+        </g></svg>
+      </div>
+
+      <!-- S8 (whisper) back in the kitchen: not invited, not even invented -->
+      <div id="s8" class="clip scene" data-start="20.65" data-duration="3.6" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s8cam">
+          <rect width="1080" height="1920" fill="#141a24"/>
+          <g id="kitch8" opacity=".55"></g>
+          <g transform="translate(540 1300)"><g id="fry8"></g></g>
+          <g id="env8" transform="translate(300 600)"><rect x="-170" y="-110" width="340" height="220" rx="10" fill="#f6e6c0" stroke="#5a3a1a" stroke-width="8"/><path d="M-170 -110 L0 20 L170 -110" fill="none" stroke="#5a3a1a" stroke-width="8"/>
+            <text y="80" text-anchor="middle" font-family="Anton" font-size="44" fill="#5a3a1a">FEAST 1621</text><circle cy="20" r="26" fill="#c0392b"/></g>
+          <g id="nope8" opacity="0" transform="translate(300 600) rotate(-12)"><rect x="-200" y="-60" width="400" height="120" fill="none" stroke="#c0392b" stroke-width="12"/><text y="34" text-anchor="middle" font-family="Anton" font-size="90" fill="#c0392b">DENIED</text></g>
+          <g id="tear8" opacity="0"><path d="M0 0 C-14 24 -14 40 0 44 C14 40 14 24 0 0Z" fill="#7fd0ff" stroke="#1d120b" stroke-width="4"/></g>
+        </g></svg>
+      </div>
+
+      <!-- S9 405 years later: calendar flip, sepia to color -->
+      <div id="s9" class="clip scene" data-start="24.25" data-duration="3.1" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s9cam">
+          <rect id="bg9" width="1080" height="1920" fill="#c99a5a"/>
+          <g id="rays9" opacity=".2"></g>
+          <g transform="translate(540 1050)"><rect x="-330" y="-380" width="660" height="760" rx="24" fill="#fffdf3" stroke="#1d120b" stroke-width="12"/>
+            <rect x="-330" y="-380" width="660" height="170" rx="24" fill="#c0392b"/><text y="-262" text-anchor="middle" font-family="Anton" font-size="96" fill="#fff">YEAR</text>
+            <g id="page9"><rect x="-330" y="-210" width="660" height="590" fill="#f2ead6" stroke="#1d120b" stroke-width="8"/></g>
+            <text id="yr9" y="170" text-anchor="middle" font-family="Anton" font-size="250" fill="#1d120b">1621</text></g>
+        </g></svg>
+      </div>
+
+      <!-- S10 modern Thanksgiving: the crowned air fryer is the guest of honor -->
+      <div id="s10" class="clip scene" data-start="27.35" data-duration="3.58" data-track-index="0">
+        <svg viewBox="0 0 1080 1920"><g id="s10cam">
+          <rect width="1080" height="1920" fill="url(#dining)"/>
+          <g id="room10"></g>
+          <g id="fam10"></g>
+          <rect width="1080" height="1920" fill="url(#spot10)"/>
+          <g id="table10"></g>
+          <g transform="translate(540 1345)"><g id="fry10"></g></g>
+          <g id="crown10" transform="translate(540 925)"><path d="M-110 60 L-120 -50 L-60 10 L0 -80 L60 10 L120 -50 L110 60Z" fill="url(#goldC)" stroke="#5a3a0a" stroke-width="8" stroke-linejoin="round"/><circle cy="20" r="14" fill="#c0392b" stroke="#5a3a0a" stroke-width="5"/></g>
+          <g id="spk10"></g>
+        </g></svg>
+      </div>
+
+      <div id="c1" class="clip cap" data-start="0" data-duration="3.25" data-track-index="1" style="top:300px"><span class="ln" style="background:rgba(20,10,4,.55);display:inline-block;padding:0 30px;border-radius:24px">AIR FRYER</span><span id="c1b" class="ln r sm">NOT INVITED</span></div>
+      <div id="c2" class="clip cap" data-start="3.25" data-duration="3.75" data-track-index="1" style="top:300px"><span id="c2a" class="ln sm">PLYMOUTH</span><span id="c2b" class="ln y">1621</span></div>
+      <div id="c4" class="clip cap" data-start="10.3" data-duration="1.3" data-track-index="1" style="top:300px"><span id="c4a" class="ln y">5 DEER</span></div>
+      <div id="c7" class="clip cap" data-start="19.0" data-duration="1.65" data-track-index="1" style="top:300px"><span class="ln sm">AIR FRYERS:</span><span id="c7b" class="ln r" style="font-size:220px">0</span></div>
+      <div id="c8" class="clip cap" data-start="23.2" data-duration="1.05" data-track-index="1" style="top:300px"><span class="ln sm">NOT EVEN</span><span id="c8b" class="ln r sm">INVENTED</span></div>
+      <div id="c10" class="clip cap" data-start="28.75" data-duration="2.18" data-track-index="1" style="top:300px"><span class="ln sm">GUEST OF</span><span id="c10b" class="ln y">HONOR</span></div>
+
+      <audio id="mix" class="clip" data-start="0" data-duration="30.93" data-track-index="2" data-volume="1" src="assets/mix.wav"></audio>
+      <div id="subs"></div>
+      <div id="sepia"></div>
+      <div id="vig"></div>
+      <div id="grain"></div>
+      <div id="flash"></div>
+    </div>
+
+    <script>
+      const X = window.XR, T = X.tf;
+      document.getElementById("defsHost").outerHTML = X.defs();
+      { const st = document.createElement("style"); st.textContent = X.CAP_CSS; document.head.appendChild(st); }
+      const w = (s, i) => window.TIMING[s][i];
+      const C = [0,  3.25,  7.0,  10.15,  11.6,  16.65,  19.0,  20.65,  24.25,  27.35,  30.93];
+      X.captions({ capY: (t) => (t < C[1] ? 1760 : t < C[2] ? 1720 : t < C[3] ? 1760 : t < C[4] ? 1760 : t < C[5] ? 1800 : t < C[6] ? 1780 : t < C[7] ? 1780 : t < C[8] ? 1760 : t < C[9] ? 1660 : 1790) });
+
+      // ---------- the air fryer character (generic, no brand): glowing eyes on the display, the drawer is its mouth ----------
+      const fryer = (id, s = 1) => `<g id="${id}" transform="scale(${s})"><g id="${id}-b">
+        <ellipse cy="10" rx="230" ry="26" fill="#000" opacity=".35"/>
+        <path d="M-200 0 V-420 Q-200 -470 -150 -470 H150 Q200 -470 200 -420 V0Z" fill="url(#fryerG)" stroke="#05060a" stroke-width="10"/>
+        <rect x="-210" y="-500" width="420" height="50" rx="20" fill="#2a2e36" stroke="#05060a" stroke-width="10"/>
+        <rect x="-150" y="-430" width="300" height="140" rx="22" fill="#0b0d10" stroke="#3a3f48" stroke-width="6"/>
+        <g id="${id}-eyes"><rect id="${id}-e0" x="-95" y="-395" width="60" height="70" rx="16" fill="#ff8a2a"/><rect id="${id}-e1" x="35" y="-395" width="60" height="70" rx="16" fill="#ff8a2a"/></g>
+        <g id="${id}-dr"><rect x="-175" y="-260" width="350" height="230" rx="22" fill="#262a31" stroke="#05060a" stroke-width="10"/>
+          <rect x="-90" y="-170" width="180" height="46" rx="20" fill="#0d0f12" stroke="#05060a" stroke-width="6"/></g>
+        <rect id="${id}-gap" x="-170" y="-262" width="340" height="0" fill="#ff7a1a"/>
+        <circle cx="160" cy="-445" r="0" fill="#c9ccd2"/>
+        <path d="M-160 -440 V-300" stroke="#fff" stroke-width="12" opacity=".12" stroke-linecap="round"/></g></g>`;
+      // eyes: open 0..1, mood: 0 neutral, -1 sad (droop), 1 smug (half-lid)
+      const fryLife = (id, t, o = {}) => { const bl = ((t + (o.ph || 0)) % 3.3) < 0.12 ? 0.15 : 1, op = (o.open ?? 1) * bl, h = 70 * op;
+        for (const k of [0, 1]) { const x = k ? 35 : -95, sad = (o.mood || 0) < 0 ? (k ? -1 : 1) * 10 : 0;
+          X.attr(`${id}-e${k}`, "height", (o.mood > 0 ? h * 0.45 : h).toFixed(1)); X.attr(`${id}-e${k}`, "y", (-360 - (o.mood > 0 ? h * 0.45 : h) / 2 + (o.mood > 0 ? 12 : 0)).toFixed(1));
+          X.attr(`${id}-e${k}`, "transform", `rotate(${sad} ${x + 30} -360) translate(${(o.look || 0) * 12} 0)`); }
+        const m = o.mouth || 0; T(`${id}-dr`, `translate(0 ${(m * 70).toFixed(1)})`); X.attr(`${id}-gap`, "height", (m * 70).toFixed(1));
+        T(`${id}-b`, `translate(0 ${(Math.sin(t * 2.4) * 3).toFixed(2)}) rotate(${(o.tilt || 0).toFixed(2)} 0 -10) scale(${(1 + (o.puff || 0) * 0.04).toFixed(3)} ${(1 - (o.puff || 0) * 0.03).toFixed(3)})`); };
+      X.put("fry1", fryer("fA", 1.25)); X.put("fry8", fryer("fB", 1.2)); X.put("fry10", fryer("fC", 0.78));
+      // kitchen
+      const kitchen = `<rect y="1300" width="1080" height="620" fill="#3a4a5a"/><rect y="1280" width="1080" height="40" fill="#e9e4da" stroke="#1d120b" stroke-width="8"/>
+        ${[0, 1, 2, 3].map((i) => `<rect x="${20 + i * 265}" y="1340" width="245" height="520" rx="10" fill="#4f6a5e" stroke="#1d120b" stroke-width="8"/><rect x="${110 + i * 265}" y="1380" width="70" height="14" rx="6" fill="#c9ccd2"/>`).join("")}
+        <rect x="40" y="300" width="300" height="360" rx="10" fill="#4f6a5e" stroke="#1d120b" stroke-width="8"/><rect x="740" y="300" width="300" height="240" rx="10" fill="#4f6a5e" stroke="#1d120b" stroke-width="8"/>
+        <rect x="380" y="380" width="320" height="300" fill="#0e1a3a" stroke="#e9e1cf" stroke-width="16"/><path d="M540 380 V680 M380 530 H700" stroke="#e9e1cf" stroke-width="12"/>
+        <circle cx="630" cy="440" r="26" fill="#fff6c8"/>`;
+      X.put("kitch1", kitchen); X.put("kitch8", kitchen);
+      X.put("cal1", `<rect x="-120" y="-150" width="240" height="300" rx="10" fill="#fffdf3" stroke="#1d120b" stroke-width="8"/><rect x="-120" y="-150" width="240" height="80" fill="#c0573a"/>
+        <text y="-92" text-anchor="middle" font-family="Anton" font-size="56" fill="#fff">NOV</text><text y="90" text-anchor="middle" font-family="Anton" font-size="150" fill="#1d120b">26</text>`);
+      // 1621 village: hills, thatched houses, palisade, autumn trees
+      const tree = (x, y, s, c) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-14 0 L-10 -170 L10 -170 L14 0Z" fill="#5a3a22" stroke="#1d120b" stroke-width="6"/>
+        ${[[0, -230, 110], [-70, -180, 80], [70, -185, 85], [0, -300, 80]].map(([a, b, r]) => `<circle cx="${a}" cy="${b}" r="${r}" fill="${c}" stroke="#1d120b" stroke-width="6"/>`).join("")}</g>`;
+      const house = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})"><rect x="-150" y="-180" width="300" height="180" fill="#a07a50" stroke="#1d120b" stroke-width="8"/>
+        ${[0, 1, 2, 3, 4].map((i) => `<path d="M${-150 + i * 60} -180 V0" stroke="#7a5a3a" stroke-width="5"/>`).join("")}
+        <path d="M-190 -170 L0 -330 L190 -170Z" fill="#d9b86a" stroke="#1d120b" stroke-width="8" stroke-linejoin="round"/>${[0, 1, 2, 3].map((i) => `<path d="M${-150 + i * 50} ${-200 - i * 20} L${-100 + i * 50} ${-180 - i * 20}" stroke="#a8863a" stroke-width="5"/>`).join("")}
+        <rect x="20" y="-120" width="70" height="120" fill="#4a3424" stroke="#1d120b" stroke-width="6"/><rect x="-110" y="-130" width="70" height="56" fill="#2a2420" stroke="#1d120b" stroke-width="6"/></g>`;
+      const land = (extra = "") => `<path d="M0 1000 C200 920 420 980 600 930 C800 880 950 940 1080 900 V1920 H0Z" fill="#c9a050"/>
+        ${tree(120, 980, 1.2, "#d9682a")}${tree(980, 960, 1.4, "#e8a23a")}${tree(860, 1010, 0.9, "#c0392b")}${house(420, 1020, 0.9)}${house(720, 990, 0.7)}
+        ${[...Array(18)].map((_, i) => `<path d="M${i * 62} 1060 V940 L${i * 62 + 16} 920 L${i * 62 + 32} 940 V1060" fill="#8a6a3a" stroke="#1d120b" stroke-width="4"/>`).join("")}
+        <path d="M0 1060 C300 1040 700 1080 1080 1050 V1920 H0Z" fill="url(#field)"/>${extra}`;
+      X.put("village2", land()); X.put("bg3", land()); X.put("bg4", land());
+      { let lv = ""; const r = X.rand(24); for (let i = 0; i < 26; i++) lv += `<path id="lf${i}" d="M0 -18 C14 -10 14 10 0 18 C-14 10 -14 -10 0 -18Z" fill="${["#d9682a", "#e8a23a", "#c0392b", "#b8742a"][i % 4]}" stroke="#1d120b" stroke-width="3"/>`; X.put("leaves2", lv); }
+      // the Wampanoag group (dignified, normal bodies, deerskin colours, long dark hair)
+      const WL = (i) => ({ skin: ["#a8714a", "#8d5a3b", "#9a6a44", "#7d5236"][i % 4], skinD: "#6b3f26", hair: "#14100c", hairStyle: i % 3 === 1 ? "short" : "long", shirt: ["#b88a5a", "#a87a4a", "#c09a6a"][i % 3], pants: "#7a5232", shoes: "#6a4a2e" });
+      X.put("walk3", [...Array(7)].map((_, i) => `<g id="wm${i}">${X.fig("wf" + i, 0.82 + (i % 3) * 0.06, WL(i))}</g>`).join(""));
+      // deer
+      const deer = (id, ant) => `<g id="${id}"><g id="${id}-b">
+        ${[[-70, 1], [-40, 0], [60, 1], [90, 0]].map(([x, b], k) => `<g id="${id}-l${k}" transform="translate(${x} -120)"><path d="M0 0 L0 120" stroke="#1d120b" stroke-width="20" stroke-linecap="round"/><path d="M0 0 L0 118" stroke="${b ? "#8a5a2e" : "#a8743e"}" stroke-width="10" stroke-linecap="round"/></g>`).join("")}
+        <ellipse cy="-150" rx="130" ry="62" fill="#a8743e" stroke="#1d120b" stroke-width="8"/><ellipse cx="-30" cy="-128" rx="80" ry="26" fill="#d9b48a" opacity=".6"/>
+        <ellipse cx="-128" cy="-178" rx="20" ry="28" fill="#f4ead6" stroke="#1d120b" stroke-width="6"/>
+        <path d="M90 -170 L140 -270 L175 -260 L135 -150Z" fill="#a8743e" stroke="#1d120b" stroke-width="8" stroke-linejoin="round"/>
+        <g transform="translate(165 -285)"><ellipse rx="48" ry="34" fill="#a8743e" stroke="#1d120b" stroke-width="8"/><ellipse cx="36" cy="8" rx="16" ry="12" fill="#2a1c16"/>
+          <circle cx="10" cy="-8" r="8" fill="#120a06"/><ellipse cx="-30" cy="-34" rx="12" ry="26" fill="#8a5a2e" stroke="#1d120b" stroke-width="5" transform="rotate(-30 -30 -34)"/>
+          ${ant ? `<path d="M-10 -30 L-20 -100 M-16 -70 L-50 -95 M-18 -88 L8 -120 M10 -30 L20 -96 M18 -70 L50 -90" stroke="#e8dcc0" stroke-width="9" stroke-linecap="round" fill="none"/>` : ""}</g></g></g>`;
+      X.put("deer4", [0, 1, 2, 3, 4].map((i) => `<g id="dp${i}">${deer("d" + i, i % 2 === 0)}</g>`).join(""));
+      const deerLife = (id, t, ph) => { for (let k = 0; k < 4; k++) T(`${id}-l${k}`, `translate(${[-70, -40, 60, 90][k]} -120) rotate(${(Math.sin(t * 8 + ph + (k % 2 ? Math.PI : 0)) * 22).toFixed(1)})`); T(`${id}-b`, `translate(0 ${(-Math.abs(Math.sin(t * 8 + ph)) * 6).toFixed(1)})`); };
+      // the long table + colonists standing behind it (table hides the legs). Owner: some weird bodies, some normal.
+      const COL = [
+        { skin: "#f2c29b", hair: "#6b4628", hairStyle: "short", shirt: "#2a2a30", pants: "#3a3430", shoes: "#2a1c14", tie: "#efe8d8" },
+        { skin: "#f5c9a0", hair: "#c7642e", hairStyle: "bun", shirt: "#5a4a3a", pants: "#3a3430", shoes: "#2a1c14", apron: "#efe6d2" },
+        { skin: "#f0c09a", hair: "#8a5a2e", hairStyle: "short", shirt: "#4a4a58", pants: "#3a3430", shoes: "#2a1c14", h: 1.7, torso: 1.3, headS: 0.75, arm: 0.9 }, // way too tall, tiny head
+        { skin: "#f2c29b", hair: "#e0c070", hairStyle: "long", shirt: "#6a3a2a", pants: "#3a3430", shoes: "#2a1c14", apron: "#efe6d2" },
+        { skin: "#f5c9a0", hair: "#2a1c16", hairStyle: "bald", shirt: "#3a3430", pants: "#3a3430", shoes: "#2a1c14", moustache: true, h: 0.45, torso: 0.8, headS: 1.6 },          // tiny, giant head
+      ];
+      const XS = [150, 330, 520, 720, 900];
+      const people = (pfx) => COL.map((lk, i) => `<g id="${pfx}${i}" transform="translate(${XS[i]} 1480)">${X.fig(pfx + "f" + i, 1.05, lk)}</g>`).join("");
+      X.put("eaters5", people("ce")); X.put("stare7", people("cs"));
+      const table = (birds) => `<rect x="-20" y="1400" width="1120" height="70" fill="#9a7048" stroke="#1d120b" stroke-width="8"/><rect x="-20" y="1470" width="1120" height="60" fill="#6a4a2e" stroke="#1d120b" stroke-width="8"/>
+        ${[60, 1020].map((x) => `<rect x="${x - 20}" y="1530" width="40" height="300" fill="#5a3a22" stroke="#1d120b" stroke-width="6"/>`).join("")}
+        ${birds.map((x, i) => i % 2 === 0 ? `<g transform="translate(${x} 1400)"><ellipse rx="110" ry="18" fill="#7a5434" stroke="#1d120b" stroke-width="6"/><ellipse cy="-46" rx="78" ry="48" fill="#a8622a" stroke="#1d120b" stroke-width="7"/><path d="M40 -40 L96 -80" stroke="#1d120b" stroke-width="22" stroke-linecap="round"/><path d="M40 -40 L96 -80" stroke="#8a4e22" stroke-width="12" stroke-linecap="round"/><circle cx="102" cy="-86" r="14" fill="#f4ead6" stroke="#1d120b" stroke-width="5"/></g>`
+          : `<g transform="translate(${x} 1400)"><ellipse rx="90" ry="16" fill="#7a5434" stroke="#1d120b" stroke-width="6"/><ellipse cx="-20" cy="-30" rx="40" ry="32" fill="#e07a2a" stroke="#1d120b" stroke-width="6"/><path d="M20 -20 L100 -40" stroke="#1d120b" stroke-width="26" stroke-linecap="round"/><path d="M20 -20 L100 -40" stroke="#f2c230" stroke-width="16" stroke-linecap="round"/></g>`).join("")}`;
+      X.put("table5", table([150, 330, 520, 720, 900])); X.put("table7", table([150, 330, 720, 900]) + `<g transform="translate(540 1514)"><text text-anchor="middle" font-family="Anton" font-size="44" fill="#f6e6c0">RESERVED: AIR FRYER</text></g>`);
+      // inventory list
+      const LIST = [["DEER", "5 ✓"], ["WILD BIRDS", "✓"], ["CORN", "✓"], ["SQUASH", "✓"], ["AIR FRYERS", "?"]];
+      X.put("list6", LIST.map(([a, b], i) => `<g id="li${i}" opacity="0"><text x="-300" y="${-330 + i * 150}">${a}</text><text x="300" y="${-330 + i * 150}" text-anchor="end" ${i === 4 ? 'fill="#c0392b"' : ""}>${b}</text></g>`).join(""));
+      // calendar rays, room, family, table, sparkles
+      { let rr = ""; for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283, b = (i + 0.5) / 16 * 6.283; rr += `<path d="M540 1050 L${540 + Math.cos(a) * 1600} ${1050 + Math.sin(a) * 1600} L${540 + Math.cos(b) * 1600} ${1050 + Math.sin(b) * 1600}Z" fill="#fff"/>`; } X.put("rays9", rr); }
+      X.put("room10", `<rect y="1050" width="1080" height="870" fill="#5a3424"/><rect x="60" y="420" width="260" height="320" fill="#1a2a4a" stroke="#e9e1cf" stroke-width="14"/><rect x="760" y="440" width="240" height="190" fill="#c9a24a" stroke="#5a3a0a" stroke-width="12"/>
+        ${[...Array(9)].map((_, i) => `<path d="M${90 + i * 100} 330 L${190 + i * 100} 330 L${140 + i * 100} 420Z" fill="${["#c0573a", "#e8a23a", "#6a7a3a", "#8a3b22"][i % 4]}" stroke="#1d120b" stroke-width="4"/>`).join("")}`);
+      const FAM = [
+        { lk: { skin: "#f5c9a0", hair: "#5a3b2a", hairStyle: "long", shirt: "#c0573a", pants: "#2e3446", shoes: "#3a2a22" }, x: 250, s: 1.0 },
+        { lk: { skin: "#c99067", hair: "#1e1512", hairStyle: "short", shirt: "#5d8a3a", pants: "#3a3a44", shoes: "#2a2a2a", beard: true, h: 1.5, torso: 1.25, headS: 0.62 }, x: 930, s: 1.0 },
+        { lk: { skin: "#f2c29b", hair: "#e0c070", hairStyle: "curly", shirt: "#e8a23a", pants: "#3b3f52", shoes: "#f0ece4", h: 0.5, torso: 0.7, headS: 1.5 }, x: 800, s: 1.0 },
+      ];
+      X.put("fam10", FAM.map((f, i) => `<g id="fm${i}" transform="translate(${f.x} 1480)">${X.fig("ff" + i, f.s, f.lk)}</g>`).join(""));
+      X.put("table10", `<rect x="-20" y="1380" width="1120" height="90" fill="#e8dcc0" stroke="#1d120b" stroke-width="8"/><rect x="-20" y="1470" width="1120" height="460" fill="#cbbd9a" stroke="#1d120b" stroke-width="8"/>
+        <rect x="380" y="1330" width="320" height="60" rx="14" fill="#b8282b" stroke="#1d120b" stroke-width="8"/>
+        <g transform="translate(900 1380)"><ellipse rx="140" ry="22" fill="#f6f3ec" stroke="#1d120b" stroke-width="6"/><ellipse cy="-60" rx="110" ry="66" fill="#c07a32" stroke="#1d120b" stroke-width="8"/><path d="M60 -50 L130 -100" stroke="#1d120b" stroke-width="26" stroke-linecap="round"/><path d="M60 -50 L130 -100" stroke="#b06a2a" stroke-width="16" stroke-linecap="round"/><circle cx="136" cy="-106" r="16" fill="#fff" stroke="#1d120b" stroke-width="5"/></g>
+        <g transform="translate(160 1380)"><ellipse rx="110" ry="18" fill="#f6f3ec" stroke="#1d120b" stroke-width="6"/></g>`);
+      X.put("spk10", [0, 1, 2, 3, 4, 5].map((i) => `<g id="sp${i}"><path d="M0 -26 L7 -7 L26 0 L7 7 L0 26 L-7 7 L-26 0 L-7 -7Z" fill="#fff4b0" stroke="#1d120b" stroke-width="4"/></g>`).join(""));
+
+      // ---------- life ----------
+      const W = (t, a, b) => t >= a - 0.05 && t < b + 0.05;
+      X.life((t) => {
+        if (W(t, C[0], C[1])) fryLife("fA", t, { open: 1, mood: t > w(1, 3) ? -1 : 0, look: Math.sin(t * 1.2) * 0.6, tilt: t > w(1, 3) ? -4 : 0 });
+        if (W(t, C[1], C[2])) { for (let i = 0; i < 26; i++) { const q = ((t * 0.18 + i * 0.37) % 1), x = (i * 97) % 1080 + Math.sin(t * 2 + i) * 40, y = -40 + q * 2000; T(`lf${i}`, `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(t * 120 + i * 40) % 360})`); }
+          X.attr("sun2", "cy", (520 - (t - C[1]) * 20).toFixed(1)); }
+        if (W(t, C[2], C[3])) { for (let i = 0; i < 7; i++) { const st = C[2] + i * 0.12, k = X.clamp((t - st) / 1.9, 0, 1), x = 150 + i * 130 + (1 - k) * 950; T(`wm${i}`, `translate(${x.toFixed(1)} ${1520 + (i % 3) * 60})`);
+            X.figLife("wf" + i, t, { mode: k < 1 ? "walk" : "stand", flip: true, phase: i * 0.8, smile: 0.4, look: [-4, 0] }); }
+          const n = Math.round(X.sm(w(3, 1) - 0.2, w(3, 1) + 0.6, t) * 90); document.getElementById("n90t").textContent = "~" + n; }
+        if (W(t, C[3], C[4])) { for (let i = 0; i < 5; i++) { const k = X.sm(C[3], C[3] + 0.7, t), x = 170 + i * 185 + (1 - k) * 500; T(`dp${i}`, `translate(${x.toFixed(1)} ${1560 + (i % 2) * 90}) scale(-${(0.72 + (i % 2) * 0.06).toFixed(2)} ${(0.72 + (i % 2) * 0.06).toFixed(2)})`); deerLife("d" + i, t, i); } }
+        if (W(t, C[4], C[5])) { const d = X.clamp((t - w(5, 5)) / (C[5] - w(5, 5)), 0, 1), ang = d * 3 * Math.PI * 2, isNight = d > 0 && Math.sin(ang) < -0.2;
+          T("sun5", `translate(${540 + Math.cos(ang - Math.PI / 2) * 420} ${900 + Math.sin(ang - Math.PI / 2) * 420})`); T("moon5", `translate(${540 - Math.cos(ang - Math.PI / 2) * 420} ${900 - Math.sin(ang - Math.PI / 2) * 420})`);
+          X.attr("nightL", "opacity", d > 0 ? X.clamp(-Math.sin(ang) * 1.4, 0, 0.9).toFixed(2) : 0); X.attr("moon5", "opacity", d > 0 ? X.clamp(-Math.sin(ang) * 2, 0, 1).toFixed(2) : 0);
+          X.attr("days5", "opacity", d > 0 ? 1 : 0); document.getElementById("dayT").textContent = "DAY " + Math.min(3, 1 + Math.floor(d * 3));
+          COL.forEach((_, i) => X.figLife("cef" + i, t, { mode: "stand", flip: i > 2, phase: i, arms: i === 2 ? { A: [8, -6], B: [-6, -6] } : { A: [-60 - 40 * Math.max(0, Math.sin(t * 5 + i)), -60], B: [10, -10] }, mouth: Math.abs(Math.sin(t * 7 + i)) * 0.5, smile: 0.8, lid: i === 4 ? 0.3 : 0 })); }
+        if (W(t, C[5], C[6])) { LIST.forEach((_, i) => X.attr(`li${i}`, "opacity", t > C[5] + 0.1 + i * 0.25 ? 1 : 0)); T("quill6", `translate(${960 + Math.sin(t * 14) * 10} ${1250 + Math.cos(t * 11) * 8})`); X.attr("zero6", "opacity", 0); }
+        if (W(t, C[6], C[7])) { COL.forEach((_, i) => X.figLife("csf" + i, t, { mode: "stand", flip: i > 2, look: [i > 2 ? 0 : 6, 4], eyes: 0.8, mouth: 0, smile: -0.2, brow: -0.3, lid: 0.35 }));
+          const k = X.clamp((t - C[6] - 0.3) / 1.6, 0, 1); T("tumble7", `translate(${-120 + k * 1340} ${1560 - Math.abs(Math.sin(k * 12)) * 60}) rotate(${k * 900})`); }
+        if (W(t, C[7], C[8])) { const nope = t > w(8, 2), inv = t > w(8, 6);
+          fryLife("fB", t, { open: inv ? 0.55 : 0.9, mood: -1, look: -0.6, tilt: -5 });
+          X.attr("nope8", "opacity", nope ? 1 : 0); T("env8", `translate(300 ${600 + X.sm(C[7], C[7] + 0.8, t) * 80}) rotate(${-6 + Math.sin(t * 1.5) * 3})`);
+          const tk = X.clamp((t - (w(8, 6) + 0.2)) / 1.2, 0, 1); X.attr("tear8", "opacity", tk > 0 && tk < 1 ? 1 : 0); T("tear8", `translate(${540 - 95 * 1.2 + 30} ${1300 - 330 * 1.2 + tk * 260})`); }
+        if (W(t, C[8], C[9])) { const k = X.sm(C[8] + 0.2, C[9] - 0.25, t), yr = Math.round(1621 + k * 405), ff = (t * 9) % 1;
+          document.getElementById("yr9").textContent = yr; X.attr("page9", "opacity", k > 0 && k < 1 ? 1 : 0); X.attr("page9", "transform", `scale(1 ${(1 - ff).toFixed(3)}) translate(0 ${(-210 * ff).toFixed(1)})`);
+          const c = (a, b) => Math.round(a + (b - a) * k); X.attr("bg9", "fill", `rgb(${c(201, 122)},${c(154, 59)},${c(90, 59)})`); T("rays9", `rotate(${(t - C[8]) * 20} 540 1050)`); }
+        if (W(t, C[9], C[10])) { const smug = t > w(10, 5);
+          fryLife("fC", t, { open: 1, mood: smug ? 1 : 0, mouth: smug ? 0.25 + 0.1 * Math.sin(t * 4) : 0, puff: smug ? 1 : 0 });
+          T("crown10", `translate(540 ${925 + Math.sin(t * 2.4) * 3}) rotate(${Math.sin(t * 1.3) * 4})`);
+          FAM.forEach((f, i) => X.figLife("ff" + i, t, { mode: "stand", flip: i !== 0, look: [i === 1 ? 6 : 6, 2], lid: 0.45, brow: -0.8, mouth: 0, smile: -0.6, eyes: 0.8, arms: i === 1 ? { A: [-30, -110], B: [30, 110] } : undefined }));
+          for (let i = 0; i < 6; i++) { const q = ((t * 0.9 + i / 6) % 1); T(`sp${i}`, `translate(${540 + Math.cos(i * 1.05) * (200 + q * 60)} ${1060 + Math.sin(i * 1.05) * (160 + q * 40)}) scale(${Math.sin(q * Math.PI).toFixed(2)})`); } }
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.to(clock, { t: 30.93, duration: 30.93, ease: "none", onUpdate: () => X.tick(clock.t) }, 0);
+      const pop = (sel, at, from = 0.4) => tl.fromTo(sel, { scale: from, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, at);
+      tl.fromTo("#s1cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.12, svgOrigin: "540 1100", duration: 2.99, ease: "sine.in" }, 0);
+      pop("#c1b", w(1, 3) - 0.05, 1.6);
+      tl.fromTo("#s2cam", { scale: 1.1, svgOrigin: "540 1000" }, { scale: 1.0, svgOrigin: "540 1000", duration: 3.85, ease: "sine.out" }, C[1]);
+      tl.fromTo("#c2b", { scale: 0.3, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(2.6)" }, w(2, 2) - 0.05);
+      tl.fromTo("#sepia", { opacity: 0 }, { opacity: 0.28, duration: 0.1 }, C[1]);
+      tl.to("#sepia", { opacity: 0, duration: 0.1 }, C[7]);
+      tl.fromTo("#s3cam", { scale: 1.0, svgOrigin: "540 1300" }, { scale: 1.06, svgOrigin: "540 1300", duration: 3.0, ease: "sine.inOut" }, C[2]);
+      tl.fromTo("#n90", { scale: 0.3, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, svgOrigin: "0 0", duration: 0.28, ease: "back.out(2.6)" }, w(3, 1) - 0.2);
+      tl.fromTo("#s4cam", { scale: 1.06, svgOrigin: "540 1400" }, { scale: 1.0, svgOrigin: "540 1400", duration: 1.6, ease: "sine.out" }, C[3]);
+      pop("#c4a", 10.32, 1.6);
+      pop("#c7b", C[6] + 0.02, 2.2);
+      tl.fromTo("#s5cam", { scale: 1.0, svgOrigin: "540 1300" }, { scale: 1.08, svgOrigin: "540 1300", duration: 5.0, ease: "sine.inOut" }, C[4]);
+      tl.fromTo("#days5", { scale: 0.3, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.28, ease: "back.out(2.6)", immediateRender: false }, w(5, 5));
+      tl.fromTo("#s6cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.1, svgOrigin: "740 1200", duration: 2.2, ease: "sine.in" }, C[5]);
+      tl.fromTo("#s7cam", { scale: 1.1, svgOrigin: "540 1300" }, { scale: 1.0, svgOrigin: "540 1300", duration: 2.1, ease: "sine.out" }, C[6]);
+      tl.fromTo("#s8cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.1, svgOrigin: "540 1100", duration: 4.6, ease: "sine.inOut" }, C[7]);
+      tl.fromTo("#nope8", { scale: 2.2, svgOrigin: "0 0" }, { scale: 1, svgOrigin: "0 0", duration: 0.2, ease: "power3.in", immediateRender: false }, w(8, 2));
+      tl.fromTo("#s9cam", { scale: 1.0, svgOrigin: "540 1050" }, { scale: 1.06, svgOrigin: "540 1050", duration: 3.0, ease: "sine.inOut" }, C[8]);
+      tl.fromTo("#s10cam", { scale: 1.0, svgOrigin: "540 1100" }, { scale: 1.12, svgOrigin: "540 1050", duration: 3.7, ease: "sine.inOut" }, C[9]);
+      pop("#c10b", w(10, 5), 1.6);
+      [C[1], C[6], C[7], C[9]].forEach((at) => tl.fromTo("#flash", { opacity: 0.45 }, { opacity: 0, duration: 0.18, ease: "power2.out", immediateRender: false }, at));
+      const gr = { k: 0 };
+      tl.to(gr, { k: 30.93, duration: 30.93, ease: "none", onUpdate: () => { const f = Math.floor(gr.k * 12); document.getElementById("grain").style.backgroundPosition = `${(f * 137) % 400}px ${(f * 251) % 400}px`; } }, 0);
+      window.__timelines["main"] = tl;
+      X.tick(0);
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+{
+  "render_style": "hyperframes",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Soda or Pop? On Black Friday It Doesn't Matter",
+  "description": "Soda, pop or Coke: the oldest argument in America, settled by 126 million Black Friday shoppers.\n\nThe useless facts, read with a straight face:\n- The National Retail Federation expects about 126 million people to shop on Black Friday 2026 (69% of the 182.7 million planning to shop Thanksgiving weekend).\n- \"Soda\" rules the coasts, \"pop\" the Midwest and Northwest, and in much of the South every soft drink is a \"Coke\", even when it isn't.\n- A stampede of that size would not care which one you say.\n\nUseless Facts is our new series: true facts nobody needed, with real numbers. Which one do you say?\n\nSources:\n- National Retail Federation (Nov. 19, 2026): 183 million consumers expected to shop during Thanksgiving weekend; 126 million on Black Friday: https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend\n- Wikipedia, Names for soft drinks in the United States: https://en.wikipedia.org/wiki/Names_for_soft_drinks_in_the_United_States\n- Mental Floss, Pop, soda or Coke: a state-by-state guide: https://www.mentalfloss.com/food/beverages/pop-soda-coke-state-by-state-guide\n\n#blackfriday #sodavspop #uselessfacts #shorts",
+  "tags": [
+    "soda vs pop",
+    "why do people say pop instead of soda",
+    "what do you call soda in the south",
+    "soda or pop",
+    "soda pop coke",
+    "why southerners call everything coke",
+    "black friday",
+    "black friday 2026",
+    "black friday stampede",
+    "useless facts",
+    "dumb facts",
+    "absurd facts",
+    "funny facts",
+    "regional american words"
+  ],
+  "pinned_comment": "Settle it in the replies: soda, pop, or is everything a Coke where you live?",
+  "series": "Useless Facts",
+  "caption_instagram": "Soda or pop? It doesn't matter. #blackfriday #uselessfacts",
+  "sources": [
+    {
+      "title": "National Retail Federation (Nov. 19, 2026): 182.7 million expected to shop Thanksgiving weekend; 69% (126 million) plan to shop on Black Friday",
+      "url": "https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend"
+    },
+    {
+      "title": "Wikipedia: soda and pop are the most common national terms; in the Southern US 'coke' is a generic term for any soft drink",
+      "url": "https://en.wikipedia.org/wiki/Names_for_soft_drinks_in_the_United_States"
+    },
+    {
+      "title": "Mental Floss: Midwest and Northwest say pop, Southerners call any fizzy drink Coke",
+      "url": "https://www.mentalfloss.com/food/beverages/pop-soda-coke-state-by-state-guide"
+    }
+  ],
+  "human_angle": "Takes the most heated harmless argument in America (soda vs pop vs Coke) and settles it with the most American number of the week: 126 million Black Friday shoppers, with the South's 'everything is a Coke' as the punchline.",
+  "promise_check": "0:00 soda vs pop on screen and in the voice; 0:02-0:11 Black Friday stampede with the real NRF number (126 million); 0:12-0:20 pop and Coke get the same fate, so it truly doesn't matter.",
+  "experiment": {
+    "engine": "hyperframes",
+    "format": "useless_facts",
+    "opening": "question",
+    "voice": "xr12",
+    "tone": "deadpan",
+    "duration": "short",
+    "hook_type": "debate",
+    "topic_type": "news",
+    "ending": "punchline",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "soda vs pop",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Soda, Pop or Coke? 126 Million Shoppers Don't Care",
+      "The Soda vs Pop Debate, Settled by Black Friday"
+    ],
+    "questions": [
+      {
+        "q": "Why do Southerners call all soda Coke?",
+        "a": "Coca-Cola was invented in Atlanta in 1886 and spread across the South first, so 'coke' became the generic word there for any soft drink."
+      },
+      {
+        "q": "How many people shop on Black Friday?",
+        "a": "The National Retail Federation expected about 126 million people to shop on Black Friday 2026, out of 182.7 million planning to shop Thanksgiving weekend."
+      },
+      {
+        "q": "What do Midwesterners call soda?",
+        "a": "Most of the Midwest and the Northwest say 'pop', while the coasts mostly say 'soda'."
+      }
+    ],
+    "demand": [
+      {
+        "query": "soda vs pop",
+        "evidence": "Perennial viral debate; the pop-vs-soda map is Big Think's most submitted map and gets yearly coverage (Mental Floss, Scripps, AOL)",
+        "url": "https://bigthink.com/strange-maps/308-the-pop-vs-soda-map"
+      },
+      {
+        "query": "black friday 2026",
+        "evidence": "Top US search of the week (Black Friday Nov. 27, 2026); NRF release Nov. 19",
+        "url": "https://nrf.com/media-center/press-releases/183-million-consumers-expected-to-shop-during-thanksgiving-weekend"
+      },
+      {
+        "query": "useless facts",
+        "evidence": "Useless-fact formats trend repeatedly (Know Your Meme 'What's a useless fact about X', TikTok fun-facts creators with millions of views)",
+        "url": "https://knowyourmeme.com/memes/whats-a-useless-fact-about-x"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "NRF",
+    "Southerners",
+    "sodavspop",
+    "uselessfacts",
+    "blackfriday"
+  ],
+  "thumbnail": {
+    "time": 1.5,
+    "zoom": 1.0,
+    "focus": [
+      0.5,
+      0.5
+    ],
+    "protect": [
+      140,
+      640,
+      940,
+      1400
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": "126 MILLION",
+    "tilt": -4,
+    "text_y": 150,
+    "lines": [
+      {
+        "text": "SODA OR POP?",
+        "color": "#FFFFFF"
+      }
+    ],
+    "glow": "#FFD23A",
+    "variants": [
+      {},
+      {
+        "lines": [
+          {
+            "text": "DOESN'T",
+            "color": "#FFFFFF"
+          },
+          {
+            "text": "MATTER",
+            "box": "#FF3B30"
+          }
+        ]
+      },
+      {
+        "lines": [
+          {
+            "text": "SODA",
+            "color": "#FF4D4D"
+          },
+          {
+            "text": "OR POP?",
+            "color": "#5AA0FF"
+          }
+        ],
+        "badge": false
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.1,
+    "design_note": "HUMAN.md §2: split red/blue background, no circle/rays, sticker only; new series look."
+  },
+  "id": "xr023-soda-pop-stampede",
+  "duration_s": 20.49,
+  "status": "ready",
+  "publish_time_local": "20:27"
+}
