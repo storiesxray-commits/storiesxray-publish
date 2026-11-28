@@ -1,0 +1,18 @@
+{
+ "lang": "en-us",
+ "sentences": [
+  ["Your fridge makes four pounds of ice.", 0.15],
+  ["Every day.", 0.25],
+  ["You never use it.", 0.1],
+  ["The bin is full.", 0.15],
+  ["Nobody told the ice maker.", 0.35],
+  ["One year later, fourteen hundred pounds.", 0.15],
+  ["Behind one little door.", 0.3],
+  ["Tuesday night, you open the freezer for peas.", 0.35],
+  ["You survive.", 0.35],
+  ["Frozen to the kitchen floor until April.", 0.5],
+  ["[sighs] The peas are fine. [pause]", 0.0]
+ ],
+ "tone": "deadpan",
+ "voice": "xr10"
+}

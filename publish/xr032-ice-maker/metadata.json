@@ -1,0 +1,177 @@
+{
+  "render_style": "cartoon",
+  "language": "en-US",
+  "category": "Comedy",
+  "made_for_kids": false,
+  "altered_or_synthetic_realistic": false,
+  "publish_timezone": "America/New_York",
+  "platforms": [
+    "youtube"
+  ],
+  "title": "Nobody told the ice maker to stop",
+  "description": "Four pounds a day: that's roughly what a refrigerator ice maker makes, according to GE Appliances. Leave it alone for a year and the math says about 1,400 pounds.\n\nIn real life, the ice maker stops when the bin is full (a little arm or sensor tells it). In this kitchen, nobody told it. He survived. The peas did even better.\n\nUseless Facts: true numbers, used irresponsibly.\n\nSources:\n- GE Appliances: Refrigerator - Normal Ice Production and Cube Size (about 4 pounds of ice per day): https://products.geappliances.com/appliance/gea-support-search-content?contentId=16918\n- Whirlpool Product Help: Ice Cube Test, how much ice should my ice maker make (100-140 cubes in 24 hours): https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Quad_Door_Refrigerator/Ice_and_Water_Concerns/Ice_and_Dispenser_Concerns/Ice_Production/Low_Ice_Production/Bottom_Freezer/Ice_Cube_Test_-_How_much_ice_should_my_ice_maker_make%3F\n- Sub-Zero: Ice production and ice bucket capacity (in-unit ice makers stop producing once the bucket is full): https://www.subzero-wolf.com/assistance/answers/ice-production-and-ice-bucket-capacity\n\n#icemaker #uselessfacts #fridge #kitchen",
+  "tags": [
+    "refrigerator ice maker",
+    "ice maker",
+    "how much ice does an ice maker make",
+    "how many pounds of ice per day",
+    "fridge ice maker never stops",
+    "ice maker bin full",
+    "freezer full of ice",
+    "frozen peas",
+    "useless facts",
+    "absurd facts",
+    "deadpan comedy",
+    "kitchen fails",
+    "top freezer fridge"
+  ],
+  "pinned_comment": "When did you last actually use the ice in your freezer? Be specific. The ice maker is listening.",
+  "series": "Useless Facts",
+  "caption_instagram": "Nobody told the ice maker. #icemaker #uselessfacts",
+  "sources": [
+    {
+      "title": "GE Appliances: Refrigerator - Normal Ice Production and Cube Size (about 4 pounds of ice per day)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16918"
+    },
+    {
+      "title": "Whirlpool Product Help: Ice Cube Test, how much ice should my ice maker make (100-140 cubes in 24 hours)",
+      "url": "https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Quad_Door_Refrigerator/Ice_and_Water_Concerns/Ice_and_Dispenser_Concerns/Ice_Production/Low_Ice_Production/Bottom_Freezer/Ice_Cube_Test_-_How_much_ice_should_my_ice_maker_make%3F"
+    },
+    {
+      "title": "Sub-Zero: Ice production and ice bucket capacity (in-unit ice makers stop producing once the bucket is full)",
+      "url": "https://www.subzero-wolf.com/assistance/answers/ice-production-and-ice-bucket-capacity"
+    }
+  ],
+  "human_angle": "Turns an appliance spec nobody reads (about 4 lb of ice a day) into a year-long chain behind one freezer door, and says out loud the real safety switch the joke ignores: actual ice makers stop when the bin is full.",
+  "promise_check": "0:00 '4 LB OF ICE' over a trembling, bulging freezer door; 0:10-0:13 counter climbs to 1,400 LB; 0:19 the door bursts and he survives inside an ice block; 0:23 'UNTIL APRIL' with spring outside; 0:25 the peas are fine.",
+  "experiment": {
+    "engine": "cartoon",
+    "format": "useless_facts",
+    "variant": "A_chain",
+    "ending": "bizarre_survive",
+    "cta": false,
+    "opening": "statement",
+    "voice": "xr10",
+    "tone": "deadpan",
+    "duration": "short",
+    "hook_type": "absurd",
+    "topic_type": "evergreen",
+    "loop": "none"
+  },
+  "seo": {
+    "keyword": "refrigerator ice maker",
+    "playlist": "Useless Facts",
+    "title_alts": [
+      "Your Ice Maker Makes 1,400 Pounds a Year",
+      "the ice maker that nobody told"
+    ],
+    "questions": [
+      {
+        "q": "How much ice does a refrigerator ice maker make per day?",
+        "a": "A typical home refrigerator ice maker makes about 3 to 4.5 pounds of ice a day; GE Appliances puts a standard crescent-cube ice maker at about 4 pounds."
+      },
+      {
+        "q": "Does an ice maker stop when the bin is full?",
+        "a": "Yes. Refrigerator ice makers use a sensor or a feeler arm and stop making ice once the bucket is full, so the 1,400 pounds in the video is a joke, not a risk."
+      },
+      {
+        "q": "How long does it take an ice maker to fill the bin?",
+        "a": "Whirlpool says it can take up to 2 to 3 days, depending on use, for a refrigerator ice maker to completely fill its bin."
+      }
+    ],
+    "demand": [
+      {
+        "query": "how much ice does a refrigerator ice maker make",
+        "evidence": "Manufacturers answer it in their own support pages (GE Appliances, Whirlpool, Sub-Zero, Samsung 'ice maker does not produce enough ice')",
+        "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16918"
+      },
+      {
+        "query": "ice maker cube test",
+        "evidence": "Whirlpool product help article on how much ice an ice maker should make in 24 hours",
+        "url": "https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Quad_Door_Refrigerator/Ice_and_Water_Concerns/Ice_and_Dispenser_Concerns/Ice_Production/Low_Ice_Production/Bottom_Freezer/Ice_Cube_Test_-_How_much_ice_should_my_ice_maker_make%3F"
+      }
+    ]
+  },
+  "qa_words_ok": [
+    "lb",
+    "LB",
+    "GE",
+    "Whirlpool",
+    "uselessfacts",
+    "icemaker",
+    "Sub-Zero"
+  ],
+  "thumbnail": {
+    "time": 23.9,
+    "zoom": 1.18,
+    "focus": [
+      0.36,
+      0.5
+    ],
+    "protect": [
+      110,
+      560,
+      760,
+      1330
+    ],
+    "circle": false,
+    "rays": false,
+    "badge": false,
+    "tilt": -3,
+    "text_y": 170,
+    "lines": [
+      {
+        "text": "UNTIL APRIL",
+        "box": "#2F6FD0"
+      }
+    ],
+    "glow": "#7FD0FF",
+    "variants": [
+      {},
+      {
+        "time": 12.7,
+        "lines": [
+          {
+            "text": "1,400 LB",
+            "color": "#FFD60A"
+          }
+        ],
+        "text_y": 150,
+        "protect": [
+          180,
+          700,
+          600,
+          1480
+        ],
+        "glow": "#FFB020"
+      },
+      {
+        "lines": [
+          {
+            "text": "THE PEAS"
+          },
+          {
+            "text": "ARE FINE",
+            "color": "#8AF05A"
+          }
+        ],
+        "text_y": 150,
+        "tilt": -5,
+        "protect": [
+          110,
+          560,
+          760,
+          1330
+        ]
+      }
+    ],
+    "pick": 0,
+    "saturation": 1.1,
+    "contrast": 1.08,
+    "design_note": "HUMAN.md §2: last 5 all had a weight badge and text on top; this one has no badge, one line in a blue box at the bottom, spring-bright frame."
+  },
+  "id": "xr032-ice-maker",
+  "duration_s": 27.42,
+  "status": "ready",
+  "publish_time_local": "12:37"
+}

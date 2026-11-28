@@ -61,9 +61,10 @@ Estado: `todo` → `done (xrNNN)` cuando se produce. Tomar el primer `todo` que 
 - 365 bolsas por persona por año en EE. UU. (Center for Biological Diversity, "The Problem With Plastic Bags").
 - Airbag ~200 mph (Clemson CVEL "Airbag Deployment Systems"; AAA "How does an airbag work").
 
-### U03 · the ice maker · cartoon · NO MUERE · todo
+### U03 · the ice maker · cartoon · NO MUERE · done (xr032)
 "Your fridge makes about four pounds of ice a day. You never use it. The bin is full. Nobody told the ice maker. After one year, that's fourteen hundred pounds of ice behind one little door. Tuesday night, you open the freezer to find the peas. You survive. You're frozen to the kitchen floor until April. The peas are fine."
 - GE Appliances, "Normal Ice Production and Cube Size": ~4 lb/día (products.geappliances.com, contentId 16918). En la realidad se apaga con la cubeta llena: por eso "nobody told the ice maker".
+- Producido como xr032 (27/11/2026) con el texto ajustado: "Your fridge makes four pounds of ice. Every day. You never use it. The bin is full. Nobody told the ice maker. One year later, fourteen hundred pounds. Behind one little door. Tuesday night, you open the freezer for peas. You survive. Frozen to the kitchen floor until April. The peas are fine." Segunda fuente: Whirlpool "Ice Cube Test" (100–140 cubos/24 h); Sub-Zero confirma que se apaga con la cubeta llena.
 
 ### U04 · penny jar · cartoon · NO MUERE · todo
 "Every night, you drop your pennies in a jar on the top shelf. You never take them out. After forty years, it's fifty thousand pennies. Two hundred seventy-six pounds. On one shelf. Above the cereal. One morning, you reach for the cereal. The shelf holds. The jar doesn't. You survive under five hundred dollars. Nobody takes pennies anymore."

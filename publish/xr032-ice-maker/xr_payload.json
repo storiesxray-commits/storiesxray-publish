@@ -1,0 +1,54 @@
+{
+  "content_id": "xr-032",
+  "repo_id": "xr032-ice-maker",
+  "sha256": "23d7adfd9742f06ea024a86a8e60ff021729b3e11776b437654390e017131fe2",
+  "file_size_bytes": 17370002,
+  "duration_seconds": 27.421,
+  "width": 1080,
+  "height": 1920,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "fps": 29.977,
+  "video_bit_rate": 4929530,
+  "faststart": true,
+  "title_youtube": "Nobody told the ice maker to stop",
+  "description_youtube": "Four pounds a day: that's roughly what a refrigerator ice maker makes, according to GE Appliances. Leave it alone for a year and the math says about 1,400 pounds.\n\nIn real life, the ice maker stops when the bin is full (a little arm or sensor tells it). In this kitchen, nobody told it. He survived. The peas did even better.\n\nUseless Facts: true numbers, used irresponsibly.\n\nSources:\n- GE Appliances: Refrigerator - Normal Ice Production and Cube Size (about 4 pounds of ice per day): https://products.geappliances.com/appliance/gea-support-search-content?contentId=16918\n- Whirlpool Product Help: Ice Cube Test, how much ice should my ice maker make (100-140 cubes in 24 hours): https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Quad_Door_Refrigerator/Ice_and_Water_Concerns/Ice_and_Dispenser_Concerns/Ice_Production/Low_Ice_Production/Bottom_Freezer/Ice_Cube_Test_-_How_much_ice_should_my_ice_maker_make%3F\n- Sub-Zero: Ice production and ice bucket capacity (in-unit ice makers stop producing once the bucket is full): https://www.subzero-wolf.com/assistance/answers/ice-production-and-ice-bucket-capacity\n\n#icemaker #uselessfacts #fridge #kitchen",
+  "caption_instagram": "Nobody told the ice maker. #icemaker #uselessfacts",
+  "tags": [
+    "refrigerator ice maker",
+    "ice maker",
+    "how much ice does an ice maker make",
+    "how many pounds of ice per day",
+    "fridge ice maker never stops",
+    "ice maker bin full",
+    "freezer full of ice",
+    "frozen peas",
+    "useless facts",
+    "absurd facts",
+    "deadpan comedy",
+    "kitchen fails",
+    "top freezer fridge"
+  ],
+  "series": "Useless Facts",
+  "sources": [
+    {
+      "title": "GE Appliances: Refrigerator - Normal Ice Production and Cube Size (about 4 pounds of ice per day)",
+      "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=16918"
+    },
+    {
+      "title": "Whirlpool Product Help: Ice Cube Test, how much ice should my ice maker make (100-140 cubes in 24 hours)",
+      "url": "https://producthelp.whirlpool.com/Refrigeration/Full-Size_Refrigerators/Quad_Door_Refrigerator/Ice_and_Water_Concerns/Ice_and_Dispenser_Concerns/Ice_Production/Low_Ice_Production/Bottom_Freezer/Ice_Cube_Test_-_How_much_ice_should_my_ice_maker_make%3F"
+    },
+    {
+      "title": "Sub-Zero: Ice production and ice bucket capacity (in-unit ice makers stop producing once the bucket is full)",
+      "url": "https://www.subzero-wolf.com/assistance/answers/ice-production-and-ice-bucket-capacity"
+    }
+  ],
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "publishing_targets": [
+    "youtube"
+  ],
+  "publish_time_local": "12:37",
+  "checks_failed": []
+}
